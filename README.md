@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.7766
-- C# SDK version: 1.0.11.7766
+- Intersight.PowerShell version: 1.0.11.8814
+- C# SDK version: 1.0.11.8814
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.7766"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.8814"}
 ```
 or
 
@@ -856,6 +856,7 @@ CapabilityEquipmentPhysicalDef | [**Get-IntersightCapabilityEquipmentPhysicalDef
 CapabilityEquipmentSlotArray | [**Get-IntersightCapabilityEquipmentSlotArray**](docs/Get-IntersightCapabilityEquipmentSlotArray.md) | Read a 'CapabilityEquipmentSlotArray' resource.
 CapabilityFanModuleDescriptor | [**Get-IntersightCapabilityFanModuleDescriptor**](docs/Get-IntersightCapabilityFanModuleDescriptor.md) | Read a 'CapabilityFanModuleDescriptor' resource.
 CapabilityFanModuleManufacturingDef | [**Get-IntersightCapabilityFanModuleManufacturingDef**](docs/Get-IntersightCapabilityFanModuleManufacturingDef.md) | Read a 'CapabilityFanModuleManufacturingDef' resource.
+CapabilityFexCapabilityDef | [**Get-IntersightCapabilityFexCapabilityDef**](docs/Get-IntersightCapabilityFexCapabilityDef.md) | Read a 'CapabilityFexCapabilityDef' resource.
 CapabilityFexDescriptor | [**Get-IntersightCapabilityFexDescriptor**](docs/Get-IntersightCapabilityFexDescriptor.md) | Read a 'CapabilityFexDescriptor' resource.
 CapabilityFexManufacturingDef | [**Get-IntersightCapabilityFexManufacturingDef**](docs/Get-IntersightCapabilityFexManufacturingDef.md) | Read a 'CapabilityFexManufacturingDef' resource.
 CapabilityIoCardCapabilityDef | [**Get-IntersightCapabilityIoCardCapabilityDef**](docs/Get-IntersightCapabilityIoCardCapabilityDef.md) | Read a 'CapabilityIoCardCapabilityDef' resource.
@@ -882,6 +883,7 @@ CapabilityEquipmentPhysicalDef | [**New-IntersightCapabilityEquipmentPhysicalDef
 CapabilityEquipmentSlotArray | [**New-IntersightCapabilityEquipmentSlotArray**](docs/New-IntersightCapabilityEquipmentSlotArray.md) | Create a 'CapabilityEquipmentSlotArray' resource.
 CapabilityFanModuleDescriptor | [**New-IntersightCapabilityFanModuleDescriptor**](docs/New-IntersightCapabilityFanModuleDescriptor.md) | Create a 'CapabilityFanModuleDescriptor' resource.
 CapabilityFanModuleManufacturingDef | [**New-IntersightCapabilityFanModuleManufacturingDef**](docs/New-IntersightCapabilityFanModuleManufacturingDef.md) | Create a 'CapabilityFanModuleManufacturingDef' resource.
+CapabilityFexCapabilityDef | [**New-IntersightCapabilityFexCapabilityDef**](docs/New-IntersightCapabilityFexCapabilityDef.md) | Create a 'CapabilityFexCapabilityDef' resource.
 CapabilityFexDescriptor | [**New-IntersightCapabilityFexDescriptor**](docs/New-IntersightCapabilityFexDescriptor.md) | Create a 'CapabilityFexDescriptor' resource.
 CapabilityFexManufacturingDef | [**New-IntersightCapabilityFexManufacturingDef**](docs/New-IntersightCapabilityFexManufacturingDef.md) | Create a 'CapabilityFexManufacturingDef' resource.
 CapabilityIoCardCapabilityDef | [**New-IntersightCapabilityIoCardCapabilityDef**](docs/New-IntersightCapabilityIoCardCapabilityDef.md) | Create a 'CapabilityIoCardCapabilityDef' resource.
@@ -908,6 +910,7 @@ CapabilityEquipmentPhysicalDef | [**Remove-IntersightCapabilityEquipmentPhysical
 CapabilityEquipmentSlotArray | [**Remove-IntersightCapabilityEquipmentSlotArray**](docs/Remove-IntersightCapabilityEquipmentSlotArray.md) | Delete a 'CapabilityEquipmentSlotArray' resource.
 CapabilityFanModuleDescriptor | [**Remove-IntersightCapabilityFanModuleDescriptor**](docs/Remove-IntersightCapabilityFanModuleDescriptor.md) | Delete a 'CapabilityFanModuleDescriptor' resource.
 CapabilityFanModuleManufacturingDef | [**Remove-IntersightCapabilityFanModuleManufacturingDef**](docs/Remove-IntersightCapabilityFanModuleManufacturingDef.md) | Delete a 'CapabilityFanModuleManufacturingDef' resource.
+CapabilityFexCapabilityDef | [**Remove-IntersightCapabilityFexCapabilityDef**](docs/Remove-IntersightCapabilityFexCapabilityDef.md) | Delete a 'CapabilityFexCapabilityDef' resource.
 CapabilityFexDescriptor | [**Remove-IntersightCapabilityFexDescriptor**](docs/Remove-IntersightCapabilityFexDescriptor.md) | Delete a 'CapabilityFexDescriptor' resource.
 CapabilityFexManufacturingDef | [**Remove-IntersightCapabilityFexManufacturingDef**](docs/Remove-IntersightCapabilityFexManufacturingDef.md) | Delete a 'CapabilityFexManufacturingDef' resource.
 CapabilityIoCardCapabilityDef | [**Remove-IntersightCapabilityIoCardCapabilityDef**](docs/Remove-IntersightCapabilityIoCardCapabilityDef.md) | Delete a 'CapabilityIoCardCapabilityDef' resource.
@@ -935,6 +938,7 @@ CapabilityEquipmentPhysicalDef | [**Set-IntersightCapabilityEquipmentPhysicalDef
 CapabilityEquipmentSlotArray | [**Set-IntersightCapabilityEquipmentSlotArray**](docs/Set-IntersightCapabilityEquipmentSlotArray.md) | Update a 'CapabilityEquipmentSlotArray' resource.
 CapabilityFanModuleDescriptor | [**Set-IntersightCapabilityFanModuleDescriptor**](docs/Set-IntersightCapabilityFanModuleDescriptor.md) | Update a 'CapabilityFanModuleDescriptor' resource.
 CapabilityFanModuleManufacturingDef | [**Set-IntersightCapabilityFanModuleManufacturingDef**](docs/Set-IntersightCapabilityFanModuleManufacturingDef.md) | Update a 'CapabilityFanModuleManufacturingDef' resource.
+CapabilityFexCapabilityDef | [**Set-IntersightCapabilityFexCapabilityDef**](docs/Set-IntersightCapabilityFexCapabilityDef.md) | Update a 'CapabilityFexCapabilityDef' resource.
 CapabilityFexDescriptor | [**Set-IntersightCapabilityFexDescriptor**](docs/Set-IntersightCapabilityFexDescriptor.md) | Update a 'CapabilityFexDescriptor' resource.
 CapabilityFexManufacturingDef | [**Set-IntersightCapabilityFexManufacturingDef**](docs/Set-IntersightCapabilityFexManufacturingDef.md) | Update a 'CapabilityFexManufacturingDef' resource.
 CapabilityIoCardCapabilityDef | [**Set-IntersightCapabilityIoCardCapabilityDef**](docs/Set-IntersightCapabilityIoCardCapabilityDef.md) | Update a 'CapabilityIoCardCapabilityDef' resource.
@@ -1064,6 +1068,7 @@ EquipmentPsu | [**Get-IntersightEquipmentPsu**](docs/Get-IntersightEquipmentPsu.
 EquipmentPsuControl | [**Get-IntersightEquipmentPsuControl**](docs/Get-IntersightEquipmentPsuControl.md) | Read a 'EquipmentPsuControl' resource.
 EquipmentRackEnclosure | [**Get-IntersightEquipmentRackEnclosure**](docs/Get-IntersightEquipmentRackEnclosure.md) | Read a 'EquipmentRackEnclosure' resource.
 EquipmentRackEnclosureSlot | [**Get-IntersightEquipmentRackEnclosureSlot**](docs/Get-IntersightEquipmentRackEnclosureSlot.md) | Read a 'EquipmentRackEnclosureSlot' resource.
+EquipmentSensor | [**Get-IntersightEquipmentSensor**](docs/Get-IntersightEquipmentSensor.md) | Read a 'EquipmentSensor' resource.
 EquipmentSharedIoModule | [**Get-IntersightEquipmentSharedIoModule**](docs/Get-IntersightEquipmentSharedIoModule.md) | Read a 'EquipmentSharedIoModule' resource.
 EquipmentSwitchCard | [**Get-IntersightEquipmentSwitchCard**](docs/Get-IntersightEquipmentSwitchCard.md) | Read a 'EquipmentSwitchCard' resource.
 EquipmentSystemIoController | [**Get-IntersightEquipmentSystemIoController**](docs/Get-IntersightEquipmentSystemIoController.md) | Read a 'EquipmentSystemIoController' resource.
@@ -1249,10 +1254,13 @@ FcpoolFcBlock | [**Get-IntersightFcpoolFcBlock**](docs/Get-IntersightFcpoolFcBlo
 FcpoolLease | [**Get-IntersightFcpoolLease**](docs/Get-IntersightFcpoolLease.md) | Read a 'FcpoolLease' resource.
 FcpoolPool | [**Get-IntersightFcpoolPool**](docs/Get-IntersightFcpoolPool.md) | Read a 'FcpoolPool' resource.
 FcpoolPoolMember | [**Get-IntersightFcpoolPoolMember**](docs/Get-IntersightFcpoolPoolMember.md) | Read a 'FcpoolPoolMember' resource.
+FcpoolReservation | [**Get-IntersightFcpoolReservation**](docs/Get-IntersightFcpoolReservation.md) | Read a 'FcpoolReservation' resource.
 FcpoolUniverse | [**Get-IntersightFcpoolUniverse**](docs/Get-IntersightFcpoolUniverse.md) | Read a 'FcpoolUniverse' resource.
 FcpoolPool | [**New-IntersightFcpoolPool**](docs/New-IntersightFcpoolPool.md) | Create a 'FcpoolPool' resource.
+FcpoolReservation | [**New-IntersightFcpoolReservation**](docs/New-IntersightFcpoolReservation.md) | Create a 'FcpoolReservation' resource.
 FcpoolLease | [**Remove-IntersightFcpoolLease**](docs/Remove-IntersightFcpoolLease.md) | Delete a 'FcpoolLease' resource.
 FcpoolPool | [**Remove-IntersightFcpoolPool**](docs/Remove-IntersightFcpoolPool.md) | Delete a 'FcpoolPool' resource.
+FcpoolReservation | [**Remove-IntersightFcpoolReservation**](docs/Remove-IntersightFcpoolReservation.md) | Delete a 'FcpoolReservation' resource.
 FcpoolPool | [**Set-IntersightFcpoolPool**](docs/Set-IntersightFcpoolPool.md) | Update a 'FcpoolPool' resource.
 FeedbackFeedbackPost | [**New-IntersightFeedbackFeedbackPost**](docs/New-IntersightFeedbackFeedbackPost.md) | Create a 'FeedbackFeedbackPost' resource.
 FirmwareBiosDescriptor | [**Get-IntersightFirmwareBiosDescriptor**](docs/Get-IntersightFirmwareBiosDescriptor.md) | Read a 'FirmwareBiosDescriptor' resource.
@@ -1594,6 +1602,7 @@ IamTrustPoint | [**Get-IntersightIamTrustPoint**](docs/Get-IntersightIamTrustPoi
 IamUser | [**Get-IntersightIamUser**](docs/Get-IntersightIamUser.md) | Read a 'IamUser' resource.
 IamUserGroup | [**Get-IntersightIamUserGroup**](docs/Get-IntersightIamUserGroup.md) | Read a 'IamUserGroup' resource.
 IamUserPreference | [**Get-IntersightIamUserPreference**](docs/Get-IntersightIamUserPreference.md) | Read a 'IamUserPreference' resource.
+IamUserSetting | [**Get-IntersightIamUserSetting**](docs/Get-IntersightIamUserSetting.md) | Read a 'IamUserSetting' resource.
 IamAccount | [**New-IntersightIamAccount**](docs/New-IntersightIamAccount.md) | Create a 'IamAccount' resource.
 IamAccountExperience | [**New-IntersightIamAccountExperience**](docs/New-IntersightIamAccountExperience.md) | Create a 'IamAccountExperience' resource.
 IamApiKey | [**New-IntersightIamApiKey**](docs/New-IntersightIamApiKey.md) | Create a 'IamApiKey' resource.
@@ -1618,6 +1627,7 @@ IamSessionLimits | [**New-IntersightIamSessionLimits**](docs/New-IntersightIamSe
 IamTrustPoint | [**New-IntersightIamTrustPoint**](docs/New-IntersightIamTrustPoint.md) | Create a 'IamTrustPoint' resource.
 IamUser | [**New-IntersightIamUser**](docs/New-IntersightIamUser.md) | Create a 'IamUser' resource.
 IamUserGroup | [**New-IntersightIamUserGroup**](docs/New-IntersightIamUserGroup.md) | Create a 'IamUserGroup' resource.
+IamUserSetting | [**New-IntersightIamUserSetting**](docs/New-IntersightIamUserSetting.md) | Create a 'IamUserSetting' resource.
 IamAccount | [**Remove-IntersightIamAccount**](docs/Remove-IntersightIamAccount.md) | Delete a 'IamAccount' resource.
 IamApiKey | [**Remove-IntersightIamApiKey**](docs/Remove-IntersightIamApiKey.md) | Delete a 'IamApiKey' resource.
 IamAppRegistration | [**Remove-IntersightIamAppRegistration**](docs/Remove-IntersightIamAppRegistration.md) | Delete a 'IamAppRegistration' resource.
@@ -1670,6 +1680,7 @@ IamSessionLimits | [**Set-IntersightIamSessionLimits**](docs/Set-IntersightIamSe
 IamUser | [**Set-IntersightIamUser**](docs/Set-IntersightIamUser.md) | Update a 'IamUser' resource.
 IamUserGroup | [**Set-IntersightIamUserGroup**](docs/Set-IntersightIamUserGroup.md) | Update a 'IamUserGroup' resource.
 IamUserPreference | [**Set-IntersightIamUserPreference**](docs/Set-IntersightIamUserPreference.md) | Update a 'IamUserPreference' resource.
+IamUserSetting | [**Set-IntersightIamUserSetting**](docs/Set-IntersightIamUserSetting.md) | Update a 'IamUserSetting' resource.
 InventoryDeviceInfo | [**Get-IntersightInventoryDeviceInfo**](docs/Get-IntersightInventoryDeviceInfo.md) | Read a 'InventoryDeviceInfo' resource.
 InventoryDnMoBinding | [**Get-IntersightInventoryDnMoBinding**](docs/Get-IntersightInventoryDnMoBinding.md) | Read a 'InventoryDnMoBinding' resource.
 InventoryGenericInventory | [**Get-IntersightInventoryGenericInventory**](docs/Get-IntersightInventoryGenericInventory.md) | Read a 'InventoryGenericInventory' resource.
@@ -1686,23 +1697,32 @@ IppoolBlockLease | [**Get-IntersightIppoolBlockLease**](docs/Get-IntersightIppoo
 IppoolIpLease | [**Get-IntersightIppoolIpLease**](docs/Get-IntersightIppoolIpLease.md) | Read a 'IppoolIpLease' resource.
 IppoolPool | [**Get-IntersightIppoolPool**](docs/Get-IntersightIppoolPool.md) | Read a 'IppoolPool' resource.
 IppoolPoolMember | [**Get-IntersightIppoolPoolMember**](docs/Get-IntersightIppoolPoolMember.md) | Read a 'IppoolPoolMember' resource.
+IppoolReservation | [**Get-IntersightIppoolReservation**](docs/Get-IntersightIppoolReservation.md) | Read a 'IppoolReservation' resource.
 IppoolShadowBlock | [**Get-IntersightIppoolShadowBlock**](docs/Get-IntersightIppoolShadowBlock.md) | Read a 'IppoolShadowBlock' resource.
 IppoolShadowPool | [**Get-IntersightIppoolShadowPool**](docs/Get-IntersightIppoolShadowPool.md) | Read a 'IppoolShadowPool' resource.
 IppoolUniverse | [**Get-IntersightIppoolUniverse**](docs/Get-IntersightIppoolUniverse.md) | Read a 'IppoolUniverse' resource.
 IppoolPool | [**New-IntersightIppoolPool**](docs/New-IntersightIppoolPool.md) | Create a 'IppoolPool' resource.
+IppoolReservation | [**New-IntersightIppoolReservation**](docs/New-IntersightIppoolReservation.md) | Create a 'IppoolReservation' resource.
 IppoolIpLease | [**Remove-IntersightIppoolIpLease**](docs/Remove-IntersightIppoolIpLease.md) | Delete a 'IppoolIpLease' resource.
 IppoolPool | [**Remove-IntersightIppoolPool**](docs/Remove-IntersightIppoolPool.md) | Delete a 'IppoolPool' resource.
+IppoolReservation | [**Remove-IntersightIppoolReservation**](docs/Remove-IntersightIppoolReservation.md) | Delete a 'IppoolReservation' resource.
 IppoolPool | [**Set-IntersightIppoolPool**](docs/Set-IntersightIppoolPool.md) | Update a 'IppoolPool' resource.
 IqnpoolBlock | [**Get-IntersightIqnpoolBlock**](docs/Get-IntersightIqnpoolBlock.md) | Read a 'IqnpoolBlock' resource.
 IqnpoolLease | [**Get-IntersightIqnpoolLease**](docs/Get-IntersightIqnpoolLease.md) | Read a 'IqnpoolLease' resource.
 IqnpoolPool | [**Get-IntersightIqnpoolPool**](docs/Get-IntersightIqnpoolPool.md) | Read a 'IqnpoolPool' resource.
 IqnpoolPoolMember | [**Get-IntersightIqnpoolPoolMember**](docs/Get-IntersightIqnpoolPoolMember.md) | Read a 'IqnpoolPoolMember' resource.
+IqnpoolReservation | [**Get-IntersightIqnpoolReservation**](docs/Get-IntersightIqnpoolReservation.md) | Read a 'IqnpoolReservation' resource.
 IqnpoolUniverse | [**Get-IntersightIqnpoolUniverse**](docs/Get-IntersightIqnpoolUniverse.md) | Read a 'IqnpoolUniverse' resource.
 IqnpoolPool | [**New-IntersightIqnpoolPool**](docs/New-IntersightIqnpoolPool.md) | Create a 'IqnpoolPool' resource.
+IqnpoolReservation | [**New-IntersightIqnpoolReservation**](docs/New-IntersightIqnpoolReservation.md) | Create a 'IqnpoolReservation' resource.
 IqnpoolLease | [**Remove-IntersightIqnpoolLease**](docs/Remove-IntersightIqnpoolLease.md) | Delete a 'IqnpoolLease' resource.
 IqnpoolPool | [**Remove-IntersightIqnpoolPool**](docs/Remove-IntersightIqnpoolPool.md) | Delete a 'IqnpoolPool' resource.
+IqnpoolReservation | [**Remove-IntersightIqnpoolReservation**](docs/Remove-IntersightIqnpoolReservation.md) | Delete a 'IqnpoolReservation' resource.
 IqnpoolPool | [**Set-IntersightIqnpoolPool**](docs/Set-IntersightIqnpoolPool.md) | Update a 'IqnpoolPool' resource.
+IwotenantMaintenanceNotification | [**Get-IntersightIwotenantMaintenanceNotification**](docs/Get-IntersightIwotenantMaintenanceNotification.md) | Read a 'IwotenantMaintenanceNotification' resource.
 IwotenantTenantStatus | [**Get-IntersightIwotenantTenantStatus**](docs/Get-IntersightIwotenantTenantStatus.md) | Read a 'IwotenantTenantStatus' resource.
+IwotenantMaintenanceNotification | [**New-IntersightIwotenantMaintenanceNotification**](docs/New-IntersightIwotenantMaintenanceNotification.md) | Create a 'IwotenantMaintenanceNotification' resource.
+IwotenantMaintenanceNotification | [**Remove-IntersightIwotenantMaintenanceNotification**](docs/Remove-IntersightIwotenantMaintenanceNotification.md) | Delete a 'IwotenantMaintenanceNotification' resource.
 KubernetesAciCniApic | [**Get-IntersightKubernetesAciCniApic**](docs/Get-IntersightKubernetesAciCniApic.md) | Read a 'KubernetesAciCniApic' resource.
 KubernetesAciCniProfile | [**Get-IntersightKubernetesAciCniProfile**](docs/Get-IntersightKubernetesAciCniProfile.md) | Read a 'KubernetesAciCniProfile' resource.
 KubernetesAciCniTenantClusterAllocation | [**Get-IntersightKubernetesAciCniTenantClusterAllocation**](docs/Get-IntersightKubernetesAciCniTenantClusterAllocation.md) | Read a 'KubernetesAciCniTenantClusterAllocation' resource.
@@ -1853,10 +1873,13 @@ MacpoolIdBlock | [**Get-IntersightMacpoolIdBlock**](docs/Get-IntersightMacpoolId
 MacpoolLease | [**Get-IntersightMacpoolLease**](docs/Get-IntersightMacpoolLease.md) | Read a 'MacpoolLease' resource.
 MacpoolPool | [**Get-IntersightMacpoolPool**](docs/Get-IntersightMacpoolPool.md) | Read a 'MacpoolPool' resource.
 MacpoolPoolMember | [**Get-IntersightMacpoolPoolMember**](docs/Get-IntersightMacpoolPoolMember.md) | Read a 'MacpoolPoolMember' resource.
+MacpoolReservation | [**Get-IntersightMacpoolReservation**](docs/Get-IntersightMacpoolReservation.md) | Read a 'MacpoolReservation' resource.
 MacpoolUniverse | [**Get-IntersightMacpoolUniverse**](docs/Get-IntersightMacpoolUniverse.md) | Read a 'MacpoolUniverse' resource.
 MacpoolPool | [**New-IntersightMacpoolPool**](docs/New-IntersightMacpoolPool.md) | Create a 'MacpoolPool' resource.
+MacpoolReservation | [**New-IntersightMacpoolReservation**](docs/New-IntersightMacpoolReservation.md) | Create a 'MacpoolReservation' resource.
 MacpoolLease | [**Remove-IntersightMacpoolLease**](docs/Remove-IntersightMacpoolLease.md) | Delete a 'MacpoolLease' resource.
 MacpoolPool | [**Remove-IntersightMacpoolPool**](docs/Remove-IntersightMacpoolPool.md) | Delete a 'MacpoolPool' resource.
+MacpoolReservation | [**Remove-IntersightMacpoolReservation**](docs/Remove-IntersightMacpoolReservation.md) | Delete a 'MacpoolReservation' resource.
 MacpoolPool | [**Set-IntersightMacpoolPool**](docs/Set-IntersightMacpoolPool.md) | Update a 'MacpoolPool' resource.
 ManagementController | [**Get-IntersightManagementController**](docs/Get-IntersightManagementController.md) | Read a 'ManagementController' resource.
 ManagementEntity | [**Get-IntersightManagementEntity**](docs/Get-IntersightManagementEntity.md) | Read a 'ManagementEntity' resource.
@@ -1887,6 +1910,8 @@ MemoryUnit | [**Set-IntersightMemoryUnit**](docs/Set-IntersightMemoryUnit.md) | 
 MetaDefinition | [**Get-IntersightMetaDefinition**](docs/Get-IntersightMetaDefinition.md) | Read a 'MetaDefinition' resource.
 MetaDefinition | [**Remove-IntersightMetaDefinition**](docs/Remove-IntersightMetaDefinition.md) | Delete a 'MetaDefinition' resource.
 MonitoringHealthStatus | [**Get-IntersightMonitoringHealthStatus**](docs/Get-IntersightMonitoringHealthStatus.md) | Read a 'MonitoringHealthStatus' resource.
+NetworkDiscoveredNeighbor | [**Get-IntersightNetworkDiscoveredNeighbor**](docs/Get-IntersightNetworkDiscoveredNeighbor.md) | Read a 'NetworkDiscoveredNeighbor' resource.
+NetworkDns | [**Get-IntersightNetworkDns**](docs/Get-IntersightNetworkDns.md) | Read a 'NetworkDns' resource.
 NetworkElement | [**Get-IntersightNetworkElement**](docs/Get-IntersightNetworkElement.md) | Read a 'NetworkElement' resource.
 NetworkElementSummary | [**Get-IntersightNetworkElementSummary**](docs/Get-IntersightNetworkElementSummary.md) | Read a 'NetworkElementSummary' resource.
 NetworkFcZoneInfo | [**Get-IntersightNetworkFcZoneInfo**](docs/Get-IntersightNetworkFcZoneInfo.md) | Read a 'NetworkFcZoneInfo' resource.
@@ -1894,6 +1919,7 @@ NetworkFeatureControl | [**Get-IntersightNetworkFeatureControl**](docs/Get-Inter
 NetworkInterfaceList | [**Get-IntersightNetworkInterfaceList**](docs/Get-IntersightNetworkInterfaceList.md) | Read a 'NetworkInterfaceList' resource.
 NetworkLicenseFile | [**Get-IntersightNetworkLicenseFile**](docs/Get-IntersightNetworkLicenseFile.md) | Read a 'NetworkLicenseFile' resource.
 NetworkSupervisorCard | [**Get-IntersightNetworkSupervisorCard**](docs/Get-IntersightNetworkSupervisorCard.md) | Read a 'NetworkSupervisorCard' resource.
+NetworkTelemetryCheck | [**Get-IntersightNetworkTelemetryCheck**](docs/Get-IntersightNetworkTelemetryCheck.md) | Read a 'NetworkTelemetryCheck' resource.
 NetworkVlanPortInfo | [**Get-IntersightNetworkVlanPortInfo**](docs/Get-IntersightNetworkVlanPortInfo.md) | Read a 'NetworkVlanPortInfo' resource.
 NetworkVrf | [**Get-IntersightNetworkVrf**](docs/Get-IntersightNetworkVrf.md) | Read a 'NetworkVrf' resource.
 NetworkElement | [**Set-IntersightNetworkElement**](docs/Set-IntersightNetworkElement.md) | Update a 'NetworkElement' resource.
@@ -1920,6 +1946,8 @@ NiaapiFileDownloader | [**Get-IntersightNiaapiFileDownloader**](docs/Get-Intersi
 NiaapiNiaMetadata | [**Get-IntersightNiaapiNiaMetadata**](docs/Get-IntersightNiaapiNiaMetadata.md) | Read a 'NiaapiNiaMetadata' resource.
 NiaapiNibFileDownloader | [**Get-IntersightNiaapiNibFileDownloader**](docs/Get-IntersightNiaapiNibFileDownloader.md) | Read a 'NiaapiNibFileDownloader' resource.
 NiaapiNibMetadata | [**Get-IntersightNiaapiNibMetadata**](docs/Get-IntersightNiaapiNibMetadata.md) | Read a 'NiaapiNibMetadata' resource.
+NiaapiPuvScriptDownloader | [**Get-IntersightNiaapiPuvScriptDownloader**](docs/Get-IntersightNiaapiPuvScriptDownloader.md) | Read a 'NiaapiPuvScriptDownloader' resource.
+NiaapiUpgradeAssistFile | [**Get-IntersightNiaapiUpgradeAssistFile**](docs/Get-IntersightNiaapiUpgradeAssistFile.md) | Read a 'NiaapiUpgradeAssistFile' resource.
 NiaapiVersionRegex | [**Get-IntersightNiaapiVersionRegex**](docs/Get-IntersightNiaapiVersionRegex.md) | Read a 'NiaapiVersionRegex' resource.
 NiatelemetryAaaLdapProviderDetails | [**Get-IntersightNiatelemetryAaaLdapProviderDetails**](docs/Get-IntersightNiatelemetryAaaLdapProviderDetails.md) | Read a 'NiatelemetryAaaLdapProviderDetails' resource.
 NiatelemetryAaaRadiusProviderDetails | [**Get-IntersightNiatelemetryAaaRadiusProviderDetails**](docs/Get-IntersightNiatelemetryAaaRadiusProviderDetails.md) | Read a 'NiatelemetryAaaRadiusProviderDetails' resource.
@@ -1975,6 +2003,8 @@ NiatelemetryMsoEpgDetails | [**Get-IntersightNiatelemetryMsoEpgDetails**](docs/G
 NiatelemetryMsoSchemaDetails | [**Get-IntersightNiatelemetryMsoSchemaDetails**](docs/Get-IntersightNiatelemetryMsoSchemaDetails.md) | Read a 'NiatelemetryMsoSchemaDetails' resource.
 NiatelemetryMsoSiteDetails | [**Get-IntersightNiatelemetryMsoSiteDetails**](docs/Get-IntersightNiatelemetryMsoSiteDetails.md) | Read a 'NiatelemetryMsoSiteDetails' resource.
 NiatelemetryMsoTenantDetails | [**Get-IntersightNiatelemetryMsoTenantDetails**](docs/Get-IntersightNiatelemetryMsoTenantDetails.md) | Read a 'NiatelemetryMsoTenantDetails' resource.
+NiatelemetryNexusCloudAccount | [**Get-IntersightNiatelemetryNexusCloudAccount**](docs/Get-IntersightNiatelemetryNexusCloudAccount.md) | Read a 'NiatelemetryNexusCloudAccount' resource.
+NiatelemetryNexusCloudSite | [**Get-IntersightNiatelemetryNexusCloudSite**](docs/Get-IntersightNiatelemetryNexusCloudSite.md) | Read a 'NiatelemetryNexusCloudSite' resource.
 NiatelemetryNexusDashboardControllerDetails | [**Get-IntersightNiatelemetryNexusDashboardControllerDetails**](docs/Get-IntersightNiatelemetryNexusDashboardControllerDetails.md) | Read a 'NiatelemetryNexusDashboardControllerDetails' resource.
 NiatelemetryNexusDashboardDetails | [**Get-IntersightNiatelemetryNexusDashboardDetails**](docs/Get-IntersightNiatelemetryNexusDashboardDetails.md) | Read a 'NiatelemetryNexusDashboardDetails' resource.
 NiatelemetryNexusDashboardMemoryDetails | [**Get-IntersightNiatelemetryNexusDashboardMemoryDetails**](docs/Get-IntersightNiatelemetryNexusDashboardMemoryDetails.md) | Read a 'NiatelemetryNexusDashboardMemoryDetails' resource.
@@ -1998,6 +2028,12 @@ NiatelemetrySyslogSysMsg | [**Get-IntersightNiatelemetrySyslogSysMsg**](docs/Get
 NiatelemetrySyslogSysMsgFacFilter | [**Get-IntersightNiatelemetrySyslogSysMsgFacFilter**](docs/Get-IntersightNiatelemetrySyslogSysMsgFacFilter.md) | Read a 'NiatelemetrySyslogSysMsgFacFilter' resource.
 NiatelemetrySystemControllerDetails | [**Get-IntersightNiatelemetrySystemControllerDetails**](docs/Get-IntersightNiatelemetrySystemControllerDetails.md) | Read a 'NiatelemetrySystemControllerDetails' resource.
 NiatelemetryTenant | [**Get-IntersightNiatelemetryTenant**](docs/Get-IntersightNiatelemetryTenant.md) | Read a 'NiatelemetryTenant' resource.
+NiatelemetryNexusCloudAccount | [**New-IntersightNiatelemetryNexusCloudAccount**](docs/New-IntersightNiatelemetryNexusCloudAccount.md) | Create a 'NiatelemetryNexusCloudAccount' resource.
+NiatelemetryNexusCloudSite | [**New-IntersightNiatelemetryNexusCloudSite**](docs/New-IntersightNiatelemetryNexusCloudSite.md) | Create a 'NiatelemetryNexusCloudSite' resource.
+NiatelemetryNexusCloudSite | [**Remove-IntersightNiatelemetryNexusCloudSite**](docs/Remove-IntersightNiatelemetryNexusCloudSite.md) | Delete a 'NiatelemetryNexusCloudSite' resource.
+NiatelemetryNexusCloudAccount | [**Set-IntersightNiatelemetryNexusCloudAccount**](docs/Set-IntersightNiatelemetryNexusCloudAccount.md) | Update a 'NiatelemetryNexusCloudAccount' resource.
+NiatelemetryNexusCloudSite | [**Set-IntersightNiatelemetryNexusCloudSite**](docs/Set-IntersightNiatelemetryNexusCloudSite.md) | Update a 'NiatelemetryNexusCloudSite' resource.
+NiatelemetryNiaInventory | [**Set-IntersightNiatelemetryNiaInventory**](docs/Set-IntersightNiatelemetryNiaInventory.md) | Update a 'NiatelemetryNiaInventory' resource.
 NotificationAccountSubscription | [**Get-IntersightNotificationAccountSubscription**](docs/Get-IntersightNotificationAccountSubscription.md) | Read a 'NotificationAccountSubscription' resource.
 NotificationAccountSubscription | [**New-IntersightNotificationAccountSubscription**](docs/New-IntersightNotificationAccountSubscription.md) | Create a 'NotificationAccountSubscription' resource.
 NotificationAccountSubscription | [**Remove-IntersightNotificationAccountSubscription**](docs/Remove-IntersightNotificationAccountSubscription.md) | Delete a 'NotificationAccountSubscription' resource.
@@ -2244,8 +2280,11 @@ StorageItem | [**Get-IntersightStorageItem**](docs/Get-IntersightStorageItem.md)
 StorageNetAppAggregate | [**Get-IntersightStorageNetAppAggregate**](docs/Get-IntersightStorageNetAppAggregate.md) | Read a 'StorageNetAppAggregate' resource.
 StorageNetAppAggregateEvent | [**Get-IntersightStorageNetAppAggregateEvent**](docs/Get-IntersightStorageNetAppAggregateEvent.md) | Read a 'StorageNetAppAggregateEvent' resource.
 StorageNetAppBaseDisk | [**Get-IntersightStorageNetAppBaseDisk**](docs/Get-IntersightStorageNetAppBaseDisk.md) | Read a 'StorageNetAppBaseDisk' resource.
+StorageNetAppCifsService | [**Get-IntersightStorageNetAppCifsService**](docs/Get-IntersightStorageNetAppCifsService.md) | Read a 'StorageNetAppCifsService' resource.
+StorageNetAppCifsShare | [**Get-IntersightStorageNetAppCifsShare**](docs/Get-IntersightStorageNetAppCifsShare.md) | Read a 'StorageNetAppCifsShare' resource.
 StorageNetAppCluster | [**Get-IntersightStorageNetAppCluster**](docs/Get-IntersightStorageNetAppCluster.md) | Read a 'StorageNetAppCluster' resource.
 StorageNetAppClusterEvent | [**Get-IntersightStorageNetAppClusterEvent**](docs/Get-IntersightStorageNetAppClusterEvent.md) | Read a 'StorageNetAppClusterEvent' resource.
+StorageNetAppClusterSnapMirrorPolicy | [**Get-IntersightStorageNetAppClusterSnapMirrorPolicy**](docs/Get-IntersightStorageNetAppClusterSnapMirrorPolicy.md) | Read a 'StorageNetAppClusterSnapMirrorPolicy' resource.
 StorageNetAppDataIpInterface | [**Get-IntersightStorageNetAppDataIpInterface**](docs/Get-IntersightStorageNetAppDataIpInterface.md) | Read a 'StorageNetAppDataIpInterface' resource.
 StorageNetAppDataIpInterfaceEvent | [**Get-IntersightStorageNetAppDataIpInterfaceEvent**](docs/Get-IntersightStorageNetAppDataIpInterfaceEvent.md) | Read a 'StorageNetAppDataIpInterfaceEvent' resource.
 StorageNetAppDiskEvent | [**Get-IntersightStorageNetAppDiskEvent**](docs/Get-IntersightStorageNetAppDiskEvent.md) | Read a 'StorageNetAppDiskEvent' resource.
@@ -2271,10 +2310,12 @@ StorageNetAppNodeEvent | [**Get-IntersightStorageNetAppNodeEvent**](docs/Get-Int
 StorageNetAppNonDataIpInterface | [**Get-IntersightStorageNetAppNonDataIpInterface**](docs/Get-IntersightStorageNetAppNonDataIpInterface.md) | Read a 'StorageNetAppNonDataIpInterface' resource.
 StorageNetAppNonDataIpInterfaceEvent | [**Get-IntersightStorageNetAppNonDataIpInterfaceEvent**](docs/Get-IntersightStorageNetAppNonDataIpInterfaceEvent.md) | Read a 'StorageNetAppNonDataIpInterfaceEvent' resource.
 StorageNetAppNtpServer | [**Get-IntersightStorageNetAppNtpServer**](docs/Get-IntersightStorageNetAppNtpServer.md) | Read a 'StorageNetAppNtpServer' resource.
+StorageNetAppQtree | [**Get-IntersightStorageNetAppQtree**](docs/Get-IntersightStorageNetAppQtree.md) | Read a 'StorageNetAppQtree' resource.
 StorageNetAppSchedule | [**Get-IntersightStorageNetAppSchedule**](docs/Get-IntersightStorageNetAppSchedule.md) | Read a 'StorageNetAppSchedule' resource.
 StorageNetAppSensor | [**Get-IntersightStorageNetAppSensor**](docs/Get-IntersightStorageNetAppSensor.md) | Read a 'StorageNetAppSensor' resource.
 StorageNetAppStorageVm | [**Get-IntersightStorageNetAppStorageVm**](docs/Get-IntersightStorageNetAppStorageVm.md) | Read a 'StorageNetAppStorageVm' resource.
 StorageNetAppSvmEvent | [**Get-IntersightStorageNetAppSvmEvent**](docs/Get-IntersightStorageNetAppSvmEvent.md) | Read a 'StorageNetAppSvmEvent' resource.
+StorageNetAppSvmSnapMirrorPolicy | [**Get-IntersightStorageNetAppSvmSnapMirrorPolicy**](docs/Get-IntersightStorageNetAppSvmSnapMirrorPolicy.md) | Read a 'StorageNetAppSvmSnapMirrorPolicy' resource.
 StorageNetAppVolume | [**Get-IntersightStorageNetAppVolume**](docs/Get-IntersightStorageNetAppVolume.md) | Read a 'StorageNetAppVolume' resource.
 StorageNetAppVolumeEvent | [**Get-IntersightStorageNetAppVolumeEvent**](docs/Get-IntersightStorageNetAppVolumeEvent.md) | Read a 'StorageNetAppVolumeEvent' resource.
 StorageNetAppVolumeSnapshot | [**Get-IntersightStorageNetAppVolumeSnapshot**](docs/Get-IntersightStorageNetAppVolumeSnapshot.md) | Read a 'StorageNetAppVolumeSnapshot' resource.
@@ -2369,6 +2410,7 @@ TaskMdsScopedInventory | [**New-IntersightTaskMdsScopedInventory**](docs/New-Int
 TaskMdsSystemScopedInventory | [**New-IntersightTaskMdsSystemScopedInventory**](docs/New-IntersightTaskMdsSystemScopedInventory.md) | Create a 'TaskMdsSystemScopedInventory' resource.
 TaskNetAppScopedInventory | [**New-IntersightTaskNetAppScopedInventory**](docs/New-IntersightTaskNetAppScopedInventory.md) | Create a 'TaskNetAppScopedInventory' resource.
 TaskNexusScopedInventory | [**New-IntersightTaskNexusScopedInventory**](docs/New-IntersightTaskNexusScopedInventory.md) | Create a 'TaskNexusScopedInventory' resource.
+TaskNexusSystemScopedInventory | [**New-IntersightTaskNexusSystemScopedInventory**](docs/New-IntersightTaskNexusSystemScopedInventory.md) | Create a 'TaskNexusSystemScopedInventory' resource.
 TaskNexusVlanScopedInventory | [**New-IntersightTaskNexusVlanScopedInventory**](docs/New-IntersightTaskNexusVlanScopedInventory.md) | Create a 'TaskNexusVlanScopedInventory' resource.
 TaskPublicCloudScopedInventory | [**New-IntersightTaskPublicCloudScopedInventory**](docs/New-IntersightTaskPublicCloudScopedInventory.md) | Create a 'TaskPublicCloudScopedInventory' resource.
 TaskPureScopedInventory | [**New-IntersightTaskPureScopedInventory**](docs/New-IntersightTaskPureScopedInventory.md) | Create a 'TaskPureScopedInventory' resource.
@@ -2398,10 +2440,13 @@ UcsdBackupInfo | [**Remove-IntersightUcsdBackupInfo**](docs/Remove-IntersightUcs
 UuidpoolBlock | [**Get-IntersightUuidpoolBlock**](docs/Get-IntersightUuidpoolBlock.md) | Read a 'UuidpoolBlock' resource.
 UuidpoolPool | [**Get-IntersightUuidpoolPool**](docs/Get-IntersightUuidpoolPool.md) | Read a 'UuidpoolPool' resource.
 UuidpoolPoolMember | [**Get-IntersightUuidpoolPoolMember**](docs/Get-IntersightUuidpoolPoolMember.md) | Read a 'UuidpoolPoolMember' resource.
+UuidpoolReservation | [**Get-IntersightUuidpoolReservation**](docs/Get-IntersightUuidpoolReservation.md) | Read a 'UuidpoolReservation' resource.
 UuidpoolUniverse | [**Get-IntersightUuidpoolUniverse**](docs/Get-IntersightUuidpoolUniverse.md) | Read a 'UuidpoolUniverse' resource.
 UuidpoolUuidLease | [**Get-IntersightUuidpoolUuidLease**](docs/Get-IntersightUuidpoolUuidLease.md) | Read a 'UuidpoolUuidLease' resource.
 UuidpoolPool | [**New-IntersightUuidpoolPool**](docs/New-IntersightUuidpoolPool.md) | Create a 'UuidpoolPool' resource.
+UuidpoolReservation | [**New-IntersightUuidpoolReservation**](docs/New-IntersightUuidpoolReservation.md) | Create a 'UuidpoolReservation' resource.
 UuidpoolPool | [**Remove-IntersightUuidpoolPool**](docs/Remove-IntersightUuidpoolPool.md) | Delete a 'UuidpoolPool' resource.
+UuidpoolReservation | [**Remove-IntersightUuidpoolReservation**](docs/Remove-IntersightUuidpoolReservation.md) | Delete a 'UuidpoolReservation' resource.
 UuidpoolUuidLease | [**Remove-IntersightUuidpoolUuidLease**](docs/Remove-IntersightUuidpoolUuidLease.md) | Delete a 'UuidpoolUuidLease' resource.
 UuidpoolPool | [**Set-IntersightUuidpoolPool**](docs/Set-IntersightUuidpoolPool.md) | Update a 'UuidpoolPool' resource.
 ViewHealthStatus | [**Get-IntersightViewHealthStatus**](docs/Get-IntersightViewHealthStatus.md) | Read a 'ViewHealthStatus' resource.

@@ -114,20 +114,25 @@ namespace Intersight.PowerShell
 
             try
             {
-                OrganizationApi api = new OrganizationApi();
-                api.Configuration = config;
+                OrganizationApi api = new OrganizationApi(config);
+
                 var result = api.GetOrganizationOrganizationListWithHttpInfo();
             }
             catch (Exception ex)
             {
                 //  Console.WriteLine(ex.GetType().FullName);
+
                 if (ex.GetType().FullName == "System.IO.InvalidDataException")
                 {
-                    throw new Exception("Error performing this operation. Check that BasePath and API Key identifier are configured correctly using the Set-IntersightConfiguration cmdlet.");
+                    throw new Exception("Error performing this operation. Check that BasePath and API Key identifier are configured correctly using the Set-IntersightConfiguration cmdlet.", ex);
                 }
-                else if (ex.GetType().FullName == "Intersight.Client.ApiException")
+                else if (ex.Message.Contains("No such host is known"))
                 {
-                    throw new Exception("Error performing this operation. Either invalid BasePath (No such host is known) or invalid SSL Certificates. Use 'SkipCertificateCheck = $true' in configuration for invalid SSL certificates and retry the operation.");
+                    throw new Exception("Error performing this operation. Invalid BasePath (No such host is known).", ex);
+                }
+                else if (ex.Message.Contains("The SSL connection could not be established"))
+                {
+                    throw new Exception("Error performing this operation. Invalid SSL Certificates. Use 'SkipCertificateCheck = $true' in configuration for invalid SSL certificates and retry the operation.", ex);
                 }
                 else
                 {

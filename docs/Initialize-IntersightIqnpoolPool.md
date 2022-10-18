@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIqnpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< IqnpoolPool.AssignmentOrderEnum>][-ClassId< IqnpoolPool.ClassIdEnum>][-Description< string>][-IqnSuffixBlocks< System.Collections.Generic.List`1[Model.IqnpoolIqnSuffixBlock]>][-Moid< string>][-Name< string>][-ObjectType< IqnpoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Prefix< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIqnpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< IqnpoolPool.AssignmentOrderEnum>][-ClassId< IqnpoolPool.ClassIdEnum>][-Description< string>][-IqnSuffixBlocks< System.Collections.Generic.List`1[Model.IqnpoolIqnSuffixBlock]>][-Moid< string>][-Name< string>][-ObjectType< IqnpoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Prefix< string>][-Reservations< System.Collections.Generic.List`1[Model.IqnpoolReservationRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -169,6 +169,24 @@ The prefix for any IQN blocks created for this pool. IQN Prefix must have the fo
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reservations
+An array of relationships to iqnpoolReservation resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.IqnpoolReservationRelationship]
 Parameter Sets: (All)
 Aliases:
 

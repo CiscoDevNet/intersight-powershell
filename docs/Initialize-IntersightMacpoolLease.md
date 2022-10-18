@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightMacpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< MacpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< MacpoolLease.ClassIdEnum>][-MacAddress< string>][-Moid< string>][-ObjectType< MacpoolLease.ObjectTypeEnum>][-Pool< Model.MacpoolPoolRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightMacpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< MacpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< MacpoolLease.ClassIdEnum>][-MacAddress< string>][-Moid< string>][-ObjectType< MacpoolLease.ObjectTypeEnum>][-Pool< Model.MacpoolPoolRelationship>][-Reservation< Model.MacpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -150,6 +150,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Reservation
+The holder of a reference to reservation Moid and the specific details on lease condition for this reservation. Specified to allocate already reserved identities.
+
+Note :- Use Initialize-IntersightMacpoolReservationReference to create the object of complex type MacpoolReservationReference
+
+```yaml
+Type: Model.MacpoolReservationReference
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -223,5 +240,7 @@ PS C:\> Initialize-IntersightMacpoolLease
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightMacpoolReservationReference](./Initialize-IntersightMacpoolReservationReference.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

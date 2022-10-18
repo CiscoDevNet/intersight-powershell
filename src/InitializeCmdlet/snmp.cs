@@ -505,7 +505,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"SNMP version used for the trap.\n* `V3` - SNMP v3 trap version notifications.\n* `V2` - SNMP v2 trap version notifications."</para>
+        /// <para type="description">"SNMP version used for the trap.\n* `V3` - SNMP v3 trap version notifications.\n* `V1` - SNMP v1 trap version notifications.\n* `V2` - SNMP v2 trap version notifications."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

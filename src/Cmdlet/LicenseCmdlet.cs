@@ -1497,6 +1497,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The id of license subscription."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SubscriptionId
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The administrative state of the trial license.\nWhen the LicenseState is set to 'NotLicensed', 'trialAdmin' can be set to true to start the trial period,\ni.e. licenseState is set to be TrialPeriod."</para>
@@ -2034,6 +2045,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -2966,6 +2978,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryNiaInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNiaInventory.ClassIdEnum>][-ControllerIpAddress< string>][-Cpu< float>][-CrashResetLogs< string>][-CustomerDeviceConnector< string>][-DcnmFanDetails< System.Collections.Generic.List`1[Model.NiatelemetryFanDetails]>][-DcnmLicenseState< string>][-DeviceDiscovery< string>][-DeviceHealth< long>][-DeviceId< string>][-DeviceName< string>][-DeviceType< string>][-DeviceUpTime< long>][-Disk< Model.NiatelemetryDiskinfo>][-Dn< string>][-FabricName< string>][-FexCount< long>][-InfraWiNodeCount< long>][-Interface< System.Collections.Generic.List`1[Model.NiatelemetryInterfaceElement]>][-IpAddress< string>][-IsVirtualNode< string>][-LastRebootTime< string>][-LastResetReason< string>][-LicenseState< Model.NiatelemetryNiaLicenseStateRelationship>][-LicenseType< string>][-LogInTime< string>][-LogOutTime< string>][-MacSecCount< long>][-MacSecFabCount< long>][-MacsecTotalCount< long>][-Memory< long>][-Moid< string>][-NodeId< string>][-NxosBgpEvpn< Model.NiatelemetryNxosBgpEvpn>][-NxosBgpMvpn< Model.NiatelemetryNxosBgpMvpn>][-NxosBootflashDetails< Model.NiatelemetryBootflashDetails>][-NxosDciInterfaceStatus< string>][-NxosInterfaceBrief< Model.NiatelemetryInterface>][-NxosNveInterfaceStatus< string>][-NxosNvePacketCounters< Model.NiatelemetryNvePacketCounters>][-NxosNveVni< Model.NiatelemetryNveVni>][-NxosOspfNeighbors< long>][-NxosPimNeighbors< string>][-NxosTelnet< string>][-NxosTotalRoutes< long>][-NxosVtp< Model.NiatelemetryNxosVtp>][-ObjectType< NiatelemetryNiaInventory.ObjectTypeEnum>][-RecordType< string>][-RecordVersion< string>][-RoutePrefixCount< long>][-RoutePrefixV4Count< long>][-RoutePrefixV6Count< long>][-Serial< string>][-SiteName< string>][-SmartAccountId< long>][-SoftwareDownload< string>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< string>][-VniStatus< System.Collections.Generic.List`1[Model.NiatelemetryVniStatus]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryNiaInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNiaInventory.ClassIdEnum>][-ControllerIpAddress< string>][-Cpu< float>][-CrashResetLogs< string>][-CustomerDeviceConnector< string>][-DcnmFanDetails< System.Collections.Generic.List`1[Model.NiatelemetryFanDetails]>][-DcnmLicenseState< string>][-DeviceDiscovery< string>][-DeviceHealth< long>][-DeviceId< string>][-DeviceName< string>][-DeviceType< string>][-DeviceUpTime< long>][-Disk< Model.NiatelemetryDiskinfo>][-Dn< string>][-FabricName< string>][-FexCount< long>][-InfraWiNodeCount< long>][-Interface< System.Collections.Generic.List`1[Model.NiatelemetryInterfaceElement]>][-IpAddress< string>][-IsVirtualNode< string>][-LastRebootTime< string>][-LastResetReason< string>][-LicenseState< Model.NiatelemetryNiaLicenseStateRelationship>][-LicenseType< string>][-LogInTime< string>][-LogOutTime< string>][-MacSecCount< long>][-MacSecFabCount< long>][-MacsecTotalCount< long>][-Memory< long>][-Moid< string>][-NexusCloudMembershipStatus< bool>][-NodeId< string>][-NxosBgpEvpn< Model.NiatelemetryNxosBgpEvpn>][-NxosBgpMvpn< Model.NiatelemetryNxosBgpMvpn>][-NxosBootflashDetails< Model.NiatelemetryBootflashDetails>][-NxosDciInterfaceStatus< string>][-NxosInterfaceBrief< Model.NiatelemetryInterface>][-NxosNveInterfaceStatus< string>][-NxosNvePacketCounters< Model.NiatelemetryNvePacketCounters>][-NxosNveVni< Model.NiatelemetryNveVni>][-NxosOspfNeighbors< long>][-NxosPimNeighbors< string>][-NxosTelnet< string>][-NxosTotalRoutes< long>][-NxosVtp< Model.NiatelemetryNxosVtp>][-ObjectType< NiatelemetryNiaInventory.ObjectTypeEnum>][-RecordType< string>][-RecordVersion< string>][-RoutePrefixCount< long>][-RoutePrefixV4Count< long>][-RoutePrefixV6Count< long>][-Serial< string>][-SiteName< string>][-Siteuuid< string>][-SmartAccountId< long>][-SoftwareDownload< string>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< string>][-VniStatus< System.Collections.Generic.List`1[Model.NiatelemetryVniStatus]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -528,6 +528,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -NexusCloudMembershipStatus
+Returns if site has been onboarded to nexus cloud or not.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -NodeId
 The ID of the device being inventoried.
 
@@ -768,7 +783,7 @@ Accept wildcard characters: False
 ```
 
 ### -RecordType
-Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected.
+Type of record DCNM / APIC / SE / Nexus Switch. This determines the type of platform where inventory was collected.
 
 ```yaml
 Type: string
@@ -859,6 +874,21 @@ Accept wildcard characters: False
 
 ### -SiteName
 Name of fabric domain of the controller.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Siteuuid
+Returns the uuid of the Nexus Cloud site associated to the inventory object.
 
 ```yaml
 Type: string

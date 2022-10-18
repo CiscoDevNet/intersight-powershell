@@ -888,6 +888,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.PoolReservationReference> ReservationReferences
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Source of the server assigned to the server profile. Values can be Static, Pool or None. Static is used if a server is attached directly to server profile. Pool is used if a resource pool is attached to server profile. None is used if no server or resource pool is attached to server profile.\n* `None` - No server is assigned to the server profile.\n* `Static` - Server is directly assigned to server profile using assign server.\n* `Pool` - Server is assigned from a resource pool."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1034,6 +1044,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PolicyBucket"))
             {
                 initObject.PolicyBucket = this.PolicyBucket;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReservationReferences"))
+            {
+                initObject.ReservationReferences = this.ReservationReferences;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ServerAssignmentMode"))
             {

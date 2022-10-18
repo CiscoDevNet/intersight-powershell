@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFcpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< FcpoolPool.AssignmentOrderEnum>][-ClassId< FcpoolPool.ClassIdEnum>][-Description< string>][-IdBlocks< System.Collections.Generic.List`1[Model.FcpoolBlock]>][-Moid< string>][-Name< string>][-ObjectType< FcpoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PoolPurpose< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFcpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< FcpoolPool.AssignmentOrderEnum>][-ClassId< FcpoolPool.ClassIdEnum>][-Description< string>][-IdBlocks< System.Collections.Generic.List`1[Model.FcpoolBlock]>][-Moid< string>][-Name< string>][-ObjectType< FcpoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PoolPurpose< string>][-Reservations< System.Collections.Generic.List`1[Model.FcpoolReservationRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -169,6 +169,24 @@ Purpose of this WWN pool.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reservations
+An array of relationships to fcpoolReservation resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.FcpoolReservationRelationship]
 Parameter Sets: (All)
 Aliases:
 

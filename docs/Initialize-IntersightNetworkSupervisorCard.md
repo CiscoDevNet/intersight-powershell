@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNetworkSupervisorCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkSupervisorCard.ClassIdEnum>][-Description< string>][-FcPorts< System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]>][-HardwareVersion< string>][-Moid< string>][-Name< string>][-NetworkElement< Model.NetworkElementRelationship>][-NumberOfPorts< long>][-ObjectType< NetworkSupervisorCard.ObjectTypeEnum>][-OperState< string>][-PartNumber< string>][-PowerState< string>][-PreviousFru< Model.EquipmentFruRelationship>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Status< string>][-SupervisorId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNetworkSupervisorCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkSupervisorCard.ClassIdEnum>][-Moid< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< NetworkSupervisorCard.ObjectTypeEnum>][-PreviousFru< Model.EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,71 +54,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Description
-The description of the supervisor card.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FcPorts
-An array of relationships to fcPhysicalPort resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -HardwareVersion
-The hardware version of the supervisor card.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-The name of the supervisor card like Supervisor Card-1.
 
 ```yaml
 Type: string
@@ -150,71 +87,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NumberOfPorts
-The number of ports on the supervisor card.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: NetworkSupervisorCard.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -OperState
-The operational status of the supervisor card.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PartNumber
-The part number of the supervisor card.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PowerState
-The power state of the supervisor card.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -243,54 +120,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RegisteredDevice
-A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.AssetDeviceRegistrationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Status
-The status of the supervisor card.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SupervisorId
-The identifier for the supervisor card.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -298,21 +127,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Type
-The type of the supervisor card.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

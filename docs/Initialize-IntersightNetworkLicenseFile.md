@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNetworkLicenseFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkLicenseFile.ClassIdEnum>][-ExpiryDate< string>][-FeatureName< string>][-FileId< string>][-HostId< string>][-Moid< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< NetworkLicenseFile.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNetworkLicenseFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkLicenseFile.ClassIdEnum>][-ExpiryDate< string>][-FeatureName< string>][-FileId< string>][-HostId< string>][-Moid< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< NetworkLicenseFile.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -152,24 +152,6 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: NetworkLicenseFile.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RegisteredDevice
-A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.AssetDeviceRegistrationRelationship
 Parameter Sets: (All)
 Aliases:
 

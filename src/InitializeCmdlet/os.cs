@@ -102,7 +102,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Network Device where the IP address must be configured. Network Interface names and MAC address are supported."</para>
+        /// <para type="description">"Network Device where the IP address must be configured. Network Interface names and MAC address are supported.\nFor SUSE Linux Enterprise Server, Network Interface name is a required input and if provided as a MAC address,\nA persistent interface name is binded to the MAC address and the interface name will be used for network configuration.\nRefer https://documentation.suse.com/sles/15-SP2/html/SLES-all/cha-configuration-installation-options.html#CreateProfile-Network-names."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -863,6 +863,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"ESXi Secure Boot installation is currently not supported. As a workaround, Secure Boot will be disabled before installation and restored after installation is complete. Enable to Override Secure Boot Configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool OverrideSecureBoot
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -873,6 +883,10 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OverrideSecureBoot"))
+            {
+                initObject.OverrideSecureBoot = this.OverrideSecureBoot;
+            }
             WriteObject(initObject);
         }
 
@@ -1041,6 +1055,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"ESXi Secure Boot installation is currently not supported. As a workaround, Secure Boot will be disabled before installation and restored after installation is complete. Enable to Override Secure Boot Configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool OverrideSecureBoot
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1127,6 +1151,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("OsduImage"))
             {
                 initObject.OsduImage = this.OsduImage;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("OverrideSecureBoot"))
+            {
+                initObject.OverrideSecureBoot = this.OverrideSecureBoot;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Server"))
             {
@@ -1893,7 +1921,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.WorkflowPrimitiveDataType Type
+        public object Type
         {
             get;
             set;

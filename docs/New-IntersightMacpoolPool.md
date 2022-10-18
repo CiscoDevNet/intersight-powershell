@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightMacpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< MacpoolPool.AssignmentOrderEnum>][-Description< string>][-MacBlocks< System.Collections.Generic.List`1[MacpoolBlock]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightMacpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< MacpoolPool.AssignmentOrderEnum>][-Description< string>][-MacBlocks< System.Collections.Generic.List`1[MacpoolBlock]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Reservations< System.Collections.Generic.List`1[MacpoolReservationRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -123,6 +123,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reservations
+An array of relationships to macpoolReservation resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[MacpoolReservationRelationship]
 Parameter Sets: (All)
 Aliases:
 

@@ -988,16 +988,6 @@ namespace Intersight.PowerShell
         }
 
 
-        // <summary>
-        /// <para type="description">"A reference to a networkSupervisorCard resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public NetworkSupervisorCardRelationship NetworkSupervisorCard
-        {
-            get;
-            set;
-        }
 
 
 

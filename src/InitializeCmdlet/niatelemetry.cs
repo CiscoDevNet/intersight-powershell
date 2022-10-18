@@ -11936,6 +11936,314 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryNexusCloudAccount.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryNexusCloudAccount")]
+    public class InitializeIntersightNiatelemetryNexusCloudAccount : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryNexusCloudAccount()
+        {
+            ClassId = NiatelemetryNexusCloudAccount.ClassIdEnum.NiatelemetryNexusCloudAccount;
+            ObjectType = NiatelemetryNexusCloudAccount.ObjectTypeEnum.NiatelemetryNexusCloudAccount;
+
+        }
+        // <summary>
+        /// <para type="description">"Count of ACI-type site devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long AciCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryNexusCloudAccount.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Count of NXOS-type site devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NxosCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryNexusCloudAccount.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryNexusCloudAccount initObject = new Intersight.Model.NiatelemetryNexusCloudAccount();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AciCount"))
+            {
+                initObject.AciCount = this.AciCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NxosCount"))
+            {
+                initObject.NxosCount = this.NxosCount;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryNexusCloudSite.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryNexusCloudSite")]
+    public class InitializeIntersightNiatelemetryNexusCloudSite : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryNexusCloudSite()
+        {
+            ClassId = NiatelemetryNexusCloudSite.ClassIdEnum.NiatelemetryNexusCloudSite;
+            ObjectType = NiatelemetryNexusCloudSite.ObjectTypeEnum.NiatelemetryNexusCloudSite;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Advisories setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Advisories
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Anomalies setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Anomalies
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Capacity utilization setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool CapacityUtilization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryNexusCloudSite.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the license type of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LicenseType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the name of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryNexusCloudSite.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the type of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SiteType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Software management setting status, based on license type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SoftwareManagement
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the uuid of the Nexus Cloud site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Uuid
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NiatelemetryNexusCloudSite initObject = new Intersight.Model.NiatelemetryNexusCloudSite();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Advisories"))
+            {
+                initObject.Advisories = this.Advisories;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Anomalies"))
+            {
+                initObject.Anomalies = this.Anomalies;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CapacityUtilization"))
+            {
+                initObject.CapacityUtilization = this.CapacityUtilization;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("LicenseType"))
+            {
+                initObject.LicenseType = this.LicenseType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SiteType"))
+            {
+                initObject.SiteType = this.SiteType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SoftwareManagement"))
+            {
+                initObject.SoftwareManagement = this.SoftwareManagement;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Uuid"))
+            {
+                initObject.Uuid = this.Uuid;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryNexusDashboardControllerDetails.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryNexusDashboardControllerDetails")]
@@ -14658,6 +14966,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Returns if site has been onboarded to nexus cloud or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool NexusCloudMembershipStatus
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The ID of the device being inventoried."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14808,7 +15126,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
+        /// <para type="description">"Type of record DCNM / APIC / SE / Nexus Switch. This determines the type of platform where inventory was collected."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -14873,6 +15191,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string SiteName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns the uuid of the Nexus Cloud site associated to the inventory object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Siteuuid
         {
             get;
             set;
@@ -15070,6 +15398,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Moid = this.Moid;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NexusCloudMembershipStatus"))
+            {
+                initObject.NexusCloudMembershipStatus = this.NexusCloudMembershipStatus;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("NodeId"))
             {
                 initObject.NodeId = this.NodeId;
@@ -15154,6 +15486,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SiteName"))
             {
                 initObject.SiteName = this.SiteName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Siteuuid"))
+            {
+                initObject.Siteuuid = this.Siteuuid;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SmartAccountId"))
             {

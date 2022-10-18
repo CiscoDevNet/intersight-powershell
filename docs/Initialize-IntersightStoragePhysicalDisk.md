@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStoragePhysicalDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BackgroundOperations< string>][-ClassId< StoragePhysicalDisk.ClassIdEnum>][-DisabledForRemoval< bool>][-DriveFirmware< string>][-EncryptionStatus< string>][-FailurePredicted< bool>][-FdeCapable< string>][-HotSpareType< string>][-IndicatorLed< string>][-MaximumOperatingTemperature< long>][-MediaErrorCount< long>][-Moid< string>][-Name< string>][-NonCoercedSizeBytes< long>][-ObjectType< StoragePhysicalDisk.ObjectTypeEnum>][-OperatingTemperature< long>][-PercentLifeLeft< long>][-PercentReservedCapacityConsumed< long>][-PerformancePercent< long>][-PhysicalDiskExtensions< System.Collections.Generic.List`1[Model.StoragePhysicalDiskExtensionRelationship]>][-PowerCycleCount< long>][-PowerOnHours< long>][-PredictedMediaLifeLeftPercent< long>][-PredictiveFailureCount< long>][-PreviousFru< Model.EquipmentFruRelationship>][-ReadErrorCountThreshold< long>][-ReadIoErrorCount< long>][-Secured< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ThresholdOperatingTemperature< long>][-WearStatusInDays< long>][-WriteErrorCountThreshold< long>][-WriteIoErrorCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStoragePhysicalDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BackgroundOperations< string>][-ClassId< StoragePhysicalDisk.ClassIdEnum>][-DisabledForRemoval< bool>][-DriveFirmware< string>][-EncryptionStatus< string>][-FailurePredicted< bool>][-FdeCapable< string>][-HotSpareType< string>][-IndicatorLed< string>][-MaximumOperatingTemperature< long>][-MediaErrorCount< long>][-Moid< string>][-Name< string>][-NonCoercedSizeBytes< long>][-ObjectType< StoragePhysicalDisk.ObjectTypeEnum>][-OperatingTemperature< long>][-PercentLifeLeft< long>][-PercentReservedCapacityConsumed< long>][-PerformancePercent< long>][-PhysicalDiskExtensions< System.Collections.Generic.List`1[Model.StoragePhysicalDiskExtensionRelationship]>][-PowerCycleCount< long>][-PowerOnHours< long>][-PredictedMediaLifeLeftPercent< long>][-PredictiveFailureCount< long>][-PreviousFru< Model.EquipmentFruRelationship>][-ReadIoErrorCount< long>][-Secured< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ThresholdOperatingTemperature< long>][-WearStatusInDays< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -420,21 +420,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ReadErrorCountThreshold
-The number of read errors that are permitted while accessing the drive/card.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ReadIoErrorCount
 Number of IO Errors that occured while reading data from the disk.
 
@@ -499,36 +484,6 @@ Accept wildcard characters: False
 
 ### -WearStatusInDays
 The number of days an SSD has gone through with the write cycles.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WriteErrorCountThreshold
-The number of write errors that are permitted while accessing the drive/card.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WriteIoErrorCount
-Number of IO Errors that occured while writing data to the disk.
 
 ```yaml
 Type: long

@@ -3732,7 +3732,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Package version which the firmware belongs to."</para>
+        /// <para type="description">"Bundle version which the firmware belongs to."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

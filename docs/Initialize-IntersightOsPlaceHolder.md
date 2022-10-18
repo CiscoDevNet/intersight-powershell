@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsPlaceHolder [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< OsPlaceHolder.ClassIdEnum>][-IsValueSet< bool>][-ObjectType< OsPlaceHolder.ObjectTypeEnum>][-Type< Model.WorkflowPrimitiveDataType>][-Value< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightOsPlaceHolder [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< OsPlaceHolder.ClassIdEnum>][-IsValueSet< bool>][-ObjectType< OsPlaceHolder.ObjectTypeEnum>][-Type< object>][-Value< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -87,10 +87,10 @@ Accept wildcard characters: False
 ### -Type
 Definition of place holder.
 
-Note :- Use Initialize-IntersightWorkflowPrimitiveDataType to create the object of complex type WorkflowPrimitiveDataType
+Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
-Type: Model.WorkflowPrimitiveDataType
+Type: object
 Parameter Sets: (All)
 Aliases:
 
@@ -174,7 +174,5 @@ PS C:\> Initialize-IntersightOsPlaceHolder
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightWorkflowPrimitiveDataType](./Initialize-IntersightWorkflowPrimitiveDataType.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightMacpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< MacpoolPool.AssignmentOrderEnum>][-ClassId< MacpoolPool.ClassIdEnum>][-Description< string>][-MacBlocks< System.Collections.Generic.List`1[Model.MacpoolBlock]>][-Moid< string>][-Name< string>][-ObjectType< MacpoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightMacpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< MacpoolPool.AssignmentOrderEnum>][-ClassId< MacpoolPool.ClassIdEnum>][-Description< string>][-MacBlocks< System.Collections.Generic.List`1[Model.MacpoolBlock]>][-Moid< string>][-Name< string>][-ObjectType< MacpoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Reservations< System.Collections.Generic.List`1[Model.MacpoolReservationRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -154,6 +154,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reservations
+An array of relationships to macpoolReservation resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.MacpoolReservationRelationship]
 Parameter Sets: (All)
 Aliases:
 

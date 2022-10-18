@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightUuidpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< UuidpoolPool.AssignmentOrderEnum>][-ClassId< UuidpoolPool.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< UuidpoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Prefix< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UuidSuffixBlocks< System.Collections.Generic.List`1[Model.UuidpoolUuidBlock]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightUuidpoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< UuidpoolPool.AssignmentOrderEnum>][-ClassId< UuidpoolPool.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< UuidpoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Prefix< string>][-Reservations< System.Collections.Generic.List`1[Model.UuidpoolReservationRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UuidSuffixBlocks< System.Collections.Generic.List`1[Model.UuidpoolUuidBlock]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -152,6 +152,24 @@ The UUID prefix must be in hexadecimal format xxxxxxxx-xxxx-xxxx.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reservations
+An array of relationships to uuidpoolReservation resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.UuidpoolReservationRelationship]
 Parameter Sets: (All)
 Aliases:
 

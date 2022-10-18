@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsGlobalConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< OsGlobalConfig.ClassIdEnum>][-ObjectType< OsGlobalConfig.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightOsGlobalConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< OsGlobalConfig.ClassIdEnum>][-ObjectType< OsGlobalConfig.ObjectTypeEnum>][-OverrideSecureBoot< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: OsGlobalConfig.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OverrideSecureBoot
+ESXi Secure Boot installation is currently not supported. As a workaround, Secure Boot will be disabled before installation and restored after installation is complete. Enable to Override Secure Boot Configuration.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

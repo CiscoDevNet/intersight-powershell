@@ -2830,6 +2830,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Connection status of the Flex Util virtual drive to the host."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string HostAccessible
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2925,6 +2935,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("DriveType"))
             {
                 initObject.DriveType = this.DriveType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("HostAccessible"))
+            {
+                initObject.HostAccessible = this.HostAccessible;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
@@ -5044,6 +5058,230 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppCifsAcl.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppCifsAcl")]
+    public class InitializeIntersightStorageNetAppCifsAcl : PSCmdlet
+    {
+        public InitializeIntersightStorageNetAppCifsAcl()
+        {
+            ClassId = StorageNetAppCifsAcl.ClassIdEnum.StorageNetAppCifsAcl;
+            ObjectType = StorageNetAppCifsAcl.ObjectTypeEnum.StorageNetAppCifsAcl;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppCifsAcl.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppCifsAcl.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.StorageNetAppCifsAcl initObject = new Intersight.Model.StorageNetAppCifsAcl();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppCifsService.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppCifsService")]
+    public class InitializeIntersightStorageNetAppCifsService : PSCmdlet
+    {
+        public InitializeIntersightStorageNetAppCifsService()
+        {
+            ClassId = StorageNetAppCifsService.ClassIdEnum.StorageNetAppCifsService;
+            ObjectType = StorageNetAppCifsService.ObjectTypeEnum.StorageNetAppCifsService;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppCifsService.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppCifsService.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.StorageNetAppCifsService initObject = new Intersight.Model.StorageNetAppCifsService();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppCifsShare.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppCifsShare")]
+    public class InitializeIntersightStorageNetAppCifsShare : PSCmdlet
+    {
+        public InitializeIntersightStorageNetAppCifsShare()
+        {
+            ClassId = StorageNetAppCifsShare.ClassIdEnum.StorageNetAppCifsShare;
+            ObjectType = StorageNetAppCifsShare.ObjectTypeEnum.StorageNetAppCifsShare;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppCifsShare.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppCifsShare.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.StorageNetAppCifsShare initObject = new Intersight.Model.StorageNetAppCifsShare();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppCluster.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppCluster")]
@@ -5207,6 +5445,90 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
             Intersight.Model.StorageNetAppClusterEvent initObject = new Intersight.Model.StorageNetAppClusterEvent();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppClusterSnapMirrorPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppClusterSnapMirrorPolicy")]
+    public class InitializeIntersightStorageNetAppClusterSnapMirrorPolicy : PSCmdlet
+    {
+        public InitializeIntersightStorageNetAppClusterSnapMirrorPolicy()
+        {
+            ClassId = StorageNetAppClusterSnapMirrorPolicy.ClassIdEnum.StorageNetAppClusterSnapMirrorPolicy;
+            ObjectType = StorageNetAppClusterSnapMirrorPolicy.ObjectTypeEnum.StorageNetAppClusterSnapMirrorPolicy;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppClusterSnapMirrorPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppClusterSnapMirrorPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.StorageNetAppClusterSnapMirrorPolicy initObject = new Intersight.Model.StorageNetAppClusterSnapMirrorPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -7676,6 +7998,90 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppQtree.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppQtree")]
+    public class InitializeIntersightStorageNetAppQtree : PSCmdlet
+    {
+        public InitializeIntersightStorageNetAppQtree()
+        {
+            ClassId = StorageNetAppQtree.ClassIdEnum.StorageNetAppQtree;
+            ObjectType = StorageNetAppQtree.ObjectTypeEnum.StorageNetAppQtree;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppQtree.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppQtree.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.StorageNetAppQtree initObject = new Intersight.Model.StorageNetAppQtree();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppSchedule.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppSchedule")]
@@ -8105,6 +8511,90 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
             Intersight.Model.StorageNetAppSvmEvent initObject = new Intersight.Model.StorageNetAppSvmEvent();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize StorageNetAppSvmSnapMirrorPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightStorageNetAppSvmSnapMirrorPolicy")]
+    public class InitializeIntersightStorageNetAppSvmSnapMirrorPolicy : PSCmdlet
+    {
+        public InitializeIntersightStorageNetAppSvmSnapMirrorPolicy()
+        {
+            ClassId = StorageNetAppSvmSnapMirrorPolicy.ClassIdEnum.StorageNetAppSvmSnapMirrorPolicy;
+            ObjectType = StorageNetAppSvmSnapMirrorPolicy.ObjectTypeEnum.StorageNetAppSvmSnapMirrorPolicy;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppSvmSnapMirrorPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public StorageNetAppSvmSnapMirrorPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.StorageNetAppSvmSnapMirrorPolicy initObject = new Intersight.Model.StorageNetAppSvmSnapMirrorPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -8648,16 +9138,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The number of read errors that are permitted while accessing the drive/card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ReadErrorCountThreshold
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"Number of IO Errors that occured while reading data from the disk."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8703,26 +9183,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long WearStatusInDays
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The number of write errors that are permitted while accessing the drive/card."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long WriteErrorCountThreshold
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Number of IO Errors that occured while writing data to the disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long WriteIoErrorCount
         {
             get;
             set;
@@ -8829,10 +9289,6 @@ namespace Intersight.PowerShell
             {
                 initObject.PreviousFru = this.PreviousFru;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ReadErrorCountThreshold"))
-            {
-                initObject.ReadErrorCountThreshold = this.ReadErrorCountThreshold;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ReadIoErrorCount"))
             {
                 initObject.ReadIoErrorCount = this.ReadIoErrorCount;
@@ -8852,14 +9308,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("WearStatusInDays"))
             {
                 initObject.WearStatusInDays = this.WearStatusInDays;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WriteErrorCountThreshold"))
-            {
-                initObject.WriteErrorCountThreshold = this.WriteErrorCountThreshold;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WriteIoErrorCount"))
-            {
-                initObject.WriteIoErrorCount = this.WriteIoErrorCount;
             }
             WriteObject(initObject);
         }

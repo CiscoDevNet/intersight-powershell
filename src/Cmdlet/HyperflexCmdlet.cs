@@ -4566,7 +4566,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Disk inventory state as determined by storfs inventory module.\nShould be one of values defined in enum.\n* `UNKNOWN` - The state of the disk is unknown.\n* `CLAIMED` - The state of the disk is claimed by storfs and has a valid storfs format.\n* `AVAILABLE` - The disk is available but not claimed by storfs.\n* `IGNORED` - The disk ash been ignored by storfs.\n* `BLACKLISTED` - The disk has been blacklisted by storfs.\n* `SECUREERASED` - The disk has been secure erased.\n* `BLOCKED` - The disk has been blocked by storfs."</para>
+        /// <para type="description">"Disk inventory state as determined by storfs inventory module.\nShould be one of values defined in enum.\n* `UNKNOWN` - The state of the disk is unknown.\n* `CLAIMED` - The state of the disk is claimed by storfs and has a valid storfs format.\n* `AVAILABLE` - The disk is available but not claimed by storfs.\n* `IGNORED` - The disk ash been ignored by storfs.\n* `BLACKLISTED` - The deprecated value for 'Blocked'. It is included to maintain backwards compatibility with clusters running a HyperFlex Data Platform version older than 5.0(1a).\n* `SECUREERASED` - The disk has been secure erased.\n* `BLOCKED` - The disk has been blocked by storfs."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5860,6 +5860,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"IP Address of the vCenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string HealthCheckVcenterIp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -5902,6 +5913,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -6122,6 +6134,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"IP Address of the vCenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string HealthCheckVcenterIp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a hyperflexCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -6164,6 +6187,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -13800,7 +13824,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Enable or disable Logical Availability Zones (LAZ). If enabled, HyperFlex Data Platform automatically selects and groups nodes into different availability zones. For HyperFlex Data Platform versions prior to 3.0 release, this setting does not apply. For HyperFlex Data Platform versions 3.0 or higher, this setting is only applicable to Fabric Interconnect attached HyperFlex systems with 8 or more converged nodes."</para>
+        /// <para type="description">"Enable or disable Logical Availability Zones (LAZ). If enabled, HyperFlex Data Platform automatically selects and groups nodes into different availability zones. For HyperFlex Data Platform versions prior to 3.0 release, this setting does not apply. For HyperFlex Data Platform versions 3.0 or higher, this setting is only applicable to HyperFlex systems with 8 or more converged nodes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -19360,7 +19384,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Enable or disable Logical Availability Zones (LAZ). If enabled, HyperFlex Data Platform automatically selects and groups nodes into different availability zones. For HyperFlex Data Platform versions prior to 3.0 release, this setting does not apply. For HyperFlex Data Platform versions 3.0 or higher, this setting is only applicable to Fabric Interconnect attached HyperFlex systems with 8 or more converged nodes."</para>
+        /// <para type="description">"Enable or disable Logical Availability Zones (LAZ). If enabled, HyperFlex Data Platform automatically selects and groups nodes into different availability zones. For HyperFlex Data Platform versions prior to 3.0 release, this setting does not apply. For HyperFlex Data Platform versions 3.0 or higher, this setting is only applicable to HyperFlex systems with 8 or more converged nodes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

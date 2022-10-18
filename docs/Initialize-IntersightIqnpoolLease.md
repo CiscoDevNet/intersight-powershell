@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIqnpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IqnpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< IqnpoolLease.ClassIdEnum>][-IqnAddress< string>][-Moid< string>][-ObjectType< IqnpoolLease.ObjectTypeEnum>][-Pool< Model.IqnpoolPoolRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIqnpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IqnpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< IqnpoolLease.ClassIdEnum>][-IqnAddress< string>][-Moid< string>][-ObjectType< IqnpoolLease.ObjectTypeEnum>][-Pool< Model.IqnpoolPoolRelationship>][-Reservation< Model.IqnpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -150,6 +150,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Reservation
+The holder of a reference to reservation Moid and the specific details on lease condition for this reservation. Specified to allocate already reserved identities.
+
+Note :- Use Initialize-IntersightIqnpoolReservationReference to create the object of complex type IqnpoolReservationReference
+
+```yaml
+Type: Model.IqnpoolReservationReference
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -223,5 +240,7 @@ PS C:\> Initialize-IntersightIqnpoolLease
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightIqnpoolReservationReference](./Initialize-IntersightIqnpoolReservationReference.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

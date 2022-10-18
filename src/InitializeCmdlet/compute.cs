@@ -2519,6 +2519,7 @@ namespace Intersight.PowerShell
             FrontPanelLockState = ComputeServerSetting.FrontPanelLockStateEnum.Unlock;
             KvmReset = ComputeServerSetting.KvmResetEnum.Ready;
             ObjectType = ComputeServerSetting.ObjectTypeEnum.ComputeServerSetting;
+            TpmReset = ComputeServerSetting.TpmResetEnum.None;
             TunneledKvmState = ComputeServerSetting.TunneledKvmStateEnum.Ready;
 
         }
@@ -2703,6 +2704,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Clear the configuration of TPM chip in the server.\n* `None` - Perform no action on the TPM.\n* `ClearTpm` - Clear the configuration and restore factory defaults of TPM chip in the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeServerSetting.TpmResetEnum TpmReset
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"By default, the tunneled vKVM property appears in Ready state. The property can be configured by performing allowed actions. Once the property is configured, it reverts to Ready state.\n* `Ready` - Tunneled vKVM is ready to be configured on the server.\n* `Enable` - Tunneled vKVM is enabled for the server.\n* `Disable` - Tunneled vKVM is disabled for the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2781,6 +2792,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TpmReset"))
+            {
+                initObject.TpmReset = this.TpmReset;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("TunneledKvmState"))
             {
