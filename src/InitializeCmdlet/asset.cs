@@ -4551,6 +4551,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamTrustPointRelationship TrustPoint
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -4596,6 +4606,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("TargetType"))
             {
                 initObject.TargetType = this.TargetType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TrustPoint"))
+            {
+                initObject.TrustPoint = this.TrustPoint;
             }
             WriteObject(initObject);
         }

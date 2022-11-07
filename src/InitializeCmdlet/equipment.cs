@@ -260,31 +260,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<long> GapAvailableIds
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Shows the next available Chassis ID to be allocated."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long NextAvailableId
         {
             get;
             set;
@@ -322,17 +302,9 @@ namespace Intersight.PowerShell
             {
                 initObject.DeviceRegistration = this.DeviceRegistration;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("GapAvailableIds"))
-            {
-                initObject.GapAvailableIds = this.GapAvailableIds;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NextAvailableId"))
-            {
-                initObject.NextAvailableId = this.NextAvailableId;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))

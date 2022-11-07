@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightAssetTarget [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assist< AssetTargetRelationship>][-Connections< System.Collections.Generic.List`1[AssetConnection]>][-ManagementLocation< AssetTarget.ManagementLocationEnum>][-Moid< string>][[-Name]< string>][-Services< System.Collections.Generic.List`1[AssetService]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetType< AssetTarget.TargetTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightAssetTarget [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assist< AssetTargetRelationship>][-Connections< System.Collections.Generic.List`1[AssetConnection]>][-ManagementLocation< AssetTarget.ManagementLocationEnum>][-Moid< string>][[-Name]< string>][-Services< System.Collections.Generic.List`1[AssetService]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetType< AssetTarget.TargetTypeEnum>][-TrustPoint< IamTrustPointRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -175,6 +175,24 @@ The type of the managed target. For example a UCS Server or VMware Vcenter targe
 
 ```yaml
 Type: AssetTarget.TargetTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TrustPoint
+A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamTrustPointRelationship
 Parameter Sets: (All)
 Aliases:
 

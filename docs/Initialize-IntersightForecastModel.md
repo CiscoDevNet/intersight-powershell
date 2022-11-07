@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightForecastModel [-Accuracy< float>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ForecastModel.ClassIdEnum>][-ModelData< System.Collections.Generic.List`1[decimal]>][-ModelType< ForecastModel.ModelTypeEnum>][-ObjectType< ForecastModel.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightForecastModel [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ForecastModel.ClassIdEnum>][-ObjectType< ForecastModel.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,21 +23,6 @@ Initialize-IntersightForecastModel [-Accuracy< float>][-AdditionalProperties< Sy
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
-
-### -Accuracy
-The standard error of the estimate is a measure of the accuracy of predictions from predective modeling.
-
-```yaml
-Type: float
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AdditionalProperties
 
@@ -59,36 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: ForecastModel.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ModelData
-
-
-```yaml
-Type: System.Collections.Generic.List`1[decimal]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ModelType
-Model type indicating type of predictive model used for computing forecast.\n* `Linear` - The Enum value Linear represents that the predictive model type used for forecast computation is linear regression.
-
-```yaml
-Type: ForecastModel.ModelTypeEnum
 Parameter Sets: (All)
 Aliases:
 

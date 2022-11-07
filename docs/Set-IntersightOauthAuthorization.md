@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -ApiType
-Type of OAuth Api. For example, Smart-licensing-API.\n* `Unknown` - Unknown is the default API type.\n* `SmartLicensing-API` - Smart licensing API type.
+Type of OAuth Api. For example, Smart-licensing-API.\n* `Unknown` - Unknown is the default API type.\n* `SmartLicensing-API` - Smart licensing API type.\n* `CommerceEstimate-API` - Commerce Estimate API type.
 
 ```yaml
 Type: OauthAuthorization.ApiTypeEnum

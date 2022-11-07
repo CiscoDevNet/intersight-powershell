@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightTamSecurityAdvisory [-Actions< System.Collections.Generic.List`1[TamAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvisoryId< string>][-ApiDataSources< System.Collections.Generic.List`1[TamApiDataSource]>][-BaseScore< float>][-CveIds< System.Collections.Generic.List`1[string]>][-DatePublished< DateTime>][-DateUpdated< DateTime>][-Description< string>][-EnvironmentalScore< float>][-ExternalUrl< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-OtherRefUrls< System.Collections.Generic.List`1[string]>][-Recommendation< string>][-Severity< TamSeverity>][-State< TamSecurityAdvisory.StateEnum>][-Status< TamSecurityAdvisory.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TemporalScore< float>][-Version< string>][-Workaround< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightTamSecurityAdvisory [-Actions< System.Collections.Generic.List`1[TamAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvisoryId< string>][-ApiDataSources< System.Collections.Generic.List`1[TamApiDataSource]>][-BaseScore< float>][-CveIds< System.Collections.Generic.List`1[string]>][-DatePublished< DateTime>][-DateUpdated< DateTime>][-Description< string>][-EnvironmentalScore< float>][-ExecuteOnPod< TamSecurityAdvisory.ExecuteOnPodEnum>][-ExternalUrl< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-OtherRefUrls< System.Collections.Generic.List`1[string]>][-Recommendation< string>][-Severity< TamSeverity>][-State< TamSecurityAdvisory.StateEnum>][-Status< TamSecurityAdvisory.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TemporalScore< float>][-Version< string>][-Workaround< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -167,6 +167,21 @@ CVSS version 3 environmental score for the security Advisory.
 
 ```yaml
 Type: float
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExecuteOnPod
+Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster.
+
+```yaml
+Type: TamSecurityAdvisory.ExecuteOnPodEnum
 Parameter Sets: (All)
 Aliases:
 
