@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamDomainNameInfo [-Action< IamDomainNameInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamDomainNameInfo.ClassIdEnum>][-DomainName< string>][-FailureDetails< Model.IamFailureDetails>][-Moid< string>][-ObjectType< IamDomainNameInfo.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamDomainNameInfo [-Action< IamDomainNameInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamDomainNameInfo.ClassIdEnum>][-DomainName< string>][-Moid< string>][-ObjectType< IamDomainNameInfo.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,23 +74,6 @@ Email domain name. When a user enters an email during login in the Intersight ho
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FailureDetails
-Reason for the failure during verification.
-
-Note :- Use Initialize-IntersightIamFailureDetails to create the object of complex type IamFailureDetails
-
-```yaml
-Type: Model.IamFailureDetails
 Parameter Sets: (All)
 Aliases:
 
@@ -204,7 +187,5 @@ PS C:\> Initialize-IntersightIamDomainNameInfo
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightIamFailureDetails](./Initialize-IntersightIamFailureDetails.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

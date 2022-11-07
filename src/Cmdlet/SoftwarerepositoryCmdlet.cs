@@ -77,17 +77,6 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Indicates whether the value of the 'userId' property has been set."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool IsUserIdSet
-        {
-            get;
-            set;
-        }
-
-        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1734,7 +1723,6 @@ namespace Intersight.PowerShell
 
 
 
-
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -2670,7 +2658,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-
 
 
 

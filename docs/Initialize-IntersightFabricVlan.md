@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoAllowOnUplinks< bool>][-ClassId< FabricVlan.ClassIdEnum>][-EthNetworkPolicy< Model.FabricEthNetworkPolicyRelationship>][-IsNative< bool>][-Moid< string>][-MulticastPolicy< Model.FabricMulticastPolicyRelationship>][-Name< string>][-ObjectType< FabricVlan.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VlanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoAllowOnUplinks< bool>][-ClassId< FabricVlan.ClassIdEnum>][-EthNetworkPolicy< Model.FabricEthNetworkPolicyRelationship>][-IsNative< bool>][-Moid< string>][-MulticastPolicy< Model.FabricMulticastPolicyRelationship>][-Name< string>][-ObjectType< FabricVlan.ObjectTypeEnum>][-PrimaryVlanId< long>][-SharingType< FabricVlan.SharingTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VlanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -155,6 +155,36 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: FabricVlan.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PrimaryVlanId
+The Primary VLAN ID of the VLAN, if the sharing type of the VLAN is Isolated or Community.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SharingType
+The sharing type of this VLAN.\n* `None` - This represents a regular VLAN.\n* `Primary` - This represents a primary VLAN.\n* `Isolated` - This represents an isolated VLAN.\n* `Community` - This represents a community VLAN.
+
+```yaml
+Type: FabricVlan.SharingTypeEnum
 Parameter Sets: (All)
 Aliases:
 

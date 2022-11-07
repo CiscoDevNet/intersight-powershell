@@ -177,6 +177,8 @@ PS C:\> Set-IntersightApplianceUpgrade
 
 [Get-IntersightApplianceUpgrade](./Get-IntersightApplianceUpgrade.md)
 
+[Initialize-IntersightApplianceNodeIpInfo](./Initialize-IntersightApplianceNodeIpInfo.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightOnpremUpgradePhase](./Initialize-IntersightOnpremUpgradePhase.md)

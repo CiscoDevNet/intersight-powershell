@@ -202,11 +202,503 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Unit for the new capacity.\n* `TB` - The Enum value TB represents that the measurement unit is in terabytes.\n* `MB` - The Enum value MB represents that the measurement unit is in megabytes."</para>
+        /// <para type="description">"Unit for the new capacity.\n* `TB` - The Enum value TB represents that the measurement unit is in terabytes.\n* `MB` - The Enum value MB represents that the measurement unit is in megabytes.\n* `GB` - The Enum value GB represents that the measurement unit is in gigabytes.\n* `MHz` - The Enum value MHz represents that the measurement unit is in megahertz.\n* `GHz` - The Enum value GHz represents that the measurement unit is in gigahertz.\n* `Percentage` - The Enum value Percentage represents that the expansion request is in the percentage of resource increase. For example, a 20% increase in CPU capacity."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public RecommendationCapacityRunway.UnitEnum Unit
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get RecommendationClusterExpansion.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationClusterExpansion", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightRecommendationClusterExpansion : GetCmdletBase
+    {
+        public GetIntersightRecommendationClusterExpansion()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            MethodName = "GetRecommendationClusterExpansionListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Name of the cluster for which the expansion recommendation is provided."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ClusterName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a recommendationHardwareExpansionRequest resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public RecommendationHardwareExpansionRequestRelationship HardwareExpansionRequest
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when the recommendation was last updated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime LastUpdatedTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The name of the recommendation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates if the recommendation requirement is met by the existing setup by adding hardware components to it or it needs expansion. For example if the recommendation is to add 16 disks to a HyperFlex cluster but the cluster is already alost full and only 8 disks can be added, then this property is set to false."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool RequirementMet
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get RecommendationHardwareExpansionRequest.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationHardwareExpansionRequest", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightRecommendationHardwareExpansionRequest : GetCmdletBase
+    {
+        public GetIntersightRecommendationHardwareExpansionRequest()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            MethodName = "GetRecommendationHardwareExpansionRequestListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Action to be triggered for computing recommendation. Default value is None.\n* `None` - The Enum value None represents that no action is triggered on the forecast Instance managed object.\n* `Evaluate` - The Enum value Evaluate represents that a re-evaluation of the forecast needs to be triggered."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public RecommendationHardwareExpansionRequest.ActionEnum Action
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"User visible error message for the Hardware Expansion request."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The name of the expansion specification."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when the expansion was requested."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime RequestTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Status of the Hardware Expansion request.\n* `None` - The Enum value None represents the default status value before any API call is made.\n* `Success` - The Enum value Success represents that the API call returned with success.\n* `Fail` - The Enum value Fail represents that the API call returned with a failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public RecommendationHardwareExpansionRequest.StatusEnum Status
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get RecommendationHardwareExpansionRequestItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationHardwareExpansionRequestItem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightRecommendationHardwareExpansionRequestItem : GetCmdletBase
+    {
+        public GetIntersightRecommendationHardwareExpansionRequestItem()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            MethodName = "GetRecommendationHardwareExpansionRequestItemListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a recommendationHardwareExpansionRequest resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public RecommendationHardwareExpansionRequestRelationship ExpansionRequest
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Type of hardware item for which the capacity increase is requested by the user. For example, CPU.\n* `None` - The Enum value None represents that no value was set for the hardware type.\n* `CPU` - The Enum value CPU represents that the hardware type requested for expansion is a physical CPU.\n* `Memory` - The Enum value Memory represents that the hardware type requested for expansion is a memory unit.\n* `Storage` - The Enum value Storage represents that the hardware type requested for expansion is a storage unit, ie, storage drives."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public RecommendationHardwareExpansionRequestItem.ItemTypeEnum ItemType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The maximum value allowed for expansion for the hardware type on the referred registered device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public float MaxValue
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Unit type for the maximum value of the resource. For example, TB, GB, MB.\n* `TB` - The Enum value TB represents that the measurement unit is in terabytes.\n* `MB` - The Enum value MB represents that the measurement unit is in megabytes.\n* `GB` - The Enum value GB represents that the measurement unit is in gigabytes.\n* `MHz` - The Enum value MHz represents that the measurement unit is in megahertz.\n* `GHz` - The Enum value GHz represents that the measurement unit is in gigahertz.\n* `Percentage` - The Enum value Percentage represents that the expansion request is in the percentage of resource increase. For example, a 20% increase in CPU capacity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public RecommendationHardwareExpansionRequestItem.MaxValueUnitEnum MaxValueUnit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Unit type for the expansion request, i.e., if the increase is requested as a raw value in TB, GB, etc., or in percentage increase.\n* `TB` - The Enum value TB represents that the measurement unit is in terabytes.\n* `MB` - The Enum value MB represents that the measurement unit is in megabytes.\n* `GB` - The Enum value GB represents that the measurement unit is in gigabytes.\n* `MHz` - The Enum value MHz represents that the measurement unit is in megahertz.\n* `GHz` - The Enum value GHz represents that the measurement unit is in gigahertz.\n* `Percentage` - The Enum value Percentage represents that the expansion request is in the percentage of resource increase. For example, a 20% increase in CPU capacity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public RecommendationHardwareExpansionRequestItem.UnitTypeEnum UnitType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Value of the expansion request which can be absolute value or percentage increase."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public float Value
         {
             get;
             set;
@@ -257,6 +749,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public RecommendationCapacityRunwayRelationship CapacityRunway
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a recommendationClusterExpansion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public RecommendationClusterExpansionRelationship ClusterExpansion
         {
             get;
             set;
@@ -373,6 +876,28 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Moid of the managed object which represents the parent physical entity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ParentMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The personality of the physical device recommended."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Personality
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -399,7 +924,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The type of physical device recommended.\n* `Disk` - The Enum value Disk represents that the item type recommended is a Physical Disk.\n* `Node` - The Enum value Node represents that the item type recommended is a Storage Node.\n* `Cluster` - The Enum value Cluster represents that the item type recommended is a HyperFlex Cluster."</para>
+        /// <para type="description">"The type of physical device recommended.\n* `None` - The Enum value None represents that no value was set for the item type.\n* `Disk` - The Enum value Disk represents that the item type recommended is a Physical Disk.\n* `Node` - The Enum value Node represents that the item type recommended is a Storage Node.\n* `CPU` - The Enum value CPU represents that the item type recommended is a Processor.\n* `Memory` - The Enum value Memory represents that the item type recommended is a memory unit.\n* `Cluster` - The Enum value Cluster represents that the item type recommended is a HyperFlex Cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -410,7 +935,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Unit of the new capacity.\n* `TB` - The Enum value TB represents that the measurement unit is in terabytes.\n* `MB` - The Enum value MB represents that the measurement unit is in megabytes."</para>
+        /// <para type="description">"Unit of the new capacity.\n* `TB` - The Enum value TB represents that the measurement unit is in terabytes.\n* `MB` - The Enum value MB represents that the measurement unit is in megabytes.\n* `GB` - The Enum value GB represents that the measurement unit is in gigabytes.\n* `MHz` - The Enum value MHz represents that the measurement unit is in megahertz.\n* `GHz` - The Enum value GHz represents that the measurement unit is in gigahertz.\n* `Percentage` - The Enum value Percentage represents that the expansion request is in the percentage of resource increase. For example, a 20% increase in CPU capacity."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -431,6 +956,905 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get RecommendationPurchaseOrderEstimate.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationPurchaseOrderEstimate", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightRecommendationPurchaseOrderEstimate : GetCmdletBase
+    {
+        public GetIntersightRecommendationPurchaseOrderEstimate()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            MethodName = "GetRecommendationPurchaseOrderEstimateListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Action to be triggered for computing estimate. Default value is None.\n* `None` - The Enum value None represents that no action is triggered on the forecast Instance managed object.\n* `Evaluate` - The Enum value Evaluate represents that a re-evaluation of the forecast needs to be triggered."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public RecommendationPurchaseOrderEstimate.ActionEnum Action
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a recommendationClusterExpansion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public RecommendationClusterExpansionRelationship ClusterExpansion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identification generated by the Cisco commerce APIs portal to identify the recommended bill of mterials."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string EstimateId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when the recommendation was last updated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime LastUpdatedTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The user visible message which indicates any errors encountered in making the external API call to get the estimate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The name of the recommendation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Indicates if the recommendation requirement is met by the existing setup by adding hardware components to it or it needs expansion. For example if the recommendation is to add 16 disks to a HyperFlex cluster but the cluster is already alost full and only 8 disks can be added, then this property is set to false."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool RequirementMet
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The status of the external API call to get the estimate.\n* `None` - The Enum value None represents the default status value before any API call is made.\n* `Success` - The Enum value Success represents that the API call returned with success.\n* `Fail` - The Enum value Fail represents that the API call returned with a failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public RecommendationPurchaseOrderEstimate.StatusEnum Status
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The total cost of all the recommended hardware in the bill of materials for the corresponding estimate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public float TotalCost
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get RecommendationSoftwareItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationSoftwareItem", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightRecommendationSoftwareItem : GetCmdletBase
+    {
+        public GetIntersightRecommendationSoftwareItem()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            MethodName = "GetRecommendationSoftwareItemListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a recommendationClusterExpansion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public RecommendationClusterExpansionRelationship ClusterExpansion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The user visible message which informs user of the type of software recommendation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Message
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The name of the physical device recommended."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The personality of the physical device recommended."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Personality
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The software-recommendation type, for example, HXDP version, HyperV or ESXi version, etc.\n* `None` - The Enum value None represents the default software recommendation value.\n* `HXDPVersion` - The Enum value HXDPVersion represents that the software recommendation is to upgrade the HyperFlex Data Platform build version.\n* `NodeRatioLicense` - The Enum value NodeRatioLicense represents that the software recommendation is to upgrade the HyperFlex Data Platform license for using 1:2 converged to compute node ratio limits.\n* `DCNoFILicense` - The Enum value DCNoFILicense represents that the software recommendation is to upgrade the HyperFlex Data Platform license for using DC-No-FI limits.\n* `LAZExistingStatus` - The Enum value LAZExistingStatus represents that the software recommendation indicates that the HyperFlex cluster might have LAZ enabled.\n* `LAZNewStatus` - The Enum value LAZNewStatus represents that the software recommendation is to enable LAZ with expansion on the HyperFlex Cluster.\n* `EVCStatus` - The Enum value EVCStatus represents that the software recommendation is to enable Enhanced VMotion on the HypeFlex Cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public RecommendationSoftwareItem.RecommendationTypeEnum RecommendationType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The type of physical device recommended.\n* `None` - The Enum value None represents that no value was set for the item type.\n* `Disk` - The Enum value Disk represents that the item type recommended is a Physical Disk.\n* `Node` - The Enum value Node represents that the item type recommended is a Storage Node.\n* `CPU` - The Enum value CPU represents that the item type recommended is a Processor.\n* `Memory` - The Enum value Memory represents that the item type recommended is a memory unit.\n* `Cluster` - The Enum value Cluster represents that the item type recommended is a HyperFlex Cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public RecommendationSoftwareItem.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New RecommendationHardwareExpansionRequest.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightRecommendationHardwareExpansionRequest")]
+    public class NewIntersightRecommendationHardwareExpansionRequest : NewCmdletBase
+    {
+        public NewIntersightRecommendationHardwareExpansionRequest()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            ModelObject = new RecommendationHardwareExpansionRequest();
+            MethodName = "CreateRecommendationHardwareExpansionRequestWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description">"Action to be triggered for computing recommendation. Default value is None.\n* `None` - The Enum value None represents that no action is triggered on the forecast Instance managed object.\n* `Evaluate` - The Enum value Evaluate represents that a re-evaluation of the forecast needs to be triggered."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationHardwareExpansionRequest.ActionEnum Action
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New RecommendationHardwareExpansionRequestItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightRecommendationHardwareExpansionRequestItem")]
+    public class NewIntersightRecommendationHardwareExpansionRequestItem : NewCmdletBase
+    {
+        public NewIntersightRecommendationHardwareExpansionRequestItem()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            ModelObject = new RecommendationHardwareExpansionRequestItem();
+            MethodName = "CreateRecommendationHardwareExpansionRequestItemWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Type of hardware item for which the capacity increase is requested by the user. For example, CPU.\n* `None` - The Enum value None represents that no value was set for the hardware type.\n* `CPU` - The Enum value CPU represents that the hardware type requested for expansion is a physical CPU.\n* `Memory` - The Enum value Memory represents that the hardware type requested for expansion is a memory unit.\n* `Storage` - The Enum value Storage represents that the hardware type requested for expansion is a storage unit, ie, storage drives."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationHardwareExpansionRequestItem.ItemTypeEnum ItemType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The maximum value allowed for expansion for the hardware type on the referred registered device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public float MaxValue
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Unit type for the maximum value of the resource. For example, TB, GB, MB.\n* `TB` - The Enum value TB represents that the measurement unit is in terabytes.\n* `MB` - The Enum value MB represents that the measurement unit is in megabytes.\n* `GB` - The Enum value GB represents that the measurement unit is in gigabytes.\n* `MHz` - The Enum value MHz represents that the measurement unit is in megahertz.\n* `GHz` - The Enum value GHz represents that the measurement unit is in gigahertz.\n* `Percentage` - The Enum value Percentage represents that the expansion request is in the percentage of resource increase. For example, a 20% increase in CPU capacity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationHardwareExpansionRequestItem.MaxValueUnitEnum MaxValueUnit
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Unit type for the expansion request, i.e., if the increase is requested as a raw value in TB, GB, etc., or in percentage increase.\n* `TB` - The Enum value TB represents that the measurement unit is in terabytes.\n* `MB` - The Enum value MB represents that the measurement unit is in megabytes.\n* `GB` - The Enum value GB represents that the measurement unit is in gigabytes.\n* `MHz` - The Enum value MHz represents that the measurement unit is in megahertz.\n* `GHz` - The Enum value GHz represents that the measurement unit is in gigahertz.\n* `Percentage` - The Enum value Percentage represents that the expansion request is in the percentage of resource increase. For example, a 20% increase in CPU capacity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationHardwareExpansionRequestItem.UnitTypeEnum UnitType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Value of the expansion request which can be absolute value or percentage increase."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public float Value
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New RecommendationPurchaseOrderEstimate.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightRecommendationPurchaseOrderEstimate")]
+    public class NewIntersightRecommendationPurchaseOrderEstimate : NewCmdletBase
+    {
+        public NewIntersightRecommendationPurchaseOrderEstimate()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            ModelObject = new RecommendationPurchaseOrderEstimate();
+            MethodName = "CreateRecommendationPurchaseOrderEstimateWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description">"Action to be triggered for computing estimate. Default value is None.\n* `None` - The Enum value None represents that no action is triggered on the forecast Instance managed object.\n* `Evaluate` - The Enum value Evaluate represents that a re-evaluation of the forecast needs to be triggered."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationPurchaseOrderEstimate.ActionEnum Action
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a recommendationClusterExpansion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationClusterExpansionRelationship ClusterExpansion
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set RecommendationHardwareExpansionRequest.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightRecommendationHardwareExpansionRequest")]
+    public class SetIntersightRecommendationHardwareExpansionRequest : SetCmdletBase
+    {
+        public SetIntersightRecommendationHardwareExpansionRequest()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            ModelObject = new RecommendationHardwareExpansionRequest();
+            MethodName = "UpdateRecommendationHardwareExpansionRequestWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description">"Action to be triggered for computing recommendation. Default value is None.\n* `None` - The Enum value None represents that no action is triggered on the forecast Instance managed object.\n* `Evaluate` - The Enum value Evaluate represents that a re-evaluation of the forecast needs to be triggered."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationHardwareExpansionRequest.ActionEnum Action
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set RecommendationHardwareExpansionRequestItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightRecommendationHardwareExpansionRequestItem")]
+    public class SetIntersightRecommendationHardwareExpansionRequestItem : SetCmdletBase
+    {
+        public SetIntersightRecommendationHardwareExpansionRequestItem()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            ModelObject = new RecommendationHardwareExpansionRequestItem();
+            MethodName = "UpdateRecommendationHardwareExpansionRequestItemWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Type of hardware item for which the capacity increase is requested by the user. For example, CPU.\n* `None` - The Enum value None represents that no value was set for the hardware type.\n* `CPU` - The Enum value CPU represents that the hardware type requested for expansion is a physical CPU.\n* `Memory` - The Enum value Memory represents that the hardware type requested for expansion is a memory unit.\n* `Storage` - The Enum value Storage represents that the hardware type requested for expansion is a storage unit, ie, storage drives."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationHardwareExpansionRequestItem.ItemTypeEnum ItemType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The maximum value allowed for expansion for the hardware type on the referred registered device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public float MaxValue
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Unit type for the maximum value of the resource. For example, TB, GB, MB.\n* `TB` - The Enum value TB represents that the measurement unit is in terabytes.\n* `MB` - The Enum value MB represents that the measurement unit is in megabytes.\n* `GB` - The Enum value GB represents that the measurement unit is in gigabytes.\n* `MHz` - The Enum value MHz represents that the measurement unit is in megahertz.\n* `GHz` - The Enum value GHz represents that the measurement unit is in gigahertz.\n* `Percentage` - The Enum value Percentage represents that the expansion request is in the percentage of resource increase. For example, a 20% increase in CPU capacity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationHardwareExpansionRequestItem.MaxValueUnitEnum MaxValueUnit
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Unit type for the expansion request, i.e., if the increase is requested as a raw value in TB, GB, etc., or in percentage increase.\n* `TB` - The Enum value TB represents that the measurement unit is in terabytes.\n* `MB` - The Enum value MB represents that the measurement unit is in megabytes.\n* `GB` - The Enum value GB represents that the measurement unit is in gigabytes.\n* `MHz` - The Enum value MHz represents that the measurement unit is in megahertz.\n* `GHz` - The Enum value GHz represents that the measurement unit is in gigahertz.\n* `Percentage` - The Enum value Percentage represents that the expansion request is in the percentage of resource increase. For example, a 20% increase in CPU capacity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationHardwareExpansionRequestItem.UnitTypeEnum UnitType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Value of the expansion request which can be absolute value or percentage increase."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public float Value
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set RecommendationPurchaseOrderEstimate.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightRecommendationPurchaseOrderEstimate")]
+    public class SetIntersightRecommendationPurchaseOrderEstimate : SetCmdletBase
+    {
+        public SetIntersightRecommendationPurchaseOrderEstimate()
+        {
+            ApiInstance = new RecommendationApi(Config);
+            ModelObject = new RecommendationPurchaseOrderEstimate();
+            MethodName = "UpdateRecommendationPurchaseOrderEstimateWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description">"Action to be triggered for computing estimate. Default value is None.\n* `None` - The Enum value None represents that no action is triggered on the forecast Instance managed object.\n* `Evaluate` - The Enum value Evaluate represents that a re-evaluation of the forecast needs to be triggered."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationPurchaseOrderEstimate.ActionEnum Action
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a recommendationClusterExpansion resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public RecommendationClusterExpansionRelationship ClusterExpansion
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
 
 
     }

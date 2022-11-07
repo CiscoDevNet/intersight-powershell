@@ -227,7 +227,6 @@ namespace Intersight.PowerShell
         public InitializeIntersightCondAlarmAggregation()
         {
             ClassId = CondAlarmAggregation.ClassIdEnum.CondAlarmAggregation;
-            Health = CondAlarmAggregation.HealthEnum.None;
             ObjectType = CondAlarmAggregation.ObjectTypeEnum.CondAlarmAggregation;
 
         }
@@ -242,61 +241,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The summary of alarm counts based on the severity types (Critical or Warning)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.CondAlarmSummary AlarmSummary
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public CondAlarmAggregation.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Count of all alarms with severity Critical, irrespective of acknowledgement status."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long CriticalAlarmsCount
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Health of the managed end point. The highest severity computed from alarmSummary property is set as the health.\n* `None` - The Enum value None represents that there is no severity.\n* `Info` - The Enum value Info represents the Informational level of severity.\n* `Critical` - The Enum value Critical represents the Critical level of severity.\n* `Warning` - The Enum value Warning represents the Warning level of severity.\n* `Cleared` - The Enum value Cleared represents that the alarm severity has been cleared."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CondAlarmAggregation.HealthEnum Health
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Count of all alarms with severity Info, irrespective of acknowledgement status."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long InfoAlarmsCount
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Managed object type. For example, FI managed object type will be network.Element."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string MoType
         {
             get;
             set;
@@ -331,16 +280,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"Count of all alarms with severity Warning, irrespective of acknowledgement status."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long WarningAlarmsCount
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -349,27 +288,7 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AlarmSummary"))
-            {
-                initObject.AlarmSummary = this.AlarmSummary;
-            }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CriticalAlarmsCount"))
-            {
-                initObject.CriticalAlarmsCount = this.CriticalAlarmsCount;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Health"))
-            {
-                initObject.Health = this.Health;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("InfoAlarmsCount"))
-            {
-                initObject.InfoAlarmsCount = this.InfoAlarmsCount;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MoType"))
-            {
-                initObject.MoType = this.MoType;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -378,10 +297,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WarningAlarmsCount"))
-            {
-                initObject.WarningAlarmsCount = this.WarningAlarmsCount;
             }
             WriteObject(initObject);
         }
@@ -659,31 +574,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The count of alarms that have severity type Critical."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Critical
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public CondAlarmSummary.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The count of alarms that have severity type Warning."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Warning
         {
             get;
             set;
@@ -697,15 +592,7 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Critical"))
-            {
-                initObject.Critical = this.Critical;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Warning"))
-            {
-                initObject.Warning = this.Warning;
-            }
             WriteObject(initObject);
         }
 

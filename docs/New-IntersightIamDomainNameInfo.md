@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamDomainNameInfo [-Action< IamDomainNameInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DomainName< string>][-FailureDetails< IamFailureDetails>][-Moid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIamDomainNameInfo [-Action< IamDomainNameInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DomainName< string>][-Moid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -58,23 +58,6 @@ Email domain name. When a user enters an email during login in the Intersight ho
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FailureDetails
-Reason for the failure during verification.
-
-Note :- Use Initialize-IntersightIamFailureDetails to create the object of complex type IamFailureDetails
-
-```yaml
-Type: IamFailureDetails
 Parameter Sets: (All)
 Aliases:
 

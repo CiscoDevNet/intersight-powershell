@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminState
-Enable or disable external FCoE storage configuration.
+Enable or disable external iSCSI storage configuration.
 
 ```yaml
 Type: bool
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtaTraffic
-VLAN for the primary Fabric Interconnect external FCoE storage traffic.
+VLAN for the primary Fabric Interconnect external iSCSI storage traffic.
 
 Note :- Use Initialize-IntersightHyperflexNamedVlan to create the object of complex type HyperflexNamedVlan
 
@@ -120,7 +120,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtbTraffic
-VLAN for the secondary Fabric Interconnect external FCoE storage traffic.
+VLAN for the secondary Fabric Interconnect external iSCSI storage traffic.
 
 Note :- Use Initialize-IntersightHyperflexNamedVlan to create the object of complex type HyperflexNamedVlan
 

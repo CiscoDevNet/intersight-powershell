@@ -271,6 +271,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightTamAdvisoryDefinition()
         {
             ClassId = TamAdvisoryDefinition.ClassIdEnum.TamAdvisoryDefinition;
+            ExecuteOnPod = TamAdvisoryDefinition.ExecuteOnPodEnum.Tier1;
             ObjectType = TamAdvisoryDefinition.ObjectTypeEnum.TamAdvisoryDefinition;
             State = TamAdvisoryDefinition.StateEnum.Ready;
             Type = TamAdvisoryDefinition.TypeEnum.SecurityAdvisory;
@@ -367,6 +368,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TamAdvisoryDefinition.ExecuteOnPodEnum ExecuteOnPod
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A link to an external URL describing security Advisory in more details."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -412,6 +423,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> OtherRefUrls
         {
             get;
             set;
@@ -533,6 +554,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Description = this.Description;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExecuteOnPod"))
+            {
+                initObject.ExecuteOnPod = this.ExecuteOnPod;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ExternalUrl"))
             {
                 initObject.ExternalUrl = this.ExternalUrl;
@@ -549,6 +574,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
             {
                 initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("OtherRefUrls"))
+            {
+                initObject.OtherRefUrls = this.OtherRefUrls;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Recommendation"))
             {
@@ -1763,6 +1792,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightTamSecurityAdvisory()
         {
             ClassId = TamSecurityAdvisory.ClassIdEnum.TamSecurityAdvisory;
+            ExecuteOnPod = TamSecurityAdvisory.ExecuteOnPodEnum.Tier1;
             ObjectType = TamSecurityAdvisory.ObjectTypeEnum.TamSecurityAdvisory;
             State = TamSecurityAdvisory.StateEnum.Ready;
             Status = TamSecurityAdvisory.StatusEnum.Interim;
@@ -1874,6 +1904,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public float EnvironmentalScore
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TamSecurityAdvisory.ExecuteOnPodEnum ExecuteOnPod
         {
             get;
             set;
@@ -2062,6 +2102,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("EnvironmentalScore"))
             {
                 initObject.EnvironmentalScore = this.EnvironmentalScore;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExecuteOnPod"))
+            {
+                initObject.ExecuteOnPod = this.ExecuteOnPod;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ExternalUrl"))
             {

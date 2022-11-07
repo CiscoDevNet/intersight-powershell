@@ -207,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -Stream
-The command to execute. Commands must be whitelisted by platform implementation, if a command does not match any whitelisted command patterns an error will be returned to the requesting service on command start.
+The command to execute. Commands must be in allowed list by platform implementation, if a command does not match any allowed list command patterns an error will be returned to the requesting service on command start.
 
 Note :- Use Initialize-Intersightbyte[] to create the object of complex type byte[]
 

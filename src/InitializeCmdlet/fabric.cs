@@ -5279,6 +5279,7 @@ namespace Intersight.PowerShell
             ClassId = FabricServerRole.ClassIdEnum.FabricServerRole;
             Fec = FabricServerRole.FecEnum.Auto;
             ObjectType = FabricServerRole.ObjectTypeEnum.FabricServerRole;
+            PreferredDeviceType = FabricServerRole.PreferredDeviceTypeEnum.Auto;
 
         }
         // <summary>
@@ -5372,6 +5373,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Preferred device ID to be configured by user for the connected device. This ID must be specified together with the 'PreferredDeviceType' property. This ID will only takes effect if the actual connected device matches the 'PreferredDeviceType'. If the preferred ID is not available, the ID is automatically allocated and assigned by the system. If different preferred IDs are specified for the ports connected to the same device, only the preferred ID (if specified) of the port that is discovered first will be considered."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long PreferredDeviceId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Device type for which preferred ID to be configured. If the actual connected device does not match the specified device type, the system ignores the 'PreferredDeviceId' property.\n* `Auto` - Preferred Id will be ignored if specified with this type.\n* `RackServer` - Connected device type is Rack Unit Server.\n* `Chassis` - Connected device type is Chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricServerRole.PreferredDeviceTypeEnum PreferredDeviceType
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Slot Identifier of the Switch/FEX/Chassis Interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5424,6 +5445,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
             {
                 initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreferredDeviceId"))
+            {
+                initObject.PreferredDeviceId = this.PreferredDeviceId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreferredDeviceType"))
+            {
+                initObject.PreferredDeviceType = this.PreferredDeviceType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
             {
@@ -6801,6 +6830,7 @@ namespace Intersight.PowerShell
         {
             ClassId = FabricVlan.ClassIdEnum.FabricVlan;
             ObjectType = FabricVlan.ObjectTypeEnum.FabricVlan;
+            SharingType = FabricVlan.SharingTypeEnum.None;
 
         }
         // <summary>
@@ -6894,6 +6924,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The Primary VLAN ID of the VLAN, if the sharing type of the VLAN is Isolated or Community."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long PrimaryVlanId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The sharing type of this VLAN.\n* `None` - This represents a regular VLAN.\n* `Primary` - This represents a primary VLAN.\n* `Isolated` - This represents an isolated VLAN.\n* `Community` - This represents a community VLAN."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricVlan.SharingTypeEnum SharingType
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6947,6 +6997,14 @@ namespace Intersight.PowerShell
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PrimaryVlanId"))
+            {
+                initObject.PrimaryVlanId = this.PrimaryVlanId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SharingType"))
+            {
+                initObject.SharingType = this.SharingType;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;

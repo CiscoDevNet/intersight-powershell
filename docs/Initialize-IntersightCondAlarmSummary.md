@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCondAlarmSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CondAlarmSummary.ClassIdEnum>][-Critical< long>][-ObjectType< CondAlarmSummary.ObjectTypeEnum>][-Warning< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCondAlarmSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CondAlarmSummary.ClassIdEnum>][-ObjectType< CondAlarmSummary.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,41 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Critical
-The count of alarms that have severity type Critical.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: CondAlarmSummary.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Warning
-The count of alarms that have severity type Warning.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 

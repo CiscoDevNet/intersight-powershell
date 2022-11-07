@@ -1296,6 +1296,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The uplink speed information of the HyperFlex cluster.\n* `Unknown` - The uplink speed could not be determined. The physical servers are potentially not claimed.\n* `10G` - The uplink speed is 10G.\n* `1G` - The uplink speed is 1G."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public HyperflexCluster.UplinkSpeedEnum UplinkSpeed
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The storage utilization percentage is computed based on total capacity and current capacity utilization."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2642,6 +2653,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public HyperflexClusterProfile.HypervisorTypeEnum HypervisorType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The NIC based setup being set/unset determined by inventory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsNicBased
         {
             get;
             set;
@@ -4935,7 +4957,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Enable or disable external FCoE storage configuration."</para>
+        /// <para type="description">"Enable or disable external iSCSI storage configuration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6390,6 +6412,115 @@ namespace Intersight.PowerShell
 
         // <summary>
         /// <para type="description">"HyperFlex health check Debian Package Version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get HyperflexHwCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHwCatalog", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightHyperflexHwCatalog : GetCmdletBase
+    {
+        public GetIntersightHyperflexHwCatalog()
+        {
+            ApiInstance = new HyperflexApi(Config);
+            MethodName = "GetHyperflexHwCatalogListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Hardware catalog version for HyperFlex hardware catalog."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -13226,6 +13357,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"A reference to a hyperflexLocalCredentialPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -14065,7 +14197,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Enable or disable external FCoE storage configuration."</para>
+        /// <para type="description">"Enable or disable external iSCSI storage configuration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -14101,7 +14233,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"VLAN for the primary Fabric Interconnect external FCoE storage traffic."</para>
+        /// <para type="description">"VLAN for the primary Fabric Interconnect external iSCSI storage traffic."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -14112,7 +14244,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"VLAN for the secondary Fabric Interconnect external FCoE storage traffic."</para>
+        /// <para type="description">"VLAN for the secondary Fabric Interconnect external iSCSI storage traffic."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -18065,6 +18197,7 @@ namespace Intersight.PowerShell
 
 
 
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterBackupPolicy.</para>
@@ -18785,6 +18918,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"A reference to a hyperflexLocalCredentialPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -19625,7 +19759,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Enable or disable external FCoE storage configuration."</para>
+        /// <para type="description">"Enable or disable external iSCSI storage configuration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -19661,7 +19795,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"VLAN for the primary Fabric Interconnect external FCoE storage traffic."</para>
+        /// <para type="description">"VLAN for the primary Fabric Interconnect external iSCSI storage traffic."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -19672,7 +19806,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"VLAN for the secondary Fabric Interconnect external FCoE storage traffic."</para>
+        /// <para type="description">"VLAN for the secondary Fabric Interconnect external iSCSI storage traffic."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

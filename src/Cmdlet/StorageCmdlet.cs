@@ -9429,16 +9429,6 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description">"FQDN or IP Address of Storage Cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string ManagementAddress
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -10280,6 +10270,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool IsHome
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Defines where an interface may failover, [ home_port_only, default, home_node_only, sfo_partners_only, broadcast_domain_only ]."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LocationFailover
         {
             get;
             set;
@@ -15350,6 +15351,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool IsHome
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Defines where an interface may failover, [ home_port_only, default, home_node_only, sfo_partners_only, broadcast_domain_only ]."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LocationFailover
         {
             get;
             set;

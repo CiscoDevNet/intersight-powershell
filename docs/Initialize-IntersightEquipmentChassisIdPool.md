@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentChassisIdPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EquipmentChassisIdPool.ClassIdEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-GapAvailableIds< System.Collections.Generic.List`1[long]>][-Moid< string>][-NextAvailableId< long>][-ObjectType< EquipmentChassisIdPool.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentChassisIdPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EquipmentChassisIdPool.ClassIdEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Moid< string>][-ObjectType< EquipmentChassisIdPool.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -72,41 +72,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -GapAvailableIds
-
-
-```yaml
-Type: System.Collections.Generic.List`1[long]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NextAvailableId
-Shows the next available Chassis ID to be allocated.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 

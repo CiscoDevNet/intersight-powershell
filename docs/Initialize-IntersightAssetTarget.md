@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetTarget [-Account< Model.IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assist< Model.AssetTargetRelationship>][-ClassId< AssetTarget.ClassIdEnum>][-Connections< System.Collections.Generic.List`1[Model.AssetConnection]>][-ManagementLocation< AssetTarget.ManagementLocationEnum>][-Moid< string>][-Name< string>][-ObjectType< AssetTarget.ObjectTypeEnum>][-Services< System.Collections.Generic.List`1[Model.AssetService]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetType< AssetTarget.TargetTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetTarget [-Account< Model.IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assist< Model.AssetTargetRelationship>][-ClassId< AssetTarget.ClassIdEnum>][-Connections< System.Collections.Generic.List`1[Model.AssetConnection]>][-ManagementLocation< AssetTarget.ManagementLocationEnum>][-Moid< string>][-Name< string>][-ObjectType< AssetTarget.ObjectTypeEnum>][-Services< System.Collections.Generic.List`1[Model.AssetService]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetType< AssetTarget.TargetTypeEnum>][-TrustPoint< Model.IamTrustPointRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -206,6 +206,24 @@ The type of the managed target. For example a UCS Server or VMware Vcenter targe
 
 ```yaml
 Type: AssetTarget.TargetTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TrustPoint
+A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.IamTrustPointRelationship
 Parameter Sets: (All)
 Aliases:
 

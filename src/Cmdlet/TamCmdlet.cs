@@ -221,6 +221,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public TamAdvisoryDefinition.ExecuteOnPodEnum ExecuteOnPod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A link to an external URL describing security Advisory in more details."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -274,6 +285,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -792,6 +804,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public TamSecurityAdvisory.ExecuteOnPodEnum ExecuteOnPod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A link to an external URL describing security Advisory in more details."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1116,6 +1139,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TamAdvisoryDefinition.ExecuteOnPodEnum ExecuteOnPod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A link to an external URL describing security Advisory in more details."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1155,6 +1189,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> OtherRefUrls
         {
             get;
             set;
@@ -1584,6 +1629,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TamSecurityAdvisory.ExecuteOnPodEnum ExecuteOnPod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A link to an external URL describing security Advisory in more details."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1966,6 +2022,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TamAdvisoryDefinition.ExecuteOnPodEnum ExecuteOnPod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A link to an external URL describing security Advisory in more details."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2005,6 +2072,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> OtherRefUrls
         {
             get;
             set;
@@ -2428,6 +2506,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public float EnvironmentalScore
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TamSecurityAdvisory.ExecuteOnPodEnum ExecuteOnPod
         {
             get;
             set;

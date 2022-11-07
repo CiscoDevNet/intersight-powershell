@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.8814
-- C# SDK version: 1.0.11.8814
+- Intersight.PowerShell version: 1.0.11.9235
+- C# SDK version: 1.0.11.9235
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.8814"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.9235"}
 ```
 or
 
@@ -725,9 +725,13 @@ ApplianceAutoRmaPolicy | [**Get-IntersightApplianceAutoRmaPolicy**](docs/Get-Int
 ApplianceBackup | [**Get-IntersightApplianceBackup**](docs/Get-IntersightApplianceBackup.md) | Read a 'ApplianceBackup' resource.
 ApplianceBackupPolicy | [**Get-IntersightApplianceBackupPolicy**](docs/Get-IntersightApplianceBackupPolicy.md) | Read a 'ApplianceBackupPolicy' resource.
 ApplianceCertificateSetting | [**Get-IntersightApplianceCertificateSetting**](docs/Get-IntersightApplianceCertificateSetting.md) | Read a 'ApplianceCertificateSetting' resource.
+ApplianceClusterInfo | [**Get-IntersightApplianceClusterInfo**](docs/Get-IntersightApplianceClusterInfo.md) | Read a 'ApplianceClusterInfo' resource.
+ApplianceClusterInstall | [**Get-IntersightApplianceClusterInstall**](docs/Get-IntersightApplianceClusterInstall.md) | Read a 'ApplianceClusterInstall' resource.
+ApplianceClusterReplaceNode | [**Get-IntersightApplianceClusterReplaceNode**](docs/Get-IntersightApplianceClusterReplaceNode.md) | Read a 'ApplianceClusterReplaceNode' resource.
 ApplianceDataExportPolicy | [**Get-IntersightApplianceDataExportPolicy**](docs/Get-IntersightApplianceDataExportPolicy.md) | Read a 'ApplianceDataExportPolicy' resource.
 ApplianceDeviceCertificate | [**Get-IntersightApplianceDeviceCertificate**](docs/Get-IntersightApplianceDeviceCertificate.md) | Read a 'ApplianceDeviceCertificate' resource.
 ApplianceDeviceClaim | [**Get-IntersightApplianceDeviceClaim**](docs/Get-IntersightApplianceDeviceClaim.md) | Read a 'ApplianceDeviceClaim' resource.
+ApplianceDeviceClusterInstall | [**Get-IntersightApplianceDeviceClusterInstall**](docs/Get-IntersightApplianceDeviceClusterInstall.md) | Read a 'ApplianceDeviceClusterInstall' resource.
 ApplianceDeviceUpgradePolicy | [**Get-IntersightApplianceDeviceUpgradePolicy**](docs/Get-IntersightApplianceDeviceUpgradePolicy.md) | Read a 'ApplianceDeviceUpgradePolicy' resource.
 ApplianceDiagSetting | [**Get-IntersightApplianceDiagSetting**](docs/Get-IntersightApplianceDiagSetting.md) | Read a 'ApplianceDiagSetting' resource.
 ApplianceExternalSyslogSetting | [**Get-IntersightApplianceExternalSyslogSetting**](docs/Get-IntersightApplianceExternalSyslogSetting.md) | Read a 'ApplianceExternalSyslogSetting' resource.
@@ -749,17 +753,23 @@ ApplianceUpgradePolicy | [**Get-IntersightApplianceUpgradePolicy**](docs/Get-Int
 ApplianceAutoRmaPolicy | [**New-IntersightApplianceAutoRmaPolicy**](docs/New-IntersightApplianceAutoRmaPolicy.md) | Create a 'ApplianceAutoRmaPolicy' resource.
 ApplianceBackup | [**New-IntersightApplianceBackup**](docs/New-IntersightApplianceBackup.md) | Create a 'ApplianceBackup' resource.
 ApplianceBackupPolicy | [**New-IntersightApplianceBackupPolicy**](docs/New-IntersightApplianceBackupPolicy.md) | Create a 'ApplianceBackupPolicy' resource.
+ApplianceClusterInfo | [**New-IntersightApplianceClusterInfo**](docs/New-IntersightApplianceClusterInfo.md) | Create a 'ApplianceClusterInfo' resource.
+ApplianceClusterReplaceNode | [**New-IntersightApplianceClusterReplaceNode**](docs/New-IntersightApplianceClusterReplaceNode.md) | Create a 'ApplianceClusterReplaceNode' resource.
 ApplianceDataExportPolicy | [**New-IntersightApplianceDataExportPolicy**](docs/New-IntersightApplianceDataExportPolicy.md) | Create a 'ApplianceDataExportPolicy' resource.
 ApplianceDeviceClaim | [**New-IntersightApplianceDeviceClaim**](docs/New-IntersightApplianceDeviceClaim.md) | Create a 'ApplianceDeviceClaim' resource.
 ApplianceDiagSetting | [**New-IntersightApplianceDiagSetting**](docs/New-IntersightApplianceDiagSetting.md) | Create a 'ApplianceDiagSetting' resource.
 ApplianceRemoteFileImport | [**New-IntersightApplianceRemoteFileImport**](docs/New-IntersightApplianceRemoteFileImport.md) | Create a 'ApplianceRemoteFileImport' resource.
 ApplianceRestore | [**New-IntersightApplianceRestore**](docs/New-IntersightApplianceRestore.md) | Create a 'ApplianceRestore' resource.
 ApplianceBackup | [**Remove-IntersightApplianceBackup**](docs/Remove-IntersightApplianceBackup.md) | Delete a 'ApplianceBackup' resource.
+ApplianceClusterInfo | [**Remove-IntersightApplianceClusterInfo**](docs/Remove-IntersightApplianceClusterInfo.md) | Delete a 'ApplianceClusterInfo' resource.
 ApplianceRestore | [**Remove-IntersightApplianceRestore**](docs/Remove-IntersightApplianceRestore.md) | Delete a 'ApplianceRestore' resource.
 ApplianceUpgrade | [**Remove-IntersightApplianceUpgrade**](docs/Remove-IntersightApplianceUpgrade.md) | Delete a 'ApplianceUpgrade' resource.
 ApplianceAutoRmaPolicy | [**Set-IntersightApplianceAutoRmaPolicy**](docs/Set-IntersightApplianceAutoRmaPolicy.md) | Update a 'ApplianceAutoRmaPolicy' resource.
 ApplianceBackupPolicy | [**Set-IntersightApplianceBackupPolicy**](docs/Set-IntersightApplianceBackupPolicy.md) | Update a 'ApplianceBackupPolicy' resource.
 ApplianceCertificateSetting | [**Set-IntersightApplianceCertificateSetting**](docs/Set-IntersightApplianceCertificateSetting.md) | Update a 'ApplianceCertificateSetting' resource.
+ApplianceClusterInfo | [**Set-IntersightApplianceClusterInfo**](docs/Set-IntersightApplianceClusterInfo.md) | Update a 'ApplianceClusterInfo' resource.
+ApplianceClusterInstall | [**Set-IntersightApplianceClusterInstall**](docs/Set-IntersightApplianceClusterInstall.md) | Update a 'ApplianceClusterInstall' resource.
+ApplianceClusterReplaceNode | [**Set-IntersightApplianceClusterReplaceNode**](docs/Set-IntersightApplianceClusterReplaceNode.md) | Update a 'ApplianceClusterReplaceNode' resource.
 ApplianceDataExportPolicy | [**Set-IntersightApplianceDataExportPolicy**](docs/Set-IntersightApplianceDataExportPolicy.md) | Update a 'ApplianceDataExportPolicy' resource.
 ApplianceDeviceClaim | [**Set-IntersightApplianceDeviceClaim**](docs/Set-IntersightApplianceDeviceClaim.md) | Update a 'ApplianceDeviceClaim' resource.
 ApplianceDeviceUpgradePolicy | [**Set-IntersightApplianceDeviceUpgradePolicy**](docs/Set-IntersightApplianceDeviceUpgradePolicy.md) | Update a 'ApplianceDeviceUpgradePolicy' resource.
@@ -846,6 +856,7 @@ BulkMoMerger | [**New-IntersightBulkMoMerger**](docs/New-IntersightBulkMoMerger.
 BulkRequest | [**New-IntersightBulkRequest**](docs/New-IntersightBulkRequest.md) | Create a 'BulkRequest' resource.
 BulkExport | [**Remove-IntersightBulkExport**](docs/Remove-IntersightBulkExport.md) | Delete a 'BulkExport' resource.
 BulkExport | [**Set-IntersightBulkExport**](docs/Set-IntersightBulkExport.md) | Update a 'BulkExport' resource.
+CapabilityActionsMetaData | [**Get-IntersightCapabilityActionsMetaData**](docs/Get-IntersightCapabilityActionsMetaData.md) | Read a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**Get-IntersightCapabilityAdapterDeprecatedDef**](docs/Get-IntersightCapabilityAdapterDeprecatedDef.md) | Read a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**Get-IntersightCapabilityAdapterUnitDescriptor**](docs/Get-IntersightCapabilityAdapterUnitDescriptor.md) | Read a 'CapabilityAdapterUnitDescriptor' resource.
 CapabilityCatalog | [**Get-IntersightCapabilityCatalog**](docs/Get-IntersightCapabilityCatalog.md) | Read a 'CapabilityCatalog' resource.
@@ -874,6 +885,7 @@ CapabilitySiocModuleManufacturingDef | [**Get-IntersightCapabilitySiocModuleManu
 CapabilitySwitchCapability | [**Get-IntersightCapabilitySwitchCapability**](docs/Get-IntersightCapabilitySwitchCapability.md) | Read a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**Get-IntersightCapabilitySwitchDescriptor**](docs/Get-IntersightCapabilitySwitchDescriptor.md) | Read a 'CapabilitySwitchDescriptor' resource.
 CapabilitySwitchManufacturingDef | [**Get-IntersightCapabilitySwitchManufacturingDef**](docs/Get-IntersightCapabilitySwitchManufacturingDef.md) | Read a 'CapabilitySwitchManufacturingDef' resource.
+CapabilityActionsMetaData | [**New-IntersightCapabilityActionsMetaData**](docs/New-IntersightCapabilityActionsMetaData.md) | Create a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**New-IntersightCapabilityAdapterDeprecatedDef**](docs/New-IntersightCapabilityAdapterDeprecatedDef.md) | Create a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**New-IntersightCapabilityAdapterUnitDescriptor**](docs/New-IntersightCapabilityAdapterUnitDescriptor.md) | Create a 'CapabilityAdapterUnitDescriptor' resource.
 CapabilityChassisDescriptor | [**New-IntersightCapabilityChassisDescriptor**](docs/New-IntersightCapabilityChassisDescriptor.md) | Create a 'CapabilityChassisDescriptor' resource.
@@ -901,6 +913,7 @@ CapabilitySiocModuleManufacturingDef | [**New-IntersightCapabilitySiocModuleManu
 CapabilitySwitchCapability | [**New-IntersightCapabilitySwitchCapability**](docs/New-IntersightCapabilitySwitchCapability.md) | Create a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**New-IntersightCapabilitySwitchDescriptor**](docs/New-IntersightCapabilitySwitchDescriptor.md) | Create a 'CapabilitySwitchDescriptor' resource.
 CapabilitySwitchManufacturingDef | [**New-IntersightCapabilitySwitchManufacturingDef**](docs/New-IntersightCapabilitySwitchManufacturingDef.md) | Create a 'CapabilitySwitchManufacturingDef' resource.
+CapabilityActionsMetaData | [**Remove-IntersightCapabilityActionsMetaData**](docs/Remove-IntersightCapabilityActionsMetaData.md) | Delete a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**Remove-IntersightCapabilityAdapterDeprecatedDef**](docs/Remove-IntersightCapabilityAdapterDeprecatedDef.md) | Delete a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**Remove-IntersightCapabilityAdapterUnitDescriptor**](docs/Remove-IntersightCapabilityAdapterUnitDescriptor.md) | Delete a 'CapabilityAdapterUnitDescriptor' resource.
 CapabilityChassisDescriptor | [**Remove-IntersightCapabilityChassisDescriptor**](docs/Remove-IntersightCapabilityChassisDescriptor.md) | Delete a 'CapabilityChassisDescriptor' resource.
@@ -928,6 +941,7 @@ CapabilitySiocModuleManufacturingDef | [**Remove-IntersightCapabilitySiocModuleM
 CapabilitySwitchCapability | [**Remove-IntersightCapabilitySwitchCapability**](docs/Remove-IntersightCapabilitySwitchCapability.md) | Delete a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**Remove-IntersightCapabilitySwitchDescriptor**](docs/Remove-IntersightCapabilitySwitchDescriptor.md) | Delete a 'CapabilitySwitchDescriptor' resource.
 CapabilitySwitchManufacturingDef | [**Remove-IntersightCapabilitySwitchManufacturingDef**](docs/Remove-IntersightCapabilitySwitchManufacturingDef.md) | Delete a 'CapabilitySwitchManufacturingDef' resource.
+CapabilityActionsMetaData | [**Set-IntersightCapabilityActionsMetaData**](docs/Set-IntersightCapabilityActionsMetaData.md) | Update a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**Set-IntersightCapabilityAdapterDeprecatedDef**](docs/Set-IntersightCapabilityAdapterDeprecatedDef.md) | Update a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**Set-IntersightCapabilityAdapterUnitDescriptor**](docs/Set-IntersightCapabilityAdapterUnitDescriptor.md) | Update a 'CapabilityAdapterUnitDescriptor' resource.
 CapabilityCatalog | [**Set-IntersightCapabilityCatalog**](docs/Set-IntersightCapabilityCatalog.md) | Update a 'CapabilityCatalog' resource.
@@ -1001,6 +1015,7 @@ ComputeBlade | [**Get-IntersightComputeBlade**](docs/Get-IntersightComputeBlade.
 ComputeBladeIdentity | [**Get-IntersightComputeBladeIdentity**](docs/Get-IntersightComputeBladeIdentity.md) | Read a 'ComputeBladeIdentity' resource.
 ComputeBoard | [**Get-IntersightComputeBoard**](docs/Get-IntersightComputeBoard.md) | Read a 'ComputeBoard' resource.
 ComputeMapping | [**Get-IntersightComputeMapping**](docs/Get-IntersightComputeMapping.md) | Read a 'ComputeMapping' resource.
+ComputePersonality | [**Get-IntersightComputePersonality**](docs/Get-IntersightComputePersonality.md) | Read a 'ComputePersonality' resource.
 ComputePhysicalSummary | [**Get-IntersightComputePhysicalSummary**](docs/Get-IntersightComputePhysicalSummary.md) | Read a 'ComputePhysicalSummary' resource.
 ComputeRackUnit | [**Get-IntersightComputeRackUnit**](docs/Get-IntersightComputeRackUnit.md) | Read a 'ComputeRackUnit' resource.
 ComputeRackUnitIdentity | [**Get-IntersightComputeRackUnitIdentity**](docs/Get-IntersightComputeRackUnitIdentity.md) | Read a 'ComputeRackUnitIdentity' resource.
@@ -1015,6 +1030,7 @@ ComputeBlade | [**Set-IntersightComputeBlade**](docs/Set-IntersightComputeBlade.
 ComputeBladeIdentity | [**Set-IntersightComputeBladeIdentity**](docs/Set-IntersightComputeBladeIdentity.md) | Update a 'ComputeBladeIdentity' resource.
 ComputeBoard | [**Set-IntersightComputeBoard**](docs/Set-IntersightComputeBoard.md) | Update a 'ComputeBoard' resource.
 ComputeMapping | [**Set-IntersightComputeMapping**](docs/Set-IntersightComputeMapping.md) | Update a 'ComputeMapping' resource.
+ComputePersonality | [**Set-IntersightComputePersonality**](docs/Set-IntersightComputePersonality.md) | Update a 'ComputePersonality' resource.
 ComputeRackUnit | [**Set-IntersightComputeRackUnit**](docs/Set-IntersightComputeRackUnit.md) | Update a 'ComputeRackUnit' resource.
 ComputeRackUnitIdentity | [**Set-IntersightComputeRackUnitIdentity**](docs/Set-IntersightComputeRackUnitIdentity.md) | Update a 'ComputeRackUnitIdentity' resource.
 ComputeServerPowerPolicy | [**Set-IntersightComputeServerPowerPolicy**](docs/Set-IntersightComputeServerPowerPolicy.md) | Update a 'ComputeServerPowerPolicy' resource.
@@ -1365,9 +1381,11 @@ GraphicsCard | [**Set-IntersightGraphicsCard**](docs/Set-IntersightGraphicsCard.
 GraphicsController | [**Set-IntersightGraphicsController**](docs/Set-IntersightGraphicsController.md) | Update a 'GraphicsController' resource.
 HclDriverImage | [**Get-IntersightHclDriverImage**](docs/Get-IntersightHclDriverImage.md) | Read a 'HclDriverImage' resource.
 HclExemptedCatalog | [**Get-IntersightHclExemptedCatalog**](docs/Get-IntersightHclExemptedCatalog.md) | Read a 'HclExemptedCatalog' resource.
+HclHwCatalogInfo | [**Get-IntersightHclHwCatalogInfo**](docs/Get-IntersightHclHwCatalogInfo.md) | Read a 'HclHwCatalogInfo' resource.
 HclHyperflexSoftwareCompatibilityInfo | [**Get-IntersightHclHyperflexSoftwareCompatibilityInfo**](docs/Get-IntersightHclHyperflexSoftwareCompatibilityInfo.md) | Read a 'HclHyperflexSoftwareCompatibilityInfo' resource.
 HclOperatingSystem | [**Get-IntersightHclOperatingSystem**](docs/Get-IntersightHclOperatingSystem.md) | Read a 'HclOperatingSystem' resource.
 HclOperatingSystemVendor | [**Get-IntersightHclOperatingSystemVendor**](docs/Get-IntersightHclOperatingSystemVendor.md) | Read a 'HclOperatingSystemVendor' resource.
+HclServerHwCatalogInfo | [**Get-IntersightHclServerHwCatalogInfo**](docs/Get-IntersightHclServerHwCatalogInfo.md) | Read a 'HclServerHwCatalogInfo' resource.
 HclCompatibilityStatus | [**New-IntersightHclCompatibilityStatus**](docs/New-IntersightHclCompatibilityStatus.md) | Create a 'HclCompatibilityStatus' resource.
 HclHyperflexSoftwareCompatibilityInfo | [**New-IntersightHclHyperflexSoftwareCompatibilityInfo**](docs/New-IntersightHclHyperflexSoftwareCompatibilityInfo.md) | Create a 'HclHyperflexSoftwareCompatibilityInfo' resource.
 HclSupportedDriverName | [**New-IntersightHclSupportedDriverName**](docs/New-IntersightHclSupportedDriverName.md) | Create a 'HclSupportedDriverName' resource.
@@ -1404,6 +1422,7 @@ HyperflexHealthCheckDefinition | [**Get-IntersightHyperflexHealthCheckDefinition
 HyperflexHealthCheckExecution | [**Get-IntersightHyperflexHealthCheckExecution**](docs/Get-IntersightHyperflexHealthCheckExecution.md) | Read a 'HyperflexHealthCheckExecution' resource.
 HyperflexHealthCheckExecutionSnapshot | [**Get-IntersightHyperflexHealthCheckExecutionSnapshot**](docs/Get-IntersightHyperflexHealthCheckExecutionSnapshot.md) | Read a 'HyperflexHealthCheckExecutionSnapshot' resource.
 HyperflexHealthCheckPackageChecksum | [**Get-IntersightHyperflexHealthCheckPackageChecksum**](docs/Get-IntersightHyperflexHealthCheckPackageChecksum.md) | Read a 'HyperflexHealthCheckPackageChecksum' resource.
+HyperflexHwCatalog | [**Get-IntersightHyperflexHwCatalog**](docs/Get-IntersightHyperflexHwCatalog.md) | Read a 'HyperflexHwCatalog' resource.
 HyperflexHxdpVersion | [**Get-IntersightHyperflexHxdpVersion**](docs/Get-IntersightHyperflexHxdpVersion.md) | Read a 'HyperflexHxdpVersion' resource.
 HyperflexHypervisorHost | [**Get-IntersightHyperflexHypervisorHost**](docs/Get-IntersightHyperflexHypervisorHost.md) | Read a 'HyperflexHypervisorHost' resource.
 HyperflexHypervisorVirtualMachine | [**Get-IntersightHyperflexHypervisorVirtualMachine**](docs/Get-IntersightHyperflexHypervisorVirtualMachine.md) | Read a 'HyperflexHypervisorVirtualMachine' resource.
@@ -1579,6 +1598,7 @@ IamIdp | [**Get-IntersightIamIdp**](docs/Get-IntersightIamIdp.md) | Read a 'IamI
 IamIdpReference | [**Get-IntersightIamIdpReference**](docs/Get-IntersightIamIdpReference.md) | Read a 'IamIdpReference' resource.
 IamIpAccessManagement | [**Get-IntersightIamIpAccessManagement**](docs/Get-IntersightIamIpAccessManagement.md) | Read a 'IamIpAccessManagement' resource.
 IamIpAddress | [**Get-IntersightIamIpAddress**](docs/Get-IntersightIamIpAddress.md) | Read a 'IamIpAddress' resource.
+IamLdapConfigParams | [**Get-IntersightIamLdapConfigParams**](docs/Get-IntersightIamLdapConfigParams.md) | Read a 'IamLdapConfigParams' resource.
 IamLdapGroup | [**Get-IntersightIamLdapGroup**](docs/Get-IntersightIamLdapGroup.md) | Read a 'IamLdapGroup' resource.
 IamLdapPolicy | [**Get-IntersightIamLdapPolicy**](docs/Get-IntersightIamLdapPolicy.md) | Read a 'IamLdapPolicy' resource.
 IamLdapProvider | [**Get-IntersightIamLdapProvider**](docs/Get-IntersightIamLdapProvider.md) | Read a 'IamLdapProvider' resource.
@@ -1998,6 +2018,7 @@ NiatelemetryHttpsAclFilterDetails | [**Get-IntersightNiatelemetryHttpsAclFilterD
 NiatelemetryInsightGroupDetails | [**Get-IntersightNiatelemetryInsightGroupDetails**](docs/Get-IntersightNiatelemetryInsightGroupDetails.md) | Read a 'NiatelemetryInsightGroupDetails' resource.
 NiatelemetryLc | [**Get-IntersightNiatelemetryLc**](docs/Get-IntersightNiatelemetryLc.md) | Read a 'NiatelemetryLc' resource.
 NiatelemetryLeafPolGrpDetails | [**Get-IntersightNiatelemetryLeafPolGrpDetails**](docs/Get-IntersightNiatelemetryLeafPolGrpDetails.md) | Read a 'NiatelemetryLeafPolGrpDetails' resource.
+NiatelemetryMdsAutoClaim | [**Get-IntersightNiatelemetryMdsAutoClaim**](docs/Get-IntersightNiatelemetryMdsAutoClaim.md) | Read a 'NiatelemetryMdsAutoClaim' resource.
 NiatelemetryMsoContractDetails | [**Get-IntersightNiatelemetryMsoContractDetails**](docs/Get-IntersightNiatelemetryMsoContractDetails.md) | Read a 'NiatelemetryMsoContractDetails' resource.
 NiatelemetryMsoEpgDetails | [**Get-IntersightNiatelemetryMsoEpgDetails**](docs/Get-IntersightNiatelemetryMsoEpgDetails.md) | Read a 'NiatelemetryMsoEpgDetails' resource.
 NiatelemetryMsoSchemaDetails | [**Get-IntersightNiatelemetryMsoSchemaDetails**](docs/Get-IntersightNiatelemetryMsoSchemaDetails.md) | Read a 'NiatelemetryMsoSchemaDetails' resource.
@@ -2100,7 +2121,18 @@ ProcessorUnit | [**Set-IntersightProcessorUnit**](docs/Set-IntersightProcessorUn
 RackUnitPersonality | [**Get-IntersightRackUnitPersonality**](docs/Get-IntersightRackUnitPersonality.md) | Read a 'RackUnitPersonality' resource.
 RackUnitPersonality | [**Set-IntersightRackUnitPersonality**](docs/Set-IntersightRackUnitPersonality.md) | Update a 'RackUnitPersonality' resource.
 RecommendationCapacityRunway | [**Get-IntersightRecommendationCapacityRunway**](docs/Get-IntersightRecommendationCapacityRunway.md) | Read a 'RecommendationCapacityRunway' resource.
+RecommendationClusterExpansion | [**Get-IntersightRecommendationClusterExpansion**](docs/Get-IntersightRecommendationClusterExpansion.md) | Read a 'RecommendationClusterExpansion' resource.
+RecommendationHardwareExpansionRequest | [**Get-IntersightRecommendationHardwareExpansionRequest**](docs/Get-IntersightRecommendationHardwareExpansionRequest.md) | Read a 'RecommendationHardwareExpansionRequest' resource.
+RecommendationHardwareExpansionRequestItem | [**Get-IntersightRecommendationHardwareExpansionRequestItem**](docs/Get-IntersightRecommendationHardwareExpansionRequestItem.md) | Read a 'RecommendationHardwareExpansionRequestItem' resource.
 RecommendationPhysicalItem | [**Get-IntersightRecommendationPhysicalItem**](docs/Get-IntersightRecommendationPhysicalItem.md) | Read a 'RecommendationPhysicalItem' resource.
+RecommendationPurchaseOrderEstimate | [**Get-IntersightRecommendationPurchaseOrderEstimate**](docs/Get-IntersightRecommendationPurchaseOrderEstimate.md) | Read a 'RecommendationPurchaseOrderEstimate' resource.
+RecommendationSoftwareItem | [**Get-IntersightRecommendationSoftwareItem**](docs/Get-IntersightRecommendationSoftwareItem.md) | Read a 'RecommendationSoftwareItem' resource.
+RecommendationHardwareExpansionRequest | [**New-IntersightRecommendationHardwareExpansionRequest**](docs/New-IntersightRecommendationHardwareExpansionRequest.md) | Create a 'RecommendationHardwareExpansionRequest' resource.
+RecommendationHardwareExpansionRequestItem | [**New-IntersightRecommendationHardwareExpansionRequestItem**](docs/New-IntersightRecommendationHardwareExpansionRequestItem.md) | Create a 'RecommendationHardwareExpansionRequestItem' resource.
+RecommendationPurchaseOrderEstimate | [**New-IntersightRecommendationPurchaseOrderEstimate**](docs/New-IntersightRecommendationPurchaseOrderEstimate.md) | Create a 'RecommendationPurchaseOrderEstimate' resource.
+RecommendationHardwareExpansionRequest | [**Set-IntersightRecommendationHardwareExpansionRequest**](docs/Set-IntersightRecommendationHardwareExpansionRequest.md) | Update a 'RecommendationHardwareExpansionRequest' resource.
+RecommendationHardwareExpansionRequestItem | [**Set-IntersightRecommendationHardwareExpansionRequestItem**](docs/Set-IntersightRecommendationHardwareExpansionRequestItem.md) | Update a 'RecommendationHardwareExpansionRequestItem' resource.
+RecommendationPurchaseOrderEstimate | [**Set-IntersightRecommendationPurchaseOrderEstimate**](docs/Set-IntersightRecommendationPurchaseOrderEstimate.md) | Update a 'RecommendationPurchaseOrderEstimate' resource.
 RecoveryBackupConfigPolicy | [**Get-IntersightRecoveryBackupConfigPolicy**](docs/Get-IntersightRecoveryBackupConfigPolicy.md) | Read a 'RecoveryBackupConfigPolicy' resource.
 RecoveryBackupProfile | [**Get-IntersightRecoveryBackupProfile**](docs/Get-IntersightRecoveryBackupProfile.md) | Read a 'RecoveryBackupProfile' resource.
 RecoveryConfigResult | [**Get-IntersightRecoveryConfigResult**](docs/Get-IntersightRecoveryConfigResult.md) | Read a 'RecoveryConfigResult' resource.

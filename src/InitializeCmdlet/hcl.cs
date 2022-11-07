@@ -879,6 +879,132 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize HclHwCatalogInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightHclHwCatalogInfo")]
+    public class InitializeIntersightHclHwCatalogInfo : PSCmdlet
+    {
+        public InitializeIntersightHclHwCatalogInfo()
+        {
+            ClassId = HclHwCatalogInfo.ClassIdEnum.HclHwCatalogInfo;
+            ObjectType = HclHwCatalogInfo.ObjectTypeEnum.HclHwCatalogInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HclHwCatalogInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HclHwCatalogInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to hclServerHwCatalogInfo resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.HclServerHwCatalogInfoRelationship> ServerHwCatalogInfo
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Server model information for HyperFlex servers."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ServerModel
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Server type of the server hardware. For example, server type AF is for an all-flash server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ServerType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.HclHwCatalogInfo initObject = new Intersight.Model.HclHwCatalogInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerHwCatalogInfo"))
+            {
+                initObject.ServerHwCatalogInfo = this.ServerHwCatalogInfo;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerModel"))
+            {
+                initObject.ServerModel = this.ServerModel;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerType"))
+            {
+                initObject.ServerType = this.ServerType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize HclHyperflexSoftwareCompatibilityInfo.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightHclHyperflexSoftwareCompatibilityInfo")]
@@ -1420,6 +1546,174 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
             {
                 initObject.Vendor = this.Vendor;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize HclServerHwCatalogInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightHclServerHwCatalogInfo")]
+    public class InitializeIntersightHclServerHwCatalogInfo : PSCmdlet
+    {
+        public InitializeIntersightHclServerHwCatalogInfo()
+        {
+            ClassId = HclServerHwCatalogInfo.ClassIdEnum.HclServerHwCatalogInfo;
+            ObjectType = HclServerHwCatalogInfo.ObjectTypeEnum.HclServerHwCatalogInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HclServerHwCatalogInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.HclConstraint> Constraints
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Display model of the server hardware. In many cases, the model string used in the catalog will be the hardware Cisco PID and the Intersight model string is a more user-friendly string with vendor information in it. This will be the user-friendly modal string to be used in Intersight."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DisplayModel
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identifier of specific tag."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ExtId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Model of the server hardware from the catalog file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HclServerHwCatalogInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of specific tag, required to choose the correct datatype while reading the value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Type
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Value of specific tag, having type as json."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.HclServerHwCatalogInfo initObject = new Intersight.Model.HclServerHwCatalogInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Constraints"))
+            {
+                initObject.Constraints = this.Constraints;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DisplayModel"))
+            {
+                initObject.DisplayModel = this.DisplayModel;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExtId"))
+            {
+                initObject.ExtId = this.ExtId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
             }
             WriteObject(initObject);
         }

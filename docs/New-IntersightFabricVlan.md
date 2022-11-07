@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoAllowOnUplinks< bool>][-EthNetworkPolicy< FabricEthNetworkPolicyRelationship>][-IsNative< bool>][-Moid< string>][-MulticastPolicy< FabricMulticastPolicyRelationship>][[-Name]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VlanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoAllowOnUplinks< bool>][-EthNetworkPolicy< FabricEthNetworkPolicyRelationship>][-IsNative< bool>][-Moid< string>][-MulticastPolicy< FabricMulticastPolicyRelationship>][[-Name]< string>][-PrimaryVlanId< long>][-SharingType< FabricVlan.SharingTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VlanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -131,6 +131,36 @@ Required: true
 Position: Named
 Default value: None
 Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -PrimaryVlanId
+The Primary VLAN ID of the VLAN, if the sharing type of the VLAN is Isolated or Community.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SharingType
+The sharing type of this VLAN.\n* `None` - This represents a regular VLAN.\n* `Primary` - This represents a primary VLAN.\n* `Isolated` - This represents an isolated VLAN.\n* `Community` - This represents a community VLAN.
+
+```yaml
+Type: FabricVlan.SharingTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

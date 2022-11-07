@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightTamAdvisoryDefinition [-Actions< System.Collections.Generic.List`1[Model.TamAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvisoryDetails< Model.TamBaseAdvisoryDetails>][-AdvisoryId< string>][-ApiDataSources< System.Collections.Generic.List`1[Model.TamApiDataSource]>][-ClassId< TamAdvisoryDefinition.ClassIdEnum>][-DatePublished< DateTime>][-DateUpdated< DateTime>][-Description< string>][-ExternalUrl< string>][-Moid< string>][-Name< string>][-ObjectType< TamAdvisoryDefinition.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Recommendation< string>][-S3DataSources< System.Collections.Generic.List`1[Model.TamS3DataSource]>][-Severity< Model.TamSeverity>][-State< TamAdvisoryDefinition.StateEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< TamAdvisoryDefinition.TypeEnum>][-Version< string>][-Workaround< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightTamAdvisoryDefinition [-Actions< System.Collections.Generic.List`1[Model.TamAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvisoryDetails< Model.TamBaseAdvisoryDetails>][-AdvisoryId< string>][-ApiDataSources< System.Collections.Generic.List`1[Model.TamApiDataSource]>][-ClassId< TamAdvisoryDefinition.ClassIdEnum>][-DatePublished< DateTime>][-DateUpdated< DateTime>][-Description< string>][-ExecuteOnPod< TamAdvisoryDefinition.ExecuteOnPodEnum>][-ExternalUrl< string>][-Moid< string>][-Name< string>][-ObjectType< TamAdvisoryDefinition.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-OtherRefUrls< System.Collections.Generic.List`1[string]>][-Recommendation< string>][-S3DataSources< System.Collections.Generic.List`1[Model.TamS3DataSource]>][-Severity< Model.TamSeverity>][-State< TamAdvisoryDefinition.StateEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< TamAdvisoryDefinition.TypeEnum>][-Version< string>][-Workaround< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -165,6 +165,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ExecuteOnPod
+Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster.
+
+```yaml
+Type: TamAdvisoryDefinition.ExecuteOnPodEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ExternalUrl
 A link to an external URL describing security Advisory in more details.
 
@@ -233,6 +248,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OtherRefUrls
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

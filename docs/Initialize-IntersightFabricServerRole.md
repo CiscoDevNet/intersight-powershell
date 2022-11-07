@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricServerRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AggregatePortId< long>][-AutoNegotiationDisabled< bool>][-ClassId< FabricServerRole.ClassIdEnum>][-Fec< FabricServerRole.FecEnum>][-Moid< string>][-ObjectType< FabricServerRole.ObjectTypeEnum>][-PortId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricServerRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AggregatePortId< long>][-AutoNegotiationDisabled< bool>][-ClassId< FabricServerRole.ClassIdEnum>][-Fec< FabricServerRole.FecEnum>][-Moid< string>][-ObjectType< FabricServerRole.ObjectTypeEnum>][-PortId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-PreferredDeviceId< long>][-PreferredDeviceType< FabricServerRole.PreferredDeviceTypeEnum>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -152,6 +152,36 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.FabricPortPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PreferredDeviceId
+Preferred device ID to be configured by user for the connected device. This ID must be specified together with the &apos;PreferredDeviceType&apos; property. This ID will only takes effect if the actual connected device matches the &apos;PreferredDeviceType&apos;. If the preferred ID is not available, the ID is automatically allocated and assigned by the system. If different preferred IDs are specified for the ports connected to the same device, only the preferred ID (if specified) of the port that is discovered first will be considered.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PreferredDeviceType
+Device type for which preferred ID to be configured. If the actual connected device does not match the specified device type, the system ignores the &apos;PreferredDeviceId&apos; property.\n* `Auto` - Preferred Id will be ignored if specified with this type.\n* `RackServer` - Connected device type is Rack Unit Server.\n* `Chassis` - Connected device type is Chassis.
+
+```yaml
+Type: FabricServerRole.PreferredDeviceTypeEnum
 Parameter Sets: (All)
 Aliases:
 
