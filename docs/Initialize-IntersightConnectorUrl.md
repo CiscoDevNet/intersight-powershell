@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ForceQuery
-Flag to append a query to the url even if rawQuery is empty.
+Flag to append a query to the URL even if rawQuery is empty.
 
 ```yaml
 Type: bool
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Host
-The host name identifies the host that holds the resource. The host can be an IP or a hostname that is resolvable by the dns server configured on the platform.
+The host name identifies the host that holds the resource. The host can be an IP or a hostname that is resolvable by the DNS server configured on the platform.
 
 ```yaml
 Type: string

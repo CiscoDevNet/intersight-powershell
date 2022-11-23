@@ -588,46 +588,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Protocol for which the driver is provided. E.g.  enic, fnic, lsi_mr3."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string DriverName
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Version of the Driver supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string DriverVersion
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Firmware version of the product/adapter supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string FirmwareVersion
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Identifier of the firmware."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Id
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -646,22 +606,6 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DriverName"))
-            {
-                initObject.DriverName = this.DriverName;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DriverVersion"))
-            {
-                initObject.DriverVersion = this.DriverVersion;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FirmwareVersion"))
-            {
-                initObject.FirmwareVersion = this.FirmwareVersion;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
-            {
-                initObject.Id = this.Id;
-            }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
@@ -1098,6 +1042,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Maximum supported HyperFlex Data Platform build version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MaxMgmtVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Minimum supported HyperFlex Data Platform build version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MinMgmtVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1169,6 +1133,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("IsMgmtBuild"))
             {
                 initObject.IsMgmtBuild = this.IsMgmtBuild;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaxMgmtVersion"))
+            {
+                initObject.MaxMgmtVersion = this.MaxMgmtVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MinMgmtVersion"))
+            {
+                initObject.MinMgmtVersion = this.MinMgmtVersion;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
@@ -1430,36 +1402,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<string> DriverNames
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.HclFirmware> Firmwares
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Identifier of the product."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Id
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"Model/PID of the product/adapter."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1479,36 +1421,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"Revision of the adapter model."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Revision
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Type of the product/adapter say OCP, PT, GPU.\n* `` - Default type of the Product.\n* `Adapter` - Represents network adapter cards.\n* `StorageController` - Represents storage controllers.\n* `GPU` - Represents graphics cards."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public HclProduct.TypeEnum Type
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Vendor of the product or adapter."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vendor
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -1518,35 +1430,11 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DriverNames"))
-            {
-                initObject.DriverNames = this.DriverNames;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Firmwares"))
-            {
-                initObject.Firmwares = this.Firmwares;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Id"))
-            {
-                initObject.Id = this.Id;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
             {
                 initObject.Model = this.Model;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
-            {
-                initObject.Revision = this.Revision;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
-            {
-                initObject.Type = this.Type;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
-            {
-                initObject.Vendor = this.Vendor;
-            }
             WriteObject(initObject);
         }
 

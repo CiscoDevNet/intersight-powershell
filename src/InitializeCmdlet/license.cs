@@ -61,7 +61,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Default license tier set by user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.\n* `IKS-Advantage` - IKS-Advantage as a License type."</para>
+        /// <para type="description">"Default license tier set by user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.\n* `IKS-Advantage` - IKS-Advantage as a License type.\n* `INC-Premier-1GFixed` - Premier 1G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-10GFixed` - Premier 10G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-100GFixed` - Premier 100G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-Mod4Slot` - Premier Modular 4 slot license tier for Intersight Nexus Cloud.\n* `INC-Premier-Mod8Slot` - Premier Modular 8 slot license tier for Intersight Nexus Cloud.\n* `INC-Premier-D2OpsFixed` - Premier D2Ops fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-D2OpsMod` - Premier D2Ops modular license tier for Intersight Nexus Cloud.\n* `IntersightTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode Intersight tiers.\n* `IWOTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode IKS tiers.\n* `IKSTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode IWO tiers.\n* `INCTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode Nexus tiers."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -91,6 +91,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a licenseIncCustomerOp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseIncCustomerOpRelationship IncCustomerOp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a licenseIncLicenseCount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseIncLicenseCountRelationship IncLicenseCount
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a licenseIwoCustomerOp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -106,6 +126,26 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.LicenseIwoLicenseCountRelationship IwoLicenseCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a licenseLicenseInfoView resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseLicenseInfoViewRelationship LicenseInfoView
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a licenseLicenseRegistrationStatus resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseLicenseRegistrationStatusRelationship LicenseRegistrationStatus
         {
             get;
             set;
@@ -189,6 +229,14 @@ namespace Intersight.PowerShell
             {
                 initObject.IksLicenseCount = this.IksLicenseCount;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IncCustomerOp"))
+            {
+                initObject.IncCustomerOp = this.IncCustomerOp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IncLicenseCount"))
+            {
+                initObject.IncLicenseCount = this.IncLicenseCount;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("IwoCustomerOp"))
             {
                 initObject.IwoCustomerOp = this.IwoCustomerOp;
@@ -196,6 +244,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("IwoLicenseCount"))
             {
                 initObject.IwoLicenseCount = this.IwoLicenseCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LicenseInfoView"))
+            {
+                initObject.LicenseInfoView = this.LicenseInfoView;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LicenseRegistrationStatus"))
+            {
+                initObject.LicenseRegistrationStatus = this.LicenseRegistrationStatus;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Licenseinfos"))
             {
@@ -709,6 +765,272 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize LicenseIncCustomerOp.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightLicenseIncCustomerOp")]
+    public class InitializeIntersightLicenseIncCustomerOp : PSCmdlet
+    {
+        public InitializeIntersightLicenseIncCustomerOp()
+        {
+            ClassId = LicenseIncCustomerOp.ClassIdEnum.LicenseIncCustomerOp;
+            ObjectType = LicenseIncCustomerOp.ObjectTypeEnum.LicenseIncCustomerOp;
+
+        }
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Nexus Cloud license administrative state.\nSet this property to 'true' to activate the Nexus Cloud license entitlements."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ActiveAdmin
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseIncCustomerOp.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable trial for Nexus Cloud licensing."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableTrial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The default Trial or Grace period the customer is entitled to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long EvaluationPeriod
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of days the trial Trial or Grace period is extended. The trial or grace period can be extended once."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long ExtraEvaluation
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseIncCustomerOp.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Terminate trial mode for Nexus Cloud."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool TerminateTrial
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.LicenseIncCustomerOp initObject = new Intersight.Model.LicenseIncCustomerOp();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
+            {
+                initObject.AccountLicenseData = this.AccountLicenseData;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ActiveAdmin"))
+            {
+                initObject.ActiveAdmin = this.ActiveAdmin;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableTrial"))
+            {
+                initObject.EnableTrial = this.EnableTrial;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EvaluationPeriod"))
+            {
+                initObject.EvaluationPeriod = this.EvaluationPeriod;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExtraEvaluation"))
+            {
+                initObject.ExtraEvaluation = this.ExtraEvaluation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TerminateTrial"))
+            {
+                initObject.TerminateTrial = this.TerminateTrial;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize LicenseIncLicenseCount.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightLicenseIncLicenseCount")]
+    public class InitializeIntersightLicenseIncLicenseCount : PSCmdlet
+    {
+        public InitializeIntersightLicenseIncLicenseCount()
+        {
+            ClassId = LicenseIncLicenseCount.ClassIdEnum.LicenseIncLicenseCount;
+            ObjectType = LicenseIncLicenseCount.ObjectTypeEnum.LicenseIncLicenseCount;
+
+        }
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseIncLicenseCount.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseIncLicenseCount.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.LicenseIncLicenseCount initObject = new Intersight.Model.LicenseIncLicenseCount();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
+            {
+                initObject.AccountLicenseData = this.AccountLicenseData;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize LicenseIwoCustomerOp.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightLicenseIwoCustomerOp")]
@@ -742,7 +1064,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Active workload optimizer license tier set by user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.\n* `IKS-Advantage` - IKS-Advantage as a License type."</para>
+        /// <para type="description">"Active workload optimizer license tier set by user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.\n* `IKS-Advantage` - IKS-Advantage as a License type.\n* `INC-Premier-1GFixed` - Premier 1G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-10GFixed` - Premier 10G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-100GFixed` - Premier 100G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-Mod4Slot` - Premier Modular 4 slot license tier for Intersight Nexus Cloud.\n* `INC-Premier-Mod8Slot` - Premier Modular 8 slot license tier for Intersight Nexus Cloud.\n* `INC-Premier-D2OpsFixed` - Premier D2Ops fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-D2OpsMod` - Premier D2Ops modular license tier for Intersight Nexus Cloud.\n* `IntersightTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode Intersight tiers.\n* `IWOTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode IKS tiers.\n* `IKSTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode IWO tiers.\n* `INCTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode Nexus tiers."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1102,6 +1424,259 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize LicenseLicenseInfoView.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightLicenseLicenseInfoView")]
+    public class InitializeIntersightLicenseLicenseInfoView : PSCmdlet
+    {
+        public InitializeIntersightLicenseLicenseInfoView()
+        {
+            ClassId = LicenseLicenseInfoView.ClassIdEnum.LicenseLicenseInfoView;
+            ObjectType = LicenseLicenseInfoView.ObjectTypeEnum.LicenseLicenseInfoView;
+
+        }
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseLicenseInfoView.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseLicenseInfoView.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.LicenseLicenseInfoView initObject = new Intersight.Model.LicenseLicenseInfoView();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
+            {
+                initObject.AccountLicenseData = this.AccountLicenseData;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize LicenseLicenseRegistrationStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightLicenseLicenseRegistrationStatus")]
+    public class InitializeIntersightLicenseLicenseRegistrationStatus : PSCmdlet
+    {
+        public InitializeIntersightLicenseLicenseRegistrationStatus()
+        {
+            ClassId = LicenseLicenseRegistrationStatus.ClassIdEnum.LicenseLicenseRegistrationStatus;
+            LicenseRegistrationState = LicenseLicenseRegistrationStatus.LicenseRegistrationStateEnum.RegistrationNotStarted;
+            ObjectType = LicenseLicenseRegistrationStatus.ObjectTypeEnum.LicenseLicenseRegistrationStatus;
+
+        }
+        // <summary>
+        /// <para type="description">"Stores information on whether account has gone through the registration wizard. True if has not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AccountCreationState
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseLicenseRegistrationStatus.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Stores information on whether account is new. This data is used for UI theme upgrade, where existing users will be shown a slightly different screen. True if new."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNewAccount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Stores information on the current flow of license registration.\n* `RegistrationNotStarted` - The license registration state to chose between trial and registration.\n* `RegistrationStarted` - The license registration state during set up flow.\n* `RegistrationComplete` - The license registration state after completion."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseLicenseRegistrationStatus.LicenseRegistrationStateEnum LicenseRegistrationState
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseLicenseRegistrationStatus.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Stores information on whether trial flow has been completed. True if trial registration finish."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool TrialRegistrationComplete
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.LicenseLicenseRegistrationStatus initObject = new Intersight.Model.LicenseLicenseRegistrationStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountCreationState"))
+            {
+                initObject.AccountCreationState = this.AccountCreationState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
+            {
+                initObject.AccountLicenseData = this.AccountLicenseData;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsNewAccount"))
+            {
+                initObject.IsNewAccount = this.IsNewAccount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LicenseRegistrationState"))
+            {
+                initObject.LicenseRegistrationState = this.LicenseRegistrationState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TrialRegistrationComplete"))
+            {
+                initObject.TrialRegistrationComplete = this.TrialRegistrationComplete;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize LicenseLicenseReservationOp.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightLicenseLicenseReservationOp")]
@@ -1349,6 +1924,62 @@ namespace Intersight.PowerShell
             {
                 initObject.Token = this.Token;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize LicenseSubstituteLicense.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightLicenseSubstituteLicense")]
+    public class InitializeIntersightLicenseSubstituteLicense : PSCmdlet
+    {
+        public InitializeIntersightLicenseSubstituteLicense()
+        {
+            ClassId = LicenseSubstituteLicense.ClassIdEnum.LicenseSubstituteLicense;
+            ObjectType = LicenseSubstituteLicense.ObjectTypeEnum.LicenseSubstituteLicense;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseSubstituteLicense.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseSubstituteLicense.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.LicenseSubstituteLicense initObject = new Intersight.Model.LicenseSubstituteLicense();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

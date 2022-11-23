@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetWorkloadOptimizerGoogleCloudPlatformBillingOptions [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BillingAccountId< string>][-ClassId< AssetWorkloadOptimizerGoogleCloudPlatformBillingOptions.ClassIdEnum>][-ObjectType< AssetWorkloadOptimizerGoogleCloudPlatformBillingOptions.ObjectTypeEnum>][-PricingExportDataSetName< string>][-PricingExportTableName< string>][-ProjectId< string>][-ResourceLevelCostDataSetName< string>][-ResourceLevelCostTableName< string>][-StandardCostDataSetName< string>][-StandardCostTableName< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetWorkloadOptimizerGoogleCloudPlatformBillingOptions [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BillingAccountId< string>][-ClassId< AssetWorkloadOptimizerGoogleCloudPlatformBillingOptions.ClassIdEnum>][-CostExportDataSetName< string>][-CostExportTableName< string>][-ObjectType< AssetWorkloadOptimizerGoogleCloudPlatformBillingOptions.ObjectTypeEnum>][-PricingExportDataSetName< string>][-PricingExportTableName< string>][-ProjectId< string>][-ResourceLevelCostEnabled< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,36 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: AssetWorkloadOptimizerGoogleCloudPlatformBillingOptions.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CostExportDataSetName
+Name of Google BigQuery Cost Export Data Set which is the dataset for the billed cost export.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CostExportTableName
+Google BigQuery Cost Export Table Name. This table will store the exported data from the Cost Export.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -129,56 +159,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ResourceLevelCostDataSetName
-This dataset contains the resource level billed cost export table.
+### -ResourceLevelCostEnabled
+This flag will enable querying of detailed usage cost with resource level information included.  If not enabled, cost export data will be queried, if dataset and table name are provided.
 
 ```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourceLevelCostTableName
-This table stores resource level cost export data.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StandardCostDataSetName
-Name of Google BigQuery Standard Cost Export Data Set which is the dataset for the standard billed cost export.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StandardCostTableName
-Google BigQuery Standard Cost Export Table Name. This table will store the exported data from the Standard Cost Export.
-
-```yaml
-Type: string
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

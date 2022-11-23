@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightServiceitemHealthCheckErrorElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ServiceitemHealthCheckErrorElement.ClassIdEnum>][-ElementType< string>][-Elements< System.Collections.Generic.List`1[Model.MoMoRef]>][-ObjectType< ServiceitemHealthCheckErrorElement.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightServiceitemHealthCheckErrorElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ServiceitemHealthCheckErrorElement.ClassIdEnum>][-ObjectType< ServiceitemHealthCheckErrorElement.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,38 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: ServiceitemHealthCheckErrorElement.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ElementType
-Type of the element of the service item. Examples are Server, Storage, UCS Fabric Interconnect etc.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Elements
-
-
-Note :- Use Initialize-IntersightMoMoRef to create the object of complex type MoMoRef
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.MoMoRef]
 Parameter Sets: (All)
 Aliases:
 
@@ -157,5 +125,3 @@ PS C:\> Initialize-IntersightServiceitemHealthCheckErrorElement
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightMoMoRef](./Initialize-IntersightMoMoRef.md)

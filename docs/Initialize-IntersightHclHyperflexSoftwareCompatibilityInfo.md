@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHclHyperflexSoftwareCompatibilityInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AppCatalog< Model.HyperflexAppCatalogRelationship>][-ClassId< HclHyperflexSoftwareCompatibilityInfo.ClassIdEnum>][-Constraints< System.Collections.Generic.List`1[Model.HclConstraint]>][-HxdpVersion< string>][-HypervisorType< HclHyperflexSoftwareCompatibilityInfo.HypervisorTypeEnum>][-HypervisorVersion< string>][-IsMgmtBuild< string>][-Moid< string>][-ObjectType< HclHyperflexSoftwareCompatibilityInfo.ObjectTypeEnum>][-ServerFwVersion< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHclHyperflexSoftwareCompatibilityInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AppCatalog< Model.HyperflexAppCatalogRelationship>][-ClassId< HclHyperflexSoftwareCompatibilityInfo.ClassIdEnum>][-Constraints< System.Collections.Generic.List`1[Model.HclConstraint]>][-HxdpVersion< string>][-HypervisorType< HclHyperflexSoftwareCompatibilityInfo.HypervisorTypeEnum>][-HypervisorVersion< string>][-IsMgmtBuild< string>][-MaxMgmtVersion< string>][-MinMgmtVersion< string>][-Moid< string>][-ObjectType< HclHyperflexSoftwareCompatibilityInfo.ObjectTypeEnum>][-ServerFwVersion< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -136,6 +136,36 @@ Accept wildcard characters: False
 
 ### -IsMgmtBuild
 Type of the HXDP bundle mgmt or full.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MaxMgmtVersion
+Maximum supported HyperFlex Data Platform build version.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MinMgmtVersion
+Minimum supported HyperFlex Data Platform build version.
 
 ```yaml
 Type: string

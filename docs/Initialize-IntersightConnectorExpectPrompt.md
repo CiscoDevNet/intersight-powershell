@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExpectTimeout
-The timeout for the expect prompt while executing interactive command. If timeout is not set a default of 60 seconds will be used.
+The timeout for the expect prompt while executing an interactive command. If timeout is not set, a default of 60 seconds will be used.
 
 ```yaml
 Type: long

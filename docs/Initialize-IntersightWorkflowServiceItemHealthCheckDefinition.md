@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowServiceItemHealthCheckDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-ClassId< WorkflowServiceItemHealthCheckDefinition.ClassIdEnum>][-CommonCauseAndResolution< string>][-Description< string>][-ExecutionMode< WorkflowServiceItemHealthCheckDefinition.ExecutionModeEnum>][-HealthCheckWorkflow< Model.WorkflowServiceItemActionWorkflowDefinition>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowServiceItemHealthCheckDefinition.ObjectTypeEnum>][-ServiceItemDefinition< Model.WorkflowServiceItemDefinitionRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowServiceItemHealthCheckDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Category< string>][-ClassId< WorkflowServiceItemHealthCheckDefinition.ClassIdEnum>][-CommonCauseAndResolution< string>][-Description< string>][-ExecutionMode< WorkflowServiceItemHealthCheckDefinition.ExecutionModeEnum>][-HealthCheckWorkflow< Model.WorkflowServiceItemActionWorkflowDefinition>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowServiceItemHealthCheckDefinition.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -181,24 +181,6 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: WorkflowServiceItemHealthCheckDefinition.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ServiceItemDefinition
-A reference to a workflowServiceItemDefinition resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.WorkflowServiceItemDefinitionRelationship
 Parameter Sets: (All)
 Aliases:
 

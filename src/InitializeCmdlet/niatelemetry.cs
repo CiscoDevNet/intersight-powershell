@@ -13886,6 +13886,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"NICC version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NiccVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"NIR application usage. This determines if the fabric has NIR application installed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14665,6 +14675,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("NetFlowCount"))
             {
                 initObject.NetFlowCount = this.NetFlowCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NiccVersion"))
+            {
+                initObject.NiccVersion = this.NiccVersion;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Nir"))
             {

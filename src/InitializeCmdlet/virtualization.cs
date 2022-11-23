@@ -7929,41 +7929,21 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Count of all clusters associated with this DC."</para>
+        /// <para type="description">"Count of all distributed networks associated with this datacenter (DC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long ClusterCount
+        public long DistributedNetworkCount
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"Count of all datastores associated with this DC."</para>
+        /// <para type="description">"Count of all distributed virtual switches associated with this datacenter (DC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long DatastoreCount
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Count of all hosts associated with this DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long HostCount
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Inventory path of the DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string InventoryPath
+        public long DistributedVirtualSwitchCount
         {
             get;
             set;
@@ -7974,16 +7954,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Count of all networks associated with this datacenter (DC)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long NetworkCount
         {
             get;
             set;
@@ -8009,6 +7979,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Count of all standard networks associated with this datacenter (DC)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long StandardNetworkCount
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8028,16 +8008,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"Count of all virtual machines templates associated with this DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long VmTemplateCount
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -8047,34 +8017,26 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ClusterCount"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("DistributedNetworkCount"))
             {
-                initObject.ClusterCount = this.ClusterCount;
+                initObject.DistributedNetworkCount = this.DistributedNetworkCount;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DatastoreCount"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("DistributedVirtualSwitchCount"))
             {
-                initObject.DatastoreCount = this.DatastoreCount;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("HostCount"))
-            {
-                initObject.HostCount = this.HostCount;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("InventoryPath"))
-            {
-                initObject.InventoryPath = this.InventoryPath;
+                initObject.DistributedVirtualSwitchCount = this.DistributedVirtualSwitchCount;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkCount"))
-            {
-                initObject.NetworkCount = this.NetworkCount;
-            }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("RegisteredDevice"))
             {
                 initObject.RegisteredDevice = this.RegisteredDevice;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StandardNetworkCount"))
+            {
+                initObject.StandardNetworkCount = this.StandardNetworkCount;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -8083,10 +8045,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("VmCount"))
             {
                 initObject.VmCount = this.VmCount;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VmTemplateCount"))
-            {
-                initObject.VmTemplateCount = this.VmTemplateCount;
             }
             WriteObject(initObject);
         }
@@ -11744,6 +11702,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightVirtualizationVmwareVcenter()
         {
+            ClassId = VirtualizationVmwareVcenter.ClassIdEnum.VirtualizationVmwareVcenter;
+            ObjectType = VirtualizationVmwareVcenter.ObjectTypeEnum.VirtualizationVmwareVcenter;
 
         }
         // <summary>
@@ -11757,7 +11717,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11787,7 +11747,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

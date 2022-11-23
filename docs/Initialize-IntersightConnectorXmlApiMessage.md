@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptedAesKey
-The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix &apos;AES&apos; in SecureProperties dictionary.
+The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector&apos;s public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix &apos;AES&apos; in SecureProperties dictionary.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not the same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteUserLocale
-The platform locale to assign user. A locale defines one or more organizations (domains) the user is allowed access, and access is limited to the organizations specified in the locale.
+The platform locale to assign user. A locale defines one or more organizations (domains) the user is allowed access to, and access is limited to the organizations specified in the locale.
 
 ```yaml
 Type: string
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteUserSessionId
-The session Id passed to the platform for use in platforms auditing.
+The session Id passed to the platform for use in platform&apos;s auditing.
 
 ```yaml
 Type: string
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureProperties
-A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
+A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using the AES key must be mapped against the secure property name with an &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -WithAuth
-Flag to disable authentication bypassing. If set to true it is expected a valid cookie/login is provided within the XML API request body.
+Flag to disable authentication bypassing. If set to true, a valid cookie/login is expected to be provided within the XML API request body.
 
 ```yaml
 Type: bool

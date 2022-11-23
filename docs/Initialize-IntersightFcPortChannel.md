@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFcPortChannel [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< string>][-ClassId< FcPortChannel.ClassIdEnum>][-EquipmentSwitchCard< Model.EquipmentSwitchCardRelationship>][-Mode< string>][-Moid< string>][-Name< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< FcPortChannel.ObjectTypeEnum>][-OperSpeed< string>][-OperState< string>][-OperStateQual< string>][-PortChannelId< long>][-Role< string>][-SwitchId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vsan< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFcPortChannel [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< string>][-ClassId< FcPortChannel.ClassIdEnum>][-EquipmentSwitchCard< Model.EquipmentSwitchCardRelationship>][-Moid< string>][-ObjectType< FcPortChannel.ObjectTypeEnum>][-OperStateQual< string>][-Role< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -87,59 +87,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Mode
-Mode information N_proxy, F or E associated to the Fibre Channel portchannel.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Name of the port channel.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NetworkElement
-A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.NetworkElementRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -165,56 +117,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -OperSpeed
-Operational speed of this port-channel.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -OperState
-Operational state of this port-channel.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -OperStateQual
 Reason for this port-channel&apos;s Operational state.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortChannelId
-Unique identifier for this port-channel on the FI.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -240,21 +147,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SwitchId
-Switch Identifier that is local to a cluster.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -262,21 +154,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Vsan
-Virtual San that is associated to the port-channel.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-DriveGroup< System.Collections.Generic.List`1[StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< StorageM2VirtualDriveConfig>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< StorageR0Drive>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DefaultDriveMode< StorageStoragePolicy.DefaultDriveModeEnum>][-Description< string>][-DriveGroup< System.Collections.Generic.List`1[StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< StorageM2VirtualDriveConfig>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< StorageR0Drive>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,21 @@ Create a &apos;StorageStoragePolicy&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultDriveMode
+Newly inserted drives or on reboot, drives will be moved to the corresponding disk state on supported storage controller based on this setting. Unused Disks State should be &apos;No Change&apos; if Default Drive Mode is set to JBOD or RAID 0. This setting is applicable only to FI attached servers.\n* `UnconfiguredGood` - Newly inserted drives or on reboot, drives will remain the same state.\n* `Jbod` - Newly inserted drives or on reboot, drives will automatically move to JBOD state if drive state was UnconfiguredGood.\n* `RAID0` - Newly inserted drives or on reboot, virtual drives will be created, respective drives will move to Online state.
+
+```yaml
+Type: StorageStoragePolicy.DefaultDriveModeEnum
 Parameter Sets: (All)
 Aliases:
 

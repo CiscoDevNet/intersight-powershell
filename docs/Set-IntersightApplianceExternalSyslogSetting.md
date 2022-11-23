@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightApplianceExternalSyslogSetting [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Enabled< bool>][-ExportNginx< bool>][[-Moid]< string>][-Port< long>][-Protocol< ApplianceExternalSyslogSetting.ProtocolEnum>][-Server< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightApplianceExternalSyslogSetting [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Enabled< bool>][-ExportAlarms< bool>][-ExportAudit< bool>][-ExportNginx< bool>][[-Moid]< string>][-Port< long>][-Protocol< ApplianceExternalSyslogSetting.ProtocolEnum>][-Server< string>][-Severity< ApplianceExternalSyslogSetting.SeverityEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -58,6 +58,36 @@ Accept wildcard characters: False
 
 ### -Enabled
 Enable or disable External Syslog Server.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExportAlarms
+If the flag is set, the alarms reported in Intersight Appliances are exported to external syslog server based on the alarm severity selection.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExportAudit
+Enable or disable exporting of Audit logs.
 
 ```yaml
 Type: bool
@@ -136,6 +166,21 @@ External Syslog Server Address, can be IP address or hostname.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Severity
+Minimum severity level to report.\n* `None` - The Enum value None represents that there is no severity.\n* `Info` - The Enum value Info represents the Informational level of severity.\n* `Critical` - The Enum value Critical represents the Critical level of severity.\n* `Warning` - The Enum value Warning represents the Warning level of severity.\n* `Cleared` - The Enum value Cleared represents that the alarm severity has been cleared.
+
+```yaml
+Type: ApplianceExternalSyslogSetting.SeverityEnum
 Parameter Sets: (All)
 Aliases:
 
