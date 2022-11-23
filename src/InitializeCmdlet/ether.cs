@@ -482,41 +482,11 @@ namespace Intersight.PowerShell
 
         }
         // <summary>
-        /// <para type="description">"Access VLANs for this port-channel, on this FI."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string AccessVlan
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Administratively configured state (enabled/disabled) for this port-channel."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string AdminState
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Allowed VLANs on this port-channel, on this FI."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string AllowedVlans
         {
             get;
             set;
@@ -542,16 +512,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Operating mode of this port-channel."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Mode
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -562,81 +522,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Native VLAN for this port-channel, on this FI."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string NativeVlan
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public EtherPortChannel.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Operational speed of this port-channel."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string OperSpeed
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Operational state of this port-channel."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string OperState
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Reason for this port-channel's Operational state."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string OperStateQual
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Unique identifier for this port-channel on the FI."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long PortChannelId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This port-channel's configured role (uplink, server, etc.)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Role
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Switch Identifier that is local to a cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SwitchId
         {
             get;
             set;
@@ -655,64 +545,20 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
             Intersight.Model.EtherPortChannel initObject = new Intersight.Model.EtherPortChannel();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AccessVlan"))
-            {
-                initObject.AccessVlan = this.AccessVlan;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
-            {
-                initObject.AdminState = this.AdminState;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AllowedVlans"))
-            {
-                initObject.AllowedVlans = this.AllowedVlans;
             }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("EquipmentSwitchCard"))
             {
                 initObject.EquipmentSwitchCard = this.EquipmentSwitchCard;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
-            {
-                initObject.Mode = this.Mode;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NativeVlan"))
-            {
-                initObject.NativeVlan = this.NativeVlan;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperSpeed"))
-            {
-                initObject.OperSpeed = this.OperSpeed;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperState"))
-            {
-                initObject.OperState = this.OperState;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperStateQual"))
-            {
-                initObject.OperStateQual = this.OperStateQual;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PortChannelId"))
-            {
-                initObject.PortChannelId = this.PortChannelId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Role"))
-            {
-                initObject.Role = this.Role;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
-            {
-                initObject.SwitchId = this.SwitchId;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;

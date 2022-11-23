@@ -242,41 +242,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Mode information N_proxy, F or E associated to the Fibre Channel portchannel."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Mode
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Name of the port channel."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.NetworkElementRelationship NetworkElement
         {
             get;
             set;
@@ -292,41 +262,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Operational speed of this port-channel."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string OperSpeed
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Operational state of this port-channel."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string OperState
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"Reason for this port-channel's Operational state."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string OperStateQual
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Unique identifier for this port-channel on the FI."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long PortChannelId
         {
             get;
             set;
@@ -342,31 +282,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Switch Identifier that is local to a cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SwitchId
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Virtual San that is associated to the port-channel."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Vsan
         {
             get;
             set;
@@ -388,54 +308,22 @@ namespace Intersight.PowerShell
             {
                 initObject.EquipmentSwitchCard = this.EquipmentSwitchCard;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Mode"))
-            {
-                initObject.Mode = this.Mode;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElement"))
-            {
-                initObject.NetworkElement = this.NetworkElement;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperSpeed"))
-            {
-                initObject.OperSpeed = this.OperSpeed;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("OperState"))
-            {
-                initObject.OperState = this.OperState;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("OperStateQual"))
             {
                 initObject.OperStateQual = this.OperStateQual;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PortChannelId"))
-            {
-                initObject.PortChannelId = this.PortChannelId;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Role"))
             {
                 initObject.Role = this.Role;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
-            {
-                initObject.SwitchId = this.SwitchId;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Vsan"))
-            {
-                initObject.Vsan = this.Vsan;
             }
             WriteObject(initObject);
         }

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHclProduct [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HclProduct.ClassIdEnum>][-DriverNames< System.Collections.Generic.List`1[string]>][-Firmwares< System.Collections.Generic.List`1[Model.HclFirmware]>][-Id< string>][-Model< string>][-ObjectType< HclProduct.ObjectTypeEnum>][-Revision< string>][-Type< HclProduct.TypeEnum>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHclProduct [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HclProduct.ClassIdEnum>][-Model< string>][-ObjectType< HclProduct.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,53 +54,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DriverNames
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Firmwares
-
-
-Note :- Use Initialize-IntersightHclFirmware to create the object of complex type HclFirmware
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.HclFirmware]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Id
-Identifier of the product.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Model
 Model/PID of the product/adapter.
 
@@ -121,51 +74,6 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: HclProduct.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Revision
-Revision of the adapter model.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Type
-Type of the product/adapter say OCP, PT, GPU.\n* `` - Default type of the Product.\n* `Adapter` - Represents network adapter cards.\n* `StorageController` - Represents storage controllers.\n* `GPU` - Represents graphics cards.
-
-```yaml
-Type: HclProduct.TypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Vendor
-Vendor of the product or adapter.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -232,5 +140,3 @@ PS C:\> Initialize-IntersightHclProduct
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightHclFirmware](./Initialize-IntersightHclFirmware.md)

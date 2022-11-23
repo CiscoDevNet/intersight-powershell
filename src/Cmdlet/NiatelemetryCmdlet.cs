@@ -12191,6 +12191,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"NICC version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NiccVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"NIR application usage. This determines if the fabric has NIR application installed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]

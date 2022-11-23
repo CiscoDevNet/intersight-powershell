@@ -4876,7 +4876,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible a value of -1 is sent."</para>
+        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5396,7 +5396,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible a value of -1 is sent."</para>
+        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -9048,7 +9048,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible a value of -1 is sent."</para>
+        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -12955,7 +12955,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible a value of -1 is sent."</para>
+        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

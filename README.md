@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.9235
-- C# SDK version: 1.0.11.9235
+- Intersight.PowerShell version: 1.0.11.9661
+- C# SDK version: 1.0.11.9661
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.9235"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.9661"}
 ```
 or
 
@@ -1426,9 +1426,12 @@ HyperflexHwCatalog | [**Get-IntersightHyperflexHwCatalog**](docs/Get-IntersightH
 HyperflexHxdpVersion | [**Get-IntersightHyperflexHxdpVersion**](docs/Get-IntersightHyperflexHxdpVersion.md) | Read a 'HyperflexHxdpVersion' resource.
 HyperflexHypervisorHost | [**Get-IntersightHyperflexHypervisorHost**](docs/Get-IntersightHyperflexHypervisorHost.md) | Read a 'HyperflexHypervisorHost' resource.
 HyperflexHypervisorVirtualMachine | [**Get-IntersightHyperflexHypervisorVirtualMachine**](docs/Get-IntersightHyperflexHypervisorVirtualMachine.md) | Read a 'HyperflexHypervisorVirtualMachine' resource.
+HyperflexInitiatorGroup | [**Get-IntersightHyperflexInitiatorGroup**](docs/Get-IntersightHyperflexInitiatorGroup.md) | Read a 'HyperflexInitiatorGroup' resource.
+HyperflexIscsiNetwork | [**Get-IntersightHyperflexIscsiNetwork**](docs/Get-IntersightHyperflexIscsiNetwork.md) | Read a 'HyperflexIscsiNetwork' resource.
 HyperflexKeyEncryptionKey | [**Get-IntersightHyperflexKeyEncryptionKey**](docs/Get-IntersightHyperflexKeyEncryptionKey.md) | Read a 'HyperflexKeyEncryptionKey' resource.
 HyperflexLicense | [**Get-IntersightHyperflexLicense**](docs/Get-IntersightHyperflexLicense.md) | Read a 'HyperflexLicense' resource.
 HyperflexLocalCredentialPolicy | [**Get-IntersightHyperflexLocalCredentialPolicy**](docs/Get-IntersightHyperflexLocalCredentialPolicy.md) | Read a 'HyperflexLocalCredentialPolicy' resource.
+HyperflexLun | [**Get-IntersightHyperflexLun**](docs/Get-IntersightHyperflexLun.md) | Read a 'HyperflexLun' resource.
 HyperflexNode | [**Get-IntersightHyperflexNode**](docs/Get-IntersightHyperflexNode.md) | Read a 'HyperflexNode' resource.
 HyperflexNodeConfigPolicy | [**Get-IntersightHyperflexNodeConfigPolicy**](docs/Get-IntersightHyperflexNodeConfigPolicy.md) | Read a 'HyperflexNodeConfigPolicy' resource.
 HyperflexNodeProfile | [**Get-IntersightHyperflexNodeProfile**](docs/Get-IntersightHyperflexNodeProfile.md) | Read a 'HyperflexNodeProfile' resource.
@@ -1444,6 +1447,7 @@ HyperflexSoftwareDistributionVersion | [**Get-IntersightHyperflexSoftwareDistrib
 HyperflexSoftwareVersionPolicy | [**Get-IntersightHyperflexSoftwareVersionPolicy**](docs/Get-IntersightHyperflexSoftwareVersionPolicy.md) | Read a 'HyperflexSoftwareVersionPolicy' resource.
 HyperflexStorageContainer | [**Get-IntersightHyperflexStorageContainer**](docs/Get-IntersightHyperflexStorageContainer.md) | Read a 'HyperflexStorageContainer' resource.
 HyperflexSysConfigPolicy | [**Get-IntersightHyperflexSysConfigPolicy**](docs/Get-IntersightHyperflexSysConfigPolicy.md) | Read a 'HyperflexSysConfigPolicy' resource.
+HyperflexTarget | [**Get-IntersightHyperflexTarget**](docs/Get-IntersightHyperflexTarget.md) | Read a 'HyperflexTarget' resource.
 HyperflexUcsmConfigPolicy | [**Get-IntersightHyperflexUcsmConfigPolicy**](docs/Get-IntersightHyperflexUcsmConfigPolicy.md) | Read a 'HyperflexUcsmConfigPolicy' resource.
 HyperflexVcenterConfigPolicy | [**Get-IntersightHyperflexVcenterConfigPolicy**](docs/Get-IntersightHyperflexVcenterConfigPolicy.md) | Read a 'HyperflexVcenterConfigPolicy' resource.
 HyperflexVmBackupInfo | [**Get-IntersightHyperflexVmBackupInfo**](docs/Get-IntersightHyperflexVmBackupInfo.md) | Read a 'HyperflexVmBackupInfo' resource.
@@ -1546,8 +1550,11 @@ HyperflexHealthCheckPackageChecksum | [**Set-IntersightHyperflexHealthCheckPacka
 HyperflexHxdpVersion | [**Set-IntersightHyperflexHxdpVersion**](docs/Set-IntersightHyperflexHxdpVersion.md) | Update a 'HyperflexHxdpVersion' resource.
 HyperflexHypervisorHost | [**Set-IntersightHyperflexHypervisorHost**](docs/Set-IntersightHyperflexHypervisorHost.md) | Update a 'HyperflexHypervisorHost' resource.
 HyperflexHypervisorVirtualMachine | [**Set-IntersightHyperflexHypervisorVirtualMachine**](docs/Set-IntersightHyperflexHypervisorVirtualMachine.md) | Update a 'HyperflexHypervisorVirtualMachine' resource.
+HyperflexInitiatorGroup | [**Set-IntersightHyperflexInitiatorGroup**](docs/Set-IntersightHyperflexInitiatorGroup.md) | Update a 'HyperflexInitiatorGroup' resource.
+HyperflexIscsiNetwork | [**Set-IntersightHyperflexIscsiNetwork**](docs/Set-IntersightHyperflexIscsiNetwork.md) | Update a 'HyperflexIscsiNetwork' resource.
 HyperflexKeyEncryptionKey | [**Set-IntersightHyperflexKeyEncryptionKey**](docs/Set-IntersightHyperflexKeyEncryptionKey.md) | Update a 'HyperflexKeyEncryptionKey' resource.
 HyperflexLocalCredentialPolicy | [**Set-IntersightHyperflexLocalCredentialPolicy**](docs/Set-IntersightHyperflexLocalCredentialPolicy.md) | Update a 'HyperflexLocalCredentialPolicy' resource.
+HyperflexLun | [**Set-IntersightHyperflexLun**](docs/Set-IntersightHyperflexLun.md) | Update a 'HyperflexLun' resource.
 HyperflexNodeConfigPolicy | [**Set-IntersightHyperflexNodeConfigPolicy**](docs/Set-IntersightHyperflexNodeConfigPolicy.md) | Update a 'HyperflexNodeConfigPolicy' resource.
 HyperflexNodeProfile | [**Set-IntersightHyperflexNodeProfile**](docs/Set-IntersightHyperflexNodeProfile.md) | Update a 'HyperflexNodeProfile' resource.
 HyperflexProxySettingPolicy | [**Set-IntersightHyperflexProxySettingPolicy**](docs/Set-IntersightHyperflexProxySettingPolicy.md) | Update a 'HyperflexProxySettingPolicy' resource.
@@ -1561,6 +1568,7 @@ HyperflexSoftwareDistributionVersion | [**Set-IntersightHyperflexSoftwareDistrib
 HyperflexSoftwareVersionPolicy | [**Set-IntersightHyperflexSoftwareVersionPolicy**](docs/Set-IntersightHyperflexSoftwareVersionPolicy.md) | Update a 'HyperflexSoftwareVersionPolicy' resource.
 HyperflexStorageContainer | [**Set-IntersightHyperflexStorageContainer**](docs/Set-IntersightHyperflexStorageContainer.md) | Update a 'HyperflexStorageContainer' resource.
 HyperflexSysConfigPolicy | [**Set-IntersightHyperflexSysConfigPolicy**](docs/Set-IntersightHyperflexSysConfigPolicy.md) | Update a 'HyperflexSysConfigPolicy' resource.
+HyperflexTarget | [**Set-IntersightHyperflexTarget**](docs/Set-IntersightHyperflexTarget.md) | Update a 'HyperflexTarget' resource.
 HyperflexUcsmConfigPolicy | [**Set-IntersightHyperflexUcsmConfigPolicy**](docs/Set-IntersightHyperflexUcsmConfigPolicy.md) | Update a 'HyperflexUcsmConfigPolicy' resource.
 HyperflexVcenterConfigPolicy | [**Set-IntersightHyperflexVcenterConfigPolicy**](docs/Set-IntersightHyperflexVcenterConfigPolicy.md) | Update a 'HyperflexVcenterConfigPolicy' resource.
 HyperflexVolume | [**Set-IntersightHyperflexVolume**](docs/Set-IntersightHyperflexVolume.md) | Update a 'HyperflexVolume' resource.
@@ -1869,12 +1877,17 @@ LicenseAccountLicenseData | [**Get-IntersightLicenseAccountLicenseData**](docs/G
 LicenseCustomerOp | [**Get-IntersightLicenseCustomerOp**](docs/Get-IntersightLicenseCustomerOp.md) | Read a 'LicenseCustomerOp' resource.
 LicenseIksCustomerOp | [**Get-IntersightLicenseIksCustomerOp**](docs/Get-IntersightLicenseIksCustomerOp.md) | Read a 'LicenseIksCustomerOp' resource.
 LicenseIksLicenseCount | [**Get-IntersightLicenseIksLicenseCount**](docs/Get-IntersightLicenseIksLicenseCount.md) | Read a 'LicenseIksLicenseCount' resource.
+LicenseIncCustomerOp | [**Get-IntersightLicenseIncCustomerOp**](docs/Get-IntersightLicenseIncCustomerOp.md) | Read a 'LicenseIncCustomerOp' resource.
+LicenseIncLicenseCount | [**Get-IntersightLicenseIncLicenseCount**](docs/Get-IntersightLicenseIncLicenseCount.md) | Read a 'LicenseIncLicenseCount' resource.
 LicenseIwoCustomerOp | [**Get-IntersightLicenseIwoCustomerOp**](docs/Get-IntersightLicenseIwoCustomerOp.md) | Read a 'LicenseIwoCustomerOp' resource.
 LicenseIwoLicenseCount | [**Get-IntersightLicenseIwoLicenseCount**](docs/Get-IntersightLicenseIwoLicenseCount.md) | Read a 'LicenseIwoLicenseCount' resource.
 LicenseLicenseInfo | [**Get-IntersightLicenseLicenseInfo**](docs/Get-IntersightLicenseLicenseInfo.md) | Read a 'LicenseLicenseInfo' resource.
+LicenseLicenseInfoView | [**Get-IntersightLicenseLicenseInfoView**](docs/Get-IntersightLicenseLicenseInfoView.md) | Read a 'LicenseLicenseInfoView' resource.
+LicenseLicenseRegistrationStatus | [**Get-IntersightLicenseLicenseRegistrationStatus**](docs/Get-IntersightLicenseLicenseRegistrationStatus.md) | Read a 'LicenseLicenseRegistrationStatus' resource.
 LicenseLicenseReservationOp | [**Get-IntersightLicenseLicenseReservationOp**](docs/Get-IntersightLicenseLicenseReservationOp.md) | Read a 'LicenseLicenseReservationOp' resource.
 LicenseSmartlicenseToken | [**Get-IntersightLicenseSmartlicenseToken**](docs/Get-IntersightLicenseSmartlicenseToken.md) | Read a 'LicenseSmartlicenseToken' resource.
 LicenseIksLicenseCount | [**New-IntersightLicenseIksLicenseCount**](docs/New-IntersightLicenseIksLicenseCount.md) | Create a 'LicenseIksLicenseCount' resource.
+LicenseIncLicenseCount | [**New-IntersightLicenseIncLicenseCount**](docs/New-IntersightLicenseIncLicenseCount.md) | Create a 'LicenseIncLicenseCount' resource.
 LicenseIwoLicenseCount | [**New-IntersightLicenseIwoLicenseCount**](docs/New-IntersightLicenseIwoLicenseCount.md) | Create a 'LicenseIwoLicenseCount' resource.
 LicenseLicenseInfo | [**New-IntersightLicenseLicenseInfo**](docs/New-IntersightLicenseLicenseInfo.md) | Create a 'LicenseLicenseInfo' resource.
 LicenseLicenseReservationOp | [**New-IntersightLicenseLicenseReservationOp**](docs/New-IntersightLicenseLicenseReservationOp.md) | Create a 'LicenseLicenseReservationOp' resource.
@@ -1882,9 +1895,12 @@ LicenseAccountLicenseData | [**Set-IntersightLicenseAccountLicenseData**](docs/S
 LicenseCustomerOp | [**Set-IntersightLicenseCustomerOp**](docs/Set-IntersightLicenseCustomerOp.md) | Update a 'LicenseCustomerOp' resource.
 LicenseIksCustomerOp | [**Set-IntersightLicenseIksCustomerOp**](docs/Set-IntersightLicenseIksCustomerOp.md) | Update a 'LicenseIksCustomerOp' resource.
 LicenseIksLicenseCount | [**Set-IntersightLicenseIksLicenseCount**](docs/Set-IntersightLicenseIksLicenseCount.md) | Update a 'LicenseIksLicenseCount' resource.
+LicenseIncCustomerOp | [**Set-IntersightLicenseIncCustomerOp**](docs/Set-IntersightLicenseIncCustomerOp.md) | Update a 'LicenseIncCustomerOp' resource.
+LicenseIncLicenseCount | [**Set-IntersightLicenseIncLicenseCount**](docs/Set-IntersightLicenseIncLicenseCount.md) | Update a 'LicenseIncLicenseCount' resource.
 LicenseIwoCustomerOp | [**Set-IntersightLicenseIwoCustomerOp**](docs/Set-IntersightLicenseIwoCustomerOp.md) | Update a 'LicenseIwoCustomerOp' resource.
 LicenseIwoLicenseCount | [**Set-IntersightLicenseIwoLicenseCount**](docs/Set-IntersightLicenseIwoLicenseCount.md) | Update a 'LicenseIwoLicenseCount' resource.
 LicenseLicenseInfo | [**Set-IntersightLicenseLicenseInfo**](docs/Set-IntersightLicenseLicenseInfo.md) | Update a 'LicenseLicenseInfo' resource.
+LicenseLicenseRegistrationStatus | [**Set-IntersightLicenseLicenseRegistrationStatus**](docs/Set-IntersightLicenseLicenseRegistrationStatus.md) | Update a 'LicenseLicenseRegistrationStatus' resource.
 LicenseLicenseReservationOp | [**Set-IntersightLicenseLicenseReservationOp**](docs/Set-IntersightLicenseLicenseReservationOp.md) | Update a 'LicenseLicenseReservationOp' resource.
 LicenseSmartlicenseToken | [**Set-IntersightLicenseSmartlicenseToken**](docs/Set-IntersightLicenseSmartlicenseToken.md) | Update a 'LicenseSmartlicenseToken' resource.
 LsServiceProfile | [**Get-IntersightLsServiceProfile**](docs/Get-IntersightLsServiceProfile.md) | Read a 'LsServiceProfile' resource.
@@ -1941,6 +1957,9 @@ NetworkLicenseFile | [**Get-IntersightNetworkLicenseFile**](docs/Get-IntersightN
 NetworkSupervisorCard | [**Get-IntersightNetworkSupervisorCard**](docs/Get-IntersightNetworkSupervisorCard.md) | Read a 'NetworkSupervisorCard' resource.
 NetworkTelemetryCheck | [**Get-IntersightNetworkTelemetryCheck**](docs/Get-IntersightNetworkTelemetryCheck.md) | Read a 'NetworkTelemetryCheck' resource.
 NetworkVlanPortInfo | [**Get-IntersightNetworkVlanPortInfo**](docs/Get-IntersightNetworkVlanPortInfo.md) | Read a 'NetworkVlanPortInfo' resource.
+NetworkVpcDomain | [**Get-IntersightNetworkVpcDomain**](docs/Get-IntersightNetworkVpcDomain.md) | Read a 'NetworkVpcDomain' resource.
+NetworkVpcMember | [**Get-IntersightNetworkVpcMember**](docs/Get-IntersightNetworkVpcMember.md) | Read a 'NetworkVpcMember' resource.
+NetworkVpcPeer | [**Get-IntersightNetworkVpcPeer**](docs/Get-IntersightNetworkVpcPeer.md) | Read a 'NetworkVpcPeer' resource.
 NetworkVrf | [**Get-IntersightNetworkVrf**](docs/Get-IntersightNetworkVrf.md) | Read a 'NetworkVrf' resource.
 NetworkElement | [**Set-IntersightNetworkElement**](docs/Set-IntersightNetworkElement.md) | Update a 'NetworkElement' resource.
 NetworkFcZoneInfo | [**Set-IntersightNetworkFcZoneInfo**](docs/Set-IntersightNetworkFcZoneInfo.md) | Update a 'NetworkFcZoneInfo' resource.
@@ -2304,6 +2323,7 @@ StorageHitachiHostLun | [**Get-IntersightStorageHitachiHostLun**](docs/Get-Inter
 StorageHitachiParityGroup | [**Get-IntersightStorageHitachiParityGroup**](docs/Get-IntersightStorageHitachiParityGroup.md) | Read a 'StorageHitachiParityGroup' resource.
 StorageHitachiPool | [**Get-IntersightStorageHitachiPool**](docs/Get-IntersightStorageHitachiPool.md) | Read a 'StorageHitachiPool' resource.
 StorageHitachiPort | [**Get-IntersightStorageHitachiPort**](docs/Get-IntersightStorageHitachiPort.md) | Read a 'StorageHitachiPort' resource.
+StorageHitachiRemoteReplication | [**Get-IntersightStorageHitachiRemoteReplication**](docs/Get-IntersightStorageHitachiRemoteReplication.md) | Read a 'StorageHitachiRemoteReplication' resource.
 StorageHitachiSnapshot | [**Get-IntersightStorageHitachiSnapshot**](docs/Get-IntersightStorageHitachiSnapshot.md) | Read a 'StorageHitachiSnapshot' resource.
 StorageHitachiVolume | [**Get-IntersightStorageHitachiVolume**](docs/Get-IntersightStorageHitachiVolume.md) | Read a 'StorageHitachiVolume' resource.
 StorageHyperFlexStorageContainer | [**Get-IntersightStorageHyperFlexStorageContainer**](docs/Get-IntersightStorageHyperFlexStorageContainer.md) | Read a 'StorageHyperFlexStorageContainer' resource.

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNetworkInterfaceList [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkInterfaceList.ClassIdEnum>][-Moid< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< NetworkInterfaceList.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNetworkInterfaceList [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkInterfaceList.ClassIdEnum>][-Moid< string>][-ObjectType< NetworkInterfaceList.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,24 +59,6 @@ The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NetworkElement
-A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.NetworkElementRelationship
 Parameter Sets: (All)
 Aliases:
 

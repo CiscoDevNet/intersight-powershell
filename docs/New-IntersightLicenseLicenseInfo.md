@@ -177,6 +177,8 @@ PS C:\> New-IntersightLicenseLicenseInfo
 
 [Get-IntersightLicenseLicenseInfo](./Get-IntersightLicenseLicenseInfo.md)
 
+[Initialize-IntersightLicenseSubstituteLicense](./Initialize-IntersightLicenseSubstituteLicense.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Set-IntersightLicenseLicenseInfo](./Set-IntersightLicenseLicenseInfo.md)

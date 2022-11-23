@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowServiceItemActionDefinition [-ActionType< WorkflowServiceItemActionDefinition.ActionTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedInstanceStates< System.Collections.Generic.List`1[WorkflowServiceItemActionDefinition.AllowedInstanceStatesEnum]>][-ClassId< WorkflowServiceItemActionDefinition.ClassIdEnum>][-CoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowServiceItemActionDefinition.ObjectTypeEnum>][-OutputParameters< object>][-Periodicity< long>][-PostCoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-PreCoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-ServiceItemDefinition< Model.WorkflowServiceItemDefinitionRelationship>][-StopWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ValidationWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowServiceItemActionDefinition [-ActionType< WorkflowServiceItemActionDefinition.ActionTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedInstanceStates< System.Collections.Generic.List`1[WorkflowServiceItemActionDefinition.AllowedInstanceStatesEnum]>][-ClassId< WorkflowServiceItemActionDefinition.ClassIdEnum>][-CoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowServiceItemActionDefinition.ObjectTypeEnum>][-OutputParameters< object>][-Periodicity< long>][-PostCoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-PreCoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-RestrictOnPrivateAppliance< bool>][-ServiceItemDefinition< Model.WorkflowServiceItemDefinitionRelationship>][-StopWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ValidationWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -249,6 +249,21 @@ Note :- Use Initialize-IntersightWorkflowServiceItemActionWorkflowDefinition to 
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RestrictOnPrivateAppliance
+The flag to indicate that action is restricted on a Private Virtual Appliance.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

@@ -82,6 +82,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Indicates whether a lease allocation is exclusive based on the Assigned Entity, if the AssignedEntity holds any lease then not allowed to create new lease later."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsExclusiveAtAssignedEntity
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The lease specific parameters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -175,6 +185,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Feature"))
             {
                 initObject.Feature = this.Feature;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsExclusiveAtAssignedEntity"))
+            {
+                initObject.IsExclusiveAtAssignedEntity = this.IsExclusiveAtAssignedEntity;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("LeaseParameters"))
             {

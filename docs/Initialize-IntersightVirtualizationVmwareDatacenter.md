@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationVmwareDatacenter [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationVmwareDatacenter.ClassIdEnum>][-ClusterCount< long>][-DatastoreCount< long>][-HostCount< long>][-InventoryPath< string>][-Moid< string>][-NetworkCount< long>][-ObjectType< VirtualizationVmwareDatacenter.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VmCount< long>][-VmTemplateCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVirtualizationVmwareDatacenter [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationVmwareDatacenter.ClassIdEnum>][-DistributedNetworkCount< long>][-DistributedVirtualSwitchCount< long>][-Moid< string>][-ObjectType< VirtualizationVmwareDatacenter.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-StandardNetworkCount< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VmCount< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,8 +54,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ClusterCount
-Count of all clusters associated with this DC.
+### -DistributedNetworkCount
+Count of all distributed networks associated with this datacenter (DC).
 
 ```yaml
 Type: long
@@ -69,41 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DatastoreCount
-Count of all datastores associated with this DC.
+### -DistributedVirtualSwitchCount
+Count of all distributed virtual switches associated with this datacenter (DC).
 
 ```yaml
 Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -HostCount
-Count of all hosts associated with this DC.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InventoryPath
-Inventory path of the DC.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -119,21 +89,6 @@ The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NetworkCount
-Count of all networks associated with this datacenter (DC).
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -177,6 +132,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -StandardNetworkCount
+Count of all standard networks associated with this datacenter (DC).
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -196,21 +166,6 @@ Accept wildcard characters: False
 
 ### -VmCount
 Count of all virtual machines (VMs) associated with this DC.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VmTemplateCount
-Count of all virtual machines templates associated with this DC.
 
 ```yaml
 Type: long

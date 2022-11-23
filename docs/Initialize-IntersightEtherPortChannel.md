@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEtherPortChannel [-AccessVlan< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< string>][-AllowedVlans< string>][-ClassId< EtherPortChannel.ClassIdEnum>][-EquipmentSwitchCard< Model.EquipmentSwitchCardRelationship>][-Mode< string>][-Moid< string>][-NativeVlan< string>][-ObjectType< EtherPortChannel.ObjectTypeEnum>][-OperSpeed< string>][-OperState< string>][-OperStateQual< string>][-PortChannelId< long>][-Role< string>][-SwitchId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEtherPortChannel [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EtherPortChannel.ClassIdEnum>][-EquipmentSwitchCard< Model.EquipmentSwitchCardRelationship>][-Moid< string>][-ObjectType< EtherPortChannel.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -24,56 +24,11 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ## PARAMETERS
 
-### -AccessVlan
-Access VLANs for this port-channel, on this FI.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -AdditionalProperties
 
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminState
-Administratively configured state (enabled/disabled) for this port-channel.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AllowedVlans
-Allowed VLANs on this port-channel, on this FI.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -117,38 +72,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Mode
-Operating mode of this port-channel.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NativeVlan
-Native VLAN for this port-channel, on this FI.
 
 ```yaml
 Type: string
@@ -167,96 +92,6 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: EtherPortChannel.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -OperSpeed
-Operational speed of this port-channel.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -OperState
-Operational state of this port-channel.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -OperStateQual
-Reason for this port-channel&apos;s Operational state.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortChannelId
-Unique identifier for this port-channel on the FI.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Role
-This port-channel&apos;s configured role (uplink, server, etc.).
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SwitchId
-Switch Identifier that is local to a cluster.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

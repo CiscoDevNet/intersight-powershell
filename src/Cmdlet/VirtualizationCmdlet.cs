@@ -4307,6 +4307,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Count of all distributed networks associated with this datacenter (DC)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DistributedNetworkCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of all distributed virtual switches associated with this datacenter (DC)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DistributedVirtualSwitchCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The DomainGroup ID for this managed object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -4446,6 +4468,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of all standard networks associated with this datacenter (DC)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long StandardNetworkCount
         {
             get;
             set;
@@ -7377,11 +7410,55 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Count of all Clusters associated with the vcenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ClusterCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of all Datacenters in the vcenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DatacenterCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of all Datastores Templates associated with the vcenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DatastoreCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of all Distributed Virtual Switches associated with vcenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DistributedVirtualSwitchCount
         {
             get;
             set;
@@ -7399,6 +7476,39 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Count of all Datastore cluster associated with the vcenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DsClusterCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"External Ip address fot the vcenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ExternalIp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of all Hosts associated with the vcenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long HostCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Identity of the hypervisor (not manipulated by user). It could be a UUID too. For example, c917093f-5443-4748-bc09-eec72ded7608."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7408,6 +7518,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -7479,6 +7590,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Name of th Target with which the vcenter was claimed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string TargetName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Release version of the Hypervisor Manger (VMware vCenter Server 6.0.0 build-4541947)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7489,6 +7611,28 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Count of all Virtual Machines associated with the vcenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VmCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of all VM Templates associated with the vcenter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VmTemplatesCount
+        {
+            get;
+            set;
+        }
 
 
     }
@@ -12771,36 +12915,26 @@ namespace Intersight.PowerShell
         }
 
 
+
+
+
         // <summary>
-        /// <para type="description">"Count of all clusters associated with this DC."</para>
+        /// <para type="description">"Count of all distributed networks associated with this datacenter (DC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long ClusterCount
+        public long DistributedNetworkCount
         {
             get;
             set;
         }
 
-
         // <summary>
-        /// <para type="description">"Count of all datastores associated with this DC."</para>
+        /// <para type="description">"Count of all distributed virtual switches associated with this datacenter (DC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public long DatastoreCount
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Count of all hosts associated with this DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long HostCount
+        public long DistributedVirtualSwitchCount
         {
             get;
             set;
@@ -12808,16 +12942,8 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"Inventory path of the DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string InventoryPath
-        {
-            get;
-            set;
-        }
+
 
 
         // <summary>
@@ -12832,16 +12958,6 @@ namespace Intersight.PowerShell
         }
 
 
-        // <summary>
-        /// <para type="description">"Count of all networks associated with this datacenter (DC)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long NetworkCount
-        {
-            get;
-            set;
-        }
 
 
 
@@ -12858,6 +12974,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Count of all standard networks associated with this datacenter (DC)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long StandardNetworkCount
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description"></para>
@@ -12883,16 +13010,6 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description">"Count of all virtual machines templates associated with this DC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long VmTemplateCount
-        {
-            get;
-            set;
-        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDatastore.</para>

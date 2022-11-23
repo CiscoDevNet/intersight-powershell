@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageStoragePolicy.ClassIdEnum>][-Description< string>][-DriveGroup< System.Collections.Generic.List`1[Model.StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< Model.StorageM2VirtualDriveConfig>][-Moid< string>][-Name< string>][-ObjectType< StorageStoragePolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< Model.StorageR0Drive>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageStoragePolicy.ClassIdEnum>][-DefaultDriveMode< StorageStoragePolicy.DefaultDriveModeEnum>][-Description< string>][-DriveGroup< System.Collections.Generic.List`1[Model.StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< Model.StorageM2VirtualDriveConfig>][-Moid< string>][-Name< string>][-ObjectType< StorageStoragePolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< Model.StorageR0Drive>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: StorageStoragePolicy.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultDriveMode
+Newly inserted drives or on reboot, drives will be moved to the corresponding disk state on supported storage controller based on this setting. Unused Disks State should be &apos;No Change&apos; if Default Drive Mode is set to JBOD or RAID 0. This setting is applicable only to FI attached servers.\n* `UnconfiguredGood` - Newly inserted drives or on reboot, drives will remain the same state.\n* `Jbod` - Newly inserted drives or on reboot, drives will automatically move to JBOD state if drive state was UnconfiguredGood.\n* `RAID0` - Newly inserted drives or on reboot, virtual drives will be created, respective drives will move to Online state.
+
+```yaml
+Type: StorageStoragePolicy.DefaultDriveModeEnum
 Parameter Sets: (All)
 Aliases:
 

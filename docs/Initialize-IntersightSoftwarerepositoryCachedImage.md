@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -DownloadProgress
-The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible a value of -1 is sent.
+The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent.
 
 ```yaml
 Type: long

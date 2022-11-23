@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptedAesKey
-The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix &apos;AES&apos; in SecureProperties dictionary.
+The secure properties that have large text content as value can be encrypted using AES key. In these cases, the AES key needs to be encrypted using the device connector&apos;s public key and passed as the value for this property.\nThe secure properties that are encrypted using the AES key are mapped against the property name with prefix &apos;AES&apos; in SecureProperties dictionary.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not the same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -MsgType
-Message type carrying the file operation to perform.\n* `OpenFile` - Open a file for write to on the platforms file system. Must be the first message sent to the plugin when writing files, attempting to write to or close a file that has not been opened will return error. If file does not exist file will be created, if it does exist file will be truncated. If the files parent directory does not exist an error will be returned.\n* `FileContent` - Carries content to write to an open file. The complete file content can be buffered across many FileContent messages, with each subsequent message received appending to the end of the file. If the total size of FileContent messages exceeds the file size limit of 5MB the plugin will return error and remove the opened file.\n* `CloseFile` - Close the file. Close message must be sent at the end of file transfer. If no close is sent and no input is received after a timeout of 10 minutes the file will be removed. After a CloseFile is received no further FileContent messages will be accepted and will return error.\n* `DeleteFile` - Delete a file from the filesystem. If the file does not exist operation is a no-op and no error is returned. File must be within one of the platforms allowed writable directories.\n* `ListDir` - Open a directory and return a list of files in the directory. Does not recursively walk subdirectories, returns only the top level files in the directory. Output will be a list of json encoded FileInfos.\n* `` - Open a file and read the contents into a response message. The response message body is the entire contents of the file with no encoding or compression. If the file does not exist an error will be returned. If the size of the file exceeds 500KB an error will be returned without reading any file contents.\n* `PopulateRemoteTemplateFile` - Populates data driven template file with input values to generate textual output. Inputs are - the path of the template file on the device and values to populate. An error will be returned if the file does not exist or if there is an error while executing the templates.\n* `GetFreeSpace` - Check the disk space availability of folder and returns the free disk space in percentage. Output will be a list of encoded FileInfos.
+Message type carrying the file operation to perform.\n* `OpenFile` - Open a file for writing to on the platform&apos;s file system. Must be the first message sent to the plugin when writing files, attempting to write to or close a file that has not been opened will return error. If a file does not exist, it will be created, if it does exist, the file will be truncated. If the file&apos;s parent directory does not exist, an error will be returned.\n* `FileContent` - Carries content to write to an open file. The complete file content can be buffered across many FileContent messages, with each subsequent message received appending to the end of the file. If the total size of FileContent messages exceeds the file size limit of 5MB, the plugin will return an error and remove the opened file.\n* `CloseFile` - Close the file. Close message must be sent at the end of file transfer. If no close message is sent and no input is received after a timeout of 10 minutes, the file will be removed. After a CloseFile is received, no further FileContent messages will be accepted and will return error.\n* `DeleteFile` - Delete a file from the filesystem. If the file does not exist, operation is a no-op and no error is returned. The file must be within one of the platform&apos;s allowed writable directories.\n* `ListDir` - Open a directory and return a list of files in the directory. Does not recursively walk subdirectories, returns only the top level files in the directory. Output will be a list of json encoded FileInfos.\n* `` - Open a file and read the contents into a response message. The response message body is the entire contents of the file with no encoding or compression. If the file does not exist, an error will be returned. If the size of the file exceeds 500KB, an error will be returned without reading any file contents.\n* `PopulateRemoteTemplateFile` - Populates data driven template file with input values to generate textual output. Inputs are the path of the template file on the device and values to populate. An error will be returned if the file does not exist or if there is an error while executing the templates.\n* `GetFreeSpace` - Checks the disk space availability of folder and returns the free disk space in percentage. Output will be a list of encoded FileInfos.
 
 ```yaml
 Type: ConnectorFileMessage.MsgTypeEnum
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The absolute path of the file to open on the platforms file system. Must be a sub-directory of a directory defined within the platform configurations WriteableDirectories. The file system device to write to must also have sufficient free space to write to (&lt;75% full). Must be set for each message that is sent.
+The absolute path of the file to open on the platform&apos;s file system. Must be a sub-directory of a directory defined within the platform configuration&apos;s WriteableDirectories. The file system device to write to must also have sufficient free space to write to (&lt;75% full). Must be set for each message that is sent.
 
 ```yaml
 Type: string
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureProperties
-A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using AES key must be mapped against the secure property name with a &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
+A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using the AES key must be mapped against the secure property name with an &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 

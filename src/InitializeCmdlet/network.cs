@@ -260,16 +260,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to consoleConsoleConfig resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.ConsoleConsoleConfigRelationship> Console
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The default domain name configured on the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -290,31 +280,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to fcPortChannel resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.FcPortChannelRelationship> FcPortChannels
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"An array of relationships to networkFeatureControl resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.NetworkFeatureControlRelationship> FeatureControl
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to networkInterfaceList resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.NetworkInterfaceListRelationship> InterfaceList
         {
             get;
             set;
@@ -395,16 +365,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string PartNumber
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to portMacBinding resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.PortMacBindingRelationship> PortMacBindings
         {
             get;
             set;
@@ -538,10 +498,6 @@ namespace Intersight.PowerShell
             {
                 initObject.ConnectionStatus = this.ConnectionStatus;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Console"))
-            {
-                initObject.Console = this.Console;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("DefaultDomain"))
             {
                 initObject.DefaultDomain = this.DefaultDomain;
@@ -550,17 +506,9 @@ namespace Intersight.PowerShell
             {
                 initObject.FaultSummary = this.FaultSummary;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FcPortChannels"))
-            {
-                initObject.FcPortChannels = this.FcPortChannels;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("FeatureControl"))
             {
                 initObject.FeatureControl = this.FeatureControl;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("InterfaceList"))
-            {
-                initObject.InterfaceList = this.InterfaceList;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("LicenseFile"))
             {
@@ -590,10 +538,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PartNumber"))
             {
                 initObject.PartNumber = this.PartNumber;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PortMacBindings"))
-            {
-                initObject.PortMacBindings = this.PortMacBindings;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("PreviousFru"))
             {
@@ -906,6 +850,62 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkHyperFlexInternetProtocolAddressRange.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkHyperFlexInternetProtocolAddressRange")]
+    public class InitializeIntersightNetworkHyperFlexInternetProtocolAddressRange : PSCmdlet
+    {
+        public InitializeIntersightNetworkHyperFlexInternetProtocolAddressRange()
+        {
+            ClassId = NetworkHyperFlexInternetProtocolAddressRange.ClassIdEnum.NetworkHyperFlexInternetProtocolAddressRange;
+            ObjectType = NetworkHyperFlexInternetProtocolAddressRange.ObjectTypeEnum.NetworkHyperFlexInternetProtocolAddressRange;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkHyperFlexInternetProtocolAddressRange.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkHyperFlexInternetProtocolAddressRange.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NetworkHyperFlexInternetProtocolAddressRange initObject = new Intersight.Model.NetworkHyperFlexInternetProtocolAddressRange();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NetworkHyperFlexNetworkAddress.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNetworkHyperFlexNetworkAddress")]
@@ -1004,16 +1004,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.NetworkElementRelationship NetworkElement
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1045,10 +1035,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElement"))
-            {
-                initObject.NetworkElement = this.NetworkElement;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
@@ -1544,6 +1530,258 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("UncompressedVlanPortCountValue"))
             {
                 initObject.UncompressedVlanPortCountValue = this.UncompressedVlanPortCountValue;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkVpcDomain.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkVpcDomain")]
+    public class InitializeIntersightNetworkVpcDomain : PSCmdlet
+    {
+        public InitializeIntersightNetworkVpcDomain()
+        {
+            ClassId = NetworkVpcDomain.ClassIdEnum.NetworkVpcDomain;
+            ObjectType = NetworkVpcDomain.ObjectTypeEnum.NetworkVpcDomain;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkVpcDomain.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkVpcDomain.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NetworkVpcDomain initObject = new Intersight.Model.NetworkVpcDomain();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkVpcMember.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkVpcMember")]
+    public class InitializeIntersightNetworkVpcMember : PSCmdlet
+    {
+        public InitializeIntersightNetworkVpcMember()
+        {
+            ClassId = NetworkVpcMember.ClassIdEnum.NetworkVpcMember;
+            ObjectType = NetworkVpcMember.ObjectTypeEnum.NetworkVpcMember;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkVpcMember.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkVpcMember.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NetworkVpcMember initObject = new Intersight.Model.NetworkVpcMember();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkVpcPeer.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkVpcPeer")]
+    public class InitializeIntersightNetworkVpcPeer : PSCmdlet
+    {
+        public InitializeIntersightNetworkVpcPeer()
+        {
+            ClassId = NetworkVpcPeer.ClassIdEnum.NetworkVpcPeer;
+            ObjectType = NetworkVpcPeer.ObjectTypeEnum.NetworkVpcPeer;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkVpcPeer.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkVpcPeer.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NetworkVpcPeer initObject = new Intersight.Model.NetworkVpcPeer();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
             }
             WriteObject(initObject);
         }

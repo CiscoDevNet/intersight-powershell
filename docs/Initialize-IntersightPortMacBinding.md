@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPortMacBinding [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AggregatePortId< long>][-ChassisId< long>][-ChassisModel< string>][-ChassisSerial< string>][-ChassisVendor< string>][-ClassId< PortMacBinding.ClassIdEnum>][-DeviceMac< string>][-ModuleMode< long>][-ModuleModel< string>][-ModulePortId< long>][-ModuleSerial< string>][-ModuleSide< long>][-ModuleSlot< long>][-ModuleVendor< string>][-Moid< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< PortMacBinding.ObjectTypeEnum>][-PortId< long>][-PortMac< string>][-SlotId< long>][-SwitchId< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPortMacBinding [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AggregatePortId< long>][-ChassisId< long>][-ChassisModel< string>][-ChassisSerial< string>][-ChassisVendor< string>][-ClassId< PortMacBinding.ClassIdEnum>][-DeviceMac< string>][-ModuleMode< long>][-ModuleModel< string>][-ModulePortId< long>][-ModuleSerial< string>][-ModuleSide< long>][-ModuleSlot< long>][-ModuleVendor< string>][-Moid< string>][-ObjectType< PortMacBinding.ObjectTypeEnum>][-PortId< long>][-PortMac< string>][-SlotId< long>][-SwitchId< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -254,24 +254,6 @@ The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NetworkElement
-A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.NetworkElementRelationship
 Parameter Sets: (All)
 Aliases:
 

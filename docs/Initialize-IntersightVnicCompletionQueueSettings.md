@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicCompletionQueueSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicCompletionQueueSettings.ClassIdEnum>][-Count< long>][-ObjectType< VnicCompletionQueueSettings.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicCompletionQueueSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicCompletionQueueSettings.ClassIdEnum>][-Count< long>][-ObjectType< VnicCompletionQueueSettings.ObjectTypeEnum>][-RingSize< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,6 +74,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: VnicCompletionQueueSettings.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RingSize
+The number of descriptors in each completion queue.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

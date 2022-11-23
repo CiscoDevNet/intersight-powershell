@@ -558,6 +558,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Maximum supported HyperFlex Data Platform build version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string MaxMgmtVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Minimum supported HyperFlex Data Platform build version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string MinMgmtVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1161,6 +1183,28 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Maximum supported HyperFlex Data Platform build version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MaxMgmtVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Minimum supported HyperFlex Data Platform build version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MinMgmtVersion
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -1390,6 +1434,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string IsMgmtBuild
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Maximum supported HyperFlex Data Platform build version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MaxMgmtVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Minimum supported HyperFlex Data Platform build version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MinMgmtVersion
         {
             get;
             set;

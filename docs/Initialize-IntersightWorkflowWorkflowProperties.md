@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -RollbackOnCancel
-When set to true, the changes are automatically rolled back if the workflow execution is cancelled.
+When set to true, the changes are automatically rolled back if the workflow execution is canceled.
 
 ```yaml
 Type: bool

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHclFirmware [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HclFirmware.ClassIdEnum>][-DriverName< string>][-DriverVersion< string>][-FirmwareVersion< string>][-Id< string>][-ObjectType< HclFirmware.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHclFirmware [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HclFirmware.ClassIdEnum>][-ObjectType< HclFirmware.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,66 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: HclFirmware.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DriverName
-Protocol for which the driver is provided. E.g.  enic, fnic, lsi_mr3.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DriverVersion
-Version of the Driver supported.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FirmwareVersion
-Firmware version of the product/adapter supported.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Id
-Identifier of the firmware.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightPortMacBinding [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AggregatePortId< long>][-ChassisId< long>][-ChassisModel< string>][-ChassisSerial< string>][-ChassisVendor< string>][-DeviceMac< string>][-ModuleMode< long>][-ModuleModel< string>][-ModulePortId< long>][-ModuleSerial< string>][-ModuleSide< long>][-ModuleSlot< long>][-ModuleVendor< string>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-PortMac< string>][-SlotId< long>][-SwitchId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightPortMacBinding [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AggregatePortId< long>][-ChassisId< long>][-ChassisModel< string>][-ChassisSerial< string>][-ChassisVendor< string>][-DeviceMac< string>][-ModuleMode< long>][-ModuleModel< string>][-ModulePortId< long>][-ModuleSerial< string>][-ModuleSide< long>][-ModuleSlot< long>][-ModuleVendor< string>][[-Moid]< string>][-PortId< long>][-PortMac< string>][-SlotId< long>][-SwitchId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -242,24 +242,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: true
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -NetworkElement
-A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: NetworkElementRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
