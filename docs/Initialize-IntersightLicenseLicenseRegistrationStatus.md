@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightLicenseLicenseRegistrationStatus [-AccountCreationState< bool>][-AccountLicenseData< Model.LicenseAccountLicenseDataRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< LicenseLicenseRegistrationStatus.ClassIdEnum>][-IsNewAccount< bool>][-LicenseRegistrationState< LicenseLicenseRegistrationStatus.LicenseRegistrationStateEnum>][-Moid< string>][-ObjectType< LicenseLicenseRegistrationStatus.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TrialRegistrationComplete< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightLicenseLicenseRegistrationStatus [-AccountCreationState< bool>][-AccountLicenseData< Model.LicenseAccountLicenseDataRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< LicenseLicenseRegistrationStatus.ClassIdEnum>][-LicenseRegistrationState< LicenseLicenseRegistrationStatus.LicenseRegistrationStateEnum>][-Moid< string>][-ObjectType< LicenseLicenseRegistrationStatus.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TrialRegistrationComplete< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,21 +77,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: LicenseLicenseRegistrationStatus.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IsNewAccount
-Stores information on whether account is new. This data is used for UI theme upgrade, where existing users will be shown a slightly different screen. True if new.
-
-```yaml
-Type: bool
 Parameter Sets: (All)
 Aliases:
 
