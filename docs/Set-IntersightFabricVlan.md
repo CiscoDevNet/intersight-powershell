@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoAllowOnUplinks< bool>][-EthNetworkPolicy< FabricEthNetworkPolicyRelationship>][-IsNative< bool>][[-Moid]< string>][-MulticastPolicy< FabricMulticastPolicyRelationship>][-Name< string>][-PrimaryVlanId< long>][-SharingType< FabricVlan.SharingTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VlanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoAllowOnUplinks< bool>][-EthNetworkPolicy< FabricEthNetworkPolicyRelationship>][-IsNative< bool>][[-Moid]< string>][-MulticastPolicy< FabricMulticastPolicyRelationship>][-Name< string>][-PrimaryVlanId< long>][-SharingType< FabricVlan.SharingTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VlanId< long>][-VlanSet< FabricVlanSetRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -186,6 +186,24 @@ The identifier for this Virtual LAN.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VlanSet
+A reference to a fabricVlanSet resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: FabricVlanSetRelationship
 Parameter Sets: (All)
 Aliases:
 

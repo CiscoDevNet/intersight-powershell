@@ -10601,6 +10601,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"A reference to a fabricVlanSet resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricVlanSetRelationship VlanSet
+        {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricVsan.</para>
@@ -15014,6 +15024,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"A reference to a fabricVlanSet resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricVlanSetRelationship VlanSet
+        {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricVsan.</para>

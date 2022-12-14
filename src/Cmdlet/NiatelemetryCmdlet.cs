@@ -12191,7 +12191,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"NICC version."</para>
+        /// <para type="description">"NICC version. NiccVersion is used to check the compatibility."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

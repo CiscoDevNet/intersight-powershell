@@ -1000,7 +1000,7 @@ Accept wildcard characters: False
 ```
 
 ### -NiccVersion
-NICC version.
+NICC version. NiccVersion is used to check the compatibility.
 
 ```yaml
 Type: string

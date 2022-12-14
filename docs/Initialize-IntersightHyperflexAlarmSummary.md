@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexAlarmSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexAlarmSummary.ClassIdEnum>][-Critical< long>][-ObjectType< HyperflexAlarmSummary.ObjectTypeEnum>][-Warning< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHyperflexAlarmSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexAlarmSummary.ClassIdEnum>][-ObjectType< HyperflexAlarmSummary.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,41 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Critical
-The count of alarms that have severity type Critical.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: HyperflexAlarmSummary.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Warning
-The count of alarms that have severity type Warning.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 

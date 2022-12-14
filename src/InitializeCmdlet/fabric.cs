@@ -6963,6 +6963,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"A reference to a fabricVlanSet resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricVlanSetRelationship VlanSet
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -7012,6 +7022,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("VlanId"))
             {
                 initObject.VlanId = this.VlanId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VlanSet"))
+            {
+                initObject.VlanSet = this.VlanSet;
             }
             WriteObject(initObject);
         }

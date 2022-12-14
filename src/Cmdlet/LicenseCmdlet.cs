@@ -4043,16 +4043,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"Stores information on whether account is new. This data is used for UI theme upgrade, where existing users will be shown a slightly different screen. True if new."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool IsNewAccount
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"Stores information on the current flow of license registration.\n* `RegistrationNotStarted` - The license registration state to chose between trial and registration.\n* `RegistrationStarted` - The license registration state during set up flow.\n* `RegistrationComplete` - The license registration state after completion."</para>
