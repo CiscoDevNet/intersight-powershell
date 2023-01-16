@@ -822,6 +822,104 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsFibreChannelTarget.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightOsFibreChannelTarget")]
+    public class InitializeIntersightOsFibreChannelTarget : PSCmdlet
+    {
+        public InitializeIntersightOsFibreChannelTarget()
+        {
+            ClassId = OsFibreChannelTarget.ClassIdEnum.OsFibreChannelTarget;
+            ObjectType = OsFibreChannelTarget.ObjectTypeEnum.OsFibreChannelTarget;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OsFibreChannelTarget.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The WWPN Address of the underlying fibre channel interface at initator used for SAN boot. Value must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.  For example, 20:00:D4:C9:3C:35:02:01."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("(^([0-9a-fA-F]{2}:){7}[0-9a-fA-F]{2}$)")]
+        public string InitiatorWwpn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Logical Unit Number (LUN) of the install target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long LunId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OsFibreChannelTarget.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The WWPN Address of the underlying fibre channel interface at target used by the SAN boot device. Value must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.  For example, 51:4F:0C:50:14:1F:AF:01."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("(^([0-9a-fA-F]{2}:){7}[0-9a-fA-F]{2}$)")]
+        public string TargetWwpn
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.OsFibreChannelTarget initObject = new Intersight.Model.OsFibreChannelTarget();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorWwpn"))
+            {
+                initObject.InitiatorWwpn = this.InitiatorWwpn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LunId"))
+            {
+                initObject.LunId = this.LunId;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetWwpn"))
+            {
+                initObject.TargetWwpn = this.TargetWwpn;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize OsGlobalConfig.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightOsGlobalConfig")]
@@ -1484,6 +1582,104 @@ namespace Intersight.PowerShell
                 initObject.IpV6Config = this.IpV6Config;
             }
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize OsIscsiTarget.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightOsIscsiTarget")]
+    public class InitializeIntersightOsIscsiTarget : PSCmdlet
+    {
+        public InitializeIntersightOsIscsiTarget()
+        {
+            ClassId = OsIscsiTarget.ClassIdEnum.OsIscsiTarget;
+            ObjectType = OsIscsiTarget.ObjectTypeEnum.OsIscsiTarget;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OsIscsiTarget.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Logical Unit Number (LUN) of the install target."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long LunId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OsIscsiTarget.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IQN (iSCSI qualified name) of Storage iSCSI target.Can be up to 255 characters long and has the following format, iqn.yyyy-mm.naming-authority:unique_name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("iqn\\.(\\d{4}-(0[1-9]|1[0-2]))\\.([a-zA-Z0-9]+)([a-zA-Z0-9-.]*)(:)+([^,\\s']+)")]
+        public string TargetIqn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"MAC address of the VNIC used as iSCSI initiator interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^([0-9A-Fa-f]{2}[:]){5}([0-9A-Fa-f]{2})$")]
+        public string VnicMac
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.OsIscsiTarget initObject = new Intersight.Model.OsIscsiTarget();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("LunId"))
+            {
+                initObject.LunId = this.LunId;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetIqn"))
+            {
+                initObject.TargetIqn = this.TargetIqn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VnicMac"))
+            {
+                initObject.VnicMac = this.VnicMac;
+            }
             WriteObject(initObject);
         }
 

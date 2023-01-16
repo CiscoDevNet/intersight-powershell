@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricMulticastPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricMulticastPolicy.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricMulticastPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-QuerierIpAddress< string>][-QuerierIpAddressPeer< string>][-QuerierState< FabricMulticastPolicy.QuerierStateEnum>][-SnoopingState< FabricMulticastPolicy.SnoopingStateEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricMulticastPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricMulticastPolicy.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricMulticastPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-QuerierIpAddress< string>][-QuerierIpAddressPeer< string>][-QuerierState< FabricMulticastPolicy.QuerierStateEnum>][-SnoopingState< FabricMulticastPolicy.SnoopingStateEnum>][-SrcIpProxy< FabricMulticastPolicy.SrcIpProxyEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -182,6 +182,21 @@ Administrative state of the IGMP Snooping for this VLAN.\n* `Enabled` - Admin co
 
 ```yaml
 Type: FabricMulticastPolicy.SnoopingStateEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SrcIpProxy
+Administrative state of the IGMP source IP proxy for this VLAN.\n* `Enabled` - Admin configured Enabled State.\n* `Disabled` - Admin configured Disabled State.
+
+```yaml
+Type: FabricMulticastPolicy.SrcIpProxyEnum
 Parameter Sets: (All)
 Aliases:
 

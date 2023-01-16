@@ -3940,6 +3940,7 @@ namespace Intersight.PowerShell
             ObjectType = FabricMulticastPolicy.ObjectTypeEnum.FabricMulticastPolicy;
             QuerierState = FabricMulticastPolicy.QuerierStateEnum.Disabled;
             SnoopingState = FabricMulticastPolicy.SnoopingStateEnum.Enabled;
+            SrcIpProxy = FabricMulticastPolicy.SrcIpProxyEnum.Enabled;
 
         }
         // <summary>
@@ -4053,6 +4054,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Administrative state of the IGMP source IP proxy for this VLAN.\n* `Enabled` - Admin configured Enabled State.\n* `Disabled` - Admin configured Disabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricMulticastPolicy.SrcIpProxyEnum SrcIpProxy
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -4103,6 +4114,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SnoopingState"))
             {
                 initObject.SnoopingState = this.SnoopingState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SrcIpProxy"))
+            {
+                initObject.SrcIpProxy = this.SrcIpProxy;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

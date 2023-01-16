@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightNiatelemetryMdsAutoClaim
+# Initialize-IntersightOpenapiProcessFile
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryMdsAutoClaim [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryMdsAutoClaim.ClassIdEnum>][-DeviceIp< string>][-DeviceName< string>][-DeviceWwn< string>][-Moid< string>][-NeighborInfo< System.Collections.Generic.List`1[Model.NiatelemetryMdsNeighborInfo]>][-ObjectType< NiatelemetryMdsAutoClaim.ObjectTypeEnum>][-RecordType< string>][-RecordVersion< string>][-Serial< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightOpenapiProcessFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< OpenapiProcessFile.ClassIdEnum>][-FileInfo< Model.OpenapiOpenApiSpecificationRelationship>][-Moid< string>][-ObjectType< OpenapiProcessFile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-SpecFilePath< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,7 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: NiatelemetryMdsAutoClaim.ClassIdEnum
+Type: OpenapiProcessFile.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -54,41 +54,14 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DeviceIp
-Ip address of device being inventoried.
+### -FileInfo
+A reference to a openapiOpenApiSpecification resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DeviceName
-Device name of device being inventoried.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DeviceWwn
-Device wwn of device being inventoried.
-
-```yaml
-Type: string
+Type: Model.OpenapiOpenApiSpecificationRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -114,28 +87,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NeighborInfo
-
-
-Note :- Use Initialize-IntersightNiatelemetryMdsNeighborInfo to create the object of complex type NiatelemetryMdsNeighborInfo
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.NiatelemetryMdsNeighborInfo]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: NiatelemetryMdsAutoClaim.ObjectTypeEnum
+Type: OpenapiProcessFile.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -146,11 +102,14 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RecordType
-Type of record MDS. This determines the type of platform where inventory was collected.
+### -Organization
+A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: string
+Type: Model.OrganizationOrganizationRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -161,23 +120,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RecordVersion
-Version of record being pushed. This determines what was the API version for data available from the device.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Serial
-Serial number of device being inventoried. The serial number is unique per device.
+### -SpecFilePath
+The location of the previously uploaded OpenAPI specification file.
 
 ```yaml
 Type: string
@@ -246,7 +190,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightNiatelemetryMdsAutoClaim
+PS C:\> Initialize-IntersightOpenapiProcessFile
 ```
 
 { Add example description here }
@@ -266,5 +210,3 @@ PS C:\> Initialize-IntersightNiatelemetryMdsAutoClaim
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
-
-[Initialize-IntersightNiatelemetryMdsNeighborInfo](./Initialize-IntersightNiatelemetryMdsNeighborInfo.md)

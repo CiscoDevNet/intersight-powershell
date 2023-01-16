@@ -3685,7 +3685,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The number of descriptors in each queue."</para>
+        /// <para type="description">"The number of descriptors in each queue. The maximum value for Transmit queue is 128 and for Receive queue is 2048."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

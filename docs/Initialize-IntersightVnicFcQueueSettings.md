@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -RingSize
-The number of descriptors in each queue.
+The number of descriptors in each queue. The maximum value for Transmit queue is 128 and for Receive queue is 2048.
 
 ```yaml
 Type: long

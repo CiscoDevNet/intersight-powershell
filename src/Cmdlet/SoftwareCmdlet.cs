@@ -101,6 +101,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public SoftwareApplianceDistributable.FeatureSourceEnum FeatureSource
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier for an image in a Cisco repository."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -662,6 +673,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public SoftwareHclMeta.FeatureSourceEnum FeatureSource
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier for an image in a Cisco repository."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1043,6 +1065,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long DownloadCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public SoftwareHyperflexBundleDistributable.FeatureSourceEnum FeatureSource
         {
             get;
             set;
@@ -1437,6 +1470,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public SoftwareHyperflexDistributable.FeatureSourceEnum FeatureSource
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier for an image in a Cisco repository."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1818,6 +1862,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long DownloadCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public SoftwareIksBundleDistributable.FeatureSourceEnum FeatureSource
         {
             get;
             set;
@@ -2375,6 +2430,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public SoftwareSolutionDistributable.FeatureSourceEnum FeatureSource
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The path of the file in S3/minio bucket."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2795,6 +2861,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public SoftwareUcsdBundleDistributable.FeatureSourceEnum FeatureSource
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier for an image in a Cisco repository."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3183,6 +3260,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public SoftwareUcsdDistributable.FeatureSourceEnum FeatureSource
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier for an image in a Cisco repository."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3551,6 +3639,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, UCS Managed Fabric Interconnect. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
@@ -3868,6 +3957,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, UCS Managed Fabric Interconnect. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
@@ -4170,6 +4260,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -4481,6 +4572,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, UCS Managed Fabric Interconnect. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
@@ -4783,6 +4875,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -5197,6 +5290,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, UCS Managed Fabric Interconnect. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
@@ -5525,6 +5619,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, UCS Managed Fabric Interconnect. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
@@ -5828,6 +5923,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -6246,6 +6342,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, UCS Managed Fabric Interconnect. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
@@ -6563,6 +6660,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, UCS Managed Fabric Interconnect. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
@@ -6865,6 +6963,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -7176,6 +7275,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, UCS Managed Fabric Interconnect. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
@@ -7478,6 +7578,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -7892,6 +7993,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, UCS Managed Fabric Interconnect. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
@@ -8220,6 +8322,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, UCS Managed Fabric Interconnect. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
@@ -8523,6 +8626,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
