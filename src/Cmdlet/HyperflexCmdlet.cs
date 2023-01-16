@@ -1341,6 +1341,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"The type of availability zone used by the cluster. Physical zones are always used in HyperFlex \nStretched Clusters. Logical zones may be used if a cluster has Logical Availability Zones (LAZ) \nenabled.\n* `UNKNOWN` - The type of zone configured on the HyperFlex cluster is not known.\n* `NOT_CONFIGURED` - The zone type is not configured.\n* `LOGICAL` - The zone is a logical zone created when the logical availability zones (LAZ) feature is enabled on the HyperFlex cluster.\n* `PHYSICAL` - The zone is a physical zone configured on a stretched HyperFlex cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public HyperflexCluster.ZoneTypeEnum ZoneType
+        {
+            get;
+            set;
+        }
+
 
     }
     /// <summary>
@@ -19094,6 +19105,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

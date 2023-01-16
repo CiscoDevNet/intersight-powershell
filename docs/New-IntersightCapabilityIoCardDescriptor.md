@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightCapabilityIoCardDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-Description< string>][-Model< string>][-Moid< string>][-NumHifPorts< long>][-Revision< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UifConnectivity< CapabilityIoCardDescriptor.UifConnectivityEnum>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightCapabilityIoCardDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-Description< string>][-Model< string>][-Moid< string>][-NativeHifPortChannelRequired< bool>][-NativeSpeedMasterPortNum< long>][-NumHifPorts< long>][-Revision< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UifConnectivity< CapabilityIoCardDescriptor.UifConnectivityEnum>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -91,6 +91,36 @@ The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NativeHifPortChannelRequired
+Identifies whether host port-channel is required to be configured for the iocard module.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NativeSpeedMasterPortNum
+Master port number for native speed configuration for the iocard module.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

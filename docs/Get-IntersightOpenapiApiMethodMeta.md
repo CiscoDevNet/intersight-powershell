@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightNiatelemetryMdsAutoClaim
+# Get-IntersightOpenapiApiMethodMeta
 
 ## SYNOPSIS
-Get the NiatelemetryMdsAutoClaim
+Get the OpenapiApiMethodMeta
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightNiatelemetryMdsAutoClaim [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightOpenapiApiMethodMeta [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightNiatelemetryMdsAutoClaim [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightOpenapiApiMethodMeta [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;NiatelemetryMdsAutoClaim&apos; resource.,
+Read a &apos;OpenapiApiMethodMeta&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -34,27 +34,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightNiatelemetryMdsAutoClaim
+PS C:\> $result = Get-IntersightOpenapiApiMethodMeta
 ```
-Above example returns the list of NiatelemetryMdsAutoClaim.
+Above example returns the list of OpenapiApiMethodMeta.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightNiatelemetryMdsAutoClaim -Name "MoName"
+PS C:\> $result = Get-IntersightOpenapiApiMethodMeta -Name "MoName"
 ```
-Above example returns the NiatelemetryMdsAutoClaim matched with name.
+Above example returns the OpenapiApiMethodMeta matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightNiatelemetryMdsAutoClaim -Organization $organization
+PS C:\> $result = Get-IntersightOpenapiApiMethodMeta -Organization $organization
 ```
-Above example returns the list of NiatelemetryMdsAutoClaim available under the $organization .
+Above example returns the list of OpenapiApiMethodMeta available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightNiatelemetryMdsAutoClaim -InlineCount allpages
+PS C:\> $result = Get-IntersightOpenapiApiMethodMeta -InlineCount allpages
 ```
-Above example returns the list of NiatelemetryMdsAutoClaim along with count.
+Above example returns the list of OpenapiApiMethodMeta along with count.
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the NiatelemetryMdsAutoClaim.
+Specifies the name of the OpenapiApiMethodMeta.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the NiatelemetryMdsAutoClaim under it.
+Specifies the organization, to fetch the OpenapiApiMethodMeta under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -283,4 +283,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Remove-IntersightOpenapiApiMethodMeta](./Remove-IntersightOpenapiApiMethodMeta.md)
 

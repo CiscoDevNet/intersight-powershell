@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.9783
-- C# SDK version: 1.0.11.9783
+- Intersight.PowerShell version: 1.0.11.10371
+- C# SDK version: 1.0.11.10371
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.9783"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.10371"}
 ```
 or
 
@@ -858,6 +858,7 @@ BulkExport | [**Remove-IntersightBulkExport**](docs/Remove-IntersightBulkExport.
 BulkExport | [**Set-IntersightBulkExport**](docs/Set-IntersightBulkExport.md) | Update a 'BulkExport' resource.
 CapabilityActionsMetaData | [**Get-IntersightCapabilityActionsMetaData**](docs/Get-IntersightCapabilityActionsMetaData.md) | Read a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**Get-IntersightCapabilityAdapterDeprecatedDef**](docs/Get-IntersightCapabilityAdapterDeprecatedDef.md) | Read a 'CapabilityAdapterDeprecatedDef' resource.
+CapabilityAdapterFirmwareRequirement | [**Get-IntersightCapabilityAdapterFirmwareRequirement**](docs/Get-IntersightCapabilityAdapterFirmwareRequirement.md) | Read a 'CapabilityAdapterFirmwareRequirement' resource.
 CapabilityAdapterUnitDescriptor | [**Get-IntersightCapabilityAdapterUnitDescriptor**](docs/Get-IntersightCapabilityAdapterUnitDescriptor.md) | Read a 'CapabilityAdapterUnitDescriptor' resource.
 CapabilityCatalog | [**Get-IntersightCapabilityCatalog**](docs/Get-IntersightCapabilityCatalog.md) | Read a 'CapabilityCatalog' resource.
 CapabilityChassisDescriptor | [**Get-IntersightCapabilityChassisDescriptor**](docs/Get-IntersightCapabilityChassisDescriptor.md) | Read a 'CapabilityChassisDescriptor' resource.
@@ -1087,6 +1088,7 @@ EquipmentRackEnclosureSlot | [**Get-IntersightEquipmentRackEnclosureSlot**](docs
 EquipmentSensor | [**Get-IntersightEquipmentSensor**](docs/Get-IntersightEquipmentSensor.md) | Read a 'EquipmentSensor' resource.
 EquipmentSharedIoModule | [**Get-IntersightEquipmentSharedIoModule**](docs/Get-IntersightEquipmentSharedIoModule.md) | Read a 'EquipmentSharedIoModule' resource.
 EquipmentSwitchCard | [**Get-IntersightEquipmentSwitchCard**](docs/Get-IntersightEquipmentSwitchCard.md) | Read a 'EquipmentSwitchCard' resource.
+EquipmentSwitchOperation | [**Get-IntersightEquipmentSwitchOperation**](docs/Get-IntersightEquipmentSwitchOperation.md) | Read a 'EquipmentSwitchOperation' resource.
 EquipmentSystemIoController | [**Get-IntersightEquipmentSystemIoController**](docs/Get-IntersightEquipmentSystemIoController.md) | Read a 'EquipmentSystemIoController' resource.
 EquipmentTpm | [**Get-IntersightEquipmentTpm**](docs/Get-IntersightEquipmentTpm.md) | Read a 'EquipmentTpm' resource.
 EquipmentTransceiver | [**Get-IntersightEquipmentTransceiver**](docs/Get-IntersightEquipmentTransceiver.md) | Read a 'EquipmentTransceiver' resource.
@@ -1111,6 +1113,7 @@ EquipmentRackEnclosure | [**Set-IntersightEquipmentRackEnclosure**](docs/Set-Int
 EquipmentRackEnclosureSlot | [**Set-IntersightEquipmentRackEnclosureSlot**](docs/Set-IntersightEquipmentRackEnclosureSlot.md) | Update a 'EquipmentRackEnclosureSlot' resource.
 EquipmentSharedIoModule | [**Set-IntersightEquipmentSharedIoModule**](docs/Set-IntersightEquipmentSharedIoModule.md) | Update a 'EquipmentSharedIoModule' resource.
 EquipmentSwitchCard | [**Set-IntersightEquipmentSwitchCard**](docs/Set-IntersightEquipmentSwitchCard.md) | Update a 'EquipmentSwitchCard' resource.
+EquipmentSwitchOperation | [**Set-IntersightEquipmentSwitchOperation**](docs/Set-IntersightEquipmentSwitchOperation.md) | Update a 'EquipmentSwitchOperation' resource.
 EquipmentSystemIoController | [**Set-IntersightEquipmentSystemIoController**](docs/Set-IntersightEquipmentSystemIoController.md) | Update a 'EquipmentSystemIoController' resource.
 EquipmentTpm | [**Set-IntersightEquipmentTpm**](docs/Set-IntersightEquipmentTpm.md) | Update a 'EquipmentTpm' resource.
 EquipmentTransceiver | [**Set-IntersightEquipmentTransceiver**](docs/Set-IntersightEquipmentTransceiver.md) | Update a 'EquipmentTransceiver' resource.
@@ -2037,7 +2040,7 @@ NiatelemetryHttpsAclFilterDetails | [**Get-IntersightNiatelemetryHttpsAclFilterD
 NiatelemetryInsightGroupDetails | [**Get-IntersightNiatelemetryInsightGroupDetails**](docs/Get-IntersightNiatelemetryInsightGroupDetails.md) | Read a 'NiatelemetryInsightGroupDetails' resource.
 NiatelemetryLc | [**Get-IntersightNiatelemetryLc**](docs/Get-IntersightNiatelemetryLc.md) | Read a 'NiatelemetryLc' resource.
 NiatelemetryLeafPolGrpDetails | [**Get-IntersightNiatelemetryLeafPolGrpDetails**](docs/Get-IntersightNiatelemetryLeafPolGrpDetails.md) | Read a 'NiatelemetryLeafPolGrpDetails' resource.
-NiatelemetryMdsAutoClaim | [**Get-IntersightNiatelemetryMdsAutoClaim**](docs/Get-IntersightNiatelemetryMdsAutoClaim.md) | Read a 'NiatelemetryMdsAutoClaim' resource.
+NiatelemetryMdsNeighbors | [**Get-IntersightNiatelemetryMdsNeighbors**](docs/Get-IntersightNiatelemetryMdsNeighbors.md) | Read a 'NiatelemetryMdsNeighbors' resource.
 NiatelemetryMsoContractDetails | [**Get-IntersightNiatelemetryMsoContractDetails**](docs/Get-IntersightNiatelemetryMsoContractDetails.md) | Read a 'NiatelemetryMsoContractDetails' resource.
 NiatelemetryMsoEpgDetails | [**Get-IntersightNiatelemetryMsoEpgDetails**](docs/Get-IntersightNiatelemetryMsoEpgDetails.md) | Read a 'NiatelemetryMsoEpgDetails' resource.
 NiatelemetryMsoSchemaDetails | [**Get-IntersightNiatelemetryMsoSchemaDetails**](docs/Get-IntersightNiatelemetryMsoSchemaDetails.md) | Read a 'NiatelemetryMsoSchemaDetails' resource.
@@ -2054,6 +2057,7 @@ NiatelemetryNiaInventory | [**Get-IntersightNiatelemetryNiaInventory**](docs/Get
 NiatelemetryNiaInventoryDcnm | [**Get-IntersightNiatelemetryNiaInventoryDcnm**](docs/Get-IntersightNiatelemetryNiaInventoryDcnm.md) | Read a 'NiatelemetryNiaInventoryDcnm' resource.
 NiatelemetryNiaInventoryFabric | [**Get-IntersightNiatelemetryNiaInventoryFabric**](docs/Get-IntersightNiatelemetryNiaInventoryFabric.md) | Read a 'NiatelemetryNiaInventoryFabric' resource.
 NiatelemetryNiaLicenseState | [**Get-IntersightNiatelemetryNiaLicenseState**](docs/Get-IntersightNiatelemetryNiaLicenseState.md) | Read a 'NiatelemetryNiaLicenseState' resource.
+NiatelemetryNicc | [**Get-IntersightNiatelemetryNicc**](docs/Get-IntersightNiatelemetryNicc.md) | Read a 'NiatelemetryNicc' resource.
 NiatelemetryPasswordStrengthCheck | [**Get-IntersightNiatelemetryPasswordStrengthCheck**](docs/Get-IntersightNiatelemetryPasswordStrengthCheck.md) | Read a 'NiatelemetryPasswordStrengthCheck' resource.
 NiatelemetryPodCommPolicies | [**Get-IntersightNiatelemetryPodCommPolicies**](docs/Get-IntersightNiatelemetryPodCommPolicies.md) | Read a 'NiatelemetryPodCommPolicies' resource.
 NiatelemetryPodSnmpPolicies | [**Get-IntersightNiatelemetryPodSnmpPolicies**](docs/Get-IntersightNiatelemetryPodSnmpPolicies.md) | Read a 'NiatelemetryPodSnmpPolicies' resource.
@@ -2088,6 +2092,21 @@ OauthAuthorization | [**Get-IntersightOauthAuthorization**](docs/Get-IntersightO
 OauthAuthorization | [**New-IntersightOauthAuthorization**](docs/New-IntersightOauthAuthorization.md) | Create a 'OauthAuthorization' resource.
 OauthAccessToken | [**Remove-IntersightOauthAccessToken**](docs/Remove-IntersightOauthAccessToken.md) | Delete a 'OauthAccessToken' resource.
 OauthAuthorization | [**Set-IntersightOauthAuthorization**](docs/Set-IntersightOauthAuthorization.md) | Update a 'OauthAuthorization' resource.
+OpenapiApiMethodMeta | [**Get-IntersightOpenapiApiMethodMeta**](docs/Get-IntersightOpenapiApiMethodMeta.md) | Read a 'OpenapiApiMethodMeta' resource.
+OpenapiOpenApiSpecification | [**Get-IntersightOpenapiOpenApiSpecification**](docs/Get-IntersightOpenapiOpenApiSpecification.md) | Read a 'OpenapiOpenApiSpecification' resource.
+OpenapiProcessFile | [**Get-IntersightOpenapiProcessFile**](docs/Get-IntersightOpenapiProcessFile.md) | Read a 'OpenapiProcessFile' resource.
+OpenapiTaskGenerationRequest | [**Get-IntersightOpenapiTaskGenerationRequest**](docs/Get-IntersightOpenapiTaskGenerationRequest.md) | Read a 'OpenapiTaskGenerationRequest' resource.
+OpenapiTaskGenerationResult | [**Get-IntersightOpenapiTaskGenerationResult**](docs/Get-IntersightOpenapiTaskGenerationResult.md) | Read a 'OpenapiTaskGenerationResult' resource.
+OpenapiOpenApiSpecification | [**New-IntersightOpenapiOpenApiSpecification**](docs/New-IntersightOpenapiOpenApiSpecification.md) | Create a 'OpenapiOpenApiSpecification' resource.
+OpenapiProcessFile | [**New-IntersightOpenapiProcessFile**](docs/New-IntersightOpenapiProcessFile.md) | Create a 'OpenapiProcessFile' resource.
+OpenapiTaskGenerationRequest | [**New-IntersightOpenapiTaskGenerationRequest**](docs/New-IntersightOpenapiTaskGenerationRequest.md) | Create a 'OpenapiTaskGenerationRequest' resource.
+OpenapiApiMethodMeta | [**Remove-IntersightOpenapiApiMethodMeta**](docs/Remove-IntersightOpenapiApiMethodMeta.md) | Delete a 'OpenapiApiMethodMeta' resource.
+OpenapiOpenApiSpecification | [**Remove-IntersightOpenapiOpenApiSpecification**](docs/Remove-IntersightOpenapiOpenApiSpecification.md) | Delete a 'OpenapiOpenApiSpecification' resource.
+OpenapiProcessFile | [**Remove-IntersightOpenapiProcessFile**](docs/Remove-IntersightOpenapiProcessFile.md) | Delete a 'OpenapiProcessFile' resource.
+OpenapiTaskGenerationRequest | [**Remove-IntersightOpenapiTaskGenerationRequest**](docs/Remove-IntersightOpenapiTaskGenerationRequest.md) | Delete a 'OpenapiTaskGenerationRequest' resource.
+OpenapiTaskGenerationResult | [**Remove-IntersightOpenapiTaskGenerationResult**](docs/Remove-IntersightOpenapiTaskGenerationResult.md) | Delete a 'OpenapiTaskGenerationResult' resource.
+OpenapiOpenApiSpecification | [**Set-IntersightOpenapiOpenApiSpecification**](docs/Set-IntersightOpenapiOpenApiSpecification.md) | Update a 'OpenapiOpenApiSpecification' resource.
+OpenapiTaskGenerationRequest | [**Set-IntersightOpenapiTaskGenerationRequest**](docs/Set-IntersightOpenapiTaskGenerationRequest.md) | Update a 'OpenapiTaskGenerationRequest' resource.
 OprsDeployment | [**Get-IntersightOprsDeployment**](docs/Get-IntersightOprsDeployment.md) | Read a 'OprsDeployment' resource.
 OprsSyncTargetListMessage | [**Get-IntersightOprsSyncTargetListMessage**](docs/Get-IntersightOprsSyncTargetListMessage.md) | Read a 'OprsSyncTargetListMessage' resource.
 OprsDeployment | [**New-IntersightOprsDeployment**](docs/New-IntersightOprsDeployment.md) | Create a 'OprsDeployment' resource.

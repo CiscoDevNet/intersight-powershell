@@ -1001,6 +1001,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FirmwareDistributable.FeatureSourceEnum FeatureSource
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The file location of the distributable."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1787,6 +1798,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long DownloadCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FirmwareDriverDistributable.FeatureSourceEnum FeatureSource
         {
             get;
             set;
@@ -4126,6 +4148,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FirmwareServerConfigurationUtilityDistributable.FeatureSourceEnum FeatureSource
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier for an image in a Cisco repository."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -6396,6 +6429,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The file location of the distributable."</para>
         /// </summary>
@@ -6898,6 +6932,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -8437,6 +8472,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -10448,6 +10484,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The file location of the distributable."</para>
         /// </summary>
@@ -10950,6 +10987,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -12513,6 +12551,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
