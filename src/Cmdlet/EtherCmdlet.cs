@@ -572,7 +572,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Network Port Speed of IO card or fabric extender."</para>
+        /// <para type="description">"Network Port operational speed of IO card or fabric extender."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesNodeGroupProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesNodeGroupProfile.ClassIdEnum>][-ClusterProfile< Model.KubernetesClusterProfileRelationship>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Desiredsize< long>][-GpuConfig< System.Collections.Generic.List`1[Model.InfraBaseGpuConfiguration]>][-InfraProvider< Model.KubernetesBaseInfrastructureProviderRelationship>][-IpPools< System.Collections.Generic.List`1[Model.IppoolPoolRelationship]>][-KubernetesVersion< Model.KubernetesVersionPolicyRelationship>][-Labels< System.Collections.Generic.List`1[Model.KubernetesNodeGroupLabel]>][-Maxsize< long>][-Minsize< long>][-Moid< string>][-Name< string>][-NodeType< KubernetesNodeGroupProfile.NodeTypeEnum>][-Nodes< System.Collections.Generic.List`1[Model.KubernetesNodeProfileRelationship]>][-ObjectType< KubernetesNodeGroupProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Taints< System.Collections.Generic.List`1[Model.KubernetesNodeGroupTaint]>][-Type< KubernetesNodeGroupProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightKubernetesNodeGroupProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesNodeGroupProfile.ClassIdEnum>][-ClusterProfile< Model.KubernetesClusterProfileRelationship>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Desiredsize< long>][-GpuConfig< System.Collections.Generic.List`1[Model.InfraBaseGpuConfiguration]>][-InfraProvider< Model.KubernetesBaseInfrastructureProviderRelationship>][-IpPools< System.Collections.Generic.List`1[Model.IppoolPoolRelationship]>][-KubernetesVersion< Model.KubernetesVersionPolicyRelationship>][-Labels< System.Collections.Generic.List`1[Model.KubernetesNodeGroupLabel]>][-Maxsize< long>][-Minsize< long>][-Moid< string>][-Name< string>][-NodeType< KubernetesNodeGroupProfile.NodeTypeEnum>][-Nodes< System.Collections.Generic.List`1[Model.KubernetesNodeProfileRelationship]>][-ObjectType< KubernetesNodeGroupProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Taints< System.Collections.Generic.List`1[Model.KubernetesNodeGroupTaint]>][-Type< KubernetesNodeGroupProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -365,6 +365,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ScheduledActions
+
+
+Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of complex type PolicyScheduledAction
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.PolicyScheduledAction]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SrcTemplate
 A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -500,3 +517,5 @@ PS C:\> Initialize-IntersightKubernetesNodeGroupProfile
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)

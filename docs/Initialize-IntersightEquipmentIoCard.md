@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentIoCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EquipmentIoCard.ClassIdEnum>][-ConnectionStatus< string>][-FanModules< System.Collections.Generic.List`1[Model.EquipmentFanModuleRelationship]>][-HostPorts< System.Collections.Generic.List`1[Model.EtherHostPortRelationship]>][-InbandIpAddresses< System.Collections.Generic.List`1[Model.ComputeIpAddress]>][-MgmtController< Model.ManagementControllerRelationship>][-Moid< string>][-NetworkPorts< System.Collections.Generic.List`1[Model.EtherNetworkPortRelationship]>][-ObjectType< EquipmentIoCard.ObjectTypeEnum>][-PhysicalDeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-PreviousFru< Model.EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentIoCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EquipmentIoCard.ClassIdEnum>][-ConnectionStatus< string>][-FanModules< System.Collections.Generic.List`1[Model.EquipmentFanModuleRelationship]>][-HostPorts< System.Collections.Generic.List`1[Model.EtherHostPortRelationship]>][-InbandIpAddresses< System.Collections.Generic.List`1[Model.ComputeIpAddress]>][-MgmtController< Model.ManagementControllerRelationship>][-Moid< string>][-NetworkPorts< System.Collections.Generic.List`1[Model.EtherNetworkPortRelationship]>][-ObjectType< EquipmentIoCard.ObjectTypeEnum>][-PhysicalDeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -196,24 +196,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.AssetDeviceRegistrationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

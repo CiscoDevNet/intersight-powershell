@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightTechsupportmanagementNiaParam [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TechsupportmanagementNiaParam.ClassIdEnum>][-CollectionLevel< TechsupportmanagementNiaParam.CollectionLevelEnum>][-Filename< string>][-ForceFresh< bool>][-ObjectType< TechsupportmanagementNiaParam.ObjectTypeEnum>][-Pids< System.Collections.Generic.List`1[string]>][-SerialNumbers< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightTechsupportmanagementNiaParam [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TechsupportmanagementNiaParam.ClassIdEnum>][-CollectionClass< TechsupportmanagementNiaParam.CollectionClassEnum>][-CollectionLevel< TechsupportmanagementNiaParam.CollectionLevelEnum>][-Filename< string>][-ForceFresh< bool>][-ObjectType< TechsupportmanagementNiaParam.ObjectTypeEnum>][-Period< long>][-Pids< System.Collections.Generic.List`1[string]>][-SerialNumbers< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: TechsupportmanagementNiaParam.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CollectionClass
+CollectionClass specifies which app to collect ND techsupport from - infra/NDI/NDO/NDFC.\n* `1` - Collect infra logs for Nexus Dashboard TACASSIST.\n* `2` - Collect logs for Nexus Dashboard Insights app through NDTACASSIST.\n* `3` - Collect logs for Nexus Dashboard Orchestrator app through NDTACASSIST.\n* `4` - Collect logs for Nexus Dashboard Fabric Controller app through NDTACASSIST.\n* `5` - Collect logs for Nexus Data Broker app through NDTACASSIST.\n* `6` - Collect logs for Nexus Data Broker Orchestrator app through NDTACASSIST.
+
+```yaml
+Type: TechsupportmanagementNiaParam.CollectionClassEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -104,6 +119,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: TechsupportmanagementNiaParam.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Period
+Number of days for which to collect techsupport.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

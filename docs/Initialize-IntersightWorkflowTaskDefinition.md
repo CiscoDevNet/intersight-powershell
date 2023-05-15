@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowTaskDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkflowTaskDefinition.ClassIdEnum>][-DefaultVersion< bool>][-Description< string>][-ImplementedTasks< System.Collections.Generic.List`1[Model.WorkflowTaskDefinitionRelationship]>][-InterfaceTask< Model.WorkflowTaskDefinitionRelationship>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowTaskDefinition.ObjectTypeEnum>][-Properties< Model.WorkflowProperties>][-RollbackTasks< System.Collections.Generic.List`1[Model.WorkflowRollbackTask]>][-SecurePropAccess< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TaskMetadata< Model.WorkflowTaskMetadataRelationship>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowTaskDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkflowTaskDefinition.ClassIdEnum>][-DefaultVersion< bool>][-Description< string>][-ImplementedTasks< System.Collections.Generic.List`1[Model.WorkflowTaskDefinitionRelationship]>][-InterfaceTask< Model.WorkflowTaskDefinitionRelationship>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowTaskDefinition.ObjectTypeEnum>][-Properties< Model.WorkflowProperties>][-RollbackTasks< System.Collections.Generic.List`1[Model.WorkflowRollbackTask]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TaskMetadata< Model.WorkflowTaskMetadataRelationship>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -222,21 +222,6 @@ Note :- Use Initialize-IntersightWorkflowRollbackTask to create the object of co
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.WorkflowRollbackTask]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SecurePropAccess
-If set to true, the task requires access to secure properties and uses an encryption token associated with a workflow moid to encrypt or decrypt the secure properties.
-
-```yaml
-Type: bool
 Parameter Sets: (All)
 Aliases:
 

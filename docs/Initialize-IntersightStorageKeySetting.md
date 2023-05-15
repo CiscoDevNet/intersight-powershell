@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageKeySetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageKeySetting.ClassIdEnum>][-KeyType< StorageKeySetting.KeyTypeEnum>][-ManualKey< Model.StorageLocalKeySetting>][-ObjectType< StorageKeySetting.ObjectTypeEnum>][-RemoteKey< Model.StorageRemoteKeySetting>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageKeySetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageKeySetting.ClassIdEnum>][-ObjectType< StorageKeySetting.ObjectTypeEnum>][-RemoteKey< Model.StorageRemoteKeySetting>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,38 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: StorageKeySetting.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -KeyType
-Method to be used for fetching the encryption key.\n* `None` - Drive encryption not configured.\n* `Manual` - Drive encryption using manual key.\n* `Kmip` - Remote encryption using KMIP.
-
-```yaml
-Type: StorageKeySetting.KeyTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ManualKey
-Manual key configuration.
-
-Note :- Use Initialize-IntersightStorageLocalKeySetting to create the object of complex type StorageLocalKeySetting
-
-```yaml
-Type: Model.StorageLocalKeySetting
 Parameter Sets: (All)
 Aliases:
 
@@ -174,7 +142,5 @@ PS C:\> Initialize-IntersightStorageKeySetting
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightStorageLocalKeySetting](./Initialize-IntersightStorageLocalKeySetting.md)
 
 [Initialize-IntersightStorageRemoteKeySetting](./Initialize-IntersightStorageRemoteKeySetting.md)

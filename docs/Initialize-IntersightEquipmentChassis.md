@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-ClassId< EquipmentChassis.ClassIdEnum>][-ExpanderModules< System.Collections.Generic.List`1[Model.EquipmentExpanderModuleRelationship]>][-FanControl< Model.EquipmentFanControlRelationship>][-FaultSummary< long>][-ManagementInterface< Model.ManagementInterfaceRelationship>][-Moid< string>][-ObjectType< EquipmentChassis.ObjectTypeEnum>][-PlatformType< string>][-PowerControlState< Model.PowerControlStateRelationship>][-PreviousFru< Model.EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VirtualDriveContainer< System.Collections.Generic.List`1[Model.StorageVirtualDriveContainerRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-ClassId< EquipmentChassis.ClassIdEnum>][-ExpanderModules< System.Collections.Generic.List`1[Model.EquipmentExpanderModuleRelationship]>][-FanControl< Model.EquipmentFanControlRelationship>][-FaultSummary< long>][-ManagementInterface< Model.ManagementInterfaceRelationship>][-Moid< string>][-ObjectType< EquipmentChassis.ObjectTypeEnum>][-PlatformType< string>][-PowerControlState< Model.PowerControlStateRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VirtualDriveContainer< System.Collections.Generic.List`1[Model.StorageVirtualDriveContainerRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -193,24 +193,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.PowerControlStateRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

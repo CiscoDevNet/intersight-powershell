@@ -378,26 +378,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The current running stage of the configuration or workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ConfigStage
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates overall configuration state for applying the configuration to the end point. Values  -- Ok, Ok-with-warning, Errored."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ConfigState
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -437,16 +417,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"Indicates overall state for logical model validation. Values  -- Ok, Ok-with-warning, Errored."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ValidationState
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -456,14 +426,6 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigStage"))
-            {
-                initObject.ConfigStage = this.ConfigStage;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigState"))
-            {
-                initObject.ConfigState = this.ConfigState;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -476,10 +438,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ValidationState"))
-            {
-                initObject.ValidationState = this.ValidationState;
             }
             WriteObject(initObject);
         }
@@ -662,6 +620,104 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ServerDisruption.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightServerDisruption")]
+    public class InitializeIntersightServerDisruption : PSCmdlet
+    {
+        public InitializeIntersightServerDisruption()
+        {
+            ClassId = ServerDisruption.ClassIdEnum.ServerDisruption;
+            ObjectType = ServerDisruption.ObjectTypeEnum.ServerDisruption;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ServerDisruption.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ServerDisruption.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.ServerDisruption initObject = new Intersight.Model.ServerDisruption();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
             }
             WriteObject(initObject);
         }
@@ -898,7 +954,17 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Source of the server assigned to the server profile. Values can be Static, Pool or None. Static is used if a server is attached directly to server profile. Pool is used if a resource pool is attached to server profile. None is used if no server or resource pool is attached to server profile.\n* `None` - No server is assigned to the server profile.\n* `Static` - Server is directly assigned to server profile using assign server.\n* `Pool` - Server is assigned from a resource pool."</para>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.PolicyScheduledAction> ScheduledActions
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source of the server assigned to the Server Profile. Values can be Static, Pool or None. Static is used if a server is attached directly to a Server Profile. Pool is used if a resource pool is attached to a Server Profile. None is used if no server or resource pool is attached to a Server Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `None` - No server is assigned to the server profile.\n* `Static` - Server is directly assigned to server profile using assign server.\n* `Pool` - Server is assigned from a resource pool."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -913,6 +979,26 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.ResourcepoolPoolRelationship ServerPool
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of the server that would be assigned to this pre-assigned Server Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string ServerPreAssignBySerial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Server profile is pre-assigned to a server using slot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ServerServerAssignTypeSlot ServerPreAssignBySlot
         {
             get;
             set;
@@ -1049,6 +1135,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ReservationReferences = this.ReservationReferences;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScheduledActions"))
+            {
+                initObject.ScheduledActions = this.ScheduledActions;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ServerAssignmentMode"))
             {
                 initObject.ServerAssignmentMode = this.ServerAssignmentMode;
@@ -1056,6 +1146,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ServerPool"))
             {
                 initObject.ServerPool = this.ServerPool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerPreAssignBySerial"))
+            {
+                initObject.ServerPreAssignBySerial = this.ServerPreAssignBySerial;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerPreAssignBySlot"))
+            {
+                initObject.ServerPreAssignBySlot = this.ServerPreAssignBySlot;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
             {
@@ -1215,6 +1313,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.PolicyScheduledAction> ScheduledActions
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1316,6 +1424,10 @@ namespace Intersight.PowerShell
             {
                 initObject.PolicyBucket = this.PolicyBucket;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScheduledActions"))
+            {
+                initObject.ScheduledActions = this.ScheduledActions;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
             {
                 initObject.SrcTemplate = this.SrcTemplate;
@@ -1339,6 +1451,104 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("UuidPool"))
             {
                 initObject.UuidPool = this.UuidPool;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ServerServerAssignTypeSlot.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightServerServerAssignTypeSlot")]
+    public class InitializeIntersightServerServerAssignTypeSlot : PSCmdlet
+    {
+        public InitializeIntersightServerServerAssignTypeSlot()
+        {
+            ClassId = ServerServerAssignTypeSlot.ClassIdEnum.ServerServerAssignTypeSlot;
+            ObjectType = ServerServerAssignTypeSlot.ObjectTypeEnum.ServerServerAssignTypeSlot;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Chassis-id of the slot that would be assigned to this pre-assigned server profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long ChassisId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ServerServerAssignTypeSlot.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Domain name of the Fabric Interconnect to which the chassis is or to be connected. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt can have underscores and hyphens.\nIt cannot be more than 30 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_\\-]{0,30}$")]
+        public string DomainName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ServerServerAssignTypeSlot.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Slot-id of the server that would be assigned to this pre-assigned server profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long SlotId
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.ServerServerAssignTypeSlot initObject = new Intersight.Model.ServerServerAssignTypeSlot();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ChassisId"))
+            {
+                initObject.ChassisId = this.ChassisId;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DomainName"))
+            {
+                initObject.DomainName = this.DomainName;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
             }
             WriteObject(initObject);
         }

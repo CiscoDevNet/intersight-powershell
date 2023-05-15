@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesNodeGroupProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterProfile< KubernetesClusterProfileRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Desiredsize< long>][-GpuConfig< System.Collections.Generic.List`1[InfraBaseGpuConfiguration]>][-InfraProvider< KubernetesBaseInfrastructureProviderRelationship>][-IpPools< System.Collections.Generic.List`1[IppoolPoolRelationship]>][-KubernetesVersion< KubernetesVersionPolicyRelationship>][-Labels< System.Collections.Generic.List`1[KubernetesNodeGroupLabel]>][-Maxsize< long>][-Minsize< long>][[-Moid]< string>][-Name< string>][-NodeType< KubernetesNodeGroupProfile.NodeTypeEnum>][-Nodes< System.Collections.Generic.List`1[KubernetesNodeProfileRelationship]>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Taints< System.Collections.Generic.List`1[KubernetesNodeGroupTaint]>][-Type< KubernetesNodeGroupProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightKubernetesNodeGroupProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterProfile< KubernetesClusterProfileRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Desiredsize< long>][-GpuConfig< System.Collections.Generic.List`1[InfraBaseGpuConfiguration]>][-InfraProvider< KubernetesBaseInfrastructureProviderRelationship>][-IpPools< System.Collections.Generic.List`1[IppoolPoolRelationship]>][-KubernetesVersion< KubernetesVersionPolicyRelationship>][-Labels< System.Collections.Generic.List`1[KubernetesNodeGroupLabel]>][-Maxsize< long>][-Minsize< long>][[-Moid]< string>][-Name< string>][-NodeType< KubernetesNodeGroupProfile.NodeTypeEnum>][-Nodes< System.Collections.Generic.List`1[KubernetesNodeProfileRelationship]>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Taints< System.Collections.Generic.List`1[KubernetesNodeGroupTaint]>][-Type< KubernetesNodeGroupProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -334,6 +334,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ScheduledActions
+
+
+Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of complex type PolicyScheduledAction
+
+```yaml
+Type: System.Collections.Generic.List`1[PolicyScheduledAction]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SrcTemplate
 A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -471,6 +488,8 @@ PS C:\> Set-IntersightKubernetesNodeGroupProfile
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)
 
 [New-IntersightKubernetesNodeGroupProfile](./New-IntersightKubernetesNodeGroupProfile.md)
 

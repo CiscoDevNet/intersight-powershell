@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWorkflowServiceItemDefinition [-ActionDefinitions< System.Collections.Generic.List`1[WorkflowServiceItemActionDefinitionRelationship]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowMultipleServiceItemInstances< bool>][-Catalog< WorkflowCatalogRelationship>][-CvdId< string>][-DeleteInstanceOnDecommission< bool>][-Description< string>][-Label< string>][[-Moid]< string>][-Name< string>][-OutputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightWorkflowServiceItemDefinition [-ActionDefinitions< System.Collections.Generic.List`1[WorkflowServiceItemActionDefinitionRelationship]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowMultipleServiceItemInstances< bool>][-AttributeDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Catalog< WorkflowCatalogRelationship>][-CvdId< string>][-DeleteInstanceOnDecommission< bool>][-Description< string>][-Label< string>][[-Moid]< string>][-Name< string>][-PublishStatus< WorkflowServiceItemDefinition.PublishStatusEnum>][-SupportStatus< WorkflowServiceItemDefinition.SupportStatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -61,6 +61,23 @@ Service item definition can declare that only one instance can be allowed within
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AttributeDefinition
+
+
+Note :- Use Initialize-IntersightWorkflowBaseDataType to create the object of complex type WorkflowBaseDataType
+
+```yaml
+Type: System.Collections.Generic.List`1[WorkflowBaseDataType]
 Parameter Sets: (All)
 Aliases:
 
@@ -179,13 +196,26 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -OutputDefinition
-
-
-Note :- Use Initialize-IntersightWorkflowBaseDataType to create the object of complex type WorkflowBaseDataType
+### -PublishStatus
+Publish status of the service item.\n* `NotPublished` - A state of the service item or catalog item which is not yet published.\n* `Published` - A state denoting that the service item or catalog item is published.
 
 ```yaml
-Type: System.Collections.Generic.List`1[WorkflowBaseDataType]
+Type: WorkflowServiceItemDefinition.PublishStatusEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SupportStatus
+The service item can be marked as deprecated, supported or beta, the support status indicates that. When a new service item is introduced, it can be marked beta to indicate this is experimental and later moved to Supported status. When Service item is deprecated, it cannot be instantiated and used for a Catalog Item design.\n* `Supported` - The definition is a supported version and there will be no changes to the mandatory inputs or outputs.\n* `Beta` - The definition is a Beta version and this version can under go changes until the version is marked supported.\n* `Deprecated` - The version of definition is deprecated and typically there will be a higher version of the same definition that has been added.
+
+```yaml
+Type: WorkflowServiceItemDefinition.SupportStatusEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -290,6 +320,8 @@ PS C:\> Set-IntersightWorkflowServiceItemDefinition
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
+
+[Initialize-IntersightWorkflowValidationInformation](./Initialize-IntersightWorkflowValidationInformation.md)
 
 [New-IntersightWorkflowServiceItemDefinition](./New-IntersightWorkflowServiceItemDefinition.md)
 

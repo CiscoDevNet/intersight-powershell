@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightStorageFlexFlashPhysicalDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CardStatus< string>][-CardType< string>][[-Moid]< string>][-OemId< string>][-PdStatus< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightStorageFlexFlashPhysicalDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CardStatus< string>][-CardType< string>][[-Moid]< string>][-OemId< string>][-PdStatus< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -103,24 +103,6 @@ The drive status of the flex flash physical drive.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

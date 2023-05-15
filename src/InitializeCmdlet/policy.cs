@@ -207,6 +207,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.PolicyConfigChangeDisruptionDetailType> PolicyDisruptions
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -225,6 +235,10 @@ namespace Intersight.PowerShell
                 initObject.Disruptions = this.Disruptions;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PolicyDisruptions"))
+            {
+                initObject.PolicyDisruptions = this.PolicyDisruptions;
+            }
             WriteObject(initObject);
         }
 
@@ -281,6 +295,104 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigChangeDisruptionDetailType.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigChangeDisruptionDetailType")]
+    public class InitializeIntersightPolicyConfigChangeDisruptionDetailType : PSCmdlet
+    {
+        public InitializeIntersightPolicyConfigChangeDisruptionDetailType()
+        {
+            ClassId = PolicyConfigChangeDisruptionDetailType.ClassIdEnum.PolicyConfigChangeDisruptionDetailType;
+            ObjectType = PolicyConfigChangeDisruptionDetailType.ObjectTypeEnum.PolicyConfigChangeDisruptionDetailType;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyConfigChangeDisruptionDetailType.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> Disruptions
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyConfigChangeDisruptionDetailType.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the policy that, when modified, causes the disruption."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PolicyName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the action which is pending on this policy. Example, if policy is not yet activated we mark this field as not-activated. Currently we support two actions, not-deployed and not-activated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PolicyPendingAction
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.PolicyConfigChangeDisruptionDetailType initObject = new Intersight.Model.PolicyConfigChangeDisruptionDetailType();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Disruptions"))
+            {
+                initObject.Disruptions = this.Disruptions;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PolicyName"))
+            {
+                initObject.PolicyName = this.PolicyName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PolicyPendingAction"))
+            {
+                initObject.PolicyPendingAction = this.PolicyPendingAction;
+            }
             WriteObject(initObject);
         }
 
@@ -672,6 +784,90 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyScheduledAction.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyScheduledAction")]
+    public class InitializeIntersightPolicyScheduledAction : PSCmdlet
+    {
+        public InitializeIntersightPolicyScheduledAction()
+        {
+            ClassId = PolicyScheduledAction.ClassIdEnum.PolicyScheduledAction;
+            ObjectType = PolicyScheduledAction.ObjectTypeEnum.PolicyScheduledAction;
+
+        }
+        // <summary>
+        /// <para type="description">"Name of the action to be performed on the profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Action
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyScheduledAction.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyScheduledAction.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"ProceedOnReboot can be used to acknowledge server reboot while triggering deploy/activate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ProceedOnReboot
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.PolicyScheduledAction initObject = new Intersight.Model.PolicyScheduledAction();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
+            {
+                initObject.Action = this.Action;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProceedOnReboot"))
+            {
+                initObject.ProceedOnReboot = this.ProceedOnReboot;
+            }
             WriteObject(initObject);
         }
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageRemoteKeySetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageRemoteKeySetting.ClassIdEnum>][-ObjectType< StorageRemoteKeySetting.ObjectTypeEnum>][-Password< string>][-Port< long>][-PrimaryServer< string>][-SecondaryServer< string>][-ServerCertificate< string>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageRemoteKeySetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AuthCredentials< Model.StorageKmipAuthCredentials>][-ClassId< StorageRemoteKeySetting.ClassIdEnum>][-ObjectType< StorageRemoteKeySetting.ObjectTypeEnum>][-PrimaryServer< Model.StorageKmipServer>][-SecondaryServer< Model.StorageKmipServer>][-ServerCertificate< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,23 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthCredentials
+The authentication details of the KMIP server. It is required to login to the KMIP server.
+
+Note :- Use Initialize-IntersightStorageKmipAuthCredentials to create the object of complex type StorageKmipAuthCredentials
+
+```yaml
+Type: Model.StorageKmipAuthCredentials
 Parameter Sets: (All)
 Aliases:
 
@@ -69,41 +86,13 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Password
-The password for the KMIP server login.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Port
-The port to which the KMIP client should connect.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -PrimaryServer
-The IP address of the primary KMIP server. It could be an IPv4 address, an IPv6 address, or a hostname. Hostnames are valid only when Inband is configured for the CIMC address.
+Configuration of the primary KMIP server.
+
+Note :- Use Initialize-IntersightStorageKmipServer to create the object of complex type StorageKmipServer
 
 ```yaml
-Type: string
+Type: Model.StorageKmipServer
 Parameter Sets: (All)
 Aliases:
 
@@ -115,10 +104,12 @@ Accept wildcard characters: False
 ```
 
 ### -SecondaryServer
-The IP address of the secondary KMIP server. It could be an IPv4 address, an IPv6 address, or a hostname. Hostnames are valid only when Inband is configured for the CIMC address.
+Configuration of the secondary KMIP server.
+
+Note :- Use Initialize-IntersightStorageKmipServer to create the object of complex type StorageKmipServer
 
 ```yaml
-Type: string
+Type: Model.StorageKmipServer
 Parameter Sets: (All)
 Aliases:
 
@@ -131,21 +122,6 @@ Accept wildcard characters: False
 
 ### -ServerCertificate
 The certificate/ public key of the KMIP server. It is required for initiating secure communication with the server.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Username
-The user name for the KMIP server login.
 
 ```yaml
 Type: string
@@ -215,3 +191,7 @@ PS C:\> Initialize-IntersightStorageRemoteKeySetting
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightStorageKmipAuthCredentials](./Initialize-IntersightStorageKmipAuthCredentials.md)
+
+[Initialize-IntersightStorageKmipServer](./Initialize-IntersightStorageKmipServer.md)

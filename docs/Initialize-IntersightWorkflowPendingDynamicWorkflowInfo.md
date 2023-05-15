@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowPendingDynamicWorkflowInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowPendingDynamicWorkflowInfo.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< WorkflowPendingDynamicWorkflowInfo.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowPendingDynamicWorkflowInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowPendingDynamicWorkflowInfo.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< WorkflowPendingDynamicWorkflowInfo.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WorkflowInfo< Model.WorkflowWorkflowInfoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -106,6 +106,24 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkflowInfo
+A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.WorkflowWorkflowInfoRelationship
 Parameter Sets: (All)
 Aliases:
 

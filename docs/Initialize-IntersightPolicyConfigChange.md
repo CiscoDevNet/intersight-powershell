@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPolicyConfigChange [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Changes< System.Collections.Generic.List`1[string]>][-ClassId< PolicyConfigChange.ClassIdEnum>][-Disruptions< System.Collections.Generic.List`1[string]>][-ObjectType< PolicyConfigChange.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPolicyConfigChange [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Changes< System.Collections.Generic.List`1[string]>][-ClassId< PolicyConfigChange.ClassIdEnum>][-Disruptions< System.Collections.Generic.List`1[string]>][-ObjectType< PolicyConfigChange.ObjectTypeEnum>][-PolicyDisruptions< System.Collections.Generic.List`1[Model.PolicyConfigChangeDisruptionDetailType]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -99,6 +99,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PolicyDisruptions
+
+
+Note :- Use Initialize-IntersightPolicyConfigChangeDisruptionDetailType to create the object of complex type PolicyConfigChangeDisruptionDetailType
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.PolicyConfigChangeDisruptionDetailType]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -155,3 +172,5 @@ PS C:\> Initialize-IntersightPolicyConfigChange
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightPolicyConfigChangeDisruptionDetailType](./Initialize-IntersightPolicyConfigChangeDisruptionDetailType.md)

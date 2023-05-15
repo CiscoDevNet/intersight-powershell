@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareFirmwareSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BundleVersion< string>][-ClassId< FirmwareFirmwareSummary.ClassIdEnum>][-ComponentsFwInventory< System.Collections.Generic.List`1[Model.FirmwareFirmwareInventory]>][-Moid< string>][-ObjectType< FirmwareFirmwareSummary.ObjectTypeEnum>][-Server< Model.ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareFirmwareSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BundleVersion< string>][-ClassId< FirmwareFirmwareSummary.ClassIdEnum>][-ComponentsFwInventory< System.Collections.Generic.List`1[Model.FirmwareFirmwareInventory]>][-Moid< string>][-ObjectType< FirmwareFirmwareSummary.ObjectTypeEnum>][-Server< Model.ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetMo< Model.MoBaseMoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -141,6 +141,24 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetMo
+A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.MoBaseMoRelationship
 Parameter Sets: (All)
 Aliases:
 

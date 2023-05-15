@@ -71,7 +71,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Method Type of the selected API.\n* `GET` - Method type which indicates it is a GET API call\n* `POST` - Method type which indicates it is a POST API call\n* `PUT` - Method type which indicates it is a PUT API call\n* `PATCH` - Method type which indicates it is a PATCH API call\n* `DELETE` - Method type which indicates it is a DELETE API call"</para>
+        /// <para type="description">"Method Type of the selected API.\n* `GET` - Method type which indicates it is a GET API call.\n* `POST` - Method type which indicates it is a POST API call.\n* `PUT` - Method type which indicates it is a PUT API call.\n* `PATCH` - Method type which indicates it is a PATCH API call.\n* `DELETE` - Method type which indicates it is a DELETE API call."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

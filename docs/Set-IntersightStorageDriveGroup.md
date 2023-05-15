@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightStorageDriveGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutomaticDriveGroup< StorageAutomaticDriveGroup>][-ManualDriveGroup< StorageManualDriveGroup>][[-Moid]< string>][-Name< string>][-RaidLevel< StorageDriveGroup.RaidLevelEnum>][-StoragePolicy< StorageStoragePolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualDrives< System.Collections.Generic.List`1[StorageVirtualDriveConfiguration]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightStorageDriveGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutomaticDriveGroup< StorageAutomaticDriveGroup>][-ManualDriveGroup< StorageManualDriveGroup>][[-Moid]< string>][-Name< string>][-RaidLevel< StorageDriveGroup.RaidLevelEnum>][-SecureDriveGroup< bool>][-StoragePolicy< StorageStoragePolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualDrives< System.Collections.Generic.List`1[StorageVirtualDriveConfiguration]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -107,6 +107,21 @@ The supported RAID level for the disk group.\n* `Raid0` - RAID 0 Stripe Raid Lev
 
 ```yaml
 Type: StorageDriveGroup.RaidLevelEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SecureDriveGroup
+Enables/disables the drive encryption on all the drives used in this policy. This flag just enables the drive security and only after remote key setting configured, the actual encryption will be done.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

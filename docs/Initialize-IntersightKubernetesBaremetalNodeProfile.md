@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesBaremetalNodeProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesBaremetalNodeProfile.ClassIdEnum>][-CloudProvider< KubernetesBaremetalNodeProfile.CloudProviderEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-KubernetesNic< string>][-Moid< string>][-Name< string>][-NetworkInfo< Model.KubernetesBaremetalNetworkInfo>][-NodeGroup< Model.KubernetesNodeGroupProfileRelationship>][-ObjectType< KubernetesBaremetalNodeProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-Server< Model.ComputeRackUnitRelationship>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Target< Model.AssetDeviceRegistrationRelationship>][-Type< KubernetesBaremetalNodeProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightKubernetesBaremetalNodeProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< KubernetesBaremetalNodeProfile.ClassIdEnum>][-CloudProvider< KubernetesBaremetalNodeProfile.CloudProviderEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-KubernetesNic< string>][-Moid< string>][-Name< string>][-NetworkInfo< Model.KubernetesBaremetalNetworkInfo>][-NodeGroup< Model.KubernetesNodeGroupProfileRelationship>][-ObjectType< KubernetesBaremetalNodeProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-Server< Model.ComputeRackUnitRelationship>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Target< Model.AssetDeviceRegistrationRelationship>][-Type< KubernetesBaremetalNodeProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -246,6 +246,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ScheduledActions
+
+
+Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of complex type PolicyScheduledAction
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.PolicyScheduledAction]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Server
 A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -396,3 +413,5 @@ PS C:\> Initialize-IntersightKubernetesBaremetalNodeProfile
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)

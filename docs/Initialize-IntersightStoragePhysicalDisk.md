@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStoragePhysicalDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BackgroundOperations< string>][-ClassId< StoragePhysicalDisk.ClassIdEnum>][-DisabledForRemoval< bool>][-DriveFirmware< string>][-EncryptionStatus< string>][-FailurePredicted< bool>][-FdeCapable< string>][-HotSpareType< string>][-IndicatorLed< string>][-MaximumOperatingTemperature< long>][-MediaErrorCount< long>][-Moid< string>][-Name< string>][-NonCoercedSizeBytes< long>][-ObjectType< StoragePhysicalDisk.ObjectTypeEnum>][-OperatingTemperature< long>][-PercentLifeLeft< long>][-PercentReservedCapacityConsumed< long>][-PerformancePercent< long>][-PhysicalDiskExtensions< System.Collections.Generic.List`1[Model.StoragePhysicalDiskExtensionRelationship]>][-PowerCycleCount< long>][-PowerOnHours< long>][-PredictedMediaLifeLeftPercent< long>][-PredictiveFailureCount< long>][-PreviousFru< Model.EquipmentFruRelationship>][-ReadIoErrorCount< long>][-Secured< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ThresholdOperatingTemperature< long>][-WearStatusInDays< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStoragePhysicalDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BackgroundOperations< string>][-ClassId< StoragePhysicalDisk.ClassIdEnum>][-DisabledForRemoval< bool>][-DriveFirmware< string>][-EncryptionStatus< string>][-FailurePredicted< bool>][-FdeCapable< string>][-HotSpareType< string>][-IndicatorLed< string>][-MaximumOperatingTemperature< long>][-MediaErrorCount< long>][-Moid< string>][-Name< string>][-NonCoercedSizeBytes< long>][-ObjectType< StoragePhysicalDisk.ObjectTypeEnum>][-OperatingTemperature< long>][-PercentLifeLeft< long>][-PercentReservedCapacityConsumed< long>][-PerformancePercent< long>][-PhysicalDiskExtensions< System.Collections.Generic.List`1[Model.StoragePhysicalDiskExtensionRelationship]>][-PowerCycleCount< long>][-PowerOnHours< long>][-PredictedMediaLifeLeftPercent< long>][-PredictiveFailureCount< long>][-ReadIoErrorCount< long>][-Secured< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ThresholdOperatingTemperature< long>][-WearStatusInDays< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -392,24 +392,6 @@ Error count on the physical disk.
 
 ```yaml
 Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

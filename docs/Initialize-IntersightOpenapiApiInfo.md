@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Method
-Method Type of the selected API.\n* `GET` - Method type which indicates it is a GET API call\n* `POST` - Method type which indicates it is a POST API call\n* `PUT` - Method type which indicates it is a PUT API call\n* `PATCH` - Method type which indicates it is a PATCH API call\n* `DELETE` - Method type which indicates it is a DELETE API call
+Method Type of the selected API.\n* `GET` - Method type which indicates it is a GET API call.\n* `POST` - Method type which indicates it is a POST API call.\n* `PUT` - Method type which indicates it is a PUT API call.\n* `PATCH` - Method type which indicates it is a PATCH API call.\n* `DELETE` - Method type which indicates it is a DELETE API call.
 
 ```yaml
 Type: OpenapiApiInfo.MethodEnum

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCapabilitySwitchCapability [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CapabilitySwitchCapability.ClassIdEnum>][-DefaultFcoeVlan< long>][-DynamicVifsSupported< bool>][-FanModulesSupported< bool>][-FcEndHostModeReservedVsans< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-FcUplinkPortsAutoNegotiationSupported< bool>][-LocatorBeaconSupported< bool>][-MaxPorts< long>][-MaxSlots< long>][-Moid< string>][-Name< string>][-NetworkLimits< Model.CapabilitySwitchNetworkLimits>][-ObjectType< CapabilitySwitchCapability.ObjectTypeEnum>][-Pid< CapabilitySwitchCapability.PidEnum>][-PortsSupporting100gSpeed< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-PortsSupporting10gSpeed< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-PortsSupporting1gSpeed< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-PortsSupporting25gSpeed< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-PortsSupporting40gSpeed< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-PortsSupportingBreakout< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-PortsSupportingFcoe< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-PortsSupportingServerRole< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-ReservedVsans< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-SerenoNetflowSupported< bool>][-Sku< string>][-StorageLimits< Model.CapabilitySwitchStorageLimits>][-SwitchingModeCapabilities< System.Collections.Generic.List`1[Model.CapabilitySwitchingModeCapability]>][-SystemLimits< Model.CapabilitySwitchSystemLimits>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnifiedPorts< System.Collections.Generic.List`1[Model.CapabilityPortRange]>][-UnifiedRule< string>][-Vid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCapabilitySwitchCapability [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CapabilitySwitchCapability.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< CapabilitySwitchCapability.ObjectTypeEnum>][-Pid< CapabilitySwitchCapability.PidEnum>][-Sku< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,128 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: CapabilitySwitchCapability.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DefaultFcoeVlan
-Default Fcoe VLAN associated with this switch.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DynamicVifsSupported
-Dynamic VIFs support on this switch.
-
-```yaml
-Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FanModulesSupported
-Fan Modules support on this switch.
-
-```yaml
-Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FcEndHostModeReservedVsans
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FcUplinkPortsAutoNegotiationSupported
-Fc Uplink ports auto negotiation speed support on this switch.
-
-```yaml
-Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LocatorBeaconSupported
-Locator Beacon LED support on this switch.
-
-```yaml
-Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MaxPorts
-Maximum allowed physical ports on this switch.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MaxSlots
-Maximum allowed physical slots on this switch.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -206,23 +84,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NetworkLimits
-List of network limitations for this switch.
-
-Note :- Use Initialize-IntersightCapabilitySwitchNetworkLimits to create the object of complex type CapabilitySwitchNetworkLimits
-
-```yaml
-Type: Model.CapabilitySwitchNetworkLimits
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
@@ -253,230 +114,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PortsSupporting100gSpeed
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortsSupporting10gSpeed
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortsSupporting1gSpeed
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortsSupporting25gSpeed
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortsSupporting40gSpeed
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortsSupportingBreakout
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortsSupportingFcoe
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortsSupportingServerRole
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ReservedVsans
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SerenoNetflowSupported
-Sereno Adaptor with Netflow support on this switch.
-
-```yaml
-Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Sku
 SKU information for Switch/Fabric-Interconnect.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -StorageLimits
-List of storage limitations for this switch.
-
-Note :- Use Initialize-IntersightCapabilitySwitchStorageLimits to create the object of complex type CapabilitySwitchStorageLimits
-
-```yaml
-Type: Model.CapabilitySwitchStorageLimits
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SwitchingModeCapabilities
-
-
-Note :- Use Initialize-IntersightCapabilitySwitchingModeCapability to create the object of complex type CapabilitySwitchingModeCapability
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilitySwitchingModeCapability]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SystemLimits
-List of system limitations for this switch.
-
-Note :- Use Initialize-IntersightCapabilitySwitchSystemLimits to create the object of complex type CapabilitySwitchSystemLimits
-
-```yaml
-Type: Model.CapabilitySwitchSystemLimits
 Parameter Sets: (All)
 Aliases:
 
@@ -494,38 +136,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -UnifiedPorts
-
-
-Note :- Use Initialize-IntersightCapabilityPortRange to create the object of complex type CapabilityPortRange
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.CapabilityPortRange]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -UnifiedRule
-The Slider rule for Unified ports on this switch.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -607,15 +217,5 @@ PS C:\> Initialize-IntersightCapabilitySwitchCapability
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightCapabilityPortRange](./Initialize-IntersightCapabilityPortRange.md)
-
-[Initialize-IntersightCapabilitySwitchNetworkLimits](./Initialize-IntersightCapabilitySwitchNetworkLimits.md)
-
-[Initialize-IntersightCapabilitySwitchStorageLimits](./Initialize-IntersightCapabilitySwitchStorageLimits.md)
-
-[Initialize-IntersightCapabilitySwitchSystemLimits](./Initialize-IntersightCapabilitySwitchSystemLimits.md)
-
-[Initialize-IntersightCapabilitySwitchingModeCapability](./Initialize-IntersightCapabilitySwitchingModeCapability.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

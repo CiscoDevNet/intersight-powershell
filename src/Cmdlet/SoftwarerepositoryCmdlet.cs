@@ -66,6 +66,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The state of the alarm dismissal for the 'IsAsdDialogDismissed' alarm."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsAsdv4AlarmDismissed
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Indicates whether the value of the 'password' property has been set."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1346,7 +1357,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload.\n* `PartnerIntegrationImport` - This indicates a Partner-Integration Appliance user file uploads."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1728,6 +1739,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -2670,6 +2682,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

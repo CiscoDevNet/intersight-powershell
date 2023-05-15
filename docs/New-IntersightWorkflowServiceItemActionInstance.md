@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkflowServiceItemActionInstance [-Action< WorkflowServiceItemActionInstance.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Input< object>][-Moid< string>][-ServiceItemActionDefinition< WorkflowServiceItemActionDefinitionRelationship>][-ServiceItemInstance< WorkflowServiceItemInstanceRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightWorkflowServiceItemActionInstance [-Action< WorkflowServiceItemActionInstance.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Idp< IamIdpRelationship>][-IdpReference< IamIdpReferenceRelationship>][-Input< object>][-Moid< string>][-ServiceItemActionDefinition< WorkflowServiceItemActionDefinitionRelationship>][-ServiceItemInstance< WorkflowServiceItemInstanceRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-User< IamUserRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -24,7 +24,7 @@ Create a &apos;WorkflowServiceItemActionInstance&apos; resource.
 ## PARAMETERS
 
 ### -Action
-Name of the action that needs to be performed on the service item instance.\n* `None` - No action is set, this is the default value for action field.\n* `Validate` - Validate the action instance inputs and run the validation workflows.\n* `Start` - Start a new execution of the action instance.\n* `Retry` - Retry the service item action instance from the beginning.\n* `RetryFailed` - Retry the workflow that has failed from the failure point.\n* `Cancel` - Cancel the core workflow that is in running or waiting state. This action can be used when the workflows are stuck and not progressing.\n* `Stop` - Stop the action instance which is in progress and didn&apos;t complete successfully. Use this action to clear the state and then delete the action instance. A completed action cannot be stopped.
+Name of the action that needs to be performed on the service item instance.\n* `None` - No action is set, this is the default value for action field.\n* `Validate` - Validate the action instance inputs and run the validation workflows.\n* `Start` - Start a new execution of the action instance.\n* `Rerun` - Rerun the service item action instance from the beginning.\n* `Retry` - Retry the workflow that has failed from the failure point.\n* `Cancel` - Cancel the core workflow that is in running or waiting state. This action can be used when the workflows are stuck and not progressing.\n* `Stop` - Stop the action instance which is in progress and didn&apos;t complete successfully. Use this action to clear the state and then delete the action instance. A completed action cannot be stopped.
 
 ```yaml
 Type: WorkflowServiceItemActionInstance.ActionEnum
@@ -43,6 +43,42 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Idp
+A reference to a iamIdp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamIdpRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IdpReference
+A reference to a iamIdpReference resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamIdpReferenceRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -138,6 +174,24 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -User
+A reference to a iamUser resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamUserRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -198,6 +252,10 @@ PS C:\> New-IntersightWorkflowServiceItemActionInstance
 [Get-IntersightWorkflowServiceItemActionInstance](./Get-IntersightWorkflowServiceItemActionInstance.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightServiceitemMessage](./Initialize-IntersightServiceitemMessage.md)
+
+[Initialize-IntersightServiceitemSelectionCriteriaInput](./Initialize-IntersightServiceitemSelectionCriteriaInput.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)
 

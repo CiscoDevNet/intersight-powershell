@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowLoopTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowLoopTask.ClassIdEnum>][-Count< string>][-Description< string>][-Label< string>][-LoopStartTask< string>][-Name< string>][-NumberOfBatches< long>][-ObjectType< WorkflowLoopTask.ObjectTypeEnum>][-OnSuccess< string>][-Parallel< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowLoopTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowLoopTask.ClassIdEnum>][-Count< string>][-Description< string>][-Label< string>][-LoopStartTask< string>][-Name< string>][-NumberOfBatches< long>][-ObjectType< WorkflowLoopTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-Parallel< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -149,6 +149,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: WorkflowLoopTask.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OnFailure
+This specifies the name of the next task to run if all iterations of the loop task do not succeed. The unique name given to the task instance within the workflow must be provided here. In a graph model, denotes an edge to another Task Node.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

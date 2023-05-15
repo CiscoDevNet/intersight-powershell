@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBootPxeDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BootPxeDevice.ClassIdEnum>][-ComputePhysical< Model.ComputePhysicalRelationship>][-Moid< string>][-Name< string>][-ObjectType< BootPxeDevice.ObjectTypeEnum>][-Order< long>][-PreviousFru< Model.EquipmentFruRelationship>][-State< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBootPxeDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BootPxeDevice.ClassIdEnum>][-ComputePhysical< Model.ComputePhysicalRelationship>][-Moid< string>][-Name< string>][-ObjectType< BootPxeDevice.ObjectTypeEnum>][-Order< long>][-State< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -122,24 +122,6 @@ The order of the boot device configured in the boot policy.
 
 ```yaml
 Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightComputeStoragePhysicalDriveOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< ComputeStoragePhysicalDriveOperation.AdminActionEnum>][-ClassId< ComputeStoragePhysicalDriveOperation.ClassIdEnum>][-ControllerId< string>][-ObjectType< ComputeStoragePhysicalDriveOperation.ObjectTypeEnum>][-PhysicalDrives< System.Collections.Generic.List`1[Model.ComputeStoragePhysicalDrive]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightComputeStoragePhysicalDriveOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< ComputeStoragePhysicalDriveOperation.AdminActionEnum>][-ClassId< ComputeStoragePhysicalDriveOperation.ClassIdEnum>][-ControllerId< string>][-DriveSlots< System.Collections.Generic.List`1[string]>][-ObjectType< ComputeStoragePhysicalDriveOperation.ObjectTypeEnum>][-PhysicalDrives< System.Collections.Generic.List`1[Model.ComputeStoragePhysicalDrive]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminAction
-Administrative actions that can be performed on the Storage Physical Drives.\n* `None` - No action on the selected Storage Physical Drives.\n* `SetJbod` - Set Jbod action state on the selected Storage Physical Drives.\n* `SetUnconfiguredGood` - Set Unconfigured Good action state on the selected Storage Physical Drives.
+Administrative actions that can be performed on the Storage Physical Drives.\n* `None` - No action on the selected Storage Physical Drives.\n* `SetJbod` - Set Jbod action state on the selected Storage Physical Drives.\n* `SetUnconfiguredGood` - Set Unconfigured Good action state on the selected Storage Physical Drives.\n* `Erase` - Set Erase action state on the selected Storage Controller.
 
 ```yaml
 Type: ComputeStoragePhysicalDriveOperation.AdminActionEnum
@@ -74,6 +74,21 @@ Storage Controller Id of the storage Physical Drives of the server.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DriveSlots
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

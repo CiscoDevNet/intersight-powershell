@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWorkflowCtx [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWorkflowCtx.ClassIdEnum>][-InitiatorCtx< Model.WorkflowInitiatorContext>][-ObjectType< WorkflowWorkflowCtx.ObjectTypeEnum>][-TargetCtxList< System.Collections.Generic.List`1[Model.WorkflowTargetContext]>][-WorkflowMetaName< string>][-WorkflowSubtype< string>][-WorkflowType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWorkflowCtx [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWorkflowCtx.ClassIdEnum>][-InitiatorCtx< Model.WorkflowInitiatorContext>][-ObjectType< WorkflowWorkflowCtx.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -86,68 +86,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -TargetCtxList
-
-
-Note :- Use Initialize-IntersightWorkflowTargetContext to create the object of complex type WorkflowTargetContext
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.WorkflowTargetContext]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkflowMetaName
-The name of workflowMeta of the workflow running.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkflowSubtype
-The subtype of the workflow.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -WorkflowType
-Type of the workflow being started. This can be any string for client services to distinguish workflow by type.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Json
 Returns the json payload received in response.
 
@@ -206,5 +144,3 @@ PS C:\> Initialize-IntersightWorkflowWorkflowCtx
 ## RELATED LINKS
 
 [Initialize-IntersightWorkflowInitiatorContext](./Initialize-IntersightWorkflowInitiatorContext.md)
-
-[Initialize-IntersightWorkflowTargetContext](./Initialize-IntersightWorkflowTargetContext.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWorkerTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CatalogMoid< string>][-ClassId< WorkflowWorkerTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowWorkerTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-RollbackDisabled< bool>][-TaskDefinitionName< string>][-UseDefault< bool>][-VariableParameters< object>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWorkerTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CatalogMoid< string>][-ClassId< WorkflowWorkerTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowWorkerTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-RollbackDisabled< bool>][-TaskDefinitionName< string>][-VariableParameters< object>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -196,21 +196,6 @@ The qualified name of task that should be executed.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -UseDefault
-UseDefault when set to true, means the default version of the task or workflow will be used at the time of execution. When this property is set then version for task or subworkflow cannot be set. When workflow is created or updated the default version of task or subworkflow will be used for validation, but when the workflow is executed the default version that that time will be used for validation and subsequent execution.
-
-```yaml
-Type: bool
 Parameter Sets: (All)
 Aliases:
 

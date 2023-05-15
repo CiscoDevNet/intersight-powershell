@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BaseMac< string>][-ClassId< EquipmentSwitchCard.ClassIdEnum>][-EndMac< string>][-FcPortChannels< System.Collections.Generic.List`1[Model.FcPortChannelRelationship]>][-FcPorts< System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]>][-HwVersion< string>][-Moid< string>][-Name< string>][-ObjectType< EquipmentSwitchCard.ObjectTypeEnum>][-OutOfBandIpMask< string>][-PartNumber< string>][-PortChannels< System.Collections.Generic.List`1[Model.EtherPortChannelRelationship]>][-PowerState< EquipmentSwitchCard.PowerStateEnum>][-PreviousFru< Model.EquipmentFruRelationship>][-Status< EquipmentSwitchCard.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BaseMac< string>][-ClassId< EquipmentSwitchCard.ClassIdEnum>][-EndMac< string>][-FcPortChannels< System.Collections.Generic.List`1[Model.FcPortChannelRelationship]>][-FcPorts< System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]>][-HwVersion< string>][-Moid< string>][-Name< string>][-ObjectType< EquipmentSwitchCard.ObjectTypeEnum>][-OutOfBandIpMask< string>][-PartNumber< string>][-PortChannels< System.Collections.Generic.List`1[Model.EtherPortChannelRelationship]>][-PowerState< EquipmentSwitchCard.PowerStateEnum>][-Status< EquipmentSwitchCard.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -233,24 +233,6 @@ Power state of the switch hardware.\n* `unknown` - The power state of the switch
 
 ```yaml
 Type: EquipmentSwitchCard.PowerStateEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

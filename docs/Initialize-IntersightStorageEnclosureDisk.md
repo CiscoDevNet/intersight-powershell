@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageEnclosureDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BlockSize< string>][-ClassId< StorageEnclosureDisk.ClassIdEnum>][-DiskId< string>][-DiskState< string>][-Health< string>][-Moid< string>][-NumBlocks< string>][-ObjectType< StorageEnclosureDisk.ObjectTypeEnum>][-PhysicalDisk< Model.StoragePhysicalDiskRelationship>][-PreviousFru< Model.EquipmentFruRelationship>][-SasAddress1< string>][-SasAddress2< string>][-Size< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageEnclosureDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BlockSize< string>][-ClassId< StorageEnclosureDisk.ClassIdEnum>][-DiskId< string>][-DiskState< string>][-Health< string>][-Moid< string>][-NumBlocks< string>][-ObjectType< StorageEnclosureDisk.ObjectTypeEnum>][-PhysicalDisk< Model.StoragePhysicalDiskRelationship>][-SasAddress1< string>][-SasAddress2< string>][-Size< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -167,24 +167,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.StoragePhysicalDiskRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

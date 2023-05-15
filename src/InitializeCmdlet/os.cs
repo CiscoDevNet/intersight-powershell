@@ -1642,7 +1642,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"IQN (iSCSI qualified name) of Storage iSCSI target.Can be up to 255 characters long and has the following format, iqn.yyyy-mm.naming-authority:unique_name."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("iqn\\.(\\d{4}-(0[1-9]|1[0-2]))\\.([a-zA-Z0-9]+)([a-zA-Z0-9-.]*)(:)+([^,\\s']+)")]
+        [ValidatePattern("^(iqn\\.(\\d{4}-(0[1-9]|1[0-2]))\\.([a-zA-Z0-9]+)([a-zA-Z0-9-.]*)(:)+([^,\\s']+))$")]
         public string TargetIqn
         {
             get;

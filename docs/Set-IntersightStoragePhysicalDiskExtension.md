@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightStoragePhysicalDiskExtension [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Health< string>][[-Moid]< string>][-PhysicalDisk< StoragePhysicalDiskRelationship>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightStoragePhysicalDiskExtension [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Health< string>][[-Moid]< string>][-PhysicalDisk< StoragePhysicalDiskRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -76,24 +76,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: StoragePhysicalDiskRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

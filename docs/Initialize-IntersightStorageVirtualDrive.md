@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageVirtualDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageVirtualDrive.ClassIdEnum>][-DiskGroup< Model.StorageDiskGroupRelationship>][-Moid< string>][-ObjectType< StorageVirtualDrive.ObjectTypeEnum>][-PhysicalDiskUsages< System.Collections.Generic.List`1[Model.StoragePhysicalDiskUsageRelationship]>][-PreviousFru< Model.EquipmentFruRelationship>][-StorageVirtualDriveContainer< Model.StorageVirtualDriveContainerRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageVirtualDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageVirtualDrive.ClassIdEnum>][-DiskGroup< Model.StorageDiskGroupRelationship>][-Moid< string>][-ObjectType< StorageVirtualDrive.ObjectTypeEnum>][-PhysicalDiskUsages< System.Collections.Generic.List`1[Model.StoragePhysicalDiskUsageRelationship]>][-StorageVirtualDriveContainer< Model.StorageVirtualDriveContainerRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -110,24 +110,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.StoragePhysicalDiskUsageRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 
