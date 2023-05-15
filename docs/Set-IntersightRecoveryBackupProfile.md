@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightRecoveryBackupProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BackupConfig< RecoveryBackupConfigPolicyRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-DeviceId< AssetDeviceRegistrationRelationship>][-Enabled< bool>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduleConfig< RecoveryScheduleConfigPolicyRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< RecoveryBackupProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightRecoveryBackupProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BackupConfig< RecoveryBackupConfigPolicyRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-DeviceId< AssetDeviceRegistrationRelationship>][-Enabled< bool>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduleConfig< RecoveryScheduleConfigPolicyRelationship>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< RecoveryBackupProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -237,6 +237,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ScheduledActions
+
+
+Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of complex type PolicyScheduledAction
+
+```yaml
+Type: System.Collections.Generic.List`1[PolicyScheduledAction]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SrcTemplate
 A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -351,6 +368,8 @@ PS C:\> Set-IntersightRecoveryBackupProfile
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)
 
 [New-IntersightRecoveryBackupProfile](./New-IntersightRecoveryBackupProfile.md)
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightServerProfileTemplate [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfileTemplate.TargetPlatformEnum>][-Type< ServerProfileTemplate.TypeEnum>][-UuidAddressType< ServerProfileTemplate.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightServerProfileTemplate [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfileTemplate.TargetPlatformEnum>][-Type< ServerProfileTemplate.TypeEnum>][-UuidAddressType< ServerProfileTemplate.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -158,6 +158,23 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ScheduledActions
+
+
+Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of complex type PolicyScheduledAction
+
+```yaml
+Type: System.Collections.Generic.List`1[PolicyScheduledAction]
 Parameter Sets: (All)
 Aliases:
 
@@ -330,6 +347,8 @@ PS C:\> New-IntersightServerProfileTemplate
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)
 
 [Remove-IntersightServerProfileTemplate](./Remove-IntersightServerProfileTemplate.md)
 

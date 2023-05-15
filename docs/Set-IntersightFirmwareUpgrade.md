@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DirectDownload< FirmwareDirectDownload>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[string]>][-ExcludeComponentPidList< FirmwareExcludeComponentPidListType>][-FileServer< SoftwarerepositoryFileServer>][[-Moid]< string>][-NetworkShare< FirmwareNetworkShare>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< ComputePhysicalRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeType< FirmwareUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DirectDownload< FirmwareDirectDownload>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[string]>][-ExcludeComponentPidList< FirmwareExcludeComponentPidListType>][-FileServer< SoftwarerepositoryFileServer>][[-Moid]< string>][-NetworkShare< FirmwareNetworkShare>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< ComputePhysicalRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeTriggerMethod< FirmwareUpgrade.UpgradeTriggerMethodEnum>][-UpgradeType< FirmwareUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -227,6 +227,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UpgradeTriggerMethod
+The source that triggered the upgrade. Either via profile or traditional way.\n* `none` - Upgrade is invoked within the service.\n* `profileTrigger` - Upgrade is invoked from a profile deployment.
+
+```yaml
+Type: FirmwareUpgrade.UpgradeTriggerMethodEnum
 Parameter Sets: (All)
 Aliases:
 

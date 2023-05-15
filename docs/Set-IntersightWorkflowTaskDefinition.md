@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWorkflowTaskDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-DefaultVersion< bool>][-Description< string>][-ImplementedTasks< System.Collections.Generic.List`1[WorkflowTaskDefinitionRelationship]>][-InterfaceTask< WorkflowTaskDefinitionRelationship>][-Label< string>][[-Moid]< string>][-Name< string>][-Properties< WorkflowProperties>][-RollbackTasks< System.Collections.Generic.List`1[WorkflowRollbackTask]>][-SecurePropAccess< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskMetadata< WorkflowTaskMetadataRelationship>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightWorkflowTaskDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-DefaultVersion< bool>][-Description< string>][-ImplementedTasks< System.Collections.Generic.List`1[WorkflowTaskDefinitionRelationship]>][-InterfaceTask< WorkflowTaskDefinitionRelationship>][-Label< string>][[-Moid]< string>][-Name< string>][-Properties< WorkflowProperties>][-RollbackTasks< System.Collections.Generic.List`1[WorkflowRollbackTask]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskMetadata< WorkflowTaskMetadataRelationship>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -191,21 +191,6 @@ Note :- Use Initialize-IntersightWorkflowRollbackTask to create the object of co
 
 ```yaml
 Type: System.Collections.Generic.List`1[WorkflowRollbackTask]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SecurePropAccess
-If set to true, the task requires access to secure properties and uses an encryption token associated with a workflow moid to encrypt or decrypt the secure properties.
-
-```yaml
-Type: bool
 Parameter Sets: (All)
 Aliases:
 

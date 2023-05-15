@@ -1991,7 +1991,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Option to control the upgrade, e.g., sd_upgrade_mount_only - download the image into sd and upgrade wait for the server on-next boot.\n* `sd_upgrade_mount_only` - Direct upgrade SD upgrade mount only.\n* `sd_download_only` - Direct upgrade SD download only.\n* `sd_upgrade_only` - Direct upgrade SD upgrade only.\n* `sd_upgrade_full` - Direct upgrade SD upgrade full.\n* `download_only` - Direct upgrade image download only.\n* `upgrade_full` - The upgrade downloads or mounts the image, and reboots immediately for an upgrade.\n* `upgrade_mount_only` - The upgrade downloads or mounts the image. The upgrade happens in next reboot.\n* `chassis_upgrade_full` - Direct upgrade chassis upgrade full."</para>
+        /// <para type="description">"Option to control the upgrade, e.g., sd_upgrade_mount_only - download the image into sd and upgrade wait for the server on-next boot.\n* `sd_upgrade_mount_only` - Direct upgrade SD upgrade mount only.\n* `sd_download_only` - Direct upgrade SD download only.\n* `sd_upgrade_only` - Direct upgrade SD upgrade only.\n* `sd_upgrade_full` - Direct upgrade SD upgrade full.\n* `download_only` - Direct upgrade image download only.\n* `upgrade_full` - The upgrade downloads or mounts the image, and reboots immediately for an upgrade.\n* `upgrade_mount_only` - The upgrade downloads or mounts the image. The upgrade happens in next reboot.\n* `chassis_upgrade_full` - Direct upgrade chassis upgrade full.\n* `monitor_only` - Direct upgrade monitor progress only.\n* `validate_only` - Validate whether a component is ready for ugprade."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -3934,6 +3934,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.MoBaseMoRelationship TargetMo
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -3963,6 +3973,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetMo"))
+            {
+                initObject.TargetMo = this.TargetMo;
             }
             WriteObject(initObject);
         }
@@ -4630,6 +4644,91 @@ namespace Intersight.PowerShell
             {
                 initObject._Version = this.Version;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FirmwareModelBundleVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFirmwareModelBundleVersion")]
+    public class InitializeIntersightFirmwareModelBundleVersion : PSCmdlet
+    {
+        public InitializeIntersightFirmwareModelBundleVersion()
+        {
+            ClassId = FirmwareModelBundleVersion.ClassIdEnum.FirmwareModelBundleVersion;
+            ModelFamily = FirmwareModelBundleVersion.ModelFamilyEnum.UCSCC220M5;
+            ObjectType = FirmwareModelBundleVersion.ObjectTypeEnum.FirmwareModelBundleVersion;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The bundle version to which the server will be upgraded."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string BundleVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareModelBundleVersion.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The server family that will be impacted by this upgrade.\n* `UCSC-C220-M5` - The upgrade on all C220-M5 servers claimed in setup.\n* `UCSC-C220-M4` - The upgrade on all C220-M4 servers claimed in setup.\n* `UCSC-C240-M4` - The upgrade on all C240-M4 servers claimed in setup.\n* `UCSC-C460-M4` - The upgrade on all C460-M4 servers claimed in setup.\n* `UCSC-C240-M5` - The upgrade on all C240-M5 servers claimed in setup.\n* `UCSC-C480-M5` - The upgrade on all C480-M5 servers claimed in setup.\n* `UCSB-B200-M5` - The upgrade on all B200-M5 servers claimed in setup.\n* `UCSB-B480-M5` - The upgrade on all B480-M5 servers claimed in setup.\n* `UCSC-C220-M6` - The upgrade on all C220-M6 servers claimed in setup.\n* `UCSC-C240-M6` - The upgrade on all C240-M6 servers claimed in setup.\n* `UCSC-C225-M6` - The upgrade on all C225-M6 servers claimed in setup.\n* `UCSC-C245-M6` - The upgrade on all C245-M6 servers claimed in setup.\n* `UCSB-B200-M6` - The upgrade on all B200-M6 servers claimed in setup.\n* `UCSX-210C-M6` - The upgrade on all 210C-M6 servers claimed in setup.\n* `UCSX-210C-M7` - The upgrade on all 210C-M7 servers claimed in setup.\n* `UCSX-220-M7` - The upgrade on all C220-M7 servers claimed in setup.\n* `UCSX-240-M7` - The upgrade on all C240-M7 servers claimed in setup.\n* `UCSC-C125` - The upgrade on all C125 servers claimed in setup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareModelBundleVersion.ModelFamilyEnum ModelFamily
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareModelBundleVersion.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.FirmwareModelBundleVersion initObject = new Intersight.Model.FirmwareModelBundleVersion();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BundleVersion"))
+            {
+                initObject.BundleVersion = this.BundleVersion;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ModelFamily"))
+            {
+                initObject.ModelFamily = this.ModelFamily;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -5451,6 +5550,189 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
                 initObject._Version = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FirmwarePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFirmwarePolicy")]
+    public class InitializeIntersightFirmwarePolicy : PSCmdlet
+    {
+        public InitializeIntersightFirmwarePolicy()
+        {
+            ClassId = FirmwarePolicy.ClassIdEnum.FirmwarePolicy;
+            ObjectType = FirmwarePolicy.ObjectTypeEnum.FirmwarePolicy;
+            TargetPlatform = FirmwarePolicy.TargetPlatformEnum.Standalone;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwarePolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<FirmwarePolicy.ExcludeComponentListEnum> ExcludeComponentList
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FirmwareModelBundleVersion> ModelBundleCombo
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwarePolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.PolicyAbstractConfigProfileRelationship> Profiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The target platform on which the policy to be applied. Either standalone or connected.\n* `Standalone` - Servers which are operating in standalone mode i.e. not connected to a Fabric Interconnected.\n* `FIAttached` - Servers which are connected to a Fabric Interconnect that is managed by Intersight."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwarePolicy.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.FirmwarePolicy initObject = new Intersight.Model.FirmwarePolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExcludeComponentList"))
+            {
+                initObject.ExcludeComponentList = this.ExcludeComponentList;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ModelBundleCombo"))
+            {
+                initObject.ModelBundleCombo = this.ModelBundleCombo;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
             }
             WriteObject(initObject);
         }
@@ -7190,6 +7472,7 @@ namespace Intersight.PowerShell
             ClassId = FirmwareUpgrade.ClassIdEnum.FirmwareUpgrade;
             ObjectType = FirmwareUpgrade.ObjectTypeEnum.FirmwareUpgrade;
             Status = FirmwareUpgrade.StatusEnum.NONE;
+            UpgradeTriggerMethod = FirmwareUpgrade.UpgradeTriggerMethodEnum.None;
             UpgradeType = FirmwareUpgrade.UpgradeTypeEnum.DirectUpgrade;
 
         }
@@ -7344,6 +7627,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The source that triggered the upgrade. Either via profile or traditional way.\n* `none` - Upgrade is invoked within the service.\n* `profileTrigger` - Upgrade is invoked from a profile deployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareUpgrade.UpgradeTriggerMethodEnum UpgradeTriggerMethod
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Desired upgrade mode to choose either direct download based upgrade or network share upgrade.\n* `direct_upgrade` - Upgrade mode is direct download.\n* `network_upgrade` - Upgrade mode is network upgrade."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -7410,6 +7703,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UpgradeTriggerMethod"))
+            {
+                initObject.UpgradeTriggerMethod = this.UpgradeTriggerMethod;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("UpgradeType"))
             {

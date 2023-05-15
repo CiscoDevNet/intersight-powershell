@@ -159,6 +159,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a equipmentLocatorLed resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -203,7 +214,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -305,7 +316,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -361,7 +372,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -384,7 +395,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -420,7 +431,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1112,6 +1123,180 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get EquipmentEndPointLog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentEndPointLog", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightEquipmentEndPointLog : GetCmdletBase
+    {
+        public GetIntersightEquipmentEndPointLog()
+        {
+            ApiInstance = new EquipmentApi(Config);
+            MethodName = "GetEquipmentEndPointLogListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time at which the log was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CollectionTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Url to download the end point log."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DownloadUrl
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The end point log file name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string FileName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The end point log file type.\n* `None` - End point log file type None.\n* `SEL` - End point log file type SEL."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public EquipmentEndPointLog.LogTypeEnum LogType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ComputePhysicalRelationship Server
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The end point log collection status.\n* `None` - Log collection not started.\n* `CollectionInProgress` - Log file collection is in progress.\n* `CollectionCompleted` - Log file collection completed.\n* `CollectionFailed` - Log file collection failed.\n* `UploadInProgress` - Log file upload is in progress.\n* `UploadCompleted` - Log file upload completed.\n* `UploadFailed` - Log file upload failed to complete.\n* `DownloadUrlCreationFailed` - Download Url creation failed.\n* `Completed` - Log collection and upload completed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public EquipmentEndPointLog.StatusEnum Status
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentExpanderModule.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightEquipmentExpanderModule", DefaultParameterSetName = "CmdletParam")]
@@ -1193,6 +1378,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1204,7 +1400,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1273,7 +1469,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1306,7 +1502,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1328,7 +1524,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1351,7 +1547,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1500,6 +1696,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1511,7 +1718,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1591,7 +1798,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1624,7 +1831,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1646,7 +1853,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1691,7 +1898,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1807,6 +2014,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1829,7 +2047,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1864,7 +2082,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1897,7 +2115,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1919,7 +2137,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1942,7 +2160,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2103,6 +2321,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2114,7 +2343,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2205,7 +2434,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2238,7 +2467,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2260,7 +2489,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2316,7 +2545,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2468,6 +2697,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a equipmentLocatorLed resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -2501,7 +2741,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2593,7 +2833,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2638,7 +2878,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2660,7 +2900,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2694,7 +2934,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3213,6 +3453,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3224,7 +3475,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3259,7 +3510,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3292,7 +3543,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3314,7 +3565,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3337,7 +3588,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3807,6 +4058,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a managementController resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -3829,7 +4091,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3921,7 +4183,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3965,7 +4227,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3987,7 +4249,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -4032,7 +4294,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -4300,6 +4562,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -4311,7 +4584,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -4357,7 +4630,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -4390,7 +4663,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -4412,7 +4685,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -4435,7 +4708,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -4689,6 +4962,114 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get EquipmentLogDownload.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentLogDownload", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightEquipmentLogDownload : GetCmdletBase
+    {
+        public GetIntersightEquipmentLogDownload()
+        {
+            ApiInstance = new EquipmentApi(Config);
+            MethodName = "GetEquipmentLogDownloadListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ComputePhysicalRelationship Server
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentPsu.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightEquipmentPsu", DefaultParameterSetName = "CmdletParam")]
@@ -4824,6 +5205,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -4835,7 +5227,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -4926,7 +5318,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5014,7 +5406,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5036,7 +5428,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5070,7 +5462,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5219,6 +5611,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -5230,7 +5633,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5310,7 +5713,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5354,7 +5757,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5376,7 +5779,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5399,7 +5802,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5505,6 +5908,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -5516,7 +5930,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5551,7 +5965,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5585,7 +5999,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5607,7 +6021,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5631,7 +6045,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5736,6 +6150,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -5747,7 +6172,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5782,7 +6207,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5848,7 +6273,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5870,7 +6295,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5893,7 +6318,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6205,6 +6630,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"This field identifies the MAC of IOM-A side."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -6238,7 +6674,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6296,7 +6732,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6340,7 +6776,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6362,7 +6798,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6396,7 +6832,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6569,6 +7005,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -6580,7 +7027,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6716,7 +7163,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6749,7 +7196,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6771,7 +7218,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6860,7 +7307,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7161,6 +7608,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"This field identifies the CIMC that manages the controller."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7183,7 +7641,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7251,7 +7709,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7284,7 +7742,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7306,7 +7764,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7351,7 +7809,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7489,6 +7947,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7500,7 +7969,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7546,7 +8015,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7579,7 +8048,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7601,7 +8070,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7635,7 +8104,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7795,6 +8264,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The manufacturer part number of the pluggable SFP."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7817,7 +8297,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the model of the given component."</para>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7918,7 +8398,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7951,7 +8431,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the revision of the given component."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7973,7 +8453,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the serial of the given component."</para>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -8040,7 +8520,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the vendor of the given component."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -8136,6 +8616,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a managementInterface resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -8192,16 +8673,6 @@ namespace Intersight.PowerShell
         }
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -8461,6 +8932,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -8489,16 +8961,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -8557,6 +9019,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -8576,16 +9039,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -8653,6 +9106,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -8668,16 +9122,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -8758,6 +9202,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -8778,16 +9223,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -8880,6 +9315,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a managementController resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -8935,16 +9371,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -9216,16 +9642,7 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public EquipmentBaseRelationship CurrentFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -9248,16 +9665,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -9357,6 +9764,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"A reference to a managementController resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -9412,16 +9820,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -9560,6 +9958,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -9576,16 +9975,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -9712,6 +10101,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -9733,16 +10123,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -9806,6 +10186,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -9826,16 +10207,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -9891,6 +10262,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -9906,16 +10278,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -9971,6 +10333,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -9986,16 +10349,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -10067,6 +10420,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -10085,16 +10439,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -10208,6 +10552,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -10284,16 +10629,6 @@ namespace Intersight.PowerShell
         }
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -10479,6 +10814,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -10497,16 +10833,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -10585,6 +10911,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -10601,16 +10928,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 
@@ -10708,6 +11025,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"The manufacturer part number of the pluggable SFP."</para>
         /// </summary>
@@ -10752,16 +11070,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFruRelationship PreviousFru
-        {
-            get;
-            set;
-        }
 
 
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricSwitchControlPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-EthernetSwitchingMode< FabricSwitchControlPolicy.EthernetSwitchingModeEnum>][-FcSwitchingMode< FabricSwitchControlPolicy.FcSwitchingModeEnum>][-MacAgingSettings< FabricMacAgingSettings>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UdldSettings< FabricUdldGlobalSettings>][-VlanPortOptimizationEnabled< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricSwitchControlPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-EthernetSwitchingMode< FabricSwitchControlPolicy.EthernetSwitchingModeEnum>][-FcSwitchingMode< FabricSwitchControlPolicy.FcSwitchingModeEnum>][-MacAgingSettings< FabricMacAgingSettings>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricSwitchProfileRelationship]>][-ReservedVlanStartId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UdldSettings< FabricUdldGlobalSettings>][-VlanPortOptimizationEnabled< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -156,6 +156,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[FabricSwitchProfileRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReservedVlanStartId
+The starting ID for VLANs reserved for internal use within the Fabric Interconnect. This VLAN ID is the starting ID of \na contiguous block of 128 VLANs that cannot be configured for user data.  This range of VLANs cannot be configured in \nVLAN policy.\nIf this property is not configured, VLAN range 3915 - 4042 is reserved for internal use by default.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

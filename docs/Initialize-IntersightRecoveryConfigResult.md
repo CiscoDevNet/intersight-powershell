@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightRecoveryConfigResult [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< RecoveryConfigResult.ClassIdEnum>][-ConfigStage< string>][-ConfigState< string>][-Moid< string>][-ObjectType< RecoveryConfigResult.ObjectTypeEnum>][-ResultEntries< System.Collections.Generic.List`1[Model.RecoveryConfigResultEntryRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ValidationState< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightRecoveryConfigResult [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< RecoveryConfigResult.ClassIdEnum>][-Moid< string>][-ObjectType< RecoveryConfigResult.ObjectTypeEnum>][-ResultEntries< System.Collections.Generic.List`1[Model.RecoveryConfigResultEntryRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,36 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: RecoveryConfigResult.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigStage
-The current running stage of the configuration or workflow.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigState
-Indicates overall configuration state for applying the configuration to the end point. Values  -- Ok, Ok-with-warning, Errored.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -139,21 +109,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ValidationState
-Indicates overall state for logical model validation. Values  -- Ok, Ok-with-warning, Errored.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

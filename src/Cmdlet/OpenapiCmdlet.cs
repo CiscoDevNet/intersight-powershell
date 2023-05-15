@@ -77,7 +77,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The method type for the given API.\n* `GET` - Method type which indicates it is a GET API call\n* `POST` - Method type which indicates it is a POST API call\n* `PUT` - Method type which indicates it is a PUT API call\n* `PATCH` - Method type which indicates it is a PATCH API call\n* `DELETE` - Method type which indicates it is a DELETE API call"</para>
+        /// <para type="description">"The method type for the given API.\n* `GET` - Method type which indicates it is a GET API call.\n* `POST` - Method type which indicates it is a POST API call.\n* `PUT` - Method type which indicates it is a PUT API call.\n* `PATCH` - Method type which indicates it is a PATCH API call.\n* `DELETE` - Method type which indicates it is a DELETE API call."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -240,7 +240,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload."</para>
+        /// <para type="description">"The name of the feature to which the uploaded file belongs.\n* `System` - This indicates system initiated file uploads.\n* `OpenAPIImport` - This indicates an OpenAPI file upload.\n* `PartnerIntegrationImport` - This indicates a Partner-Integration Appliance user file uploads."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -793,7 +793,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Depicts the status of the task creation request.\n* `none` - Indicates the default status\n* `InProgress` - Request has been picked up for generating tasks from the OpenAPI Specification file\n* `Completed` - All the tasks from the request have been created\n* `Failed` - There were failures in generating one or more tasks in the request"</para>
+        /// <para type="description">"Depicts the status of the task creation request.\n* `none` - Indicates the default status.\n* `InProgress` - Request has been picked up for generating tasks from the OpenAPI Specification file.\n* `Completed` - All the tasks from the request have been created.\n* `Failed` - There were failures in generating one or more tasks in the request."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

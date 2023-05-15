@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageStoragePolicy.ClassIdEnum>][-DefaultDriveMode< StorageStoragePolicy.DefaultDriveModeEnum>][-Description< string>][-DriveGroup< System.Collections.Generic.List`1[Model.StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< Model.StorageM2VirtualDriveConfig>][-Moid< string>][-Name< string>][-ObjectType< StorageStoragePolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< Model.StorageR0Drive>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageStoragePolicy.ClassIdEnum>][-DefaultDriveMode< StorageStoragePolicy.DefaultDriveModeEnum>][-Description< string>][-DriveGroup< System.Collections.Generic.List`1[Model.StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< Model.StorageM2VirtualDriveConfig>][-Moid< string>][-Name< string>][-ObjectType< StorageStoragePolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< Model.StorageR0Drive>][-SecureJbods< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultDriveMode
-Unconfigured drives at the time of deployment will move to the selected state. Newly inserted drives will move to the selected state. Select Unconfigured Good option to retain the existing configuration. Select JBOD to move the unconfigured drives to JBOD state. Select RAID0 to create a RAID0 virtual drive on each of the unconfigured drives. If JBOD is selected, unconfigured drives will move to JBOD state on host reboot. If JBOD is selected, &apos;Use JBOD for Virtual Drive creation&apos; must be disabled. Unused Disks State should be &apos;No Change&apos; if Default Drive Mode is set to JBOD or RAID 0. This setting is applicable only to selected set of controllers on FI attached servers.\n* `UnconfiguredGood` - Newly inserted drives or on reboot, drives will remain the same state.\n* `Jbod` - Newly inserted drives or on reboot, drives will automatically move to JBOD state if drive state was UnconfiguredGood.\n* `RAID0` - Newly inserted drives or on reboot, virtual drives will be created, respective drives will move to Online state.
+All unconfigured drives (non-user configured drives) will move to the selected state on deployment. Newly inserted drives will move to the selected state. Select Unconfigured Good option to retain the existing configuration. Select JBOD to move the unconfigured drives to JBOD state. Select RAID0 to create a RAID0 virtual drive on each of the unconfigured drives. If JBOD is selected, unconfigured drives will move to JBOD state on host reboot. This setting is applicable only to selected set of controllers on FI attached servers.\n* `UnconfiguredGood` - Newly inserted drives or on reboot, drives will remain the same state.\n* `Jbod` - Newly inserted drives or on reboot, drives will automatically move to JBOD state if drive state was UnconfiguredGood.\n* `RAID0` - Newly inserted drives or on reboot, virtual drives will be created, respective drives will move to Online state.
 
 ```yaml
 Type: StorageStoragePolicy.DefaultDriveModeEnum
@@ -232,6 +232,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SecureJbods
+JBOD drives specified in this slot range will be encrypted. Allowed value is a comma or hyphen separated number range. Sample format is 1, 3 or 4-6, 8.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -250,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnusedDisksState
-State to which disks, not used in this policy, are to be moved. NoChange will not change the drive state.\n* `NoChange` - Drive state will not be modified by Storage Policy.\n* `UnconfiguredGood` - Unconfigured good state -ready to be added in a RAID group.\n* `Jbod` - JBOD state where the disks start showing up to Host OS.
+State to which drives, not used in this policy, are to be moved. NoChange will not change the drive state. No Change must be selected if Default Drive State is set to JBOD or RAID0.\n* `NoChange` - Drive state will not be modified by Storage Policy.\n* `UnconfiguredGood` - Unconfigured good state -ready to be added in a RAID group.\n* `Jbod` - JBOD state where the disks start showing up to Host OS.
 
 ```yaml
 Type: StorageStoragePolicy.UnusedDisksStateEnum
@@ -265,7 +280,7 @@ Accept wildcard characters: False
 ```
 
 ### -UseJbodForVdCreation
-Disks in JBOD State are used to create virtual drives.
+Disks in JBOD State are used to create virtual drives. This setting must be disabled if Default Drive State is set to JBOD.
 
 ```yaml
 Type: bool

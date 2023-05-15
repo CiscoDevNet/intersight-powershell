@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkflowServiceItemActionDefinition [-ActionType< WorkflowServiceItemActionDefinition.ActionTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedInstanceStates< System.Collections.Generic.List`1[string]>][-AssociatedRoles< System.Collections.Generic.List`1[IamRoleRelationship]>][-CoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Label< string>][-Moid< string>][[-Name]< string>][-OutputParameters< object>][-Periodicity< long>][-PostCoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-PreCoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-RestrictOnPrivateAppliance< bool>][-ServiceItemDefinition< WorkflowServiceItemDefinitionRelationship>][-StopWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ValidationWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightWorkflowServiceItemActionDefinition [-ActionProperties< WorkflowServiceItemActionProperties>][-ActionType< WorkflowServiceItemActionDefinition.ActionTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedInstanceStates< System.Collections.Generic.List`1[string]>][-AssociatedRoles< System.Collections.Generic.List`1[IamRoleRelationship]>][-AttributeParameters< object>][-CoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Label< string>][-Moid< string>][[-Name]< string>][-Periodicity< long>][-PostCoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-PreCoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-RestrictOnPrivateAppliance< bool>][-ServiceItemDefinition< WorkflowServiceItemDefinitionRelationship>][-StopWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ValidationWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -22,6 +22,23 @@ New-IntersightWorkflowServiceItemActionDefinition [-ActionType< WorkflowServiceI
 Create a &apos;WorkflowServiceItemActionDefinition&apos; resource.
 
 ## PARAMETERS
+
+### -ActionProperties
+Action properties for the service item.
+
+Note :- Use Initialize-IntersightWorkflowServiceItemActionProperties to create the object of complex type WorkflowServiceItemActionProperties
+
+```yaml
+Type: WorkflowServiceItemActionProperties
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -ActionType
 Type of actionDefinition which decides on how to trigger the action.\n* `External` - External actions definition can be triggered by enduser to perform actions on the service item. Once action is completed successfully (eg. create/deploy), user cannot re-trigger that action again.\n* `Internal` - Internal action definition is used to trigger periodic actions on the service item instance.\n* `Repetitive` - Repetitive action definition is an external action that can be triggered by enduser to perform repetitive actions (eg. Edit/Update/Perform health check) on the created service item.
@@ -76,6 +93,23 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[IamRoleRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AttributeParameters
+The mappings from workflows in the action definition to the service item attribute definition. Any output from core or post-core workflow can be mapped to service item attribute definition. The attribute can be referred using the name of the workflow definition and the attribute name in the following format &apos;${&lt;ServiceItemActionWorkflowDefinition.Name&gt;.output.&lt;outputName&gt;&apos;.
+
+Note :- Use Initialize-Intersightobject to create the object of complex type object
+
+```yaml
+Type: object
 Parameter Sets: (All)
 Aliases:
 
@@ -177,23 +211,6 @@ Required: true
 Position: Named
 Default value: None
 Accept pipeline input: True False
-Accept wildcard characters: False
-```
-
-### -OutputParameters
-The output mappings from workflows in the action definition to the service item output definition. Any output from core or post-core workflow can be mapped to service item output definition. The output can be referred using the name of the workflow definition and the output name in the following format &apos;${&lt;ServiceItemActionWorkflowDefinition.Name&gt;.output.&lt;outputName&gt;&apos;.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
-```yaml
-Type: object
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -392,6 +409,8 @@ PS C:\> New-IntersightWorkflowServiceItemActionDefinition
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
+
+[Initialize-IntersightWorkflowServiceItemActionProperties](./Initialize-IntersightWorkflowServiceItemActionProperties.md)
 
 [Initialize-IntersightWorkflowServiceItemActionWorkflowDefinition](./Initialize-IntersightWorkflowServiceItemActionWorkflowDefinition.md)
 

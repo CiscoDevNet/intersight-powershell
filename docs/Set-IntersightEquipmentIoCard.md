@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentIoCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConnectionStatus< string>][-FanModules< System.Collections.Generic.List`1[EquipmentFanModuleRelationship]>][-HostPorts< System.Collections.Generic.List`1[EtherHostPortRelationship]>][-InbandIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][-MgmtController< ManagementControllerRelationship>][[-Moid]< string>][-NetworkPorts< System.Collections.Generic.List`1[EtherNetworkPortRelationship]>][-PhysicalDeviceRegistration< AssetDeviceRegistrationRelationship>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentIoCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConnectionStatus< string>][-FanModules< System.Collections.Generic.List`1[EquipmentFanModuleRelationship]>][-HostPorts< System.Collections.Generic.List`1[EtherHostPortRelationship]>][-InbandIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][-MgmtController< ManagementControllerRelationship>][[-Moid]< string>][-NetworkPorts< System.Collections.Generic.List`1[EtherNetworkPortRelationship]>][-PhysicalDeviceRegistration< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -165,24 +165,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: AssetDeviceRegistrationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

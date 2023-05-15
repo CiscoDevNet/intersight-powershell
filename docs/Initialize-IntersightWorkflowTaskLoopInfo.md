@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowTaskLoopInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowTaskLoopInfo.ClassIdEnum>][-Iteration< long>][-LoopTaskLabel< string>][-LoopTaskName< string>][-LoopType< WorkflowTaskLoopInfo.LoopTypeEnum>][-ObjectType< WorkflowTaskLoopInfo.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowTaskLoopInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowTaskLoopInfo.ClassIdEnum>][-ObjectType< WorkflowTaskLoopInfo.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,66 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: WorkflowTaskLoopInfo.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Iteration
-This specifies the count of iteration for the specific task executed inside the loop.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LoopTaskLabel
-Label of the loop task inside which this task is executed.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LoopTaskName
-Name of the loop task inside which this task is executed.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LoopType
-This specifies the type of loop, Serial or Parallel.\n* `None` - The enum specifies the option as None which implies this is not a Loop type and this is the default value for loop type.\n* `Parallel` - The enum specifies the option as Parallel where the loop task type is parallel loop.\n* `Serial` - The enum specifies the option as Serial where the loop task type is serial loop.
-
-```yaml
-Type: WorkflowTaskLoopInfo.LoopTypeEnum
 Parameter Sets: (All)
 Aliases:
 

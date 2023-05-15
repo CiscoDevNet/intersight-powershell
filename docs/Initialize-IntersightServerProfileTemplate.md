@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightServerProfileTemplate [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ServerProfileTemplate.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ServerProfileTemplate.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ServerProfileTemplate.TargetPlatformEnum>][-Type< ServerProfileTemplate.TypeEnum>][-UuidAddressType< ServerProfileTemplate.UuidAddressTypeEnum>][-UuidPool< Model.UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightServerProfileTemplate [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ServerProfileTemplate.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ServerProfileTemplate.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ServerProfileTemplate.TargetPlatformEnum>][-Type< ServerProfileTemplate.TypeEnum>][-UuidAddressType< ServerProfileTemplate.UuidAddressTypeEnum>][-UuidPool< Model.UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -199,6 +199,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ScheduledActions
+
+
+Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of complex type PolicyScheduledAction
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.PolicyScheduledAction]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SrcTemplate
 A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -359,3 +376,5 @@ PS C:\> Initialize-IntersightServerProfileTemplate
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)

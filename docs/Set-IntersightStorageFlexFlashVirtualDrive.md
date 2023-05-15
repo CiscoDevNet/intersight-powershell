@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightStorageFlexFlashVirtualDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DriveScope< string>][-DriveStatus< string>][[-Moid]< string>][-PartitionId< string>][-PreviousFru< EquipmentFruRelationship>][-ResidentImage< string>][-Size< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualDrive< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightStorageFlexFlashVirtualDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DriveScope< string>][-DriveStatus< string>][[-Moid]< string>][-PartitionId< string>][-ResidentImage< string>][-Size< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VirtualDrive< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -88,24 +88,6 @@ The partition Id of the flex flash virtual Drive.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

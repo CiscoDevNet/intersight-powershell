@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWaitTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWaitTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowWaitTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-Prompts< System.Collections.Generic.List`1[Model.WorkflowWaitTaskPrompt]>][-RollbackDisabled< bool>][-UseDefault< bool>][-VariableParameters< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWaitTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWaitTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowWaitTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-Prompts< System.Collections.Generic.List`1[Model.WorkflowWaitTaskPrompt]>][-RollbackDisabled< bool>][-VariableParameters< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -180,21 +180,6 @@ Accept wildcard characters: False
 
 ### -RollbackDisabled
 The task is disabled/enabled for rollback operation in this workflow if the task has rollback support.
-
-```yaml
-Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -UseDefault
-UseDefault when set to true, means the default version of the task or workflow will be used at the time of execution. When this property is set then version for task or subworkflow cannot be set. When workflow is created or updated the default version of task or subworkflow will be used for validation, but when the workflow is executed the default version that that time will be used for validation and subsequent execution.
 
 ```yaml
 Type: bool

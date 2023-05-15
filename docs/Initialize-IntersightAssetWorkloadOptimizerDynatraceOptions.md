@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetWorkloadOptimizerDynatraceOptions [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetWorkloadOptimizerDynatraceOptions.ClassIdEnum>][-EnvironmentId< string>][-ObjectType< AssetWorkloadOptimizerDynatraceOptions.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetWorkloadOptimizerDynatraceOptions [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetWorkloadOptimizerDynatraceOptions.ClassIdEnum>][-CollectVmMetrics< bool>][-EnvironmentId< string>][-ObjectType< AssetWorkloadOptimizerDynatraceOptions.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: AssetWorkloadOptimizerDynatraceOptions.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CollectVmMetrics
+Overwrite Hypervisor or Cloud Provider Virtual Machine metrics with data from the target.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

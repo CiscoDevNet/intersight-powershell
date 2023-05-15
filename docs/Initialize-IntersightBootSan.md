@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Lun
-The Logical Unit Number (LUN) of the device.
+The Logical Unit Number (LUN) of the device. For SAN boot configuration to be deployed on a server with 1300 family of Cisco VIC adapters, the recommendation is for the boot LUN to be numbered as 0 to ensure that LUN is mounted as the first disk from which the server boots.
 
 ```yaml
 Type: long

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowProperties.ClassIdEnum>][-ExternalMeta< bool>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-ObjectType< WorkflowProperties.ObjectTypeEnum>][-OutputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-RetryCount< long>][-RetryDelay< long>][-RetryPolicy< WorkflowProperties.RetryPolicyEnum>][-SupportStatus< WorkflowProperties.SupportStatusEnum>][-Timeout< long>][-TimeoutPolicy< WorkflowProperties.TimeoutPolicyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowProperties.ClassIdEnum>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-ObjectType< WorkflowProperties.ObjectTypeEnum>][-OutputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-RetryCount< long>][-RetryDelay< long>][-RetryPolicy< WorkflowProperties.RetryPolicyEnum>][-SupportStatus< WorkflowProperties.SupportStatusEnum>][-Timeout< long>][-TimeoutPolicy< WorkflowProperties.TimeoutPolicyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,21 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: WorkflowProperties.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ExternalMeta
-When set to false the task definition can only be used by internal system workflows. When set to true then the task can be included in user defined workflows.
-
-```yaml
-Type: bool
 Parameter Sets: (All)
 Aliases:
 

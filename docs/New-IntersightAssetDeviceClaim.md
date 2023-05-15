@@ -175,8 +175,6 @@ PS C:\> New-IntersightAssetDeviceClaim
 
 ## RELATED LINKS
 
-[Initialize-IntersightAssetConnectionControlMessage](./Initialize-IntersightAssetConnectionControlMessage.md)
-
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightAssetDeviceClaim](./Remove-IntersightAssetDeviceClaim.md)

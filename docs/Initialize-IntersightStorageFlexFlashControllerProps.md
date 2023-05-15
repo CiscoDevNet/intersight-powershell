@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageFlexFlashControllerProps [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CardsManageable< string>][-ClassId< StorageFlexFlashControllerProps.ClassIdEnum>][-ConfiguredMode< string>][-ControllerName< string>][-ControllerStatus< string>][-FwVersion< string>][-InternalState< string>][-Moid< string>][-ObjectType< StorageFlexFlashControllerProps.ObjectTypeEnum>][-OperatingMode< string>][-PhysicalDriveCount< string>][-PreviousFru< Model.EquipmentFruRelationship>][-ProductName< string>][-StartupFwVersion< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VirtualDriveCount< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageFlexFlashControllerProps [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CardsManageable< string>][-ClassId< StorageFlexFlashControllerProps.ClassIdEnum>][-ConfiguredMode< string>][-ControllerName< string>][-ControllerStatus< string>][-FwVersion< string>][-InternalState< string>][-Moid< string>][-ObjectType< StorageFlexFlashControllerProps.ObjectTypeEnum>][-OperatingMode< string>][-PhysicalDriveCount< string>][-ProductName< string>][-StartupFwVersion< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VirtualDriveCount< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -194,24 +194,6 @@ Number of connected physical drives to a specific Flex flash controller.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

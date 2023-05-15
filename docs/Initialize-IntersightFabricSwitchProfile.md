@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< Model.NetworkElementRelationship>][-ClassId< FabricSwitchProfile.ClassIdEnum>][-ConfigChanges< Model.PolicyConfigChange>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchClusterProfile< Model.FabricSwitchClusterProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< FabricSwitchProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< Model.NetworkElementRelationship>][-ClassId< FabricSwitchProfile.ClassIdEnum>][-ConfigChanges< Model.PolicyConfigChange>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchClusterProfile< Model.FabricSwitchClusterProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< FabricSwitchProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -216,6 +216,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ScheduledActions
+
+
+Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of complex type PolicyScheduledAction
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.PolicyScheduledAction]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SrcTemplate
 A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -348,3 +365,5 @@ PS C:\> Initialize-IntersightFabricSwitchProfile
 [Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)

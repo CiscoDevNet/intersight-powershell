@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareUpgrade.ClassIdEnum>][-DirectDownload< Model.FirmwareDirectDownload>][-Distributable< Model.FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[FirmwareUpgrade.ExcludeComponentListEnum]>][-ExcludeComponentPidList< Model.FirmwareExcludeComponentPidListType>][-FileServer< Model.SoftwarerepositoryFileServer>][-Moid< string>][-NetworkShare< Model.FirmwareNetworkShare>][-ObjectType< FirmwareUpgrade.ObjectTypeEnum>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-Server< Model.ComputePhysicalRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UpgradeType< FirmwareUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareUpgrade.ClassIdEnum>][-DirectDownload< Model.FirmwareDirectDownload>][-Distributable< Model.FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[FirmwareUpgrade.ExcludeComponentListEnum]>][-ExcludeComponentPidList< Model.FirmwareExcludeComponentPidListType>][-FileServer< Model.SoftwarerepositoryFileServer>][-Moid< string>][-NetworkShare< Model.FirmwareNetworkShare>][-ObjectType< FirmwareUpgrade.ObjectTypeEnum>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-Server< Model.ComputePhysicalRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UpgradeTriggerMethod< FirmwareUpgrade.UpgradeTriggerMethodEnum>][-UpgradeType< FirmwareUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -258,6 +258,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UpgradeTriggerMethod
+The source that triggered the upgrade. Either via profile or traditional way.\n* `none` - Upgrade is invoked within the service.\n* `profileTrigger` - Upgrade is invoked from a profile deployment.
+
+```yaml
+Type: FirmwareUpgrade.UpgradeTriggerMethodEnum
 Parameter Sets: (All)
 Aliases:
 

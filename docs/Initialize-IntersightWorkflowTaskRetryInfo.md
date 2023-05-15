@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowTaskRetryInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowTaskRetryInfo.ClassIdEnum>][-ObjectType< WorkflowTaskRetryInfo.ObjectTypeEnum>][-Status< string>][-TaskInstId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowTaskRetryInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowTaskRetryInfo.ClassIdEnum>][-ObjectType< WorkflowTaskRetryInfo.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,36 +59,6 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: WorkflowTaskRetryInfo.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Status
-Status of the retried task.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TaskInstId
-Retry instance will get a unique instance id.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

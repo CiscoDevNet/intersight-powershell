@@ -411,6 +411,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.PolicyScheduledAction> ScheduledActions
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -497,6 +507,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ScheduleConfig"))
             {
                 initObject.ScheduleConfig = this.ScheduleConfig;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScheduledActions"))
+            {
+                initObject.ScheduledActions = this.ScheduledActions;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
             {
@@ -701,26 +715,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The current running stage of the configuration or workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ConfigStage
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Indicates overall configuration state for applying the configuration to the end point. Values  -- Ok, Ok-with-warning, Errored."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ConfigState
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -760,16 +754,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"Indicates overall state for logical model validation. Values  -- Ok, Ok-with-warning, Errored."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ValidationState
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -779,14 +763,6 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigStage"))
-            {
-                initObject.ConfigStage = this.ConfigStage;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigState"))
-            {
-                initObject.ConfigState = this.ConfigState;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -799,10 +775,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ValidationState"))
-            {
-                initObject.ValidationState = this.ValidationState;
             }
             WriteObject(initObject);
         }

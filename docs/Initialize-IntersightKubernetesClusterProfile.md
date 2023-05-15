@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< Model.KubernetesClusterCertificateConfiguration>][-ClassId< KubernetesClusterProfile.ClassIdEnum>][-ClusterIpPools< System.Collections.Generic.List`1[Model.IppoolPoolRelationship]>][-ConfigContext< Model.PolicyConfigContext>][-ContainerRuntimeConfig< Model.KubernetesContainerRuntimePolicyRelationship>][-ContainerRuntimeProxyPolicy< Model.KubernetesHttpProxyPolicyRelationship>][-Description< string>][-DeviceConnectorProxyPolicy< Model.KubernetesHttpProxyPolicyRelationship>][-EssentialAddons< System.Collections.Generic.List`1[Model.KubernetesEssentialAddon]>][-KubeConfig< Model.KubernetesConfiguration>][-LoadbalancerBlockIpLeases< System.Collections.Generic.List`1[Model.IppoolBlockLeaseRelationship]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[Model.IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< Model.KubernetesClusterManagementConfig>][-MasterVipLease< Model.IppoolIpLeaseRelationship>][-Moid< string>][-Name< string>][-NetConfig< Model.KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[Model.KubernetesNodeGroupProfileRelationship]>][-ObjectType< KubernetesClusterProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-ParentSolutionProfile< Model.MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< Model.KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TrustedRegistries< Model.KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< Model.KubernetesClusterCertificateConfiguration>][-ClassId< KubernetesClusterProfile.ClassIdEnum>][-ClusterIpPools< System.Collections.Generic.List`1[Model.IppoolPoolRelationship]>][-ConfigContext< Model.PolicyConfigContext>][-ContainerRuntimeConfig< Model.KubernetesContainerRuntimePolicyRelationship>][-ContainerRuntimeProxyPolicy< Model.KubernetesHttpProxyPolicyRelationship>][-Description< string>][-DeviceConnectorProxyPolicy< Model.KubernetesHttpProxyPolicyRelationship>][-EssentialAddons< System.Collections.Generic.List`1[Model.KubernetesEssentialAddon]>][-KubeConfig< Model.KubernetesConfiguration>][-LoadbalancerBlockIpLeases< System.Collections.Generic.List`1[Model.IppoolBlockLeaseRelationship]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[Model.IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< Model.KubernetesClusterManagementConfig>][-MasterVipLease< Model.IppoolIpLeaseRelationship>][-Moid< string>][-Name< string>][-NetConfig< Model.KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[Model.KubernetesNodeGroupProfileRelationship]>][-ObjectType< KubernetesClusterProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-ParentSolutionProfile< Model.MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< Model.KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TrustedRegistries< Model.KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -462,6 +462,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ScheduledActions
+
+
+Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of complex type PolicyScheduledAction
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.PolicyScheduledAction]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SrcTemplate
 A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -633,3 +650,5 @@ PS C:\> Initialize-IntersightKubernetesClusterProfile
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)

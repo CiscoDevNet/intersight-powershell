@@ -15,6 +15,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightCertificatemanagementCertificateBase()
         {
+            CertType = CertificatemanagementCertificateBase.CertTypeEnum.None;
             ClassId = CertificatemanagementCertificateBase.ClassIdEnum.CertificatemanagementImc;
             ObjectType = CertificatemanagementCertificateBase.ObjectTypeEnum.CertificatemanagementImc;
 
@@ -25,6 +26,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Certificate Type for the certificate management.\n* `None` - Set certificate on the selected end point .\n* `KMIPClient` - Set KMIP certificate on the selected end point."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CertificatemanagementCertificateBase.CertTypeEnum CertType
         {
             get;
             set;
@@ -87,6 +98,10 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CertType"))
+            {
+                initObject.CertType = this.CertType;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Certificate"))
             {
                 initObject.Certificate = this.Certificate;
@@ -113,6 +128,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightCertificatemanagementImc()
         {
+            CertType = CertificatemanagementImc.CertTypeEnum.None;
             ClassId = CertificatemanagementImc.ClassIdEnum.CertificatemanagementImc;
             ObjectType = CertificatemanagementImc.ObjectTypeEnum.CertificatemanagementImc;
 
@@ -123,6 +139,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Certificate Type for the certificate management.\n* `None` - Set certificate on the selected end point .\n* `KMIPClient` - Set KMIP certificate on the selected end point."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CertificatemanagementImc.CertTypeEnum CertType
         {
             get;
             set;
@@ -184,6 +210,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CertType"))
+            {
+                initObject.CertType = this.CertType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Certificate"))
             {

@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not the same as device connector&apos;s public key, an error reponse with appropriate error message is thrown back.
+The public key that was used to encrypt the values present in SecureProperties dictionary.\nIf the given public key is not the same as device connector&apos;s public key, an error response with appropriate error message is thrown back.
 
 ```yaml
 Type: string

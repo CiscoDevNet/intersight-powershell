@@ -77,7 +77,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The encryption key to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters."</para>
+        /// <para type="description">"The encryption key to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters. Use “00” to disable encryption key use. This configuration is supported by all standalone rack servers. FI-attached rack servers with firmware at minimum of 4.2.3a support this configuration. FI-attached blade servers do not support an encryption key. IPMI commands using this key should append zeroes to the key to achieve a length of 40 characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^[a-fA-F0-9]*$")]
@@ -156,7 +156,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The highest privilege level that can be assigned to an IPMI session on a server.\n* `admin` - Privilege to perform all actions available through IPMI.\n* `user` - Privilege to perform some functions through IPMI but restriction on performing administrative tasks.\n* `read-only` - Privilege to view information throught IPMI but restriction on making any changes."</para>
+        /// <para type="description">"The highest privilege level that can be assigned to an IPMI session on a server. This configuration is supported by all standalone rack servers. FI-attached rack servers with firmware at minimum of 4.2.3a support this configuration. FI-attached blade servers do not support privilege level. Privilege level will be ignored for unsupported servers.\n* `admin` - Privilege to perform all actions available through IPMI.\n* `user` - Privilege to perform some functions through IPMI but restriction on performing administrative tasks.\n* `read-only` - Privilege to view information throught IPMI but restriction on making any changes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -263,7 +263,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The encryption key to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters."</para>
+        /// <para type="description">"The encryption key to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters. Use “00” to disable encryption key use. This configuration is supported by all standalone rack servers. FI-attached rack servers with firmware at minimum of 4.2.3a support this configuration. FI-attached blade servers do not support an encryption key. IPMI commands using this key should append zeroes to the key to achieve a length of 40 characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^[a-fA-F0-9]*$")]
@@ -331,7 +331,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The highest privilege level that can be assigned to an IPMI session on a server.\n* `admin` - Privilege to perform all actions available through IPMI.\n* `user` - Privilege to perform some functions through IPMI but restriction on performing administrative tasks.\n* `read-only` - Privilege to view information throught IPMI but restriction on making any changes."</para>
+        /// <para type="description">"The highest privilege level that can be assigned to an IPMI session on a server. This configuration is supported by all standalone rack servers. FI-attached rack servers with firmware at minimum of 4.2.3a support this configuration. FI-attached blade servers do not support privilege level. Privilege level will be ignored for unsupported servers.\n* `admin` - Privilege to perform all actions available through IPMI.\n* `user` - Privilege to perform some functions through IPMI but restriction on performing administrative tasks.\n* `read-only` - Privilege to view information throught IPMI but restriction on making any changes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -418,7 +418,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The encryption key to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters."</para>
+        /// <para type="description">"The encryption key to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters. Use “00” to disable encryption key use. This configuration is supported by all standalone rack servers. FI-attached rack servers with firmware at minimum of 4.2.3a support this configuration. FI-attached blade servers do not support an encryption key. IPMI commands using this key should append zeroes to the key to achieve a length of 40 characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-fA-F0-9]*$")]
@@ -467,7 +467,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The highest privilege level that can be assigned to an IPMI session on a server.\n* `admin` - Privilege to perform all actions available through IPMI.\n* `user` - Privilege to perform some functions through IPMI but restriction on performing administrative tasks.\n* `read-only` - Privilege to view information throught IPMI but restriction on making any changes."</para>
+        /// <para type="description">"The highest privilege level that can be assigned to an IPMI session on a server. This configuration is supported by all standalone rack servers. FI-attached rack servers with firmware at minimum of 4.2.3a support this configuration. FI-attached blade servers do not support privilege level. Privilege level will be ignored for unsupported servers.\n* `admin` - Privilege to perform all actions available through IPMI.\n* `user` - Privilege to perform some functions through IPMI but restriction on performing administrative tasks.\n* `read-only` - Privilege to view information throught IPMI but restriction on making any changes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -564,7 +564,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The encryption key to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters."</para>
+        /// <para type="description">"The encryption key to use for IPMI communication. It should have an even number of hexadecimal characters and not exceed 40 characters. Use “00” to disable encryption key use. This configuration is supported by all standalone rack servers. FI-attached rack servers with firmware at minimum of 4.2.3a support this configuration. FI-attached blade servers do not support an encryption key. IPMI commands using this key should append zeroes to the key to achieve a length of 40 characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-fA-F0-9]*$")]
@@ -613,7 +613,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The highest privilege level that can be assigned to an IPMI session on a server.\n* `admin` - Privilege to perform all actions available through IPMI.\n* `user` - Privilege to perform some functions through IPMI but restriction on performing administrative tasks.\n* `read-only` - Privilege to view information throught IPMI but restriction on making any changes."</para>
+        /// <para type="description">"The highest privilege level that can be assigned to an IPMI session on a server. This configuration is supported by all standalone rack servers. FI-attached rack servers with firmware at minimum of 4.2.3a support this configuration. FI-attached blade servers do not support privilege level. Privilege level will be ignored for unsupported servers.\n* `admin` - Privilege to perform all actions available through IPMI.\n* `user` - Privilege to perform some functions through IPMI but restriction on performing administrative tasks.\n* `read-only` - Privilege to view information throught IPMI but restriction on making any changes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

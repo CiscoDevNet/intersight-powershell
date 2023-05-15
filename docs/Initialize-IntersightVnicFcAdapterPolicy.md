@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -LunCount
-The maximum number of LUNs that the Fibre Channel driver will export or show. The maximum number of LUNs is usually controlled by the operating system running on the server.
+The maximum number of LUNs that the Fibre Channel driver will export or show. The maximum number of LUNs is usually controlled by the operating system running on the server. Lun Count value can exceed 1024 only for vHBA of type &apos;FC Initiator&apos; and on servers having supported firmware version.
 
 ```yaml
 Type: long

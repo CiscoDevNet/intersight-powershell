@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowServiceItemActionInstance [-Action< WorkflowServiceItemActionInstance.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowServiceItemActionInstance.ClassIdEnum>][-Input< object>][-Moid< string>][-ObjectType< WorkflowServiceItemActionInstance.ObjectTypeEnum>][-ServiceItemActionDefinition< Model.WorkflowServiceItemActionDefinitionRelationship>][-ServiceItemInstance< Model.WorkflowServiceItemInstanceRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowServiceItemActionInstance [-Action< WorkflowServiceItemActionInstance.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowServiceItemActionInstance.ClassIdEnum>][-Idp< Model.IamIdpRelationship>][-IdpReference< Model.IamIdpReferenceRelationship>][-Input< object>][-Moid< string>][-ObjectType< WorkflowServiceItemActionInstance.ObjectTypeEnum>][-ServiceItemActionDefinition< Model.WorkflowServiceItemActionDefinitionRelationship>][-ServiceItemInstance< Model.WorkflowServiceItemInstanceRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-User< Model.IamUserRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -25,7 +25,7 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 ## PARAMETERS
 
 ### -Action
-Name of the action that needs to be performed on the service item instance.\n* `None` - No action is set, this is the default value for action field.\n* `Validate` - Validate the action instance inputs and run the validation workflows.\n* `Start` - Start a new execution of the action instance.\n* `Retry` - Retry the service item action instance from the beginning.\n* `RetryFailed` - Retry the workflow that has failed from the failure point.\n* `Cancel` - Cancel the core workflow that is in running or waiting state. This action can be used when the workflows are stuck and not progressing.\n* `Stop` - Stop the action instance which is in progress and didn&apos;t complete successfully. Use this action to clear the state and then delete the action instance. A completed action cannot be stopped.
+Name of the action that needs to be performed on the service item instance.\n* `None` - No action is set, this is the default value for action field.\n* `Validate` - Validate the action instance inputs and run the validation workflows.\n* `Start` - Start a new execution of the action instance.\n* `Rerun` - Rerun the service item action instance from the beginning.\n* `Retry` - Retry the workflow that has failed from the failure point.\n* `Cancel` - Cancel the core workflow that is in running or waiting state. This action can be used when the workflows are stuck and not progressing.\n* `Stop` - Stop the action instance which is in progress and didn&apos;t complete successfully. Use this action to clear the state and then delete the action instance. A completed action cannot be stopped.
 
 ```yaml
 Type: WorkflowServiceItemActionInstance.ActionEnum
@@ -59,6 +59,42 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: WorkflowServiceItemActionInstance.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Idp
+A reference to a iamIdp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.IamIdpRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IdpReference
+A reference to a iamIdpReference resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.IamIdpReferenceRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -159,6 +195,24 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -User
+A reference to a iamUser resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.IamUserRelationship
 Parameter Sets: (All)
 Aliases:
 

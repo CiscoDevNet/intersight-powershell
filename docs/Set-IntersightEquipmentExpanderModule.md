@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentExpanderModule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EquipmentChassis< EquipmentChassisRelationship>][-FanModules< System.Collections.Generic.List`1[EquipmentFanModuleRelationship]>][[-Moid]< string>][-PartNumber< string>][-PreviousFru< EquipmentFruRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentExpanderModule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EquipmentChassis< EquipmentChassisRelationship>][-FanModules< System.Collections.Generic.List`1[EquipmentFanModuleRelationship]>][[-Moid]< string>][-PartNumber< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -94,24 +94,6 @@ Part number identifier for the expander module.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexConfigResult [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexConfigResult.ClassIdEnum>][-ConfigProgress< string>][-ConfigStage< string>][-ConfigState< string>][-Duration< string>][-Moid< string>][-ObjectType< HyperflexConfigResult.ObjectTypeEnum>][-ResultEntries< System.Collections.Generic.List`1[Model.HyperflexConfigResultEntryRelationship]>][-StartTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ValidationState< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHyperflexConfigResult [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexConfigResult.ClassIdEnum>][-Moid< string>][-ObjectType< HyperflexConfigResult.ObjectTypeEnum>][-ResultEntries< System.Collections.Generic.List`1[Model.HyperflexConfigResultEntryRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,66 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: HyperflexConfigResult.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigProgress
-The progress percentage of the running configuration or workflow.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigStage
-The current running stage of the configuration or workflow.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigState
-Indicates overall configuration state for applying the configuration to the end point. Values  -- Ok, Ok-with-warning, Errored.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Duration
-The duration of the running configuration or workflow.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -162,21 +102,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -StartTime
-The start time of the configuration or workflow.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -184,21 +109,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ValidationState
-Indicates overall state for logical model validation. Values  -- Ok, Ok-with-warning, Errored.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

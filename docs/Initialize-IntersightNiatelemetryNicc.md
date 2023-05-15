@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryNicc [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNicc.ClassIdEnum>][-Moid< string>][-NiccVersion< string>][-ObjectType< NiatelemetryNicc.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryNicc [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNicc.ClassIdEnum>][-ConfigIssues< string>][-Moid< string>][-NiccState< string>][-NiccStateLastUpdateTs< string>][-NiccVersion< string>][-ObjectType< NiatelemetryNicc.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,8 +54,53 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ConfigIssues
+Configuration issues depicts the failures for NICC managed package upgrade on APIC.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NiccState
+NICC state. NiccState checks the current operational state of NICC app on APIC.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NiccStateLastUpdateTs
+NICC state last updated timestamp. It indicates the last updated timestamp for operational state of NICC app.
 
 ```yaml
 Type: string

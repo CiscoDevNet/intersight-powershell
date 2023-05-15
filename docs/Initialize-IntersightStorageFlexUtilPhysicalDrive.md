@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageFlexUtilPhysicalDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BlockSize< string>][-Capacity< string>][-ClassId< StorageFlexUtilPhysicalDrive.ClassIdEnum>][-Controller< string>][-DrivesEnabled< string>][-Health< string>][-ManufacturerDate< string>][-ManufacturerId< string>][-Moid< string>][-ObjectType< StorageFlexUtilPhysicalDrive.ObjectTypeEnum>][-OemId< string>][-PartitionCount< string>][-PdStatus< string>][-PhysicalDrive< string>][-PreviousFru< Model.EquipmentFruRelationship>][-ProductName< string>][-ProductRevision< string>][-ReadErrorCount< string>][-ReadErrorThreshold< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WriteEnabled< string>][-WriteErrorCount< string>][-WriteErrorThreshold< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageFlexUtilPhysicalDrive [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BlockSize< string>][-Capacity< string>][-ClassId< StorageFlexUtilPhysicalDrive.ClassIdEnum>][-Controller< string>][-DrivesEnabled< string>][-Health< string>][-ManufacturerDate< string>][-ManufacturerId< string>][-Moid< string>][-ObjectType< StorageFlexUtilPhysicalDrive.ObjectTypeEnum>][-OemId< string>][-PartitionCount< string>][-PdStatus< string>][-PhysicalDrive< string>][-ProductName< string>][-ProductRevision< string>][-ReadErrorCount< string>][-ReadErrorThreshold< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WriteEnabled< string>][-WriteErrorCount< string>][-WriteErrorThreshold< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -239,24 +239,6 @@ The type of physical drive. Example - microSD.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PreviousFru
-A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentFruRelationship
 Parameter Sets: (All)
 Aliases:
 
