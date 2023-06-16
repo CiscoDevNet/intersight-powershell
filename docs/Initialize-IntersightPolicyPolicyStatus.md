@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPolicyPolicyStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyPolicyStatus.ClassIdEnum>][-Moid< string>][-ObjectType< PolicyPolicyStatus.ObjectTypeEnum>][-Reason< string>][-Status< PolicyPolicyStatus.StatusEnum>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPolicyPolicyStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyPolicyStatus.ClassIdEnum>][-ObjectType< PolicyPolicyStatus.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,71 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Moid
-The object id of the policy being attached.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: PolicyPolicyStatus.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Reason
-The reason for the status - it will be empty if status is ok or validating. If error, it will have the appropriate message indicating the reason for failure.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Status
-Indicates if the policy attach/detach was successful or not. Values  -- ok, errored, validating.\n* `ok` - The policy attach/detach is successful.\n* `error` - The policy cannot be attached/detached due to an error.\n* `validating` - The policy preconfig validation is in progress.
-
-```yaml
-Type: PolicyPolicyStatus.StatusEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Type
-The object type of the policy being attached.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

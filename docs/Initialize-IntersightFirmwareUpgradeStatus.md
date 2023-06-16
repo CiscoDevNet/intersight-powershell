@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareUpgradeStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Checksum< Model.ConnectorFileChecksum>][-ClassId< FirmwareUpgradeStatus.ClassIdEnum>][-DownloadError< string>][-DownloadMessage< string>][-DownloadPercentage< long>][-DownloadProgress< long>][-DownloadRetries< long>][-DownloadStage< string>][-EpPowerStatus< FirmwareUpgradeStatus.EpPowerStatusEnum>][-Moid< string>][-ObjectType< FirmwareUpgradeStatus.ObjectTypeEnum>][-OverallError< string>][-OverallPercentage< long>][-Overallstatus< FirmwareUpgradeStatus.OverallstatusEnum>][-PendingType< FirmwareUpgradeStatus.PendingTypeEnum>][-SdCardDownloadError< string>][-Sha256checksum< byte[]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareUpgradeStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Checksum< Model.ConnectorFileChecksum>][-ClassId< FirmwareUpgradeStatus.ClassIdEnum>][-DownloadError< string>][-DownloadMessage< string>][-DownloadPercentage< long>][-DownloadProgress< long>][-DownloadRetries< long>][-DownloadStage< string>][-EpPowerStatus< FirmwareUpgradeStatus.EpPowerStatusEnum>][-InitialPowerStatus< FirmwareUpgradeStatus.InitialPowerStatusEnum>][-Moid< string>][-ObjectType< FirmwareUpgradeStatus.ObjectTypeEnum>][-OverallError< string>][-OverallPercentage< long>][-Overallstatus< FirmwareUpgradeStatus.OverallstatusEnum>][-PendingType< FirmwareUpgradeStatus.PendingTypeEnum>][-SdCardDownloadError< string>][-Sha256checksum< byte[]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -166,6 +166,21 @@ The server power status after the upgrade request is submitted in the endpoint.\
 
 ```yaml
 Type: FirmwareUpgradeStatus.EpPowerStatusEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InitialPowerStatus
+The server power status before the upgrade request is submitted in the endpoint.\n* `none` - Server power status is none.\n* `powered on` - Server power status is powered on.\n* `powered off` - Server power status is powered off.
+
+```yaml
+Type: FirmwareUpgradeStatus.InitialPowerStatusEnum
 Parameter Sets: (All)
 Aliases:
 

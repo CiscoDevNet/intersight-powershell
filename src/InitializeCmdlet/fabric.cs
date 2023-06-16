@@ -5618,6 +5618,7 @@ namespace Intersight.PowerShell
         {
             ClassId = FabricSwitchControlPolicy.ClassIdEnum.FabricSwitchControlPolicy;
             EthernetSwitchingMode = FabricSwitchControlPolicy.EthernetSwitchingModeEnum.EndHost;
+            FabricPcVhbaReset = FabricSwitchControlPolicy.FabricPcVhbaResetEnum.Disabled;
             FcSwitchingMode = FabricSwitchControlPolicy.FcSwitchingModeEnum.EndHost;
             ObjectType = FabricSwitchControlPolicy.ObjectTypeEnum.FabricSwitchControlPolicy;
 
@@ -5658,6 +5659,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FabricSwitchControlPolicy.EthernetSwitchingModeEnum EthernetSwitchingMode
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, a Registered State Change Notification (RSCN) is sent to the VIC adapter when any member port within the fabric port-channel goes down and vHBA would reset to restore the connection immediately. When disabled (default), vHBA reset is done only when all the members of a fabric port-channel are down.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchControlPolicy.FabricPcVhbaResetEnum FabricPcVhbaReset
         {
             get;
             set;
@@ -5788,6 +5799,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("EthernetSwitchingMode"))
             {
                 initObject.EthernetSwitchingMode = this.EthernetSwitchingMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FabricPcVhbaReset"))
+            {
+                initObject.FabricPcVhbaReset = this.FabricPcVhbaReset;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("FcSwitchingMode"))
             {

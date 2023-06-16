@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightBulkRequest [-ActionOnError< BulkRequest.ActionOnErrorEnum>][-Actions< System.Collections.Generic.List`1[string]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Requests< System.Collections.Generic.List`1[BulkSubRequest]>][-SkipDuplicates< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uri< string>][-Verb< BulkRequest.VerbEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightBulkRequest [-ActionOnError< BulkRequest.ActionOnErrorEnum>][-Actions< System.Collections.Generic.List`1[BulkRequest.ActionsEnum]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Requests< System.Collections.Generic.List`1[BulkSubRequest]>][-SkipDuplicates< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uri< string>][-Verb< BulkRequest.VerbEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -42,7 +42,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[BulkRequest.ActionsEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -242,6 +242,8 @@ PS C:\> New-IntersightBulkRequest
 [Initialize-IntersightBulkApiResult](./Initialize-IntersightBulkApiResult.md)
 
 [Initialize-IntersightBulkHttpHeader](./Initialize-IntersightBulkHttpHeader.md)
+
+[Initialize-IntersightBulkRequest.ActionsEnum](./Initialize-IntersightBulkRequest.ActionsEnum.md)
 
 [Initialize-IntersightBulkSubRequest](./Initialize-IntersightBulkSubRequest.md)
 

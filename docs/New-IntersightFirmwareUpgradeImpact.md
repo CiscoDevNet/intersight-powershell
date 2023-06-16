@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFirmwareUpgradeImpact [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Chassis< System.Collections.Generic.List`1[EquipmentChassisRelationship]>][-Components< System.Collections.Generic.List`1[string]>][-ComputationState< FirmwareUpgradeImpact.ComputationStateEnum>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponents< System.Collections.Generic.List`1[string]>][-Impacts< System.Collections.Generic.List`1[FirmwareBaseImpact]>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[NetworkElementRelationship]>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< System.Collections.Generic.List`1[ComputePhysicalRelationship]>][-Summary< FirmwareUpgradeImpact.SummaryEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFirmwareUpgradeImpact [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Chassis< System.Collections.Generic.List`1[EquipmentChassisRelationship]>][-Components< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ComponentsEnum]>][-ComputationState< FirmwareUpgradeImpact.ComputationStateEnum>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponents< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ExcludeComponentsEnum]>][-Impacts< System.Collections.Generic.List`1[FirmwareBaseImpact]>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[NetworkElementRelationship]>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< System.Collections.Generic.List`1[ComputePhysicalRelationship]>][-Summary< FirmwareUpgradeImpact.SummaryEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -60,7 +60,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[FirmwareUpgradeImpact.ComponentsEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[FirmwareUpgradeImpact.ExcludeComponentsEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -295,5 +295,9 @@ PS C:\> New-IntersightFirmwareUpgradeImpact
 ## RELATED LINKS
 
 [Initialize-IntersightFirmwareBaseImpact](./Initialize-IntersightFirmwareBaseImpact.md)
+
+[Initialize-IntersightFirmwareUpgradeImpact.ComponentsEnum](./Initialize-IntersightFirmwareUpgradeImpact.ComponentsEnum.md)
+
+[Initialize-IntersightFirmwareUpgradeImpact.ExcludeComponentsEnum](./Initialize-IntersightFirmwareUpgradeImpact.ExcludeComponentsEnum.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

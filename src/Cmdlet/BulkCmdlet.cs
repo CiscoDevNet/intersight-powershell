@@ -373,6 +373,139 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BulkMoDeepCloner.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkMoDeepCloner", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBulkMoDeepCloner : GetCmdletBase
+    {
+        public GetIntersightBulkMoDeepCloner()
+        {
+            ApiInstance = new BulkApi(Config);
+            MethodName = "GetBulkMoDeepClonerListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a bulkResult resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public BulkResultRelationship AsyncResult
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"A user friendly short name to identify the workflow, optionally. Name can only contain letters (a-z, A-Z),\nnumbers (0-9), hyphen (-), period (.), colon (:), space ( ), forward slash (/), comma or an underscore (_)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^[a-zA-Z0-9]{1}[\\sa-zA-Z0-9_.\\,/:-]{0,63}$")]
+        public string WorkflowNameSuffix
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BulkRequest.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightBulkRequest", DefaultParameterSetName = "CmdletParam")]
@@ -549,7 +682,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The processing status of the Request.\n* `NotStarted` - Indicates that the request processing has not begun yet.\n* `ObjPresenceCheckInProgress` - Indicates that the object presence check is in progress for this request.\n* `ObjPresenceCheckComplete` - Indicates that the object presence check is complete.\n* `ExecutionInProgress` - Indicates that the request processing is in progress.\n* `Completed` - Indicates that the request processing has been completed successfully.\n* `Failed` - Indicates that the processing of this request failed."</para>
+        /// <para type="description">"The processing status of the Request.\n* `NotStarted` - Indicates that the request processing has not begun yet.\n* `ObjPresenceCheckInProgress` - Indicates that the object presence check is in progress for this request.\n* `ObjPresenceCheckComplete` - Indicates that the object presence check is complete.\n* `ExecutionInProgress` - Indicates that the request processing is in progress.\n* `Completed` - Indicates that the request processing has been completed successfully.\n* `Failed` - Indicates that the processing of this request failed.\n* `TimedOut` - Indicates that the request processing timed out."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -608,6 +741,203 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get BulkResult.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkResult", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightBulkResult : GetCmdletBase
+    {
+        public GetIntersightBulkResult()
+        {
+            ApiInstance = new BulkApi(Config);
+            MethodName = "GetBulkResultListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The timestamp in UTC when the request processing completed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CompletionTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a bulkMoDeepCloner resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public BulkMoDeepClonerRelationship MoDeepCloner
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of subrequests received in this request."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long NumSubRequests
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The timestamp in UTC when the request was received."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime RequestReceivedTime
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The processing status of the request.\n* `NotStarted` - Indicates that the request processing has not begun yet.\n* `ObjPresenceCheckInProgress` - Indicates that the object presence check is in progress for this request.\n* `ObjPresenceCheckComplete` - Indicates that the object presence check is complete.\n* `ExecutionInProgress` - Indicates that the request processing is in progress.\n* `Completed` - Indicates that the request processing has been completed successfully.\n* `Failed` - Indicates that the processing of this request failed.\n* `TimedOut` - Indicates that the request processing timed out."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BulkResult.StatusEnum Status
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The status message shows the error details in human readable format when the request goes to failed state. No additional information is shown for success case."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string StatusMessage
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The URI on which this async operation is being performed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Uri
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public WorkflowWorkflowInfoRelationship WorkflowInfo
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BulkSubRequestObj.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightBulkSubRequestObj", DefaultParameterSetName = "CmdletParam")]
@@ -631,6 +961,17 @@ namespace Intersight.PowerShell
         }
 
 
+
+        // <summary>
+        /// <para type="description">"A reference to a bulkResult resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public BulkResultRelationship AsyncRequest
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -683,6 +1024,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string ExecutionStartTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"For Async Bulk Mo Operations this flag will be set to true."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsBulkMoOp
         {
             get;
             set;
@@ -769,7 +1121,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The status of the request.\n* `Pending` - Indicates that the request is yet to be processed.\n* `ObjPresenceCheckInProgress` - Indicates that the checking for object presence is in progress.\n* `ObjPresenceCheckInComplete` - Indicates that the request is being processed.\n* `ObjPresenceCheckFailed` - Indicates that the checking for object presence failed.\n* `Processing` - Indicates that the request is being processed.\n* `TimedOut` - Indicates that the request processing timed out.\n* `Completed` - Indicates that the request processing is complete.\n* `Skipped` - Indicates that the request was skipped."</para>
+        /// <para type="description">"The status of the request.\n* `Pending` - Indicates that the request is yet to be processed.\n* `ObjPresenceCheckInProgress` - Indicates that the checking for object presence is in progress.\n* `ObjPresenceCheckInComplete` - Indicates that the request is being processed.\n* `ObjPresenceCheckFailed` - Indicates that the checking for object presence failed.\n* `Processing` - Indicates that the request is being processed.\n* `TimedOut` - Indicates that the request processing timed out.\n* `Failed` - Indicates that the request processing failed.\n* `Completed` - Indicates that the request processing is complete.\n* `Skipped` - Indicates that the request was skipped."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -971,6 +1323,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> ExcludeProperties
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -1032,6 +1395,118 @@ namespace Intersight.PowerShell
             set;
         }
 
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New BulkMoDeepCloner.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightBulkMoDeepCloner")]
+    public class NewIntersightBulkMoDeepCloner : NewCmdletBase
+    {
+        public NewIntersightBulkMoDeepCloner()
+        {
+            ApiInstance = new BulkApi(Config);
+            ModelObject = new BulkMoDeepCloner();
+            MethodName = "CreateBulkMoDeepClonerWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> ExcludeProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"MoRef of the source instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MoMoRef Source
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoBaseMo> Targets
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A user friendly short name to identify the workflow, optionally. Name can only contain letters (a-z, A-Z),\nnumbers (0-9), hyphen (-), period (.), colon (:), space ( ), forward slash (/), comma or an underscore (_)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]{1}[\\sa-zA-Z0-9_.\\,/:-]{0,63}$")]
+        public string WorkflowNameSuffix
+        {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New BulkMoMerger.</para>
@@ -1175,7 +1650,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> Actions
+        public List<BulkRequest.ActionsEnum> Actions
         {
             get;
             set;

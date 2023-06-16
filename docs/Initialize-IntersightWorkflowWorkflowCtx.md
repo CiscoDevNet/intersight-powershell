@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -InitiatorCtx
-Details about initiator of the workflow.
+Details about initiator of the workflow. Any Intersight object resource can be set as the initiator of the workflow. For workflows executed by an Intersight service, an applicable service object will be set as the initiator. For example, during server profile deployment workflow, the server profile object will be set as the initiator by the system. For user created workflows, this field is optional and for workflows executed from Intersight workflow execution page, the workflow definition object will be set as the Initiator.
 
 Note :- Use Initialize-IntersightWorkflowInitiatorContext to create the object of complex type WorkflowInitiatorContext
 

@@ -481,7 +481,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Identifies the broad product type of the hypervisor but without any version information. It is here to easily identify the type of the virtual machine. There are other entities (Host, Cluster, etc.) that can be indirectly used to determine the hypervisor but a direct attribute makes it easier to work with.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Identifies the broad product type of the hypervisor but without any version information. It is here to easily identify the type of the virtual machine. There are other entities (Host, Cluster, etc.) that can be indirectly used to determine the hypervisor but a direct attribute makes it easier to work with.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -514,7 +514,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Expected state of host (enter maintenance, exit maintenance).\n* `None` - A place holder for the default value.\n* `Enter` - Power action is performed on the virtual machine.\n* `Exit` - The virtual machine will be migrated from existing node to a different node in cluster. The behavior depends on the underlying hypervisor."</para>
+        /// <para type="description">"Expected state of host. An action on the host (e.g., Enter Maintenance) may cause the host to be put into maintenance mode.\n* `None` - A place holder for the default value.\n* `Enter` - Power action is performed on the virtual machine.\n* `Exit` - The virtual machine will be migrated from existing node to a different node in cluster. The behavior depends on the underlying hypervisor."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -844,7 +844,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1652,7 +1652,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2823,7 +2823,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2929,7 +2929,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Cloud platform, where the virtual machine is launched.\n* `Unknown` - Cloud provider is not known.\n* `VMwarevSphere` - Cloud provider named VMware vSphere.\n* `AmazonWebServices` - Cloud provider named Amazon Web Services.\n* `MicrosoftAzure` - Cloud provider named Microsoft Azure.\n* `GoogleCloudPlatform` - Cloud provider named Google Cloud Platform.\n* `CiscoIntersightWorkloadEngine` - Cloud provider named Cisco Intersight Workload Engine."</para>
+        /// <para type="description">"Cloud platform, where the virtual machine is launched.\n* `Unknown` - Cloud provider is not known.\n* `VMwarevSphere` - Cloud provider named VMware vSphere.\n* `AmazonWebServices` - Cloud provider named Amazon Web Services.\n* `MicrosoftAzure` - Cloud provider named Microsoft Azure.\n* `GoogleCloudPlatform` - Cloud provider named Google Cloud Platform."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3240,270 +3240,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVirtualDisk.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVirtualDisk", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVirtualDisk : GetCmdletBase
-    {
-        public GetIntersightVirtualizationVirtualDisk()
-        {
-            ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVirtualDiskListWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string AccountMoid
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"Billing rate for this resource."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string BillingUnitId
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Disk capacity to be provided with units example - 10Gi."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Capacity
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public VirtualizationBaseClusterRelationship Cluster
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime CreateTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Flag to indicate whether the configuration is created from inventory object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool Discovered
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Action to perform on the disk example resize, shrink, defragment etc."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DiskAction
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DomainGroupMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Encryption key used if volume is encrypted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string EncryptionKey
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Encryption method used to encrypt the volume."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string EncryptionType
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseVirtualDisk resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public VirtualizationBaseVirtualDiskRelationship Inventory
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime ModTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"File mode of the disk  example - Filesystem, Block.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public VirtualizationVirtualDisk.ModeEnum Mode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^[a-zA-Z0-9-]{3,48}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public MoBaseMoRelationship Parent
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public AssetDeviceRegistrationRelationship RegisteredDevice
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SharedScope
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Base64 encoded CA certificates of the https source to check against."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SourceCerts
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Source disk from which the content is copied."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SourceDiskToClone
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Image path used to import on the created disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SourceFilePath
-        {
-            get;
-            set;
-        }
-
-
-
-
-        // <summary>
-        /// <para type="description">"A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public WorkflowWorkflowInfoRelationship WorkflowInfo
-        {
-            get;
-            set;
-        }
-
-
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVirtualMachine.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVirtualMachine", DefaultParameterSetName = "CmdletParam")]
@@ -3656,7 +3392,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Identifies the broad product type of the hypervisor but without any version information. It is here to easily identify the type of the virtual machine. There are other entities (Host, Cluster, etc.) that can be indirectly used to determine the hypervisor but a direct attribute makes it easier to work with.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Identifies the broad product type of the hypervisor but without any version information. It is here to easily identify the type of the virtual machine. There are other entities (Host, Cluster, etc.) that can be indirectly used to determine the hypervisor but a direct attribute makes it easier to work with.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3680,7 +3416,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Virtual machine memory in mebi bytes (one mebibyte 1MiB is 1048576 bytes, and 1KiB is 1024 bytes). Input must be a whole number and scientific notation is not acceptable. For example, enter 1730 and not 1.73e03. The limit of 4177920 translates to 3.9TiB."</para>
+        /// <para type="description">"Virtual machine memory in mebi bytes (one mebibyte, 1MiB, is 1048576 bytes, and 1KiB is 1024 bytes). Input must be a whole number and scientific notation is not acceptable. For example, enter 1730 and not 1.73e03. The limit of 4177920 translates to 3.9TiB."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidateRange(1, 4.17792e+06)]
@@ -3797,236 +3533,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Get VirtualizationVirtualNetwork.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVirtualNetwork", DefaultParameterSetName = "CmdletParam")]
-    public class GetIntersightVirtualizationVirtualNetwork : GetCmdletBase
-    {
-        public GetIntersightVirtualizationVirtualNetwork()
-        {
-            ApiInstance = new VirtualizationApi(Config);
-            MethodName = "GetVirtualizationVirtualNetworkListWithHttpInfo";
-        }
-
-        // <summary>
-        /// <para type="description">"The Account ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string AccountMoid
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public VirtualizationBaseClusterRelationship Cluster
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime CreateTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Human readable description about this network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Flag to indicate whether the configuration is created from inventory object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool Discovered
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The DomainGroup ID for this managed object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DomainGroupMoid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A flag to distinguish if a network belongs to an infrastructure network or a user defined network that guest workloads can use."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool InfraNetwork
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseVirtualNetwork resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public VirtualizationBaseVirtualNetworkRelationship Inventory
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The time when this managed object was last modified."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public DateTime ModTime
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Maximum transmissible unit of data in bytes that can be sent across the network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public long Mtu
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Name of the virtual network. Name must be unique."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Type of network layer, either L2 or L3.\n* `unknown` - This network is of an unknown network type.\n* `L2` - A Layer 2 switching network type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public VirtualizationVirtualNetwork.NetworkTypeEnum NetworkType
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public MoBaseMoRelationship Parent
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public AssetDeviceRegistrationRelationship RegisteredDevice
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SharedScope
-        {
-            get;
-            set;
-        }
-
-
-
-
-        // <summary>
-        /// <para type="description">"A VLAN id set on the network attachment point."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public long Vlan
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Name of the virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string Vswitch
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public WorkflowWorkflowInfoRelationship WorkflowInfo
-        {
-            get;
-            set;
-        }
-
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareCluster.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareCluster", DefaultParameterSetName = "CmdletParam")]
@@ -4108,7 +3614,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5996,7 +5502,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -8188,7 +7694,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -8363,7 +7869,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Cloud platform, where the virtual machine is launched.\n* `Unknown` - Cloud provider is not known.\n* `VMwarevSphere` - Cloud provider named VMware vSphere.\n* `AmazonWebServices` - Cloud provider named Amazon Web Services.\n* `MicrosoftAzure` - Cloud provider named Microsoft Azure.\n* `GoogleCloudPlatform` - Cloud provider named Google Cloud Platform.\n* `CiscoIntersightWorkloadEngine` - Cloud provider named Cisco Intersight Workload Engine."</para>
+        /// <para type="description">"Cloud platform, where the virtual machine is launched.\n* `Unknown` - Cloud provider is not known.\n* `VMwarevSphere` - Cloud provider named VMware vSphere.\n* `AmazonWebServices` - Cloud provider named Amazon Web Services.\n* `MicrosoftAzure` - Cloud provider named Microsoft Azure.\n* `GoogleCloudPlatform` - Cloud provider named Google Cloud Platform."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -9682,209 +9188,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New VirtualizationVirtualDisk.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVirtualizationVirtualDisk")]
-    public class NewIntersightVirtualizationVirtualDisk : NewCmdletBase
-    {
-        public NewIntersightVirtualizationVirtualDisk()
-        {
-            ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVirtualDisk();
-            MethodName = "CreateVirtualizationVirtualDiskWithHttpInfo";
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Billing rate for this resource."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string BillingUnitId
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Disk capacity to be provided with units example - 10Gi."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Capacity
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VirtualizationBaseClusterRelationship Cluster
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"Encryption key used if volume is encrypted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string EncryptionKey
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Encryption method used to encrypt the volume."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string EncryptionType
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"File mode of the disk  example - Filesystem, Block.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VirtualizationVirtualDisk.ModeEnum Mode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9-]{3,48}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-
-
-
-
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AssetDeviceRegistrationRelationship RegisteredDevice
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Base64 encoded CA certificates of the https source to check against."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SourceCerts
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Source disk from which the content is copied."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SourceDiskToClone
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Image path used to import on the created disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SourceFilePath
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Iops (input-output operations per sec) info for the volume."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CloudVolumeIopsInfo VolumeIopsInfo
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Aws specific availabilty zone in a region."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CloudAvailabilityZone Zone
-        {
-            get;
-            set;
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VirtualizationVirtualMachine.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightVirtualizationVirtualMachine")]
@@ -10082,7 +9385,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Virtual machine memory in mebi bytes (one mebibyte 1MiB is 1048576 bytes, and 1KiB is 1024 bytes). Input must be a whole number and scientific notation is not acceptable. For example, enter 1730 and not 1.73e03. The limit of 4177920 translates to 3.9TiB."</para>
+        /// <para type="description">"Virtual machine memory in mebi bytes (one mebibyte, 1MiB, is 1048576 bytes, and 1KiB is 1024 bytes). Input must be a whole number and scientific notation is not acceptable. For example, enter 1730 and not 1.73e03. The limit of 4177920 translates to 3.9TiB."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(1, 4.17792e+06)]
@@ -10177,175 +9480,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New VirtualizationVirtualNetwork.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVirtualizationVirtualNetwork")]
-    public class NewIntersightVirtualizationVirtualNetwork : NewCmdletBase
-    {
-        public NewIntersightVirtualizationVirtualNetwork()
-        {
-            ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVirtualNetwork();
-            MethodName = "CreateVirtualizationVirtualNetworkWithHttpInfo";
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VirtualizationBaseClusterRelationship Cluster
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Human readable description about this network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"A flag to distinguish if a network belongs to an infrastructure network or a user defined network that guest workloads can use."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool InfraNetwork
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Maximum transmissible unit of data in bytes that can be sent across the network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Mtu
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Name of the virtual network. Name must be unique."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Type of network layer, either L2 or L3.\n* `unknown` - This network is of an unknown network type.\n* `L2` - A Layer 2 switching network type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VirtualizationVirtualNetwork.NetworkTypeEnum NetworkType
-        {
-            get;
-            set;
-        }
-
-
-
-
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AssetDeviceRegistrationRelationship RegisteredDevice
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<string> Trunk
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A VLAN id set on the network attachment point."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Vlan
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Name of the virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vswitch
-        {
-            get;
-            set;
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VirtualizationIweCluster.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightVirtualizationIweCluster")]
@@ -10382,18 +9516,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove VirtualizationVirtualDisk.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVirtualizationVirtualDisk")]
-    public class RemoveIntersightVirtualizationVirtualDisk : RemoveCmdletBase
-    {
-        public RemoveIntersightVirtualizationVirtualDisk()
-        {
-            ApiInstance = new VirtualizationApi(Config);
-            MethodName = "DeleteVirtualizationVirtualDiskWithHttpInfo";
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VirtualizationVirtualMachine.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightVirtualizationVirtualMachine")]
@@ -10403,18 +9525,6 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new VirtualizationApi(Config);
             MethodName = "DeleteVirtualizationVirtualMachineWithHttpInfo";
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove VirtualizationVirtualNetwork.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVirtualizationVirtualNetwork")]
-    public class RemoveIntersightVirtualizationVirtualNetwork : RemoveCmdletBase
-    {
-        public RemoveIntersightVirtualizationVirtualNetwork()
-        {
-            ApiInstance = new VirtualizationApi(Config);
-            MethodName = "DeleteVirtualizationVirtualNetworkWithHttpInfo";
         }
     }
     /// <summary>
@@ -10663,7 +9773,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Expected state of host (enter maintenance, exit maintenance).\n* `None` - A place holder for the default value.\n* `Enter` - Power action is performed on the virtual machine.\n* `Exit` - The virtual machine will be migrated from existing node to a different node in cluster. The behavior depends on the underlying hypervisor."</para>
+        /// <para type="description">"Expected state of host. An action on the host (e.g., Enter Maintenance) may cause the host to be put into maintenance mode.\n* `None` - A place holder for the default value.\n* `Enter` - Power action is performed on the virtual machine.\n* `Exit` - The virtual machine will be migrated from existing node to a different node in cluster. The behavior depends on the underlying hypervisor."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -10822,7 +9932,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11157,7 +10267,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11819,7 +10929,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11955,7 +11065,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Cloud platform, where the virtual machine is launched.\n* `Unknown` - Cloud provider is not known.\n* `VMwarevSphere` - Cloud provider named VMware vSphere.\n* `AmazonWebServices` - Cloud provider named Amazon Web Services.\n* `MicrosoftAzure` - Cloud provider named Microsoft Azure.\n* `GoogleCloudPlatform` - Cloud provider named Google Cloud Platform.\n* `CiscoIntersightWorkloadEngine` - Cloud provider named Cisco Intersight Workload Engine."</para>
+        /// <para type="description">"Cloud platform, where the virtual machine is launched.\n* `Unknown` - Cloud provider is not known.\n* `VMwarevSphere` - Cloud provider named VMware vSphere.\n* `AmazonWebServices` - Cloud provider named Amazon Web Services.\n* `MicrosoftAzure` - Cloud provider named Microsoft Azure.\n* `GoogleCloudPlatform` - Cloud provider named Google Cloud Platform."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -12039,209 +11149,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public DateTime VmCreationTime
-        {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVirtualDisk.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVirtualDisk")]
-    public class SetIntersightVirtualizationVirtualDisk : SetCmdletBase
-    {
-        public SetIntersightVirtualizationVirtualDisk()
-        {
-            ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVirtualDisk();
-            MethodName = "UpdateVirtualizationVirtualDiskWithHttpInfo";
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Billing rate for this resource."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string BillingUnitId
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Disk capacity to be provided with units example - 10Gi."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Capacity
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VirtualizationBaseClusterRelationship Cluster
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"Encryption key used if volume is encrypted."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string EncryptionKey
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Encryption method used to encrypt the volume."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string EncryptionType
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"File mode of the disk  example - Filesystem, Block.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VirtualizationVirtualDisk.ModeEnum Mode
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Name of the storage disk. Name must be unique within a Datastore."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9-]{3,48}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-
-
-
-
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AssetDeviceRegistrationRelationship RegisteredDevice
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Base64 encoded CA certificates of the https source to check against."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SourceCerts
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Source disk from which the content is copied."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SourceDiskToClone
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Image path used to import on the created disk."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SourceFilePath
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Iops (input-output operations per sec) info for the volume."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CloudVolumeIopsInfo VolumeIopsInfo
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Aws specific availabilty zone in a region."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CloudAvailabilityZone Zone
         {
             get;
             set;
@@ -12445,7 +11352,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Virtual machine memory in mebi bytes (one mebibyte 1MiB is 1048576 bytes, and 1KiB is 1024 bytes). Input must be a whole number and scientific notation is not acceptable. For example, enter 1730 and not 1.73e03. The limit of 4177920 translates to 3.9TiB."</para>
+        /// <para type="description">"Virtual machine memory in mebi bytes (one mebibyte, 1MiB, is 1048576 bytes, and 1KiB is 1024 bytes). Input must be a whole number and scientific notation is not acceptable. For example, enter 1730 and not 1.73e03. The limit of 4177920 translates to 3.9TiB."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(1, 4.17792e+06)]
@@ -12540,175 +11447,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VirtualizationVirtualNetwork.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVirtualNetwork")]
-    public class SetIntersightVirtualizationVirtualNetwork : SetCmdletBase
-    {
-        public SetIntersightVirtualizationVirtualNetwork()
-        {
-            ApiInstance = new VirtualizationApi(Config);
-            ModelObject = new VirtualizationVirtualNetwork();
-            MethodName = "UpdateVirtualizationVirtualNetworkWithHttpInfo";
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A reference to a virtualizationBaseCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VirtualizationBaseClusterRelationship Cluster
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"Human readable description about this network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"A flag to distinguish if a network belongs to an infrastructure network or a user defined network that guest workloads can use."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool InfraNetwork
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Maximum transmissible unit of data in bytes that can be sent across the network."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Mtu
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Name of the virtual network. Name must be unique."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Type of network layer, either L2 or L3.\n* `unknown` - This network is of an unknown network type.\n* `L2` - A Layer 2 switching network type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public VirtualizationVirtualNetwork.NetworkTypeEnum NetworkType
-        {
-            get;
-            set;
-        }
-
-
-
-
-        // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public AssetDeviceRegistrationRelationship RegisteredDevice
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<string> Trunk
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"A VLAN id set on the network attachment point."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Vlan
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Name of the virtual switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Vswitch
-        {
-            get;
-            set;
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareCluster.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareCluster")]
@@ -12761,7 +11499,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -14312,7 +13050,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -15711,7 +14449,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known."</para>
+        /// <para type="description">"Type of hypervisor where the virtual machine is hosted for example ESXi.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -15926,7 +14664,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Cloud platform, where the virtual machine is launched.\n* `Unknown` - Cloud provider is not known.\n* `VMwarevSphere` - Cloud provider named VMware vSphere.\n* `AmazonWebServices` - Cloud provider named Amazon Web Services.\n* `MicrosoftAzure` - Cloud provider named Microsoft Azure.\n* `GoogleCloudPlatform` - Cloud provider named Google Cloud Platform.\n* `CiscoIntersightWorkloadEngine` - Cloud provider named Cisco Intersight Workload Engine."</para>
+        /// <para type="description">"Cloud platform, where the virtual machine is launched.\n* `Unknown` - Cloud provider is not known.\n* `VMwarevSphere` - Cloud provider named VMware vSphere.\n* `AmazonWebServices` - Cloud provider named Amazon Web Services.\n* `MicrosoftAzure` - Cloud provider named Microsoft Azure.\n* `GoogleCloudPlatform` - Cloud provider named Google Cloud Platform."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

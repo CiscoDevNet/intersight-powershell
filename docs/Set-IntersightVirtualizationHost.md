@@ -86,7 +86,7 @@ Accept wildcard characters: False
 ```
 
 ### -MaintenanceState
-Expected state of host (enter maintenance, exit maintenance).\n* `None` - A place holder for the default value.\n* `Enter` - Power action is performed on the virtual machine.\n* `Exit` - The virtual machine will be migrated from existing node to a different node in cluster. The behavior depends on the underlying hypervisor.
+Expected state of host. An action on the host (e.g., Enter Maintenance) may cause the host to be put into maintenance mode.\n* `None` - A place holder for the default value.\n* `Enter` - Power action is performed on the virtual machine.\n* `Exit` - The virtual machine will be migrated from existing node to a different node in cluster. The behavior depends on the underlying hypervisor.
 
 ```yaml
 Type: VirtualizationHost.MaintenanceStateEnum

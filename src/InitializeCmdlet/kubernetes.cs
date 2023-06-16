@@ -2011,6 +2011,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightKubernetesBaseVirtualMachineInfraConfig()
         {
+            ClassId = KubernetesBaseVirtualMachineInfraConfig.ClassIdEnum.KubernetesEsxiVirtualMachineInfraConfig;
+            ObjectType = KubernetesBaseVirtualMachineInfraConfig.ObjectTypeEnum.KubernetesEsxiVirtualMachineInfraConfig;
 
         }
         // <summary>
@@ -5222,105 +5224,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize KubernetesHyperFlexApVirtualMachineInfraConfig.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightKubernetesHyperFlexApVirtualMachineInfraConfig")]
-    public class InitializeIntersightKubernetesHyperFlexApVirtualMachineInfraConfig : PSCmdlet
-    {
-        public InitializeIntersightKubernetesHyperFlexApVirtualMachineInfraConfig()
-        {
-            ClassId = KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum.KubernetesHyperFlexApVirtualMachineInfraConfig;
-            DiskMode = KubernetesHyperFlexApVirtualMachineInfraConfig.DiskModeEnum.Block;
-            ObjectType = KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum.KubernetesHyperFlexApVirtualMachineInfraConfig;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public KubernetesHyperFlexApVirtualMachineInfraConfig.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Disk mode to use for volumes.\n* `Block` - It is a Block virtual disk.\n* `Filesystem` - It is a File system virtual disk.\n* `` - Disk mode is either unknown or not supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public KubernetesHyperFlexApVirtualMachineInfraConfig.DiskModeEnum DiskMode
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<string> Interfaces
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.KubernetesNetworkInterfaceSpec> NetworkInterfaces
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public KubernetesHyperFlexApVirtualMachineInfraConfig.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.KubernetesHyperFlexApVirtualMachineInfraConfig initObject = new Intersight.Model.KubernetesHyperFlexApVirtualMachineInfraConfig();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DiskMode"))
-            {
-                initObject.DiskMode = this.DiskMode;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Interfaces"))
-            {
-                initObject.Interfaces = this.Interfaces;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkInterfaces"))
-            {
-                initObject.NetworkInterfaces = this.NetworkInterfaces;
-            }
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

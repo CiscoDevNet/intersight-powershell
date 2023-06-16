@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightComputeBlade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-BiosBootmode< BiosBootModeRelationship>][-BiosPostComplete< bool>][-BiosTokenSettings< BiosTokenSettingsRelationship>][-BiosVfSelectMemoryRasConfiguration< BiosVfSelectMemoryRasConfigurationRelationship>][-BootCddDevices< System.Collections.Generic.List`1[BootCddDeviceRelationship]>][-BootDeviceBootSecurity< BootDeviceBootSecurityRelationship>][-BootHddDevices< System.Collections.Generic.List`1[BootHddDeviceRelationship]>][-BootIscsiDevices< System.Collections.Generic.List`1[BootIscsiDeviceRelationship]>][-BootNvmeDevices< System.Collections.Generic.List`1[BootNvmeDeviceRelationship]>][-BootPchStorageDevices< System.Collections.Generic.List`1[BootPchStorageDeviceRelationship]>][-BootPxeDevices< System.Collections.Generic.List`1[BootPxeDeviceRelationship]>][-BootSanDevices< System.Collections.Generic.List`1[BootSanDeviceRelationship]>][-BootSdDevices< System.Collections.Generic.List`1[BootSdDeviceRelationship]>][-BootUefiShellDevices< System.Collections.Generic.List`1[BootUefiShellDeviceRelationship]>][-BootUsbDevices< System.Collections.Generic.List`1[BootUsbDeviceRelationship]>][-BootVmediaDevices< System.Collections.Generic.List`1[BootVmediaDeviceRelationship]>][-FaultSummary< long>][-GraphicsCards< System.Collections.Generic.List`1[GraphicsCardRelationship]>][-HardwareUuid< string>][-KvmIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][-ManagementMode< ComputeBlade.ManagementModeEnum>][-MemoryArrays< System.Collections.Generic.List`1[MemoryArrayRelationship]>][-MgmtIdentity< EquipmentPhysicalIdentityRelationship>][-MgmtIpAddress< string>][[-Moid]< string>][-Name< string>][-OperReason< System.Collections.Generic.List`1[string]>][-PlatformType< string>][-Processors< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-StorageControllers< System.Collections.Generic.List`1[StorageControllerRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TopSystem< TopSystemRelationship>][-TunneledKvm< bool>][-Vmedia< ComputeVmediaRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightComputeBlade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-BiosBootmode< BiosBootModeRelationship>][-BiosPostComplete< bool>][-BiosTokenSettings< BiosTokenSettingsRelationship>][-BiosVfSelectMemoryRasConfiguration< BiosVfSelectMemoryRasConfigurationRelationship>][-BootCddDevices< System.Collections.Generic.List`1[BootCddDeviceRelationship]>][-BootDeviceBootSecurity< BootDeviceBootSecurityRelationship>][-BootHddDevices< System.Collections.Generic.List`1[BootHddDeviceRelationship]>][-BootIscsiDevices< System.Collections.Generic.List`1[BootIscsiDeviceRelationship]>][-BootNvmeDevices< System.Collections.Generic.List`1[BootNvmeDeviceRelationship]>][-BootPchStorageDevices< System.Collections.Generic.List`1[BootPchStorageDeviceRelationship]>][-BootPxeDevices< System.Collections.Generic.List`1[BootPxeDeviceRelationship]>][-BootSanDevices< System.Collections.Generic.List`1[BootSanDeviceRelationship]>][-BootSdDevices< System.Collections.Generic.List`1[BootSdDeviceRelationship]>][-BootUefiShellDevices< System.Collections.Generic.List`1[BootUefiShellDeviceRelationship]>][-BootUsbDevices< System.Collections.Generic.List`1[BootUsbDeviceRelationship]>][-BootVmediaDevices< System.Collections.Generic.List`1[BootVmediaDeviceRelationship]>][-FaultSummary< long>][-GraphicsCards< System.Collections.Generic.List`1[GraphicsCardRelationship]>][-HardwareUuid< string>][-KvmIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][-ManagementMode< ComputeBlade.ManagementModeEnum>][-MemoryArrays< System.Collections.Generic.List`1[MemoryArrayRelationship]>][-MgmtIdentity< EquipmentPhysicalIdentityRelationship>][-MgmtIpAddress< string>][[-Moid]< string>][-Name< string>][-OperReason< System.Collections.Generic.List`1[ComputeBlade.OperReasonEnum]>][-PlatformType< string>][-Processors< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-StorageControllers< System.Collections.Generic.List`1[StorageControllerRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TopSystem< TopSystemRelationship>][-TunneledKvm< bool>][-Vmedia< ComputeVmediaRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -505,7 +505,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[ComputeBlade.OperReasonEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -695,6 +695,8 @@ PS C:\> Set-IntersightComputeBlade
 [Get-IntersightComputeBlade](./Get-IntersightComputeBlade.md)
 
 [Initialize-IntersightComputeAlarmSummary](./Initialize-IntersightComputeAlarmSummary.md)
+
+[Initialize-IntersightComputeBlade.OperReasonEnum](./Initialize-IntersightComputeBlade.OperReasonEnum.md)
 
 [Initialize-IntersightComputeIpAddress](./Initialize-IntersightComputeIpAddress.md)
 

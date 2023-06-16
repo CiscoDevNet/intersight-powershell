@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBulkSubRequestObj [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< Model.MoBaseMo>][-ClassId< BulkSubRequestObj.ClassIdEnum>][-Moid< string>][-ObjectType< BulkSubRequestObj.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetMoid< string>][-Uri< string>][-Verb< BulkSubRequestObj.VerbEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBulkSubRequestObj [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Body< Model.MoBaseMo>][-ClassId< BulkSubRequestObj.ClassIdEnum>][-IsBulkMoOp< bool>][-Moid< string>][-ObjectType< BulkSubRequestObj.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetMoid< string>][-Uri< string>][-Verb< BulkSubRequestObj.VerbEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -61,6 +61,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: BulkSubRequestObj.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsBulkMoOp
+For Async Bulk Mo Operations this flag will be set to true.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

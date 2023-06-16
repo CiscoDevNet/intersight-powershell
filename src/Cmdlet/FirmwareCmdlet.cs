@@ -2143,7 +2143,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"EULA acceptance status for the account."</para>
+        /// <para type="description">"Overall acceptance status for the account, both EULA and K9."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2178,7 +2178,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"EULA acceptance form content provided by cisco.com."</para>
+        /// <para type="description">"Acceptance form content provided by cisco.com."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2205,6 +2205,50 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"EULA acceptance status for the account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EulaAccepted
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"EULA acceptance form content provided by cisco.com."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string EulaContent
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"K9 acceptance status for the account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool K9Accepted
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"K9 acceptance form content provided by cisco.com."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string K9Content
         {
             get;
             set;
@@ -5672,6 +5716,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The server power status before the upgrade request is submitted in the endpoint.\n* `none` - Server power status is none.\n* `powered on` - Server power status is powered on.\n* `powered off` - Server power status is powered off."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FirmwareUpgradeStatus.InitialPowerStatusEnum InitialPowerStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -6186,7 +6241,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> ExcludeComponentList
+        public List<FirmwareChassisUpgrade.ExcludeComponentListEnum> ExcludeComponentList
         {
             get;
             set;
@@ -7443,6 +7498,10 @@ namespace Intersight.PowerShell
 
 
 
+
+
+
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -8378,7 +8437,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> ExcludeComponentList
+        public List<FirmwarePolicy.ExcludeComponentListEnum> ExcludeComponentList
         {
             get;
             set;
@@ -9576,7 +9635,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> ExcludeComponentList
+        public List<FirmwareUpgrade.ExcludeComponentListEnum> ExcludeComponentList
         {
             get;
             set;
@@ -9753,7 +9812,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> Components
+        public List<FirmwareUpgradeImpact.ComponentsEnum> Components
         {
             get;
             set;
@@ -9789,7 +9848,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> ExcludeComponents
+        public List<FirmwareUpgradeImpact.ExcludeComponentsEnum> ExcludeComponents
         {
             get;
             set;
@@ -12530,7 +12589,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> ExcludeComponentList
+        public List<FirmwarePolicy.ExcludeComponentListEnum> ExcludeComponentList
         {
             get;
             set;
@@ -13642,7 +13701,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> ExcludeComponentList
+        public List<FirmwareUpgrade.ExcludeComponentListEnum> ExcludeComponentList
         {
             get;
             set;

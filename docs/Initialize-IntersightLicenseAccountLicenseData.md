@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightLicenseAccountLicenseData [-Account< Model.IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< LicenseAccountLicenseData.ClassIdEnum>][-CustomerOp< Model.LicenseCustomerOpRelationship>][-DefaultLicenseType< LicenseAccountLicenseData.DefaultLicenseTypeEnum>][-IksCustomerOp< Model.LicenseIksCustomerOpRelationship>][-IksLicenseCount< Model.LicenseIksLicenseCountRelationship>][-IncCustomerOp< Model.LicenseIncCustomerOpRelationship>][-IncLicenseCount< Model.LicenseIncLicenseCountRelationship>][-IwoCustomerOp< Model.LicenseIwoCustomerOpRelationship>][-IwoLicenseCount< Model.LicenseIwoLicenseCountRelationship>][-LicenseInfoView< Model.LicenseLicenseInfoViewRelationship>][-LicenseRegistrationStatus< Model.LicenseLicenseRegistrationStatusRelationship>][-Licenseinfos< System.Collections.Generic.List`1[Model.LicenseLicenseInfoRelationship]>][-Moid< string>][-ObjectType< LicenseAccountLicenseData.ObjectTypeEnum>][-SmartlicenseToken< Model.LicenseSmartlicenseTokenRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightLicenseAccountLicenseData [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< LicenseAccountLicenseData.ClassIdEnum>][-CustomerOp< Model.LicenseCustomerOpRelationship>][-DefaultLicenseType< LicenseAccountLicenseData.DefaultLicenseTypeEnum>][-DefaultLicenseTypeNewerModels< LicenseAccountLicenseData.DefaultLicenseTypeNewerModelsEnum>][-IksCustomerOp< Model.LicenseIksCustomerOpRelationship>][-IksLicenseCount< Model.LicenseIksLicenseCountRelationship>][-IncCustomerOp< Model.LicenseIncCustomerOpRelationship>][-IncLicenseCount< Model.LicenseIncLicenseCountRelationship>][-IwoCustomerOp< Model.LicenseIwoCustomerOpRelationship>][-IwoLicenseCount< Model.LicenseIwoLicenseCountRelationship>][-LicenseInfoView< Model.LicenseLicenseInfoViewRelationship>][-LicenseRegistrationStatus< Model.LicenseLicenseRegistrationStatusRelationship>][-Licenseinfos< System.Collections.Generic.List`1[Model.LicenseLicenseInfoRelationship]>][-Moid< string>][-ObjectType< LicenseAccountLicenseData.ObjectTypeEnum>][-SmartlicenseToken< Model.LicenseSmartlicenseTokenRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,24 +23,6 @@ Initialize-IntersightLicenseAccountLicenseData [-Account< Model.IamAccountRelati
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
-
-### -Account
-A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.IamAccountRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AdditionalProperties
 
@@ -91,10 +73,25 @@ Accept wildcard characters: False
 ```
 
 ### -DefaultLicenseType
-Default license tier set by user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.\n* `IKS-Advantage` - IKS-Advantage as a License type.\n* `INC-Premier-1GFixed` - Premier 1G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-10GFixed` - Premier 10G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-100GFixed` - Premier 100G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-Mod4Slot` - Premier Modular 4 slot license tier for Intersight Nexus Cloud.\n* `INC-Premier-Mod8Slot` - Premier Modular 8 slot license tier for Intersight Nexus Cloud.\n* `INC-Premier-D2OpsFixed` - Premier D2Ops fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-D2OpsMod` - Premier D2Ops modular license tier for Intersight Nexus Cloud.\n* `INC-Premier-CentralizedMod8Slot` - Premier modular license tier of switch type CentralizedMod8Slot for Intersight Nexus Cloud.\n* `INC-Premier-DistributedMod8Slot` - Premier modular license tier of switch type DistributedMod8Slot for Intersight Nexus Cloud.\n* `IntersightTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode Intersight tiers.\n* `IWOTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode IKS tiers.\n* `IKSTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode IWO tiers.\n* `INCTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode Nexus tiers.
+Default license tier set by the user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.\n* `IKS-Advantage` - IKS-Advantage as a License type.\n* `INC-Premier-1GFixed` - Premier 1G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-10GFixed` - Premier 10G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-100GFixed` - Premier 100G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-Mod4Slot` - Premier Modular 4 slot license tier for Intersight Nexus Cloud.\n* `INC-Premier-Mod8Slot` - Premier Modular 8 slot license tier for Intersight Nexus Cloud.\n* `INC-Premier-D2OpsFixed` - Premier D2Ops fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-D2OpsMod` - Premier D2Ops modular license tier for Intersight Nexus Cloud.\n* `INC-Premier-CentralizedMod8Slot` - Premier modular license tier of switch type CentralizedMod8Slot for Intersight Nexus Cloud.\n* `INC-Premier-DistributedMod8Slot` - Premier modular license tier of switch type DistributedMod8Slot for Intersight Nexus Cloud.\n* `IntersightTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode Intersight tiers.\n* `IWOTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode IKS tiers.\n* `IKSTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode IWO tiers.\n* `INCTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode Nexus tiers.
 
 ```yaml
 Type: LicenseAccountLicenseData.DefaultLicenseTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultLicenseTypeNewerModels
+Default license tier for newer model M7+ servers set by the user.\n* `Base` - Base as a License type. It is default license type.\n* `Essential` - Essential as a License type.\n* `Standard` - Standard as a License type.\n* `Advantage` - Advantage as a License type.\n* `Premier` - Premier as a License type.\n* `IWO-Essential` - IWO-Essential as a License type.\n* `IWO-Advantage` - IWO-Advantage as a License type.\n* `IWO-Premier` - IWO-Premier as a License type.\n* `IKS-Advantage` - IKS-Advantage as a License type.\n* `INC-Premier-1GFixed` - Premier 1G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-10GFixed` - Premier 10G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-100GFixed` - Premier 100G Fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-Mod4Slot` - Premier Modular 4 slot license tier for Intersight Nexus Cloud.\n* `INC-Premier-Mod8Slot` - Premier Modular 8 slot license tier for Intersight Nexus Cloud.\n* `INC-Premier-D2OpsFixed` - Premier D2Ops fixed license tier for Intersight Nexus Cloud.\n* `INC-Premier-D2OpsMod` - Premier D2Ops modular license tier for Intersight Nexus Cloud.\n* `INC-Premier-CentralizedMod8Slot` - Premier modular license tier of switch type CentralizedMod8Slot for Intersight Nexus Cloud.\n* `INC-Premier-DistributedMod8Slot` - Premier modular license tier of switch type DistributedMod8Slot for Intersight Nexus Cloud.\n* `IntersightTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode Intersight tiers.\n* `IWOTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode IKS tiers.\n* `IKSTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode IWO tiers.\n* `INCTrial` - Virtual dummy license type to indicate trial. Used for UI display of trial mode Nexus tiers.
+
+```yaml
+Type: LicenseAccountLicenseData.DefaultLicenseTypeNewerModelsEnum
 Parameter Sets: (All)
 Aliases:
 

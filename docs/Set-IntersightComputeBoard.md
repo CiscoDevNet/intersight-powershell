@@ -129,4 +129,6 @@ PS C:\> Set-IntersightComputeBoard
 
 [Get-IntersightComputeBoard](./Get-IntersightComputeBoard.md)
 
+[Initialize-IntersightComputeBoard.OperReasonEnum](./Initialize-IntersightComputeBoard.OperReasonEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

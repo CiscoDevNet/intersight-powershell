@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightBulkMoCloner [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[MoBaseMo]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Targets< System.Collections.Generic.List`1[MoBaseMo]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightBulkMoCloner [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ExcludeProperties< System.Collections.Generic.List`1[string]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[MoBaseMo]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Targets< System.Collections.Generic.List`1[MoBaseMo]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,21 @@ Create a &apos;BulkMoCloner&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExcludeProperties
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

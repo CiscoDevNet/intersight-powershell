@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetWorkloadOptimizerMicrosoftAzureBillingOptions [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BillingAccountId< string>][-ClassId< AssetWorkloadOptimizerMicrosoftAzureBillingOptions.ClassIdEnum>][-CostExportName< string>][-ObjectType< AssetWorkloadOptimizerMicrosoftAzureBillingOptions.ObjectTypeEnum>][-TenantId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetWorkloadOptimizerMicrosoftAzureBillingOptions [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BillingAccountId< string>][-ClassId< AssetWorkloadOptimizerMicrosoftAzureBillingOptions.ClassIdEnum>][-CostExportName< string>][-ObjectType< AssetWorkloadOptimizerMicrosoftAzureBillingOptions.ObjectTypeEnum>][-TenantId< string>][-UseCostExport< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -104,6 +104,21 @@ Id of the tenant used while authenticating the managed target.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UseCostExport
+For larger topologies, use cost export to fetch billed cost data.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

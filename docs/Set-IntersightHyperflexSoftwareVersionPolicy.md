@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightHyperflexSoftwareVersionPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterProfiles< System.Collections.Generic.List`1[HyperflexClusterProfileRelationship]>][-Description< string>][-HxdpVersion< string>][-HypervisorVersion< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-ServerFirmwareVersion< string>][-ServerFirmwareVersions< System.Collections.Generic.List`1[HyperflexServerFirmwareVersionInfo]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeTypes< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightHyperflexSoftwareVersionPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterProfiles< System.Collections.Generic.List`1[HyperflexClusterProfileRelationship]>][-Description< string>][-HxdpVersion< string>][-HypervisorVersion< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-ServerFirmwareVersion< string>][-ServerFirmwareVersions< System.Collections.Generic.List`1[HyperflexServerFirmwareVersionInfo]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeTypes< System.Collections.Generic.List`1[HyperflexSoftwareVersionPolicy.UpgradeTypesEnum]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -202,7 +202,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[HyperflexSoftwareVersionPolicy.UpgradeTypesEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -273,6 +273,8 @@ PS C:\> Set-IntersightHyperflexSoftwareVersionPolicy
 [Get-IntersightHyperflexSoftwareVersionPolicy](./Get-IntersightHyperflexSoftwareVersionPolicy.md)
 
 [Initialize-IntersightHyperflexServerFirmwareVersionInfo](./Initialize-IntersightHyperflexServerFirmwareVersionInfo.md)
+
+[Initialize-IntersightHyperflexSoftwareVersionPolicy.UpgradeTypesEnum](./Initialize-IntersightHyperflexSoftwareVersionPolicy.UpgradeTypesEnum.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

@@ -88,6 +88,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field displays the description of the processor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The database identifier of the registered device of an object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -126,6 +137,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public InventoryDeviceInfoRelationship InventoryDeviceInfo
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field indicates whether the processor is supported on the server or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsPlatformSupported
         {
             get;
             set;
@@ -265,6 +287,28 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"This field displays the part number of the of the processor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PartNumber
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"This field displays the product ID of the processor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Pid
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
@@ -471,6 +515,8 @@ namespace Intersight.PowerShell
 
 
 
+
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -492,6 +538,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
 

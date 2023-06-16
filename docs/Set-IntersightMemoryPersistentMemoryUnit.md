@@ -129,4 +129,6 @@ PS C:\> Set-IntersightMemoryPersistentMemoryUnit
 
 [Get-IntersightMemoryPersistentMemoryUnit](./Get-IntersightMemoryPersistentMemoryUnit.md)
 
+[Initialize-IntersightMemoryPersistentMemoryUnit.OperReasonEnum](./Initialize-IntersightMemoryPersistentMemoryUnit.OperReasonEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

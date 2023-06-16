@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -HypervisorType
-Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.
+Identifies the broad type of the underlying hypervisor.\n* `ESXi` - The hypervisor running on the HyperFlex cluster is a Vmware ESXi hypervisor of any version.\n* `Hyper-V` - The hypervisor running on the HyperFlex cluster is Microsoft Hyper-V.\n* `Unknown` - The hypervisor running on the HyperFlex cluster is not known.\n* `HyperFlexAp` - The hypervisor of the virtualization platform is Cisco HyperFlex Application Platform.\n* `IWE` - The hypervisor of the virtualization platform is Cisco Intersight Workload Engine.
 
 ```yaml
 Type: HyperflexCluster.HypervisorTypeEnum
@@ -230,6 +230,12 @@ PS C:\> Set-IntersightHyperflexCluster
 
 [Initialize-IntersightHyperflexAlarmSummary](./Initialize-IntersightHyperflexAlarmSummary.md)
 
+[Initialize-IntersightHyperflexCapability](./Initialize-IntersightHyperflexCapability.md)
+
+[Initialize-IntersightHyperflexNetworkConfiguration](./Initialize-IntersightHyperflexNetworkConfiguration.md)
+
 [Initialize-IntersightHyperflexSummary](./Initialize-IntersightHyperflexSummary.md)
+
+[Initialize-IntersightHyperflexVcenterConfiguration](./Initialize-IntersightHyperflexVcenterConfiguration.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

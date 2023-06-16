@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -RateLimit
-The value in Mbps to use for limiting the data rate on the virtual interface. Setting this to zero will turn rate limiting off.
+The value in Mbps to use for limiting the data rate on the virtual interface.
 
 ```yaml
 Type: long
