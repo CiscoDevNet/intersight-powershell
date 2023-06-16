@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationVirtualMachineDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bus< VirtualizationVirtualMachineDisk.BusEnum>][-ClassId< VirtualizationVirtualMachineDisk.ClassIdEnum>][-Name< string>][-ObjectType< VirtualizationVirtualMachineDisk.ObjectTypeEnum>][-Order< long>][-Type< VirtualizationVirtualMachineDisk.TypeEnum>][-VirtualDisk< Model.VirtualizationVirtualDiskConfig>][-VirtualDiskReference< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVirtualizationVirtualMachineDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bus< VirtualizationVirtualMachineDisk.BusEnum>][-ClassId< VirtualizationVirtualMachineDisk.ClassIdEnum>][-Name< string>][-ObjectType< VirtualizationVirtualMachineDisk.ObjectTypeEnum>][-Order< long>][-Type< VirtualizationVirtualMachineDisk.TypeEnum>][-VirtualDiskReference< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -129,23 +129,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VirtualDisk
-Virtual disk configuration.
-
-Note :- Use Initialize-IntersightVirtualizationVirtualDiskConfig to create the object of complex type VirtualizationVirtualDiskConfig
-
-```yaml
-Type: Model.VirtualizationVirtualDiskConfig
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -VirtualDiskReference
 Name of the existing virtual disk to be attached to the Virtual Machine.
 
@@ -217,5 +200,3 @@ PS C:\> Initialize-IntersightVirtualizationVirtualMachineDisk
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightVirtualizationVirtualDiskConfig](./Initialize-IntersightVirtualizationVirtualDiskConfig.md)

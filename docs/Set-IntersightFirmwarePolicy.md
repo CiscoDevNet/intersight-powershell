@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFirmwarePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-ExcludeComponentList< System.Collections.Generic.List`1[string]>][-ModelBundleCombo< System.Collections.Generic.List`1[FirmwareModelBundleVersion]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FirmwarePolicy.TargetPlatformEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFirmwarePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-ExcludeComponentList< System.Collections.Generic.List`1[FirmwarePolicy.ExcludeComponentListEnum]>][-ModelBundleCombo< System.Collections.Generic.List`1[FirmwareModelBundleVersion]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FirmwarePolicy.TargetPlatformEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -57,7 +57,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[FirmwarePolicy.ExcludeComponentListEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -243,6 +243,8 @@ PS C:\> Set-IntersightFirmwarePolicy
 [Get-IntersightFirmwarePolicy](./Get-IntersightFirmwarePolicy.md)
 
 [Initialize-IntersightFirmwareModelBundleVersion](./Initialize-IntersightFirmwareModelBundleVersion.md)
+
+[Initialize-IntersightFirmwarePolicy.ExcludeComponentListEnum](./Initialize-IntersightFirmwarePolicy.ExcludeComponentListEnum.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

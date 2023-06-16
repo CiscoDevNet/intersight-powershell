@@ -284,9 +284,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityDimmsEndpointDescriptor](./New-IntersightCapabilityDimmsEndpointDescriptor.md)
-
-[Remove-IntersightCapabilityDimmsEndpointDescriptor](./Remove-IntersightCapabilityDimmsEndpointDescriptor.md)
-
-[Set-IntersightCapabilityDimmsEndpointDescriptor](./Set-IntersightCapabilityDimmsEndpointDescriptor.md)
-

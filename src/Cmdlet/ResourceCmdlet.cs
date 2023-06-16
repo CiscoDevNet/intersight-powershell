@@ -148,6 +148,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"The type of this resource group. (Rbac, Licensing, solution).\n* `rbac` - These resource groups are used for multi-tenancy by assigning to organizations.\n* `licensing` - These resource groups are used to classify resources like servers to various groups which are associated to different license tiers.\n* `solution` - These resource groups are created for Flexpods."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ResourceGroup.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
 
 
     }
@@ -1060,6 +1071,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ResourceReservation.</para>
@@ -1403,6 +1415,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
     }
     /// <summary>

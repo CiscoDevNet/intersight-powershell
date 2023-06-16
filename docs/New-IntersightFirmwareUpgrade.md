@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DirectDownload< FirmwareDirectDownload>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[string]>][-ExcludeComponentPidList< FirmwareExcludeComponentPidListType>][-FileServer< SoftwarerepositoryFileServer>][-Moid< string>][-NetworkShare< FirmwareNetworkShare>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< ComputePhysicalRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeTriggerMethod< FirmwareUpgrade.UpgradeTriggerMethodEnum>][-UpgradeType< FirmwareUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFirmwareUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DirectDownload< FirmwareDirectDownload>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[FirmwareUpgrade.ExcludeComponentListEnum]>][-ExcludeComponentPidList< FirmwareExcludeComponentPidListType>][-FileServer< SoftwarerepositoryFileServer>][-Moid< string>][-NetworkShare< FirmwareNetworkShare>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< ComputePhysicalRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeTriggerMethod< FirmwareUpgrade.UpgradeTriggerMethodEnum>][-UpgradeType< FirmwareUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[FirmwareUpgrade.ExcludeComponentListEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -331,6 +331,8 @@ PS C:\> New-IntersightFirmwareUpgrade
 [Initialize-IntersightFirmwareExcludeComponentPidListType](./Initialize-IntersightFirmwareExcludeComponentPidListType.md)
 
 [Initialize-IntersightFirmwareNetworkShare](./Initialize-IntersightFirmwareNetworkShare.md)
+
+[Initialize-IntersightFirmwareUpgrade.ExcludeComponentListEnum](./Initialize-IntersightFirmwareUpgrade.ExcludeComponentListEnum.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

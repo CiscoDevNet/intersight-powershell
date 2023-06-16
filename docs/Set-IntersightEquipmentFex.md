@@ -231,4 +231,6 @@ PS C:\> Set-IntersightEquipmentFex
 
 [Get-IntersightEquipmentFex](./Get-IntersightEquipmentFex.md)
 
+[Initialize-IntersightEquipmentFex.OperReasonEnum](./Initialize-IntersightEquipmentFex.OperReasonEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

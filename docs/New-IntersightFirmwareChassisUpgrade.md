@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFirmwareChassisUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Chassis< EquipmentChassisRelationship>][-DirectDownload< FirmwareDirectDownload>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[string]>][-FileServer< SoftwarerepositoryFileServer>][-Moid< string>][-NetworkShare< FirmwareNetworkShare>][-Release< SoftwarerepositoryReleaseRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareChassisUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeType< FirmwareChassisUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFirmwareChassisUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Chassis< EquipmentChassisRelationship>][-DirectDownload< FirmwareDirectDownload>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[FirmwareChassisUpgrade.ExcludeComponentListEnum]>][-FileServer< SoftwarerepositoryFileServer>][-Moid< string>][-NetworkShare< FirmwareNetworkShare>][-Release< SoftwarerepositoryReleaseRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareChassisUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UpgradeType< FirmwareChassisUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -95,7 +95,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[FirmwareChassisUpgrade.ExcludeComponentListEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -293,6 +293,8 @@ PS C:\> New-IntersightFirmwareChassisUpgrade
 ## RELATED LINKS
 
 [Get-IntersightFirmwareChassisUpgrade](./Get-IntersightFirmwareChassisUpgrade.md)
+
+[Initialize-IntersightFirmwareChassisUpgrade.ExcludeComponentListEnum](./Initialize-IntersightFirmwareChassisUpgrade.ExcludeComponentListEnum.md)
 
 [Initialize-IntersightFirmwareDirectDownload](./Initialize-IntersightFirmwareDirectDownload.md)
 

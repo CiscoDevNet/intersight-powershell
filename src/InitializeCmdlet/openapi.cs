@@ -828,7 +828,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Indicates if target endpoint is external or internal. An endpoint is internal if the target is an Intersight resource. For instance, configuring an intersight object using a Task.\n* `External` - Denotes that the target endpoint is an external API endpoint\n* `Internal` - Denotes that the target endpoint is a Intersight API endpoint"</para>
+        /// <para type="description">"Indicates if target endpoint is external or internal. An endpoint is internal if the target is an Intersight resource. For instance, configuring an intersight object using a Task.\n* `External` - Denotes that the target endpoint is an external API endpoint.\n* `Internal` - Denotes that the target endpoint is a Intersight API endpoint."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

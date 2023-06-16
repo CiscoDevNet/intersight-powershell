@@ -267,6 +267,10 @@ PS C:\> New-IntersightIamAppRegistration
 
 [Get-IntersightIamAppRegistration](./Get-IntersightIamAppRegistration.md)
 
+[Initialize-IntersightIamAppRegistration.GrantTypesEnum](./Initialize-IntersightIamAppRegistration.GrantTypesEnum.md)
+
+[Initialize-IntersightIamAppRegistration.ResponseTypesEnum](./Initialize-IntersightIamAppRegistration.ResponseTypesEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightIamAppRegistration](./Remove-IntersightIamAppRegistration.md)

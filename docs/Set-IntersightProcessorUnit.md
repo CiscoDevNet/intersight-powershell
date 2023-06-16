@@ -184,3 +184,5 @@ PS C:\> Set-IntersightProcessorUnit
 [Get-IntersightProcessorUnit](./Get-IntersightProcessorUnit.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightProcessorUnit.OperReasonEnum](./Initialize-IntersightProcessorUnit.OperReasonEnum.md)

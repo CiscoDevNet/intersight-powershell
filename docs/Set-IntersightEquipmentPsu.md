@@ -129,4 +129,6 @@ PS C:\> Set-IntersightEquipmentPsu
 
 [Get-IntersightEquipmentPsu](./Get-IntersightEquipmentPsu.md)
 
+[Initialize-IntersightEquipmentPsu.OperReasonEnum](./Initialize-IntersightEquipmentPsu.OperReasonEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

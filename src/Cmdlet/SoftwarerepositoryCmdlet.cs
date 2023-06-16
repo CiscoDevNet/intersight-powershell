@@ -167,6 +167,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The Automated Software Distribution version of the authorization MO.\n* `V3` - The client is running Automated Software Distribution V3.\n* `V4` - The client is running Automated Software Distribution V4."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public SoftwarerepositoryAuthorization.VersionEnum Version
+        {
+            get;
+            set;
+        }
+
 
 
     }
@@ -1805,6 +1816,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwarerepositoryCategoryMapper.</para>
@@ -2747,6 +2759,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
     }
     /// <summary>

@@ -284,9 +284,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityGpuEndpointDescriptor](./New-IntersightCapabilityGpuEndpointDescriptor.md)
-
-[Remove-IntersightCapabilityGpuEndpointDescriptor](./Remove-IntersightCapabilityGpuEndpointDescriptor.md)
-
-[Set-IntersightCapabilityGpuEndpointDescriptor](./Set-IntersightCapabilityGpuEndpointDescriptor.md)
-

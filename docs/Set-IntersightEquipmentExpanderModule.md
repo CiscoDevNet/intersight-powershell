@@ -180,4 +180,6 @@ PS C:\> Set-IntersightEquipmentExpanderModule
 
 [Get-IntersightEquipmentExpanderModule](./Get-IntersightEquipmentExpanderModule.md)
 
+[Initialize-IntersightEquipmentExpanderModule.OperReasonEnum](./Initialize-IntersightEquipmentExpanderModule.OperReasonEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

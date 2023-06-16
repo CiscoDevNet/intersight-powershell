@@ -6190,7 +6190,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> Labels
+        public List<KubernetesAddonDefinition.LabelsEnum> Labels
         {
             get;
             set;
@@ -6249,7 +6249,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> Platforms
+        public List<KubernetesAddonDefinition.PlatformsEnum> Platforms
         {
             get;
             set;
@@ -10258,7 +10258,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> Labels
+        public List<KubernetesAddonDefinition.LabelsEnum> Labels
         {
             get;
             set;
@@ -10317,7 +10317,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> Platforms
+        public List<KubernetesAddonDefinition.PlatformsEnum> Platforms
         {
             get;
             set;

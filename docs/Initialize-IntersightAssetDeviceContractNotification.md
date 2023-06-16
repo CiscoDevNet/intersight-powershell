@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetDeviceContractNotification [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetDeviceContractNotification.ClassIdEnum>][-Contract< Model.AssetContractInformation>][-ContractStatus< AssetDeviceContractNotification.ContractStatusEnum>][-ContractStatusReason< AssetDeviceContractNotification.ContractStatusReasonEnum>][-ContractUpdatedTime< DateTime>][-CoveredProductLineEndDate< string>][-DeviceId< string>][-EndCustomer< Model.AssetCustomerInformation>][-EndUserGlobalUltimate< Model.AssetGlobalUltimate>][-IsValid< bool>][-ItemType< string>][-MaintenancePurchaseOrderNumber< string>][-MaintenanceSalesOrderNumber< string>][-Moid< string>][-ObjectType< AssetDeviceContractNotification.ObjectTypeEnum>][-Product< Model.AssetProductInformation>][-PurchaseOrderNumber< string>][-ResellerGlobalUltimate< Model.AssetGlobalUltimate>][-SalesOrderNumber< string>][-ServiceDescription< string>][-ServiceEndDate< DateTime>][-ServiceLevel< string>][-ServiceSku< string>][-ServiceStartDate< DateTime>][-StateContract< AssetDeviceContractNotification.StateContractEnum>][-StateSn2Info< AssetDeviceContractNotification.StateSn2InfoEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WarrantyEndDate< string>][-WarrantyType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetDeviceContractNotification [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetDeviceContractNotification.ClassIdEnum>][-Contract< Model.AssetContractInformation>][-ContractStatus< AssetDeviceContractNotification.ContractStatusEnum>][-ContractStatusReason< AssetDeviceContractNotification.ContractStatusReasonEnum>][-ContractUpdatedTime< DateTime>][-CoveredProductLineEndDate< string>][-DeviceId< string>][-EndCustomer< Model.AssetCustomerInformation>][-EndUserGlobalUltimate< Model.AssetGlobalUltimate>][-IsValid< bool>][-ItemType< string>][-LastDateOfSupport< DateTime>][-MaintenancePurchaseOrderNumber< string>][-MaintenanceSalesOrderNumber< string>][-Moid< string>][-ObjectType< AssetDeviceContractNotification.ObjectTypeEnum>][-Product< Model.AssetProductInformation>][-PurchaseOrderNumber< string>][-ResellerGlobalUltimate< Model.AssetGlobalUltimate>][-SalesOrderNumber< string>][-ServiceDescription< string>][-ServiceEndDate< DateTime>][-ServiceLevel< string>][-ServiceSku< string>][-ServiceStartDate< DateTime>][-StateContract< AssetDeviceContractNotification.StateContractEnum>][-StateSn2Info< AssetDeviceContractNotification.StateSn2InfoEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WarrantyEndDate< string>][-WarrantyType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -200,6 +200,21 @@ Item type of this specific Cisco device. example \&quot;Chassis\&quot;.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LastDateOfSupport
+The last date of hardware support for this device.
+
+```yaml
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
 

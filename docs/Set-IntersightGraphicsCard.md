@@ -198,4 +198,6 @@ PS C:\> Set-IntersightGraphicsCard
 
 [Get-IntersightGraphicsCard](./Get-IntersightGraphicsCard.md)
 
+[Initialize-IntersightGraphicsCard.OperReasonEnum](./Initialize-IntersightGraphicsCard.OperReasonEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

@@ -4576,7 +4576,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> OperReason
+        public List<ComputeBlade.OperReasonEnum> OperReason
         {
             get;
             set;
@@ -5374,7 +5374,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<string> OperReason
+        public List<ComputeRackUnit.OperReasonEnum> OperReason
         {
             get;
             set;

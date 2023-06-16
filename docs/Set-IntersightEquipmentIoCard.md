@@ -253,4 +253,6 @@ PS C:\> Set-IntersightEquipmentIoCard
 
 [Initialize-IntersightComputeIpAddress](./Initialize-IntersightComputeIpAddress.md)
 
+[Initialize-IntersightEquipmentIoCard.OperReasonEnum](./Initialize-IntersightEquipmentIoCard.OperReasonEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

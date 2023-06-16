@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBulkMoCloner [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkMoCloner.ClassIdEnum>][-Moid< string>][-ObjectType< BulkMoCloner.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[Model.MoBaseMo]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Targets< System.Collections.Generic.List`1[Model.MoBaseMo]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBulkMoCloner [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkMoCloner.ClassIdEnum>][-ExcludeProperties< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< BulkMoCloner.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[Model.MoBaseMo]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Targets< System.Collections.Generic.List`1[Model.MoBaseMo]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: BulkMoCloner.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExcludeProperties
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

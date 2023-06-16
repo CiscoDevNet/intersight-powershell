@@ -8747,6 +8747,60 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize WorkflowSequenceParams.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightWorkflowSequenceParams")]
+    public class InitializeIntersightWorkflowSequenceParams : PSCmdlet
+    {
+        public InitializeIntersightWorkflowSequenceParams()
+        {
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkflowSequenceParams.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkflowSequenceParams.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.WorkflowSequenceParams initObject = new Intersight.Model.WorkflowSequenceParams();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize WorkflowSerialLoopTask.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightWorkflowSerialLoopTask")]
@@ -14736,7 +14790,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Details about initiator of the workflow."</para>
+        /// <para type="description">"Details about initiator of the workflow. Any Intersight object resource can be set as the initiator of the workflow. For workflows executed by an Intersight service, an applicable service object will be set as the initiator. For example, during server profile deployment workflow, the server profile object will be set as the initiator by the system. For user created workflows, this field is optional and for workflows executed from Intersight workflow execution page, the workflow definition object will be set as the Initiator."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -15508,259 +15562,6 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize WorkflowWorkflowMeta.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightWorkflowWorkflowMeta")]
-    public class InitializeIntersightWorkflowWorkflowMeta : PSCmdlet
-    {
-        public InitializeIntersightWorkflowWorkflowMeta()
-        {
-            ClassId = WorkflowWorkflowMeta.ClassIdEnum.WorkflowWorkflowMeta;
-            ObjectType = WorkflowWorkflowMeta.ObjectTypeEnum.WorkflowWorkflowMeta;
-            Type = WorkflowWorkflowMeta.TypeEnum.SystemDefined;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowWorkflowMeta.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The description for the workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Description
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<string> InputParameters
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The name given to the workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[^:]{1,92}$")]
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowWorkflowMeta.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.OrganizationOrganizationRelationship Organization
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The workflow output parameters."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public object OutputParameters
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"When true, this workflow can be retried for 2 weeks since the last modification of the workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Retryable
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Conductor schema version that decides what attribute can be supported."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long SchemaVersion
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The src is workflow owner service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Src
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The tasks contained inside of the workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public object Tasks
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The type of workflow definition.\n* `SystemDefined` - System defined workflow definition.\n* `UserDefined` - User defined workflow definition.\n* `Dynamic` - Dynamically defined workflow definition."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowWorkflowMeta.TypeEnum Type
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The version for the workflow so we can support multiple versions for the same workflow name."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long Version
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Parameter decides if workflows will wait for a duplicate to finish before starting a new one."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool WaitOnDuplicate
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.WorkflowWorkflowMeta initObject = new Intersight.Model.WorkflowWorkflowMeta();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
-            {
-                initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("InputParameters"))
-            {
-                initObject.InputParameters = this.InputParameters;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
-            {
-                initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("OutputParameters"))
-            {
-                initObject.OutputParameters = this.OutputParameters;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Retryable"))
-            {
-                initObject.Retryable = this.Retryable;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SchemaVersion"))
-            {
-                initObject.SchemaVersion = this.SchemaVersion;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Src"))
-            {
-                initObject.Src = this.Src;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tasks"))
-            {
-                initObject.Tasks = this.Tasks;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
-            {
-                initObject.Type = this.Type;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject._Version = this.Version;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WaitOnDuplicate"))
-            {
-                initObject.WaitOnDuplicate = this.WaitOnDuplicate;
-            }
             WriteObject(initObject);
         }
 

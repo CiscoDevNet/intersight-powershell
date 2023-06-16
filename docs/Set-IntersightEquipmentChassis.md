@@ -268,4 +268,6 @@ PS C:\> Set-IntersightEquipmentChassis
 
 [Initialize-IntersightComputeAlarmSummary](./Initialize-IntersightComputeAlarmSummary.md)
 
+[Initialize-IntersightEquipmentChassis.OperReasonEnum](./Initialize-IntersightEquipmentChassis.OperReasonEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

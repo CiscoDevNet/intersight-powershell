@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesAddonDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< KubernetesCatalogRelationship>][-ChartUrl< string>][-DefaultInstallStrategy< KubernetesAddonDefinition.DefaultInstallStrategyEnum>][-DefaultNamespace< string>][-DefaultUpgradeStrategy< KubernetesAddonDefinition.DefaultUpgradeStrategyEnum>][-Description< string>][-Digest< string>][-IconUrl< string>][-Labels< System.Collections.Generic.List`1[string]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Overrides< string>][-Platforms< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightKubernetesAddonDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< KubernetesCatalogRelationship>][-ChartUrl< string>][-DefaultInstallStrategy< KubernetesAddonDefinition.DefaultInstallStrategyEnum>][-DefaultNamespace< string>][-DefaultUpgradeStrategy< KubernetesAddonDefinition.DefaultUpgradeStrategyEnum>][-Description< string>][-Digest< string>][-IconUrl< string>][-Labels< System.Collections.Generic.List`1[KubernetesAddonDefinition.LabelsEnum]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Overrides< string>][-Platforms< System.Collections.Generic.List`1[KubernetesAddonDefinition.PlatformsEnum]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[KubernetesAddonDefinition.LabelsEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[KubernetesAddonDefinition.PlatformsEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -344,6 +344,10 @@ PS C:\> Set-IntersightKubernetesAddonDefinition
 ## RELATED LINKS
 
 [Get-IntersightKubernetesAddonDefinition](./Get-IntersightKubernetesAddonDefinition.md)
+
+[Initialize-IntersightKubernetesAddonDefinition.LabelsEnum](./Initialize-IntersightKubernetesAddonDefinition.LabelsEnum.md)
+
+[Initialize-IntersightKubernetesAddonDefinition.PlatformsEnum](./Initialize-IntersightKubernetesAddonDefinition.PlatformsEnum.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

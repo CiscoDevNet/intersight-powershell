@@ -1592,6 +1592,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The last date of hardware support for this device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime LastDateOfSupport
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Maintenance purchase order number for the Cisco device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1819,6 +1829,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ItemType"))
             {
                 initObject.ItemType = this.ItemType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LastDateOfSupport"))
+            {
+                initObject.LastDateOfSupport = this.LastDateOfSupport;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("MaintenancePurchaseOrderNumber"))
             {
@@ -5870,6 +5884,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"For larger topologies, use cost export to fetch billed cost data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool UseCostExport
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -5891,6 +5915,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("TenantId"))
             {
                 initObject.TenantId = this.TenantId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UseCostExport"))
+            {
+                initObject.UseCostExport = this.UseCostExport;
             }
             WriteObject(initObject);
         }

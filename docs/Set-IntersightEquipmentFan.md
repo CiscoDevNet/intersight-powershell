@@ -129,4 +129,6 @@ PS C:\> Set-IntersightEquipmentFan
 
 [Get-IntersightEquipmentFan](./Get-IntersightEquipmentFan.md)
 
+[Initialize-IntersightEquipmentFan.OperReasonEnum](./Initialize-IntersightEquipmentFan.OperReasonEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

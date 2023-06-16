@@ -130,3 +130,5 @@ PS C:\> Set-IntersightPciNode
 [Get-IntersightPciNode](./Get-IntersightPciNode.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightPciNode.OperReasonEnum](./Initialize-IntersightPciNode.OperReasonEnum.md)

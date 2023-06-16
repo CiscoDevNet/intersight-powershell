@@ -1070,6 +1070,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The last date of hardware support for this device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime LastDateOfSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Maintenance purchase order number for the Cisco device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2531,6 +2542,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The last date of hardware support for this device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime LastDateOfSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Maintenance purchase order number for the Cisco device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -3080,6 +3102,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
