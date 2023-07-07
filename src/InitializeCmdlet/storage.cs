@@ -5285,7 +5285,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The timeout before which the KMIP client should connect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 65)]
+        [ValidateRange(1, 250)]
         public long Timeout
         {
             get;

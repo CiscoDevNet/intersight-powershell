@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightTaskIweScopedInventory
+# Initialize-IntersightApplianceFileSystemOpStatus
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightTaskIweScopedInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TaskIweScopedInventory.ClassIdEnum>][-Moid< string>][-NamingProperty< string>][-ObjectType< TaskIweScopedInventory.ObjectTypeEnum>][-Queries< object>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< string>][-Values< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceFileSystemOpStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceFileSystemOpStatus.ClassIdEnum>][-Moid< string>][-ObjectType< ApplianceFileSystemOpStatus.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,7 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: TaskIweScopedInventory.ClassIdEnum
+Type: ApplianceFileSystemOpStatus.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -69,61 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -NamingProperty
-A property that uniquely identifies the object to be inventoried as a part of the scoped inventory.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: TaskIweScopedInventory.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Queries
-Set of queries to identify objects to be inventoried as part of this scoped inventory action.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
-```yaml
-Type: object
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RegisteredDevice
-A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.AssetDeviceRegistrationRelationship
+Type: ApplianceFileSystemOpStatus.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -141,36 +91,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Type
-Type of the object for which scoped inventory needs to be run.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Values
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 
@@ -219,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightTaskIweScopedInventory
+PS C:\> Initialize-IntersightApplianceFileSystemOpStatus
 ```
 
 { Add example description here }
@@ -239,5 +159,3 @@ PS C:\> Initialize-IntersightTaskIweScopedInventory
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
-
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)

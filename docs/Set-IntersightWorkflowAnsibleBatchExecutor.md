@@ -169,7 +169,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryFromFailedApi
-When an execution of a nth API in the Batch fails,\nRetry from falied API flag indicates if the execution should start from the nth API or the first API during task retry.\nBy default the value is set to false.
+When an execution of a nth API in the Batch fails,\nRetry from failed API flag indicates if the execution should start from the nth API or the first API during task retry.\nBy default the value is set to false.
 
 ```yaml
 Type: bool

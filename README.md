@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.12561
-- C# SDK version: 1.0.11.12561
+- Intersight.PowerShell version: 1.0.11.12738
+- C# SDK version: 1.0.11.12738
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.12561"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.12738"}
 ```
 or
 
@@ -721,6 +721,7 @@ AdapterUnitExpander | [**Get-IntersightAdapterUnitExpander**](docs/Get-Intersigh
 AdapterConfigPolicy | [**New-IntersightAdapterConfigPolicy**](docs/New-IntersightAdapterConfigPolicy.md) | Create a 'AdapterConfigPolicy' resource.
 AdapterConfigPolicy | [**Remove-IntersightAdapterConfigPolicy**](docs/Remove-IntersightAdapterConfigPolicy.md) | Delete a 'AdapterConfigPolicy' resource.
 AdapterConfigPolicy | [**Set-IntersightAdapterConfigPolicy**](docs/Set-IntersightAdapterConfigPolicy.md) | Update a 'AdapterConfigPolicy' resource.
+ApplianceAppOpStatus | [**Get-IntersightApplianceAppOpStatus**](docs/Get-IntersightApplianceAppOpStatus.md) | Read a 'ApplianceAppOpStatus' resource.
 ApplianceAppStatus | [**Get-IntersightApplianceAppStatus**](docs/Get-IntersightApplianceAppStatus.md) | Read a 'ApplianceAppStatus' resource.
 ApplianceAutoRmaPolicy | [**Get-IntersightApplianceAutoRmaPolicy**](docs/Get-IntersightApplianceAutoRmaPolicy.md) | Read a 'ApplianceAutoRmaPolicy' resource.
 ApplianceBackup | [**Get-IntersightApplianceBackup**](docs/Get-IntersightApplianceBackup.md) | Read a 'ApplianceBackup' resource.
@@ -737,17 +738,21 @@ ApplianceDeviceUpgradePolicy | [**Get-IntersightApplianceDeviceUpgradePolicy**](
 ApplianceDiagSetting | [**Get-IntersightApplianceDiagSetting**](docs/Get-IntersightApplianceDiagSetting.md) | Read a 'ApplianceDiagSetting' resource.
 ApplianceExternalSyslogSetting | [**Get-IntersightApplianceExternalSyslogSetting**](docs/Get-IntersightApplianceExternalSyslogSetting.md) | Read a 'ApplianceExternalSyslogSetting' resource.
 ApplianceFileGateway | [**Get-IntersightApplianceFileGateway**](docs/Get-IntersightApplianceFileGateway.md) | Read a 'ApplianceFileGateway' resource.
+ApplianceFileSystemOpStatus | [**Get-IntersightApplianceFileSystemOpStatus**](docs/Get-IntersightApplianceFileSystemOpStatus.md) | Read a 'ApplianceFileSystemOpStatus' resource.
 ApplianceFileSystemStatus | [**Get-IntersightApplianceFileSystemStatus**](docs/Get-IntersightApplianceFileSystemStatus.md) | Read a 'ApplianceFileSystemStatus' resource.
+ApplianceGroupOpStatus | [**Get-IntersightApplianceGroupOpStatus**](docs/Get-IntersightApplianceGroupOpStatus.md) | Read a 'ApplianceGroupOpStatus' resource.
 ApplianceGroupStatus | [**Get-IntersightApplianceGroupStatus**](docs/Get-IntersightApplianceGroupStatus.md) | Read a 'ApplianceGroupStatus' resource.
 ApplianceImageBundle | [**Get-IntersightApplianceImageBundle**](docs/Get-IntersightApplianceImageBundle.md) | Read a 'ApplianceImageBundle' resource.
 ApplianceMetaManifest | [**Get-IntersightApplianceMetaManifest**](docs/Get-IntersightApplianceMetaManifest.md) | Read a 'ApplianceMetaManifest' resource.
 ApplianceNodeInfo | [**Get-IntersightApplianceNodeInfo**](docs/Get-IntersightApplianceNodeInfo.md) | Read a 'ApplianceNodeInfo' resource.
+ApplianceNodeOpStatus | [**Get-IntersightApplianceNodeOpStatus**](docs/Get-IntersightApplianceNodeOpStatus.md) | Read a 'ApplianceNodeOpStatus' resource.
 ApplianceNodeStatus | [**Get-IntersightApplianceNodeStatus**](docs/Get-IntersightApplianceNodeStatus.md) | Read a 'ApplianceNodeStatus' resource.
 ApplianceReleaseNote | [**Get-IntersightApplianceReleaseNote**](docs/Get-IntersightApplianceReleaseNote.md) | Read a 'ApplianceReleaseNote' resource.
 ApplianceRemoteFileImport | [**Get-IntersightApplianceRemoteFileImport**](docs/Get-IntersightApplianceRemoteFileImport.md) | Read a 'ApplianceRemoteFileImport' resource.
 ApplianceRestore | [**Get-IntersightApplianceRestore**](docs/Get-IntersightApplianceRestore.md) | Read a 'ApplianceRestore' resource.
 ApplianceSetupInfo | [**Get-IntersightApplianceSetupInfo**](docs/Get-IntersightApplianceSetupInfo.md) | Read a 'ApplianceSetupInfo' resource.
 ApplianceSystemInfo | [**Get-IntersightApplianceSystemInfo**](docs/Get-IntersightApplianceSystemInfo.md) | Read a 'ApplianceSystemInfo' resource.
+ApplianceSystemOpStatus | [**Get-IntersightApplianceSystemOpStatus**](docs/Get-IntersightApplianceSystemOpStatus.md) | Read a 'ApplianceSystemOpStatus' resource.
 ApplianceSystemStatus | [**Get-IntersightApplianceSystemStatus**](docs/Get-IntersightApplianceSystemStatus.md) | Read a 'ApplianceSystemStatus' resource.
 ApplianceUpgrade | [**Get-IntersightApplianceUpgrade**](docs/Get-IntersightApplianceUpgrade.md) | Read a 'ApplianceUpgrade' resource.
 ApplianceUpgradePolicy | [**Get-IntersightApplianceUpgradePolicy**](docs/Get-IntersightApplianceUpgradePolicy.md) | Read a 'ApplianceUpgradePolicy' resource.
@@ -2518,7 +2523,6 @@ TaskFabricMosScopedInventory | [**New-IntersightTaskFabricMosScopedInventory**](
 TaskHitachiScopedInventory | [**New-IntersightTaskHitachiScopedInventory**](docs/New-IntersightTaskHitachiScopedInventory.md) | Create a 'TaskHitachiScopedInventory' resource.
 TaskHyperFlexManagementScopedInventory | [**New-IntersightTaskHyperFlexManagementScopedInventory**](docs/New-IntersightTaskHyperFlexManagementScopedInventory.md) | Create a 'TaskHyperFlexManagementScopedInventory' resource.
 TaskHyperflexScopedInventory | [**New-IntersightTaskHyperflexScopedInventory**](docs/New-IntersightTaskHyperflexScopedInventory.md) | Create a 'TaskHyperflexScopedInventory' resource.
-TaskIweScopedInventory | [**New-IntersightTaskIweScopedInventory**](docs/New-IntersightTaskIweScopedInventory.md) | Create a 'TaskIweScopedInventory' resource.
 TaskMdsScopedInventory | [**New-IntersightTaskMdsScopedInventory**](docs/New-IntersightTaskMdsScopedInventory.md) | Create a 'TaskMdsScopedInventory' resource.
 TaskMdsSystemScopedInventory | [**New-IntersightTaskMdsSystemScopedInventory**](docs/New-IntersightTaskMdsSystemScopedInventory.md) | Create a 'TaskMdsSystemScopedInventory' resource.
 TaskNetAppScopedInventory | [**New-IntersightTaskNetAppScopedInventory**](docs/New-IntersightTaskNetAppScopedInventory.md) | Create a 'TaskNetAppScopedInventory' resource.
@@ -2565,20 +2569,8 @@ UuidpoolUuidLease | [**Remove-IntersightUuidpoolUuidLease**](docs/Remove-Intersi
 UuidpoolPool | [**Set-IntersightUuidpoolPool**](docs/Set-IntersightUuidpoolPool.md) | Update a 'UuidpoolPool' resource.
 ViewHealthStatus | [**Get-IntersightViewHealthStatus**](docs/Get-IntersightViewHealthStatus.md) | Read a 'ViewHealthStatus' resource.
 ViewServer | [**Get-IntersightViewServer**](docs/Get-IntersightViewServer.md) | Read a 'ViewServer' resource.
-VirtualizationCiscoHypervisorManager | [**Get-IntersightVirtualizationCiscoHypervisorManager**](docs/Get-IntersightVirtualizationCiscoHypervisorManager.md) | Read a 'VirtualizationCiscoHypervisorManager' resource.
 VirtualizationEsxiConsole | [**Get-IntersightVirtualizationEsxiConsole**](docs/Get-IntersightVirtualizationEsxiConsole.md) | Read a 'VirtualizationEsxiConsole' resource.
 VirtualizationHost | [**Get-IntersightVirtualizationHost**](docs/Get-IntersightVirtualizationHost.md) | Read a 'VirtualizationHost' resource.
-VirtualizationIweCluster | [**Get-IntersightVirtualizationIweCluster**](docs/Get-IntersightVirtualizationIweCluster.md) | Read a 'VirtualizationIweCluster' resource.
-VirtualizationIweDatacenter | [**Get-IntersightVirtualizationIweDatacenter**](docs/Get-IntersightVirtualizationIweDatacenter.md) | Read a 'VirtualizationIweDatacenter' resource.
-VirtualizationIweDvUplink | [**Get-IntersightVirtualizationIweDvUplink**](docs/Get-IntersightVirtualizationIweDvUplink.md) | Read a 'VirtualizationIweDvUplink' resource.
-VirtualizationIweDvswitch | [**Get-IntersightVirtualizationIweDvswitch**](docs/Get-IntersightVirtualizationIweDvswitch.md) | Read a 'VirtualizationIweDvswitch' resource.
-VirtualizationIweHost | [**Get-IntersightVirtualizationIweHost**](docs/Get-IntersightVirtualizationIweHost.md) | Read a 'VirtualizationIweHost' resource.
-VirtualizationIweHostInterface | [**Get-IntersightVirtualizationIweHostInterface**](docs/Get-IntersightVirtualizationIweHostInterface.md) | Read a 'VirtualizationIweHostInterface' resource.
-VirtualizationIweHostVswitch | [**Get-IntersightVirtualizationIweHostVswitch**](docs/Get-IntersightVirtualizationIweHostVswitch.md) | Read a 'VirtualizationIweHostVswitch' resource.
-VirtualizationIweNetwork | [**Get-IntersightVirtualizationIweNetwork**](docs/Get-IntersightVirtualizationIweNetwork.md) | Read a 'VirtualizationIweNetwork' resource.
-VirtualizationIweVirtualDisk | [**Get-IntersightVirtualizationIweVirtualDisk**](docs/Get-IntersightVirtualizationIweVirtualDisk.md) | Read a 'VirtualizationIweVirtualDisk' resource.
-VirtualizationIweVirtualMachine | [**Get-IntersightVirtualizationIweVirtualMachine**](docs/Get-IntersightVirtualizationIweVirtualMachine.md) | Read a 'VirtualizationIweVirtualMachine' resource.
-VirtualizationIweVirtualMachineNetworkInterface | [**Get-IntersightVirtualizationIweVirtualMachineNetworkInterface**](docs/Get-IntersightVirtualizationIweVirtualMachineNetworkInterface.md) | Read a 'VirtualizationIweVirtualMachineNetworkInterface' resource.
 VirtualizationVirtualMachine | [**Get-IntersightVirtualizationVirtualMachine**](docs/Get-IntersightVirtualizationVirtualMachine.md) | Read a 'VirtualizationVirtualMachine' resource.
 VirtualizationVmwareCluster | [**Get-IntersightVirtualizationVmwareCluster**](docs/Get-IntersightVirtualizationVmwareCluster.md) | Read a 'VirtualizationVmwareCluster' resource.
 VirtualizationVmwareDatacenter | [**Get-IntersightVirtualizationVmwareDatacenter**](docs/Get-IntersightVirtualizationVmwareDatacenter.md) | Read a 'VirtualizationVmwareDatacenter' resource.
@@ -2600,23 +2592,11 @@ VirtualizationVmwareVirtualMachineGpu | [**Get-IntersightVirtualizationVmwareVir
 VirtualizationVmwareVirtualMachineSnapshot | [**Get-IntersightVirtualizationVmwareVirtualMachineSnapshot**](docs/Get-IntersightVirtualizationVmwareVirtualMachineSnapshot.md) | Read a 'VirtualizationVmwareVirtualMachineSnapshot' resource.
 VirtualizationVmwareVirtualNetworkInterface | [**Get-IntersightVirtualizationVmwareVirtualNetworkInterface**](docs/Get-IntersightVirtualizationVmwareVirtualNetworkInterface.md) | Read a 'VirtualizationVmwareVirtualNetworkInterface' resource.
 VirtualizationVmwareVirtualSwitch | [**Get-IntersightVirtualizationVmwareVirtualSwitch**](docs/Get-IntersightVirtualizationVmwareVirtualSwitch.md) | Read a 'VirtualizationVmwareVirtualSwitch' resource.
-VirtualizationCiscoHypervisorManager | [**New-IntersightVirtualizationCiscoHypervisorManager**](docs/New-IntersightVirtualizationCiscoHypervisorManager.md) | Create a 'VirtualizationCiscoHypervisorManager' resource.
 VirtualizationEsxiConsole | [**New-IntersightVirtualizationEsxiConsole**](docs/New-IntersightVirtualizationEsxiConsole.md) | Create a 'VirtualizationEsxiConsole' resource.
-VirtualizationIweDatacenter | [**New-IntersightVirtualizationIweDatacenter**](docs/New-IntersightVirtualizationIweDatacenter.md) | Create a 'VirtualizationIweDatacenter' resource.
 VirtualizationVirtualMachine | [**New-IntersightVirtualizationVirtualMachine**](docs/New-IntersightVirtualizationVirtualMachine.md) | Create a 'VirtualizationVirtualMachine' resource.
-VirtualizationIweCluster | [**Remove-IntersightVirtualizationIweCluster**](docs/Remove-IntersightVirtualizationIweCluster.md) | Delete a 'VirtualizationIweCluster' resource.
-VirtualizationIweDatacenter | [**Remove-IntersightVirtualizationIweDatacenter**](docs/Remove-IntersightVirtualizationIweDatacenter.md) | Delete a 'VirtualizationIweDatacenter' resource.
-VirtualizationIweVirtualMachineNetworkInterface | [**Remove-IntersightVirtualizationIweVirtualMachineNetworkInterface**](docs/Remove-IntersightVirtualizationIweVirtualMachineNetworkInterface.md) | Delete a 'VirtualizationIweVirtualMachineNetworkInterface' resource.
 VirtualizationVirtualMachine | [**Remove-IntersightVirtualizationVirtualMachine**](docs/Remove-IntersightVirtualizationVirtualMachine.md) | Delete a 'VirtualizationVirtualMachine' resource.
-VirtualizationCiscoHypervisorManager | [**Set-IntersightVirtualizationCiscoHypervisorManager**](docs/Set-IntersightVirtualizationCiscoHypervisorManager.md) | Update a 'VirtualizationCiscoHypervisorManager' resource.
 VirtualizationEsxiConsole | [**Set-IntersightVirtualizationEsxiConsole**](docs/Set-IntersightVirtualizationEsxiConsole.md) | Update a 'VirtualizationEsxiConsole' resource.
 VirtualizationHost | [**Set-IntersightVirtualizationHost**](docs/Set-IntersightVirtualizationHost.md) | Update a 'VirtualizationHost' resource.
-VirtualizationIweCluster | [**Set-IntersightVirtualizationIweCluster**](docs/Set-IntersightVirtualizationIweCluster.md) | Update a 'VirtualizationIweCluster' resource.
-VirtualizationIweDatacenter | [**Set-IntersightVirtualizationIweDatacenter**](docs/Set-IntersightVirtualizationIweDatacenter.md) | Update a 'VirtualizationIweDatacenter' resource.
-VirtualizationIweHost | [**Set-IntersightVirtualizationIweHost**](docs/Set-IntersightVirtualizationIweHost.md) | Update a 'VirtualizationIweHost' resource.
-VirtualizationIweNetwork | [**Set-IntersightVirtualizationIweNetwork**](docs/Set-IntersightVirtualizationIweNetwork.md) | Update a 'VirtualizationIweNetwork' resource.
-VirtualizationIweVirtualDisk | [**Set-IntersightVirtualizationIweVirtualDisk**](docs/Set-IntersightVirtualizationIweVirtualDisk.md) | Update a 'VirtualizationIweVirtualDisk' resource.
-VirtualizationIweVirtualMachine | [**Set-IntersightVirtualizationIweVirtualMachine**](docs/Set-IntersightVirtualizationIweVirtualMachine.md) | Update a 'VirtualizationIweVirtualMachine' resource.
 VirtualizationVirtualMachine | [**Set-IntersightVirtualizationVirtualMachine**](docs/Set-IntersightVirtualizationVirtualMachine.md) | Update a 'VirtualizationVirtualMachine' resource.
 VirtualizationVmwareCluster | [**Set-IntersightVirtualizationVmwareCluster**](docs/Set-IntersightVirtualizationVmwareCluster.md) | Update a 'VirtualizationVmwareCluster' resource.
 VirtualizationVmwareDatacenter | [**Set-IntersightVirtualizationVmwareDatacenter**](docs/Set-IntersightVirtualizationVmwareDatacenter.md) | Update a 'VirtualizationVmwareDatacenter' resource.

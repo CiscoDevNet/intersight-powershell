@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightVirtualizationIweHostVswitch
+# Get-IntersightApplianceFileSystemOpStatus
 
 ## SYNOPSIS
-Get the VirtualizationIweHostVswitch
+Get the ApplianceFileSystemOpStatus
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightVirtualizationIweHostVswitch [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightApplianceFileSystemOpStatus [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightVirtualizationIweHostVswitch [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightApplianceFileSystemOpStatus [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;VirtualizationIweHostVswitch&apos; resource.,
+Read a &apos;ApplianceFileSystemOpStatus&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -34,27 +34,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweHostVswitch
+PS C:\> $result = Get-IntersightApplianceFileSystemOpStatus
 ```
-Above example returns the list of VirtualizationIweHostVswitch.
+Above example returns the list of ApplianceFileSystemOpStatus.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweHostVswitch -Name "MoName"
+PS C:\> $result = Get-IntersightApplianceFileSystemOpStatus -Name "MoName"
 ```
-Above example returns the VirtualizationIweHostVswitch matched with name.
+Above example returns the ApplianceFileSystemOpStatus matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweHostVswitch -Organization $organization
+PS C:\> $result = Get-IntersightApplianceFileSystemOpStatus -Organization $organization
 ```
-Above example returns the list of VirtualizationIweHostVswitch available under the $organization .
+Above example returns the list of ApplianceFileSystemOpStatus available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweHostVswitch -InlineCount allpages
+PS C:\> $result = Get-IntersightApplianceFileSystemOpStatus -InlineCount allpages
 ```
-Above example returns the list of VirtualizationIweHostVswitch along with count.
+Above example returns the list of ApplianceFileSystemOpStatus along with count.
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the VirtualizationIweHostVswitch.
+Specifies the name of the ApplianceFileSystemOpStatus.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the VirtualizationIweHostVswitch under it.
+Specifies the organization, to fetch the ApplianceFileSystemOpStatus under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship

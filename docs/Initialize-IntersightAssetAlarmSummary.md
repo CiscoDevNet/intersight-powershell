@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationVmInterface
+# Initialize-IntersightAssetAlarmSummary
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationVmInterface [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationVmInterface.ClassIdEnum>][-IpAddress< System.Collections.Generic.List`1[string]>][-Name< string>][-ObjectType< VirtualizationVmInterface.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetAlarmSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetAlarmSummary.ClassIdEnum>][-ObjectType< AssetAlarmSummary.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,37 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: VirtualizationVmInterface.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IpAddress
-
-
-```yaml
-Type: System.Collections.Generic.List`1[string]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-Name of the virtual machine interface.
-
-```yaml
-Type: string
+Type: AssetAlarmSummary.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -88,7 +58,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: VirtualizationVmInterface.ObjectTypeEnum
+Type: AssetAlarmSummary.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -137,7 +107,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationVmInterface
+PS C:\> Initialize-IntersightAssetAlarmSummary
 ```
 
 { Add example description here }

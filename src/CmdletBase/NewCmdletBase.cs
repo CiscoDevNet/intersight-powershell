@@ -50,6 +50,16 @@ namespace Intersight.PowerShell
 
                         item.SetValue(ModelObject, this.MyInvocation.BoundParameters[propName]);
                     }
+                    else
+                    /*
+					 * Ensure that the _flag is set to false for properties that are not configured using cmdlet parameters. 
+					 * The following code ensures this by setting it to false if the _flag is set to true for properties that 
+					 * are not configured. This fix applies to all New and Set cmdlets. 
+					 * The problem was reported as part of the issue : https://github.com/CiscoDevNet/intersight-powershell/issues/101.
+					 */
+                    {
+                        PSUtils.SetSerializeFalgToFalse(item.Name, ModelObject);
+                    }
                 }
 
                 if (Json.IsPresent)

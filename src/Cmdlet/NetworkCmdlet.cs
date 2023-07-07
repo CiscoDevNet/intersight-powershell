@@ -667,6 +667,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The intercluster link state of the switch.\n* `Unknown` - The operational state of the link is not known.\n* `Up` - The operational state of the link is up.\n* `Down` - The operational state of the link is down.\n* `Degraded` - The link is operational but degraded. This state is applicable to port channels when any one of the member links is down."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElement.InterClusterLinkStateEnum InterClusterLinkState
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -1444,6 +1455,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long InbandVlan
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The intercluster link state of the switch.\n* `Unknown` - The operational state of the link is not known.\n* `Up` - The operational state of the link is up.\n* `Down` - The operational state of the link is down.\n* `Degraded` - The link is operational but degraded. This state is applicable to port channels when any one of the member links is down."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElementSummary.InterClusterLinkStateEnum InterClusterLinkState
         {
             get;
             set;
@@ -4642,6 +4664,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

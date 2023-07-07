@@ -11985,6 +11985,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Specifies whether all source Snapshot copies should be copied to the destination on a transfer rather than specifying specific retentions. It is applicable only to async policies."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool CopyAllSourceSnapshots
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -15949,6 +15960,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Reports if the LUN is mapped to one or more initiator groups."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IsMapped
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Unique identifier of LUN across data center."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -18379,7 +18401,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Indicates that NTP symmetric authentication is enabled."</para>
+        /// <para type="description">"Indicates whether or not NTP symmetric authentication is enabled."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -18428,6 +18450,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates whether or not NTP symmetric authentication is enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IsAuthenticationEnabled
         {
             get;
             set;
@@ -18838,6 +18871,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The type of the schedule (cron or interval)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Type
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Universally unique identifier of the schedule."</para>
@@ -19795,6 +19839,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Comment
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Specifies whether all source Snapshot copies should be copied to the destination on a transfer rather than specifying specific retentions. It is applicable only to async policies."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool CopyAllSourceSnapshots
         {
             get;
             set;

@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightVirtualizationIweDvswitch
+# Get-IntersightApplianceGroupOpStatus
 
 ## SYNOPSIS
-Get the VirtualizationIweDvswitch
+Get the ApplianceGroupOpStatus
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightVirtualizationIweDvswitch [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightApplianceGroupOpStatus [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightVirtualizationIweDvswitch [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightApplianceGroupOpStatus [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;VirtualizationIweDvswitch&apos; resource.,
+Read a &apos;ApplianceGroupOpStatus&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -34,27 +34,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweDvswitch
+PS C:\> $result = Get-IntersightApplianceGroupOpStatus
 ```
-Above example returns the list of VirtualizationIweDvswitch.
+Above example returns the list of ApplianceGroupOpStatus.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweDvswitch -Name "MoName"
+PS C:\> $result = Get-IntersightApplianceGroupOpStatus -Name "MoName"
 ```
-Above example returns the VirtualizationIweDvswitch matched with name.
+Above example returns the ApplianceGroupOpStatus matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweDvswitch -Organization $organization
+PS C:\> $result = Get-IntersightApplianceGroupOpStatus -Organization $organization
 ```
-Above example returns the list of VirtualizationIweDvswitch available under the $organization .
+Above example returns the list of ApplianceGroupOpStatus available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweDvswitch -InlineCount allpages
+PS C:\> $result = Get-IntersightApplianceGroupOpStatus -InlineCount allpages
 ```
-Above example returns the list of VirtualizationIweDvswitch along with count.
+Above example returns the list of ApplianceGroupOpStatus along with count.
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the VirtualizationIweDvswitch.
+Specifies the name of the ApplianceGroupOpStatus.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the VirtualizationIweDvswitch under it.
+Specifies the organization, to fetch the ApplianceGroupOpStatus under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship

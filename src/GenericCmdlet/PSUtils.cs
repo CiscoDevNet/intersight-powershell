@@ -89,5 +89,24 @@ namespace Intersight.PowerShell
 
             return result;
         }
+
+        /// <summary>
+        /// set the _Flag field to false,to ensure that it will not serialized the property which is not configured.
+        /// </summary>
+        /// <param name="propertyName"></param>
+        /// <param name="modelObject"></param>
+        public static void SetSerializeFalgToFalse(string propertyName, object modelObject)
+        {
+            var fieldName = string.Format("_flag{0}", propertyName);
+            var fieldInfo = modelObject.GetType().GetField(fieldName, BindingFlags.NonPublic | BindingFlags.Instance);
+            if (fieldInfo != null)
+            {
+                var fieldVal = fieldInfo.GetValue(modelObject);
+                if ((bool)fieldVal)
+                {
+                    fieldInfo.SetValue(modelObject, false);
+                }
+            }
+        }
     }
 }
