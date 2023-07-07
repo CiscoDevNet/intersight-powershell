@@ -35,12 +35,22 @@ namespace Intersight.PowerShell
                 }
 
                 var changedPropeties = GetChangedProperty();
-                foreach (var item in changedPropeties)
+                var propertyInfos = this.ModelObject.GetType().GetProperties();
+                foreach (var propertyInfo in propertyInfos)
                 {
-                    PropertyInfo propertyInfo = this.ModelObject.GetType().GetProperty(item.Key);
-                    if (propertyInfo != null)
+                    if (changedPropeties.ContainsKey(propertyInfo.Name))
                     {
-                        propertyInfo.SetValue(this.ModelObject, this.MyInvocation.BoundParameters[item.Key]);
+                        propertyInfo.SetValue(this.ModelObject, this.MyInvocation.BoundParameters[propertyInfo.Name]);
+                    }
+                    else
+                    /*
+					 * Ensure that the _flag is set to false for properties that are not configured using cmdlet parameters. 
+					 * The following code ensures this by setting it to false if the _flag is set to true for properties that 
+					 * are not configured. This fix applies to all New and Set cmdlets. 
+					 * The problem was reported as part of the issue : https://github.com/CiscoDevNet/intersight-powershell/issues/101.
+					 */
+                    {
+                        PSUtils.SetSerializeFalgToFalse(propertyInfo.Name, ModelObject);
                     }
                 }
 

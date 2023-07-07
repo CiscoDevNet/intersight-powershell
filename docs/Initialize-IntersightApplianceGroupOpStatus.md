@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationIweVirtualDisk
+# Initialize-IntersightApplianceGroupOpStatus
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationIweVirtualDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationIweVirtualDisk.ClassIdEnum>][-Cluster< Model.VirtualizationIweClusterRelationship>][-Moid< string>][-Name< string>][-ObjectType< VirtualizationIweVirtualDisk.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Size< long>][-SourceVirtualDisk< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceGroupOpStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceGroupOpStatus.ClassIdEnum>][-Moid< string>][-ObjectType< ApplianceGroupOpStatus.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,25 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: VirtualizationIweVirtualDisk.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Cluster
-A reference to a virtualizationIweCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.VirtualizationIweClusterRelationship
+Type: ApplianceGroupOpStatus.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -87,74 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-Name of the storage disk. Name must be unique within a Datastore.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: VirtualizationIweVirtualDisk.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RegisteredDevice
-A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.AssetDeviceRegistrationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Size
-Disk size represented in bytes.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SourceVirtualDisk
-Virtual disk used for cloning new disk.
-
-```yaml
-Type: string
+Type: ApplianceGroupOpStatus.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -220,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationIweVirtualDisk
+PS C:\> Initialize-IntersightApplianceGroupOpStatus
 ```
 
 { Add example description here }

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationCiscoHypervisorManager
+# Initialize-IntersightApplianceSystemOpStatus
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationCiscoHypervisorManager [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationCiscoHypervisorManager.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< VirtualizationCiscoHypervisorManager.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceSystemOpStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceSystemOpStatus.ClassIdEnum>][-Moid< string>][-ObjectType< ApplianceSystemOpStatus.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,7 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: VirtualizationCiscoHypervisorManager.ClassIdEnum
+Type: ApplianceSystemOpStatus.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -69,44 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-The user provided name for the hypervisor manager. For example, vCenterIreland. Usually, this name is subject to manipulation by the user. It is not the identity of the hypervisor.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: VirtualizationCiscoHypervisorManager.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RegisteredDevice
-A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.AssetDeviceRegistrationRelationship
+Type: ApplianceSystemOpStatus.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -172,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationCiscoHypervisorManager
+PS C:\> Initialize-IntersightApplianceSystemOpStatus
 ```
 
 { Add example description here }

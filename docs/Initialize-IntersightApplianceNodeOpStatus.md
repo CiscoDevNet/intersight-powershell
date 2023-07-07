@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationIweDvswitch
+# Initialize-IntersightApplianceNodeOpStatus
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationIweDvswitch [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationIweDvswitch.ClassIdEnum>][-DvUplink< string>][-Identity< string>][-LastHostname< string>][-Moid< string>][-Name< string>][-ObjectType< VirtualizationIweDvswitch.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceNodeOpStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceNodeOpStatus.ClassIdEnum>][-Moid< string>][-ObjectType< ApplianceNodeOpStatus.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,52 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: VirtualizationIweDvswitch.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DvUplink
-The name of the dvUplink referenced by this dvswitch.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Identity
-The internally generated identity of this switch. This entity is not manipulated by users. It aids in uniquely identifying the switch object. For VMware, this is MOR (managed object reference).
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -LastHostname
-The last host that update this object.
-
-```yaml
-Type: string
+Type: ApplianceNodeOpStatus.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -114,44 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-User-provided name to identify the switch.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: VirtualizationIweDvswitch.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RegisteredDevice
-A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.AssetDeviceRegistrationRelationship
+Type: ApplianceNodeOpStatus.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -217,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationIweDvswitch
+PS C:\> Initialize-IntersightApplianceNodeOpStatus
 ```
 
 { Add example description here }

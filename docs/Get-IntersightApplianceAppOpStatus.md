@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightVirtualizationIweVirtualMachineNetworkInterface
+# Get-IntersightApplianceAppOpStatus
 
 ## SYNOPSIS
-Get the VirtualizationIweVirtualMachineNetworkInterface
+Get the ApplianceAppOpStatus
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightVirtualizationIweVirtualMachineNetworkInterface [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightApplianceAppOpStatus [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightVirtualizationIweVirtualMachineNetworkInterface [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightApplianceAppOpStatus [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;VirtualizationIweVirtualMachineNetworkInterface&apos; resource.,
+Read a &apos;ApplianceAppOpStatus&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -34,27 +34,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweVirtualMachineNetworkInterface
+PS C:\> $result = Get-IntersightApplianceAppOpStatus
 ```
-Above example returns the list of VirtualizationIweVirtualMachineNetworkInterface.
+Above example returns the list of ApplianceAppOpStatus.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweVirtualMachineNetworkInterface -Name "MoName"
+PS C:\> $result = Get-IntersightApplianceAppOpStatus -Name "MoName"
 ```
-Above example returns the VirtualizationIweVirtualMachineNetworkInterface matched with name.
+Above example returns the ApplianceAppOpStatus matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweVirtualMachineNetworkInterface -Organization $organization
+PS C:\> $result = Get-IntersightApplianceAppOpStatus -Organization $organization
 ```
-Above example returns the list of VirtualizationIweVirtualMachineNetworkInterface available under the $organization .
+Above example returns the list of ApplianceAppOpStatus available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweVirtualMachineNetworkInterface -InlineCount allpages
+PS C:\> $result = Get-IntersightApplianceAppOpStatus -InlineCount allpages
 ```
-Above example returns the list of VirtualizationIweVirtualMachineNetworkInterface along with count.
+Above example returns the list of ApplianceAppOpStatus along with count.
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the VirtualizationIweVirtualMachineNetworkInterface.
+Specifies the name of the ApplianceAppOpStatus.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the VirtualizationIweVirtualMachineNetworkInterface under it.
+Specifies the organization, to fetch the ApplianceAppOpStatus under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -283,6 +283,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Remove-IntersightVirtualizationIweVirtualMachineNetworkInterface](./Remove-IntersightVirtualizationIweVirtualMachineNetworkInterface.md)
 

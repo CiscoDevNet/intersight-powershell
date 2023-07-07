@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightVirtualizationIweNetwork
+# Get-IntersightApplianceSystemOpStatus
 
 ## SYNOPSIS
-Get the VirtualizationIweNetwork
+Get the ApplianceSystemOpStatus
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightVirtualizationIweNetwork [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightApplianceSystemOpStatus [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightVirtualizationIweNetwork [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightApplianceSystemOpStatus [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;VirtualizationIweNetwork&apos; resource.,
+Read a &apos;ApplianceSystemOpStatus&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -34,27 +34,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweNetwork
+PS C:\> $result = Get-IntersightApplianceSystemOpStatus
 ```
-Above example returns the list of VirtualizationIweNetwork.
+Above example returns the list of ApplianceSystemOpStatus.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweNetwork -Name "MoName"
+PS C:\> $result = Get-IntersightApplianceSystemOpStatus -Name "MoName"
 ```
-Above example returns the VirtualizationIweNetwork matched with name.
+Above example returns the ApplianceSystemOpStatus matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweNetwork -Organization $organization
+PS C:\> $result = Get-IntersightApplianceSystemOpStatus -Organization $organization
 ```
-Above example returns the list of VirtualizationIweNetwork available under the $organization .
+Above example returns the list of ApplianceSystemOpStatus available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweNetwork -InlineCount allpages
+PS C:\> $result = Get-IntersightApplianceSystemOpStatus -InlineCount allpages
 ```
-Above example returns the list of VirtualizationIweNetwork along with count.
+Above example returns the list of ApplianceSystemOpStatus along with count.
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the VirtualizationIweNetwork.
+Specifies the name of the ApplianceSystemOpStatus.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the VirtualizationIweNetwork under it.
+Specifies the organization, to fetch the ApplianceSystemOpStatus under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -283,6 +283,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Set-IntersightVirtualizationIweNetwork](./Set-IntersightVirtualizationIweNetwork.md)
 

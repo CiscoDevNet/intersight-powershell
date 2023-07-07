@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationVmDisk
+# Initialize-IntersightApplianceNetworkStatus
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationVmDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationVmDisk.ClassIdEnum>][-ObjectType< VirtualizationVmDisk.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceNetworkStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceNetworkStatus.ClassIdEnum>][-ObjectType< ApplianceNetworkStatus.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,7 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: VirtualizationVmDisk.ClassIdEnum
+Type: ApplianceNetworkStatus.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: VirtualizationVmDisk.ObjectTypeEnum
+Type: ApplianceNetworkStatus.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -107,7 +107,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationVmDisk
+PS C:\> Initialize-IntersightApplianceNetworkStatus
 ```
 
 { Add example description here }

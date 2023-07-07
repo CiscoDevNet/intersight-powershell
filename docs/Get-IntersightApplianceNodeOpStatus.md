@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightVirtualizationIweCluster
+# Get-IntersightApplianceNodeOpStatus
 
 ## SYNOPSIS
-Get the VirtualizationIweCluster
+Get the ApplianceNodeOpStatus
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightVirtualizationIweCluster [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightApplianceNodeOpStatus [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightVirtualizationIweCluster [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightApplianceNodeOpStatus [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;VirtualizationIweCluster&apos; resource.,
+Read a &apos;ApplianceNodeOpStatus&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -34,27 +34,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweCluster
+PS C:\> $result = Get-IntersightApplianceNodeOpStatus
 ```
-Above example returns the list of VirtualizationIweCluster.
+Above example returns the list of ApplianceNodeOpStatus.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweCluster -Name "MoName"
+PS C:\> $result = Get-IntersightApplianceNodeOpStatus -Name "MoName"
 ```
-Above example returns the VirtualizationIweCluster matched with name.
+Above example returns the ApplianceNodeOpStatus matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweCluster -Organization $organization
+PS C:\> $result = Get-IntersightApplianceNodeOpStatus -Organization $organization
 ```
-Above example returns the list of VirtualizationIweCluster available under the $organization .
+Above example returns the list of ApplianceNodeOpStatus available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightVirtualizationIweCluster -InlineCount allpages
+PS C:\> $result = Get-IntersightApplianceNodeOpStatus -InlineCount allpages
 ```
-Above example returns the list of VirtualizationIweCluster along with count.
+Above example returns the list of ApplianceNodeOpStatus along with count.
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the VirtualizationIweCluster.
+Specifies the name of the ApplianceNodeOpStatus.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the VirtualizationIweCluster under it.
+Specifies the organization, to fetch the ApplianceNodeOpStatus under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -283,8 +283,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[Remove-IntersightVirtualizationIweCluster](./Remove-IntersightVirtualizationIweCluster.md)
-
-[Set-IntersightVirtualizationIweCluster](./Set-IntersightVirtualizationIweCluster.md)
 
