@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightMacpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< MacpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< MacpoolLease.ClassIdEnum>][-MacAddress< string>][-Moid< string>][-ObjectType< MacpoolLease.ObjectTypeEnum>][-Pool< Model.MacpoolPoolRelationship>][-Reservation< Model.MacpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightMacpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< MacpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< MacpoolLease.ClassIdEnum>][-HasDuplicate< bool>][-MacAddress< string>][-Moid< string>][-ObjectType< MacpoolLease.ObjectTypeEnum>][-Pool< Model.MacpoolPoolRelationship>][-Reservation< Model.MacpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,6 +77,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: MacpoolLease.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HasDuplicate
+HasDuplicate represents if there are other pools in which this id exists.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

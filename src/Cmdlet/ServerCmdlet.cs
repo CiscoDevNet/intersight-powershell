@@ -892,6 +892,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Indicates whether the value of the 'pmcDeployedSecurePassphrase' property has been set."</para>
         /// </summary>
@@ -1082,6 +1083,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public ServerProfile.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User label assigned to the server profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
         {
             get;
             set;
@@ -1579,6 +1591,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -1768,6 +1781,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ServerProfile.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User label assigned to the server profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
         {
             get;
             set;
@@ -2123,6 +2147,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -2312,6 +2337,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ServerProfile.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User label assigned to the server profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
         {
             get;
             set;

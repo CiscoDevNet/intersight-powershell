@@ -257,6 +257,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"HasDuplicate represents if there are other pools in which this id exists."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool HasDuplicate
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -343,6 +353,10 @@ namespace Intersight.PowerShell
                 initObject.AssignedToEntity = this.AssignedToEntity;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("HasDuplicate"))
+            {
+                initObject.HasDuplicate = this.HasDuplicate;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -578,11 +592,21 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Boolean to represent whether the ID is assigned or not."</para>
+        /// <para type="description">"Boolean to represent whether the ID is in use."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public bool Assigned
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Boolean to represent whether the ID is used either statically or by another pool."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AssignedByAnother
         {
             get;
             set;
@@ -628,6 +652,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Boolean to represent whether the ID is reserved."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Reserved
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -649,6 +683,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Assigned = this.Assigned;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AssignedByAnother"))
+            {
+                initObject.AssignedByAnother = this.AssignedByAnother;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AssignedToEntity"))
             {
                 initObject.AssignedToEntity = this.AssignedToEntity;
@@ -659,6 +697,10 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Reserved"))
+            {
+                initObject.Reserved = this.Reserved;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;

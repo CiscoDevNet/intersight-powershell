@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIqnpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IqnpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< IqnpoolLease.ClassIdEnum>][-IqnAddress< string>][-Moid< string>][-ObjectType< IqnpoolLease.ObjectTypeEnum>][-Pool< Model.IqnpoolPoolRelationship>][-Reservation< Model.IqnpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIqnpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IqnpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< IqnpoolLease.ClassIdEnum>][-HasDuplicate< bool>][-IqnAddress< string>][-Moid< string>][-ObjectType< IqnpoolLease.ObjectTypeEnum>][-Pool< Model.IqnpoolPoolRelationship>][-Reservation< Model.IqnpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -87,8 +87,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -HasDuplicate
+HasDuplicate represents if there are other pools in which this id exists.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -IqnAddress
-IQN address allocated for pool-based allocation \&quot;prefix+suffix+number\&quot;.
+IQN address allocated for pool-based allocation. It is constructed as &lt;prefix&gt;:&lt;suffix&gt;:&lt;number&gt;.
 
 ```yaml
 Type: string

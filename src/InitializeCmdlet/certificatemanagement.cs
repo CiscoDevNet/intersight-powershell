@@ -15,9 +15,6 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightCertificatemanagementCertificateBase()
         {
-            CertType = CertificatemanagementCertificateBase.CertTypeEnum.None;
-            ClassId = CertificatemanagementCertificateBase.ClassIdEnum.CertificatemanagementImc;
-            ObjectType = CertificatemanagementCertificateBase.ObjectTypeEnum.CertificatemanagementImc;
 
         }
         // <summary>
@@ -26,16 +23,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Certificate Type for the certificate management.\n* `None` - Set certificate on the selected end point .\n* `KMIPClient` - Set KMIP certificate on the selected end point."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public CertificatemanagementCertificateBase.CertTypeEnum CertType
         {
             get;
             set;
@@ -80,16 +67,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"Private Key which is used to validate the certificate."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Privatekey
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -97,10 +74,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("CertType"))
-            {
-                initObject.CertType = this.CertType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Certificate"))
             {
@@ -112,10 +85,6 @@ namespace Intersight.PowerShell
                 initObject.Enabled = this.Enabled;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Privatekey"))
-            {
-                initObject.Privatekey = this.Privatekey;
-            }
             WriteObject(initObject);
         }
 
@@ -164,7 +133,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -184,7 +153,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -467,6 +436,104 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CertificatemanagementRootCaCertificate.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCertificatemanagementRootCaCertificate")]
+    public class InitializeIntersightCertificatemanagementRootCaCertificate : PSCmdlet
+    {
+        public InitializeIntersightCertificatemanagementRootCaCertificate()
+        {
+            ClassId = CertificatemanagementRootCaCertificate.ClassIdEnum.CertificatemanagementRootCaCertificate;
+            ObjectType = CertificatemanagementRootCaCertificate.ObjectTypeEnum.CertificatemanagementRootCaCertificate;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Certificate that is used for verifying the authorization."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.X509Certificate Certificate
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A name that helps identify a certificate. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
+        public string CertificateName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CertificatemanagementRootCaCertificate.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable/Disable the certificate in Certificate Management policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CertificatemanagementRootCaCertificate.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CertificatemanagementRootCaCertificate initObject = new Intersight.Model.CertificatemanagementRootCaCertificate();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Certificate"))
+            {
+                initObject.Certificate = this.Certificate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CertificateName"))
+            {
+                initObject.CertificateName = this.CertificateName;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

@@ -349,7 +349,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"One time URL that is used to launch the KVM console."</para>
+        /// <para type="description">"One time URL that is used to launch the vKVM console."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

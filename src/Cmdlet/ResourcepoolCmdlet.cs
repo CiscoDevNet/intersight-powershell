@@ -89,6 +89,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"HasDuplicate represents if there are other pools in which this id exists."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool HasDuplicate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Indicates whether a lease allocation is exclusive based on the Assigned Entity, if the AssignedEntity holds any lease then not allowed to create new lease later."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -351,7 +362,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Number of IDs that are currently assigned."</para>
+        /// <para type="description">"Number of IDs that are currently assigned (in use)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -473,6 +484,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Number of IDs that are currently reserved (and not in use)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long Reserved
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The type of the resource present in the pool, example 'server' its combination of RackUnit and Blade.\n* `None` - The resource cannot consider for Resource Pool.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade."</para>
@@ -538,7 +560,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Boolean to represent whether the ID is assigned or not."</para>
+        /// <para type="description">"Boolean to represent whether the ID is in use."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -862,6 +884,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"The pool specific parameters."</para>
         /// </summary>
@@ -1031,6 +1054,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"The pool specific parameters."</para>

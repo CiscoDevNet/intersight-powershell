@@ -82,6 +82,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"HasDuplicate represents if there are other pools in which this id exists."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool HasDuplicate
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Indicates whether a lease allocation is exclusive based on the Assigned Entity, if the AssignedEntity holds any lease then not allowed to create new lease later."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -185,6 +195,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Feature"))
             {
                 initObject.Feature = this.Feature;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("HasDuplicate"))
+            {
+                initObject.HasDuplicate = this.HasDuplicate;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("IsExclusiveAtAssignedEntity"))
             {
@@ -579,7 +593,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Boolean to represent whether the ID is assigned or not."</para>
+        /// <para type="description">"Boolean to represent whether the ID is in use."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

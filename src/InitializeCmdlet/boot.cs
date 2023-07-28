@@ -692,6 +692,248 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootHttp.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBootHttp")]
+    public class InitializeIntersightBootHttp : PSCmdlet
+    {
+        public InitializeIntersightBootHttp()
+        {
+            ClassId = BootHttp.ClassIdEnum.BootHttp;
+            InterfaceSource = BootHttp.InterfaceSourceEnum.Name;
+            IpConfigType = BootHttp.IpConfigTypeEnum.DHCP;
+            IpType = BootHttp.IpTypeEnum.IPv4;
+            ObjectType = BootHttp.ObjectTypeEnum.BootHttp;
+            Protocol = BootHttp.ProtocolEnum.HTTPS;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootHttp.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies if the boot device is enabled or disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the underlying virtual ethernet interface used by the HTTP boot device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9-._:]*$")]
+        public string InterfaceName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Lists the supported Interface Source for HTTP device. Supported values are \"name\" and \"mac\".\n* `name` - Use interface name to select virtual ethernet interface.\n* `mac` - Use MAC address to select virtual ethernet interface.\n* `port` - Use port to select virtual ethernet interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootHttp.InterfaceSourceEnum InterfaceSource
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The IP config type to use during the HTTP boot process. For DHCP configuration, the IP address, DNS server, netmask and gateway details are obtained from DHCP server. For static configuration, please provide the IP address, DNS server, netmask, and gateway details.\n* `DHCP` - The type of the IP config is DHCP.\n* `Static` - The type of the IP config is Static."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootHttp.IpConfigTypeEnum IpConfigType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The IP address family type to use during the HTTP boot process.\n* `IPv4` - The type of the IP address is IPv4.\n* `IPv6` - The type of the IP address is IPv6."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootHttp.IpTypeEnum IpType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The MAC Address of the underlying virtual ethernet interface used by the HTTP boot device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^(((\\d|([a-f]|[A-F])){2}:){5}(\\d|([a-f]|[A-F])){2})$")]
+        public string MacAddress
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A name that helps identify a boot device. It can be any string that adheres to the following constraints. It should start and end with an alphanumeric character. It can have underscores and hyphens. It cannot be more than 30 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("((^[a-zA-Z0-9]$){1,30}|(^(([a-zA-Z0-9])([a-zA-Z0-9_\\-]{0,28})([a-zA-Z0-9]))$))")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootHttp.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Port ID of the adapter on which the underlying virtual ethernet interface is present. If no port is specified, the default value is -1. Supported values are 0 to 255."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(-1, 255)]
+        public long Port
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Protocol to be used for HTTP boot. HTTPS require root certificate for authentication.\n* `HTTPS` - Secure HTTP protocol, certificate required for authentication.\n* `HTTP` - HTTP protocol without security certificate requirement."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootHttp.ProtocolEnum Protocol
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The slot ID of the adapter on which the underlying virtual ethernet interface is present. Supported values are ( 1 - 255, \"MLOM\", \"L\", \"L1\", \"L2\", \"OCP\")."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]|L|MLOM|L1|L2|OCP)$")]
+        public string Slot
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The static IP config settings to use during the HTTP boot process."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.BootStaticIpV4Settings StaticIpV4Settings
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The static IP config settings to use during the HTTP boot process."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.BootStaticIpV6Settings StaticIpV6Settings
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Boot resource location in URI format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Uri
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.BootHttp initObject = new Intersight.Model.BootHttp();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InterfaceName"))
+            {
+                initObject.InterfaceName = this.InterfaceName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InterfaceSource"))
+            {
+                initObject.InterfaceSource = this.InterfaceSource;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpConfigType"))
+            {
+                initObject.IpConfigType = this.IpConfigType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpType"))
+            {
+                initObject.IpType = this.IpType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MacAddress"))
+            {
+                initObject.MacAddress = this.MacAddress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Port"))
+            {
+                initObject.Port = this.Port;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Protocol"))
+            {
+                initObject.Protocol = this.Protocol;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Slot"))
+            {
+                initObject.Slot = this.Slot;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StaticIpV4Settings"))
+            {
+                initObject.StaticIpV4Settings = this.StaticIpV4Settings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StaticIpV6Settings"))
+            {
+                initObject.StaticIpV6Settings = this.StaticIpV6Settings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
+            {
+                initObject.Uri = this.Uri;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BootIscsi.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBootIscsi")]
@@ -1935,7 +2177,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Lists the supported Interface Source for PXE device. Supported values are \"name\" and \"mac\".\n* `name` - Use interface name to select virtual ethernet interface.\n* `mac` - Use MAC address to select virtual ethernet interface.\n* `port` - Use port to select virtual ethernet interface."</para>
+        /// <para type="description">"Lists the supported methods to provide network boot device configuration. Supported values are \"name\" and \"mac\".\n* `name` - Use interface name to select virtual ethernet interface.\n* `mac` - Use MAC address to select virtual ethernet interface.\n* `port` - Use port to select virtual ethernet interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1985,7 +2227,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The Port ID of the adapter on which the underlying virtual ethernet interface is present. If no port is specified, the default value is -1. Supported values are -1 to 255."</para>
+        /// <para type="description">"The Port ID of the adapter on which the underlying virtual ethernet interface is present. If no port is specified, the default value is -1. Supported values are 0 to 255."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(-1, 255)]
@@ -2788,6 +3030,230 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootStaticIpV4Settings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBootStaticIpV4Settings")]
+    public class InitializeIntersightBootStaticIpV4Settings : PSCmdlet
+    {
+        public InitializeIntersightBootStaticIpV4Settings()
+        {
+            ClassId = BootStaticIpV4Settings.ClassIdEnum.BootStaticIpV4Settings;
+            ObjectType = BootStaticIpV4Settings.ObjectTypeEnum.BootStaticIpV4Settings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootStaticIpV4Settings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address of DNS server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string DnsIp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address of default gateway."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string GatewayIp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Ipv4 static Internet Protocol address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string Ip
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Network mask of the IP address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^(((255\\.){3}(255|254|252|248|240|224|192|128|0+))|((255\\.){2}(255|254|252|248|240|224|192|128|0+)\\.0)|((255\\.)(255|254|252|248|240|224|192|128|0+)(\\.0+){2})|((255|254|252|248|240|224|192|128|0+)(\\.0+){3}))$")]
+        public string NetworkMask
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootStaticIpV4Settings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.BootStaticIpV4Settings initObject = new Intersight.Model.BootStaticIpV4Settings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DnsIp"))
+            {
+                initObject.DnsIp = this.DnsIp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GatewayIp"))
+            {
+                initObject.GatewayIp = this.GatewayIp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ip"))
+            {
+                initObject.Ip = this.Ip;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkMask"))
+            {
+                initObject.NetworkMask = this.NetworkMask;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BootStaticIpV6Settings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBootStaticIpV6Settings")]
+    public class InitializeIntersightBootStaticIpV6Settings : PSCmdlet
+    {
+        public InitializeIntersightBootStaticIpV6Settings()
+        {
+            ClassId = BootStaticIpV6Settings.ClassIdEnum.BootStaticIpV6Settings;
+            ObjectType = BootStaticIpV6Settings.ObjectTypeEnum.BootStaticIpV6Settings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootStaticIpV6Settings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address of DNS server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^(([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{0,4}|:[0-9A-Fa-f]{1,4})?|(:[0-9A-Fa-f]{1,4}){0,2})|(:[0-9A-Fa-f]{1,4}){0,3})|(:[0-9A-Fa-f]{1,4}){0,4})|:(:[0-9A-Fa-f]{1,4}){0,5})((:[0-9A-Fa-f]{1,4}){2}|:(25[0-5]|(2[0-4]|1[0-9]|[1-9])?[0-9])(\\.(25[0-5]|(2[0-4]|1[0-9]|[1-9])?[0-9])){3})|(([0-9A-Fa-f]{1,4}:){1,6}|:):[0-9A-Fa-f]{0,4}|([0-9A-Fa-f]{1,4}:){7}:)$")]
+        public string DnsIp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address of default gateway."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^(([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{0,4}|:[0-9A-Fa-f]{1,4})?|(:[0-9A-Fa-f]{1,4}){0,2})|(:[0-9A-Fa-f]{1,4}){0,3})|(:[0-9A-Fa-f]{1,4}){0,4})|:(:[0-9A-Fa-f]{1,4}){0,5})((:[0-9A-Fa-f]{1,4}){2}|:(25[0-5]|(2[0-4]|1[0-9]|[1-9])?[0-9])(\\.(25[0-5]|(2[0-4]|1[0-9]|[1-9])?[0-9])){3})|(([0-9A-Fa-f]{1,4}:){1,6}|:):[0-9A-Fa-f]{0,4}|([0-9A-Fa-f]{1,4}:){7}:)$")]
+        public string GatewayIp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Ipv6 static Internet Protocol address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^(([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{0,4}|:[0-9A-Fa-f]{1,4})?|(:[0-9A-Fa-f]{1,4}){0,2})|(:[0-9A-Fa-f]{1,4}){0,3})|(:[0-9A-Fa-f]{1,4}){0,4})|:(:[0-9A-Fa-f]{1,4}){0,5})((:[0-9A-Fa-f]{1,4}){2}|:(25[0-5]|(2[0-4]|1[0-9]|[1-9])?[0-9])(\\.(25[0-5]|(2[0-4]|1[0-9]|[1-9])?[0-9])){3})|(([0-9A-Fa-f]{1,4}:){1,6}|:):[0-9A-Fa-f]{0,4}|([0-9A-Fa-f]{1,4}:){7}:)$")]
+        public string Ip
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootStaticIpV6Settings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A prefix length which masks the IP address and divides the IP address into network address and host address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 127)]
+        public long PrefixLength
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.BootStaticIpV6Settings initObject = new Intersight.Model.BootStaticIpV6Settings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DnsIp"))
+            {
+                initObject.DnsIp = this.DnsIp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GatewayIp"))
+            {
+                initObject.GatewayIp = this.GatewayIp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ip"))
+            {
+                initObject.Ip = this.Ip;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PrefixLength"))
+            {
+                initObject.PrefixLength = this.PrefixLength;
             }
             WriteObject(initObject);
         }

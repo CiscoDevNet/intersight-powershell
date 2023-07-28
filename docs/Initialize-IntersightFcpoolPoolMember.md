@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFcpoolPoolMember [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assigned< bool>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< FcpoolPoolMember.ClassIdEnum>][-Moid< string>][-ObjectType< FcpoolPoolMember.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFcpoolPoolMember [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assigned< bool>][-AssignedByAnother< bool>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< FcpoolPoolMember.ClassIdEnum>][-Moid< string>][-ObjectType< FcpoolPoolMember.ObjectTypeEnum>][-Reserved< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,7 +40,22 @@ Accept wildcard characters: False
 ```
 
 ### -Assigned
-Boolean to represent whether the ID is assigned or not.
+Boolean to represent whether the ID is in use.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssignedByAnother
+Boolean to represent whether the ID is used either statically or by another pool.
 
 ```yaml
 Type: bool
@@ -107,6 +122,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: FcpoolPoolMember.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reserved
+Boolean to represent whether the ID is reserved.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
