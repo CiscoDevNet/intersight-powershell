@@ -42,9 +42,10 @@ Accept wildcard characters: False
 
 
 Note :- Use Initialize-IntersightCertificatemanagementCertificateBase to create the object of complex type CertificatemanagementCertificateBase
-It also accepts the of object(s) of type CertificatemanagementImc, use the respective Initialize cmdlet to create the object.
+It also accepts the of object(s) of type CertificatemanagementImc, CertificatemanagementRootCaCertificate, use the respective Initialize cmdlet to create the object.
 Cmdlet(s) :
 Initialize-IntersightCertificatemanagementImc
+Initialize-IntersightCertificatemanagementRootCaCertificate
 
 ```yaml
 Type: System.Collections.Generic.List`1[CertificatemanagementCertificateBase]

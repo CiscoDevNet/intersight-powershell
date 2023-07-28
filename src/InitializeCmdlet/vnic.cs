@@ -2824,26 +2824,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a vnicFcIf resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.VnicFcIfRelationship ScpVhba
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to vnicFcIf resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.VnicFcIfRelationship> SpVhbas
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The WWPN address must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN's in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2960,14 +2940,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SanConnectivityPolicy"))
             {
                 initObject.SanConnectivityPolicy = this.SanConnectivityPolicy;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ScpVhba"))
-            {
-                initObject.ScpVhba = this.ScpVhba;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SpVhbas"))
-            {
-                initObject.SpVhbas = this.SpVhbas;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("StaticWwpnAddress"))
             {
@@ -5646,6 +5618,7 @@ namespace Intersight.PowerShell
         {
             ClassId = VnicPlacementSettings.ClassIdEnum.VnicPlacementSettings;
             ObjectType = VnicPlacementSettings.ObjectTypeEnum.VnicPlacementSettings;
+            PciLinkAssignmentMode = VnicPlacementSettings.PciLinkAssignmentModeEnum.Custom;
             SwitchId = VnicPlacementSettings.SwitchIdEnum.None;
 
         }
@@ -5720,6 +5693,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"If the autoPciLink is disabled, the user can either choose to place the vNICs manually or based on a policy.If the autoPciLink is enabled, it will be set to None.\n* `Custom` - The user needs to specify the PCI Link manually.\n* `Load-Balanced` - The system will uniformly distribute the interfaces across the PCI Links.\n* `None` - Assignment is not applicable and will be set when the AutoPciLink is set to true."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicPlacementSettings.PciLinkAssignmentModeEnum PciLinkAssignmentMode
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fabric port to which the vNICs will be associated.\n* `None` - Fabric Id is not set to either A or B for the standalone case where the server is not connected to Fabric Interconnects. The value 'None' should be used.\n* `A` - Fabric A of the FI cluster.\n* `B` - Fabric B of the FI cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5764,6 +5747,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PciLink"))
             {
                 initObject.PciLink = this.PciLink;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PciLinkAssignmentMode"))
+            {
+                initObject.PciLinkAssignmentMode = this.PciLinkAssignmentMode;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
             {

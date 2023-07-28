@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -KvmLaunchUrlPath
-One time URL that is used to launch the KVM console.
+One time URL that is used to launch the vKVM console.
 
 ```yaml
 Type: string

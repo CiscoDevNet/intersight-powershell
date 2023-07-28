@@ -158,13 +158,27 @@ namespace Intersight.PowerShell
                     }
                     else if (getVal.GetType().Name == "List`1")
                     {
-                        List<Object> getCollection = new List<Object>((IEnumerable<Object>)getVal);
-                        List<Object> paramCollection = new List<Object>((IEnumerable<Object>)propName.Value);
-                        if (!Enumerable.SequenceEqual(paramCollection, getCollection))
+                        /*
+						 Check the list items which is provided by cmdlet is not same.
+						 if it differs then set otherwise do not sent this list to server
+						 if all the items of list is same.
+						*/
+                        var getIenumerable = getVal as IEnumerable<Object>;
+                        var paramIenumrable = propName.Value as IEnumerable<Object>;
+
+                        if (getIenumerable != null && paramIenumrable != null)
+                        {
+                            var getCollection = getIenumerable.Cast<object>();
+                            var paramCollection = paramIenumrable.Cast<object>();
+                            if (!Enumerable.SequenceEqual(paramCollection, getCollection))
+                            {
+                                changedProperties.Add(propName.Key, propName.Value);
+                            }
+                        }
+                        else
                         {
                             changedProperties.Add(propName.Key, propName.Value);
                         }
-
                     }
                     else if (getVal.GetType().IsEnum)
                     {

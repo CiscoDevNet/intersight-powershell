@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourcepoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< ResourcepoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< ResourcepoolLease.ClassIdEnum>][-Condition< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Feature< string>][-IsExclusiveAtAssignedEntity< bool>][-LeaseParameters< Model.ResourcepoolLeaseParameters>][-Moid< string>][-ObjectType< ResourcepoolLease.ObjectTypeEnum>][-Pool< Model.ResourcepoolPoolRelationship>][-Resource< Model.MoBaseMo>][-ResourceType< ResourcepoolLease.ResourceTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightResourcepoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< ResourcepoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< ResourcepoolLease.ClassIdEnum>][-Condition< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Feature< string>][-HasDuplicate< bool>][-IsExclusiveAtAssignedEntity< bool>][-LeaseParameters< Model.ResourcepoolLeaseParameters>][-Moid< string>][-ObjectType< ResourcepoolLease.ObjectTypeEnum>][-Pool< Model.ResourcepoolPoolRelationship>][-Resource< Model.MoBaseMo>][-ResourceType< ResourcepoolLease.ResourceTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -109,6 +109,21 @@ Lease opertion applied for the feature.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HasDuplicate
+HasDuplicate represents if there are other pools in which this id exists.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

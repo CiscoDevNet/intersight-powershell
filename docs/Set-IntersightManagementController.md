@@ -164,4 +164,6 @@ PS C:\> Set-IntersightManagementController
 
 [Initialize-IntersightCertificatemanagementImc](./Initialize-IntersightCertificatemanagementImc.md)
 
+[Initialize-IntersightCertificatemanagementRootCaCertificate](./Initialize-IntersightCertificatemanagementRootCaCertificate.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

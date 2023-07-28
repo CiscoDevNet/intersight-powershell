@@ -252,6 +252,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"HasDuplicate represents if there are other pools in which this id exists."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool HasDuplicate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Type of the IP address requested.\n* `IPv4` - IP V4 address type requested.\n* `IPv6` - IP V6 address type requested."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -407,7 +418,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Number of IDs that are currently assigned."</para>
+        /// <para type="description">"Number of IDs that are currently assigned (in use)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -523,6 +534,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"Number of IDs that are currently reserved (and not in use)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long Reserved
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
@@ -620,11 +642,22 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Boolean to represent whether the ID is assigned or not."</para>
+        /// <para type="description">"Boolean to represent whether the ID is in use."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool Assigned
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Boolean to represent whether the ID is used either statically or by another pool."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool AssignedByAnother
         {
             get;
             set;
@@ -770,6 +803,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public IppoolReservationRelationship Reservation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Boolean to represent whether the ID is reserved."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool Reserved
         {
             get;
             set;
@@ -1172,6 +1216,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"A reference to a vrfVrf resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public VrfVrfRelationship Vrf
+        {
+            get;
+            set;
+        }
+
 
     }
     /// <summary>
@@ -1200,7 +1255,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Number of IDs that are currently assigned."</para>
+        /// <para type="description">"Number of IDs that are currently assigned (in use)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1316,6 +1371,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Number of IDs that are currently reserved (and not in use)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long Reserved
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
@@ -1652,6 +1718,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -1975,6 +2042,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

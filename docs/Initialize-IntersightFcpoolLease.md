@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFcpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< FcpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< FcpoolLease.ClassIdEnum>][-Moid< string>][-ObjectType< FcpoolLease.ObjectTypeEnum>][-Pool< Model.FcpoolPoolRelationship>][-PoolPurpose< string>][-Reservation< Model.FcpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WwnId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFcpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< FcpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< FcpoolLease.ClassIdEnum>][-HasDuplicate< bool>][-Moid< string>][-ObjectType< FcpoolLease.ObjectTypeEnum>][-Pool< Model.FcpoolPoolRelationship>][-PoolPurpose< string>][-Reservation< Model.FcpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WwnId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,6 +77,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: FcpoolLease.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HasDuplicate
+HasDuplicate represents if there are other pools in which this id exists.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

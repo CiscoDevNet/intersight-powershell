@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicPlacementSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoPciLink< bool>][-AutoSlotId< bool>][-ClassId< VnicPlacementSettings.ClassIdEnum>][-Id< string>][-ObjectType< VnicPlacementSettings.ObjectTypeEnum>][-PciLink< long>][-SwitchId< VnicPlacementSettings.SwitchIdEnum>][-Uplink< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicPlacementSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoPciLink< bool>][-AutoSlotId< bool>][-ClassId< VnicPlacementSettings.ClassIdEnum>][-Id< string>][-ObjectType< VnicPlacementSettings.ObjectTypeEnum>][-PciLink< long>][-PciLinkAssignmentMode< VnicPlacementSettings.PciLinkAssignmentModeEnum>][-SwitchId< VnicPlacementSettings.SwitchIdEnum>][-Uplink< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -119,6 +119,21 @@ The PCI Link used as transport for the virtual interface. PCI Link is only appli
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PciLinkAssignmentMode
+If the autoPciLink is disabled, the user can either choose to place the vNICs manually or based on a policy.If the autoPciLink is enabled, it will be set to None.\n* `Custom` - The user needs to specify the PCI Link manually.\n* `Load-Balanced` - The system will uniformly distribute the interfaces across the PCI Links.\n* `None` - Assignment is not applicable and will be set when the AutoPciLink is set to true.
+
+```yaml
+Type: VnicPlacementSettings.PciLinkAssignmentModeEnum
 Parameter Sets: (All)
 Aliases:
 

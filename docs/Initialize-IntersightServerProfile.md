@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< Model.ComputePhysicalRelationship>][-AssociatedServerPool< Model.ResourcepoolPoolRelationship>][-ClassId< ServerProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-LeasedServer< Model.ComputePhysicalRelationship>][-Moid< string>][-Name< string>][-ObjectType< ServerProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[Model.PoolReservationReference]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< Model.ResourcepoolPoolRelationship>][-ServerPreAssignBySerial< string>][-ServerPreAssignBySlot< Model.ServerServerAssignTypeSlot>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-Type< ServerProfile.TypeEnum>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< Model.UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< Model.ComputePhysicalRelationship>][-AssociatedServerPool< Model.ResourcepoolPoolRelationship>][-ClassId< ServerProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-LeasedServer< Model.ComputePhysicalRelationship>][-Moid< string>][-Name< string>][-ObjectType< ServerProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[Model.PoolReservationReference]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< Model.ResourcepoolPoolRelationship>][-ServerPreAssignBySerial< string>][-ServerPreAssignBySlot< Model.ServerServerAssignTypeSlot>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-Type< ServerProfile.TypeEnum>][-UserLabel< string>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< Model.UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -437,6 +437,21 @@ Defines the type of the profile. Accepted values are instance or template.\n* `i
 
 ```yaml
 Type: ServerProfile.TypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+User label assigned to the server profile.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

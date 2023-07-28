@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCertificatemanagementCertificateBase [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertType< CertificatemanagementCertificateBase.CertTypeEnum>][-Certificate< Model.X509Certificate>][[-ClassId]< CertificatemanagementCertificateBase.ClassIdEnum>][-Enabled< bool>][[-ObjectType]< CertificatemanagementCertificateBase.ObjectTypeEnum>][-Privatekey< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCertificatemanagementCertificateBase [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Certificate< Model.X509Certificate>][[-ClassId]< CertificatemanagementCertificateBase.ClassIdEnum>][-Enabled< bool>][[-ObjectType]< CertificatemanagementCertificateBase.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,21 +29,6 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -CertType
-Certificate Type for the certificate management.\n* `None` - Set certificate on the selected end point .\n* `KMIPClient` - Set KMIP certificate on the selected end point.
-
-```yaml
-Type: CertificatemanagementCertificateBase.CertTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -110,21 +95,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: true
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Privatekey
-Private Key which is used to validate the certificate.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)

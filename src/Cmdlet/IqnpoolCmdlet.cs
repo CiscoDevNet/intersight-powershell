@@ -123,6 +123,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Prefix of the IQN pool. IQN Address is constructed as <prefix>:<suffix>:<number>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Prefix
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
@@ -209,11 +220,55 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"IQN address allocated for pool-based allocation \"prefix+suffix+number\"."</para>
+        /// <para type="description">"HasDuplicate represents if there are other pools in which this id exists."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool HasDuplicate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"IQN address allocated for pool-based allocation. It is constructed as <prefix>:<suffix>:<number>."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^$|^(?:iqn\\.[0-9]{4}-[0-9]{2}(?:\\.[A-Za-z](?:[A-Za-z0-9\\-]*[A-Za-z0-9])?)+(?::.*)?|eui\\.[0-9A-Fa-f]{16})")]
         public string IqnAddress
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of the IQN address. IQN Address is constructed as <prefix>:<suffix>:<number>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long IqnNumber
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Prefix of the IQN address. IQN Address is constructed as <prefix>:<suffix>:<number>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IqnPrefix
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Suffix of the IQN address. IQN Address is constructed as <prefix>:<suffix>:<number>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IqnSuffix
         {
             get;
             set;
@@ -329,7 +384,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Number of IDs that are currently assigned."</para>
+        /// <para type="description">"Number of IDs that are currently assigned (in use)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -455,6 +510,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Number of IDs that are currently reserved (and not in use)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long Reserved
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -506,11 +572,22 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Boolean to represent whether the ID is assigned or not."</para>
+        /// <para type="description">"Boolean to represent whether the ID is in use."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool Assigned
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Boolean to represent whether the ID is used either statically or by another pool."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool AssignedByAnother
         {
             get;
             set;
@@ -561,11 +638,44 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"IQN Address of this pool member."</para>
+        /// <para type="description">"IQN Address of this pool member. It is constructed as <prefix>:<suffix>:<number>."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string IqnAddress
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of the IQN address. IQN Address is constructed as <prefix>:<suffix>:<number>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long IqnNumber
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Prefix of the IQN address. IQN Address is constructed as <prefix>:<suffix>:<number>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IqnPrefix
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Suffix of the IQN address. IQN Address is constructed as <prefix>:<suffix>:<number>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IqnSuffix
         {
             get;
             set;
@@ -634,6 +744,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public IqnpoolReservationRelationship Reservation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Boolean to represent whether the ID is reserved."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool Reserved
         {
             get;
             set;
@@ -729,6 +850,39 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^$|^(?:iqn\\.[0-9]{4}-[0-9]{2}(?:\\.[A-Za-z](?:[A-Za-z0-9\\-]*[A-Za-z0-9])?)+(?::.*)?|eui\\.[0-9A-Fa-f]{16})")]
         public string Identity
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of the IQN address. IQN Address is constructed as <prefix>:<suffix>:<number>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long IqnNumber
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Prefix of the IQN address. IQN Address is constructed as <prefix>:<suffix>:<number>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IqnPrefix
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Suffix of the IQN address. IQN Address is constructed as <prefix>:<suffix>:<number>."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IqnSuffix
         {
             get;
             set;
@@ -1060,6 +1214,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -1122,6 +1277,9 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
 
 
         // <summary>
@@ -1332,6 +1490,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

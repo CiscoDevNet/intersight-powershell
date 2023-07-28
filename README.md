@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.12738
-- C# SDK version: 1.0.11.12738
+- Intersight.PowerShell version: 1.0.11.13010
+- C# SDK version: 1.0.11.13010
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.12738"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.13010"}
 ```
 or
 
@@ -744,6 +744,7 @@ ApplianceGroupOpStatus | [**Get-IntersightApplianceGroupOpStatus**](docs/Get-Int
 ApplianceGroupStatus | [**Get-IntersightApplianceGroupStatus**](docs/Get-IntersightApplianceGroupStatus.md) | Read a 'ApplianceGroupStatus' resource.
 ApplianceImageBundle | [**Get-IntersightApplianceImageBundle**](docs/Get-IntersightApplianceImageBundle.md) | Read a 'ApplianceImageBundle' resource.
 ApplianceMetaManifest | [**Get-IntersightApplianceMetaManifest**](docs/Get-IntersightApplianceMetaManifest.md) | Read a 'ApplianceMetaManifest' resource.
+ApplianceNetworkLinkStatus | [**Get-IntersightApplianceNetworkLinkStatus**](docs/Get-IntersightApplianceNetworkLinkStatus.md) | Read a 'ApplianceNetworkLinkStatus' resource.
 ApplianceNodeInfo | [**Get-IntersightApplianceNodeInfo**](docs/Get-IntersightApplianceNodeInfo.md) | Read a 'ApplianceNodeInfo' resource.
 ApplianceNodeOpStatus | [**Get-IntersightApplianceNodeOpStatus**](docs/Get-IntersightApplianceNodeOpStatus.md) | Read a 'ApplianceNodeOpStatus' resource.
 ApplianceNodeStatus | [**Get-IntersightApplianceNodeStatus**](docs/Get-IntersightApplianceNodeStatus.md) | Read a 'ApplianceNodeStatus' resource.

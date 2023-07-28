@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIppoolIpLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IppoolIpLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-BlockLease< Model.IppoolBlockLeaseRelationship>][-ClassId< IppoolIpLease.ClassIdEnum>][-IpType< IppoolIpLease.IpTypeEnum>][-IpV4Address< string>][-IpV4Config< Model.IppoolIpV4Config>][-IpV6Address< string>][-IpV6Config< Model.IppoolIpV6Config>][-Moid< string>][-ObjectType< IppoolIpLease.ObjectTypeEnum>][-Pool< Model.IppoolPoolRelationship>][-Reservation< Model.IppoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vrf< Model.VrfVrfRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIppoolIpLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IppoolIpLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-BlockLease< Model.IppoolBlockLeaseRelationship>][-ClassId< IppoolIpLease.ClassIdEnum>][-HasDuplicate< bool>][-IpType< IppoolIpLease.IpTypeEnum>][-IpV4Address< string>][-IpV4Config< Model.IppoolIpV4Config>][-IpV6Address< string>][-IpV6Config< Model.IppoolIpV6Config>][-Moid< string>][-ObjectType< IppoolIpLease.ObjectTypeEnum>][-Pool< Model.IppoolPoolRelationship>][-Reservation< Model.IppoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vrf< Model.VrfVrfRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -95,6 +95,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: IppoolIpLease.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HasDuplicate
+HasDuplicate represents if there are other pools in which this id exists.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -Assigned
-Boolean to represent whether the ID is assigned or not.
+Boolean to represent whether the ID is in use.
 
 ```yaml
 Type: bool
