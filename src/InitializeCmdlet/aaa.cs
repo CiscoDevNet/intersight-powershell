@@ -140,7 +140,7 @@ namespace Intersight.PowerShell
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("Event"))
             {
-                initObject.Event = this.Event;
+                initObject.VarEvent = this.Event;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("MoDisplayNames"))
             {

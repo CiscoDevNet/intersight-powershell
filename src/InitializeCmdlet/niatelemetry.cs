@@ -5405,7 +5405,7 @@ namespace Intersight.PowerShell
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -9899,7 +9899,7 @@ namespace Intersight.PowerShell
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -15736,7 +15736,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Interface"))
             {
-                initObject.Interface = this.Interface;
+                initObject.VarInterface = this.Interface;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("IpAddress"))
             {
@@ -15901,7 +15901,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("VniStatus"))
             {
@@ -16479,7 +16479,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -18383,7 +18383,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }

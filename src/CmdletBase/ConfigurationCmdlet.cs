@@ -7,6 +7,7 @@ using System.Security;
 using System.Security.Cryptography;
 using System.Net;
 using Intersight.Api;
+using System.IO;
 
 namespace Intersight.PowerShell
 {
@@ -15,6 +16,7 @@ namespace Intersight.PowerShell
         public string BasePath { get; set; }
         public string ApiKeyId { get; set; }
         public string ApiKeyFilePath { get; set; }
+        public string ApiKeyString { get; set; }
         public SecureString ApiKeyPassPhrase { get; set; }
         public WebProxy Proxy { get; set; }
         public string HashAlgorithm { get; set; }
@@ -22,7 +24,7 @@ namespace Intersight.PowerShell
         public int SignatureValidityPeriod { get; set; }
 
     }
-    [Cmdlet(VerbsCommon.Set, "IntersightConfiguration")]
+    [Cmdlet(VerbsCommon.Set, "IntersightConfiguration", DefaultParameterSetName = "KeyPath")]
     public class SetConfigurationCmdlet : PSCmdlet
     {
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true)]
@@ -31,8 +33,11 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true)]
         public string ApiKeyId { get; set; }
 
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "KeyPath")]
         public string ApiKeyFilePath { get; set; }
+
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "KeyString")]
+        public string ApiKeyString { get; set; }
 
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true)]
         public String ApiKeyPassPhrase { get; set; }
@@ -58,9 +63,22 @@ namespace Intersight.PowerShell
             HttpSigningConfiguration httpConfig = new HttpSigningConfiguration()
             {
                 KeyId = this.ApiKeyId,
-                KeyFilePath = this.ApiKeyFilePath,
                 HttpSigningHeader = this.HttpSigningHeader
             };
+
+            if (!File.Exists(this.ApiKeyFilePath) && string.IsNullOrEmpty(this.ApiKeyString))
+            {
+                throw new Exception("No API Key provided.");
+            }
+
+            if (this.ParameterSetName.Equals("KeyPath"))
+            {
+                httpConfig.KeyFilePath = this.ApiKeyFilePath;
+            }
+            else if (this.ParameterSetName.Equals("KeyString"))
+            {
+                httpConfig.KeyString = this.ApiKeyString;
+            }
 
             if (this.HttpSigningHeader.Contains("(expires)"))
             {
@@ -160,6 +178,10 @@ namespace Intersight.PowerShell
                     configInfo.HttpSigningHeader = CmdletBase.Config.HttpSigningConfiguration.HttpSigningHeader;
                     configInfo.HashAlgorithm = CmdletBase.Config.HttpSigningConfiguration.HashAlgorithm.Name;
                     configInfo.SignatureValidityPeriod = CmdletBase.Config.HttpSigningConfiguration.SignatureValidityPeriod;
+                    if (string.IsNullOrEmpty(CmdletBase.Config.HttpSigningConfiguration.KeyFilePath))
+                    {
+                        configInfo.ApiKeyString = CmdletBase.Config.HttpSigningConfiguration.KeyString;
+                    }
                 }
 
                 configInfo.Proxy = CmdletBase.Config.Proxy;
