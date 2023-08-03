@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.13010
-- C# SDK version: 1.0.11.13010
+- Intersight.PowerShell version: 1.0.11.13236
+- C# SDK version: 1.0.11.13236
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.13010"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.13236"}
 ```
 or
 
@@ -2193,6 +2193,7 @@ RecommendationHardwareExpansionRequest | [**Get-IntersightRecommendationHardware
 RecommendationHardwareExpansionRequestItem | [**Get-IntersightRecommendationHardwareExpansionRequestItem**](docs/Get-IntersightRecommendationHardwareExpansionRequestItem.md) | Read a 'RecommendationHardwareExpansionRequestItem' resource.
 RecommendationPhysicalItem | [**Get-IntersightRecommendationPhysicalItem**](docs/Get-IntersightRecommendationPhysicalItem.md) | Read a 'RecommendationPhysicalItem' resource.
 RecommendationPurchaseOrderEstimate | [**Get-IntersightRecommendationPurchaseOrderEstimate**](docs/Get-IntersightRecommendationPurchaseOrderEstimate.md) | Read a 'RecommendationPurchaseOrderEstimate' resource.
+RecommendationPurchaseOrderList | [**Get-IntersightRecommendationPurchaseOrderList**](docs/Get-IntersightRecommendationPurchaseOrderList.md) | Read a 'RecommendationPurchaseOrderList' resource.
 RecommendationSoftwareItem | [**Get-IntersightRecommendationSoftwareItem**](docs/Get-IntersightRecommendationSoftwareItem.md) | Read a 'RecommendationSoftwareItem' resource.
 RecommendationHardwareExpansionRequest | [**New-IntersightRecommendationHardwareExpansionRequest**](docs/New-IntersightRecommendationHardwareExpansionRequest.md) | Create a 'RecommendationHardwareExpansionRequest' resource.
 RecommendationHardwareExpansionRequestItem | [**New-IntersightRecommendationHardwareExpansionRequestItem**](docs/New-IntersightRecommendationHardwareExpansionRequestItem.md) | Create a 'RecommendationHardwareExpansionRequestItem' resource.
