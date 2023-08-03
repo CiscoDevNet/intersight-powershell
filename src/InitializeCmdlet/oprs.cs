@@ -192,7 +192,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Event"))
             {
-                initObject.Event = this.Event;
+                initObject.VarEvent = this.Event;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Labels"))
             {
@@ -208,7 +208,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Namespace"))
             {
-                initObject.Namespace = this.Namespace;
+                initObject.VarNamespace = this.Namespace;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Status"))

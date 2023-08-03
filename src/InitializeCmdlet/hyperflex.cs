@@ -351,7 +351,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -5126,7 +5126,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Configuration"))
             {
-                initObject._Configuration = this.Configuration;
+                initObject.VarConfiguration = this.Configuration;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
@@ -5613,7 +5613,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -5781,7 +5781,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -6509,7 +6509,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -10412,7 +10412,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -10497,7 +10497,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -11323,7 +11323,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -11575,7 +11575,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }

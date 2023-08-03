@@ -1186,7 +1186,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Internal"))
             {
-                initObject.Internal = this.Internal;
+                initObject.VarInternal = this.Internal;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Method"))
             {

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSnmpTrap [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SnmpTrap.ClassIdEnum>][-Community< string>][-Destination< string>][-Enabled< bool>][-ObjectType< SnmpTrap.ObjectTypeEnum>][-Port< long>][-Type< SnmpTrap.TypeEnum>][-User< string>][-Version< SnmpTrap.VersionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSnmpTrap [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SnmpTrap.ClassIdEnum>][-Community< string>][-Destination< string>][-Enabled< bool>][-ObjectType< SnmpTrap.ObjectTypeEnum>][-Port< long>][-Type< SnmpTrap.TypeEnum>][-User< string>][-Version< SnmpTrap.VarVersionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 SNMP version used for the trap.\n* `V3` - SNMP v3 trap version notifications.\n* `V1` - SNMP v1 trap version notifications.\n* `V2` - SNMP v2 trap version notifications.
 
 ```yaml
-Type: SnmpTrap.VersionEnum
+Type: SnmpTrap.VarVersionEnum
 Parameter Sets: (All)
 Aliases:
 

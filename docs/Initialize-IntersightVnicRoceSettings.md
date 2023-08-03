@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicRoceSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicRoceSettings.ClassIdEnum>][-ClassOfService< VnicRoceSettings.ClassOfServiceEnum>][-Enabled< bool>][-MemoryRegions< long>][-ObjectType< VnicRoceSettings.ObjectTypeEnum>][-QueuePairs< long>][-ResourceGroups< long>][-Version< VnicRoceSettings.VersionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicRoceSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicRoceSettings.ClassIdEnum>][-ClassOfService< VnicRoceSettings.ClassOfServiceEnum>][-Enabled< bool>][-MemoryRegions< long>][-ObjectType< VnicRoceSettings.ObjectTypeEnum>][-QueuePairs< long>][-ResourceGroups< long>][-Version< VnicRoceSettings.VarVersionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 Configure RDMA over Converged Ethernet (RoCE) version on the virtual interface. Only RoCEv1 is supported on Cisco VIC 13xx series adapters and only RoCEv2 is supported on Cisco VIC 14xx series adapters.\n* `1` - RDMA over Converged Ethernet Protocol Version 1.\n* `2` - RDMA over Converged Ethernet Protocol Version 2.
 
 ```yaml
-Type: VnicRoceSettings.VersionEnum
+Type: VnicRoceSettings.VarVersionEnum
 Parameter Sets: (All)
 Aliases:
 

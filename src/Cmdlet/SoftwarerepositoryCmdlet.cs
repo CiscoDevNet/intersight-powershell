@@ -172,7 +172,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public SoftwarerepositoryAuthorization.VersionEnum Version
+        public SoftwarerepositoryAuthorization.VarVersionEnum Version
         {
             get;
             set;

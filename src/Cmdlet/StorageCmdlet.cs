@@ -18562,7 +18562,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public StorageNetAppNtpServer.VersionEnum Version
+        public StorageNetAppNtpServer.VarVersionEnum Version
         {
             get;
             set;

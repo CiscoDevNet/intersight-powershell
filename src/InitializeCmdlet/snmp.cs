@@ -411,7 +411,7 @@ namespace Intersight.PowerShell
             ClassId = SnmpTrap.ClassIdEnum.SnmpTrap;
             ObjectType = SnmpTrap.ObjectTypeEnum.SnmpTrap;
             Type = SnmpTrap.TypeEnum.Trap;
-            Version = SnmpTrap.VersionEnum.V3;
+            Version = SnmpTrap.VarVersionEnum.V3;
 
         }
         // <summary>
@@ -509,7 +509,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public SnmpTrap.VersionEnum Version
+        public SnmpTrap.VarVersionEnum Version
         {
             get;
             set;
@@ -550,7 +550,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }

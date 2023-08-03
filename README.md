@@ -88,8 +88,8 @@ The Cisco Intersight.PowerShell module is updated frequently to be in sync with 
 
 <a name="requirements"></a>
 ### 1.1. Requirements
-- PowerShell 7.1 or later
-- dotnet SDK 3.1 or later
+- PowerShell 7.3.3 or later
+- net6.0 SDK or later
 
 <a name="dependencies"></a>
 #### Dependencies

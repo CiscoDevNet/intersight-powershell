@@ -5929,7 +5929,7 @@ namespace Intersight.PowerShell
             ClassId = VnicRoceSettings.ClassIdEnum.VnicRoceSettings;
             ClassOfService = VnicRoceSettings.ClassOfServiceEnum.NUMBER_5;
             ObjectType = VnicRoceSettings.ObjectTypeEnum.VnicRoceSettings;
-            Version = VnicRoceSettings.VersionEnum.NUMBER_1;
+            Version = VnicRoceSettings.VarVersionEnum.NUMBER_1;
 
         }
         // <summary>
@@ -6017,7 +6017,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public VnicRoceSettings.VersionEnum Version
+        public VnicRoceSettings.VarVersionEnum Version
         {
             get;
             set;
@@ -6054,7 +6054,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject._Version = this.Version;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }

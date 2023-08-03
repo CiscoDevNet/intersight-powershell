@@ -322,7 +322,7 @@ namespace Intersight.PowerShell
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("Default"))
             {
-                initObject.Default = this.Default;
+                initObject.VarDefault = this.Default;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);

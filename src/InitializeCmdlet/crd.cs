@@ -200,7 +200,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Namespace"))
             {
-                initObject.Namespace = this.Namespace;
+                initObject.VarNamespace = this.Namespace;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Port"))
