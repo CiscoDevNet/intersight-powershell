@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCondAlarm [-Acknowledge< CondAlarm.AcknowledgeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AffectedMo< Model.MoBaseMoRelationship>][-ClassId< CondAlarm.ClassIdEnum>][-Moid< string>][-ObjectType< CondAlarm.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCondAlarm [-Acknowledge< CondAlarm.AcknowledgeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AffectedMo< Model.MoBaseMoRelationship>][-ClassId< CondAlarm.ClassIdEnum>][-Definition< Model.CondAlarmDefinitionRelationship>][-Moid< string>][-ObjectType< CondAlarm.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,6 +77,24 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: CondAlarm.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Definition
+A reference to a condAlarmDefinition resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.CondAlarmDefinitionRelationship
 Parameter Sets: (All)
 Aliases:
 
