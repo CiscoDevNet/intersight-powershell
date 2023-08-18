@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsDistribution [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.OsCatalogRelationship>][-ClassId< OsDistribution.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< OsDistribution.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightOsDistribution [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.OsCatalogRelationship>][-ClassId< OsDistribution.ClassIdEnum>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< OsDistribution.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -62,6 +62,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: OsDistribution.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Label
+The label of the OS distribution such as ESXi, CentOS to be displayed.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

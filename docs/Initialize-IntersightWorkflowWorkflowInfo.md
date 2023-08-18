@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -FailedWorkflowCleanupDuration
-The duration in hours after which the workflow info for failed, terminated or timed out workflow will be removed from database.
+The duration in hours after which the workflow info for failed, terminated or timed out workflow will be removed from database. The minimum is 1 hour, maximum is 365 days and default is 90 days.
 
 ```yaml
 Type: long
@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Input
-The input data provided for the workflow execution.
+All the given inputs for the workflow. The schema for the inputs is defined in the InputDefinition section of the WorkflowDefinition. The InputDefinition will provide a list of input fields to be accepted, the associated datatype of the inputs and any additional constraints on the inputs. For more information please refer to InputDefinition property in the the the WorkflowDefinition resource. The inputs for a workflow are provided as a collection of key-value pairs, where key is the name of the input and value is any valid JSON data which conforms to the datatype of the input as specified in the InputDefinition. When the input passed into a workflow does not match the datatype or the constraints specified in the workflow definition, it will not be accepted. For example, if the InputDefinition specified that workflow must accept a string name &apos;key&apos; and the value passed for key must adhere to a regex pattern. If Workflow was started with input where &apos;key&apos; is not a string matching the regex pattern, an error will be generated and workflow will not start execution. During workflow definition design, the input passed into the workflow will be referred using the format &apos;workflow.input.&lt;inputName&gt;&apos;. If the input is referred directly in a mapping it will be in the format &apos;${workflow.input.&lt;inputName&gt;}&apos; or inside a template mapping in the format &apos;{{.global.workflow.input.&lt;inputName&gt;}}&apos;.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -252,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -SuccessWorkflowCleanupDuration
-The duration in hours after which the workflow info for successful workflow will be removed from database.
+The duration in hours after which the workflow info for successful workflow will be removed from database. The minimum is 1 hour, maximum is 365 days and default is 90 days.
 
 ```yaml
 Type: long

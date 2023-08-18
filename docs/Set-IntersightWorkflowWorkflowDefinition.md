@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -OutputParameters
-The output mappings for the workflow. The outputs for workflows will generally be task output variables that we want to export out at the end of the workflow. The format to specify the mapping is &apos;${Source.output.JsonPath}&apos;, where &apos;Source&apos; is the name of the task within the workflow. Any task output can be mapped to a workflow output as long as the types are compatible. It&apos;s followed by a JSON path expression to extract JSON fragment from source&apos;s output.
+The output mappings for the workflow. The schema for outputs of a workflow is defined using OutputDefinition. The outputs for workflows that we want to export out at the end of the workflow can be mapped from task outputs, workflow inputs, or workflow variables. Any task output, workflow input, or workflow variable can be mapped to a workflow output as long as the types are compatible. The format to specify the mapping is &apos;${ &apos;workflow | &lt;taskName&gt;&apos;. &apos;output |input | variable&apos;.&lt;name&gt;[.&lt;JsonPath&gt;]}&apos;. First, either the keyword &apos;workflow&apos; or the name of the task in the workflow must be given. If a task name is used, then it must be followed by the keyword &apos;output&apos;, if the keyword workflow was used, then it must be followed by the keyword &apos;input&apos; or &apos;variable&apos;. Following this &apos;&lt;name&gt;&apos; must be the name of either input, output, or variable that must be mapped as workflow output. The last part of the mapping can be an optional &lt;JsonPath&gt; to extract specific fields on the data.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
