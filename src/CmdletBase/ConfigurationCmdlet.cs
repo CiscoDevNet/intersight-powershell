@@ -125,7 +125,7 @@ namespace Intersight.PowerShell
 
             if (SkipCertificateCheck.IsPresent)
             {
-                System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+                config.RemoteCertificateValidationCallback = delegate { return true; };
             }
 
             // This is to check either Set-IntersightConfiguration has proper configuration values

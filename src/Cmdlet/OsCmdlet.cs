@@ -541,6 +541,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"An internal property that is used to denote if the OS Distribution is supported\nby Intersight for Automated Installation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The label of the OS distribution such as ESXi, CentOS to be displayed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Label
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -587,6 +609,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"An internal property that is used to denote if the OS Distribution is supported\nby the Server Configuration Utility."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool ScuSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -598,6 +631,17 @@ namespace Intersight.PowerShell
         }
 
 
+
+        // <summary>
+        /// <para type="description">"A reference to a hclOperatingSystemVendor resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public HclOperatingSystemVendorRelationship Vendor
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"A reference to a hclOperatingSystem resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
