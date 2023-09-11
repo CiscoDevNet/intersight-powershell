@@ -284,5 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightApplianceExternalSyslogSetting](./New-IntersightApplianceExternalSyslogSetting.md)
+
+[Remove-IntersightApplianceExternalSyslogSetting](./Remove-IntersightApplianceExternalSyslogSetting.md)
+
 [Set-IntersightApplianceExternalSyslogSetting](./Set-IntersightApplianceExternalSyslogSetting.md)
 

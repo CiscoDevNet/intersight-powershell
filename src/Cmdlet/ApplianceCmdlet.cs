@@ -807,6 +807,125 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ApplianceBackupMonitor.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackupMonitor", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightApplianceBackupMonitor : GetCmdletBase
+    {
+        public GetIntersightApplianceBackupMonitor()
+        {
+            ApiInstance = new ApplianceApi(Config);
+            MethodName = "GetApplianceBackupMonitorListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Status of the most recent Intersight Appliance backup.\n* `BackupFound` - Backup is successful and complete.\n* `BackupFailed` - The current Backup failed.\n* `BackupOutdated` - Backup is old and outdated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ApplianceBackupMonitor.LastBackupStatusEnum LastBackupStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceBackupPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackupPolicy", DefaultParameterSetName = "CmdletParam")]
@@ -7692,6 +7811,161 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New ApplianceExternalSyslogSetting.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceExternalSyslogSetting")]
+    public class NewIntersightApplianceExternalSyslogSetting : NewCmdletBase
+    {
+        public NewIntersightApplianceExternalSyslogSetting()
+        {
+            ApiInstance = new ApplianceApi(Config);
+            ModelObject = new ApplianceExternalSyslogSetting();
+            MethodName = "CreateApplianceExternalSyslogSettingWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Enable or disable External Syslog Server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"If the flag is set, the alarms reported in Intersight Appliances are exported to external syslog server based on the alarm severity selection."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ExportAlarms
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enable or disable exporting of Audit logs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ExportAudit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enable or disable exporting of Web Server access logs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ExportNginx
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"External Syslog Server Port for connection establishment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 65535)]
+        public long Port
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Protocol used to connect to external syslog server.\n* `TCP` - External Syslog messages sent over TCP.\n* `UDP` - External Syslog messages sent over UDP.\n* `TLS` - Secure External Syslog messages sent over TLS."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ApplianceExternalSyslogSetting.ProtocolEnum Protocol
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"External Syslog Server Address, can be IP address or hostname."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Server
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Minimum severity level to report.\n* `None` - The Enum value None represents that there is no severity.\n* `Info` - The Enum value Info represents the Informational level of severity.\n* `Critical` - The Enum value Critical represents the Critical level of severity.\n* `Warning` - The Enum value Warning represents the Warning level of severity.\n* `Cleared` - The Enum value Cleared represents that the alarm severity has been cleared."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ApplianceExternalSyslogSetting.SeverityEnum Severity
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceRemoteFileImport.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightApplianceRemoteFileImport")]
@@ -7839,16 +8113,6 @@ namespace Intersight.PowerShell
             MethodName = "CreateApplianceRestoreWithHttpInfo";
         }
 
-        // <summary>
-        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public IamAccountRelationship Account
-        {
-            get;
-            set;
-        }
 
 
         // <summary>
@@ -8008,6 +8272,18 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new ApplianceApi(Config);
             MethodName = "DeleteApplianceClusterInfoWithHttpInfo";
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ApplianceExternalSyslogSetting.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceExternalSyslogSetting")]
+    public class RemoveIntersightApplianceExternalSyslogSetting : RemoveCmdletBase
+    {
+        public RemoveIntersightApplianceExternalSyslogSetting()
+        {
+            ApiInstance = new ApplianceApi(Config);
+            MethodName = "DeleteApplianceExternalSyslogSettingWithHttpInfo";
         }
     }
     /// <summary>

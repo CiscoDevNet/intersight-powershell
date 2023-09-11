@@ -135,6 +135,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Set Reevaluate to true to reevaluate the group members and memberships of this resource group."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool Reevaluate
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
@@ -505,6 +516,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Set Reevaluate to true to reevaluate the membership of a resource."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool Reevaluate
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -1049,6 +1071,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Set Reevaluate to true to reevaluate the group members and memberships of this resource group."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Reevaluate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1394,6 +1427,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Set Reevaluate to true to reevaluate the group members and memberships of this resource group."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Reevaluate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1403,6 +1447,77 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set ResourceMembership.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightResourceMembership")]
+    public class SetIntersightResourceMembership : SetCmdletBase
+    {
+        public SetIntersightResourceMembership()
+        {
+            ApiInstance = new ResourceApi(Config);
+            ModelObject = new ResourceMembership();
+            MethodName = "UpdateResourceMembershipWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Set Reevaluate to true to reevaluate the membership of a resource."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Reevaluate
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
