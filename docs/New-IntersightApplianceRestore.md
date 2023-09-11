@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightApplianceRestore [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Filename< string>][-Messages< System.Collections.Generic.List`1[string]>][-Moid< string>][-Password< string>][-Protocol< ApplianceRestore.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightApplianceRestore [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Filename< string>][-Messages< System.Collections.Generic.List`1[string]>][-Moid< string>][-Password< string>][-Protocol< ApplianceRestore.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -22,24 +22,6 @@ New-IntersightApplianceRestore [-Account< IamAccountRelationship>][-AdditionalPr
 Create a &apos;ApplianceRestore&apos; resource.
 
 ## PARAMETERS
-
-### -Account
-A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: IamAccountRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AdditionalProperties
 

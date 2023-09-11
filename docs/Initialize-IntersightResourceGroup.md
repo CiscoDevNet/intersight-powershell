@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourceGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ResourceGroup.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ResourceGroup.ObjectTypeEnum>][-Organizations< System.Collections.Generic.List`1[Model.OrganizationOrganizationRelationship]>][-Qualifier< ResourceGroup.QualifierEnum>][-Selectors< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightResourceGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ResourceGroup.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ResourceGroup.ObjectTypeEnum>][-Organizations< System.Collections.Generic.List`1[Model.OrganizationOrganizationRelationship]>][-Qualifier< ResourceGroup.QualifierEnum>][-Reevaluate< bool>][-Selectors< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -137,6 +137,21 @@ Qualifier shall be used to specify if we want to organize resources using multip
 
 ```yaml
 Type: ResourceGroup.QualifierEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reevaluate
+Set Reevaluate to true to reevaluate the group members and memberships of this resource group.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

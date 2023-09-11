@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightResourceGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-Organizations< System.Collections.Generic.List`1[OrganizationOrganizationRelationship]>][-Qualifier< ResourceGroup.QualifierEnum>][-Selectors< System.Collections.Generic.List`1[ResourceSelector]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightResourceGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-Organizations< System.Collections.Generic.List`1[OrganizationOrganizationRelationship]>][-Qualifier< ResourceGroup.QualifierEnum>][-Reevaluate< bool>][-Selectors< System.Collections.Generic.List`1[ResourceSelector]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -106,6 +106,21 @@ Qualifier shall be used to specify if we want to organize resources using multip
 
 ```yaml
 Type: ResourceGroup.QualifierEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reevaluate
+Set Reevaluate to true to reevaluate the group members and memberships of this resource group.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

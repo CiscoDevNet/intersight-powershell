@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightApplianceRestore [-Account< Model.IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceRestore.ClassIdEnum>][-Filename< string>][-Messages< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< ApplianceRestore.ObjectTypeEnum>][-Password< string>][-Protocol< ApplianceRestore.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceRestore [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceRestore.ClassIdEnum>][-Filename< string>][-Messages< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< ApplianceRestore.ObjectTypeEnum>][-Password< string>][-Protocol< ApplianceRestore.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,24 +23,6 @@ Initialize-IntersightApplianceRestore [-Account< Model.IamAccountRelationship>][
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
-
-### -Account
-A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.IamAccountRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AdditionalProperties
 

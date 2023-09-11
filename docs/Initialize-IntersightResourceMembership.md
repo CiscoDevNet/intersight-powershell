@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourceMembership [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ResourceMembership.ClassIdEnum>][-Moid< string>][-ObjectType< ResourceMembership.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightResourceMembership [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ResourceMembership.ClassIdEnum>][-Moid< string>][-ObjectType< ResourceMembership.ObjectTypeEnum>][-Reevaluate< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,6 +74,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: ResourceMembership.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reevaluate
+Set Reevaluate to true to reevaluate the membership of a resource.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

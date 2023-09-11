@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.13376
-- C# SDK version: 1.0.11.13376
+- Intersight.PowerShell version: 1.0.11.13515
+- C# SDK version: 1.0.11.13515
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.13376"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.13515"}
 ```
 or
 
@@ -725,6 +725,7 @@ ApplianceAppOpStatus | [**Get-IntersightApplianceAppOpStatus**](docs/Get-Intersi
 ApplianceAppStatus | [**Get-IntersightApplianceAppStatus**](docs/Get-IntersightApplianceAppStatus.md) | Read a 'ApplianceAppStatus' resource.
 ApplianceAutoRmaPolicy | [**Get-IntersightApplianceAutoRmaPolicy**](docs/Get-IntersightApplianceAutoRmaPolicy.md) | Read a 'ApplianceAutoRmaPolicy' resource.
 ApplianceBackup | [**Get-IntersightApplianceBackup**](docs/Get-IntersightApplianceBackup.md) | Read a 'ApplianceBackup' resource.
+ApplianceBackupMonitor | [**Get-IntersightApplianceBackupMonitor**](docs/Get-IntersightApplianceBackupMonitor.md) | Read a 'ApplianceBackupMonitor' resource.
 ApplianceBackupPolicy | [**Get-IntersightApplianceBackupPolicy**](docs/Get-IntersightApplianceBackupPolicy.md) | Read a 'ApplianceBackupPolicy' resource.
 ApplianceCertificateSetting | [**Get-IntersightApplianceCertificateSetting**](docs/Get-IntersightApplianceCertificateSetting.md) | Read a 'ApplianceCertificateSetting' resource.
 ApplianceClusterInfo | [**Get-IntersightApplianceClusterInfo**](docs/Get-IntersightApplianceClusterInfo.md) | Read a 'ApplianceClusterInfo' resource.
@@ -765,10 +766,12 @@ ApplianceClusterReplaceNode | [**New-IntersightApplianceClusterReplaceNode**](do
 ApplianceDataExportPolicy | [**New-IntersightApplianceDataExportPolicy**](docs/New-IntersightApplianceDataExportPolicy.md) | Create a 'ApplianceDataExportPolicy' resource.
 ApplianceDeviceClaim | [**New-IntersightApplianceDeviceClaim**](docs/New-IntersightApplianceDeviceClaim.md) | Create a 'ApplianceDeviceClaim' resource.
 ApplianceDiagSetting | [**New-IntersightApplianceDiagSetting**](docs/New-IntersightApplianceDiagSetting.md) | Create a 'ApplianceDiagSetting' resource.
+ApplianceExternalSyslogSetting | [**New-IntersightApplianceExternalSyslogSetting**](docs/New-IntersightApplianceExternalSyslogSetting.md) | Create a 'ApplianceExternalSyslogSetting' resource.
 ApplianceRemoteFileImport | [**New-IntersightApplianceRemoteFileImport**](docs/New-IntersightApplianceRemoteFileImport.md) | Create a 'ApplianceRemoteFileImport' resource.
 ApplianceRestore | [**New-IntersightApplianceRestore**](docs/New-IntersightApplianceRestore.md) | Create a 'ApplianceRestore' resource.
 ApplianceBackup | [**Remove-IntersightApplianceBackup**](docs/Remove-IntersightApplianceBackup.md) | Delete a 'ApplianceBackup' resource.
 ApplianceClusterInfo | [**Remove-IntersightApplianceClusterInfo**](docs/Remove-IntersightApplianceClusterInfo.md) | Delete a 'ApplianceClusterInfo' resource.
+ApplianceExternalSyslogSetting | [**Remove-IntersightApplianceExternalSyslogSetting**](docs/Remove-IntersightApplianceExternalSyslogSetting.md) | Delete a 'ApplianceExternalSyslogSetting' resource.
 ApplianceRestore | [**Remove-IntersightApplianceRestore**](docs/Remove-IntersightApplianceRestore.md) | Delete a 'ApplianceRestore' resource.
 ApplianceUpgrade | [**Remove-IntersightApplianceUpgrade**](docs/Remove-IntersightApplianceUpgrade.md) | Delete a 'ApplianceUpgrade' resource.
 ApplianceAutoRmaPolicy | [**Set-IntersightApplianceAutoRmaPolicy**](docs/Set-IntersightApplianceAutoRmaPolicy.md) | Update a 'ApplianceAutoRmaPolicy' resource.
@@ -1652,6 +1655,7 @@ IamSecurityHolder | [**Get-IntersightIamSecurityHolder**](docs/Get-IntersightIam
 IamServiceProvider | [**Get-IntersightIamServiceProvider**](docs/Get-IntersightIamServiceProvider.md) | Read a 'IamServiceProvider' resource.
 IamSession | [**Get-IntersightIamSession**](docs/Get-IntersightIamSession.md) | Read a 'IamSession' resource.
 IamSessionLimits | [**Get-IntersightIamSessionLimits**](docs/Get-IntersightIamSessionLimits.md) | Read a 'IamSessionLimits' resource.
+IamSharingRule | [**Get-IntersightIamSharingRule**](docs/Get-IntersightIamSharingRule.md) | Read a 'IamSharingRule' resource.
 IamSystem | [**Get-IntersightIamSystem**](docs/Get-IntersightIamSystem.md) | Read a 'IamSystem' resource.
 IamTrustPoint | [**Get-IntersightIamTrustPoint**](docs/Get-IntersightIamTrustPoint.md) | Read a 'IamTrustPoint' resource.
 IamUser | [**Get-IntersightIamUser**](docs/Get-IntersightIamUser.md) | Read a 'IamUser' resource.
@@ -1679,6 +1683,7 @@ IamPrivateKeySpec | [**New-IntersightIamPrivateKeySpec**](docs/New-IntersightIam
 IamQualifier | [**New-IntersightIamQualifier**](docs/New-IntersightIamQualifier.md) | Create a 'IamQualifier' resource.
 IamResourceRoles | [**New-IntersightIamResourceRoles**](docs/New-IntersightIamResourceRoles.md) | Create a 'IamResourceRoles' resource.
 IamSessionLimits | [**New-IntersightIamSessionLimits**](docs/New-IntersightIamSessionLimits.md) | Create a 'IamSessionLimits' resource.
+IamSharingRule | [**New-IntersightIamSharingRule**](docs/New-IntersightIamSharingRule.md) | Create a 'IamSharingRule' resource.
 IamTrustPoint | [**New-IntersightIamTrustPoint**](docs/New-IntersightIamTrustPoint.md) | Create a 'IamTrustPoint' resource.
 IamUser | [**New-IntersightIamUser**](docs/New-IntersightIamUser.md) | Create a 'IamUser' resource.
 IamUserGroup | [**New-IntersightIamUserGroup**](docs/New-IntersightIamUserGroup.md) | Create a 'IamUserGroup' resource.
@@ -1704,6 +1709,7 @@ IamQualifier | [**Remove-IntersightIamQualifier**](docs/Remove-IntersightIamQual
 IamResourceRoles | [**Remove-IntersightIamResourceRoles**](docs/Remove-IntersightIamResourceRoles.md) | Delete a 'IamResourceRoles' resource.
 IamSession | [**Remove-IntersightIamSession**](docs/Remove-IntersightIamSession.md) | Delete a 'IamSession' resource.
 IamSessionLimits | [**Remove-IntersightIamSessionLimits**](docs/Remove-IntersightIamSessionLimits.md) | Delete a 'IamSessionLimits' resource.
+IamSharingRule | [**Remove-IntersightIamSharingRule**](docs/Remove-IntersightIamSharingRule.md) | Delete a 'IamSharingRule' resource.
 IamTrustPoint | [**Remove-IntersightIamTrustPoint**](docs/Remove-IntersightIamTrustPoint.md) | Delete a 'IamTrustPoint' resource.
 IamUser | [**Remove-IntersightIamUser**](docs/Remove-IntersightIamUser.md) | Delete a 'IamUser' resource.
 IamUserGroup | [**Remove-IntersightIamUserGroup**](docs/Remove-IntersightIamUserGroup.md) | Delete a 'IamUserGroup' resource.
@@ -1972,6 +1978,10 @@ MemoryPersistentMemoryUnit | [**Set-IntersightMemoryPersistentMemoryUnit**](docs
 MemoryUnit | [**Set-IntersightMemoryUnit**](docs/Set-IntersightMemoryUnit.md) | Update a 'MemoryUnit' resource.
 MetaDefinition | [**Get-IntersightMetaDefinition**](docs/Get-IntersightMetaDefinition.md) | Read a 'MetaDefinition' resource.
 MetaDefinition | [**Remove-IntersightMetaDefinition**](docs/Remove-IntersightMetaDefinition.md) | Delete a 'MetaDefinition' resource.
+MetricsMetricsExploration | [**Get-IntersightMetricsMetricsExploration**](docs/Get-IntersightMetricsMetricsExploration.md) | Read a 'MetricsMetricsExploration' resource.
+MetricsMetricsExploration | [**New-IntersightMetricsMetricsExploration**](docs/New-IntersightMetricsMetricsExploration.md) | Create a 'MetricsMetricsExploration' resource.
+MetricsMetricsExploration | [**Remove-IntersightMetricsMetricsExploration**](docs/Remove-IntersightMetricsMetricsExploration.md) | Delete a 'MetricsMetricsExploration' resource.
+MetricsMetricsExploration | [**Set-IntersightMetricsMetricsExploration**](docs/Set-IntersightMetricsMetricsExploration.md) | Update a 'MetricsMetricsExploration' resource.
 MonitoringHealthStatus | [**Get-IntersightMonitoringHealthStatus**](docs/Get-IntersightMonitoringHealthStatus.md) | Read a 'MonitoringHealthStatus' resource.
 NetworkDiscoveredNeighbor | [**Get-IntersightNetworkDiscoveredNeighbor**](docs/Get-IntersightNetworkDiscoveredNeighbor.md) | Read a 'NetworkDiscoveredNeighbor' resource.
 NetworkDns | [**Get-IntersightNetworkDns**](docs/Get-IntersightNetworkDns.md) | Read a 'NetworkDns' resource.
@@ -2236,6 +2246,7 @@ ResourceGroup | [**Remove-IntersightResourceGroup**](docs/Remove-IntersightResou
 ResourceReservation | [**Remove-IntersightResourceReservation**](docs/Remove-IntersightResourceReservation.md) | Delete a 'ResourceReservation' resource.
 ResourceSelectionCriteria | [**Remove-IntersightResourceSelectionCriteria**](docs/Remove-IntersightResourceSelectionCriteria.md) | Delete a 'ResourceSelectionCriteria' resource.
 ResourceGroup | [**Set-IntersightResourceGroup**](docs/Set-IntersightResourceGroup.md) | Update a 'ResourceGroup' resource.
+ResourceMembership | [**Set-IntersightResourceMembership**](docs/Set-IntersightResourceMembership.md) | Update a 'ResourceMembership' resource.
 ResourceReservation | [**Set-IntersightResourceReservation**](docs/Set-IntersightResourceReservation.md) | Update a 'ResourceReservation' resource.
 ResourceSelectionCriteria | [**Set-IntersightResourceSelectionCriteria**](docs/Set-IntersightResourceSelectionCriteria.md) | Update a 'ResourceSelectionCriteria' resource.
 ResourcepoolLease | [**Get-IntersightResourcepoolLease**](docs/Get-IntersightResourcepoolLease.md) | Read a 'ResourcepoolLease' resource.

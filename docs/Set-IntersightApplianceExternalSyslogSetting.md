@@ -268,3 +268,7 @@ PS C:\> Set-IntersightApplianceExternalSyslogSetting
 [Get-IntersightApplianceExternalSyslogSetting](./Get-IntersightApplianceExternalSyslogSetting.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightApplianceExternalSyslogSetting](./New-IntersightApplianceExternalSyslogSetting.md)
+
+[Remove-IntersightApplianceExternalSyslogSetting](./Remove-IntersightApplianceExternalSyslogSetting.md)
