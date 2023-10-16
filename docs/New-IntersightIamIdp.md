@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DomainName< string>][-EnableSingleLogout< bool>][-Metadata< string>][-Moid< string>][[-Name]< string>][-SkipWarning< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< IamIdp.TypeEnum>][-Usergroups< System.Collections.Generic.List`1[IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DomainName< string>][-DomainNames< System.Collections.Generic.List`1[string]>][-EnableSingleLogout< bool>][-Metadata< string>][-Moid< string>][[-Name]< string>][-SkipWarning< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< IamIdp.TypeEnum>][-Usergroups< System.Collections.Generic.List`1[IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,21 @@ Email domain name of the user for this IdP. When a user enters an email during l
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DomainNames
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

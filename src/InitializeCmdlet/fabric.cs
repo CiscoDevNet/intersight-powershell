@@ -2581,7 +2581,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"WWPN that is a member of the FC zone."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|((^20|5[0-9a-fA-F]{1}):([0-9a-fA-F]{2}:){6}([0-9a-fA-F]{2})$)")]
+        [ValidatePattern("^$|([0-9a-fA-F]{2}:){7}[0-9a-fA-F]{2}$")]
         public string Wwpn
         {
             get;
@@ -4630,7 +4630,6 @@ namespace Intersight.PowerShell
         {
             AdminState = FabricPortOperation.AdminStateEnum.Enabled;
             ClassId = FabricPortOperation.ClassIdEnum.FabricPortOperation;
-            ConfigState = FabricPortOperation.ConfigStateEnum.None;
             ObjectType = FabricPortOperation.ObjectTypeEnum.FabricPortOperation;
 
         }
@@ -4670,16 +4669,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FabricPortOperation.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The configured state of these settings in the target chassis. The value is any one of Applied, Applying, Failed. Applied - This state denotes that the admin state changes are applied successfully in the target FI domain. Applying - This state denotes that the admin state changes are being applied in the target FI domain. Failed - This state denotes that the admin state changes could not be applied in the target FI domain.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public FabricPortOperation.ConfigStateEnum ConfigState
         {
             get;
             set;
@@ -4761,10 +4750,6 @@ namespace Intersight.PowerShell
                 initObject.AggregatePortId = this.AggregatePortId;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigState"))
-            {
-                initObject.ConfigState = this.ConfigState;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -5913,16 +5898,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"This lists the pending configuration changes at the summary level. Detailed changes are saved in configChangeDetails as a separate object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.PolicyConfigChange ConfigChanges
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The configuration state and results of the last configuration operation."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6053,10 +6028,6 @@ namespace Intersight.PowerShell
                 initObject.AssignedSwitch = this.AssignedSwitch;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigChanges"))
-            {
-                initObject.ConfigChanges = this.ConfigChanges;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ConfigContext"))
             {
                 initObject.ConfigContext = this.ConfigContext;

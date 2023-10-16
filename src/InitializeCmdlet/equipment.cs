@@ -236,16 +236,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AssetDeviceRegistrationRelationship DeviceRegistration
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -284,10 +274,6 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceRegistration"))
-            {
-                initObject.DeviceRegistration = this.DeviceRegistration;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -1327,16 +1313,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a equipmentFex resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.EquipmentFexRelationship Fex
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"Numeric Identifier assigned by the management system to the equipment. Identifier can only be changed if it has been PATCHED with the AdminAction property set to 'Recommission'."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1409,10 +1385,6 @@ namespace Intersight.PowerShell
                 initObject.AdminAction = this.AdminAction;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Fex"))
-            {
-                initObject.Fex = this.Fex;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Identifier"))
             {
                 initObject.Identifier = this.Identifier;
@@ -1447,7 +1419,6 @@ namespace Intersight.PowerShell
         public InitializeIntersightEquipmentFexOperation()
         {
             AdminLocatorLedAction = EquipmentFexOperation.AdminLocatorLedActionEnum.None;
-            AdminLocatorLedActionState = EquipmentFexOperation.AdminLocatorLedActionStateEnum.None;
             ClassId = EquipmentFexOperation.ClassIdEnum.EquipmentFexOperation;
             ObjectType = EquipmentFexOperation.ObjectTypeEnum.EquipmentFexOperation;
 
@@ -1468,16 +1439,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public EquipmentFexOperation.AdminLocatorLedActionEnum AdminLocatorLedAction
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Defines status of action performed on AdminLocatorLedState.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFexOperation.AdminLocatorLedActionStateEnum AdminLocatorLedActionState
         {
             get;
             set;
@@ -1543,10 +1504,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AdminLocatorLedAction"))
             {
                 initObject.AdminLocatorLedAction = this.AdminLocatorLedAction;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdminLocatorLedActionState"))
-            {
-                initObject.AdminLocatorLedActionState = this.AdminLocatorLedActionState;
             }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("DeviceRegistration"))
@@ -1880,51 +1837,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"MO Reference to equipmentIoCard MO in inventory service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string IoCardMoid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"IOM/MUX Module ID connected to the FI."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ModuleId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"MO Reference to networkElement MO in inventory service."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string NetworkElementMoid
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public EquipmentIoCardIdentity.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Switch ID to which IOM is connected, ID can be either 1 or 2, equalent to A or B."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long SwitchId
         {
             get;
             set;
@@ -1938,23 +1855,7 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("IoCardMoid"))
-            {
-                initObject.IoCardMoid = this.IoCardMoid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ModuleId"))
-            {
-                initObject.ModuleId = this.ModuleId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElementMoid"))
-            {
-                initObject.NetworkElementMoid = this.NetworkElementMoid;
-            }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
-            {
-                initObject.SwitchId = this.SwitchId;
-            }
             WriteObject(initObject);
         }
 

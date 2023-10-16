@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< NetworkElementRelationship>][-ConfigChanges< PolicyConfigChange>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Moid< string>][[-Name]< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchClusterProfile< FabricSwitchClusterProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< FabricSwitchProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< NetworkElementRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Moid< string>][[-Name]< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchClusterProfile< FabricSwitchClusterProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< FabricSwitchProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -78,23 +78,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: NetworkElementRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigChanges
-This lists the pending configuration changes at the summary level. Detailed changes are saved in configChangeDetails as a separate object.
-
-Note :- Use Initialize-IntersightPolicyConfigChange to create the object of complex type PolicyConfigChange
-
-```yaml
-Type: PolicyConfigChange
 Parameter Sets: (All)
 Aliases:
 
@@ -334,6 +317,8 @@ PS C:\> New-IntersightFabricSwitchProfile
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
+
+[Initialize-IntersightPolicyConfigChangeContext](./Initialize-IntersightPolicyConfigChangeContext.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

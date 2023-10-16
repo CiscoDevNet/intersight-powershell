@@ -332,7 +332,6 @@ namespace Intersight.PowerShell
             var keyBytes = System.Convert.FromBase64String(ecKeyBase64String);
             var ecdsa = ECDsa.Create();
 
-#if (NETCOREAPP3_0 || NETCOREAPP3_1 || NET5_0)
             var byteCount = 0;
             if (KeyPassPhrase != null)
             {
@@ -355,17 +354,17 @@ namespace Intersight.PowerShell
             {
                 ecdsa.ImportPkcs8PrivateKey(keyBytes, out byteCount);
             }
-            var signedBytes = ecdsa.SignHash(dataToSign);
-            var derBytes = ConvertToECDSAANS1Format(signedBytes);
+            var derBytes = ecdsa.SignHash(dataToSign, DSASignatureFormat.Rfc3279DerSequence);
             var signedString = System.Convert.ToBase64String(derBytes);
 
             return signedString;
-#else
-            throw new Exception("ECDSA signing is supported only on NETCOREAPP3_0 and above");
-#endif
-
         }
 
+        /// <summary>
+        /// Convert ANS1 format to DER format. Not recommended to use because it generate inavlid signature occationally.
+        /// </summary>
+        /// <param name="signedBytes"></param>
+        /// <returns></returns>
         private byte[] ConvertToECDSAANS1Format(byte[] signedBytes)
         {
             var derBytes = new List<byte>();

@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.13515
-- C# SDK version: 1.0.11.13515
+- Intersight.PowerShell version: 1.0.11.13892
+- C# SDK version: 1.0.11.13892
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.13515"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.13892"}
 ```
 or
 
@@ -2239,12 +2239,14 @@ ResourceMembership | [**Get-IntersightResourceMembership**](docs/Get-IntersightR
 ResourceMembershipHolder | [**Get-IntersightResourceMembershipHolder**](docs/Get-IntersightResourceMembershipHolder.md) | Read a 'ResourceMembershipHolder' resource.
 ResourceReservation | [**Get-IntersightResourceReservation**](docs/Get-IntersightResourceReservation.md) | Read a 'ResourceReservation' resource.
 ResourceSelectionCriteria | [**Get-IntersightResourceSelectionCriteria**](docs/Get-IntersightResourceSelectionCriteria.md) | Read a 'ResourceSelectionCriteria' resource.
+ResourceSharedResourcesInfoHolder | [**Get-IntersightResourceSharedResourcesInfoHolder**](docs/Get-IntersightResourceSharedResourcesInfoHolder.md) | Read a 'ResourceSharedResourcesInfoHolder' resource.
 ResourceGroup | [**New-IntersightResourceGroup**](docs/New-IntersightResourceGroup.md) | Create a 'ResourceGroup' resource.
 ResourceReservation | [**New-IntersightResourceReservation**](docs/New-IntersightResourceReservation.md) | Create a 'ResourceReservation' resource.
 ResourceSelectionCriteria | [**New-IntersightResourceSelectionCriteria**](docs/New-IntersightResourceSelectionCriteria.md) | Create a 'ResourceSelectionCriteria' resource.
 ResourceGroup | [**Remove-IntersightResourceGroup**](docs/Remove-IntersightResourceGroup.md) | Delete a 'ResourceGroup' resource.
 ResourceReservation | [**Remove-IntersightResourceReservation**](docs/Remove-IntersightResourceReservation.md) | Delete a 'ResourceReservation' resource.
 ResourceSelectionCriteria | [**Remove-IntersightResourceSelectionCriteria**](docs/Remove-IntersightResourceSelectionCriteria.md) | Delete a 'ResourceSelectionCriteria' resource.
+ResourceSharedResourcesInfoHolder | [**Remove-IntersightResourceSharedResourcesInfoHolder**](docs/Remove-IntersightResourceSharedResourcesInfoHolder.md) | Delete a 'ResourceSharedResourcesInfoHolder' resource.
 ResourceGroup | [**Set-IntersightResourceGroup**](docs/Set-IntersightResourceGroup.md) | Update a 'ResourceGroup' resource.
 ResourceMembership | [**Set-IntersightResourceMembership**](docs/Set-IntersightResourceMembership.md) | Update a 'ResourceMembership' resource.
 ResourceReservation | [**Set-IntersightResourceReservation**](docs/Set-IntersightResourceReservation.md) | Update a 'ResourceReservation' resource.
@@ -2561,6 +2563,7 @@ TerraformExecutor | [**New-IntersightTerraformExecutor**](docs/New-IntersightTer
 TerraformExecutor | [**Remove-IntersightTerraformExecutor**](docs/Remove-IntersightTerraformExecutor.md) | Delete a 'TerraformExecutor' resource.
 TerraformExecutor | [**Set-IntersightTerraformExecutor**](docs/Set-IntersightTerraformExecutor.md) | Update a 'TerraformExecutor' resource.
 ThermalPolicy | [**Get-IntersightThermalPolicy**](docs/Get-IntersightThermalPolicy.md) | Read a 'ThermalPolicy' resource.
+ThermalPolicyInventory | [**Get-IntersightThermalPolicyInventory**](docs/Get-IntersightThermalPolicyInventory.md) | Read a 'ThermalPolicyInventory' resource.
 ThermalPolicy | [**New-IntersightThermalPolicy**](docs/New-IntersightThermalPolicy.md) | Create a 'ThermalPolicy' resource.
 ThermalPolicy | [**Remove-IntersightThermalPolicy**](docs/Remove-IntersightThermalPolicy.md) | Delete a 'ThermalPolicy' resource.
 ThermalPolicy | [**Set-IntersightThermalPolicy**](docs/Set-IntersightThermalPolicy.md) | Update a 'ThermalPolicy' resource.
@@ -2718,7 +2721,6 @@ WorkflowCatalogItemDefinition | [**Get-IntersightWorkflowCatalogItemDefinition**
 WorkflowCatalogServiceRequest | [**Get-IntersightWorkflowCatalogServiceRequest**](docs/Get-IntersightWorkflowCatalogServiceRequest.md) | Read a 'WorkflowCatalogServiceRequest' resource.
 WorkflowCustomDataTypeDefinition | [**Get-IntersightWorkflowCustomDataTypeDefinition**](docs/Get-IntersightWorkflowCustomDataTypeDefinition.md) | Read a 'WorkflowCustomDataTypeDefinition' resource.
 WorkflowErrorResponseHandler | [**Get-IntersightWorkflowErrorResponseHandler**](docs/Get-IntersightWorkflowErrorResponseHandler.md) | Read a 'WorkflowErrorResponseHandler' resource.
-WorkflowPendingDynamicWorkflowInfo | [**Get-IntersightWorkflowPendingDynamicWorkflowInfo**](docs/Get-IntersightWorkflowPendingDynamicWorkflowInfo.md) | Read a 'WorkflowPendingDynamicWorkflowInfo' resource.
 WorkflowPowerShellBatchApiExecutor | [**Get-IntersightWorkflowPowerShellBatchApiExecutor**](docs/Get-IntersightWorkflowPowerShellBatchApiExecutor.md) | Read a 'WorkflowPowerShellBatchApiExecutor' resource.
 WorkflowRollbackWorkflow | [**Get-IntersightWorkflowRollbackWorkflow**](docs/Get-IntersightWorkflowRollbackWorkflow.md) | Read a 'WorkflowRollbackWorkflow' resource.
 WorkflowServiceItemActionDefinition | [**Get-IntersightWorkflowServiceItemActionDefinition**](docs/Get-IntersightWorkflowServiceItemActionDefinition.md) | Read a 'WorkflowServiceItemActionDefinition' resource.

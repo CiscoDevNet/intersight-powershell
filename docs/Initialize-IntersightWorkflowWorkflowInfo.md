@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWorkflowInfo [-Account< Model.IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< Model.MoBaseMoRelationship>][-ClassId< WorkflowWorkflowInfo.ClassIdEnum>][-FailedWorkflowCleanupDuration< long>][-Input< object>][-Moid< string>][-Name< string>][-ObjectType< WorkflowWorkflowInfo.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PendingDynamicWorkflowInfo< Model.WorkflowPendingDynamicWorkflowInfoRelationship>][-Permission< Model.IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WorkflowCtx< Model.WorkflowWorkflowCtx>][-WorkflowDefinition< Model.WorkflowWorkflowDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWorkflowInfo [-Account< Model.IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< Model.MoBaseMoRelationship>][-ClassId< WorkflowWorkflowInfo.ClassIdEnum>][-FailedWorkflowCleanupDuration< long>][-Input< object>][-Moid< string>][-Name< string>][-ObjectType< WorkflowWorkflowInfo.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Permission< Model.IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WorkflowCtx< Model.WorkflowWorkflowCtx>][-WorkflowDefinition< Model.WorkflowWorkflowDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -190,24 +190,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.OrganizationOrganizationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PendingDynamicWorkflowInfo
-A reference to a workflowPendingDynamicWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.WorkflowPendingDynamicWorkflowInfoRelationship
 Parameter Sets: (All)
 Aliases:
 

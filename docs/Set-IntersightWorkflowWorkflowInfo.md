@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWorkflowWorkflowInfo [-Account< IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< MoBaseMoRelationship>][-FailedWorkflowCleanupDuration< long>][-Input< object>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PendingDynamicWorkflowInfo< WorkflowPendingDynamicWorkflowInfoRelationship>][-Permission< IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WorkflowCtx< WorkflowWorkflowCtx>][-WorkflowDefinition< WorkflowWorkflowDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightWorkflowWorkflowInfo [-Account< IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< MoBaseMoRelationship>][-FailedWorkflowCleanupDuration< long>][-Input< object>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Permission< IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WorkflowCtx< WorkflowWorkflowCtx>][-WorkflowDefinition< WorkflowWorkflowDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -159,24 +159,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PendingDynamicWorkflowInfo
-A reference to a workflowPendingDynamicWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: WorkflowPendingDynamicWorkflowInfoRelationship
 Parameter Sets: (All)
 Aliases:
 

@@ -908,6 +908,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a chassisConfigResult resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -1246,6 +1247,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The configuration state and results of the last configuration operation."</para>
         /// </summary>
@@ -1448,6 +1450,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
