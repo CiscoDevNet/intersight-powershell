@@ -3869,90 +3869,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize WorkflowDynamicWorkflowActionTaskList.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightWorkflowDynamicWorkflowActionTaskList")]
-    public class InitializeIntersightWorkflowDynamicWorkflowActionTaskList : PSCmdlet
-    {
-        public InitializeIntersightWorkflowDynamicWorkflowActionTaskList()
-        {
-            ClassId = WorkflowDynamicWorkflowActionTaskList.ClassIdEnum.WorkflowDynamicWorkflowActionTaskList;
-            ObjectType = WorkflowDynamicWorkflowActionTaskList.ObjectTypeEnum.WorkflowDynamicWorkflowActionTaskList;
-
-        }
-        // <summary>
-        /// <para type="description">"The action of the Dynamic Workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Action
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowDynamicWorkflowActionTaskList.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowDynamicWorkflowActionTaskList.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The task list that has precedence which dictates how the workflow should be constructed."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public object Tasks
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.WorkflowDynamicWorkflowActionTaskList initObject = new Intersight.Model.WorkflowDynamicWorkflowActionTaskList();
-            if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
-            {
-                initObject.Action = this.Action;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tasks"))
-            {
-                initObject.Tasks = this.Tasks;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize WorkflowEnumEntry.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightWorkflowEnumEntry")]
@@ -6931,118 +6847,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
             {
                 initObject.Value = this.Value;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize WorkflowPendingDynamicWorkflowInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightWorkflowPendingDynamicWorkflowInfo")]
-    public class InitializeIntersightWorkflowPendingDynamicWorkflowInfo : PSCmdlet
-    {
-        public InitializeIntersightWorkflowPendingDynamicWorkflowInfo()
-        {
-            ClassId = WorkflowPendingDynamicWorkflowInfo.ClassIdEnum.WorkflowPendingDynamicWorkflowInfo;
-            ObjectType = WorkflowPendingDynamicWorkflowInfo.ObjectTypeEnum.WorkflowPendingDynamicWorkflowInfo;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowPendingDynamicWorkflowInfo.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A name for the pending dynamic workflow."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Name
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public WorkflowPendingDynamicWorkflowInfo.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.WorkflowWorkflowInfoRelationship WorkflowInfo
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.WorkflowPendingDynamicWorkflowInfo initObject = new Intersight.Model.WorkflowPendingDynamicWorkflowInfo();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
-            {
-                initObject.Name = this.Name;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
-            {
-                initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowInfo"))
-            {
-                initObject.WorkflowInfo = this.WorkflowInfo;
             }
             WriteObject(initObject);
         }
@@ -15313,16 +15117,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a workflowPendingDynamicWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.WorkflowPendingDynamicWorkflowInfoRelationship PendingDynamicWorkflowInfo
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"A reference to a iamPermission resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -15423,10 +15217,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
             {
                 initObject.Organization = this.Organization;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PendingDynamicWorkflowInfo"))
-            {
-                initObject.PendingDynamicWorkflowInfo = this.PendingDynamicWorkflowInfo;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Permission"))
             {

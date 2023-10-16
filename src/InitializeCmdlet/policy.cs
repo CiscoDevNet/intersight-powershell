@@ -514,16 +514,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The data of the object present in config result context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public object EntityData
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The Moid of the object present in config result context."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -592,10 +582,6 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EntityData"))
-            {
-                initObject.EntityData = this.EntityData;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("EntityMoid"))
             {
                 initObject.EntityMoid = this.EntityMoid;

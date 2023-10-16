@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< Model.NetworkElementRelationship>][-ClassId< FabricSwitchProfile.ClassIdEnum>][-ConfigChanges< Model.PolicyConfigChange>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchClusterProfile< Model.FabricSwitchClusterProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< FabricSwitchProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< Model.NetworkElementRelationship>][-ClassId< FabricSwitchProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchClusterProfile< Model.FabricSwitchClusterProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< FabricSwitchProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -94,23 +94,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: FabricSwitchProfile.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ConfigChanges
-This lists the pending configuration changes at the summary level. Detailed changes are saved in configChangeDetails as a separate object.
-
-Note :- Use Initialize-IntersightPolicyConfigChange to create the object of complex type PolicyConfigChange
-
-```yaml
-Type: Model.PolicyConfigChange
 Parameter Sets: (All)
 Aliases:
 
@@ -361,8 +344,6 @@ PS C:\> Initialize-IntersightFabricSwitchProfile
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
-
-[Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
 
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 

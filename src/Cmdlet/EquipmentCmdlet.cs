@@ -9128,16 +9128,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFex resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFexRelationship Fex
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"Numeric Identifier assigned by the management system to the equipment. Identifier can only be changed if it has been PATCHED with the AdminAction property set to 'Recommission'."</para>
@@ -9243,16 +9233,6 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description">"Defines status of action performed on AdminLocatorLedState.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFexOperation.AdminLocatorLedActionStateEnum AdminLocatorLedActionState
-        {
-            get;
-            set;
-        }
 
 
 

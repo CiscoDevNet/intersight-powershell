@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllocatedBudget
-Sets the Allocated Power Budget of the Chassis (in Watts). This field is only supported for Cisco UCS X series Chassis.
+Sets the allocated power budget of the chassis (in Watts).
 
 ```yaml
 Type: long
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicRebalancing
-Sets the Dynamic Power Rebalancing mode of the Chassis. If enabled, this mode allows the chassis to dynamically reallocate the power between servers depending on their power usage. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+Sets the dynamic power rebalancing mode of the chassis. If enabled, this mode allows the chassis to dynamically reallocate the power between servers depending on their power usage.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
 
 ```yaml
 Type: PowerPolicy.DynamicRebalancingEnum
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerSaveMode
-Sets the Power Save mode of the Chassis. If the requested power budget is less than available power\u00a0capacity,  the additional PSUs not required to comply with redundancy policy are placed in Power Save mode. This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+Sets the power save mode of the chassis. If the requested power budget is less than available power capacity,  the additional PSUs not required to comply with redundancy policy are placed in power save mode.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
 
 ```yaml
 Type: PowerPolicy.PowerSaveModeEnum

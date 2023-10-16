@@ -155,6 +155,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Indicates if the account is prone to lockout as it has only a single Account Administrator. \nAn account is prone to lockout if it has only one configured Account Administrator and no user groups configured that \ncan grant Account Administrator role to dynamic users."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool SingleAdminLockout
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Status of the account. To activate the Intersight account, claim a device to the account."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2421,7 +2432,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Valid login password of the user."</para>
+        /// <para type="description">"The password must have a minimum of 8 and a maximum of 127 characters. For servers with IPMI user role enabled, the maximum length is limited to 20 characters. When strong password is enabled, must satisfy below requirements: A. The password must not contain the User's Name. B. The password must contain characters from three of the following four categories. 1) English uppercase characters (A through Z). 2) English lowercase characters (a through z). 3) Base 10 digits (0 through 9). 4) Non-alphabetic characters (! , @, #, $, %, ^, &, *, -, _, +, =)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^[a-zA-Z0-9!@#$%^&\\*+-_=]+$")]
@@ -2596,7 +2607,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Valid login password of the user."</para>
+        /// <para type="description">"The password must have a minimum of 8 and a maximum of 127 characters. For servers with IPMI user role enabled, the maximum length is limited to 20 characters. When strong password is enabled, must satisfy below requirements: A. The password must not contain the User's Name. B. The password must contain characters from three of the following four categories. 1) English uppercase characters (A through Z). 2) English lowercase characters (a through z). 3) Base 10 digits (0 through 9). 4) Non-alphabetic characters (! , @, #, $, %, ^, &, *, -, _, +, =)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^[a-zA-Z0-9!@#$%^&\\*+-_=]+$")]
@@ -2690,6 +2701,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"Setting that indicates whether 'Single Logout (SLO)' has been enabled for this IdP."</para>
@@ -7224,6 +7236,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -8187,7 +8200,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Valid login password of the user."</para>
+        /// <para type="description">"The password must have a minimum of 8 and a maximum of 127 characters. For servers with IPMI user role enabled, the maximum length is limited to 20 characters. When strong password is enabled, must satisfy below requirements: A. The password must not contain the User's Name. B. The password must contain characters from three of the following four categories. 1) English uppercase characters (A through Z). 2) English lowercase characters (a through z). 3) Base 10 digits (0 through 9). 4) Non-alphabetic characters (! , @, #, $, %, ^, &, *, -, _, +, =)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9!@#$%^&\\*+-_=]+$")]
@@ -8246,6 +8259,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
         public string DomainName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> DomainNames
         {
             get;
             set;
@@ -10208,6 +10232,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -11271,7 +11296,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Valid login password of the user."</para>
+        /// <para type="description">"The password must have a minimum of 8 and a maximum of 127 characters. For servers with IPMI user role enabled, the maximum length is limited to 20 characters. When strong password is enabled, must satisfy below requirements: A. The password must not contain the User's Name. B. The password must contain characters from three of the following four categories. 1) English uppercase characters (A through Z). 2) English lowercase characters (a through z). 3) Base 10 digits (0 through 9). 4) Non-alphabetic characters (! , @, #, $, %, ^, &, *, -, _, +, =)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9!@#$%^&\\*+-_=]+$")]
@@ -11330,6 +11355,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
         public string DomainName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> DomainNames
         {
             get;
             set;

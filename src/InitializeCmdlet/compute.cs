@@ -2490,7 +2490,7 @@ namespace Intersight.PowerShell
             ClearSel = ComputeServerSetting.ClearSelEnum.Ready;
             CmosReset = ComputeServerSetting.CmosResetEnum.Ready;
             CollectSel = ComputeServerSetting.CollectSelEnum.Ready;
-            FrontPanelLockState = ComputeServerSetting.FrontPanelLockStateEnum.Unlock;
+            FrontPanelLockState = ComputeServerSetting.FrontPanelLockStateEnum.None;
             KvmReset = ComputeServerSetting.KvmResetEnum.Ready;
             ObjectType = ComputeServerSetting.ObjectTypeEnum.ComputeServerSetting;
             TpmReset = ComputeServerSetting.TpmResetEnum.None;
@@ -2578,7 +2578,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The allowed actions on the Front Panel Lock.\n* `Unlock` - Front Panel of the server is set to Unlocked state.\n* `Lock` - Front Panel of the server is set to Locked state."</para>
+        /// <para type="description">"The allowed actions on the Front Panel Lock.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

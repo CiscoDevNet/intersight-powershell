@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPolicyConfigResultContext [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyConfigResultContext.ClassIdEnum>][-EntityData< object>][-EntityMoid< string>][-EntityName< string>][-EntityType< string>][-ObjectType< PolicyConfigResultContext.ObjectTypeEnum>][-ParentMoid< string>][-ParentType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPolicyConfigResultContext [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyConfigResultContext.ClassIdEnum>][-EntityMoid< string>][-EntityName< string>][-EntityType< string>][-ObjectType< PolicyConfigResultContext.ObjectTypeEnum>][-ParentMoid< string>][-ParentType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,23 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: PolicyConfigResultContext.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EntityData
-The data of the object present in config result context.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
-```yaml
-Type: object
 Parameter Sets: (All)
 Aliases:
 
@@ -217,5 +200,3 @@ PS C:\> Initialize-IntersightPolicyConfigResultContext
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)

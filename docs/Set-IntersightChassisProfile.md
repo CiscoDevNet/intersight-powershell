@@ -333,6 +333,8 @@ PS C:\> Set-IntersightChassisProfile
 
 [Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
 
+[Initialize-IntersightPolicyConfigChangeContext](./Initialize-IntersightPolicyConfigChangeContext.md)
+
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
 [Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)

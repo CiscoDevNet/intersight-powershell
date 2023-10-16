@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightTechsupportmanagementTechSupportStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TechsupportmanagementTechSupportStatus.ClassIdEnum>][-ClusterMember< Model.AssetClusterMemberRelationship>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-FileName< string>][-Moid< string>][-ObjectType< TechsupportmanagementTechSupportStatus.ObjectTypeEnum>][-OriginResource< Model.MoBaseMoRelationship>][-Reason< string>][-RequestTs< DateTime>][-Status< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TechsupportDownloadUrl< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightTechsupportmanagementTechSupportStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TechsupportmanagementTechSupportStatus.ClassIdEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Moid< string>][-ObjectType< TechsupportmanagementTechSupportStatus.ObjectTypeEnum>][-OriginResource< Model.MoBaseMoRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,24 +54,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ClusterMember
-A reference to a assetClusterMember resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.AssetClusterMemberRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DeviceRegistration
 A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -80,21 +62,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.AssetDeviceRegistrationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FileName
-The name of the Techsupport bundle file.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -153,51 +120,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Reason
-Reason for techsupport failure, if any.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -RequestTs
-The time at which the techsupport request was initiated.
-
-```yaml
-Type: DateTime
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Status
-Status of techsupport collection. Valid values are Pending, CollectionInProgress, CollectionFailed, CollectionComplete, UploadPending, UploadInProgress, UploadPartsComplete, UploadFailed and Completed. The final status will be either CollectionFailed or UploadFailed if there is a failure and Completed if the request completed successfully and the file was uploaded to Intersight Storage Service. All the remaining status values indicates the progress of techsupport collection.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -205,21 +127,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TechsupportDownloadUrl
-The Url to download the techsupport file.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -286,7 +193,5 @@ PS C:\> Initialize-IntersightTechsupportmanagementTechSupportStatus
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

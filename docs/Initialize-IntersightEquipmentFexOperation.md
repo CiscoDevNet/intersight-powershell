@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentFexOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedAction< EquipmentFexOperation.AdminLocatorLedActionEnum>][-AdminLocatorLedActionState< EquipmentFexOperation.AdminLocatorLedActionStateEnum>][-ClassId< EquipmentFexOperation.ClassIdEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Moid< string>][-ObjectType< EquipmentFexOperation.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentFexOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedAction< EquipmentFexOperation.AdminLocatorLedActionEnum>][-ClassId< EquipmentFexOperation.ClassIdEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Moid< string>][-ObjectType< EquipmentFexOperation.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,21 +44,6 @@ Action performed on the locator LED for a FEX.\n* `None` - No operation action f
 
 ```yaml
 Type: EquipmentFexOperation.AdminLocatorLedActionEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AdminLocatorLedActionState
-Defines status of action performed on AdminLocatorLedState.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.
-
-```yaml
-Type: EquipmentFexOperation.AdminLocatorLedActionStateEnum
 Parameter Sets: (All)
 Aliases:
 
