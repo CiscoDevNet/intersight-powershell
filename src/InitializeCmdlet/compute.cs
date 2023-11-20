@@ -72,6 +72,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightComputeBlade()
         {
             ClassId = ComputeBlade.ClassIdEnum.ComputeBlade;
+            FrontPanelLockState = ComputeBlade.FrontPanelLockStateEnum.None;
             ManagementMode = ComputeBlade.ManagementModeEnum.IntersightStandalone;
             ObjectType = ComputeBlade.ObjectTypeEnum.ComputeBlade;
 
@@ -272,6 +273,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long FaultSummary
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The actual front panel state of the server.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeBlade.FrontPanelLockStateEnum FrontPanelLockState
         {
             get;
             set;
@@ -536,6 +547,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("FaultSummary"))
             {
                 initObject.FaultSummary = this.FaultSummary;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FrontPanelLockState"))
+            {
+                initObject.FrontPanelLockState = this.FrontPanelLockState;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("GraphicsCards"))
             {
@@ -1389,6 +1404,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightComputeRackUnit()
         {
             ClassId = ComputeRackUnit.ClassIdEnum.ComputeRackUnit;
+            FrontPanelLockState = ComputeRackUnit.FrontPanelLockStateEnum.None;
             ManagementMode = ComputeRackUnit.ManagementModeEnum.IntersightStandalone;
             ObjectType = ComputeRackUnit.ObjectTypeEnum.ComputeRackUnit;
 
@@ -1589,6 +1605,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long FaultSummary
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The actual front panel state of the server.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeRackUnit.FrontPanelLockStateEnum FrontPanelLockState
         {
             get;
             set;
@@ -1863,6 +1889,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("FaultSummary"))
             {
                 initObject.FaultSummary = this.FaultSummary;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FrontPanelLockState"))
+            {
+                initObject.FrontPanelLockState = this.FrontPanelLockState;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("GraphicsCards"))
             {

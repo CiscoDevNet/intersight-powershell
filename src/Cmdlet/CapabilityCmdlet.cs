@@ -603,6 +603,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Indicates support for secure boot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsSecureBootSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Maximum Ring Size value for vNIC Receive Queue."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -5904,6 +5915,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Minimum firmware version supported for 'negotiate auto 25000' port admin speed on this switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string MinVersionWithNegAuto25g
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -6015,6 +6037,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string UnifiedRule
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"'Negotiate Auto 25000' admin speed support on this switch for port or port-channel\nwith Ethernet Uplink/Appliance/FCoE Uplink roles."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool UplinkAdminPortSpeedNegAuto25GbpsSupported
         {
             get;
             set;
@@ -6738,6 +6771,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public bool IsGeneveSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates support for secure boot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsSecureBootSupported
         {
             get;
             set;
@@ -9773,6 +9817,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -9846,6 +9891,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -10829,6 +10875,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public bool IsGeneveSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates support for secure boot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsSecureBootSupported
         {
             get;
             set;
@@ -13942,6 +13999,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -14015,6 +14073,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

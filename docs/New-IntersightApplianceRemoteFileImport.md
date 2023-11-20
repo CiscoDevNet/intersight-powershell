@@ -129,7 +129,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Specifies if this is an scp or sftp request.\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.
+Specifies if this is an scp or sftp request.\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.
 
 ```yaml
 Type: ApplianceRemoteFileImport.ProtocolEnum

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightApplianceBackupPolicy [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Filename< string>][-ManualBackup< bool>][-Moid< string>][-Password< string>][-Protocol< ApplianceBackupPolicy.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Schedule< OnpremSchedule>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightApplianceBackupPolicy [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Filename< string>][-ManualBackup< bool>][-Moid< string>][-Password< string>][-Protocol< ApplianceBackupPolicy.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-RetentionCount< long>][-RetentionPolicyEnabled< bool>][-Schedule< OnpremSchedule>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Communication protocol used by the file server (e.g. scp or sftp).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.
+Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.
 
 ```yaml
 Type: ApplianceBackupPolicy.ProtocolEnum
@@ -147,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePath
-File server directory to copy the file.
+File server directory or share name to copy the file.
 
 ```yaml
 Type: string
@@ -166,6 +166,36 @@ Remote TCP port on the file server (e.g. 22 for scp).
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RetentionCount
+The number of backups before earliest backup is overwritten. Requires cleanup policy to be enabled.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RetentionPolicyEnabled
+If backup rotate policy is set, older backups will automatically be overwritten. The number of backups before overwriting is defined by the retentionCount property.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

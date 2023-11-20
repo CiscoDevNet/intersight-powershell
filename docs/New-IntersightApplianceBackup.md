@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Communication protocol used by the file server (e.g. scp or sftp).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.
+Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.
 
 ```yaml
 Type: ApplianceBackup.ProtocolEnum
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePath
-File server directory to copy the file.
+File server directory or share name to copy the file.
 
 ```yaml
 Type: string
