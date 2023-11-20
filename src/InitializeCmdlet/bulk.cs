@@ -508,6 +508,7 @@ namespace Intersight.PowerShell
         {
             ClassId = BulkMoDeepCloner.ClassIdEnum.BulkMoDeepCloner;
             ObjectType = BulkMoDeepCloner.ObjectTypeEnum.BulkMoDeepCloner;
+            ReferencePolicy = BulkMoDeepCloner.ReferencePolicyEnum.ReuseAll;
 
         }
         // <summary>
@@ -566,6 +567,26 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name suffix to be applied to all the MOs being cloned when ReferencePolicy chosen is CreateNew. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-) or an underscore (_)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9_-]{1,64}$")]
+        public string ReferenceNameSuffix
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User selected reference clone behavior. Applies to all the MOs being cloned.\n* `ReuseAll` - Any policies in the destination organization whose name matches the policy referenced in the cloned policy will be attached. If no policyin the destination organization matches by name, a policy will be cloned with the same name.Pool references will always be matched by name. If not found, the pool will be cloned in the destination organization, but no identifierblocks will be created.\n* `CreateNew` - New policies will be created for the source and all the attached policies. If a policy of the same name and type already exists in thedestination organization or any organization from which it shares policies, a clone will be created with the provided suffix added to the name.Pool references will always be matched by name. If not found, the pool will be cloned in the destination organization, but no identifierblocks will be created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkMoDeepCloner.ReferencePolicyEnum ReferencePolicy
         {
             get;
             set;
@@ -631,6 +652,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
             {
                 initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReferenceNameSuffix"))
+            {
+                initObject.ReferenceNameSuffix = this.ReferenceNameSuffix;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReferencePolicy"))
+            {
+                initObject.ReferencePolicy = this.ReferencePolicy;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Source"))
             {
@@ -803,76 +832,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Targets = this.Targets;
             }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize BulkMoRef.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightBulkMoRef")]
-    public class InitializeIntersightBulkMoRef : PSCmdlet
-    {
-        public InitializeIntersightBulkMoRef()
-        {
-            ClassId = BulkMoRef.ClassIdEnum.BulkMoRef;
-            ObjectType = BulkMoRef.ObjectTypeEnum.BulkMoRef;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BulkMoRef.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Moid represents the MoId of the object."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public BulkMoRef.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.BulkMoRef initObject = new Intersight.Model.BulkMoRef();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
-            {
-                initObject.Moid = this.Moid;
-            }
-            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

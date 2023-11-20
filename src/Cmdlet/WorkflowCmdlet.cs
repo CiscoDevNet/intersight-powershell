@@ -4474,10 +4474,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The email address of the user who started this workflow."</para>
+        /// <para type="description">"The email address of the user who started this workflow. In the case of LDAP users, this field can hold either a username or an email."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
+
         public string Email
         {
             get;

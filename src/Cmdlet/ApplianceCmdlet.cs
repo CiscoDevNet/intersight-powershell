@@ -715,7 +715,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by the file server (e.g. scp or sftp).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server."</para>
+        /// <para type="description">"Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -737,10 +737,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"File server directory to copy the file."</para>
+        /// <para type="description">"File server directory or share name to copy the file."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^(/[^/ ]*)+/?$")]
+        [ValidatePattern("^$|^[^`]+$")]
         public string RemotePath
         {
             get;
@@ -781,7 +781,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Status of the backup managed object.\n* `Started` - Backup or restore process has started.\n* `Created` - Backup or restore is in created state.\n* `Failed` - Backup or restore process has failed.\n* `Completed` - Backup or restore process has completed.\n* `Copied` - Backup file has been copied."</para>
+        /// <para type="description">"Status of the backup managed object.\n* `Started` - Backup or restore process has started.\n* `Created` - Backup or restore is in created state.\n* `Failed` - Backup or restore process has failed.\n* `Completed` - Backup or restore process has completed.\n* `Copied` - Backup file has been copied.\n* `Cleanup Failed` - Cleanup of the old backup has failed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -865,7 +865,29 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Status of the most recent Intersight Appliance backup.\n* `BackupFound` - Backup is successful and complete.\n* `BackupFailed` - The current Backup failed.\n* `BackupOutdated` - Backup is old and outdated."</para>
+        /// <para type="description">"Filename of the backup for the backup monitor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Filename
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Status of the oldest Intersight Appliance backup cleanup.\n* `BackupFound` - Backup is successful and complete.\n* `BackupFailed` - The current Backup failed.\n* `BackupOutdated` - Backup is old and outdated.\n* `BackupCleanupFailed` - Cleanup of the old backup has failed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ApplianceBackupMonitor.LastBackupRotationStatusEnum LastBackupRotationStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Status of the most recent Intersight Appliance backup.\n* `BackupFound` - Backup is successful and complete.\n* `BackupFailed` - The current Backup failed.\n* `BackupOutdated` - Backup is old and outdated.\n* `BackupCleanupFailed` - Cleanup of the old backup has failed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1074,7 +1096,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by the file server (e.g. scp or sftp).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server."</para>
+        /// <para type="description">"Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1096,10 +1118,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"File server directory to copy the file."</para>
+        /// <para type="description">"File server directory or share name to copy the file."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^(/[^/ ]*)+/?$")]
+        [ValidatePattern("^$|^[^`]+$")]
         public string RemotePath
         {
             get;
@@ -1117,6 +1139,213 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The number of backups before earliest backup is overwritten. Requires cleanup policy to be enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidateRange(1, 100)]
+        public long RetentionCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"If backup rotate policy is set, older backups will automatically be overwritten. The number of backups before overwriting is defined by the retentionCount property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool RetentionPolicyEnabled
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Username to authenticate the fileserver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_][a-zA-Z0-9_\\.\\@\\\\\\-\\+]*$")]
+        public string Username
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ApplianceBackupRotateData.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackupRotateData", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightApplianceBackupRotateData : GetCmdletBase
+    {
+        public GetIntersightApplianceBackupRotateData()
+        {
+            ApiInstance = new ApplianceApi(Config);
+            MethodName = "GetApplianceBackupRotateDataListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time at which the backup was taken."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime BackupTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Backup filename to backup or restore."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^[a-zA-Z0-9][a-zA-Z0-9_\\.\\-\\+]*$")]
+        public string Filename
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ApplianceBackupRotateData.ProtocolEnum Protocol
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Hostname of the remote file server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string RemoteHost
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"File server directory or share name to copy the file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^[^`]+$")]
+        public string RemotePath
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Remote TCP port on the file server (e.g. 22 for scp)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long RemotePort
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
@@ -5367,7 +5596,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Specifies if this is an scp or sftp request.\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server."</para>
+        /// <para type="description">"Specifies if this is an scp or sftp request.\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5553,7 +5782,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by the file server (e.g. scp or sftp).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server."</para>
+        /// <para type="description">"Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5575,10 +5804,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"File server directory to copy the file."</para>
+        /// <para type="description">"File server directory or share name to copy the file."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^(/[^/ ]*)+/?$")]
+        [ValidatePattern("^$|^[^`]+$")]
         public string RemotePath
         {
             get;
@@ -5619,7 +5848,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Status of the restore managed object.\n* `Started` - Backup or restore process has started.\n* `Created` - Backup or restore is in created state.\n* `Failed` - Backup or restore process has failed.\n* `Completed` - Backup or restore process has completed.\n* `Copied` - Backup file has been copied."</para>
+        /// <para type="description">"Status of the restore managed object.\n* `Started` - Backup or restore process has started.\n* `Created` - Backup or restore is in created state.\n* `Failed` - Backup or restore process has failed.\n* `Completed` - Backup or restore process has completed.\n* `Copied` - Backup file has been copied.\n* `Cleanup Failed` - Cleanup of the old backup has failed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7005,7 +7234,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by the file server (e.g. scp or sftp).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server."</para>
+        /// <para type="description">"Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7027,10 +7256,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"File server directory to copy the file."</para>
+        /// <para type="description">"File server directory or share name to copy the file."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^(/[^/ ]*)+/?$")]
+        [ValidatePattern("^$|^[^`]+$")]
         public string RemotePath
         {
             get;
@@ -7164,7 +7393,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by the file server (e.g. scp or sftp).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server."</para>
+        /// <para type="description">"Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7186,10 +7415,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"File server directory to copy the file."</para>
+        /// <para type="description">"File server directory or share name to copy the file."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^(/[^/ ]*)+/?$")]
+        [ValidatePattern("^$|^[^`]+$")]
         public string RemotePath
         {
             get;
@@ -7202,6 +7431,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long RemotePort
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of backups before earliest backup is overwritten. Requires cleanup policy to be enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 100)]
+        public long RetentionCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"If backup rotate policy is set, older backups will automatically be overwritten. The number of backups before overwriting is defined by the retentionCount property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool RetentionPolicyEnabled
         {
             get;
             set;
@@ -8066,7 +8317,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Specifies if this is an scp or sftp request.\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server."</para>
+        /// <para type="description">"Specifies if this is an scp or sftp request.\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -8181,7 +8432,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by the file server (e.g. scp or sftp).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server."</para>
+        /// <para type="description">"Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -8203,10 +8454,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"File server directory to copy the file."</para>
+        /// <para type="description">"File server directory or share name to copy the file."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^(/[^/ ]*)+/?$")]
+        [ValidatePattern("^$|^[^`]+$")]
         public string RemotePath
         {
             get;
@@ -8478,7 +8729,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by the file server (e.g. scp or sftp).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server."</para>
+        /// <para type="description">"Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -8500,10 +8751,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"File server directory to copy the file."</para>
+        /// <para type="description">"File server directory or share name to copy the file."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^(/[^/ ]*)+/?$")]
+        [ValidatePattern("^$|^[^`]+$")]
         public string RemotePath
         {
             get;
@@ -8516,6 +8767,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long RemotePort
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of backups before earliest backup is overwritten. Requires cleanup policy to be enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 100)]
+        public long RetentionCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"If backup rotate policy is set, older backups will automatically be overwritten. The number of backups before overwriting is defined by the retentionCount property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool RetentionPolicyEnabled
         {
             get;
             set;

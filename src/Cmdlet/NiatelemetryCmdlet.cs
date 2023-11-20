@@ -13555,6 +13555,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"The TEP IP address of the node's vPC peer, if present."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string VpcPeerIpAddress
+        {
+            get;
+            set;
+        }
+
 
     }
     /// <summary>
@@ -19157,6 +19168,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<NiatelemetryVniStatus> VniStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The TEP IP address of the node's vPC peer, if present."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VpcPeerIpAddress
         {
             get;
             set;

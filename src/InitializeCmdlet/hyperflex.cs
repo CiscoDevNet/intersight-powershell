@@ -1673,6 +1673,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightHyperflexClusterHealthCheckExecutionSnapshot()
         {
             ClassId = HyperflexClusterHealthCheckExecutionSnapshot.ClassIdEnum.HyperflexClusterHealthCheckExecutionSnapshot;
+            ExecutionContext = HyperflexClusterHealthCheckExecutionSnapshot.ExecutionContextEnum.UNKNOWN;
             ObjectType = HyperflexClusterHealthCheckExecutionSnapshot.ObjectTypeEnum.HyperflexClusterHealthCheckExecutionSnapshot;
 
         }
@@ -1692,6 +1693,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public HyperflexClusterHealthCheckExecutionSnapshot.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The execution context of the HyperFlex health checks.\n* `UNKNOWN` - The current context of HyperFlex health check execution is unknown.\n* `WORKFLOW` - The HyperFlex health check execution is initiated through an orchestration workflow.\n* `SCHEDULED` - The HyperFlex health check execution is through a scheduled run."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HyperflexClusterHealthCheckExecutionSnapshot.ExecutionContextEnum ExecutionContext
         {
             get;
             set;
@@ -1745,6 +1756,10 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExecutionContext"))
+            {
+                initObject.ExecutionContext = this.ExecutionContext;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -5088,7 +5103,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Indicates whether the health check is executed only on the leader node, or on all nodes in the HyperFlex cluster.\n* `EXECUTE_ON_LEADER_NODE` - Execute the health check script only on the HyperFlex cluster's leader node.\n* `EXECUTE_ON_ALL_NODES` - Execute health check on all nodes and aggregate the results.\n* `EXECUTE_ON_ALL_NODES_AND_AGGREGATE` - Execute the health check on all Nodes and perform custom aggregation."</para>
+        /// <para type="description">"Indicates whether the health check is executed only on the leader node, or on all nodes in the HyperFlex cluster.\n* `EXECUTE_ON_LEADER_NODE` - Execute the health check script only on the HyperFlex cluster's leader node.\n* `EXECUTE_ON_ALL_NODES` - Execute health check on all nodes and aggregate the results.\n* `EXECUTE_ON_ALL_NODES_AND_AGGREGATE` - Execute the health check on all Nodes and perform custom aggregation.\n* `EXECUTE_ON_CURRENT_NODE` - The HyperFlex health check is executed on the node which receives the request."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -5614,6 +5629,175 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
                 initObject.VarVersion = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize HyperflexHealthCheckSchedulePolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightHyperflexHealthCheckSchedulePolicy")]
+    public class InitializeIntersightHyperflexHealthCheckSchedulePolicy : PSCmdlet
+    {
+        public InitializeIntersightHyperflexHealthCheckSchedulePolicy()
+        {
+            ClassId = HyperflexHealthCheckSchedulePolicy.ClassIdEnum.HyperflexHealthCheckSchedulePolicy;
+            ObjectType = HyperflexHealthCheckSchedulePolicy.ObjectTypeEnum.HyperflexHealthCheckSchedulePolicy;
+            ScheduleInterval = HyperflexHealthCheckSchedulePolicy.ScheduleIntervalEnum.NUMBER_86400;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HyperflexHealthCheckSchedulePolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The date and time when this HealthCheck Policy was last enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime LastScheduledOn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The date and time when this HealthCheck Policy was last disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime LastUnscheduledOn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The date and time when the next health check execution is expected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime NextExpectedExecution
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HyperflexHealthCheckSchedulePolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates whether HealthCheck schedule policy is enabled on the HyperFlex cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool PolicyEnabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The frequency at which the health checks are run on the HyperFlex cluster.\n* `86400` - Execute the health check every 24 hours.\n* `43200` - Execute the health check every 12 hours.\n* `21600` - Execute the health check every 6 hours.\n* `10800` - Execute the health check every 3 hours.\n* `3600` - Execute the health check every 1 hours.\n* `300` - Execute the health check every 5 minutes.\n* `0` - Disable the continuous health check."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HyperflexHealthCheckSchedulePolicy.ScheduleIntervalEnum ScheduleInterval
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of the health check policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Uuid
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.HyperflexHealthCheckSchedulePolicy initObject = new Intersight.Model.HyperflexHealthCheckSchedulePolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("LastScheduledOn"))
+            {
+                initObject.LastScheduledOn = this.LastScheduledOn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LastUnscheduledOn"))
+            {
+                initObject.LastUnscheduledOn = this.LastUnscheduledOn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NextExpectedExecution"))
+            {
+                initObject.NextExpectedExecution = this.NextExpectedExecution;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PolicyEnabled"))
+            {
+                initObject.PolicyEnabled = this.PolicyEnabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScheduleInterval"))
+            {
+                initObject.ScheduleInterval = this.ScheduleInterval;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Uuid"))
+            {
+                initObject.Uuid = this.Uuid;
             }
             WriteObject(initObject);
         }

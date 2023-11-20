@@ -974,7 +974,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The distinguished name for the Network Element."</para>
+        /// <para type="description">"The distinguished name that unambiguously identifies an object in the system."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1029,6 +1029,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship InventoryParent
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1040,7 +1051,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The model information of the Network Element."</para>
+        /// <para type="description">"This field identifies the model of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1086,7 +1097,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The serial number for the Network Element."</para>
+        /// <para type="description">"This field identifies the serial number of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1108,7 +1119,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The source object type of this view MO."</para>
+        /// <para type="description">"The source object type of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

@@ -547,6 +547,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Indicates support for secure boot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsSecureBootSupported
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Maximum Ring Size value for vNIC Receive Queue."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -724,6 +734,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("IsGeneveSupported"))
             {
                 initObject.IsGeneveSupported = this.IsGeneveSupported;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsSecureBootSupported"))
+            {
+                initObject.IsSecureBootSupported = this.IsSecureBootSupported;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("MaxEthRxRingSize"))
             {

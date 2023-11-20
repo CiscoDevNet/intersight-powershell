@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBulkMoDeepCloner [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkMoDeepCloner.ClassIdEnum>][-ExcludeProperties< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< BulkMoDeepCloner.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Source< Model.MoMoRef>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Targets< System.Collections.Generic.List`1[Model.MoBaseMo]>][-WorkflowNameSuffix< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBulkMoDeepCloner [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkMoDeepCloner.ClassIdEnum>][-ExcludeProperties< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< BulkMoDeepCloner.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-ReferenceNameSuffix< string>][-ReferencePolicy< BulkMoDeepCloner.ReferencePolicyEnum>][-Source< Model.MoMoRef>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Targets< System.Collections.Generic.List`1[Model.MoBaseMo]>][-WorkflowNameSuffix< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -107,6 +107,36 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReferenceNameSuffix
+Name suffix to be applied to all the MOs being cloned when ReferencePolicy chosen is CreateNew. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-) or an underscore (_).
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReferencePolicy
+User selected reference clone behavior. Applies to all the MOs being cloned.\n* `ReuseAll` - Any policies in the destination organization whose name matches the policy referenced in the cloned policy will be attached. If no policyin the destination organization matches by name, a policy will be cloned with the same name.Pool references will always be matched by name. If not found, the pool will be cloned in the destination organization, but no identifierblocks will be created.\n* `CreateNew` - New policies will be created for the source and all the attached policies. If a policy of the same name and type already exists in thedestination organization or any organization from which it shares policies, a clone will be created with the provided suffix added to the name.Pool references will always be matched by name. If not found, the pool will be cloned in the destination organization, but no identifierblocks will be created.
+
+```yaml
+Type: BulkMoDeepCloner.ReferencePolicyEnum
 Parameter Sets: (All)
 Aliases:
 

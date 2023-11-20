@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightComputeBlade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-BiosBootmode< Model.BiosBootModeRelationship>][-BiosPostComplete< bool>][-BiosTokenSettings< Model.BiosTokenSettingsRelationship>][-BiosVfSelectMemoryRasConfiguration< Model.BiosVfSelectMemoryRasConfigurationRelationship>][-BootCddDevices< System.Collections.Generic.List`1[Model.BootCddDeviceRelationship]>][-BootDeviceBootSecurity< Model.BootDeviceBootSecurityRelationship>][-BootHddDevices< System.Collections.Generic.List`1[Model.BootHddDeviceRelationship]>][-BootIscsiDevices< System.Collections.Generic.List`1[Model.BootIscsiDeviceRelationship]>][-BootNvmeDevices< System.Collections.Generic.List`1[Model.BootNvmeDeviceRelationship]>][-BootPchStorageDevices< System.Collections.Generic.List`1[Model.BootPchStorageDeviceRelationship]>][-BootPxeDevices< System.Collections.Generic.List`1[Model.BootPxeDeviceRelationship]>][-BootSanDevices< System.Collections.Generic.List`1[Model.BootSanDeviceRelationship]>][-BootSdDevices< System.Collections.Generic.List`1[Model.BootSdDeviceRelationship]>][-BootUefiShellDevices< System.Collections.Generic.List`1[Model.BootUefiShellDeviceRelationship]>][-BootUsbDevices< System.Collections.Generic.List`1[Model.BootUsbDeviceRelationship]>][-BootVmediaDevices< System.Collections.Generic.List`1[Model.BootVmediaDeviceRelationship]>][-ClassId< ComputeBlade.ClassIdEnum>][-FaultSummary< long>][-GraphicsCards< System.Collections.Generic.List`1[Model.GraphicsCardRelationship]>][-HardwareUuid< string>][-KvmIpAddresses< System.Collections.Generic.List`1[Model.ComputeIpAddress]>][-ManagementMode< ComputeBlade.ManagementModeEnum>][-MemoryArrays< System.Collections.Generic.List`1[Model.MemoryArrayRelationship]>][-MgmtIdentity< Model.EquipmentPhysicalIdentityRelationship>][-MgmtIpAddress< string>][-Moid< string>][-Name< string>][-ObjectType< ComputeBlade.ObjectTypeEnum>][-OperReason< System.Collections.Generic.List`1[ComputeBlade.OperReasonEnum]>][-PlatformType< string>][-Processors< System.Collections.Generic.List`1[Model.ProcessorUnitRelationship]>][-StorageControllers< System.Collections.Generic.List`1[Model.StorageControllerRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TopSystem< Model.TopSystemRelationship>][-TunneledKvm< bool>][-Vmedia< Model.ComputeVmediaRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightComputeBlade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-BiosBootmode< Model.BiosBootModeRelationship>][-BiosPostComplete< bool>][-BiosTokenSettings< Model.BiosTokenSettingsRelationship>][-BiosVfSelectMemoryRasConfiguration< Model.BiosVfSelectMemoryRasConfigurationRelationship>][-BootCddDevices< System.Collections.Generic.List`1[Model.BootCddDeviceRelationship]>][-BootDeviceBootSecurity< Model.BootDeviceBootSecurityRelationship>][-BootHddDevices< System.Collections.Generic.List`1[Model.BootHddDeviceRelationship]>][-BootIscsiDevices< System.Collections.Generic.List`1[Model.BootIscsiDeviceRelationship]>][-BootNvmeDevices< System.Collections.Generic.List`1[Model.BootNvmeDeviceRelationship]>][-BootPchStorageDevices< System.Collections.Generic.List`1[Model.BootPchStorageDeviceRelationship]>][-BootPxeDevices< System.Collections.Generic.List`1[Model.BootPxeDeviceRelationship]>][-BootSanDevices< System.Collections.Generic.List`1[Model.BootSanDeviceRelationship]>][-BootSdDevices< System.Collections.Generic.List`1[Model.BootSdDeviceRelationship]>][-BootUefiShellDevices< System.Collections.Generic.List`1[Model.BootUefiShellDeviceRelationship]>][-BootUsbDevices< System.Collections.Generic.List`1[Model.BootUsbDeviceRelationship]>][-BootVmediaDevices< System.Collections.Generic.List`1[Model.BootVmediaDeviceRelationship]>][-ClassId< ComputeBlade.ClassIdEnum>][-FaultSummary< long>][-FrontPanelLockState< ComputeBlade.FrontPanelLockStateEnum>][-GraphicsCards< System.Collections.Generic.List`1[Model.GraphicsCardRelationship]>][-HardwareUuid< string>][-KvmIpAddresses< System.Collections.Generic.List`1[Model.ComputeIpAddress]>][-ManagementMode< ComputeBlade.ManagementModeEnum>][-MemoryArrays< System.Collections.Generic.List`1[Model.MemoryArrayRelationship]>][-MgmtIdentity< Model.EquipmentPhysicalIdentityRelationship>][-MgmtIpAddress< string>][-Moid< string>][-Name< string>][-ObjectType< ComputeBlade.ObjectTypeEnum>][-OperReason< System.Collections.Generic.List`1[ComputeBlade.OperReasonEnum]>][-PlatformType< string>][-Processors< System.Collections.Generic.List`1[Model.ProcessorUnitRelationship]>][-StorageControllers< System.Collections.Generic.List`1[Model.StorageControllerRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TopSystem< Model.TopSystemRelationship>][-TunneledKvm< bool>][-Vmedia< Model.ComputeVmediaRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -361,6 +361,21 @@ The fault summary for the server.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FrontPanelLockState
+The actual front panel state of the server.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state.
+
+```yaml
+Type: ComputeBlade.FrontPanelLockStateEnum
 Parameter Sets: (All)
 Aliases:
 

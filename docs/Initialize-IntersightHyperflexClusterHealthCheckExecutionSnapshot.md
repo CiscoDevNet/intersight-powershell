@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexClusterHealthCheckExecutionSnapshot [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexClusterHealthCheckExecutionSnapshot.ClassIdEnum>][-Moid< string>][-ObjectType< HyperflexClusterHealthCheckExecutionSnapshot.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Timestamp< DateTime>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHyperflexClusterHealthCheckExecutionSnapshot [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexClusterHealthCheckExecutionSnapshot.ClassIdEnum>][-ExecutionContext< HyperflexClusterHealthCheckExecutionSnapshot.ExecutionContextEnum>][-Moid< string>][-ObjectType< HyperflexClusterHealthCheckExecutionSnapshot.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Timestamp< DateTime>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: HyperflexClusterHealthCheckExecutionSnapshot.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExecutionContext
+The execution context of the HyperFlex health checks.\n* `UNKNOWN` - The current context of HyperFlex health check execution is unknown.\n* `WORKFLOW` - The HyperFlex health check execution is initiated through an orchestration workflow.\n* `SCHEDULED` - The HyperFlex health check execution is through a scheduled run.
+
+```yaml
+Type: HyperflexClusterHealthCheckExecutionSnapshot.ExecutionContextEnum
 Parameter Sets: (All)
 Aliases:
 

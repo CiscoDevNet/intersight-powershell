@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightComputeRackUnit [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-BiosBootmode< BiosBootModeRelationship>][-BiosPostComplete< bool>][-BiosTokenSettings< BiosTokenSettingsRelationship>][-BiosVfSelectMemoryRasConfiguration< BiosVfSelectMemoryRasConfigurationRelationship>][-BootCddDevices< System.Collections.Generic.List`1[BootCddDeviceRelationship]>][-BootDeviceBootSecurity< BootDeviceBootSecurityRelationship>][-BootHddDevices< System.Collections.Generic.List`1[BootHddDeviceRelationship]>][-BootIscsiDevices< System.Collections.Generic.List`1[BootIscsiDeviceRelationship]>][-BootNvmeDevices< System.Collections.Generic.List`1[BootNvmeDeviceRelationship]>][-BootPchStorageDevices< System.Collections.Generic.List`1[BootPchStorageDeviceRelationship]>][-BootPxeDevices< System.Collections.Generic.List`1[BootPxeDeviceRelationship]>][-BootSanDevices< System.Collections.Generic.List`1[BootSanDeviceRelationship]>][-BootSdDevices< System.Collections.Generic.List`1[BootSdDeviceRelationship]>][-BootUefiShellDevices< System.Collections.Generic.List`1[BootUefiShellDeviceRelationship]>][-BootUsbDevices< System.Collections.Generic.List`1[BootUsbDeviceRelationship]>][-BootVmediaDevices< System.Collections.Generic.List`1[BootVmediaDeviceRelationship]>][-FaultSummary< long>][-GraphicsCards< System.Collections.Generic.List`1[GraphicsCardRelationship]>][-HardwareUuid< string>][-KvmIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][-ManagementMode< ComputeRackUnit.ManagementModeEnum>][-MemoryArrays< System.Collections.Generic.List`1[MemoryArrayRelationship]>][-MgmtIdentity< EquipmentPhysicalIdentityRelationship>][-MgmtIpAddress< string>][[-Moid]< string>][-Name< string>][-OperReason< System.Collections.Generic.List`1[ComputeRackUnit.OperReasonEnum]>][-PlatformType< string>][-Processors< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-SasExpanders< System.Collections.Generic.List`1[StorageSasExpanderRelationship]>][-StorageControllers< System.Collections.Generic.List`1[StorageControllerRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TopologyScanStatus< string>][-TunneledKvm< bool>][-Vmedia< ComputeVmediaRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightComputeRackUnit [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-BiosBootmode< BiosBootModeRelationship>][-BiosPostComplete< bool>][-BiosTokenSettings< BiosTokenSettingsRelationship>][-BiosVfSelectMemoryRasConfiguration< BiosVfSelectMemoryRasConfigurationRelationship>][-BootCddDevices< System.Collections.Generic.List`1[BootCddDeviceRelationship]>][-BootDeviceBootSecurity< BootDeviceBootSecurityRelationship>][-BootHddDevices< System.Collections.Generic.List`1[BootHddDeviceRelationship]>][-BootIscsiDevices< System.Collections.Generic.List`1[BootIscsiDeviceRelationship]>][-BootNvmeDevices< System.Collections.Generic.List`1[BootNvmeDeviceRelationship]>][-BootPchStorageDevices< System.Collections.Generic.List`1[BootPchStorageDeviceRelationship]>][-BootPxeDevices< System.Collections.Generic.List`1[BootPxeDeviceRelationship]>][-BootSanDevices< System.Collections.Generic.List`1[BootSanDeviceRelationship]>][-BootSdDevices< System.Collections.Generic.List`1[BootSdDeviceRelationship]>][-BootUefiShellDevices< System.Collections.Generic.List`1[BootUefiShellDeviceRelationship]>][-BootUsbDevices< System.Collections.Generic.List`1[BootUsbDeviceRelationship]>][-BootVmediaDevices< System.Collections.Generic.List`1[BootVmediaDeviceRelationship]>][-FaultSummary< long>][-FrontPanelLockState< ComputeRackUnit.FrontPanelLockStateEnum>][-GraphicsCards< System.Collections.Generic.List`1[GraphicsCardRelationship]>][-HardwareUuid< string>][-KvmIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][-ManagementMode< ComputeRackUnit.ManagementModeEnum>][-MemoryArrays< System.Collections.Generic.List`1[MemoryArrayRelationship]>][-MgmtIdentity< EquipmentPhysicalIdentityRelationship>][-MgmtIpAddress< string>][[-Moid]< string>][-Name< string>][-OperReason< System.Collections.Generic.List`1[ComputeRackUnit.OperReasonEnum]>][-PlatformType< string>][-Processors< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-SasExpanders< System.Collections.Generic.List`1[StorageSasExpanderRelationship]>][-StorageControllers< System.Collections.Generic.List`1[StorageControllerRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TopologyScanStatus< string>][-TunneledKvm< bool>][-Vmedia< ComputeVmediaRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -345,6 +345,21 @@ The fault summary for the server.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FrontPanelLockState
+The actual front panel state of the server.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state.
+
+```yaml
+Type: ComputeRackUnit.FrontPanelLockStateEnum
 Parameter Sets: (All)
 Aliases:
 

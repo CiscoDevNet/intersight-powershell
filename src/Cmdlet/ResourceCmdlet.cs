@@ -1467,6 +1467,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ResourceGroupMember.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourceGroupMember")]
+    public class RemoveIntersightResourceGroupMember : RemoveCmdletBase
+    {
+        public RemoveIntersightResourceGroupMember()
+        {
+            ApiInstance = new ResourceApi(Config);
+            MethodName = "DeleteResourceGroupMemberWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourceReservation.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightResourceReservation")]

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightTechsupportmanagementNiaParam [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TechsupportmanagementNiaParam.ClassIdEnum>][-CollectionClass< TechsupportmanagementNiaParam.CollectionClassEnum>][-CollectionLevel< TechsupportmanagementNiaParam.CollectionLevelEnum>][-Filename< string>][-ForceFresh< bool>][-ObjectType< TechsupportmanagementNiaParam.ObjectTypeEnum>][-Period< long>][-Pids< System.Collections.Generic.List`1[string]>][-SerialNumbers< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightTechsupportmanagementNiaParam [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TechsupportmanagementNiaParam.ClassIdEnum>][-CollectionClass< TechsupportmanagementNiaParam.CollectionClassEnum>][-CollectionLevel< TechsupportmanagementNiaParam.CollectionLevelEnum>][-Filename< string>][-ForceFresh< bool>][-ObjectType< TechsupportmanagementNiaParam.ObjectTypeEnum>][-Period< long>][-Pids< System.Collections.Generic.List`1[string]>][-SerialNumbers< System.Collections.Generic.List`1[string]>][-UpgradeLogs< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -164,6 +164,21 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UpgradeLogs
+UpgradeLogs controls the inclusion of upgrade logs in tech support bundles.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

@@ -871,6 +871,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The status of the server profile indicating if deployment has been initiated on both fabric interconnects or not.\n* `None` - Switch profiles not deployed on either of the switches.\n* `Complete` - Both switch profiles of the cluster profile are deployed.\n* `Partial` - Only one of the switch profiles of the cluster profile is deployed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ServerProfile.DeployStatusEnum DeployStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The property which determines if the deployment should be skipped on any of the Fabric Interconnects. It is set based on the state of a fabric interconnect to Intersight before the deployment of the server proile begins.\n* `None` - Server profile configuration not deployed on either of the fabric interconnects.\n* `AB` - Server profile configuration deployed on both fabric interconnects.\n* `A` - Server profile configuration deployed on fabric interconnect A only.\n* `B` - Server profile configuration deployed on fabric interconnect B only."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ServerProfile.DeployedSwitchesEnum DeployedSwitches
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1578,6 +1600,8 @@ namespace Intersight.PowerShell
 
 
 
+
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -2131,6 +2155,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
 

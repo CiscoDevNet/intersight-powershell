@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.13892
-- C# SDK version: 1.0.11.13892
+- Intersight.PowerShell version: 1.0.11.14430
+- C# SDK version: 1.0.11.14430
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.13892"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.14430"}
 ```
 or
 
@@ -727,6 +727,7 @@ ApplianceAutoRmaPolicy | [**Get-IntersightApplianceAutoRmaPolicy**](docs/Get-Int
 ApplianceBackup | [**Get-IntersightApplianceBackup**](docs/Get-IntersightApplianceBackup.md) | Read a 'ApplianceBackup' resource.
 ApplianceBackupMonitor | [**Get-IntersightApplianceBackupMonitor**](docs/Get-IntersightApplianceBackupMonitor.md) | Read a 'ApplianceBackupMonitor' resource.
 ApplianceBackupPolicy | [**Get-IntersightApplianceBackupPolicy**](docs/Get-IntersightApplianceBackupPolicy.md) | Read a 'ApplianceBackupPolicy' resource.
+ApplianceBackupRotateData | [**Get-IntersightApplianceBackupRotateData**](docs/Get-IntersightApplianceBackupRotateData.md) | Read a 'ApplianceBackupRotateData' resource.
 ApplianceCertificateSetting | [**Get-IntersightApplianceCertificateSetting**](docs/Get-IntersightApplianceCertificateSetting.md) | Read a 'ApplianceCertificateSetting' resource.
 ApplianceClusterInfo | [**Get-IntersightApplianceClusterInfo**](docs/Get-IntersightApplianceClusterInfo.md) | Read a 'ApplianceClusterInfo' resource.
 ApplianceClusterInstall | [**Get-IntersightApplianceClusterInstall**](docs/Get-IntersightApplianceClusterInstall.md) | Read a 'ApplianceClusterInstall' resource.
@@ -1451,6 +1452,7 @@ HyperflexHealthCheckDefinition | [**Get-IntersightHyperflexHealthCheckDefinition
 HyperflexHealthCheckExecution | [**Get-IntersightHyperflexHealthCheckExecution**](docs/Get-IntersightHyperflexHealthCheckExecution.md) | Read a 'HyperflexHealthCheckExecution' resource.
 HyperflexHealthCheckExecutionSnapshot | [**Get-IntersightHyperflexHealthCheckExecutionSnapshot**](docs/Get-IntersightHyperflexHealthCheckExecutionSnapshot.md) | Read a 'HyperflexHealthCheckExecutionSnapshot' resource.
 HyperflexHealthCheckPackageChecksum | [**Get-IntersightHyperflexHealthCheckPackageChecksum**](docs/Get-IntersightHyperflexHealthCheckPackageChecksum.md) | Read a 'HyperflexHealthCheckPackageChecksum' resource.
+HyperflexHealthCheckSchedulePolicy | [**Get-IntersightHyperflexHealthCheckSchedulePolicy**](docs/Get-IntersightHyperflexHealthCheckSchedulePolicy.md) | Read a 'HyperflexHealthCheckSchedulePolicy' resource.
 HyperflexHwCatalog | [**Get-IntersightHyperflexHwCatalog**](docs/Get-IntersightHyperflexHwCatalog.md) | Read a 'HyperflexHwCatalog' resource.
 HyperflexHxdpVersion | [**Get-IntersightHyperflexHxdpVersion**](docs/Get-IntersightHyperflexHxdpVersion.md) | Read a 'HyperflexHxdpVersion' resource.
 HyperflexHypervisorHost | [**Get-IntersightHyperflexHypervisorHost**](docs/Get-IntersightHyperflexHypervisorHost.md) | Read a 'HyperflexHypervisorHost' resource.
@@ -2168,10 +2170,29 @@ OsTemplateFile | [**New-IntersightOsTemplateFile**](docs/New-IntersightOsTemplat
 OsValidInstallTarget | [**New-IntersightOsValidInstallTarget**](docs/New-IntersightOsValidInstallTarget.md) | Create a 'OsValidInstallTarget' resource.
 OsConfigurationFile | [**Remove-IntersightOsConfigurationFile**](docs/Remove-IntersightOsConfigurationFile.md) | Delete a 'OsConfigurationFile' resource.
 OsConfigurationFile | [**Set-IntersightOsConfigurationFile**](docs/Set-IntersightOsConfigurationFile.md) | Update a 'OsConfigurationFile' resource.
+PartnerintegrationDcLogs | [**Get-IntersightPartnerintegrationDcLogs**](docs/Get-IntersightPartnerintegrationDcLogs.md) | Read a 'PartnerintegrationDcLogs' resource.
+PartnerintegrationDeviceConnector | [**Get-IntersightPartnerintegrationDeviceConnector**](docs/Get-IntersightPartnerintegrationDeviceConnector.md) | Read a 'PartnerintegrationDeviceConnector' resource.
+PartnerintegrationDocIssues | [**Get-IntersightPartnerintegrationDocIssues**](docs/Get-IntersightPartnerintegrationDocIssues.md) | Read a 'PartnerintegrationDocIssues' resource.
+PartnerintegrationEtl | [**Get-IntersightPartnerintegrationEtl**](docs/Get-IntersightPartnerintegrationEtl.md) | Read a 'PartnerintegrationEtl' resource.
 PartnerintegrationFile | [**Get-IntersightPartnerintegrationFile**](docs/Get-IntersightPartnerintegrationFile.md) | Read a 'PartnerintegrationFile' resource.
+PartnerintegrationInventory | [**Get-IntersightPartnerintegrationInventory**](docs/Get-IntersightPartnerintegrationInventory.md) | Read a 'PartnerintegrationInventory' resource.
+PartnerintegrationLogs | [**Get-IntersightPartnerintegrationLogs**](docs/Get-IntersightPartnerintegrationLogs.md) | Read a 'PartnerintegrationLogs' resource.
+PartnerintegrationModel | [**Get-IntersightPartnerintegrationModel**](docs/Get-IntersightPartnerintegrationModel.md) | Read a 'PartnerintegrationModel' resource.
+PartnerintegrationDeviceConnector | [**New-IntersightPartnerintegrationDeviceConnector**](docs/New-IntersightPartnerintegrationDeviceConnector.md) | Create a 'PartnerintegrationDeviceConnector' resource.
+PartnerintegrationEtl | [**New-IntersightPartnerintegrationEtl**](docs/New-IntersightPartnerintegrationEtl.md) | Create a 'PartnerintegrationEtl' resource.
 PartnerintegrationFile | [**New-IntersightPartnerintegrationFile**](docs/New-IntersightPartnerintegrationFile.md) | Create a 'PartnerintegrationFile' resource.
+PartnerintegrationInventory | [**New-IntersightPartnerintegrationInventory**](docs/New-IntersightPartnerintegrationInventory.md) | Create a 'PartnerintegrationInventory' resource.
+PartnerintegrationModel | [**New-IntersightPartnerintegrationModel**](docs/New-IntersightPartnerintegrationModel.md) | Create a 'PartnerintegrationModel' resource.
+PartnerintegrationDeviceConnector | [**Remove-IntersightPartnerintegrationDeviceConnector**](docs/Remove-IntersightPartnerintegrationDeviceConnector.md) | Delete a 'PartnerintegrationDeviceConnector' resource.
+PartnerintegrationEtl | [**Remove-IntersightPartnerintegrationEtl**](docs/Remove-IntersightPartnerintegrationEtl.md) | Delete a 'PartnerintegrationEtl' resource.
 PartnerintegrationFile | [**Remove-IntersightPartnerintegrationFile**](docs/Remove-IntersightPartnerintegrationFile.md) | Delete a 'PartnerintegrationFile' resource.
+PartnerintegrationInventory | [**Remove-IntersightPartnerintegrationInventory**](docs/Remove-IntersightPartnerintegrationInventory.md) | Delete a 'PartnerintegrationInventory' resource.
+PartnerintegrationModel | [**Remove-IntersightPartnerintegrationModel**](docs/Remove-IntersightPartnerintegrationModel.md) | Delete a 'PartnerintegrationModel' resource.
+PartnerintegrationDeviceConnector | [**Set-IntersightPartnerintegrationDeviceConnector**](docs/Set-IntersightPartnerintegrationDeviceConnector.md) | Update a 'PartnerintegrationDeviceConnector' resource.
+PartnerintegrationEtl | [**Set-IntersightPartnerintegrationEtl**](docs/Set-IntersightPartnerintegrationEtl.md) | Update a 'PartnerintegrationEtl' resource.
 PartnerintegrationFile | [**Set-IntersightPartnerintegrationFile**](docs/Set-IntersightPartnerintegrationFile.md) | Update a 'PartnerintegrationFile' resource.
+PartnerintegrationInventory | [**Set-IntersightPartnerintegrationInventory**](docs/Set-IntersightPartnerintegrationInventory.md) | Update a 'PartnerintegrationInventory' resource.
+PartnerintegrationModel | [**Set-IntersightPartnerintegrationModel**](docs/Set-IntersightPartnerintegrationModel.md) | Update a 'PartnerintegrationModel' resource.
 PciCoprocessorCard | [**Get-IntersightPciCoprocessorCard**](docs/Get-IntersightPciCoprocessorCard.md) | Read a 'PciCoprocessorCard' resource.
 PciDevice | [**Get-IntersightPciDevice**](docs/Get-IntersightPciDevice.md) | Read a 'PciDevice' resource.
 PciLink | [**Get-IntersightPciLink**](docs/Get-IntersightPciLink.md) | Read a 'PciLink' resource.
@@ -2244,6 +2265,7 @@ ResourceGroup | [**New-IntersightResourceGroup**](docs/New-IntersightResourceGro
 ResourceReservation | [**New-IntersightResourceReservation**](docs/New-IntersightResourceReservation.md) | Create a 'ResourceReservation' resource.
 ResourceSelectionCriteria | [**New-IntersightResourceSelectionCriteria**](docs/New-IntersightResourceSelectionCriteria.md) | Create a 'ResourceSelectionCriteria' resource.
 ResourceGroup | [**Remove-IntersightResourceGroup**](docs/Remove-IntersightResourceGroup.md) | Delete a 'ResourceGroup' resource.
+ResourceGroupMember | [**Remove-IntersightResourceGroupMember**](docs/Remove-IntersightResourceGroupMember.md) | Delete a 'ResourceGroupMember' resource.
 ResourceReservation | [**Remove-IntersightResourceReservation**](docs/Remove-IntersightResourceReservation.md) | Delete a 'ResourceReservation' resource.
 ResourceSelectionCriteria | [**Remove-IntersightResourceSelectionCriteria**](docs/Remove-IntersightResourceSelectionCriteria.md) | Delete a 'ResourceSelectionCriteria' resource.
 ResourceSharedResourcesInfoHolder | [**Remove-IntersightResourceSharedResourcesInfoHolder**](docs/Remove-IntersightResourceSharedResourcesInfoHolder.md) | Delete a 'ResourceSharedResourcesInfoHolder' resource.
@@ -2463,6 +2485,7 @@ StoragePureProtectionGroup | [**Get-IntersightStoragePureProtectionGroup**](docs
 StoragePureProtectionGroupSnapshot | [**Get-IntersightStoragePureProtectionGroupSnapshot**](docs/Get-IntersightStoragePureProtectionGroupSnapshot.md) | Read a 'StoragePureProtectionGroupSnapshot' resource.
 StoragePureReplicationSchedule | [**Get-IntersightStoragePureReplicationSchedule**](docs/Get-IntersightStoragePureReplicationSchedule.md) | Read a 'StoragePureReplicationSchedule' resource.
 StoragePureSnapshotSchedule | [**Get-IntersightStoragePureSnapshotSchedule**](docs/Get-IntersightStoragePureSnapshotSchedule.md) | Read a 'StoragePureSnapshotSchedule' resource.
+StoragePureTargetArray | [**Get-IntersightStoragePureTargetArray**](docs/Get-IntersightStoragePureTargetArray.md) | Read a 'StoragePureTargetArray' resource.
 StoragePureVolume | [**Get-IntersightStoragePureVolume**](docs/Get-IntersightStoragePureVolume.md) | Read a 'StoragePureVolume' resource.
 StoragePureVolumeSnapshot | [**Get-IntersightStoragePureVolumeSnapshot**](docs/Get-IntersightStoragePureVolumeSnapshot.md) | Read a 'StoragePureVolumeSnapshot' resource.
 StorageSasExpander | [**Get-IntersightStorageSasExpander**](docs/Get-IntersightStorageSasExpander.md) | Read a 'StorageSasExpander' resource.

@@ -15657,6 +15657,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The TEP IP address of the node's vPC peer, if present."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VpcPeerIpAddress
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -15906,6 +15916,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("VniStatus"))
             {
                 initObject.VniStatus = this.VniStatus;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VpcPeerIpAddress"))
+            {
+                initObject.VpcPeerIpAddress = this.VpcPeerIpAddress;
             }
             WriteObject(initObject);
         }

@@ -820,7 +820,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Status of techsupport collection. Valid values are Pending, CollectionInProgress, CollectionFailed, CollectionComplete, UploadPending, UploadInProgress, UploadPartsComplete, UploadFailed and Completed. The final status will be either CollectionFailed or UploadFailed if there is a failure and Completed if the request completed successfully and the file was uploaded to Intersight Storage Service. All the remaining status values indicates the progress of techsupport collection."</para>
+        /// <para type="description">"Status of the techsupport collection. Valid values are Scheduled, Pending, CollectionInProgress, CollectionFailed, CollectionComplete, UploadPending, UploadInProgress, UploadPartsComplete, UploadPreparingNextFile, UploadFailed, TechsupportDownloadUrlCreationFailed, PartiallyCompleted, and Completed. The final status will be one of CollectionFailed, UploadFailed, or TechsupportDownloadUrlCreationFailed if there is a failure, Completed if the request completed successfully and the file (or files) were uploaded to Intersight Storage Service, or PartiallyCompleted if at least one file in a multiple file collection uploaded successfully. All the remaining status values indicates the progress of techsupport collection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -852,6 +852,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"The name of the role granted to the user that issued the techsupport request."</para>
