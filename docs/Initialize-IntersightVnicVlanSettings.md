@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicVlanSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedVlans< string>][-ClassId< VnicVlanSettings.ClassIdEnum>][-DefaultVlan< long>][-Mode< VnicVlanSettings.ModeEnum>][-ObjectType< VnicVlanSettings.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicVlanSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedVlans< string>][-ClassId< VnicVlanSettings.ClassIdEnum>][-DefaultVlan< long>][-Mode< VnicVlanSettings.ModeEnum>][-ObjectType< VnicVlanSettings.ObjectTypeEnum>][-QinqEnabled< bool>][-QinqVlan< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -104,6 +104,36 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: VnicVlanSettings.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -QinqEnabled
+Enable QinQ (802.1Q-in-802.1Q) Tunneling on the vNIC.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -QinqVlan
+When activating VIC QinQ (802.1Q) Tunneling, a particular VLAN ID is set. In Access VLAN mode, this QinQ VLAN ID is established as the default VLAN.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

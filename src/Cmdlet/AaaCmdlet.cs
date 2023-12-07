@@ -246,6 +246,18 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The raw, string representation of the user agent of the request from the user-agent http request header."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string UserAgentString
+        {
+            get;
+            set;
+        }
+
         // <summary>
         /// <para type="description">"The userId or the email of the associated user that made the change. In case that user is later deleted, we still have some reference to the information."</para>
         /// </summary>

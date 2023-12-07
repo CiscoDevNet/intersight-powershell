@@ -7146,6 +7146,26 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"Enable QinQ (802.1Q-in-802.1Q) Tunneling on the vNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool QinqEnabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When activating VIC QinQ (802.1Q) Tunneling, a particular VLAN ID is set. In Access VLAN mode, this QinQ VLAN ID is established as the default VLAN."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(2, 4093)]
+        public long QinqVlan
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -7168,6 +7188,14 @@ namespace Intersight.PowerShell
                 initObject.Mode = this.Mode;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("QinqEnabled"))
+            {
+                initObject.QinqEnabled = this.QinqEnabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("QinqVlan"))
+            {
+                initObject.QinqVlan = this.QinqVlan;
+            }
             WriteObject(initObject);
         }
 

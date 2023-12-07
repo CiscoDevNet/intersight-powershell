@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricVlanSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedVlans< string>][-ClassId< FabricVlanSettings.ClassIdEnum>][-NativeVlan< long>][-ObjectType< FabricVlanSettings.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricVlanSettings [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedVlans< string>][-ClassId< FabricVlanSettings.ClassIdEnum>][-NativeVlan< long>][-ObjectType< FabricVlanSettings.ObjectTypeEnum>][-QinqEnabled< bool>][-QinqVlan< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedVlans
-Allowed VLAN IDs of the virtual interface. A list of comma seperated VLAN ids and/or VLAN id ranges.
+Allowed VLAN IDs of the virtual interface. A list of comma separated VLAN ids and/or VLAN id ranges.
 
 ```yaml
 Type: string
@@ -89,6 +89,36 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: FabricVlanSettings.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -QinqEnabled
+Enable QinQ (802.1Q-in-802.1Q) Tunneling on the vNIC.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -QinqVlan
+Select the VLAN ID for VIC QinQ (802.1Q) Tunneling.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

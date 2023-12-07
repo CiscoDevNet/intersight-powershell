@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAdapterHostEthInterface [-AcknowledgedPeerInterface< Model.EtherPhysicalPortBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AdapterHostEthInterface.ClassIdEnum>][-Moid< string>][-ObjectType< AdapterHostEthInterface.ObjectTypeEnum>][-OperReason< System.Collections.Generic.List`1[AdapterHostEthInterface.OperReasonEnum]>][-OperState< string>][-PeerInterface< Model.EtherPhysicalPortBaseRelationship>][-PinGroupName< string>][-PinnedInterface< Model.InventoryInterfaceRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAdapterHostEthInterface [-AcknowledgedPeerInterface< Model.EtherPhysicalPortBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AdapterHostEthInterface.ClassIdEnum>][-Moid< string>][-ObjectType< AdapterHostEthInterface.ObjectTypeEnum>][-OperReason< System.Collections.Generic.List`1[AdapterHostEthInterface.OperReasonEnum]>][-OperState< string>][-PeerInterface< Model.EtherPhysicalPortBaseRelationship>][-PinGroupName< string>][-PinnedInterface< Model.InventoryInterfaceRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VethAction< AdapterHostEthInterface.VethActionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -190,6 +190,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VethAction
+The action to be performed on the vethernet corresponding to the vNIC.\n* `None` - Default value for vif operation.\n* `ResetConnectivity` - Resets connectivity on both active and passive vif.\n* `ResetConnectivityActive` - Resets connectivity on the active vif.\n* `ResetConnectivityPassive` - Resets connectivity on the passive vif.\n* `Enable` - Enables the vif on both the FIs.\n* `Disable` - Disables the vif on both the FIs.\n* `EnableActive` - Enables the corresponding active vif.\n* `EnablePassive` - Enables the corresponding standby vif.\n* `DisableActive` - Disables the corresponding active vif.\n* `DisablePassive` - Disables the corresponding standby vif.
+
+```yaml
+Type: AdapterHostEthInterface.VethActionEnum
 Parameter Sets: (All)
 Aliases:
 

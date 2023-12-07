@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCondAlarm [-Acknowledge< CondAlarm.AcknowledgeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AffectedMo< Model.MoBaseMoRelationship>][-ClassId< CondAlarm.ClassIdEnum>][-Definition< Model.CondAlarmDefinitionRelationship>][-Moid< string>][-ObjectType< CondAlarm.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCondAlarm [-Acknowledge< CondAlarm.AcknowledgeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AffectedMo< Model.MoBaseMoRelationship>][-ClassId< CondAlarm.ClassIdEnum>][-Definition< Model.CondAlarmDefinitionRelationship>][-Moid< string>][-ObjectType< CondAlarm.ObjectTypeEnum>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Suppressed< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -143,6 +143,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.AssetDeviceRegistrationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Suppressed
+Indicates whether the alarm is marked for suppression or not.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
