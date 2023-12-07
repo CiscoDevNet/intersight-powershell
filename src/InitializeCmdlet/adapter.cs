@@ -648,6 +648,7 @@ namespace Intersight.PowerShell
         {
             ClassId = AdapterHostEthInterface.ClassIdEnum.AdapterHostEthInterface;
             ObjectType = AdapterHostEthInterface.ObjectTypeEnum.AdapterHostEthInterface;
+            VethAction = AdapterHostEthInterface.VethActionEnum.None;
 
         }
         // <summary>
@@ -760,6 +761,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The action to be performed on the vethernet corresponding to the vNIC.\n* `None` - Default value for vif operation.\n* `ResetConnectivity` - Resets connectivity on both active and passive vif.\n* `ResetConnectivityActive` - Resets connectivity on the active vif.\n* `ResetConnectivityPassive` - Resets connectivity on the passive vif.\n* `Enable` - Enables the vif on both the FIs.\n* `Disable` - Disables the vif on both the FIs.\n* `EnableActive` - Enables the corresponding active vif.\n* `EnablePassive` - Enables the corresponding standby vif.\n* `DisableActive` - Disables the corresponding active vif.\n* `DisablePassive` - Disables the corresponding standby vif."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AdapterHostEthInterface.VethActionEnum VethAction
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -802,6 +813,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VethAction"))
+            {
+                initObject.VethAction = this.VethAction;
+            }
             WriteObject(initObject);
         }
 
@@ -816,6 +831,7 @@ namespace Intersight.PowerShell
         {
             ClassId = AdapterHostFcInterface.ClassIdEnum.AdapterHostFcInterface;
             ObjectType = AdapterHostFcInterface.ObjectTypeEnum.AdapterHostFcInterface;
+            VfcAction = AdapterHostFcInterface.VfcActionEnum.None;
 
         }
         // <summary>
@@ -898,6 +914,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"Denotes the action to be performed on the vfc corresponding to the vHBA.\n* `None` - Default value for vif operation.\n* `ResetConnectivity` - Resets connectivity on both active and passive vif.\n* `ResetConnectivityActive` - Resets connectivity on the active vif.\n* `ResetConnectivityPassive` - Resets connectivity on the passive vif.\n* `Enable` - Enables the vif on both the FIs.\n* `Disable` - Disables the vif on both the FIs.\n* `EnableActive` - Enables the corresponding active vif.\n* `EnablePassive` - Enables the corresponding standby vif.\n* `DisableActive` - Disables the corresponding active vif.\n* `DisablePassive` - Disables the corresponding standby vif."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AdapterHostFcInterface.VfcActionEnum VfcAction
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -927,6 +953,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VfcAction"))
+            {
+                initObject.VfcAction = this.VfcAction;
             }
             WriteObject(initObject);
         }

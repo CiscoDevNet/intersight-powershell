@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCapabilityFeatureConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CapabilityFeatureConfig.ClassIdEnum>][-FeatureName< CapabilityFeatureConfig.FeatureNameEnum>][-MinFwVersion< string>][-ObjectType< CapabilityFeatureConfig.ObjectTypeEnum>][-SupportedFwVersions< System.Collections.Generic.List`1[string]>][-SupportedInAdapters< System.Collections.Generic.List`1[string]>][-SupportedInGenerations< System.Collections.Generic.List`1[CapabilityFeatureConfig.SupportedInGenerationsEnum]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCapabilityFeatureConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CapabilityFeatureConfig.ClassIdEnum>][-FeatureName< CapabilityFeatureConfig.FeatureNameEnum>][-MinAdapterFwVersion< string>][-MinFwVersion< string>][-ObjectType< CapabilityFeatureConfig.ObjectTypeEnum>][-SupportedFwVersions< System.Collections.Generic.List`1[string]>][-SupportedInAdapters< System.Collections.Generic.List`1[string]>][-SupportedInGenerations< System.Collections.Generic.List`1[CapabilityFeatureConfig.SupportedInGenerationsEnum]>][-UnsupportedFeatureMatrix< System.Collections.Generic.List`1[Model.CapabilityUnsupportedFeatureConfig]>][-ValidationAction< CapabilityFeatureConfig.ValidationActionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -FeatureName
-Name of the feature that identifies the specific adapter configuration.\n* `RoCEv2` - Capability indicator of the RDMA over Converged Ethernet (RoCE) feature version 2.\n* `RoCEv1` - Capability indicator of the RDMA over Converged Ethernet (RoCE) feature version 1.\n* `VMQ` - Capability indicator of the Virtual Machine Queue (VMQ) feature.\n* `VMMQ` - Capability indicator of the Virtual Machine Multi-Queue (VMMQ) feature.\n* `VMQInterrupts` - Capability indicator of the Virtual Machine Queue (VMQ) Interrupts feature.\n* `NVGRE` - Capability indicator of the Network Virtualization using Generic Routing Encapsulation (NVGRE) feature.\n* `ARFS` - Capability indicator of the Accelerated Receive Flow Steering (ARFS) feature.\n* `VXLAN` - Capability indicator of the Virtual Extensible LAN (VXLAN) feature.
+Name of the feature that identifies the specific adapter configuration.\n* `RoCEv2` - Capability indicator of the RDMA over Converged Ethernet (RoCE) feature version 2.\n* `RoCEv1` - Capability indicator of the RDMA over Converged Ethernet (RoCE) feature version 1.\n* `VMQ` - Capability indicator of the Virtual Machine Queue (VMQ) feature.\n* `VMMQ` - Capability indicator of the Virtual Machine Multi-Queue (VMMQ) feature.\n* `VMQInterrupts` - Capability indicator of the Virtual Machine Queue (VMQ) Interrupts feature.\n* `NVGRE` - Capability indicator of the Network Virtualization using Generic Routing Encapsulation (NVGRE) feature.\n* `ARFS` - Capability indicator of the Accelerated Receive Flow Steering (ARFS) feature.\n* `VXLAN` - Capability indicator of the Virtual Extensible LAN (VXLAN) feature.\n* `usNIC` - Capability indicator of the User Space NIC (usNIC) feature.\n* `Advanced Filter` - Capability indicator of the Advanced Filter feature.\n* `Azure Stack Host QOS` - Capability indicator of the Azure Stack Host QOS feature.\n* `QinQ` - Capability indicator of the QinQ feature.
 
 ```yaml
 Type: CapabilityFeatureConfig.FeatureNameEnum
@@ -69,8 +69,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -MinAdapterFwVersion
+Firmware version of Adapter from which support for this feature is available.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -MinFwVersion
-Firmware version from which support for this feature is available.
+Firmware version of BMC from which support for this feature is available.
 
 ```yaml
 Type: string
@@ -144,6 +159,38 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -UnsupportedFeatureMatrix
+
+
+Note :- Use Initialize-IntersightCapabilityUnsupportedFeatureConfig to create the object of complex type CapabilityUnsupportedFeatureConfig
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.CapabilityUnsupportedFeatureConfig]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ValidationAction
+Action to be taken when validation does not succeed.\n* `Error` - Stop workflow execution by throwing error.\n* `Skip` - Remove the feature from configuration and continue workflow execution.
+
+```yaml
+Type: CapabilityFeatureConfig.ValidationActionEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -200,3 +247,5 @@ PS C:\> Initialize-IntersightCapabilityFeatureConfig
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightCapabilityUnsupportedFeatureConfig](./Initialize-IntersightCapabilityUnsupportedFeatureConfig.md)

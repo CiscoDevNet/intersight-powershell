@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAdapterHostFcInterface [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AdapterHostFcInterface.ClassIdEnum>][-Moid< string>][-ObjectType< AdapterHostFcInterface.ObjectTypeEnum>][-OperReason< System.Collections.Generic.List`1[AdapterHostFcInterface.OperReasonEnum]>][-PinGroupName< string>][-PinnedInterface< Model.InventoryInterfaceRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAdapterHostFcInterface [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AdapterHostFcInterface.ClassIdEnum>][-Moid< string>][-ObjectType< AdapterHostFcInterface.ObjectTypeEnum>][-OperReason< System.Collections.Generic.List`1[AdapterHostFcInterface.OperReasonEnum]>][-PinGroupName< string>][-PinnedInterface< Model.InventoryInterfaceRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VfcAction< AdapterHostFcInterface.VfcActionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -139,6 +139,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VfcAction
+Denotes the action to be performed on the vfc corresponding to the vHBA.\n* `None` - Default value for vif operation.\n* `ResetConnectivity` - Resets connectivity on both active and passive vif.\n* `ResetConnectivityActive` - Resets connectivity on the active vif.\n* `ResetConnectivityPassive` - Resets connectivity on the passive vif.\n* `Enable` - Enables the vif on both the FIs.\n* `Disable` - Disables the vif on both the FIs.\n* `EnableActive` - Enables the corresponding active vif.\n* `EnablePassive` - Enables the corresponding standby vif.\n* `DisableActive` - Disables the corresponding active vif.\n* `DisablePassive` - Disables the corresponding standby vif.
+
+```yaml
+Type: AdapterHostFcInterface.VfcActionEnum
 Parameter Sets: (All)
 Aliases:
 

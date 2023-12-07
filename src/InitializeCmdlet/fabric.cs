@@ -7209,7 +7209,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Allowed VLAN IDs of the virtual interface. A list of comma seperated VLAN ids and/or VLAN id ranges."</para>
+        /// <para type="description">"Allowed VLAN IDs of the virtual interface. A list of comma separated VLAN ids and/or VLAN id ranges."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^((\\d+\\-\\d+)|(\\d+))(,((\\d+\\-\\d+)|(\\d+)))*$")]
@@ -7248,6 +7248,26 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"Enable QinQ (802.1Q-in-802.1Q) Tunneling on the vNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool QinqEnabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Select the VLAN ID for VIC QinQ (802.1Q) Tunneling."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(2, 4093)]
+        public long QinqVlan
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -7266,6 +7286,14 @@ namespace Intersight.PowerShell
                 initObject.NativeVlan = this.NativeVlan;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("QinqEnabled"))
+            {
+                initObject.QinqEnabled = this.QinqEnabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("QinqVlan"))
+            {
+                initObject.QinqVlan = this.QinqVlan;
+            }
             WriteObject(initObject);
         }
 

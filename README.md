@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.14430
-- C# SDK version: 1.0.11.14430
+- Intersight.PowerShell version: 1.0.11.14628
+- C# SDK version: 1.0.11.14628
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.14430"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.14628"}
 ```
 or
 
@@ -721,6 +721,8 @@ AdapterUnitExpander | [**Get-IntersightAdapterUnitExpander**](docs/Get-Intersigh
 AdapterConfigPolicy | [**New-IntersightAdapterConfigPolicy**](docs/New-IntersightAdapterConfigPolicy.md) | Create a 'AdapterConfigPolicy' resource.
 AdapterConfigPolicy | [**Remove-IntersightAdapterConfigPolicy**](docs/Remove-IntersightAdapterConfigPolicy.md) | Delete a 'AdapterConfigPolicy' resource.
 AdapterConfigPolicy | [**Set-IntersightAdapterConfigPolicy**](docs/Set-IntersightAdapterConfigPolicy.md) | Update a 'AdapterConfigPolicy' resource.
+AdapterHostEthInterface | [**Set-IntersightAdapterHostEthInterface**](docs/Set-IntersightAdapterHostEthInterface.md) | Update a 'AdapterHostEthInterface' resource.
+AdapterHostFcInterface | [**Set-IntersightAdapterHostFcInterface**](docs/Set-IntersightAdapterHostFcInterface.md) | Update a 'AdapterHostFcInterface' resource.
 ApplianceAppOpStatus | [**Get-IntersightApplianceAppOpStatus**](docs/Get-IntersightApplianceAppOpStatus.md) | Read a 'ApplianceAppOpStatus' resource.
 ApplianceAppStatus | [**Get-IntersightApplianceAppStatus**](docs/Get-IntersightApplianceAppStatus.md) | Read a 'ApplianceAppStatus' resource.
 ApplianceAutoRmaPolicy | [**Get-IntersightApplianceAutoRmaPolicy**](docs/Get-IntersightApplianceAutoRmaPolicy.md) | Read a 'ApplianceAutoRmaPolicy' resource.
@@ -874,6 +876,7 @@ CapabilityActionsMetaData | [**Get-IntersightCapabilityActionsMetaData**](docs/G
 CapabilityAdapterDeprecatedDef | [**Get-IntersightCapabilityAdapterDeprecatedDef**](docs/Get-IntersightCapabilityAdapterDeprecatedDef.md) | Read a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterFirmwareRequirement | [**Get-IntersightCapabilityAdapterFirmwareRequirement**](docs/Get-IntersightCapabilityAdapterFirmwareRequirement.md) | Read a 'CapabilityAdapterFirmwareRequirement' resource.
 CapabilityAdapterUnitDescriptor | [**Get-IntersightCapabilityAdapterUnitDescriptor**](docs/Get-IntersightCapabilityAdapterUnitDescriptor.md) | Read a 'CapabilityAdapterUnitDescriptor' resource.
+CapabilityAdapterUpdateConstraintMeta | [**Get-IntersightCapabilityAdapterUpdateConstraintMeta**](docs/Get-IntersightCapabilityAdapterUpdateConstraintMeta.md) | Read a 'CapabilityAdapterUpdateConstraintMeta' resource.
 CapabilityAdapterUpgradeSupportMeta | [**Get-IntersightCapabilityAdapterUpgradeSupportMeta**](docs/Get-IntersightCapabilityAdapterUpgradeSupportMeta.md) | Read a 'CapabilityAdapterUpgradeSupportMeta' resource.
 CapabilityCatalog | [**Get-IntersightCapabilityCatalog**](docs/Get-IntersightCapabilityCatalog.md) | Read a 'CapabilityCatalog' resource.
 CapabilityChassisDescriptor | [**Get-IntersightCapabilityChassisDescriptor**](docs/Get-IntersightCapabilityChassisDescriptor.md) | Read a 'CapabilityChassisDescriptor' resource.
@@ -905,6 +908,7 @@ CapabilityServerUpgradeSupportMeta | [**Get-IntersightCapabilityServerUpgradeSup
 CapabilitySiocModuleCapabilityDef | [**Get-IntersightCapabilitySiocModuleCapabilityDef**](docs/Get-IntersightCapabilitySiocModuleCapabilityDef.md) | Read a 'CapabilitySiocModuleCapabilityDef' resource.
 CapabilitySiocModuleDescriptor | [**Get-IntersightCapabilitySiocModuleDescriptor**](docs/Get-IntersightCapabilitySiocModuleDescriptor.md) | Read a 'CapabilitySiocModuleDescriptor' resource.
 CapabilitySiocModuleManufacturingDef | [**Get-IntersightCapabilitySiocModuleManufacturingDef**](docs/Get-IntersightCapabilitySiocModuleManufacturingDef.md) | Read a 'CapabilitySiocModuleManufacturingDef' resource.
+CapabilityStorageControllerUpdateConstraintMeta | [**Get-IntersightCapabilityStorageControllerUpdateConstraintMeta**](docs/Get-IntersightCapabilityStorageControllerUpdateConstraintMeta.md) | Read a 'CapabilityStorageControllerUpdateConstraintMeta' resource.
 CapabilitySwitchCapability | [**Get-IntersightCapabilitySwitchCapability**](docs/Get-IntersightCapabilitySwitchCapability.md) | Read a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**Get-IntersightCapabilitySwitchDescriptor**](docs/Get-IntersightCapabilitySwitchDescriptor.md) | Read a 'CapabilitySwitchDescriptor' resource.
 CapabilitySwitchManufacturingDef | [**Get-IntersightCapabilitySwitchManufacturingDef**](docs/Get-IntersightCapabilitySwitchManufacturingDef.md) | Read a 'CapabilitySwitchManufacturingDef' resource.
@@ -1060,11 +1064,16 @@ ComputeServerPowerPolicy | [**Set-IntersightComputeServerPowerPolicy**](docs/Set
 ComputeServerSetting | [**Set-IntersightComputeServerSetting**](docs/Set-IntersightComputeServerSetting.md) | Update a 'ComputeServerSetting' resource.
 CondAlarm | [**Get-IntersightCondAlarm**](docs/Get-IntersightCondAlarm.md) | Read a 'CondAlarm' resource.
 CondAlarmAggregation | [**Get-IntersightCondAlarmAggregation**](docs/Get-IntersightCondAlarmAggregation.md) | Read a 'CondAlarmAggregation' resource.
+CondAlarmClassification | [**Get-IntersightCondAlarmClassification**](docs/Get-IntersightCondAlarmClassification.md) | Read a 'CondAlarmClassification' resource.
 CondAlarmDefinition | [**Get-IntersightCondAlarmDefinition**](docs/Get-IntersightCondAlarmDefinition.md) | Read a 'CondAlarmDefinition' resource.
+CondAlarmSuppression | [**Get-IntersightCondAlarmSuppression**](docs/Get-IntersightCondAlarmSuppression.md) | Read a 'CondAlarmSuppression' resource.
 CondHclStatus | [**Get-IntersightCondHclStatus**](docs/Get-IntersightCondHclStatus.md) | Read a 'CondHclStatus' resource.
 CondHclStatusDetail | [**Get-IntersightCondHclStatusDetail**](docs/Get-IntersightCondHclStatusDetail.md) | Read a 'CondHclStatusDetail' resource.
 CondHclStatusJob | [**Get-IntersightCondHclStatusJob**](docs/Get-IntersightCondHclStatusJob.md) | Read a 'CondHclStatusJob' resource.
+CondAlarmSuppression | [**New-IntersightCondAlarmSuppression**](docs/New-IntersightCondAlarmSuppression.md) | Create a 'CondAlarmSuppression' resource.
+CondAlarmSuppression | [**Remove-IntersightCondAlarmSuppression**](docs/Remove-IntersightCondAlarmSuppression.md) | Delete a 'CondAlarmSuppression' resource.
 CondAlarm | [**Set-IntersightCondAlarm**](docs/Set-IntersightCondAlarm.md) | Update a 'CondAlarm' resource.
+CondAlarmSuppression | [**Set-IntersightCondAlarmSuppression**](docs/Set-IntersightCondAlarmSuppression.md) | Update a 'CondAlarmSuppression' resource.
 ConnectorpackConnectorPackUpgrade | [**Get-IntersightConnectorpackConnectorPackUpgrade**](docs/Get-IntersightConnectorpackConnectorPackUpgrade.md) | Read a 'ConnectorpackConnectorPackUpgrade' resource.
 ConnectorpackUpgradeImpact | [**Get-IntersightConnectorpackUpgradeImpact**](docs/Get-IntersightConnectorpackUpgradeImpact.md) | Read a 'ConnectorpackUpgradeImpact' resource.
 ConnectorpackConnectorPackUpgrade | [**New-IntersightConnectorpackConnectorPackUpgrade**](docs/New-IntersightConnectorpackConnectorPackUpgrade.md) | Create a 'ConnectorpackConnectorPackUpgrade' resource.
@@ -1995,6 +2004,8 @@ NetworkInterfaceList | [**Get-IntersightNetworkInterfaceList**](docs/Get-Intersi
 NetworkLicenseFile | [**Get-IntersightNetworkLicenseFile**](docs/Get-IntersightNetworkLicenseFile.md) | Read a 'NetworkLicenseFile' resource.
 NetworkSupervisorCard | [**Get-IntersightNetworkSupervisorCard**](docs/Get-IntersightNetworkSupervisorCard.md) | Read a 'NetworkSupervisorCard' resource.
 NetworkTelemetryCheck | [**Get-IntersightNetworkTelemetryCheck**](docs/Get-IntersightNetworkTelemetryCheck.md) | Read a 'NetworkTelemetryCheck' resource.
+NetworkVethernet | [**Get-IntersightNetworkVethernet**](docs/Get-IntersightNetworkVethernet.md) | Read a 'NetworkVethernet' resource.
+NetworkVfc | [**Get-IntersightNetworkVfc**](docs/Get-IntersightNetworkVfc.md) | Read a 'NetworkVfc' resource.
 NetworkVlanPortInfo | [**Get-IntersightNetworkVlanPortInfo**](docs/Get-IntersightNetworkVlanPortInfo.md) | Read a 'NetworkVlanPortInfo' resource.
 NetworkVpcDomain | [**Get-IntersightNetworkVpcDomain**](docs/Get-IntersightNetworkVpcDomain.md) | Read a 'NetworkVpcDomain' resource.
 NetworkVpcMember | [**Get-IntersightNetworkVpcMember**](docs/Get-IntersightNetworkVpcMember.md) | Read a 'NetworkVpcMember' resource.
@@ -2002,6 +2013,8 @@ NetworkVpcPeer | [**Get-IntersightNetworkVpcPeer**](docs/Get-IntersightNetworkVp
 NetworkVrf | [**Get-IntersightNetworkVrf**](docs/Get-IntersightNetworkVrf.md) | Read a 'NetworkVrf' resource.
 NetworkElement | [**Set-IntersightNetworkElement**](docs/Set-IntersightNetworkElement.md) | Update a 'NetworkElement' resource.
 NetworkFcZoneInfo | [**Set-IntersightNetworkFcZoneInfo**](docs/Set-IntersightNetworkFcZoneInfo.md) | Update a 'NetworkFcZoneInfo' resource.
+NetworkVethernet | [**Set-IntersightNetworkVethernet**](docs/Set-IntersightNetworkVethernet.md) | Update a 'NetworkVethernet' resource.
+NetworkVfc | [**Set-IntersightNetworkVfc**](docs/Set-IntersightNetworkVfc.md) | Update a 'NetworkVfc' resource.
 NetworkVlanPortInfo | [**Set-IntersightNetworkVlanPortInfo**](docs/Set-IntersightNetworkVlanPortInfo.md) | Update a 'NetworkVlanPortInfo' resource.
 NetworkconfigPolicy | [**Get-IntersightNetworkconfigPolicy**](docs/Get-IntersightNetworkconfigPolicy.md) | Read a 'NetworkconfigPolicy' resource.
 NetworkconfigPolicyInventory | [**Get-IntersightNetworkconfigPolicyInventory**](docs/Get-IntersightNetworkconfigPolicyInventory.md) | Read a 'NetworkconfigPolicyInventory' resource.
@@ -2452,6 +2465,7 @@ StorageNetAppLicense | [**Get-IntersightStorageNetAppLicense**](docs/Get-Intersi
 StorageNetAppLun | [**Get-IntersightStorageNetAppLun**](docs/Get-IntersightStorageNetAppLun.md) | Read a 'StorageNetAppLun' resource.
 StorageNetAppLunEvent | [**Get-IntersightStorageNetAppLunEvent**](docs/Get-IntersightStorageNetAppLunEvent.md) | Read a 'StorageNetAppLunEvent' resource.
 StorageNetAppLunMap | [**Get-IntersightStorageNetAppLunMap**](docs/Get-IntersightStorageNetAppLunMap.md) | Read a 'StorageNetAppLunMap' resource.
+StorageNetAppNamespace | [**Get-IntersightStorageNetAppNamespace**](docs/Get-IntersightStorageNetAppNamespace.md) | Read a 'StorageNetAppNamespace' resource.
 StorageNetAppNfsClient | [**Get-IntersightStorageNetAppNfsClient**](docs/Get-IntersightStorageNetAppNfsClient.md) | Read a 'StorageNetAppNfsClient' resource.
 StorageNetAppNfsService | [**Get-IntersightStorageNetAppNfsService**](docs/Get-IntersightStorageNetAppNfsService.md) | Read a 'StorageNetAppNfsService' resource.
 StorageNetAppNode | [**Get-IntersightStorageNetAppNode**](docs/Get-IntersightStorageNetAppNode.md) | Read a 'StorageNetAppNode' resource.

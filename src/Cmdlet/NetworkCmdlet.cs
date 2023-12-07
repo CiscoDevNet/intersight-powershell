@@ -1165,6 +1165,8 @@ namespace Intersight.PowerShell
         }
 
 
+
+
         // <summary>
         /// <para type="description">"A reference to a networkVpcDomain resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -3447,6 +3449,376 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NetworkVethernet.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVethernet", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNetworkVethernet : GetCmdletBase
+    {
+        public GetIntersightNetworkVethernet()
+        {
+            ApiInstance = new NetworkApi(Config);
+            MethodName = "GetNetworkVethernetListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a adapterHostEthInterface resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AdapterHostEthInterfaceRelationship AdapterHostEthInterface
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Description for the vNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceMoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public NetworkElementRelationship NetworkElement
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Rn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Vethernet Identifier on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VethId
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NetworkVfc.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVfc", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightNetworkVfc : GetCmdletBase
+    {
+        public GetIntersightNetworkVfc()
+        {
+            ApiInstance = new NetworkApi(Config);
+            MethodName = "GetNetworkVfcListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a adapterHostFcInterface resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AdapterHostFcInterfaceRelationship AdapterHostFcInterface
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Description for the vHBA."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceMoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public NetworkElementRelationship NetworkElement
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Rn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Vfc Identifier on a Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VfcId
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkVlanPortInfo.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightNetworkVlanPortInfo", DefaultParameterSetName = "CmdletParam")]
@@ -4906,6 +5278,8 @@ namespace Intersight.PowerShell
 
 
 
+
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NetworkFcZoneInfo.</para>
@@ -4970,6 +5344,134 @@ namespace Intersight.PowerShell
 
 
 
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set NetworkVethernet.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkVethernet")]
+    public class SetIntersightNetworkVethernet : SetCmdletBase
+    {
+        public SetIntersightNetworkVethernet()
+        {
+            ApiInstance = new NetworkApi(Config);
+            ModelObject = new NetworkVethernet();
+            MethodName = "UpdateNetworkVethernetWithHttpInfo";
+        }
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set NetworkVfc.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkVfc")]
+    public class SetIntersightNetworkVfc : SetCmdletBase
+    {
+        public SetIntersightNetworkVfc()
+        {
+            ApiInstance = new NetworkApi(Config);
+            ModelObject = new NetworkVfc();
+            MethodName = "UpdateNetworkVfcWithHttpInfo";
+        }
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
 
 
     }

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCondAlarmDefinition [-Actions< System.Collections.Generic.List`1[Model.CondAlarmAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CondAlarmDefinition.ClassIdEnum>][-Condition< Model.IssueCondition>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< CondAlarmDefinition.ObjectTypeEnum>][-ProbableCause< string>][-Remediation< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCondAlarmDefinition [-Actions< System.Collections.Generic.List`1[Model.CondAlarmAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CondAlarmDefinition.ClassIdEnum>][-Condition< Model.IssueCondition>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< CondAlarmDefinition.ObjectTypeEnum>][-ProbableCause< string>][-Remediation< string>][-SystemClassifications< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -168,6 +168,21 @@ An explanation of the steps to perform to remediate the detected issue.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SystemClassifications
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

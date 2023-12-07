@@ -320,6 +320,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Indicates whether the alarm is marked for suppression or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool Suppressed
+        {
+            get;
+            set;
+        }
+
 
 
 
@@ -489,6 +500,127 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondAlarmClassification.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmClassification", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCondAlarmClassification : GetCmdletBase
+    {
+        public GetIntersightCondAlarmClassification()
+        {
+            ApiInstance = new CondApi(Config);
+            MethodName = "GetCondAlarmClassificationListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A description about the alarms group that usually gives what kind of alarms are part of this classification."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The name that uniquely identifies the alarm classificaton."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CondAlarmDefinition.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmDefinition", DefaultParameterSetName = "CmdletParam")]
@@ -615,6 +747,127 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondAlarmSuppression.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmSuppression", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCondAlarmSuppression : GetCmdletBase
+    {
+        public GetIntersightCondAlarmSuppression()
+        {
+            ApiInstance = new CondApi(Config);
+            MethodName = "GetCondAlarmSuppressionListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User given description on why the suppression is enabled at this entity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Entity
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
@@ -1320,6 +1573,107 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New CondAlarmSuppression.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightCondAlarmSuppression")]
+    public class NewIntersightCondAlarmSuppression : NewCmdletBase
+    {
+        public NewIntersightCondAlarmSuppression()
+        {
+            ApiInstance = new CondApi(Config);
+            ModelObject = new CondAlarmSuppression();
+            MethodName = "CreateCondAlarmSuppressionWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"An array of relationships to condAlarmClassification resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CondAlarmClassificationRelationship> Classifications
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"User given description on why the suppression is enabled at this entity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MoBaseMoRelationship Entity
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CondAlarmSuppression.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCondAlarmSuppression")]
+    public class RemoveIntersightCondAlarmSuppression : RemoveCmdletBase
+    {
+        public RemoveIntersightCondAlarmSuppression()
+        {
+            ApiInstance = new CondApi(Config);
+            MethodName = "DeleteCondAlarmSuppressionWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CondAlarm.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightCondAlarm")]
@@ -1420,6 +1774,106 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
+        // <summary>
+        /// <para type="description">"Indicates whether the alarm is marked for suppression or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Suppressed
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set CondAlarmSuppression.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightCondAlarmSuppression")]
+    public class SetIntersightCondAlarmSuppression : SetCmdletBase
+    {
+        public SetIntersightCondAlarmSuppression()
+        {
+            ApiInstance = new CondApi(Config);
+            ModelObject = new CondAlarmSuppression();
+            MethodName = "UpdateCondAlarmSuppressionWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"An array of relationships to condAlarmClassification resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CondAlarmClassificationRelationship> Classifications
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"User given description on why the suppression is enabled at this entity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public MoBaseMoRelationship Entity
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
 
 
 

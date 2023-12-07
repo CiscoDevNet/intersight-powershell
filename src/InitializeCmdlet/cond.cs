@@ -101,6 +101,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Indicates whether the alarm is marked for suppression or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Suppressed
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -139,6 +149,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("RegisteredDevice"))
             {
                 initObject.RegisteredDevice = this.RegisteredDevice;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Suppressed"))
+            {
+                initObject.Suppressed = this.Suppressed;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -317,6 +331,160 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CondAlarmClassification.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCondAlarmClassification")]
+    public class InitializeIntersightCondAlarmClassification : PSCmdlet
+    {
+        public InitializeIntersightCondAlarmClassification()
+        {
+            ClassId = CondAlarmClassification.ClassIdEnum.CondAlarmClassification;
+            ObjectType = CondAlarmClassification.ObjectTypeEnum.CondAlarmClassification;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmClassification.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmClassification.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CondAlarmClassification initObject = new Intersight.Model.CondAlarmClassification();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CondAlarmClassificationEligibility.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCondAlarmClassificationEligibility")]
+    public class InitializeIntersightCondAlarmClassificationEligibility : PSCmdlet
+    {
+        public InitializeIntersightCondAlarmClassificationEligibility()
+        {
+            ClassId = CondAlarmClassificationEligibility.ClassIdEnum.CondAlarmClassificationEligibility;
+            ObjectType = CondAlarmClassificationEligibility.ObjectTypeEnum.CondAlarmClassificationEligibility;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmClassificationEligibility.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Intersight MO type on which a classification can be suppressed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string EntityType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmClassificationEligibility.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CondAlarmClassificationEligibility initObject = new Intersight.Model.CondAlarmClassificationEligibility();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EntityType"))
+            {
+                initObject.EntityType = this.EntityType;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CondAlarmDefinition.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCondAlarmDefinition")]
@@ -433,6 +601,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
+        public List<string> SystemClassifications
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
         public List<Model.MoTag> Tags
         {
             get;
@@ -475,6 +653,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Remediation"))
             {
                 initObject.Remediation = this.Remediation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SystemClassifications"))
+            {
+                initObject.SystemClassifications = this.SystemClassifications;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -607,6 +789,132 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CondAlarmSuppression.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCondAlarmSuppression")]
+    public class InitializeIntersightCondAlarmSuppression : PSCmdlet
+    {
+        public InitializeIntersightCondAlarmSuppression()
+        {
+            ClassId = CondAlarmSuppression.ClassIdEnum.CondAlarmSuppression;
+            ObjectType = CondAlarmSuppression.ObjectTypeEnum.CondAlarmSuppression;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmSuppression.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to condAlarmClassification resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.CondAlarmClassificationRelationship> Classifications
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User given description on why the suppression is enabled at this entity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.MoBaseMoRelationship Entity
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmSuppression.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CondAlarmSuppression initObject = new Intersight.Model.CondAlarmSuppression();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Classifications"))
+            {
+                initObject.Classifications = this.Classifications;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Entity"))
+            {
+                initObject.Entity = this.Entity;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
             WriteObject(initObject);
         }
 

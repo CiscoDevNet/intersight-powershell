@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAaaAuditRecord [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AaaAuditRecord.ClassIdEnum>][-Event< string>][-MoDisplayNames< object>][-MoType< string>][-Moid< string>][-ObjectMoid< string>][-ObjectType< AaaAuditRecord.ObjectTypeEnum>][-Request< object>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TraceId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAaaAuditRecord [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AaaAuditRecord.ClassIdEnum>][-Moid< string>][-ObjectType< AaaAuditRecord.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,70 +54,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Event
-The operation that was performed on this Managed Object.\nThe event is a compound string that includes the CRUD operation such as Create, Modify, Delete, and a string representing the Managed Object type.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MoDisplayNames
-The user-friendly names of the changed MO.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
-```yaml
-Type: object
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MoType
-The object type of the REST resource that was created, modified or deleted.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ObjectMoid
-The Moid of the REST resource that was created, modified or deleted.
 
 ```yaml
 Type: string
@@ -146,23 +84,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Request
-The body of the REST request that was received from a client to create or modify a REST resource, represented as a JSON document.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
-```yaml
-Type: object
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -170,21 +91,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TraceId
-The trace id of the request that was used to create, modify or delete a REST resource.\nA trace id is a unique identifier for one particular REST request. It may be used for troubleshooting purpose\nby the Intersight technical support team.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -253,5 +159,3 @@ PS C:\> Initialize-IntersightAaaAuditRecord
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
-
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)

@@ -774,6 +774,148 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CapabilityAdapterUpdateConstraintMeta.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterUpdateConstraintMeta", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCapabilityAdapterUpdateConstraintMeta : GetCmdletBase
+    {
+        public GetIntersightCapabilityAdapterUpdateConstraintMeta()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            MethodName = "GetCapabilityAdapterUpdateConstraintMetaListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Flag to indicate support for secure boot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsSecureBootSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Firmware version below which firmware update is not supported for this inventory unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string MinSupportedVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Model of the inventory unit which will be supported in firmware operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityAdapterUpgradeSupportMeta.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam")]
@@ -5764,6 +5906,148 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CapabilityStorageControllerUpdateConstraintMeta.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityStorageControllerUpdateConstraintMeta", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCapabilityStorageControllerUpdateConstraintMeta : GetCmdletBase
+    {
+        public GetIntersightCapabilityStorageControllerUpdateConstraintMeta()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            MethodName = "GetCapabilityStorageControllerUpdateConstraintMetaListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Flag to indicate support for secure boot."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsSecureBootSupported
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Firmware version below which firmware update is not supported for this inventory unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string MinSupportedVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Model of the inventory unit which will be supported in firmware operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
 
 
     }

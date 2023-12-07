@@ -1326,6 +1326,174 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkVethernet.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkVethernet")]
+    public class InitializeIntersightNetworkVethernet : PSCmdlet
+    {
+        public InitializeIntersightNetworkVethernet()
+        {
+            ClassId = NetworkVethernet.ClassIdEnum.NetworkVethernet;
+            ObjectType = NetworkVethernet.ObjectTypeEnum.NetworkVethernet;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkVethernet.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkVethernet.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NetworkVethernet initObject = new Intersight.Model.NetworkVethernet();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkVfc.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkVfc")]
+    public class InitializeIntersightNetworkVfc : PSCmdlet
+    {
+        public InitializeIntersightNetworkVfc()
+        {
+            ClassId = NetworkVfc.ClassIdEnum.NetworkVfc;
+            ObjectType = NetworkVfc.ObjectTypeEnum.NetworkVfc;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkVfc.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkVfc.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.NetworkVfc initObject = new Intersight.Model.NetworkVfc();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NetworkVlanPortInfo.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNetworkVlanPortInfo")]

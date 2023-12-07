@@ -657,6 +657,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"If true, represents a manual backup. Else represents a scheduled backup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsManual
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Indicates whether the value of the 'password' property has been set."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7204,6 +7215,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
