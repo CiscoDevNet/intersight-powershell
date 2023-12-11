@@ -752,6 +752,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Setting qinqEnabled to true if we have QinQ tagging enabled on the vNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool QinqEnabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The VLAN ID for VIC QinQ (802.1Q) Tunneling."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long QinqVlan
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -808,6 +828,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PinnedInterface"))
             {
                 initObject.PinnedInterface = this.PinnedInterface;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("QinqEnabled"))
+            {
+                initObject.QinqEnabled = this.QinqEnabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("QinqVlan"))
+            {
+                initObject.QinqVlan = this.QinqVlan;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

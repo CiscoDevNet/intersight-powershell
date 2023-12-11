@@ -200,16 +200,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Febric extender identifier for this port."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ModuleId
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -240,51 +230,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Peer DN for network host port of fabric extender."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string PeerDn
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.EtherPhysicalPortBaseRelationship PeerInterface
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Switch physical port identifier."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long PortId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Switch expansion slot module identifier."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long SlotId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Switch Identifier that is local to a cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SwitchId
         {
             get;
             set;
@@ -316,10 +266,6 @@ namespace Intersight.PowerShell
             {
                 initObject.EquipmentIoCardBase = this.EquipmentIoCardBase;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ModuleId"))
-            {
-                initObject.ModuleId = this.ModuleId;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -329,25 +275,9 @@ namespace Intersight.PowerShell
             {
                 initObject.OperState = this.OperState;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PeerDn"))
-            {
-                initObject.PeerDn = this.PeerDn;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("PeerInterface"))
             {
                 initObject.PeerInterface = this.PeerInterface;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PortId"))
-            {
-                initObject.PortId = this.PortId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
-            {
-                initObject.SlotId = this.SlotId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
-            {
-                initObject.SwitchId = this.SwitchId;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

@@ -470,6 +470,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Operational state of an Interface."</para>
         /// </summary>
@@ -1556,16 +1557,6 @@ namespace Intersight.PowerShell
         }
 
 
-        // <summary>
-        /// <para type="description">"Febric extender identifier for this port."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ModuleId
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -1577,6 +1568,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"Operational state of an Interface."</para>
@@ -1591,16 +1583,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"Peer DN for network host port of fabric extender."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string PeerDn
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -1614,42 +1596,12 @@ namespace Intersight.PowerShell
         }
 
 
-        // <summary>
-        /// <para type="description">"Switch physical port identifier."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long PortId
-        {
-            get;
-            set;
-        }
 
 
 
 
-        // <summary>
-        /// <para type="description">"Switch expansion slot module identifier."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long SlotId
-        {
-            get;
-            set;
-        }
 
 
-        // <summary>
-        /// <para type="description">"Switch Identifier that is local to a cluster."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SwitchId
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description"></para>

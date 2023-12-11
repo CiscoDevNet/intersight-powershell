@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightResourceMembership [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Reevaluate< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightResourceMembership [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Reevaluate< bool>][-Resource< MoBaseMoRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -58,6 +58,24 @@ Set Reevaluate to true to reevaluate the membership of a resource.
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Resource
+A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: MoBaseMoRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -147,3 +165,5 @@ PS C:\> Set-IntersightResourceMembership
 [Initialize-IntersightIamGroupPermissionToRoles](./Initialize-IntersightIamGroupPermissionToRoles.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightResourceMembership](./New-IntersightResourceMembership.md)

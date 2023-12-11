@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.14628
-- C# SDK version: 1.0.11.14628
+- Intersight.PowerShell version: 1.0.11.14828
+- C# SDK version: 1.0.11.14828
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.14628"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.14828"}
 ```
 or
 
@@ -1477,6 +1477,7 @@ HyperflexNodeConfigPolicy | [**Get-IntersightHyperflexNodeConfigPolicy**](docs/G
 HyperflexNodeProfile | [**Get-IntersightHyperflexNodeProfile**](docs/Get-IntersightHyperflexNodeProfile.md) | Read a 'HyperflexNodeProfile' resource.
 HyperflexProtectedCluster | [**Get-IntersightHyperflexProtectedCluster**](docs/Get-IntersightHyperflexProtectedCluster.md) | Read a 'HyperflexProtectedCluster' resource.
 HyperflexProxySettingPolicy | [**Get-IntersightHyperflexProxySettingPolicy**](docs/Get-IntersightHyperflexProxySettingPolicy.md) | Read a 'HyperflexProxySettingPolicy' resource.
+HyperflexReduceReSync | [**Get-IntersightHyperflexReduceReSync**](docs/Get-IntersightHyperflexReduceReSync.md) | Read a 'HyperflexReduceReSync' resource.
 HyperflexServerFirmwareVersion | [**Get-IntersightHyperflexServerFirmwareVersion**](docs/Get-IntersightHyperflexServerFirmwareVersion.md) | Read a 'HyperflexServerFirmwareVersion' resource.
 HyperflexServerFirmwareVersionEntry | [**Get-IntersightHyperflexServerFirmwareVersionEntry**](docs/Get-IntersightHyperflexServerFirmwareVersionEntry.md) | Read a 'HyperflexServerFirmwareVersionEntry' resource.
 HyperflexServerModel | [**Get-IntersightHyperflexServerModel**](docs/Get-IntersightHyperflexServerModel.md) | Read a 'HyperflexServerModel' resource.
@@ -1485,6 +1486,7 @@ HyperflexSoftwareDistributionComponent | [**Get-IntersightHyperflexSoftwareDistr
 HyperflexSoftwareDistributionEntry | [**Get-IntersightHyperflexSoftwareDistributionEntry**](docs/Get-IntersightHyperflexSoftwareDistributionEntry.md) | Read a 'HyperflexSoftwareDistributionEntry' resource.
 HyperflexSoftwareDistributionVersion | [**Get-IntersightHyperflexSoftwareDistributionVersion**](docs/Get-IntersightHyperflexSoftwareDistributionVersion.md) | Read a 'HyperflexSoftwareDistributionVersion' resource.
 HyperflexSoftwareVersionPolicy | [**Get-IntersightHyperflexSoftwareVersionPolicy**](docs/Get-IntersightHyperflexSoftwareVersionPolicy.md) | Read a 'HyperflexSoftwareVersionPolicy' resource.
+HyperflexStartReduceReSync | [**Get-IntersightHyperflexStartReduceReSync**](docs/Get-IntersightHyperflexStartReduceReSync.md) | Read a 'HyperflexStartReduceReSync' resource.
 HyperflexStorageContainer | [**Get-IntersightHyperflexStorageContainer**](docs/Get-IntersightHyperflexStorageContainer.md) | Read a 'HyperflexStorageContainer' resource.
 HyperflexSysConfigPolicy | [**Get-IntersightHyperflexSysConfigPolicy**](docs/Get-IntersightHyperflexSysConfigPolicy.md) | Read a 'HyperflexSysConfigPolicy' resource.
 HyperflexTarget | [**Get-IntersightHyperflexTarget**](docs/Get-IntersightHyperflexTarget.md) | Read a 'HyperflexTarget' resource.
@@ -1518,6 +1520,7 @@ HyperflexLocalCredentialPolicy | [**New-IntersightHyperflexLocalCredentialPolicy
 HyperflexNodeConfigPolicy | [**New-IntersightHyperflexNodeConfigPolicy**](docs/New-IntersightHyperflexNodeConfigPolicy.md) | Create a 'HyperflexNodeConfigPolicy' resource.
 HyperflexNodeProfile | [**New-IntersightHyperflexNodeProfile**](docs/New-IntersightHyperflexNodeProfile.md) | Create a 'HyperflexNodeProfile' resource.
 HyperflexProxySettingPolicy | [**New-IntersightHyperflexProxySettingPolicy**](docs/New-IntersightHyperflexProxySettingPolicy.md) | Create a 'HyperflexProxySettingPolicy' resource.
+HyperflexReduceReSync | [**New-IntersightHyperflexReduceReSync**](docs/New-IntersightHyperflexReduceReSync.md) | Create a 'HyperflexReduceReSync' resource.
 HyperflexServerFirmwareVersion | [**New-IntersightHyperflexServerFirmwareVersion**](docs/New-IntersightHyperflexServerFirmwareVersion.md) | Create a 'HyperflexServerFirmwareVersion' resource.
 HyperflexServerFirmwareVersionEntry | [**New-IntersightHyperflexServerFirmwareVersionEntry**](docs/New-IntersightHyperflexServerFirmwareVersionEntry.md) | Create a 'HyperflexServerFirmwareVersionEntry' resource.
 HyperflexServerModel | [**New-IntersightHyperflexServerModel**](docs/New-IntersightHyperflexServerModel.md) | Create a 'HyperflexServerModel' resource.
@@ -1526,6 +1529,7 @@ HyperflexSoftwareDistributionComponent | [**New-IntersightHyperflexSoftwareDistr
 HyperflexSoftwareDistributionEntry | [**New-IntersightHyperflexSoftwareDistributionEntry**](docs/New-IntersightHyperflexSoftwareDistributionEntry.md) | Create a 'HyperflexSoftwareDistributionEntry' resource.
 HyperflexSoftwareDistributionVersion | [**New-IntersightHyperflexSoftwareDistributionVersion**](docs/New-IntersightHyperflexSoftwareDistributionVersion.md) | Create a 'HyperflexSoftwareDistributionVersion' resource.
 HyperflexSoftwareVersionPolicy | [**New-IntersightHyperflexSoftwareVersionPolicy**](docs/New-IntersightHyperflexSoftwareVersionPolicy.md) | Create a 'HyperflexSoftwareVersionPolicy' resource.
+HyperflexStartReduceReSync | [**New-IntersightHyperflexStartReduceReSync**](docs/New-IntersightHyperflexStartReduceReSync.md) | Create a 'HyperflexStartReduceReSync' resource.
 HyperflexSysConfigPolicy | [**New-IntersightHyperflexSysConfigPolicy**](docs/New-IntersightHyperflexSysConfigPolicy.md) | Create a 'HyperflexSysConfigPolicy' resource.
 HyperflexUcsmConfigPolicy | [**New-IntersightHyperflexUcsmConfigPolicy**](docs/New-IntersightHyperflexUcsmConfigPolicy.md) | Create a 'HyperflexUcsmConfigPolicy' resource.
 HyperflexVcenterConfigPolicy | [**New-IntersightHyperflexVcenterConfigPolicy**](docs/New-IntersightHyperflexVcenterConfigPolicy.md) | Create a 'HyperflexVcenterConfigPolicy' resource.
@@ -1555,6 +1559,7 @@ HyperflexLocalCredentialPolicy | [**Remove-IntersightHyperflexLocalCredentialPol
 HyperflexNodeConfigPolicy | [**Remove-IntersightHyperflexNodeConfigPolicy**](docs/Remove-IntersightHyperflexNodeConfigPolicy.md) | Delete a 'HyperflexNodeConfigPolicy' resource.
 HyperflexNodeProfile | [**Remove-IntersightHyperflexNodeProfile**](docs/Remove-IntersightHyperflexNodeProfile.md) | Delete a 'HyperflexNodeProfile' resource.
 HyperflexProxySettingPolicy | [**Remove-IntersightHyperflexProxySettingPolicy**](docs/Remove-IntersightHyperflexProxySettingPolicy.md) | Delete a 'HyperflexProxySettingPolicy' resource.
+HyperflexReduceReSync | [**Remove-IntersightHyperflexReduceReSync**](docs/Remove-IntersightHyperflexReduceReSync.md) | Delete a 'HyperflexReduceReSync' resource.
 HyperflexServerFirmwareVersion | [**Remove-IntersightHyperflexServerFirmwareVersion**](docs/Remove-IntersightHyperflexServerFirmwareVersion.md) | Delete a 'HyperflexServerFirmwareVersion' resource.
 HyperflexServerFirmwareVersionEntry | [**Remove-IntersightHyperflexServerFirmwareVersionEntry**](docs/Remove-IntersightHyperflexServerFirmwareVersionEntry.md) | Delete a 'HyperflexServerFirmwareVersionEntry' resource.
 HyperflexServerModel | [**Remove-IntersightHyperflexServerModel**](docs/Remove-IntersightHyperflexServerModel.md) | Delete a 'HyperflexServerModel' resource.
@@ -1599,6 +1604,7 @@ HyperflexLun | [**Set-IntersightHyperflexLun**](docs/Set-IntersightHyperflexLun.
 HyperflexNodeConfigPolicy | [**Set-IntersightHyperflexNodeConfigPolicy**](docs/Set-IntersightHyperflexNodeConfigPolicy.md) | Update a 'HyperflexNodeConfigPolicy' resource.
 HyperflexNodeProfile | [**Set-IntersightHyperflexNodeProfile**](docs/Set-IntersightHyperflexNodeProfile.md) | Update a 'HyperflexNodeProfile' resource.
 HyperflexProxySettingPolicy | [**Set-IntersightHyperflexProxySettingPolicy**](docs/Set-IntersightHyperflexProxySettingPolicy.md) | Update a 'HyperflexProxySettingPolicy' resource.
+HyperflexReduceReSync | [**Set-IntersightHyperflexReduceReSync**](docs/Set-IntersightHyperflexReduceReSync.md) | Update a 'HyperflexReduceReSync' resource.
 HyperflexServerFirmwareVersion | [**Set-IntersightHyperflexServerFirmwareVersion**](docs/Set-IntersightHyperflexServerFirmwareVersion.md) | Update a 'HyperflexServerFirmwareVersion' resource.
 HyperflexServerFirmwareVersionEntry | [**Set-IntersightHyperflexServerFirmwareVersionEntry**](docs/Set-IntersightHyperflexServerFirmwareVersionEntry.md) | Update a 'HyperflexServerFirmwareVersionEntry' resource.
 HyperflexServerModel | [**Set-IntersightHyperflexServerModel**](docs/Set-IntersightHyperflexServerModel.md) | Update a 'HyperflexServerModel' resource.
@@ -2275,6 +2281,7 @@ ResourceReservation | [**Get-IntersightResourceReservation**](docs/Get-Intersigh
 ResourceSelectionCriteria | [**Get-IntersightResourceSelectionCriteria**](docs/Get-IntersightResourceSelectionCriteria.md) | Read a 'ResourceSelectionCriteria' resource.
 ResourceSharedResourcesInfoHolder | [**Get-IntersightResourceSharedResourcesInfoHolder**](docs/Get-IntersightResourceSharedResourcesInfoHolder.md) | Read a 'ResourceSharedResourcesInfoHolder' resource.
 ResourceGroup | [**New-IntersightResourceGroup**](docs/New-IntersightResourceGroup.md) | Create a 'ResourceGroup' resource.
+ResourceMembership | [**New-IntersightResourceMembership**](docs/New-IntersightResourceMembership.md) | Create a 'ResourceMembership' resource.
 ResourceReservation | [**New-IntersightResourceReservation**](docs/New-IntersightResourceReservation.md) | Create a 'ResourceReservation' resource.
 ResourceSelectionCriteria | [**New-IntersightResourceSelectionCriteria**](docs/New-IntersightResourceSelectionCriteria.md) | Create a 'ResourceSelectionCriteria' resource.
 ResourceGroup | [**Remove-IntersightResourceGroup**](docs/Remove-IntersightResourceGroup.md) | Delete a 'ResourceGroup' resource.

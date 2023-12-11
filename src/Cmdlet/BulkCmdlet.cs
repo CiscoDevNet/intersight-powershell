@@ -136,6 +136,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The permission identifier which indicates the permission that current user has that will allow to start this export operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PermissionId
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
@@ -170,6 +181,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The user identifier which indicates the user that started this export operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string UserId
+        {
+            get;
+            set;
+        }
 
 
 
@@ -314,7 +336,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Name of the service that owns the item MO."</para>
+        /// <para type="description">"Name of the target service that owns the item MO. Service responsible for handling exported item mo notifications."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1305,6 +1327,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -1315,6 +1338,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
     }
     /// <summary>
@@ -1924,6 +1948,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -1934,6 +1959,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
     }
 }

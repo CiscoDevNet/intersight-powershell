@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEtherNetworkPort [-AcknowledgedPeerInterface< Model.EtherPhysicalPortBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EtherNetworkPort.ClassIdEnum>][-EquipmentIoCardBase< Model.EquipmentIoCardBaseRelationship>][-ModuleId< long>][-Moid< string>][-ObjectType< EtherNetworkPort.ObjectTypeEnum>][-OperState< string>][-PeerDn< string>][-PeerInterface< Model.EtherPhysicalPortBaseRelationship>][-PortId< long>][-SlotId< long>][-SwitchId< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEtherNetworkPort [-AcknowledgedPeerInterface< Model.EtherPhysicalPortBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EtherNetworkPort.ClassIdEnum>][-EquipmentIoCardBase< Model.EquipmentIoCardBaseRelationship>][-Moid< string>][-ObjectType< EtherNetworkPort.ObjectTypeEnum>][-OperState< string>][-PeerInterface< Model.EtherPhysicalPortBaseRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -90,21 +90,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ModuleId
-Febric extender identifier for this port.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -150,21 +135,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PeerDn
-Peer DN for network host port of fabric extender.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -PeerInterface
 A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -173,51 +143,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.EtherPhysicalPortBaseRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortId
-Switch physical port identifier.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SlotId
-Switch expansion slot module identifier.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SwitchId
-Switch Identifier that is local to a cluster.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
