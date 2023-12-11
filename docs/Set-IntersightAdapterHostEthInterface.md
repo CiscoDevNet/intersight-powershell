@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightAdapterHostEthInterface [-AcknowledgedPeerInterface< EtherPhysicalPortBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-OperReason< System.Collections.Generic.List`1[AdapterHostEthInterface.OperReasonEnum]>][-OperState< string>][-PeerInterface< EtherPhysicalPortBaseRelationship>][-PinGroupName< string>][-PinnedInterface< InventoryInterfaceRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VethAction< AdapterHostEthInterface.VethActionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightAdapterHostEthInterface [-AcknowledgedPeerInterface< EtherPhysicalPortBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-OperReason< System.Collections.Generic.List`1[AdapterHostEthInterface.OperReasonEnum]>][-OperState< string>][-PeerInterface< EtherPhysicalPortBaseRelationship>][-PinGroupName< string>][-PinnedInterface< InventoryInterfaceRelationship>][-QinqEnabled< bool>][-QinqVlan< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VethAction< AdapterHostEthInterface.VethActionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -142,6 +142,36 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: InventoryInterfaceRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -QinqEnabled
+Setting qinqEnabled to true if we have QinQ tagging enabled on the vNIC.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -QinqVlan
+The VLAN ID for VIC QinQ (802.1Q) Tunneling.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

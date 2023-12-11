@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricPortOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< FabricPortOperation.AdminStateEnum>][-AggregatePortId< long>][-Moid< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricPortOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< FabricPortOperation.AdminActionEnum>][-AdminState< FabricPortOperation.AdminStateEnum>][-AggregatePortId< long>][-ConfigState< FabricPortOperation.ConfigStateEnum>][-FexId< long>][-Moid< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,21 @@ Create a &apos;FabricPortOperation&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AdminAction
+An operation that has to be perfomed on the switch or IOM port. Default value is None which means there will be no implicit port operation triggered.\n* `None` - No admin triggered action.\n* `ResetServerPortConfiguration` - Admin triggered operation to reset the server port to its original configuration.
+
+```yaml
+Type: FabricPortOperation.AdminActionEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -55,6 +70,36 @@ Accept wildcard characters: False
 
 ### -AggregatePortId
 Breakout port Identifier of the Switch Interface.\nWhen a port is not configured as a breakout port, the aggregatePortId is set to 0, and unused.\nWhen a port is configured as a breakout port, the &apos;aggregatePortId&apos; port number as labeled on the equipment,\ne.g. the id of the port on the switch.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ConfigState
+The configured state of these settings in the target chassis. The value is any one of Applied, Applying, Failed. Applied - This state denotes that the admin state changes are applied successfully in the target FI domain. Applying - This state denotes that the admin state changes are being applied in the target FI domain. Failed - This state denotes that the admin state changes could not be applied in the target FI domain.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.
+
+```yaml
+Type: FabricPortOperation.ConfigStateEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FexId
+FEX/IOM identifier to denote its Host ports in the format - FexId/SlotId/PortId.
 
 ```yaml
 Type: long

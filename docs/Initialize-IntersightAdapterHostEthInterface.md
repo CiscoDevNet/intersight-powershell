@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAdapterHostEthInterface [-AcknowledgedPeerInterface< Model.EtherPhysicalPortBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AdapterHostEthInterface.ClassIdEnum>][-Moid< string>][-ObjectType< AdapterHostEthInterface.ObjectTypeEnum>][-OperReason< System.Collections.Generic.List`1[AdapterHostEthInterface.OperReasonEnum]>][-OperState< string>][-PeerInterface< Model.EtherPhysicalPortBaseRelationship>][-PinGroupName< string>][-PinnedInterface< Model.InventoryInterfaceRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VethAction< AdapterHostEthInterface.VethActionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAdapterHostEthInterface [-AcknowledgedPeerInterface< Model.EtherPhysicalPortBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AdapterHostEthInterface.ClassIdEnum>][-Moid< string>][-ObjectType< AdapterHostEthInterface.ObjectTypeEnum>][-OperReason< System.Collections.Generic.List`1[AdapterHostEthInterface.OperReasonEnum]>][-OperState< string>][-PeerInterface< Model.EtherPhysicalPortBaseRelationship>][-PinGroupName< string>][-PinnedInterface< Model.InventoryInterfaceRelationship>][-QinqEnabled< bool>][-QinqVlan< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VethAction< AdapterHostEthInterface.VethActionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -173,6 +173,36 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.InventoryInterfaceRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -QinqEnabled
+Setting qinqEnabled to true if we have QinQ tagging enabled on the vNIC.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -QinqVlan
+The VLAN ID for VIC QinQ (802.1Q) Tunneling.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

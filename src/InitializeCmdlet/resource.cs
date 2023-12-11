@@ -407,6 +407,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.MoBaseMoRelationship Resource
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -433,6 +443,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Reevaluate"))
             {
                 initObject.Reevaluate = this.Reevaluate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Resource"))
+            {
+                initObject.Resource = this.Resource;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

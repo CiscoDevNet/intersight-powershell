@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssetTargetMoid
-The Target endpoint Moid which is used to fetch the previously persisted Target information in Intersight to create HTTP request along with any authentication info specifed.
+The Target endpoint Moid which is used to fetch the previously persisted Target information in Intersight to create HTTP request along with any authentication info specified.
 
 ```yaml
 Type: string

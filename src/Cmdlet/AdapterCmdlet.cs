@@ -318,6 +318,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Operational state of an Interface."</para>
         /// </summary>
@@ -732,6 +733,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public InventoryInterfaceRelationship PinnedInterface
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Setting qinqEnabled to true if we have QinQ tagging enabled on the vNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool QinqEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The VLAN ID for VIC QinQ (802.1Q) Tunneling."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long QinqVlan
         {
             get;
             set;
@@ -1834,6 +1857,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Operational state of an adapter unit."</para>
         /// </summary>
@@ -2619,6 +2643,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public InventoryInterfaceRelationship PinnedInterface
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Setting qinqEnabled to true if we have QinQ tagging enabled on the vNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool QinqEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The VLAN ID for VIC QinQ (802.1Q) Tunneling."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long QinqVlan
         {
             get;
             set;

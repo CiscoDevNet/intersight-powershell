@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEtherNetworkPort [-AcknowledgedPeerInterface< EtherPhysicalPortBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EquipmentIoCardBase< EquipmentIoCardBaseRelationship>][-ModuleId< long>][[-Moid]< string>][-OperState< string>][-PeerDn< string>][-PeerInterface< EtherPhysicalPortBaseRelationship>][-PortId< long>][-SlotId< long>][-SwitchId< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEtherNetworkPort [-AcknowledgedPeerInterface< EtherPhysicalPortBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EquipmentIoCardBase< EquipmentIoCardBaseRelationship>][[-Moid]< string>][-OperState< string>][-PeerInterface< EtherPhysicalPortBaseRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,21 +74,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ModuleId
-Febric extender identifier for this port.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -119,21 +104,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PeerDn
-Peer DN for network host port of fabric extender.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -PeerInterface
 A reference to a etherPhysicalPortBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -142,51 +112,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: EtherPhysicalPortBaseRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PortId
-Switch physical port identifier.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SlotId
-Switch expansion slot module identifier.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SwitchId
-Switch Identifier that is local to a cluster.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -272,5 +197,7 @@ PS C:\> Set-IntersightEtherNetworkPort
 ## RELATED LINKS
 
 [Get-IntersightEtherNetworkPort](./Get-IntersightEtherNetworkPort.md)
+
+[Initialize-IntersightEtherNetworkPort.OperReasonEnum](./Initialize-IntersightEtherNetworkPort.OperReasonEnum.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

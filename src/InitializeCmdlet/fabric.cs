@@ -4628,8 +4628,10 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFabricPortOperation()
         {
+            AdminAction = FabricPortOperation.AdminActionEnum.None;
             AdminState = FabricPortOperation.AdminStateEnum.Enabled;
             ClassId = FabricPortOperation.ClassIdEnum.FabricPortOperation;
+            ConfigState = FabricPortOperation.ConfigStateEnum.None;
             ObjectType = FabricPortOperation.ObjectTypeEnum.FabricPortOperation;
 
         }
@@ -4639,6 +4641,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An operation that has to be perfomed on the switch or IOM port. Default value is None which means there will be no implicit port operation triggered.\n* `None` - No admin triggered action.\n* `ResetServerPortConfiguration` - Admin triggered operation to reset the server port to its original configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricPortOperation.AdminActionEnum AdminAction
         {
             get;
             set;
@@ -4669,6 +4681,26 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FabricPortOperation.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The configured state of these settings in the target chassis. The value is any one of Applied, Applying, Failed. Applied - This state denotes that the admin state changes are applied successfully in the target FI domain. Applying - This state denotes that the admin state changes are being applied in the target FI domain. Failed - This state denotes that the admin state changes could not be applied in the target FI domain.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricPortOperation.ConfigStateEnum ConfigState
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"FEX/IOM identifier to denote its Host ports in the format - FexId/SlotId/PortId."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long FexId
         {
             get;
             set;
@@ -4741,6 +4773,10 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminAction"))
+            {
+                initObject.AdminAction = this.AdminAction;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdminState"))
             {
                 initObject.AdminState = this.AdminState;
@@ -4750,6 +4786,14 @@ namespace Intersight.PowerShell
                 initObject.AggregatePortId = this.AggregatePortId;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigState"))
+            {
+                initObject.ConfigState = this.ConfigState;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FexId"))
+            {
+                initObject.FexId = this.FexId;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
