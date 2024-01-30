@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightHyperflexStartReduceReSync [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-Operation< HyperflexStartReduceReSync.OperationEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightHyperflexStartReduceReSync [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterMoIds< System.Collections.Generic.List`1[string]>][-Moid< string>][-Operation< HyperflexStartReduceReSync.OperationEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,21 @@ Create a &apos;HyperflexStartReduceReSync&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClusterMoIds
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHyperflexStartReduceReSync [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexStartReduceReSync.ClassIdEnum>][-Moid< string>][-ObjectType< HyperflexStartReduceReSync.ObjectTypeEnum>][-Operation< HyperflexStartReduceReSync.OperationEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHyperflexStartReduceReSync [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HyperflexStartReduceReSync.ClassIdEnum>][-ClusterMoIds< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< HyperflexStartReduceReSync.ObjectTypeEnum>][-Operation< HyperflexStartReduceReSync.OperationEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: HyperflexStartReduceReSync.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClusterMoIds
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

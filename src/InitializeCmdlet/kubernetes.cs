@@ -7135,7 +7135,7 @@ namespace Intersight.PowerShell
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("OperatingSystem"))
             {
-                initObject.OperatingSystem = this.OperatingSystem;
+                initObject.VarOperatingSystem = this.OperatingSystem;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("OsImage"))
             {

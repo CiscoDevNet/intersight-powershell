@@ -2082,7 +2082,7 @@ namespace Intersight.PowerShell
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("OperatingSystem"))
             {
-                initObject.OperatingSystem = this.OperatingSystem;
+                initObject.VarOperatingSystem = this.OperatingSystem;
             }
             WriteObject(initObject);
         }
@@ -6093,7 +6093,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("TimeZone"))
             {
-                initObject.TimeZone = this.TimeZone;
+                initObject.VarTimeZone = this.TimeZone;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("UpTime"))
             {

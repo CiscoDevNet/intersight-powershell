@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentChassisOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedAction< EquipmentChassisOperation.AdminLocatorLedActionEnum>][-DeviceRegistration< AssetDeviceRegistrationRelationship>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentChassisOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedAction< EquipmentChassisOperation.AdminLocatorLedActionEnum>][-AdminPowerCycleSlotId< long>][-DeviceRegistration< AssetDeviceRegistrationRelationship>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,21 @@ User configured state of the locator LED for the Chassis.\n* `None` - No operati
 
 ```yaml
 Type: EquipmentChassisOperation.AdminLocatorLedActionEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AdminPowerCycleSlotId
+Slot id of the chassis slot that needs to be power cycled.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -161,5 +176,7 @@ PS C:\> Set-IntersightEquipmentChassisOperation
 ## RELATED LINKS
 
 [Get-IntersightEquipmentChassisOperation](./Get-IntersightEquipmentChassisOperation.md)
+
+[Initialize-IntersightEquipmentChassisOperationStatus](./Initialize-IntersightEquipmentChassisOperationStatus.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

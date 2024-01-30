@@ -678,7 +678,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting C1 Auto Demotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// <para type="description">"BIOS Token for setting C1 Auto Demotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring C1autoDemotion token.\n* `disabled` - Value - disabled for configuring C1autoDemotion token.\n* `enabled` - Value - enabled for configuring C1autoDemotion token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -689,7 +689,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting C1 Auto UnDemotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// <para type="description">"BIOS Token for setting C1 Auto UnDemotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring C1autoUnDemotion token.\n* `disabled` - Value - disabled for configuring C1autoUnDemotion token.\n* `enabled` - Value - enabled for configuring C1autoUnDemotion token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1409,6 +1409,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public BiosPolicy.EnableSgxEnum EnableSgx
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Trust Domain Extension  (TDX) configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.EnableTdxEnum EnableTdx
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting TDX Secure Arbitration Mode  (SEAM) Loader configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.EnableTdxSeamldrEnum EnableTdxSeamldr
         {
             get;
             set;
@@ -2749,7 +2771,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting UPI Link Frequency Select configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `10.4GT/s` - Value - 10.4GT/s for configuring QpiLinkSpeed token.\n* `11.2GT/s` - Value - 11.2GT/s for configuring QpiLinkSpeed token.\n* `12.8GT/s` - Value - 12.8GT/s for configuring QpiLinkSpeed token.\n* `14.4GT/s` - Value - 14.4GT/s for configuring QpiLinkSpeed token.\n* `16.0GT/s` - Value - 16.0GT/s for configuring QpiLinkSpeed token.\n* `9.6GT/s` - Value - 9.6GT/s for configuring QpiLinkSpeed token.\n* `Auto` - Value - Auto for configuring QpiLinkSpeed token."</para>
+        /// <para type="description">"BIOS Token for setting UPI Link Frequency Select configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `10.4GT/s` - Value - 10.4GT/s for configuring QpiLinkSpeed token.\n* `11.2GT/s` - Value - 11.2GT/s for configuring QpiLinkSpeed token.\n* `12.8GT/s` - Value - 12.8GT/s for configuring QpiLinkSpeed token.\n* `14.4GT/s` - Value - 14.4GT/s for configuring QpiLinkSpeed token.\n* `16.0GT/s` - Value - 16.0GT/s for configuring QpiLinkSpeed token.\n* `20.0GT/s` - Value - 20.0GT/s for configuring QpiLinkSpeed token.\n* `9.6GT/s` - Value - 9.6GT/s for configuring QpiLinkSpeed token.\n* `Auto` - Value - Auto for configuring QpiLinkSpeed token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2985,6 +3007,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public BiosPolicy.Sha256pcrBankEnum Sha256pcrBank
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting SHA384 PCR Bank configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.Sha384pcrBankEnum Sha384pcrBank
         {
             get;
             set;
@@ -6183,7 +6216,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting C1 Auto Demotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// <para type="description">"BIOS Token for setting C1 Auto Demotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring C1autoDemotion token.\n* `disabled` - Value - disabled for configuring C1autoDemotion token.\n* `enabled` - Value - enabled for configuring C1autoDemotion token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -6194,7 +6227,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting C1 Auto UnDemotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// <para type="description">"BIOS Token for setting C1 Auto UnDemotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring C1autoUnDemotion token.\n* `disabled` - Value - disabled for configuring C1autoUnDemotion token.\n* `enabled` - Value - enabled for configuring C1autoUnDemotion token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -6894,6 +6927,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.EnableSgxEnum EnableSgx
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Trust Domain Extension  (TDX) configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.EnableTdxEnum EnableTdx
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting TDX Secure Arbitration Mode  (SEAM) Loader configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.EnableTdxSeamldrEnum EnableTdxSeamldr
         {
             get;
             set;
@@ -8224,7 +8279,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting UPI Link Frequency Select configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `10.4GT/s` - Value - 10.4GT/s for configuring QpiLinkSpeed token.\n* `11.2GT/s` - Value - 11.2GT/s for configuring QpiLinkSpeed token.\n* `12.8GT/s` - Value - 12.8GT/s for configuring QpiLinkSpeed token.\n* `14.4GT/s` - Value - 14.4GT/s for configuring QpiLinkSpeed token.\n* `16.0GT/s` - Value - 16.0GT/s for configuring QpiLinkSpeed token.\n* `9.6GT/s` - Value - 9.6GT/s for configuring QpiLinkSpeed token.\n* `Auto` - Value - Auto for configuring QpiLinkSpeed token."</para>
+        /// <para type="description">"BIOS Token for setting UPI Link Frequency Select configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `10.4GT/s` - Value - 10.4GT/s for configuring QpiLinkSpeed token.\n* `11.2GT/s` - Value - 11.2GT/s for configuring QpiLinkSpeed token.\n* `12.8GT/s` - Value - 12.8GT/s for configuring QpiLinkSpeed token.\n* `14.4GT/s` - Value - 14.4GT/s for configuring QpiLinkSpeed token.\n* `16.0GT/s` - Value - 16.0GT/s for configuring QpiLinkSpeed token.\n* `20.0GT/s` - Value - 20.0GT/s for configuring QpiLinkSpeed token.\n* `9.6GT/s` - Value - 9.6GT/s for configuring QpiLinkSpeed token.\n* `Auto` - Value - Auto for configuring QpiLinkSpeed token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -8460,6 +8515,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.Sha256pcrBankEnum Sha256pcrBank
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting SHA384 PCR Bank configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.Sha384pcrBankEnum Sha384pcrBank
         {
             get;
             set;
@@ -10921,7 +10987,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting C1 Auto Demotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// <para type="description">"BIOS Token for setting C1 Auto Demotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring C1autoDemotion token.\n* `disabled` - Value - disabled for configuring C1autoDemotion token.\n* `enabled` - Value - enabled for configuring C1autoDemotion token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -10932,7 +10998,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting C1 Auto UnDemotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// <para type="description">"BIOS Token for setting C1 Auto UnDemotion configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring C1autoUnDemotion token.\n* `disabled` - Value - disabled for configuring C1autoUnDemotion token.\n* `enabled` - Value - enabled for configuring C1autoUnDemotion token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11632,6 +11698,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.EnableSgxEnum EnableSgx
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Trust Domain Extension  (TDX) configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.EnableTdxEnum EnableTdx
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting TDX Secure Arbitration Mode  (SEAM) Loader configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.EnableTdxSeamldrEnum EnableTdxSeamldr
         {
             get;
             set;
@@ -12962,7 +13050,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting UPI Link Frequency Select configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `10.4GT/s` - Value - 10.4GT/s for configuring QpiLinkSpeed token.\n* `11.2GT/s` - Value - 11.2GT/s for configuring QpiLinkSpeed token.\n* `12.8GT/s` - Value - 12.8GT/s for configuring QpiLinkSpeed token.\n* `14.4GT/s` - Value - 14.4GT/s for configuring QpiLinkSpeed token.\n* `16.0GT/s` - Value - 16.0GT/s for configuring QpiLinkSpeed token.\n* `9.6GT/s` - Value - 9.6GT/s for configuring QpiLinkSpeed token.\n* `Auto` - Value - Auto for configuring QpiLinkSpeed token."</para>
+        /// <para type="description">"BIOS Token for setting UPI Link Frequency Select configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `10.4GT/s` - Value - 10.4GT/s for configuring QpiLinkSpeed token.\n* `11.2GT/s` - Value - 11.2GT/s for configuring QpiLinkSpeed token.\n* `12.8GT/s` - Value - 12.8GT/s for configuring QpiLinkSpeed token.\n* `14.4GT/s` - Value - 14.4GT/s for configuring QpiLinkSpeed token.\n* `16.0GT/s` - Value - 16.0GT/s for configuring QpiLinkSpeed token.\n* `20.0GT/s` - Value - 20.0GT/s for configuring QpiLinkSpeed token.\n* `9.6GT/s` - Value - 9.6GT/s for configuring QpiLinkSpeed token.\n* `Auto` - Value - Auto for configuring QpiLinkSpeed token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -13198,6 +13286,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.Sha256pcrBankEnum Sha256pcrBank
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting SHA384 PCR Bank configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.Sha384pcrBankEnum Sha384pcrBank
         {
             get;
             set;

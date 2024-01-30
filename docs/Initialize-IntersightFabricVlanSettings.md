@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -QinqVlan
-Select the VLAN ID for VIC QinQ (802.1Q) Tunneling.
+Select the VLAN ID for VIC QinQ (802.1Q-in-802.1Q) Tunneling.
 
 ```yaml
 Type: long

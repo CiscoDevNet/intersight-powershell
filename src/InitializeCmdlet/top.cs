@@ -127,7 +127,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("TimeZone"))
             {
-                initObject.TimeZone = this.TimeZone;
+                initObject.VarTimeZone = this.TimeZone;
             }
             WriteObject(initObject);
         }

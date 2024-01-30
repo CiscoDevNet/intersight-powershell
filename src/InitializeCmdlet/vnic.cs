@@ -914,6 +914,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Single Root Input Output Virtualization (SR-IOV) Settings that enable one physical ethernet socket to appear as multiple NICs to the hypervisor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicSriovSettings SriovSettings
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The MAC address must be in hexadecimal format xx:xx:xx:xx:xx:xx.\nTo ensure uniqueness of MACs in the LAN fabric, you are strongly encouraged to use the\nfollowing MAC prefix 00:25:B5:xx:xx:xx."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1038,6 +1048,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Profile"))
             {
                 initObject.Profile = this.Profile;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SriovSettings"))
+            {
+                initObject.SriovSettings = this.SriovSettings;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("StaticMacAddress"))
             {
@@ -6765,6 +6779,146 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicSriovSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicSriovSettings")]
+    public class InitializeIntersightVnicSriovSettings : PSCmdlet
+    {
+        public InitializeIntersightVnicSriovSettings()
+        {
+            ClassId = VnicSriovSettings.ClassIdEnum.VnicSriovSettings;
+            ObjectType = VnicSriovSettings.ObjectTypeEnum.VnicSriovSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicSriovSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Completion Queue resources per Virtual Function (VF)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 16)]
+        public long CompCountPerVf
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If enabled, sets Single Root Input Output Virtualization (SR-IOV) on this vNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Interrupt Count resources per Virtual Function (VF)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 16)]
+        public long IntCountPerVf
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicSriovSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Receive Queue resources per Virtual Function (VF)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 8)]
+        public long RxCountPerVf
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Transmit Queue resources per Virtual Function (VF)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 8)]
+        public long TxCountPerVf
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of Virtual Functions (VF) to be created for this vNIC. Valid values are 1 to 64 when SR-IOV is enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 64)]
+        public long VfCount
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicSriovSettings initObject = new Intersight.Model.VnicSriovSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CompCountPerVf"))
+            {
+                initObject.CompCountPerVf = this.CompCountPerVf;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IntCountPerVf"))
+            {
+                initObject.IntCountPerVf = this.IntCountPerVf;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RxCountPerVf"))
+            {
+                initObject.RxCountPerVf = this.RxCountPerVf;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TxCountPerVf"))
+            {
+                initObject.TxCountPerVf = this.TxCountPerVf;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VfCount"))
+            {
+                initObject.VfCount = this.VfCount;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize VnicTcpOffloadSettings.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightVnicTcpOffloadSettings")]
@@ -7157,7 +7311,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"When activating VIC QinQ (802.1Q) Tunneling, a particular VLAN ID is set. In Access VLAN mode, this QinQ VLAN ID is established as the default VLAN."</para>
+        /// <para type="description">"When activating VIC QinQ (802.1Q-in-802.1Q) Tunneling, a particular VLAN ID is set. In Access VLAN mode, this QinQ VLAN ID is established as the default VLAN."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(2, 4093)]

@@ -73,7 +73,7 @@ namespace Intersight.PowerShell
         {
             ClassId = OnpremSchedule.ClassIdEnum.OnpremSchedule;
             ObjectType = OnpremSchedule.ObjectTypeEnum.OnpremSchedule;
-            TimeZone = OnpremSchedule.TimeZoneEnum.PacificNiue;
+            TimeZone = OnpremSchedule.VarTimeZoneEnum.PacificNiue;
 
         }
         // <summary>
@@ -161,7 +161,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public OnpremSchedule.TimeZoneEnum TimeZone
+        public OnpremSchedule.VarTimeZoneEnum TimeZone
         {
             get;
             set;
@@ -208,7 +208,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("TimeZone"))
             {
-                initObject.TimeZone = this.TimeZone;
+                initObject.VarTimeZone = this.TimeZone;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("WeekOfMonth"))
             {

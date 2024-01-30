@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< VnicCdn>][-EthAdapterPolicy< VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< VnicEthNetworkPolicyRelationship>][-EthQosPolicy< VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IpLease< IppoolIpLeaseRelationship>][-IscsiBootPolicy< VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< MacpoolLeaseRelationship>][-MacPool< MacpoolPoolRelationship>][-Moid< string>][[-Name]< string>][-Order< long>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UsnicSettings< VnicUsnicSettings>][-VmqSettings< VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< VnicCdn>][-EthAdapterPolicy< VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< VnicEthNetworkPolicyRelationship>][-EthQosPolicy< VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IpLease< IppoolIpLeaseRelationship>][-IscsiBootPolicy< VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< MacpoolLeaseRelationship>][-MacPool< MacpoolPoolRelationship>][-Moid< string>][[-Name]< string>][-Order< long>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SriovSettings< VnicSriovSettings>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UsnicSettings< VnicUsnicSettings>][-VmqSettings< VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -360,6 +360,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SriovSettings
+Single Root Input Output Virtualization (SR-IOV) Settings that enable one physical ethernet socket to appear as multiple NICs to the hypervisor.
+
+Note :- Use Initialize-IntersightVnicSriovSettings to create the object of complex type VnicSriovSettings
+
+```yaml
+Type: VnicSriovSettings
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -StaticMacAddress
 The MAC address must be in hexadecimal format xx:xx:xx:xx:xx:xx.\nTo ensure uniqueness of MACs in the LAN fabric, you are strongly encouraged to use the\nfollowing MAC prefix 00:25:B5:xx:xx:xx.
 
@@ -492,6 +509,8 @@ PS C:\> New-IntersightVnicEthIf
 [Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
+
+[Initialize-IntersightVnicSriovSettings](./Initialize-IntersightVnicSriovSettings.md)
 
 [Initialize-IntersightVnicUsnicSettings](./Initialize-IntersightVnicUsnicSettings.md)
 
