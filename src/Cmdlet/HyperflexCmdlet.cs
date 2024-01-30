@@ -11316,6 +11316,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
@@ -17998,6 +17999,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> ClusterMoIds
+        {
+            get;
+            set;
+        }
 
 
 

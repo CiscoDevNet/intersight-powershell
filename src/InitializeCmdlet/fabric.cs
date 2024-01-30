@@ -7303,7 +7303,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Select the VLAN ID for VIC QinQ (802.1Q) Tunneling."</para>
+        /// <para type="description">"Select the VLAN ID for VIC QinQ (802.1Q-in-802.1Q) Tunneling."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(2, 4093)]

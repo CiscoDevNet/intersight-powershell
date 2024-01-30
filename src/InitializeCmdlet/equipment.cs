@@ -434,6 +434,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Slot id of the chassis slot that needs to be power cycled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long AdminPowerCycleSlotId
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -495,6 +505,10 @@ namespace Intersight.PowerShell
             {
                 initObject.AdminLocatorLedAction = this.AdminLocatorLedAction;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminPowerCycleSlotId"))
+            {
+                initObject.AdminPowerCycleSlotId = this.AdminPowerCycleSlotId;
+            }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("DeviceRegistration"))
             {
@@ -509,6 +523,62 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize EquipmentChassisOperationStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightEquipmentChassisOperationStatus")]
+    public class InitializeIntersightEquipmentChassisOperationStatus : PSCmdlet
+    {
+        public InitializeIntersightEquipmentChassisOperationStatus()
+        {
+            ClassId = EquipmentChassisOperationStatus.ClassIdEnum.EquipmentChassisOperationStatus;
+            ObjectType = EquipmentChassisOperationStatus.ObjectTypeEnum.EquipmentChassisOperationStatus;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentChassisOperationStatus.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentChassisOperationStatus.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.EquipmentChassisOperationStatus initObject = new Intersight.Model.EquipmentChassisOperationStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

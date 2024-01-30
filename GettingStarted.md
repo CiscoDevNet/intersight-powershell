@@ -61,7 +61,8 @@ To expore the other supported cmdlet parameter like ```KeyPassPhrase```, ```Prox
 <a name = "Authenticate"></a>
 
 ### Authenticate the user
-Intersight.PowerShell supports only HttpSigning Auth.
+Intersight.PowerShell supports only HttpSigning Auth. The API key can be supplied through either a file path or as a string.
+#### Provide API Key file path.
 ```powershell
 $onprem = @{
     BasePath = "https://intersight.com"
@@ -84,7 +85,30 @@ HttpSigningHeader       : {(request-target), Host, Date, Digest}
 SignatureValidityPeriod : 0
 
 ```
+#### Provide API Key as string
 
+```powershell
+$onprem = @{
+    BasePath = "https://intersight.com"
+    ApiKeyId = "xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx"
+    ApiKeyString = "-----BEGIN RSA PRIVATE KEY-----XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----END RSA PRIVATE KEY-----" 
+    HttpSigningHeader =  @("(request-target)", "Host", "Date", "Digest")
+}
+
+PS C:\> Set-IntersightConfiguration @onprem
+
+PS C:\> Get-IntersightConfiguration
+
+BasePath                : https://intersight.com
+ApiKeyId                : xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx
+ApiKeyFilePath          : C:\\secrectKey.txt
+ApiKeyPassPhrase        :
+Proxy                   :
+HashAlgorithm           : SHA256
+HttpSigningHeader       : {(request-target), Host, Date, Digest}
+SignatureValidityPeriod : 0
+
+```
 
 ---
 

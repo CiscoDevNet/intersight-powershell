@@ -4574,7 +4574,7 @@ namespace Intersight.PowerShell
         {
             ClassId = ApplianceSystemInfo.ClassIdEnum.ApplianceSystemInfo;
             ObjectType = ApplianceSystemInfo.ObjectTypeEnum.ApplianceSystemInfo;
-            TimeZone = ApplianceSystemInfo.TimeZoneEnum.PacificNiue;
+            TimeZone = ApplianceSystemInfo.VarTimeZoneEnum.PacificNiue;
 
         }
         // <summary>
@@ -4632,7 +4632,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public ApplianceSystemInfo.TimeZoneEnum TimeZone
+        public ApplianceSystemInfo.VarTimeZoneEnum TimeZone
         {
             get;
             set;
@@ -4657,7 +4657,7 @@ namespace Intersight.PowerShell
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("TimeZone"))
             {
-                initObject.TimeZone = this.TimeZone;
+                initObject.VarTimeZone = this.TimeZone;
             }
             WriteObject(initObject);
         }

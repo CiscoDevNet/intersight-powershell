@@ -6280,7 +6280,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public ApplianceSystemInfo.TimeZoneEnum TimeZone
+        public ApplianceSystemInfo.VarTimeZoneEnum TimeZone
         {
             get;
             set;
