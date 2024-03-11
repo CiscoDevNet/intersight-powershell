@@ -624,6 +624,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"The flag to check vulnerability with secure boot technology."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool FpgaUpgradeNeeded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The IP address of the network Element inband management interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1424,6 +1435,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string FirmwareVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The flag to check vulnerability with secure boot technology."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool FpgaUpgradeNeeded
         {
             get;
             set;
@@ -5058,6 +5080,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

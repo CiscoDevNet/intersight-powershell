@@ -472,6 +472,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Enables subnet configuration at the block level."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EnableBlockLevelSubnetConfig
+        {
+            get;
+            set;
+        }
+
 
 
 
@@ -1624,6 +1635,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Enables subnet configuration at the block level."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableBlockLevelSubnetConfig
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1950,6 +1972,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Enables subnet configuration at the block level."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableBlockLevelSubnetConfig
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description"></para>

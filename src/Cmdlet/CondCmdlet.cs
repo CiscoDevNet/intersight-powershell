@@ -1010,6 +1010,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The time at which the last HCL validation occurred."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime HclValidationTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The current CIMC version for the server as received from inventory. It is empty if we are missing this information."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]

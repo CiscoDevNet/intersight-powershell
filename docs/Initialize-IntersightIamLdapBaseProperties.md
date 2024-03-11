@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamLdapBaseProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Attribute< string>][-BaseDn< string>][-BindDn< string>][-BindMethod< IamLdapBaseProperties.BindMethodEnum>][-ClassId< IamLdapBaseProperties.ClassIdEnum>][-Domain< string>][-EnableEncryption< bool>][-EnableGroupAuthorization< bool>][-Filter< string>][-GroupAttribute< string>][-NestedGroupSearchDepth< long>][-ObjectType< IamLdapBaseProperties.ObjectTypeEnum>][-Password< string>][-Timeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamLdapBaseProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Attribute< string>][-BaseDn< string>][-BindDn< string>][-BindMethod< IamLdapBaseProperties.BindMethodEnum>][-ClassId< IamLdapBaseProperties.ClassIdEnum>][-Domain< string>][-EnableEncryption< bool>][-EnableGroupAuthorization< bool>][-EnableNestedGroupSearch< bool>][-Filter< string>][-GroupAttribute< string>][-NestedGroupSearchDepth< long>][-ObjectType< IamLdapBaseProperties.ObjectTypeEnum>][-Password< string>][-Timeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -146,6 +146,21 @@ Accept wildcard characters: False
 
 ### -EnableGroupAuthorization
 If enabled, user authorization is also done at the group level for LDAP users not in the local user database.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableNestedGroupSearch
+If enabled, an extended search walks the chain of ancestry all the way to the root and returns all the groups and subgroups, each of those groups belong to recursively.
 
 ```yaml
 Type: bool

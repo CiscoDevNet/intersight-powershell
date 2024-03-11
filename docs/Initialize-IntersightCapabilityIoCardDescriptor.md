@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCapabilityIoCardDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[Model.CapabilityCapabilityRelationship]>][-ClassId< CapabilityIoCardDescriptor.ClassIdEnum>][-Description< string>][-Model< string>][-Moid< string>][-NativeHifPortChannelRequired< bool>][-NativeSpeedMasterPortNum< long>][-NumHifPorts< long>][-ObjectType< CapabilityIoCardDescriptor.ObjectTypeEnum>][-Revision< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UifConnectivity< CapabilityIoCardDescriptor.UifConnectivityEnum>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCapabilityIoCardDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BifPortNum< long>][-Capabilities< System.Collections.Generic.List`1[Model.CapabilityCapabilityRelationship]>][-ClassId< CapabilityIoCardDescriptor.ClassIdEnum>][-Description< string>][-IsUcsxDirectIoCard< bool>][-Model< string>][-Moid< string>][-NativeHifPortChannelRequired< bool>][-NativeSpeedMasterPortNum< long>][-NumHifPorts< long>][-ObjectType< CapabilityIoCardDescriptor.ObjectTypeEnum>][-Revision< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UifConnectivity< CapabilityIoCardDescriptor.UifConnectivityEnum>][-UnsupportedPolicies< System.Collections.Generic.List`1[string]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,21 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -BifPortNum
+Identifies the bif port number for the iocard module.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -87,6 +102,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -IsUcsxDirectIoCard
+Identifies whether the iocard module is a part of the UCSX Direct chassis.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Model
 The model of the endpoint, for which this capability information is applicable.
 
@@ -133,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -NativeSpeedMasterPortNum
-Master port number for native speed configuration for the iocard module.
+Primary port number for native speed configuration for the iocard module.
 
 ```yaml
 Type: long
@@ -214,6 +244,21 @@ Connectivity information between UIF Uplink ports and IOM ports.\n* `inline` - U
 
 ```yaml
 Type: CapabilityIoCardDescriptor.UifConnectivityEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UnsupportedPolicies
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

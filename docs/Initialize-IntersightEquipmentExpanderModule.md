@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentExpanderModule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EquipmentExpanderModule.ClassIdEnum>][-EquipmentChassis< Model.EquipmentChassisRelationship>][-FanModules< System.Collections.Generic.List`1[Model.EquipmentFanModuleRelationship]>][-Moid< string>][-ObjectType< EquipmentExpanderModule.ObjectTypeEnum>][-PartNumber< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentExpanderModule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EquipmentExpanderModule.ClassIdEnum>][-FanModules< System.Collections.Generic.List`1[Model.EquipmentFanModuleRelationship]>][-Moid< string>][-ObjectType< EquipmentExpanderModule.ObjectTypeEnum>][-PartNumber< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,24 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: EquipmentExpanderModule.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EquipmentChassis
-A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentChassisRelationship
 Parameter Sets: (All)
 Aliases:
 

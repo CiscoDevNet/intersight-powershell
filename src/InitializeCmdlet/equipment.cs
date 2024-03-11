@@ -50,46 +50,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An array of relationships to equipmentExpanderModule resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.EquipmentExpanderModuleRelationship> ExpanderModules
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFanControl resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.EquipmentFanControlRelationship FanControl
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"This field summarizes the faults on the chassis enclosure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long FaultSummary
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a managementInterface resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.ManagementInterfaceRelationship ManagementInterface
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -110,41 +70,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The platform type that the chassis is a part of."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string PlatformType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a powerControlState resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.PowerControlStateRelationship PowerControlState
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.MoTag> Tags
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to storageVirtualDriveContainer resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.StorageVirtualDriveContainerRelationship> VirtualDriveContainer
         {
             get;
             set;
@@ -162,42 +92,14 @@ namespace Intersight.PowerShell
                 initObject.AlarmSummary = this.AlarmSummary;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("ExpanderModules"))
-            {
-                initObject.ExpanderModules = this.ExpanderModules;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FanControl"))
-            {
-                initObject.FanControl = this.FanControl;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("FaultSummary"))
-            {
-                initObject.FaultSummary = this.FaultSummary;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ManagementInterface"))
-            {
-                initObject.ManagementInterface = this.ManagementInterface;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PlatformType"))
-            {
-                initObject.PlatformType = this.PlatformType;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("PowerControlState"))
-            {
-                initObject.PowerControlState = this.PowerControlState;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("VirtualDriveContainer"))
-            {
-                initObject.VirtualDriveContainer = this.VirtualDriveContainer;
             }
             WriteObject(initObject);
         }
@@ -784,16 +686,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.EquipmentChassisRelationship EquipmentChassis
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"An array of relationships to equipmentFanModule resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -852,10 +744,6 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EquipmentChassis"))
-            {
-                initObject.EquipmentChassis = this.EquipmentChassis;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("FanModules"))
             {
                 initObject.FanModules = this.FanModules;
@@ -994,16 +882,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.EquipmentChassisRelationship EquipmentChassis
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1042,10 +920,6 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("EquipmentChassis"))
-            {
-                initObject.EquipmentChassis = this.EquipmentChassis;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -1693,6 +1567,90 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize EquipmentHybridDriveSlot.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightEquipmentHybridDriveSlot")]
+    public class InitializeIntersightEquipmentHybridDriveSlot : PSCmdlet
+    {
+        public InitializeIntersightEquipmentHybridDriveSlot()
+        {
+            ClassId = EquipmentHybridDriveSlot.ClassIdEnum.EquipmentHybridDriveSlot;
+            ObjectType = EquipmentHybridDriveSlot.ObjectTypeEnum.EquipmentHybridDriveSlot;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentHybridDriveSlot.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentHybridDriveSlot.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.EquipmentHybridDriveSlot initObject = new Intersight.Model.EquipmentHybridDriveSlot();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize EquipmentIoCard.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightEquipmentIoCard")]
@@ -1938,6 +1896,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightEquipmentIoCardOperation()
         {
+            AdminPeerPowerState = EquipmentIoCardOperation.AdminPeerPowerStateEnum.None;
             AdminPowerState = EquipmentIoCardOperation.AdminPowerStateEnum.None;
             ClassId = EquipmentIoCardOperation.ClassIdEnum.EquipmentIoCardOperation;
             ObjectType = EquipmentIoCardOperation.ObjectTypeEnum.EquipmentIoCardOperation;
@@ -1954,7 +1913,17 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"User configured power state of the iomodule.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value."</para>
+        /// <para type="description">"User configured power state of the peer IO module.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentIoCardOperation.AdminPeerPowerStateEnum AdminPeerPowerState
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User configured power state of the IO module.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -2021,6 +1990,10 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminPeerPowerState"))
+            {
+                initObject.AdminPeerPowerState = this.AdminPeerPowerState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdminPowerState"))
             {
                 initObject.AdminPowerState = this.AdminPowerState;
@@ -2039,6 +2012,62 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize EquipmentIoCardOperationStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightEquipmentIoCardOperationStatus")]
+    public class InitializeIntersightEquipmentIoCardOperationStatus : PSCmdlet
+    {
+        public InitializeIntersightEquipmentIoCardOperationStatus()
+        {
+            ClassId = EquipmentIoCardOperationStatus.ClassIdEnum.EquipmentIoCardOperationStatus;
+            ObjectType = EquipmentIoCardOperationStatus.ObjectTypeEnum.EquipmentIoCardOperationStatus;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentIoCardOperationStatus.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentIoCardOperationStatus.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.EquipmentIoCardOperationStatus initObject = new Intersight.Model.EquipmentIoCardOperationStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

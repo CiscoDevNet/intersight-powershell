@@ -75,4 +75,72 @@ namespace Intersight.PowerShell
         }
 
     }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set FeedbackFeedbackPost.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightFeedbackFeedbackPost")]
+    public class SetIntersightFeedbackFeedbackPost : SetCmdletBase
+    {
+        public SetIntersightFeedbackFeedbackPost()
+        {
+            ApiInstance = new FeedbackApi(Config);
+            ModelObject = new FeedbackFeedbackPost();
+            MethodName = "UpdateFeedbackFeedbackPostWithHttpInfo";
+        }
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Feedback collected from the user and latest activity."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FeedbackFeedbackData FeedbackData
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
 }

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightStoragePhysicalDiskExtension [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Health< string>][[-Moid]< string>][-PhysicalDisk< StoragePhysicalDiskRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightStoragePhysicalDiskExtension [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-PhysicalDisk< StoragePhysicalDiskRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,21 +28,6 @@ Update a &apos;StoragePhysicalDiskExtension&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Health
-The current drive state of disk.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

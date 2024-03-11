@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIppoolIpV4Block [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IppoolIpV4Block.ClassIdEnum>][-From< string>][-ObjectType< IppoolIpV4Block.ObjectTypeEnum>][-Size< long>][-To< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIppoolIpV4Block [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IppoolIpV4Block.ClassIdEnum>][-From< string>][-IpV4Config< Model.IppoolIpV4Config>][-ObjectType< IppoolIpV4Block.ObjectTypeEnum>][-Size< long>][-To< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,23 @@ First IPv4 address of the block.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IpV4Config
+Netmask, Gateway and DNS settings for IPv4 addresses.
+
+Note :- Use Initialize-IntersightIppoolIpV4Config to create the object of complex type IppoolIpV4Config
+
+```yaml
+Type: Model.IppoolIpV4Config
 Parameter Sets: (All)
 Aliases:
 
@@ -170,3 +187,5 @@ PS C:\> Initialize-IntersightIppoolIpV4Block
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightIppoolIpV4Config](./Initialize-IntersightIppoolIpV4Config.md)

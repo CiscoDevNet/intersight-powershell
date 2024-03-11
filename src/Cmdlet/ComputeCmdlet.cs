@@ -270,6 +270,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -1179,6 +1180,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -1351,6 +1353,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -2233,6 +2236,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"The package version of the Host Service Utility (HSU) for this server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PackageVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -2708,6 +2722,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -4567,6 +4582,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -4917,6 +4933,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -4927,6 +4944,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -5375,6 +5393,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

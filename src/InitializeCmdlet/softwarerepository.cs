@@ -1088,6 +1088,132 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryCategoryUnsupportedModels.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryCategoryUnsupportedModels")]
+    public class InitializeIntersightSoftwarerepositoryCategoryUnsupportedModels : PSCmdlet
+    {
+        public InitializeIntersightSoftwarerepositoryCategoryUnsupportedModels()
+        {
+            ClassId = SoftwarerepositoryCategoryUnsupportedModels.ClassIdEnum.SoftwarerepositoryCategoryUnsupportedModels;
+            ObjectType = SoftwarerepositoryCategoryUnsupportedModels.ObjectTypeEnum.SoftwarerepositoryCategoryUnsupportedModels;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwarerepositoryCategoryUnsupportedModels.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Cisco software repository image category identifier."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MdfId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.SoftwarerepositoryUnsupportedModelConstraint> ModelConstraint
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwarerepositoryCategoryUnsupportedModels.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.SoftwarerepositoryCategoryUnsupportedModels initObject = new Intersight.Model.SoftwarerepositoryCategoryUnsupportedModels();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MdfId"))
+            {
+                initObject.MdfId = this.MdfId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ModelConstraint"))
+            {
+                initObject.ModelConstraint = this.ModelConstraint;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryCifsServer.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryCifsServer")]
@@ -2286,6 +2412,118 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
                 initObject.VarVersion = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SoftwarerepositoryUnsupportedModelConstraint.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSoftwarerepositoryUnsupportedModelConstraint")]
+    public class InitializeIntersightSoftwarerepositoryUnsupportedModelConstraint : PSCmdlet
+    {
+        public InitializeIntersightSoftwarerepositoryUnsupportedModelConstraint()
+        {
+            ClassId = SoftwarerepositoryUnsupportedModelConstraint.ClassIdEnum.SoftwarerepositoryUnsupportedModelConstraint;
+            ObjectType = SoftwarerepositoryUnsupportedModelConstraint.ObjectTypeEnum.SoftwarerepositoryUnsupportedModelConstraint;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwarerepositoryUnsupportedModelConstraint.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"UCSM version above which the server model is unsupported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MaxVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the platform constraint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwarerepositoryUnsupportedModelConstraint.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Regular expression of the image name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PlatformRegex
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> UnsupportedModels
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.SoftwarerepositoryUnsupportedModelConstraint initObject = new Intersight.Model.SoftwarerepositoryUnsupportedModelConstraint();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaxVersion"))
+            {
+                initObject.MaxVersion = this.MaxVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PlatformRegex"))
+            {
+                initObject.PlatformRegex = this.PlatformRegex;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UnsupportedModels"))
+            {
+                initObject.UnsupportedModels = this.UnsupportedModels;
             }
             WriteObject(initObject);
         }

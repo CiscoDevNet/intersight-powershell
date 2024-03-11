@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CurrentPassword< string>][[-Moid]< string>][-NewPassword< string>][-Password< byte>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CurrentPassword< string>][-InitialPassword< string>][[-Moid]< string>][-NewPassword< string>][-Password< byte>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,7 +39,22 @@ Accept wildcard characters: False
 ```
 
 ### -CurrentPassword
-User-entered passsord to be compared to password for change password function.
+User-entered password to be compared to password for change password function.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InitialPassword
+Initial password set for the local user for the first time when the local user gets created or when the password gets reset by the Account Administrator.
 
 ```yaml
 Type: string
@@ -84,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-User&apos;s current valid passsord.
+User&apos;s current valid password.
 
 ```yaml
 Type: byte
@@ -172,4 +187,8 @@ PS C:\> Set-IntersightIamLocalUserPassword
 
 ## RELATED LINKS
 
+[Get-IntersightIamLocalUserPassword](./Get-IntersightIamLocalUserPassword.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightIamLocalUserPassword](./New-IntersightIamLocalUserPassword.md)

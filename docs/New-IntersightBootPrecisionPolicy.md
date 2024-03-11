@@ -42,8 +42,9 @@ Accept wildcard characters: False
 
 
 Note :- Use Initialize-IntersightBootDeviceBase to create the object of complex type BootDeviceBase
-It also accepts the of object(s) of type BootHttp, BootIscsi, BootLocalCdd, BootLocalDisk, BootNvme, BootPchStorage, BootPxe, BootSan, BootSdCard, BootUefiShell, BootUsb, BootVirtualMedia, use the respective Initialize cmdlet to create the object.
+It also accepts the of object(s) of type BootFlexMmc, BootHttp, BootIscsi, BootLocalCdd, BootLocalDisk, BootNvme, BootPchStorage, BootPxe, BootSan, BootSdCard, BootUefiShell, BootUsb, BootVirtualMedia, use the respective Initialize cmdlet to create the object.
 Cmdlet(s) :
+Initialize-IntersightBootFlexMmc
 Initialize-IntersightBootHttp
 Initialize-IntersightBootIscsi
 Initialize-IntersightBootLocalCdd

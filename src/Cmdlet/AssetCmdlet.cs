@@ -2916,6 +2916,18 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove AssetClusterMember.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetClusterMember")]
+    public class RemoveIntersightAssetClusterMember : RemoveCmdletBase
+    {
+        public RemoveIntersightAssetClusterMember()
+        {
+            ApiInstance = new AssetApi(Config);
+            MethodName = "DeleteAssetClusterMemberWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetDeployment.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeployment")]

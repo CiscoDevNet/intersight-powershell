@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamUser [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Email< string>][-Idp< IamIdpRelationship>][-Idpreference< IamIdpReferenceRelationship>][-Moid< string>][-Permissions< System.Collections.Generic.List`1[IamPermissionRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserIdOrEmail< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIamUser [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Email< string>][-FirstName< string>][-Idp< IamIdpRelationship>][-Idpreference< IamIdpReferenceRelationship>][-LastName< string>][-Moid< string>][-Permissions< System.Collections.Generic.List`1[IamPermissionRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserIdOrEmail< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,7 +39,22 @@ Accept wildcard characters: False
 ```
 
 ### -Email
-Email of the user. Users are added to Intersight using the email configured in the IdP.
+Email of the user. Remote users are added to Intersight using the email configured in the IdP.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FirstName
+First name of the user. For remote users, this field is populated from the IdP attributes received after authentication.
 
 ```yaml
 Type: string
@@ -79,6 +94,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: IamIdpReferenceRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LastName
+Last name of the user. For remote users, this field is populated from the IdP attributes received after authentication.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -140,7 +170,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserIdOrEmail
-UserID or email as configured in the IdP.
+UserID or email of the user. For remote users, it is the value as configured in the IDP.
 
 ```yaml
 Type: string
