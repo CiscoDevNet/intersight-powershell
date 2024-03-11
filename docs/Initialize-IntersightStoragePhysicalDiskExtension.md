@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStoragePhysicalDiskExtension [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StoragePhysicalDiskExtension.ClassIdEnum>][-Health< string>][-Moid< string>][-ObjectType< StoragePhysicalDiskExtension.ObjectTypeEnum>][-PhysicalDisk< Model.StoragePhysicalDiskRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStoragePhysicalDiskExtension [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StoragePhysicalDiskExtension.ClassIdEnum>][-Moid< string>][-ObjectType< StoragePhysicalDiskExtension.ObjectTypeEnum>][-PhysicalDisk< Model.StoragePhysicalDiskRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,21 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: StoragePhysicalDiskExtension.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Health
-The current drive state of disk.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

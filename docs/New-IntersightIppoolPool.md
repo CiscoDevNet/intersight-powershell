@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIppoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< IppoolPool.AssignmentOrderEnum>][-Description< string>][-IpV4Blocks< System.Collections.Generic.List`1[IppoolIpV4Block]>][-IpV4Config< IppoolIpV4Config>][-IpV6Blocks< System.Collections.Generic.List`1[IppoolIpV6Block]>][-IpV6Config< IppoolIpV6Config>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Reservations< System.Collections.Generic.List`1[IppoolReservationRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIppoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< IppoolPool.AssignmentOrderEnum>][-Description< string>][-EnableBlockLevelSubnetConfig< bool>][-IpV4Blocks< System.Collections.Generic.List`1[IppoolIpV4Block]>][-IpV4Config< IppoolIpV4Config>][-IpV6Blocks< System.Collections.Generic.List`1[IppoolIpV6Block]>][-IpV6Config< IppoolIpV6Config>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Reservations< System.Collections.Generic.List`1[IppoolReservationRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -58,6 +58,21 @@ Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableBlockLevelSubnetConfig
+Enables subnet configuration at the block level.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

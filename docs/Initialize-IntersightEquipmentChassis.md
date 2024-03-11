@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-ClassId< EquipmentChassis.ClassIdEnum>][-ExpanderModules< System.Collections.Generic.List`1[Model.EquipmentExpanderModuleRelationship]>][-FanControl< Model.EquipmentFanControlRelationship>][-FaultSummary< long>][-ManagementInterface< Model.ManagementInterfaceRelationship>][-Moid< string>][-ObjectType< EquipmentChassis.ObjectTypeEnum>][-PlatformType< string>][-PowerControlState< Model.PowerControlStateRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-VirtualDriveContainer< System.Collections.Generic.List`1[Model.StorageVirtualDriveContainerRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-ClassId< EquipmentChassis.ClassIdEnum>][-Moid< string>][-ObjectType< EquipmentChassis.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -71,75 +71,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ExpanderModules
-An array of relationships to equipmentExpanderModule resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.EquipmentExpanderModuleRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FanControl
-A reference to a equipmentFanControl resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentFanControlRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FaultSummary
-This field summarizes the faults on the chassis enclosure.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ManagementInterface
-A reference to a managementInterface resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.ManagementInterfaceRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -170,39 +101,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PlatformType
-The platform type that the chassis is a part of.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PowerControlState
-A reference to a powerControlState resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.PowerControlStateRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -210,24 +108,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VirtualDriveContainer
-An array of relationships to storageVirtualDriveContainer resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.StorageVirtualDriveContainerRelationship]
 Parameter Sets: (All)
 Aliases:
 

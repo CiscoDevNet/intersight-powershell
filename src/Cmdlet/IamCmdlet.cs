@@ -313,6 +313,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Used to trigger the enable or disable action on the API key. These actions change the status of an API key.\n* `enable` - Used to enable a disabled API key/App Registration. If the API key/App Registration is already expired, this action has no effect.\n* `disable` - Used to disable an active API key/App Registration. If the API key/App Registration is already expired, this action has no effect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamApiKey.AdminStatusEnum AdminStatus
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
@@ -337,6 +348,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The expiration date of the API key which is set at the time of creation of the key. Its value can only be assigned a date that falls within the range determined by the maximum expiration time configured at the account level. The expiry date can be edited to be earlier or later, provided it stays within the designated expiry period. This period is determined by adding the 'startTime' property of the API key to the maximum expiry time configured at the account level."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ExpiryDateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The cryptographic hash algorithm to calculate the message digest.\n* `SHA256` - The SHA-256 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA384` - The SHA-384 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512` - The SHA-512 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512_224` - The SHA-512/224 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512_256` - The SHA-512/256 cryptographic hash, as defined by NIST in FIPS 180-4."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -347,6 +369,39 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Used to mark the API key as a never-expiring API key."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsNeverExpiring
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The IP address from which the API key was last used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LastUsedIp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time at which the API key was last used. It is updated every 24 hours."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime LastUsedTime
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -365,6 +420,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The current status of the API key that dictates the validity of the key.\n* `enabled` - An API key/App Registration having enabled status can be used for API invocation.\n* `disabled` - An API key/App Registration having disabled status cannot be used for API invocation.\n* `expired` - An API key/App Registration having expired status cannot be used for API invocation as the expiration date has passed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamApiKey.OperStatusEnum OperStatus
         {
             get;
             set;
@@ -438,6 +504,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The timestamp at which an expiry date was first set on this API key. For expiring API keys, this field is same as the create time of the API key. For never-expiring API keys, this field is set initially to zero time value. If a never-expiry API key is later changed to have an expiration, the timestamp marking the start of this transition is recorded in this field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime StartTime
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a iamUser resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -487,6 +564,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Used to trigger the enable or disable action on the App Registration. These actions change the status of an App Registration.\n* `enable` - Used to enable a disabled API key/App Registration. If the API key/App Registration is already expired, this action has no effect.\n* `disable` - Used to disable an active API key/App Registration. If the API key/App Registration is already expired, this action has no effect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamAppRegistration.AdminStatusEnum AdminStatus
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -566,6 +654,50 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The expiration date of the App Registration which is set at the time of its creation. Its value can only be assigned a date that falls within the range determined by the maximum expiration time configured at the account level. The expiry date can be edited to be earlier or later, provided it stays within the designated expiry period. This period is determined by adding the 'startTime' property of the App Registration to the maximum expiry time configured at the account level."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ExpiryDateTime
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Used to mark the App Registration as a never-expiring App Registration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsNeverExpiring
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The ip address from which the App Registration was last used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LastUsedIp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time at which the App Registration was last used. It is updated every 24 hours."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime LastUsedTime
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -589,6 +721,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The current status of the App Registration that dictates the validity of the app.\n* `enabled` - An API key/App Registration having enabled status can be used for API invocation.\n* `disabled` - An API key/App Registration having disabled status cannot be used for API invocation.\n* `expired` - An API key/App Registration having expired status cannot be used for API invocation as the expiration date has passed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamAppRegistration.OperStatusEnum OperStatus
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -667,6 +810,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool ShowConsentScreen
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The timestamp at which an expiry date was first set on this app registration. \nFor expiring App Registrations, this field is same as the create time of the App Registration.\nFor never-expiring App Registrations, this field is set initially to zero time value. If a never-expiry App Registration is later changed to have an expiration, the timestamp marking the start of this transition is recorded in this field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime StartTime
         {
             get;
             set;
@@ -3833,6 +3987,202 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IamLocalUserPassword.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIamLocalUserPassword", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightIamLocalUserPassword : GetCmdletBase
+    {
+        public GetIntersightIamLocalUserPassword()
+        {
+            ApiInstance = new IamApi(Config);
+            MethodName = "GetIamLocalUserPasswordListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User-entered password to be compared to password for change password function."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string CurrentPassword
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Initial password set for the local user for the first time when the local user gets created or when the password gets reset by the Account Administrator."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string InitialPassword
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates whether the value of the 'currentPassword' property has been set."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsCurrentPasswordSet
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates whether the value of the 'initialPassword' property has been set."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsInitialPasswordSet
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates whether the value of the 'newPassword' property has been set."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsNewPasswordSet
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates whether the user should be prompted to reset their password."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool NeedPasswordReset
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"New password that the user's password should be changed to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NewPassword
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User's current valid password."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public byte Password
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a iamUser resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamUserRelationship User
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamLocalUserPasswordPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightIamLocalUserPasswordPolicy", DefaultParameterSetName = "CmdletParam")]
@@ -3885,6 +4235,50 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Determines if the user lock out feature must be enabled for the local admin user."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EnableLockOutForAdminUser
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Seconds are tracked for consecutive incorrect login attempts. Users will be locked out if they exceed the max number of incorrect login attempts during this duration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidateRange(300, 3600)]
+        public long FailedLoginTrackerWindow
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time period, in seconds, during which a user account will remain locked."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidateRange(60, 3600)]
+        public long LockOutTimePeriod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Users will be locked out after exceeding the max consecutive incorrect login attempts allowed within the configured time duration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidateRange(3, 10)]
+        public long MaxFailedLoginsAllowed
         {
             get;
             set;
@@ -4976,6 +5370,28 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Boolean value used to decide whether API keys that never expire are allowed for the account. This allows creation of API keys which are perpetual which can used for specific applications where rotation of API keys are not feasible."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool AllowApiKeysWithoutExpiry
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Boolean value used to decide whether App Registration that never expire are allowed for the account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool AllowAppRegistrationsWithoutExpiry
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
@@ -4994,6 +5410,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The maximum expiration period (in seconds) allowed for API keys. The default value is 180 days or 15552000 seconds. It is shown to user in days for readability."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long MaxApiKeyExpiry
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The maximum expiration period (in seconds) allowed for App Registration. The default value is 180 days or 15552000 seconds. It is shown to user in days for readability."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long MaxAppRegistrationExpiry
         {
             get;
             set;
@@ -6557,7 +6995,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Email of the user. Users are added to Intersight using the email configured in the IdP."</para>
+        /// <para type="description">"Email of the user. Remote users are added to Intersight using the email configured in the IdP."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
@@ -6568,7 +7006,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"First name of the user. This field is populated from the IdP attributes received after authentication."</para>
+        /// <para type="description">"First name of the user. For remote users, this field is populated from the IdP attributes received after authentication."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6612,7 +7050,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Last name of the user. This field is populated from the IdP attributes received after authentication."</para>
+        /// <para type="description">"Last name of the user. For remote users, this field is populated from the IdP attributes received after authentication."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6645,6 +7083,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Time until which the user account will be locked out."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime LockedUntil
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -6667,7 +7116,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Name as configured in the IdP."</para>
+        /// <para type="description">"Name of the user. For remote users, it is the value as configured in the IdP."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6706,7 +7155,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"UserID or email as configured in the IdP."</para>
+        /// <para type="description">"UserID or email of the user. For remote users, it is the value as configured in the IDP."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7352,8 +7801,30 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Used to trigger the enable or disable action on the API key. These actions change the status of an API key.\n* `enable` - Used to enable a disabled API key/App Registration. If the API key/App Registration is already expired, this action has no effect.\n* `disable` - Used to disable an active API key/App Registration. If the API key/App Registration is already expired, this action has no effect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamApiKey.AdminStatusEnum AdminStatus
+        {
+            get;
+            set;
+        }
 
 
+
+
+        // <summary>
+        /// <para type="description">"The expiration date of the API key which is set at the time of creation of the key. Its value can only be assigned a date that falls within the range determined by the maximum expiration time configured at the account level. The expiry date can be edited to be earlier or later, provided it stays within the designated expiry period. This period is determined by adding the 'startTime' property of the API key to the maximum expiry time configured at the account level."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime ExpiryDateTime
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The cryptographic hash algorithm to calculate the message digest.\n* `SHA256` - The SHA-256 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA384` - The SHA-384 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512` - The SHA-512 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512_224` - The SHA-512/224 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512_256` - The SHA-512/256 cryptographic hash, as defined by NIST in FIPS 180-4."</para>
@@ -7361,6 +7832,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public IamApiKey.HashAlgorithmEnum HashAlgorithm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Used to mark the API key as a never-expiring API key."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNeverExpiring
         {
             get;
             set;
@@ -7378,6 +7860,8 @@ namespace Intersight.PowerShell
         }
 
 
+
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -7388,6 +7872,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -7427,6 +7912,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -7461,6 +7947,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Used to trigger the enable or disable action on the App Registration. These actions change the status of an App Registration.\n* `enable` - Used to enable a disabled API key/App Registration. If the API key/App Registration is already expired, this action has no effect.\n* `disable` - Used to disable an active API key/App Registration. If the API key/App Registration is already expired, this action has no effect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAppRegistration.AdminStatusEnum AdminStatus
         {
             get;
             set;
@@ -7514,6 +8011,30 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"The expiration date of the App Registration which is set at the time of its creation. Its value can only be assigned a date that falls within the range determined by the maximum expiration time configured at the account level. The expiry date can be edited to be earlier or later, provided it stays within the designated expiry period. This period is determined by adding the 'startTime' property of the App Registration to the maximum expiry time configured at the account level."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime ExpiryDateTime
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Used to mark the App Registration as a never-expiring App Registration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNeverExpiring
+        {
+            get;
+            set;
+        }
+
+
 
 
         // <summary>
@@ -7526,6 +8047,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -7589,6 +8111,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description"></para>
@@ -8912,6 +9435,111 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New IamLocalUserPassword.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightIamLocalUserPassword")]
+    public class NewIntersightIamLocalUserPassword : NewCmdletBase
+    {
+        public NewIntersightIamLocalUserPassword()
+        {
+            ApiInstance = new IamApi(Config);
+            ModelObject = new IamLocalUserPassword();
+            MethodName = "CreateIamLocalUserPasswordWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"User-entered password to be compared to password for change password function."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CurrentPassword
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Initial password set for the local user for the first time when the local user gets created or when the password gets reset by the Account Administrator."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InitialPassword
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"New password that the user's password should be changed to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NewPassword
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"User's current valid password."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public byte Password
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamPermission.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightIamPermission")]
@@ -9588,7 +10216,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Email of the user. Users are added to Intersight using the email configured in the IdP."</para>
+        /// <para type="description">"Email of the user. Remote users are added to Intersight using the email configured in the IdP."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
@@ -9598,6 +10226,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"First name of the user. For remote users, this field is populated from the IdP attributes received after authentication."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FirstName
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"A reference to a iamIdp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -9621,6 +10259,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Last name of the user. For remote users, this field is populated from the IdP attributes received after authentication."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LastName
+        {
+            get;
+            set;
+        }
 
 
 
@@ -9667,7 +10316,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"UserID or email as configured in the IdP."</para>
+        /// <para type="description">"UserID or email of the user. For remote users, it is the value as configured in the IDP."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -10348,8 +10997,30 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Used to trigger the enable or disable action on the API key. These actions change the status of an API key.\n* `enable` - Used to enable a disabled API key/App Registration. If the API key/App Registration is already expired, this action has no effect.\n* `disable` - Used to disable an active API key/App Registration. If the API key/App Registration is already expired, this action has no effect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamApiKey.AdminStatusEnum AdminStatus
+        {
+            get;
+            set;
+        }
 
 
+
+
+        // <summary>
+        /// <para type="description">"The expiration date of the API key which is set at the time of creation of the key. Its value can only be assigned a date that falls within the range determined by the maximum expiration time configured at the account level. The expiry date can be edited to be earlier or later, provided it stays within the designated expiry period. This period is determined by adding the 'startTime' property of the API key to the maximum expiry time configured at the account level."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime ExpiryDateTime
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The cryptographic hash algorithm to calculate the message digest.\n* `SHA256` - The SHA-256 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA384` - The SHA-384 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512` - The SHA-512 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512_224` - The SHA-512/224 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512_256` - The SHA-512/256 cryptographic hash, as defined by NIST in FIPS 180-4."</para>
@@ -10357,6 +11028,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public IamApiKey.HashAlgorithmEnum HashAlgorithm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Used to mark the API key as a never-expiring API key."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNeverExpiring
         {
             get;
             set;
@@ -10374,6 +11056,8 @@ namespace Intersight.PowerShell
         }
 
 
+
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -10384,6 +11068,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -10423,6 +11108,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -10457,6 +11143,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Used to trigger the enable or disable action on the App Registration. These actions change the status of an App Registration.\n* `enable` - Used to enable a disabled API key/App Registration. If the API key/App Registration is already expired, this action has no effect.\n* `disable` - Used to disable an active API key/App Registration. If the API key/App Registration is already expired, this action has no effect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAppRegistration.AdminStatusEnum AdminStatus
         {
             get;
             set;
@@ -10510,6 +11207,30 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"The expiration date of the App Registration which is set at the time of its creation. Its value can only be assigned a date that falls within the range determined by the maximum expiration time configured at the account level. The expiry date can be edited to be earlier or later, provided it stays within the designated expiry period. This period is determined by adding the 'startTime' property of the App Registration to the maximum expiry time configured at the account level."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime ExpiryDateTime
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Used to mark the App Registration as a never-expiring App Registration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsNeverExpiring
+        {
+            get;
+            set;
+        }
+
+
 
 
         // <summary>
@@ -10522,6 +11243,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -10585,6 +11307,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description"></para>
@@ -12131,11 +12854,23 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"User-entered passsord to be compared to password for change password function."</para>
+        /// <para type="description">"User-entered password to be compared to password for change password function."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string CurrentPassword
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Initial password set for the local user for the first time when the local user gets created or when the password gets reset by the Account Administrator."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InitialPassword
         {
             get;
             set;
@@ -12156,6 +12891,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"New password that the user's password should be changed to."</para>
         /// </summary>
@@ -12170,7 +12906,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"User's current valid passsord."</para>
+        /// <para type="description">"User's current valid password."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -12223,6 +12959,50 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Determines if the user lock out feature must be enabled for the local admin user."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableLockOutForAdminUser
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Seconds are tracked for consecutive incorrect login attempts. Users will be locked out if they exceed the max number of incorrect login attempts during this duration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(300, 3600)]
+        public long FailedLoginTrackerWindow
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time period, in seconds, during which a user account will remain locked."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(60, 3600)]
+        public long LockOutTimePeriod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Users will be locked out after exceeding the max consecutive incorrect login attempts allowed within the configured time duration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(3, 10)]
+        public long MaxFailedLoginsAllowed
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Minimum number of characters different from previous password."</para>
@@ -12634,6 +13414,108 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set IamResourceLimits.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightIamResourceLimits")]
+    public class SetIntersightIamResourceLimits : SetCmdletBase
+    {
+        public SetIntersightIamResourceLimits()
+        {
+            ApiInstance = new IamApi(Config);
+            ModelObject = new IamResourceLimits();
+            MethodName = "UpdateIamResourceLimitsWithHttpInfo";
+        }
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Boolean value used to decide whether API keys that never expire are allowed for the account. This allows creation of API keys which are perpetual which can used for specific applications where rotation of API keys are not feasible."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AllowApiKeysWithoutExpiry
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Boolean value used to decide whether App Registration that never expire are allowed for the account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AllowAppRegistrationsWithoutExpiry
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"The maximum expiration period (in seconds) allowed for API keys. The default value is 180 days or 15552000 seconds. It is shown to user in days for readability."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MaxApiKeyExpiry
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The maximum expiration period (in seconds) allowed for App Registration. The default value is 180 days or 15552000 seconds. It is shown to user in days for readability."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MaxAppRegistrationExpiry
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamResourceRoles.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightIamResourceRoles")]
@@ -12868,7 +13750,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Email of the user. Users are added to Intersight using the email configured in the IdP."</para>
+        /// <para type="description">"Email of the user. Remote users are added to Intersight using the email configured in the IdP."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
@@ -12878,6 +13760,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"First name of the user. For remote users, this field is populated from the IdP attributes received after authentication."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FirstName
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"A reference to a iamIdp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -12901,6 +13793,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Last name of the user. For remote users, this field is populated from the IdP attributes received after authentication."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LastName
+        {
+            get;
+            set;
+        }
 
 
 
@@ -12947,7 +13850,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"UserID or email as configured in the IdP."</para>
+        /// <para type="description">"UserID or email of the user. For remote users, it is the value as configured in the IDP."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

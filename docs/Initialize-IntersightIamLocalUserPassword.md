@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamLocalUserPassword.ClassIdEnum>][-CurrentPassword< string>][-Moid< string>][-NewPassword< string>][-ObjectType< IamLocalUserPassword.ObjectTypeEnum>][-Password< byte[]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamLocalUserPassword.ClassIdEnum>][-CurrentPassword< string>][-InitialPassword< string>][-Moid< string>][-NewPassword< string>][-ObjectType< IamLocalUserPassword.ObjectTypeEnum>][-Password< byte[]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,22 @@ Accept wildcard characters: False
 ```
 
 ### -CurrentPassword
-User-entered passsord to be compared to password for change password function.
+User-entered password to be compared to password for change password function.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InitialPassword
+Initial password set for the local user for the first time when the local user gets created or when the password gets reset by the Account Administrator.
 
 ```yaml
 Type: string
@@ -115,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-User&apos;s current valid passsord.
+User&apos;s current valid password.
 
 Note :- Use Initialize-Intersightbyte[] to create the object of complex type byte[]
 

@@ -3107,6 +3107,76 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetOrchestrationCivpVmwareVcenterOptions.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetOrchestrationCivpVmwareVcenterOptions")]
+    public class InitializeIntersightAssetOrchestrationCivpVmwareVcenterOptions : PSCmdlet
+    {
+        public InitializeIntersightAssetOrchestrationCivpVmwareVcenterOptions()
+        {
+            ClassId = AssetOrchestrationCivpVmwareVcenterOptions.ClassIdEnum.AssetOrchestrationCivpVmwareVcenterOptions;
+            ObjectType = AssetOrchestrationCivpVmwareVcenterOptions.ObjectTypeEnum.AssetOrchestrationCivpVmwareVcenterOptions;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"CivpEnabled controls whether VSphere Remote Plugin is enabled or not. vCenter Server version 8.0 or later."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool CivpEnabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AssetOrchestrationCivpVmwareVcenterOptions.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AssetOrchestrationCivpVmwareVcenterOptions.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.AssetOrchestrationCivpVmwareVcenterOptions initObject = new Intersight.Model.AssetOrchestrationCivpVmwareVcenterOptions();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CivpEnabled"))
+            {
+                initObject.CivpEnabled = this.CivpEnabled;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize AssetOrchestrationHitachiVirtualStoragePlatformOptions.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightAssetOrchestrationHitachiVirtualStoragePlatformOptions")]

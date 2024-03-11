@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamResourceLimits [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamResourceLimits.ClassIdEnum>][-Moid< string>][-ObjectType< IamResourceLimits.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamResourceLimits [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowApiKeysWithoutExpiry< bool>][-AllowAppRegistrationsWithoutExpiry< bool>][-ClassId< IamResourceLimits.ClassIdEnum>][-MaxApiKeyExpiry< long>][-MaxAppRegistrationExpiry< long>][-Moid< string>][-ObjectType< IamResourceLimits.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,11 +39,71 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -AllowApiKeysWithoutExpiry
+Boolean value used to decide whether API keys that never expire are allowed for the account. This allows creation of API keys which are perpetual which can used for specific applications where rotation of API keys are not feasible.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AllowAppRegistrationsWithoutExpiry
+Boolean value used to decide whether App Registration that never expire are allowed for the account.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ClassId
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
 Type: IamResourceLimits.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MaxApiKeyExpiry
+The maximum expiration period (in seconds) allowed for API keys. The default value is 180 days or 15552000 seconds. It is shown to user in days for readability.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MaxAppRegistrationExpiry
+The maximum expiration period (in seconds) allowed for App Registration. The default value is 180 days or 15552000 seconds. It is shown to user in days for readability.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageStoragePolicy.ClassIdEnum>][-DefaultDriveMode< StorageStoragePolicy.DefaultDriveModeEnum>][-Description< string>][-DriveGroup< System.Collections.Generic.List`1[Model.StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< Model.StorageM2VirtualDriveConfig>][-Moid< string>][-Name< string>][-ObjectType< StorageStoragePolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< Model.StorageR0Drive>][-SecureJbods< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageStoragePolicy.ClassIdEnum>][-DefaultDriveMode< StorageStoragePolicy.DefaultDriveModeEnum>][-Description< string>][-DirectAttachedNvmeSlots< string>][-DriveGroup< System.Collections.Generic.List`1[Model.StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< Model.StorageM2VirtualDriveConfig>][-Moid< string>][-Name< string>][-ObjectType< StorageStoragePolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< Model.StorageR0Drive>][-RaidAttachedNvmeSlots< string>][-SecureJbods< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -71,6 +71,21 @@ Accept wildcard characters: False
 
 ### -Description
 Description of the policy.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DirectAttachedNvmeSlots
+Only U.3 NVMe drives has to be specified, entered slots will be moved to Direct attached mode. Allowed slots are 1-4, 101-104. Allowed value is a comma or hyphen separated number range.
 
 ```yaml
 Type: string
@@ -232,8 +247,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -RaidAttachedNvmeSlots
+Only U.3 NVMe drives has to be specified, entered slots will be moved to RAID attached mode. Allowed slots are 1-4, 101-104. Allowed value is a comma or hyphen separated number range.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SecureJbods
-JBOD drives specified in this slot range will be encrypted. Allowed value is a comma or hyphen separated number range. Sample format is 1, 3 or 4-6, 8.
+JBOD drives specified in this slot range will be encrypted. Allowed values are &apos;ALL&apos;, or a comma or hyphen separated number range. Sample format is ALL or 1, 3 or 4-6, 8. Setting the value to &apos;ALL&apos; will encrypt all the unused UnconfigureGood/JBOD disks.
 
 ```yaml
 Type: string

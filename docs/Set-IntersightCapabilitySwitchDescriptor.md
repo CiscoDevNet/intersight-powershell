@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightCapabilitySwitchDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-Description< string>][-ExpectedMemory< long>][-Model< string>][[-Moid]< string>][-Revision< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightCapabilitySwitchDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-Description< string>][-ExpectedMemory< long>][-IsUcsxDirectSwitch< bool>][-Model< string>][[-Moid]< string>][-Revision< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -76,6 +76,21 @@ The total expected memory for this hardware.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsUcsxDirectSwitch
+Identifies whether Switch is part of UCSX Direct chassis.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

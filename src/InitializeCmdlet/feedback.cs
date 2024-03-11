@@ -122,6 +122,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"User's overall satisfaction with the product on a 0-10 scale."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long ProductSatisfactionScale
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if the user completed the survey. True if completed, false otherwise."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SurveyCompleted
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Bunch of last traceId for reproducing user last activity."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -132,7 +152,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Type of the feedback from user.\n* `Evaluation` - User's feedback classified as an evaluation.\n* `Bug` - User's feedback classified as a bug."</para>
+        /// <para type="description">"Type of the feedback from user.\n* `Evaluation` - User's feedback classified as an evaluation.\n* `Bug` - User's feedback classified as a bug.\n* `Survey` - User's response to a survey."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -179,6 +199,14 @@ namespace Intersight.PowerShell
                 initObject.FullStoryUrl = this.FullStoryUrl;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProductSatisfactionScale"))
+            {
+                initObject.ProductSatisfactionScale = this.ProductSatisfactionScale;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SurveyCompleted"))
+            {
+                initObject.SurveyCompleted = this.SurveyCompleted;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("TraceIds"))
             {
                 initObject.TraceIds = this.TraceIds;

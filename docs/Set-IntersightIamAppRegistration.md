@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamAppRegistration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClientName< string>][-ClientSecret< string>][-ClientType< IamAppRegistration.ClientTypeEnum>][-Description< string>][[-Moid]< string>][-RedirectUris< System.Collections.Generic.List`1[string]>][-RenewClientSecret< bool>][-Revoke< bool>][-Roles< System.Collections.Generic.List`1[IamRoleRelationship]>][-ShowConsentScreen< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightIamAppRegistration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminStatus< IamAppRegistration.AdminStatusEnum>][-ClientName< string>][-ClientSecret< string>][-ClientType< IamAppRegistration.ClientTypeEnum>][-Description< string>][-ExpiryDateTime< DateTime>][-IsNeverExpiring< bool>][[-Moid]< string>][-RedirectUris< System.Collections.Generic.List`1[string]>][-RenewClientSecret< bool>][-Revoke< bool>][-Roles< System.Collections.Generic.List`1[IamRoleRelationship]>][-ShowConsentScreen< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,21 @@ Update a &apos;IamAppRegistration&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AdminStatus
+Used to trigger the enable or disable action on the App Registration. These actions change the status of an App Registration.\n* `enable` - Used to enable a disabled API key/App Registration. If the API key/App Registration is already expired, this action has no effect.\n* `disable` - Used to disable an active API key/App Registration. If the API key/App Registration is already expired, this action has no effect.
+
+```yaml
+Type: IamAppRegistration.AdminStatusEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -88,6 +103,36 @@ Description of the application.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExpiryDateTime
+The expiration date of the App Registration which is set at the time of its creation. Its value can only be assigned a date that falls within the range determined by the maximum expiration time configured at the account level. The expiry date can be edited to be earlier or later, provided it stays within the designated expiry period. This period is determined by adding the &apos;startTime&apos; property of the App Registration to the maximum expiry time configured at the account level.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsNeverExpiring
+Used to mark the App Registration as a never-expiring App Registration.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

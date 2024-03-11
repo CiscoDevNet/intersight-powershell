@@ -3669,6 +3669,290 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get EquipmentHybridDriveSlot.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentHybridDriveSlot", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightEquipmentHybridDriveSlot : GetCmdletBase
+    {
+        public GetIntersightEquipmentHybridDriveSlot()
+        {
+            ApiInstance = new EquipmentApi(Config);
+            MethodName = "GetEquipmentHybridDriveSlotListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ComputeBladeRelationship ComputeBlade
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a computeBoard resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ComputeBoardRelationship ComputeBoard
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ComputeRackUnitRelationship ComputeRackUnit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Configured Mode of the Hybrid Drive slot.\n* `` - Hybrid Drive slot  mode is not applicable.\n* `RAID` - Hybrid Drive slot mode is RAID.\n* `Direct` - Hybrid Drive slot mode is Direct."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public EquipmentHybridDriveSlot.CurrentModeEnum CurrentMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceMoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Presence
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentFruRelationship PreviousFru
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Requested Mode for the Hybrid Drive slot.\n* `` - Hybrid Drive slot  mode is not applicable.\n* `RAID` - Hybrid Drive slot mode is RAID.\n* `Direct` - Hybrid Drive slot mode is Direct."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public EquipmentHybridDriveSlot.RequestedModeEnum RequestedMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Revision
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Rn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Serial
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field identifies a specific slot on the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SlotId
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentIoCard.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightEquipmentIoCard", DefaultParameterSetName = "CmdletParam")]
@@ -4114,7 +4398,18 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"User configured power state of the iomodule.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value."</para>
+        /// <para type="description">"User configured power state of the peer IO module.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public EquipmentIoCardOperation.AdminPeerPowerStateEnum AdminPeerPowerState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User configured power state of the IO module.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -4126,7 +4421,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The configured state of these settings in the target chassis. The value is any one of Applied, Applying, Failed. Applied - This state denotes that the settings are applied successfully in the target chassis iomodule. Applying - This state denotes that the settings are being applied in the target chassis iomodule. Failed - This state denotes that the settings could not be applied in the target chassis iomodule.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
+        /// <para type="description">"The configured state of these settings in the target IO module. The value is any one of Applied, Applying, Failed. Applied - This state denotes that the settings are applied successfully in the target IO module. Applying - This state denotes that the settings are being applied in the target IO module. Failed - This state denotes that the settings could not be applied in the target IO module.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -4179,6 +4474,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -8339,54 +8635,14 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"An array of relationships to equipmentExpanderModule resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<EquipmentExpanderModuleRelationship> ExpanderModules
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a equipmentFanControl resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentFanControlRelationship FanControl
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"This field summarizes the faults on the chassis enclosure."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long FaultSummary
-        {
-            get;
-            set;
-        }
 
 
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a managementInterface resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public ManagementInterfaceRelationship ManagementInterface
-        {
-            get;
-            set;
-        }
+
+
 
 
 
@@ -8410,27 +8666,7 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"The platform type that the chassis is a part of."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string PlatformType
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a powerControlState resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public PowerControlStateRelationship PowerControlState
-        {
-            get;
-            set;
-        }
 
 
 
@@ -8460,16 +8696,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"An array of relationships to storageVirtualDriveContainer resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<StorageVirtualDriveContainerRelationship> VirtualDriveContainer
-        {
-            get;
-            set;
-        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentChassisIdentity.</para>
@@ -8681,16 +8907,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentChassisRelationship EquipmentChassis
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"An array of relationships to equipmentFanModule resources."</para>
@@ -8865,16 +9081,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public EquipmentChassisRelationship EquipmentChassis
-        {
-            get;
-            set;
-        }
 
 
 
@@ -9626,7 +9832,18 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"User configured power state of the iomodule.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value."</para>
+        /// <para type="description">"User configured power state of the peer IO module.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentIoCardOperation.AdminPeerPowerStateEnum AdminPeerPowerState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User configured power state of the IO module.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -9649,6 +9866,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

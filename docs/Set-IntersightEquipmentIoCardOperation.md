@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentIoCardOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminPowerState< EquipmentIoCardOperation.AdminPowerStateEnum>][-DeviceRegistration< AssetDeviceRegistrationRelationship>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentIoCardOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminPeerPowerState< EquipmentIoCardOperation.AdminPeerPowerStateEnum>][-AdminPowerState< EquipmentIoCardOperation.AdminPowerStateEnum>][-DeviceRegistration< AssetDeviceRegistrationRelationship>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -38,8 +38,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -AdminPeerPowerState
+User configured power state of the peer IO module.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value.
+
+```yaml
+Type: EquipmentIoCardOperation.AdminPeerPowerStateEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -AdminPowerState
-User configured power state of the iomodule.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value.
+User configured power state of the IO module.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value.
 
 ```yaml
 Type: EquipmentIoCardOperation.AdminPowerStateEnum
@@ -161,5 +176,7 @@ PS C:\> Set-IntersightEquipmentIoCardOperation
 ## RELATED LINKS
 
 [Get-IntersightEquipmentIoCardOperation](./Get-IntersightEquipmentIoCardOperation.md)
+
+[Initialize-IntersightEquipmentIoCardOperationStatus](./Initialize-IntersightEquipmentIoCardOperationStatus.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

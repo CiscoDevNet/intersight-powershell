@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightOsAnswers [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AnswerFile< string>][-ClassId< OsAnswers.ClassIdEnum>][-Hostname< string>][-IpConfigType< OsAnswers.IpConfigTypeEnum>][-IpConfiguration< Model.OsIpConfiguration>][-IsRootPasswordCrypted< bool>][-Nameserver< string>][-NetworkDevice< string>][-ObjectType< OsAnswers.ObjectTypeEnum>][-ProductKey< string>][-RootPassword< string>][-Source< OsAnswers.SourceEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightOsAnswers [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlternateNameServers< System.Collections.Generic.List`1[string]>][-AnswerFile< string>][-ClassId< OsAnswers.ClassIdEnum>][-Hostname< string>][-IpConfigType< OsAnswers.IpConfigTypeEnum>][-IpConfiguration< Model.OsIpConfiguration>][-IsRootPasswordCrypted< bool>][-Nameserver< string>][-NetworkDevice< string>][-ObjectType< OsAnswers.ObjectTypeEnum>][-ProductKey< string>][-RootPassword< string>][-Source< OsAnswers.SourceEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,21 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AlternateNameServers
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

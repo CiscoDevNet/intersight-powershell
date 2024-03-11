@@ -42,6 +42,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Breakout port member in the fabric extender."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long AggregatePortId
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
@@ -1421,6 +1432,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

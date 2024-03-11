@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamApiKey [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamApiKey.ClassIdEnum>][-HashAlgorithm< IamApiKey.HashAlgorithmEnum>][-KeySpec< Model.PkixKeyGenerationSpec>][-Moid< string>][-ObjectType< IamApiKey.ObjectTypeEnum>][-PrivateKey< string>][-Purpose< string>][-SigningAlgorithm< IamApiKey.SigningAlgorithmEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamApiKey [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminStatus< IamApiKey.AdminStatusEnum>][-ClassId< IamApiKey.ClassIdEnum>][-ExpiryDateTime< DateTime>][-HashAlgorithm< IamApiKey.HashAlgorithmEnum>][-IsNeverExpiring< bool>][-KeySpec< Model.PkixKeyGenerationSpec>][-Moid< string>][-ObjectType< IamApiKey.ObjectTypeEnum>][-PrivateKey< string>][-Purpose< string>][-SigningAlgorithm< IamApiKey.SigningAlgorithmEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,21 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AdminStatus
+Used to trigger the enable or disable action on the API key. These actions change the status of an API key.\n* `enable` - Used to enable a disabled API key/App Registration. If the API key/App Registration is already expired, this action has no effect.\n* `disable` - Used to disable an active API key/App Registration. If the API key/App Registration is already expired, this action has no effect.
+
+```yaml
+Type: IamApiKey.AdminStatusEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -54,11 +69,41 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ExpiryDateTime
+The expiration date of the API key which is set at the time of creation of the key. Its value can only be assigned a date that falls within the range determined by the maximum expiration time configured at the account level. The expiry date can be edited to be earlier or later, provided it stays within the designated expiry period. This period is determined by adding the &apos;startTime&apos; property of the API key to the maximum expiry time configured at the account level.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -HashAlgorithm
 The cryptographic hash algorithm to calculate the message digest.\n* `SHA256` - The SHA-256 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA384` - The SHA-384 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512` - The SHA-512 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512_224` - The SHA-512/224 cryptographic hash, as defined by NIST in FIPS 180-4.\n* `SHA512_256` - The SHA-512/256 cryptographic hash, as defined by NIST in FIPS 180-4.
 
 ```yaml
 Type: IamApiKey.HashAlgorithmEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsNeverExpiring
+Used to mark the API key as a never-expiring API key.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
@@ -234,6 +279,8 @@ PS C:\> Initialize-IntersightIamApiKey
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
 

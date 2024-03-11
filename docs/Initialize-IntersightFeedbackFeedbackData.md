@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFeedbackFeedbackData [-AccountName< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlternativeFollowUpEmails< System.Collections.Generic.List`1[string]>][-ClassId< FeedbackFeedbackData.ClassIdEnum>][-Comment< string>][-Email< string>][-Evaluation< FeedbackFeedbackData.EvaluationEnum>][-FollowUp< bool>][-FullStoryUrl< string>][-ObjectType< FeedbackFeedbackData.ObjectTypeEnum>][-TraceIds< object>][-Type< FeedbackFeedbackData.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFeedbackFeedbackData [-AccountName< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlternativeFollowUpEmails< System.Collections.Generic.List`1[string]>][-ClassId< FeedbackFeedbackData.ClassIdEnum>][-Comment< string>][-Email< string>][-Evaluation< FeedbackFeedbackData.EvaluationEnum>][-FollowUp< bool>][-FullStoryUrl< string>][-ObjectType< FeedbackFeedbackData.ObjectTypeEnum>][-ProductSatisfactionScale< long>][-SurveyCompleted< bool>][-TraceIds< object>][-Type< FeedbackFeedbackData.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -174,6 +174,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ProductSatisfactionScale
+User&apos;s overall satisfaction with the product on a 0-10 scale.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SurveyCompleted
+Indicates if the user completed the survey. True if completed, false otherwise.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -TraceIds
 Bunch of last traceId for reproducing user last activity.
 
@@ -192,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-Type of the feedback from user.\n* `Evaluation` - User&apos;s feedback classified as an evaluation.\n* `Bug` - User&apos;s feedback classified as a bug.
+Type of the feedback from user.\n* `Evaluation` - User&apos;s feedback classified as an evaluation.\n* `Bug` - User&apos;s feedback classified as a bug.\n* `Survey` - User&apos;s response to a survey.
 
 ```yaml
 Type: FeedbackFeedbackData.TypeEnum

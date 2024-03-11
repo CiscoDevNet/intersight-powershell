@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIppoolIpV6Block [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IppoolIpV6Block.ClassIdEnum>][-From< string>][-ObjectType< IppoolIpV6Block.ObjectTypeEnum>][-Size< long>][-To< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIppoolIpV6Block [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IppoolIpV6Block.ClassIdEnum>][-From< string>][-IpV6Config< Model.IppoolIpV6Config>][-ObjectType< IppoolIpV6Block.ObjectTypeEnum>][-Size< long>][-To< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,23 @@ First IPv6 address of the block.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IpV6Config
+Netmask, Gateway and DNS settings for IPv6 addresses.
+
+Note :- Use Initialize-IntersightIppoolIpV6Config to create the object of complex type IppoolIpV6Config
+
+```yaml
+Type: Model.IppoolIpV6Config
 Parameter Sets: (All)
 Aliases:
 
@@ -170,3 +187,5 @@ PS C:\> Initialize-IntersightIppoolIpV6Block
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightIppoolIpV6Config](./Initialize-IntersightIppoolIpV6Config.md)

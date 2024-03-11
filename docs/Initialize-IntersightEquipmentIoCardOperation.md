@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentIoCardOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminPowerState< EquipmentIoCardOperation.AdminPowerStateEnum>][-ClassId< EquipmentIoCardOperation.ClassIdEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Moid< string>][-ObjectType< EquipmentIoCardOperation.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentIoCardOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminPeerPowerState< EquipmentIoCardOperation.AdminPeerPowerStateEnum>][-AdminPowerState< EquipmentIoCardOperation.AdminPowerStateEnum>][-ClassId< EquipmentIoCardOperation.ClassIdEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Moid< string>][-ObjectType< EquipmentIoCardOperation.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,8 +39,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -AdminPeerPowerState
+User configured power state of the peer IO module.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value.
+
+```yaml
+Type: EquipmentIoCardOperation.AdminPeerPowerStateEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -AdminPowerState
-User configured power state of the iomodule.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value.
+User configured power state of the IO module.\n* `None` - Placeholder default value for iom power state property.\n* `Reboot` - IO Module reboot state property value.
 
 ```yaml
 Type: EquipmentIoCardOperation.AdminPowerStateEnum

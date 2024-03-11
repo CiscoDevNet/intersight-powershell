@@ -147,3 +147,5 @@ PS C:\> New-IntersightFeedbackFeedbackPost
 [Initialize-IntersightFeedbackFeedbackData](./Initialize-IntersightFeedbackFeedbackData.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Set-IntersightFeedbackFeedbackPost](./Set-IntersightFeedbackFeedbackPost.md)
