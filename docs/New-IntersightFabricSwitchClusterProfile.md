@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricSwitchClusterProfile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchProfiles< System.Collections.Generic.List`1[FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< FabricSwitchClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricSwitchClusterProfile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchProfiles< System.Collections.Generic.List`1[FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< FabricSwitchClusterProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -159,6 +159,21 @@ Defines the type of the profile. Accepted values are instance or template.\n* `i
 
 ```yaml
 Type: FabricSwitchClusterProfile.TypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+The user defined label assigned to the switch profile.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentSwitchOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedAction< EquipmentSwitchOperation.AdminLocatorLedActionEnum>][-AdminLocatorLedActionState< EquipmentSwitchOperation.AdminLocatorLedActionStateEnum>][-ClassId< EquipmentSwitchOperation.ClassIdEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Moid< string>][-ObjectType< EquipmentSwitchOperation.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentSwitchOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminEvacState< EquipmentSwitchOperation.AdminEvacStateEnum>][-AdminLocatorLedAction< EquipmentSwitchOperation.AdminLocatorLedActionEnum>][-AdminLocatorLedActionState< EquipmentSwitchOperation.AdminLocatorLedActionStateEnum>][-ClassId< EquipmentSwitchOperation.ClassIdEnum>][-ConfigEvacState< EquipmentSwitchOperation.ConfigEvacStateEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-ForceEvac< bool>][-Moid< string>][-ObjectType< EquipmentSwitchOperation.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,21 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AdminEvacState
+Sets evacuation state of the switch. When evacuation is enabled, data traffic flowing through this switch will be suspended for all the servers. Fabric evacuation can be enabled during any maintenance activity on the switch in order to gracefully failover data flows to the peer switch.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State.
+
+```yaml
+Type: EquipmentSwitchOperation.AdminEvacStateEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -84,6 +99,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ConfigEvacState
+Captures the status of evacuation on this switch.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.
+
+```yaml
+Type: EquipmentSwitchOperation.ConfigEvacStateEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -DeviceRegistration
 A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -92,6 +122,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.AssetDeviceRegistrationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ForceEvac
+Evacuation is blocked by the system if it can cause a traffic outage in the domain. Select \&quot;Force Evacuation\&quot; only if system rejects the operation and you want to override that.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

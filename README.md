@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.15473
-- C# SDK version: 1.0.11.15473
+- Intersight.PowerShell version: 1.0.11.15830
+- C# SDK version: 1.0.11.15830
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.15473"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.15830"}
 ```
 or
 
@@ -1994,6 +1994,14 @@ ManagementInterface | [**Get-IntersightManagementInterface**](docs/Get-Intersigh
 ManagementController | [**Set-IntersightManagementController**](docs/Set-IntersightManagementController.md) | Update a 'ManagementController' resource.
 ManagementEntity | [**Set-IntersightManagementEntity**](docs/Set-IntersightManagementEntity.md) | Update a 'ManagementEntity' resource.
 ManagementInterface | [**Set-IntersightManagementInterface**](docs/Set-IntersightManagementInterface.md) | Update a 'ManagementInterface' resource.
+MarketplaceUseCase | [**Get-IntersightMarketplaceUseCase**](docs/Get-IntersightMarketplaceUseCase.md) | Read a 'MarketplaceUseCase' resource.
+MarketplaceUseCaseVersion | [**Get-IntersightMarketplaceUseCaseVersion**](docs/Get-IntersightMarketplaceUseCaseVersion.md) | Read a 'MarketplaceUseCaseVersion' resource.
+MarketplaceUseCase | [**New-IntersightMarketplaceUseCase**](docs/New-IntersightMarketplaceUseCase.md) | Create a 'MarketplaceUseCase' resource.
+MarketplaceUseCaseVersion | [**New-IntersightMarketplaceUseCaseVersion**](docs/New-IntersightMarketplaceUseCaseVersion.md) | Create a 'MarketplaceUseCaseVersion' resource.
+MarketplaceUseCase | [**Remove-IntersightMarketplaceUseCase**](docs/Remove-IntersightMarketplaceUseCase.md) | Delete a 'MarketplaceUseCase' resource.
+MarketplaceUseCaseVersion | [**Remove-IntersightMarketplaceUseCaseVersion**](docs/Remove-IntersightMarketplaceUseCaseVersion.md) | Delete a 'MarketplaceUseCaseVersion' resource.
+MarketplaceUseCase | [**Set-IntersightMarketplaceUseCase**](docs/Set-IntersightMarketplaceUseCase.md) | Update a 'MarketplaceUseCase' resource.
+MarketplaceUseCaseVersion | [**Set-IntersightMarketplaceUseCaseVersion**](docs/Set-IntersightMarketplaceUseCaseVersion.md) | Update a 'MarketplaceUseCaseVersion' resource.
 MemoryArray | [**Get-IntersightMemoryArray**](docs/Get-IntersightMemoryArray.md) | Read a 'MemoryArray' resource.
 MemoryPersistentMemoryConfigResult | [**Get-IntersightMemoryPersistentMemoryConfigResult**](docs/Get-IntersightMemoryPersistentMemoryConfigResult.md) | Read a 'MemoryPersistentMemoryConfigResult' resource.
 MemoryPersistentMemoryConfiguration | [**Get-IntersightMemoryPersistentMemoryConfiguration**](docs/Get-IntersightMemoryPersistentMemoryConfiguration.md) | Read a 'MemoryPersistentMemoryConfiguration' resource.
@@ -2362,6 +2370,8 @@ SnmpPolicy | [**Remove-IntersightSnmpPolicy**](docs/Remove-IntersightSnmpPolicy.
 SnmpPolicy | [**Set-IntersightSnmpPolicy**](docs/Set-IntersightSnmpPolicy.md) | Update a 'SnmpPolicy' resource.
 SoftwareApplianceDistributable | [**Get-IntersightSoftwareApplianceDistributable**](docs/Get-IntersightSoftwareApplianceDistributable.md) | Read a 'SoftwareApplianceDistributable' resource.
 SoftwareDownloadHistory | [**Get-IntersightSoftwareDownloadHistory**](docs/Get-IntersightSoftwareDownloadHistory.md) | Read a 'SoftwareDownloadHistory' resource.
+SoftwareHciBundleDistributable | [**Get-IntersightSoftwareHciBundleDistributable**](docs/Get-IntersightSoftwareHciBundleDistributable.md) | Read a 'SoftwareHciBundleDistributable' resource.
+SoftwareHciDistributable | [**Get-IntersightSoftwareHciDistributable**](docs/Get-IntersightSoftwareHciDistributable.md) | Read a 'SoftwareHciDistributable' resource.
 SoftwareHclMeta | [**Get-IntersightSoftwareHclMeta**](docs/Get-IntersightSoftwareHclMeta.md) | Read a 'SoftwareHclMeta' resource.
 SoftwareHyperflexBundleDistributable | [**Get-IntersightSoftwareHyperflexBundleDistributable**](docs/Get-IntersightSoftwareHyperflexBundleDistributable.md) | Read a 'SoftwareHyperflexBundleDistributable' resource.
 SoftwareHyperflexDistributable | [**Get-IntersightSoftwareHyperflexDistributable**](docs/Get-IntersightSoftwareHyperflexDistributable.md) | Read a 'SoftwareHyperflexDistributable' resource.
@@ -2371,6 +2381,8 @@ SoftwareSolutionDistributable | [**Get-IntersightSoftwareSolutionDistributable**
 SoftwareUcsdBundleDistributable | [**Get-IntersightSoftwareUcsdBundleDistributable**](docs/Get-IntersightSoftwareUcsdBundleDistributable.md) | Read a 'SoftwareUcsdBundleDistributable' resource.
 SoftwareUcsdDistributable | [**Get-IntersightSoftwareUcsdDistributable**](docs/Get-IntersightSoftwareUcsdDistributable.md) | Read a 'SoftwareUcsdDistributable' resource.
 SoftwareApplianceDistributable | [**New-IntersightSoftwareApplianceDistributable**](docs/New-IntersightSoftwareApplianceDistributable.md) | Create a 'SoftwareApplianceDistributable' resource.
+SoftwareHciBundleDistributable | [**New-IntersightSoftwareHciBundleDistributable**](docs/New-IntersightSoftwareHciBundleDistributable.md) | Create a 'SoftwareHciBundleDistributable' resource.
+SoftwareHciDistributable | [**New-IntersightSoftwareHciDistributable**](docs/New-IntersightSoftwareHciDistributable.md) | Create a 'SoftwareHciDistributable' resource.
 SoftwareHclMeta | [**New-IntersightSoftwareHclMeta**](docs/New-IntersightSoftwareHclMeta.md) | Create a 'SoftwareHclMeta' resource.
 SoftwareHyperflexBundleDistributable | [**New-IntersightSoftwareHyperflexBundleDistributable**](docs/New-IntersightSoftwareHyperflexBundleDistributable.md) | Create a 'SoftwareHyperflexBundleDistributable' resource.
 SoftwareHyperflexDistributable | [**New-IntersightSoftwareHyperflexDistributable**](docs/New-IntersightSoftwareHyperflexDistributable.md) | Create a 'SoftwareHyperflexDistributable' resource.
@@ -2380,6 +2392,8 @@ SoftwareSolutionDistributable | [**New-IntersightSoftwareSolutionDistributable**
 SoftwareUcsdBundleDistributable | [**New-IntersightSoftwareUcsdBundleDistributable**](docs/New-IntersightSoftwareUcsdBundleDistributable.md) | Create a 'SoftwareUcsdBundleDistributable' resource.
 SoftwareUcsdDistributable | [**New-IntersightSoftwareUcsdDistributable**](docs/New-IntersightSoftwareUcsdDistributable.md) | Create a 'SoftwareUcsdDistributable' resource.
 SoftwareApplianceDistributable | [**Remove-IntersightSoftwareApplianceDistributable**](docs/Remove-IntersightSoftwareApplianceDistributable.md) | Delete a 'SoftwareApplianceDistributable' resource.
+SoftwareHciBundleDistributable | [**Remove-IntersightSoftwareHciBundleDistributable**](docs/Remove-IntersightSoftwareHciBundleDistributable.md) | Delete a 'SoftwareHciBundleDistributable' resource.
+SoftwareHciDistributable | [**Remove-IntersightSoftwareHciDistributable**](docs/Remove-IntersightSoftwareHciDistributable.md) | Delete a 'SoftwareHciDistributable' resource.
 SoftwareHclMeta | [**Remove-IntersightSoftwareHclMeta**](docs/Remove-IntersightSoftwareHclMeta.md) | Delete a 'SoftwareHclMeta' resource.
 SoftwareHyperflexBundleDistributable | [**Remove-IntersightSoftwareHyperflexBundleDistributable**](docs/Remove-IntersightSoftwareHyperflexBundleDistributable.md) | Delete a 'SoftwareHyperflexBundleDistributable' resource.
 SoftwareHyperflexDistributable | [**Remove-IntersightSoftwareHyperflexDistributable**](docs/Remove-IntersightSoftwareHyperflexDistributable.md) | Delete a 'SoftwareHyperflexDistributable' resource.
@@ -2389,6 +2403,8 @@ SoftwareSolutionDistributable | [**Remove-IntersightSoftwareSolutionDistributabl
 SoftwareUcsdBundleDistributable | [**Remove-IntersightSoftwareUcsdBundleDistributable**](docs/Remove-IntersightSoftwareUcsdBundleDistributable.md) | Delete a 'SoftwareUcsdBundleDistributable' resource.
 SoftwareUcsdDistributable | [**Remove-IntersightSoftwareUcsdDistributable**](docs/Remove-IntersightSoftwareUcsdDistributable.md) | Delete a 'SoftwareUcsdDistributable' resource.
 SoftwareApplianceDistributable | [**Set-IntersightSoftwareApplianceDistributable**](docs/Set-IntersightSoftwareApplianceDistributable.md) | Update a 'SoftwareApplianceDistributable' resource.
+SoftwareHciBundleDistributable | [**Set-IntersightSoftwareHciBundleDistributable**](docs/Set-IntersightSoftwareHciBundleDistributable.md) | Update a 'SoftwareHciBundleDistributable' resource.
+SoftwareHciDistributable | [**Set-IntersightSoftwareHciDistributable**](docs/Set-IntersightSoftwareHciDistributable.md) | Update a 'SoftwareHciDistributable' resource.
 SoftwareHclMeta | [**Set-IntersightSoftwareHclMeta**](docs/Set-IntersightSoftwareHclMeta.md) | Update a 'SoftwareHclMeta' resource.
 SoftwareHyperflexBundleDistributable | [**Set-IntersightSoftwareHyperflexBundleDistributable**](docs/Set-IntersightSoftwareHyperflexBundleDistributable.md) | Update a 'SoftwareHyperflexBundleDistributable' resource.
 SoftwareHyperflexDistributable | [**Set-IntersightSoftwareHyperflexDistributable**](docs/Set-IntersightSoftwareHyperflexDistributable.md) | Update a 'SoftwareHyperflexDistributable' resource.
@@ -2676,6 +2692,7 @@ VirtualizationVmwareHostGpu | [**Get-IntersightVirtualizationVmwareHostGpu**](do
 VirtualizationVmwareKernelNetwork | [**Get-IntersightVirtualizationVmwareKernelNetwork**](docs/Get-IntersightVirtualizationVmwareKernelNetwork.md) | Read a 'VirtualizationVmwareKernelNetwork' resource.
 VirtualizationVmwareNetwork | [**Get-IntersightVirtualizationVmwareNetwork**](docs/Get-IntersightVirtualizationVmwareNetwork.md) | Read a 'VirtualizationVmwareNetwork' resource.
 VirtualizationVmwarePhysicalNetworkInterface | [**Get-IntersightVirtualizationVmwarePhysicalNetworkInterface**](docs/Get-IntersightVirtualizationVmwarePhysicalNetworkInterface.md) | Read a 'VirtualizationVmwarePhysicalNetworkInterface' resource.
+VirtualizationVmwareProactiveHa | [**Get-IntersightVirtualizationVmwareProactiveHa**](docs/Get-IntersightVirtualizationVmwareProactiveHa.md) | Read a 'VirtualizationVmwareProactiveHa' resource.
 VirtualizationVmwareUplinkPort | [**Get-IntersightVirtualizationVmwareUplinkPort**](docs/Get-IntersightVirtualizationVmwareUplinkPort.md) | Read a 'VirtualizationVmwareUplinkPort' resource.
 VirtualizationVmwareVcenter | [**Get-IntersightVirtualizationVmwareVcenter**](docs/Get-IntersightVirtualizationVmwareVcenter.md) | Read a 'VirtualizationVmwareVcenter' resource.
 VirtualizationVmwareVirtualDisk | [**Get-IntersightVirtualizationVmwareVirtualDisk**](docs/Get-IntersightVirtualizationVmwareVirtualDisk.md) | Read a 'VirtualizationVmwareVirtualDisk' resource.

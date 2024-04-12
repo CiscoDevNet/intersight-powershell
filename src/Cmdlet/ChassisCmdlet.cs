@@ -1059,6 +1059,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"User label assigned to the chassis profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
+        {
+            get;
+            set;
+        }
+
 
 
     }
@@ -1379,6 +1390,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"User label assigned to the chassis profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
+        {
+            get;
+            set;
+        }
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ChassisProfile.</para>
@@ -1581,6 +1603,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ChassisProfile.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User label assigned to the chassis profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
         {
             get;
             set;

@@ -79,6 +79,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The user defined label assigned to the chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -100,6 +110,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserLabel"))
+            {
+                initObject.UserLabel = this.UserLabel;
             }
             WriteObject(initObject);
         }
@@ -3119,9 +3133,11 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightEquipmentSwitchOperation()
         {
+            AdminEvacState = EquipmentSwitchOperation.AdminEvacStateEnum.Disabled;
             AdminLocatorLedAction = EquipmentSwitchOperation.AdminLocatorLedActionEnum.None;
             AdminLocatorLedActionState = EquipmentSwitchOperation.AdminLocatorLedActionStateEnum.None;
             ClassId = EquipmentSwitchOperation.ClassIdEnum.EquipmentSwitchOperation;
+            ConfigEvacState = EquipmentSwitchOperation.ConfigEvacStateEnum.None;
             ObjectType = EquipmentSwitchOperation.ObjectTypeEnum.EquipmentSwitchOperation;
 
         }
@@ -3131,6 +3147,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Sets evacuation state of the switch. When evacuation is enabled, data traffic flowing through this switch will be suspended for all the servers. Fabric evacuation can be enabled during any maintenance activity on the switch in order to gracefully failover data flows to the peer switch.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentSwitchOperation.AdminEvacStateEnum AdminEvacState
         {
             get;
             set;
@@ -3166,11 +3192,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Captures the status of evacuation on this switch.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentSwitchOperation.ConfigEvacStateEnum ConfigEvacState
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.AssetDeviceRegistrationRelationship DeviceRegistration
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Evacuation is blocked by the system if it can cause a traffic outage in the domain. Select \"Force Evacuation\" only if system rejects the operation and you want to override that."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ForceEvac
         {
             get;
             set;
@@ -3213,6 +3259,10 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminEvacState"))
+            {
+                initObject.AdminEvacState = this.AdminEvacState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdminLocatorLedAction"))
             {
                 initObject.AdminLocatorLedAction = this.AdminLocatorLedAction;
@@ -3222,9 +3272,17 @@ namespace Intersight.PowerShell
                 initObject.AdminLocatorLedActionState = this.AdminLocatorLedActionState;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigEvacState"))
+            {
+                initObject.ConfigEvacState = this.ConfigEvacState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("DeviceRegistration"))
             {
                 initObject.DeviceRegistration = this.DeviceRegistration;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ForceEvac"))
+            {
+                initObject.ForceEvac = this.ForceEvac;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {

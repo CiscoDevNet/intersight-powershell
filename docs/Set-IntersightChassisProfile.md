@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< EquipmentChassisRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< EquipmentChassisRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -258,6 +258,21 @@ Defines the type of the profile. Accepted values are instance or template.\n* `i
 
 ```yaml
 Type: ChassisProfile.TypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+User label assigned to the chassis profile.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

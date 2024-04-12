@@ -427,11 +427,11 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Administratively configured state of Fabric Evacuation feature, for this switch."</para>
+        /// <para type="description">"Administratively configured state of Fabric Evacuation feature, for this switch.\n* `` - Evacuation state of the switch is unknown.\n* `enabled` - Evacuation state of the switch is enabled.\n* `disabled` - Evacuation state of the switch is disabled.\n* `applying` - Evacuation state of the switch when evacuation is in progress.\n* `on` - Evacuation state of the switch is enabled.\n* `off` - Evacuation state of the switch is disabled.\n* `N/A` - Evacuation state of the switch is not applicable."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public string AdminEvacState
+        public NetworkElement.AdminEvacStateEnum AdminEvacState
         {
             get;
             set;
@@ -815,11 +815,11 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Operational state of the Fabric Evacuation feature, for this switch."</para>
+        /// <para type="description">"Operational state of the Fabric Evacuation feature, for this switch.\n* `` - Evacuation state of the switch is unknown.\n* `enabled` - Evacuation state of the switch is enabled.\n* `disabled` - Evacuation state of the switch is disabled.\n* `applying` - Evacuation state of the switch when evacuation is in progress.\n* `on` - Evacuation state of the switch is enabled.\n* `off` - Evacuation state of the switch is disabled.\n* `N/A` - Evacuation state of the switch is not applicable."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public string OperEvacState
+        public NetworkElement.OperEvacStateEnum OperEvacState
         {
             get;
             set;
@@ -969,6 +969,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The flag to indicate the firmware of peer Fabric Interconnect is out of sync."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool PeerFirmwareOutOfSync
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -1087,6 +1098,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The name of switch profile associated with the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SwitchProfileName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The Switch type that the network element is a part of.\n* `FabricInterconnect` - The default Switch type of UCSM and IMM mode devices.\n* `NexusDevice` - Switch type of Nexus devices.\n* `MDSDevice` - Switch type of Nexus MDS devices."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1148,6 +1170,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public FirmwareRunningFirmwareRelationship UcsmRunningFirmware
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The user defined label assigned to the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
         {
             get;
             set;
@@ -1219,11 +1252,11 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Administratively configured state of Fabric Evacuation feature, for this switch."</para>
+        /// <para type="description">"Administratively configured state of Fabric Evacuation feature, for this switch.\n* `` - Evacuation state of the switch is unknown.\n* `enabled` - Evacuation state of the switch is enabled.\n* `disabled` - Evacuation state of the switch is disabled.\n* `applying` - Evacuation state of the switch when evacuation is in progress.\n* `on` - Evacuation state of the switch is enabled.\n* `off` - Evacuation state of the switch is disabled.\n* `N/A` - Evacuation state of the switch is not applicable."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public string AdminEvacState
+        public NetworkElementSummary.AdminEvacStateEnum AdminEvacState
         {
             get;
             set;
@@ -1661,11 +1694,11 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Operational state of the Fabric Evacuation feature, for this switch."</para>
+        /// <para type="description">"Operational state of the Fabric Evacuation feature, for this switch.\n* `` - Evacuation state of the switch is unknown.\n* `enabled` - Evacuation state of the switch is enabled.\n* `disabled` - Evacuation state of the switch is disabled.\n* `applying` - Evacuation state of the switch when evacuation is in progress.\n* `on` - Evacuation state of the switch is enabled.\n* `off` - Evacuation state of the switch is disabled.\n* `N/A` - Evacuation state of the switch is not applicable."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public string OperEvacState
+        public NetworkElementSummary.OperEvacStateEnum OperEvacState
         {
             get;
             set;
@@ -1815,6 +1848,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The flag to indicate the firmware of peer Fabric Interconnect is out of sync."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool PeerFirmwareOutOfSync
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
@@ -1927,6 +1971,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The name of switch profile associated with the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SwitchProfileName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The Switch type that the network element is a part of.\n* `FabricInterconnect` - The default Switch type of UCSM and IMM mode devices.\n* `NexusDevice` - Switch type of Nexus devices.\n* `MDSDevice` - Switch type of Nexus MDS devices."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1966,6 +2021,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long TotalMemory
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The user defined label assigned to the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
         {
             get;
             set;
@@ -5185,6 +5251,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to processorUnit resources."</para>
         /// </summary>
@@ -5226,6 +5293,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -5280,6 +5348,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FirmwareRunningFirmwareRelationship UcsmRunningFirmware
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The user defined label assigned to the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
         {
             get;
             set;

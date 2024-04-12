@@ -431,6 +431,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"The user defined label assigned to the chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7401,6 +7412,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Sets evacuation state of the switch. When evacuation is enabled, data traffic flowing through this switch will be suspended for all the servers. Fabric evacuation can be enabled during any maintenance activity on the switch in order to gracefully failover data flows to the peer switch.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public EquipmentSwitchOperation.AdminEvacStateEnum AdminEvacState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Action performed on the locator LED of the switch.\n* `None` - No operation action for the Locator Led of an equipment.\n* `TurnOn` - Turn on the Locator Led of an equipment.\n* `TurnOff` - Turn off the Locator Led of an equipment."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7422,6 +7444,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Captures the status of evacuation on this switch.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public EquipmentSwitchOperation.ConfigEvacStateEnum ConfigEvacState
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
@@ -7451,6 +7484,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Evacuation is blocked by the system if it can cause a traffic outage in the domain. Select \"Force Evacuation\" only if system rejects the operation and you want to override that."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool ForceEvac
         {
             get;
             set;
@@ -8688,6 +8732,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The user defined label assigned to the chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
         {
             get;
             set;
@@ -10684,6 +10739,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Sets evacuation state of the switch. When evacuation is enabled, data traffic flowing through this switch will be suspended for all the servers. Fabric evacuation can be enabled during any maintenance activity on the switch in order to gracefully failover data flows to the peer switch.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentSwitchOperation.AdminEvacStateEnum AdminEvacState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Action performed on the locator LED of the switch.\n* `None` - No operation action for the Locator Led of an equipment.\n* `TurnOn` - Turn on the Locator Led of an equipment.\n* `TurnOff` - Turn off the Locator Led of an equipment."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -10706,6 +10772,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Captures the status of evacuation on this switch.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentSwitchOperation.ConfigEvacStateEnum ConfigEvacState
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -10718,6 +10795,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Evacuation is blocked by the system if it can cause a traffic outage in the domain. Select \"Force Evacuation\" only if system rejects the operation and you want to override that."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ForceEvac
+        {
+            get;
+            set;
+        }
 
 
         // <summary>

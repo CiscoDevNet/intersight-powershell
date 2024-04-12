@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< Model.CertificatemanagementCertificateBase>][-ClassId< ComputeServerSetting.ClassIdEnum>][-ClearSel< ComputeServerSetting.ClearSelEnum>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-CollectSel< ComputeServerSetting.CollectSelEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][-KvmReset< ComputeServerSetting.KvmResetEnum>][-Moid< string>][-ObjectType< ComputeServerSetting.ObjectTypeEnum>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< Model.ComputePersistentMemoryOperation>][-ServerConfig< Model.ComputeServerConfig>][-ServerOpStatus< System.Collections.Generic.List`1[Model.ComputeServerOpStatus]>][-StorageControllerOperation< Model.ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< Model.ComputeStoragePhysicalDriveOperation>][-StorageVirtualDriveOperation< Model.ComputeStorageVirtualDriveOperation>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TpmReset< ComputeServerSetting.TpmResetEnum>][-TunneledKvmState< ComputeServerSetting.TunneledKvmStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< Model.CertificatemanagementCertificateBase>][-ClassId< ComputeServerSetting.ClassIdEnum>][-ClearSel< ComputeServerSetting.ClearSelEnum>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-CollectSel< ComputeServerSetting.CollectSelEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][-HostInitConfiguration< string>][-KvmReset< ComputeServerSetting.KvmResetEnum>][-Moid< string>][-ObjectType< ComputeServerSetting.ObjectTypeEnum>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< Model.ComputePersistentMemoryOperation>][-PersonalitySetting< Model.ComputePersonalitySetting>][-ServerConfig< Model.ComputeServerConfig>][-ServerOpStatus< System.Collections.Generic.List`1[Model.ComputeServerOpStatus]>][-StorageControllerOperation< Model.ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< Model.ComputeStoragePhysicalDriveOperation>][-StorageUtilityImageOperation< Model.ComputeStorageUtilityImageOperation>][-StorageVirtualDriveOperation< Model.ComputeStorageVirtualDriveOperation>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TpmReset< ComputeServerSetting.TpmResetEnum>][-TunneledKvmState< ComputeServerSetting.TunneledKvmStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -161,6 +161,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -HostInitConfiguration
+The JSON formatted host initialization configuration containing the basic information for doing an initial boot. The information will be sent to CIMC and stored in host-init.json file on the server. The stored file can only be access using IPMI tool on the host OS.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -KvmReset
 The allowed actions on the vKVM Reset.\n* `Ready` - Reset vKVM operation is allowed to be done on the server in this state.\n* `Reset` - The value that the UI/API needs to provide to trigger a Reset vKVM operation on a server.
 
@@ -238,6 +253,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PersonalitySetting
+The personality value to be set on the server. Any additional information like the hypervisor type, last update time can also be set through this server setting.
+
+Note :- Use Initialize-IntersightComputePersonalitySetting to create the object of complex type ComputePersonalitySetting
+
+```yaml
+Type: Model.ComputePersonalitySetting
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ServerConfig
 The common server configurable properties between a server and a server profile.
 
@@ -296,6 +328,23 @@ Note :- Use Initialize-IntersightComputeStoragePhysicalDriveOperation to create 
 
 ```yaml
 Type: Model.ComputeStoragePhysicalDriveOperation
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StorageUtilityImageOperation
+The storage utility image operation properties.
+
+Note :- Use Initialize-IntersightComputeStorageUtilityImageOperation to create the object of complex type ComputeStorageUtilityImageOperation
+
+```yaml
+Type: Model.ComputeStorageUtilityImageOperation
 Parameter Sets: (All)
 Aliases:
 
@@ -431,6 +480,8 @@ PS C:\> Initialize-IntersightComputeServerSetting
 
 [Initialize-IntersightComputePersistentMemoryOperation](./Initialize-IntersightComputePersistentMemoryOperation.md)
 
+[Initialize-IntersightComputePersonalitySetting](./Initialize-IntersightComputePersonalitySetting.md)
+
 [Initialize-IntersightComputeServerConfig](./Initialize-IntersightComputeServerConfig.md)
 
 [Initialize-IntersightComputeServerOpStatus](./Initialize-IntersightComputeServerOpStatus.md)
@@ -438,6 +489,8 @@ PS C:\> Initialize-IntersightComputeServerSetting
 [Initialize-IntersightComputeStorageControllerOperation](./Initialize-IntersightComputeStorageControllerOperation.md)
 
 [Initialize-IntersightComputeStoragePhysicalDriveOperation](./Initialize-IntersightComputeStoragePhysicalDriveOperation.md)
+
+[Initialize-IntersightComputeStorageUtilityImageOperation](./Initialize-IntersightComputeStorageUtilityImageOperation.md)
 
 [Initialize-IntersightComputeStorageVirtualDriveOperation](./Initialize-IntersightComputeStorageVirtualDriveOperation.md)
 

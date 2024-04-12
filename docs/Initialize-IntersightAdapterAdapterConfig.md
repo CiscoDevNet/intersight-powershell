@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAdapterAdapterConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AdapterAdapterConfig.ClassIdEnum>][-DceInterfaceSettings< System.Collections.Generic.List`1[Model.AdapterDceInterfaceSettings]>][-EthSettings< Model.AdapterEthSettings>][-FcSettings< Model.AdapterFcSettings>][-ObjectType< AdapterAdapterConfig.ObjectTypeEnum>][-PortChannelSettings< Model.AdapterPortChannelSettings>][-SlotId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAdapterAdapterConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AdapterAdapterConfig.ClassIdEnum>][-DceInterfaceSettings< System.Collections.Generic.List`1[Model.AdapterDceInterfaceSettings]>][-EthSettings< Model.AdapterEthSettings>][-FcSettings< Model.AdapterFcSettings>][-ObjectType< AdapterAdapterConfig.ObjectTypeEnum>][-PhysicalNicModeSettings< Model.AdapterPhysicalNicModeSettings>][-PortChannelSettings< Model.AdapterPortChannelSettings>][-SlotId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -120,6 +120,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PhysicalNicModeSettings
+Physical NIC Mode Settings for this adapter.
+
+Note :- Use Initialize-IntersightAdapterPhysicalNicModeSettings to create the object of complex type AdapterPhysicalNicModeSettings
+
+```yaml
+Type: Model.AdapterPhysicalNicModeSettings
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PortChannelSettings
 Port Channel settings for this adapter.
 
@@ -214,5 +231,7 @@ PS C:\> Initialize-IntersightAdapterAdapterConfig
 [Initialize-IntersightAdapterEthSettings](./Initialize-IntersightAdapterEthSettings.md)
 
 [Initialize-IntersightAdapterFcSettings](./Initialize-IntersightAdapterFcSettings.md)
+
+[Initialize-IntersightAdapterPhysicalNicModeSettings](./Initialize-IntersightAdapterPhysicalNicModeSettings.md)
 
 [Initialize-IntersightAdapterPortChannelSettings](./Initialize-IntersightAdapterPortChannelSettings.md)

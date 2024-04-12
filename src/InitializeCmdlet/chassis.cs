@@ -1049,6 +1049,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"User label assigned to the chassis profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -1114,6 +1124,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserLabel"))
+            {
+                initObject.UserLabel = this.UserLabel;
             }
             WriteObject(initObject);
         }
