@@ -3908,6 +3908,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The JSON formatted host initialization configuration containing the basic information for doing an initial boot. The information will be sent to CIMC and stored in host-init.json file on the server. The stored file can only be access using IPMI tool on the host OS."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string HostInitConfiguration
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The allowed actions on the vKVM Reset.\n* `Ready` - Reset vKVM operation is allowed to be done on the server in this state.\n* `Reset` - The value that the UI/API needs to provide to trigger a Reset vKVM operation on a server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3987,6 +3998,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -4043,6 +4055,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -5935,6 +5948,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The JSON formatted host initialization configuration containing the basic information for doing an initial boot. The information will be sent to CIMC and stored in host-init.json file on the server. The stored file can only be access using IPMI tool on the host OS."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string HostInitConfiguration
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The allowed actions on the vKVM Reset.\n* `Ready` - Reset vKVM operation is allowed to be done on the server in this state.\n* `Reset` - The value that the UI/API needs to provide to trigger a Reset vKVM operation on a server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5984,6 +6008,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The personality value to be set on the server. Any additional information like the hypervisor type, last update time can also be set through this server setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePersonalitySetting PersonalitySetting
+        {
+            get;
+            set;
+        }
+
 
 
 
@@ -6028,6 +6063,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ComputeStoragePhysicalDriveOperation StoragePhysicalDriveOperation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The storage utility image operation properties."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeStorageUtilityImageOperation StorageUtilityImageOperation
         {
             get;
             set;

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageM2VirtualDriveConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageM2VirtualDriveConfig.ClassIdEnum>][-ControllerSlot< StorageM2VirtualDriveConfig.ControllerSlotEnum>][-Enable< bool>][-ObjectType< StorageM2VirtualDriveConfig.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageM2VirtualDriveConfig [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageM2VirtualDriveConfig.ClassIdEnum>][-ControllerSlot< StorageM2VirtualDriveConfig.ControllerSlotEnum>][-Enable< bool>][-Name< string>][-ObjectType< StorageM2VirtualDriveConfig.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,6 +74,21 @@ If enabled, this will create a virtual drive on the M.2 RAID controller.
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+The name of the virtual drive. The name can be between 1 and 15 alphanumeric characters. Spaces or any special characters other than - (hyphen), _ (underscore), : (colon), and . (period) are not allowed. This field will be pre-populated with the default or user configured value which can be edited.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

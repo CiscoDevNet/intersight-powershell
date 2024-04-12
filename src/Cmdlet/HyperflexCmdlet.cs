@@ -11399,6 +11399,7 @@ namespace Intersight.PowerShell
 
 
 
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexStorageContainer.</para>
@@ -18046,6 +18047,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<HyperflexReSyncClusterMoIds> TargetDetails
         {
             get;
             set;

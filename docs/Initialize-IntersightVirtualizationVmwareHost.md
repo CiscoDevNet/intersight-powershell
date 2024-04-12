@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationVmwareHost [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootTime< DateTime>][-ClassId< VirtualizationVmwareHost.ClassIdEnum>][-Cluster< Model.VirtualizationVmwareClusterRelationship>][-ConnectionState< string>][-CpuInfo< Model.VirtualizationCpuInfo>][-DcInvPath< string>][-DnsServers< System.Collections.Generic.List`1[string]>][-HardwareInfo< Model.InfraHardwareInfo>][-HwPowerState< VirtualizationVmwareHost.HwPowerStateEnum>][-HypervisorType< VirtualizationVmwareHost.HypervisorTypeEnum>][-Identity< string>][-IsSshEnabled< bool>][-MaintenanceMode< bool>][-MemoryCapacity< Model.VirtualizationMemoryCapacity>][-Model< string>][-Moid< string>][-Name< string>][-NetworkAdapterCount< long>][-NtpServers< System.Collections.Generic.List`1[string]>][-ObjectType< VirtualizationVmwareHost.ObjectTypeEnum>][-ProcessorCapacity< Model.VirtualizationComputeCapacity>][-ProductInfo< Model.VirtualizationProductInfo>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-ResourceConsumed< Model.VirtualizationVmwareResourceConsumption>][-Serial< string>][-Status< VirtualizationVmwareHost.StatusEnum>][-StorageAdapterCount< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TimeZone< string>][-UpTime< string>][-Uuid< string>][-VcenterHostId< string>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVirtualizationVmwareHost [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootTime< DateTime>][-ClassId< VirtualizationVmwareHost.ClassIdEnum>][-Cluster< Model.VirtualizationVmwareClusterRelationship>][-ConnectionState< string>][-CpuInfo< Model.VirtualizationCpuInfo>][-DcInvPath< string>][-DnsServers< System.Collections.Generic.List`1[string]>][-HardwareInfo< Model.InfraHardwareInfo>][-HwPowerState< VirtualizationVmwareHost.HwPowerStateEnum>][-HypervisorType< VirtualizationVmwareHost.HypervisorTypeEnum>][-Identity< string>][-IsSshEnabled< bool>][-MaintenanceMode< bool>][-MemoryCapacity< Model.VirtualizationMemoryCapacity>][-Model< string>][-Moid< string>][-Name< string>][-NetworkAdapterCount< long>][-NtpServers< System.Collections.Generic.List`1[string]>][-ObjectType< VirtualizationVmwareHost.ObjectTypeEnum>][-ProcessorCapacity< Model.VirtualizationComputeCapacity>][-ProductInfo< Model.VirtualizationProductInfo>][-QuarantineMode< bool>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-ResourceConsumed< Model.VirtualizationVmwareResourceConsumption>][-Serial< string>][-Status< VirtualizationVmwareHost.StatusEnum>][-StorageAdapterCount< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TimeZone< string>][-UpTime< string>][-Uuid< string>][-VcenterHostId< string>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -372,6 +372,21 @@ Note :- Use Initialize-IntersightVirtualizationProductInfo to create the object 
 
 ```yaml
 Type: Model.VirtualizationProductInfo
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -QuarantineMode
+Indicates if the host is in quarantine mode. Will be set to True, when in quarantine mode.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

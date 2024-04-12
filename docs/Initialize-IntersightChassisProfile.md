@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< Model.EquipmentChassisRelationship>][-ClassId< ChassisProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ChassisProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< Model.EquipmentChassisRelationship>][-ClassId< ChassisProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ChassisProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -289,6 +289,21 @@ Defines the type of the profile. Accepted values are instance or template.\n* `i
 
 ```yaml
 Type: ChassisProfile.TypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+User label assigned to the chassis profile.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

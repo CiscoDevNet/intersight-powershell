@@ -430,6 +430,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The user defined label assigned to the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Firmware version of the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -532,6 +542,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("UcsmRunningFirmware"))
             {
                 initObject.UcsmRunningFirmware = this.UcsmRunningFirmware;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserLabel"))
+            {
+                initObject.UserLabel = this.UserLabel;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {

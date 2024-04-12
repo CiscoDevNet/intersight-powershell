@@ -80,6 +80,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Physical NIC Mode Settings for this adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AdapterPhysicalNicModeSettings PhysicalNicModeSettings
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Port Channel settings for this adapter."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -121,6 +131,10 @@ namespace Intersight.PowerShell
                 initObject.FcSettings = this.FcSettings;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PhysicalNicModeSettings"))
+            {
+                initObject.PhysicalNicModeSettings = this.PhysicalNicModeSettings;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("PortChannelSettings"))
             {
                 initObject.PortChannelSettings = this.PortChannelSettings;
@@ -1069,6 +1083,76 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AdapterPhysicalNicModeSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAdapterPhysicalNicModeSettings")]
+    public class InitializeIntersightAdapterPhysicalNicModeSettings : PSCmdlet
+    {
+        public InitializeIntersightAdapterPhysicalNicModeSettings()
+        {
+            ClassId = AdapterPhysicalNicModeSettings.ClassIdEnum.AdapterPhysicalNicModeSettings;
+            ObjectType = AdapterPhysicalNicModeSettings.ObjectTypeEnum.AdapterPhysicalNicModeSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AdapterPhysicalNicModeSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AdapterPhysicalNicModeSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When Physical NIC Mode is enabled, up-link ports of the VIC are set to pass-through mode. This allows the host to transmit packets without any modification. When Physical NIC Mode is enabled, VLAN tagging of the packets will not happen."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool PhyNicEnabled
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.AdapterPhysicalNicModeSettings initObject = new Intersight.Model.AdapterPhysicalNicModeSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PhyNicEnabled"))
+            {
+                initObject.PhyNicEnabled = this.PhyNicEnabled;
             }
             WriteObject(initObject);
         }

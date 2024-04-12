@@ -1128,7 +1128,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The timeout for the HTTP request to complete, from connection establishment to response body read complete. If not set, a default timeout of five minutes is used."</para>
+        /// <para type="description">"The timeout for the HTTP request to complete, from connection establishment to response body read complete. If not set, a default timeout of four minutes is used."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

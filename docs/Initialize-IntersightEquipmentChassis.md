@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-ClassId< EquipmentChassis.ClassIdEnum>][-Moid< string>][-ObjectType< EquipmentChassis.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-ClassId< EquipmentChassis.ClassIdEnum>][-Moid< string>][-ObjectType< EquipmentChassis.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -108,6 +108,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+The user defined label assigned to the chassis.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

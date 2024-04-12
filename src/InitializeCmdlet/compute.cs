@@ -1312,6 +1312,90 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputePersonalitySetting.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputePersonalitySetting")]
+    public class InitializeIntersightComputePersonalitySetting : PSCmdlet
+    {
+        public InitializeIntersightComputePersonalitySetting()
+        {
+            ClassId = ComputePersonalitySetting.ClassIdEnum.ComputePersonalitySetting;
+            ObjectType = ComputePersonalitySetting.ObjectTypeEnum.ComputePersonalitySetting;
+
+        }
+        // <summary>
+        /// <para type="description">"Additional information to be set along with the personality value. This can include information like the\nhypervisor type, last update time etc.."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object AdditionalInformation
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePersonalitySetting.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePersonalitySetting.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The personality value that is to be set for the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Personality
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.ComputePersonalitySetting initObject = new Intersight.Model.ComputePersonalitySetting();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalInformation"))
+            {
+                initObject.AdditionalInformation = this.AdditionalInformation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Personality"))
+            {
+                initObject.Personality = this.Personality;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ComputePhysicalSummary.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightComputePhysicalSummary")]
@@ -2618,6 +2702,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The JSON formatted host initialization configuration containing the basic information for doing an initial boot. The information will be sent to CIMC and stored in host-init.json file on the server. The stored file can only be access using IPMI tool on the host OS."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string HostInitConfiguration
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The allowed actions on the vKVM Reset.\n* `Ready` - Reset vKVM operation is allowed to be done on the server in this state.\n* `Reset` - The value that the UI/API needs to provide to trigger a Reset vKVM operation on a server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2668,6 +2762,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The personality value to be set on the server. Any additional information like the hypervisor type, last update time can also be set through this server setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ComputePersonalitySetting PersonalitySetting
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The common server configurable properties between a server and a server profile."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2703,6 +2807,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.ComputeStoragePhysicalDriveOperation StoragePhysicalDriveOperation
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The storage utility image operation properties."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ComputeStorageUtilityImageOperation StorageUtilityImageOperation
         {
             get;
             set;
@@ -2784,6 +2898,10 @@ namespace Intersight.PowerShell
             {
                 initObject.FrontPanelLockState = this.FrontPanelLockState;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("HostInitConfiguration"))
+            {
+                initObject.HostInitConfiguration = this.HostInitConfiguration;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("KvmReset"))
             {
                 initObject.KvmReset = this.KvmReset;
@@ -2801,6 +2919,10 @@ namespace Intersight.PowerShell
             {
                 initObject.PersistentMemoryOperation = this.PersistentMemoryOperation;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PersonalitySetting"))
+            {
+                initObject.PersonalitySetting = this.PersonalitySetting;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ServerConfig"))
             {
                 initObject.ServerConfig = this.ServerConfig;
@@ -2816,6 +2938,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("StoragePhysicalDriveOperation"))
             {
                 initObject.StoragePhysicalDriveOperation = this.StoragePhysicalDriveOperation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StorageUtilityImageOperation"))
+            {
+                initObject.StorageUtilityImageOperation = this.StorageUtilityImageOperation;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("StorageVirtualDriveOperation"))
             {
@@ -3129,6 +3255,105 @@ namespace Intersight.PowerShell
             {
                 initObject.PhysicalDrives = this.PhysicalDrives;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeStorageUtilityImageOperation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeStorageUtilityImageOperation")]
+    public class InitializeIntersightComputeStorageUtilityImageOperation : PSCmdlet
+    {
+        public InitializeIntersightComputeStorageUtilityImageOperation()
+        {
+            Action = ComputeStorageUtilityImageOperation.ActionEnum.None;
+            ClassId = ComputeStorageUtilityImageOperation.ClassIdEnum.ComputeStorageUtilityImageOperation;
+            ObjectType = ComputeStorageUtilityImageOperation.ObjectTypeEnum.ComputeStorageUtilityImageOperation;
+
+        }
+        // <summary>
+        /// <para type="description">"Actions that can be performed by the storage utility.\n* `None` - No action by storage utility.\n* `Upload` - Upload action by storage utility.\n* `TurnOnImageVisibility` - Turn on image's visibility.\n* `TurnOffImageVisibility` - Turn off image's visibility."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeStorageUtilityImageOperation.ActionEnum Action
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeStorageUtilityImageOperation.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The image name this action operates on."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ImageName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The image type this action operates on."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ImageType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeStorageUtilityImageOperation.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.ComputeStorageUtilityImageOperation initObject = new Intersight.Model.ComputeStorageUtilityImageOperation();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
+            {
+                initObject.Action = this.Action;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImageName"))
+            {
+                initObject.ImageName = this.ImageName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImageType"))
+            {
+                initObject.ImageType = this.ImageType;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

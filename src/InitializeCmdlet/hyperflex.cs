@@ -9944,6 +9944,62 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize HyperflexReSyncClusterMoIds.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightHyperflexReSyncClusterMoIds")]
+    public class InitializeIntersightHyperflexReSyncClusterMoIds : PSCmdlet
+    {
+        public InitializeIntersightHyperflexReSyncClusterMoIds()
+        {
+            ClassId = HyperflexReSyncClusterMoIds.ClassIdEnum.HyperflexReSyncClusterMoIds;
+            ObjectType = HyperflexReSyncClusterMoIds.ObjectTypeEnum.HyperflexReSyncClusterMoIds;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HyperflexReSyncClusterMoIds.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HyperflexReSyncClusterMoIds.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.HyperflexReSyncClusterMoIds initObject = new Intersight.Model.HyperflexReSyncClusterMoIds();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize HyperflexReduceReSync.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightHyperflexReduceReSync")]
@@ -12268,6 +12324,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.HyperflexReSyncClusterMoIds> TargetDetails
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -12293,6 +12359,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetDetails"))
+            {
+                initObject.TargetDetails = this.TargetDetails;
             }
             WriteObject(initObject);
         }

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightHyperflexStartReduceReSync [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterMoIds< System.Collections.Generic.List`1[string]>][-Moid< string>][-Operation< HyperflexStartReduceReSync.OperationEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightHyperflexStartReduceReSync [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterMoIds< System.Collections.Generic.List`1[string]>][-Moid< string>][-Operation< HyperflexStartReduceReSync.OperationEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetDetails< System.Collections.Generic.List`1[HyperflexReSyncClusterMoIds]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -100,6 +100,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -TargetDetails
+
+
+Note :- Use Initialize-IntersightHyperflexReSyncClusterMoIds to create the object of complex type HyperflexReSyncClusterMoIds
+
+```yaml
+Type: System.Collections.Generic.List`1[HyperflexReSyncClusterMoIds]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -158,5 +175,7 @@ PS C:\> New-IntersightHyperflexStartReduceReSync
 ## RELATED LINKS
 
 [Get-IntersightHyperflexStartReduceReSync](./Get-IntersightHyperflexStartReduceReSync.md)
+
+[Initialize-IntersightHyperflexReSyncClusterMoIds](./Initialize-IntersightHyperflexReSyncClusterMoIds.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

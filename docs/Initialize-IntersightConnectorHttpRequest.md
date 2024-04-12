@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
-The timeout for the HTTP request to complete, from connection establishment to response body read complete. If not set, a default timeout of five minutes is used.
+The timeout for the HTTP request to complete, from connection establishment to response body read complete. If not set, a default timeout of four minutes is used.
 
 ```yaml
 Type: long
