@@ -1122,16 +1122,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a managementController resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.ManagementControllerRelationship MgmtController
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1201,10 +1191,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("HostPorts"))
             {
                 initObject.HostPorts = this.HostPorts;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MgmtController"))
-            {
-                initObject.MgmtController = this.MgmtController;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
@@ -1737,16 +1723,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a managementController resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.ManagementControllerRelationship MgmtController
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1820,10 +1796,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("InbandIpAddresses"))
             {
                 initObject.InbandIpAddresses = this.InbandIpAddresses;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MgmtController"))
-            {
-                initObject.MgmtController = this.MgmtController;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {

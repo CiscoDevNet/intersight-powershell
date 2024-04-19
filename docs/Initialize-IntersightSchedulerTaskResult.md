@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Set-IntersightAcmeDrawingBoard
+# Initialize-IntersightSchedulerTaskResult
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,12 +14,13 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightAcmeDrawingBoard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ArrayOfAssociatedObjects< System.Collections.Generic.List`1[MoBaseMoRelationship]>][-AssociatedObject< MoBaseMoRelationship>][-Descr< string>][[-Moid]< string>][-Name< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSchedulerTaskResult [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerTaskResult.ClassIdEnum>][-EndTime< DateTime>][-Moid< string>][-ObjectType< SchedulerTaskResult.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Update a &apos;AcmeDrawingBoard&apos; resource.
+
+Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
 
@@ -38,14 +39,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ArrayOfAssociatedObjects
-An array of relationships to moBaseMo resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -ClassId
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: System.Collections.Generic.List`1[MoBaseMoRelationship]
+Type: SchedulerTaskResult.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -56,29 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AssociatedObject
-A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -EndTime
+End time for the scheduled task.
 
 ```yaml
-Type: MoBaseMoRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Descr
-The description of the drawing board.
-
-```yaml
-Type: string
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
 
@@ -97,18 +77,18 @@ Type: string
 Parameter Sets: (All)
 Aliases:
 
-Required: true
+Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-The name of the drawing board.
+### -ObjectType
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: string
+Type: SchedulerTaskResult.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -125,7 +105,7 @@ Accept wildcard characters: False
 Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
 
 ```yaml
-Type: System.Collections.Generic.List`1[MoTag]
+Type: System.Collections.Generic.List`1[Model.MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -174,7 +154,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Set-IntersightAcmeDrawingBoard
+PS C:\> Initialize-IntersightSchedulerTaskResult
 ```
 
 { Add example description here }
@@ -193,10 +173,6 @@ PS C:\> Set-IntersightAcmeDrawingBoard
 
 ## RELATED LINKS
 
-[Get-IntersightAcmeDrawingBoard](./Get-IntersightAcmeDrawingBoard.md)
+[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
 
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
-[New-IntersightAcmeDrawingBoard](./New-IntersightAcmeDrawingBoard.md)
-
-[Remove-IntersightAcmeDrawingBoard](./Remove-IntersightAcmeDrawingBoard.md)
+[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

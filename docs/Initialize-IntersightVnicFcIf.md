@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicFcIf.ClassIdEnum>][-FcAdapterPolicy< Model.VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< Model.VnicFcNetworkPolicyRelationship>][-FcQosPolicy< Model.VnicFcQosPolicyRelationship>][-FcZonePolicies< System.Collections.Generic.List`1[Model.FabricFcZonePolicyRelationship]>][-Moid< string>][-Name< string>][-ObjectType< VnicFcIf.ObjectTypeEnum>][-Order< long>][-PersistentBindings< bool>][-PinGroupName< string>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< Model.VnicSanConnectivityPolicyRelationship>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< Model.FcpoolLeaseRelationship>][-WwpnPool< Model.FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VnicFcIf.ClassIdEnum>][-FcAdapterPolicy< Model.VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< Model.VnicFcNetworkPolicyRelationship>][-FcQosPolicy< Model.VnicFcQosPolicyRelationship>][-FcZonePolicies< System.Collections.Generic.List`1[Model.FabricFcZonePolicyRelationship]>][-Moid< string>][-Name< string>][-ObjectType< VnicFcIf.ObjectTypeEnum>][-Order< long>][-PersistentBindings< bool>][-PinGroupName< string>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< Model.VnicSanConnectivityPolicyRelationship>][-SrcTemplate< Model.VnicVhbaTemplateRelationship>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< Model.FcpoolLeaseRelationship>][-WwpnPool< Model.FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -269,6 +269,24 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SrcTemplate
+A reference to a vnicVhbaTemplate resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.VnicVhbaTemplateRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -StaticWwpnAddress
 The WWPN address must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN&apos;s in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx.
 
@@ -291,6 +309,23 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TemplateActions
+
+
+Note :- Use Initialize-IntersightMotemplateActionEntry to create the object of complex type MotemplateActionEntry
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.MotemplateActionEntry]
 Parameter Sets: (All)
 Aliases:
 
@@ -425,5 +460,7 @@ PS C:\> Initialize-IntersightVnicFcIf
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)

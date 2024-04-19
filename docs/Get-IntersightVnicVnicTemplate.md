@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightAcmeDrawingBoard
+# Get-IntersightVnicVnicTemplate
 
 ## SYNOPSIS
-Get the AcmeDrawingBoard
+Get the VnicVnicTemplate
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightAcmeDrawingBoard [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightVnicVnicTemplate [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightAcmeDrawingBoard [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightVnicVnicTemplate [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;AcmeDrawingBoard&apos; resource.,
+Read a &apos;VnicVnicTemplate&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -34,27 +34,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightAcmeDrawingBoard
+PS C:\> $result = Get-IntersightVnicVnicTemplate
 ```
-Above example returns the list of AcmeDrawingBoard.
+Above example returns the list of VnicVnicTemplate.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightAcmeDrawingBoard -Name "MoName"
+PS C:\> $result = Get-IntersightVnicVnicTemplate -Name "MoName"
 ```
-Above example returns the AcmeDrawingBoard matched with name.
+Above example returns the VnicVnicTemplate matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightAcmeDrawingBoard -Organization $organization
+PS C:\> $result = Get-IntersightVnicVnicTemplate -Organization $organization
 ```
-Above example returns the list of AcmeDrawingBoard available under the $organization .
+Above example returns the list of VnicVnicTemplate available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightAcmeDrawingBoard -InlineCount allpages
+PS C:\> $result = Get-IntersightVnicVnicTemplate -InlineCount allpages
 ```
-Above example returns the list of AcmeDrawingBoard along with count.
+Above example returns the list of VnicVnicTemplate along with count.
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the AcmeDrawingBoard.
+Specifies the name of the VnicVnicTemplate.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the AcmeDrawingBoard under it.
+Specifies the organization, to fetch the VnicVnicTemplate under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightAcmeDrawingBoard](./New-IntersightAcmeDrawingBoard.md)
+[New-IntersightVnicVnicTemplate](./New-IntersightVnicVnicTemplate.md)
 
-[Remove-IntersightAcmeDrawingBoard](./Remove-IntersightAcmeDrawingBoard.md)
+[Remove-IntersightVnicVnicTemplate](./Remove-IntersightVnicVnicTemplate.md)
 
-[Set-IntersightAcmeDrawingBoard](./Set-IntersightAcmeDrawingBoard.md)
+[Set-IntersightVnicVnicTemplate](./Set-IntersightVnicVnicTemplate.md)
 

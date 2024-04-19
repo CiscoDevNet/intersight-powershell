@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightAcmeFoo
+# Initialize-IntersightSchedulerDailyCadenceParams
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAcmeFoo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AcmeFoo.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< AcmeFoo.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSchedulerDailyCadenceParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerDailyCadenceParams.ClassIdEnum>][-ObjectType< SchedulerDailyCadenceParams.ObjectTypeEnum>][-RunEvery< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,37 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: AcmeFoo.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Moid
-The unique identifier of this Managed Object instance.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Name
-The name of the Foo object.
-
-```yaml
-Type: string
+Type: SchedulerDailyCadenceParams.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -88,7 +58,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: AcmeFoo.ObjectTypeEnum
+Type: SchedulerDailyCadenceParams.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -99,31 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Organization
-A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -RunEvery
+Run every day by default if not specified.
 
 ```yaml
-Type: Model.OrganizationOrganizationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tags
-
-
-Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.MoTag]
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -172,7 +122,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightAcmeFoo
+PS C:\> Initialize-IntersightSchedulerDailyCadenceParams
 ```
 
 { Add example description here }
@@ -190,5 +140,3 @@ PS C:\> Initialize-IntersightAcmeFoo
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

@@ -192,4 +192,6 @@ PS C:\> Set-IntersightFabricElementIdentity
 
 [Get-IntersightFabricElementIdentity](./Get-IntersightFabricElementIdentity.md)
 
+[Initialize-IntersightFabricElementIdentity.PostDeployActionEnum](./Initialize-IntersightFabricElementIdentity.PostDeployActionEnum.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

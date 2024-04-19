@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBulkMoCloner [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkMoCloner.ClassIdEnum>][-ExcludeProperties< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< BulkMoCloner.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[Model.MoBaseMo]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Targets< System.Collections.Generic.List`1[Model.MoBaseMo]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBulkMoCloner [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkMoCloner.ClassIdEnum>][-ExcludeProperties< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< BulkMoCloner.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[Model.MoBaseMo]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Targets< System.Collections.Generic.List`1[Model.MoBaseMo]>][-WorkflowNameSuffix< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -158,6 +158,21 @@ Note :- Use Initialize-IntersightMoBaseMo to create the object of complex type M
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoBaseMo]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkflowNameSuffix
+A user-friendly short name to identify the workflow. Name can only contain letters (a-z, A-Z),\nnumbers (0-9), hyphen (-), period (.), colon (:), space ( ), forward slash (/), comma or an underscore (_).
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

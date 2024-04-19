@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The string field to hold the description
+The string field to hold the description.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Locale
-The string field to hold the locale
+The string field to hold the locale.
 
 ```yaml
 Type: string

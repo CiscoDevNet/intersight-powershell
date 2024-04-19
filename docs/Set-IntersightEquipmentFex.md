@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentFex [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConnectionStatus< string>][-DiscoveryState< string>][-HostPorts< System.Collections.Generic.List`1[EtherHostPortRelationship]>][-MgmtController< ManagementControllerRelationship>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-NetworkPorts< System.Collections.Generic.List`1[EtherNetworkPortRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentFex [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConnectionStatus< string>][-DiscoveryState< string>][-HostPorts< System.Collections.Generic.List`1[EtherHostPortRelationship]>][[-Moid]< string>][-NetworkElement< NetworkElementRelationship>][-NetworkPorts< System.Collections.Generic.List`1[EtherNetworkPortRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -76,24 +76,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[EtherHostPortRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -MgmtController
-A reference to a managementController resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: ManagementControllerRelationship
 Parameter Sets: (All)
 Aliases:
 

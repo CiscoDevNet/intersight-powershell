@@ -1712,6 +1712,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting IOAT Configuration configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.IoatConfigCpmEnum IoatConfigCpm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting IIO Error Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `No` - Value - No for configuring IohErrorEnable token.\n* `Yes` - Value - Yes for configuring IohErrorEnable token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2003,6 +2014,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public BiosPolicy.MmcfgBaseEnum MmcfgBase
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting MMIO High Base configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `512G` - Value - 512G for configuring MmiohBase token.\n* `1T` - Value - 1T for configuring MmiohBase token.\n* `2T` - Value - 2T for configuring MmiohBase token.\n* `4T` - Value - 4T for configuring MmiohBase token.\n* `16T` - Value - 16T for configuring MmiohBase token.\n* `24T` - Value - 24T for configuring MmiohBase token.\n* `32T` - Value - 32T for configuring MmiohBase token.\n* `40T` - Value - 40T for configuring MmiohBase token.\n* `56T` - Value - 56T for configuring MmiohBase token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.MmiohBaseEnum MmiohBase
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting MMIO High Granularity Size configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1G` - Value - 1G for configuring MmiohSize token.\n* `4G` - Value - 4G for configuring MmiohSize token.\n* `16G` - Value - 16G for configuring MmiohSize token.\n* `64G` - Value - 64G for configuring MmiohSize token.\n* `256G` - Value - 256G for configuring MmiohSize token.\n* `1024G` - Value - 1024G for configuring MmiohSize token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.MmiohSizeEnum MmiohSize
         {
             get;
             set;
@@ -2660,7 +2693,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting PRMRR Size configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1G` - Value - 1G for configuring PrmrrSize token.\n* `2G` - Value - 2G for configuring PrmrrSize token.\n* `4G` - Value - 4G for configuring PrmrrSize token.\n* `8G` - Value - 8G for configuring PrmrrSize token.\n* `16G` - Value - 16G for configuring PrmrrSize token.\n* `32G` - Value - 32G for configuring PrmrrSize token.\n* `64G` - Value - 64G for configuring PrmrrSize token.\n* `128G` - Value - 128G for configuring PrmrrSize token.\n* `256G` - Value - 256G for configuring PrmrrSize token.\n* `512G` - Value - 512G for configuring PrmrrSize token.\n* `128M` - Value - 128M for configuring PrmrrSize token.\n* `256M` - Value - 256M for configuring PrmrrSize token.\n* `512M` - Value - 512M for configuring PrmrrSize token.\n* `Invalid Config.` - Value - Invalid Config for configuring PrmrrSize token."</para>
+        /// <para type="description">"BIOS Token for setting PRMRR Size configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1G` - Value - 1G for configuring PrmrrSize token.\n* `2G` - Value - 2G for configuring PrmrrSize token.\n* `4G` - Value - 4G for configuring PrmrrSize token.\n* `8G` - Value - 8G for configuring PrmrrSize token.\n* `16G` - Value - 16G for configuring PrmrrSize token.\n* `32G` - Value - 32G for configuring PrmrrSize token.\n* `64G` - Value - 64G for configuring PrmrrSize token.\n* `128G` - Value - 128G for configuring PrmrrSize token.\n* `256G` - Value - 256G for configuring PrmrrSize token.\n* `512G` - Value - 512G for configuring PrmrrSize token.\n* `128M` - Value - 128M for configuring PrmrrSize token.\n* `256M` - Value - 256M for configuring PrmrrSize token.\n* `512M` - Value - 512M for configuring PrmrrSize token.\n* `Auto` - Value - Auto for configuring PrmrrSize token.\n* `Invalid Config.` - Value - Invalid Config for configuring PrmrrSize token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7230,6 +7263,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting IOAT Configuration configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.IoatConfigCpmEnum IoatConfigCpm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting IIO Error Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `No` - Value - No for configuring IohErrorEnable token.\n* `Yes` - Value - Yes for configuring IohErrorEnable token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -7521,6 +7565,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.MmcfgBaseEnum MmcfgBase
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting MMIO High Base configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `512G` - Value - 512G for configuring MmiohBase token.\n* `1T` - Value - 1T for configuring MmiohBase token.\n* `2T` - Value - 2T for configuring MmiohBase token.\n* `4T` - Value - 4T for configuring MmiohBase token.\n* `16T` - Value - 16T for configuring MmiohBase token.\n* `24T` - Value - 24T for configuring MmiohBase token.\n* `32T` - Value - 32T for configuring MmiohBase token.\n* `40T` - Value - 40T for configuring MmiohBase token.\n* `56T` - Value - 56T for configuring MmiohBase token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.MmiohBaseEnum MmiohBase
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting MMIO High Granularity Size configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1G` - Value - 1G for configuring MmiohSize token.\n* `4G` - Value - 4G for configuring MmiohSize token.\n* `16G` - Value - 16G for configuring MmiohSize token.\n* `64G` - Value - 64G for configuring MmiohSize token.\n* `256G` - Value - 256G for configuring MmiohSize token.\n* `1024G` - Value - 1024G for configuring MmiohSize token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.MmiohSizeEnum MmiohSize
         {
             get;
             set;
@@ -8158,7 +8224,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting PRMRR Size configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1G` - Value - 1G for configuring PrmrrSize token.\n* `2G` - Value - 2G for configuring PrmrrSize token.\n* `4G` - Value - 4G for configuring PrmrrSize token.\n* `8G` - Value - 8G for configuring PrmrrSize token.\n* `16G` - Value - 16G for configuring PrmrrSize token.\n* `32G` - Value - 32G for configuring PrmrrSize token.\n* `64G` - Value - 64G for configuring PrmrrSize token.\n* `128G` - Value - 128G for configuring PrmrrSize token.\n* `256G` - Value - 256G for configuring PrmrrSize token.\n* `512G` - Value - 512G for configuring PrmrrSize token.\n* `128M` - Value - 128M for configuring PrmrrSize token.\n* `256M` - Value - 256M for configuring PrmrrSize token.\n* `512M` - Value - 512M for configuring PrmrrSize token.\n* `Invalid Config.` - Value - Invalid Config for configuring PrmrrSize token."</para>
+        /// <para type="description">"BIOS Token for setting PRMRR Size configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1G` - Value - 1G for configuring PrmrrSize token.\n* `2G` - Value - 2G for configuring PrmrrSize token.\n* `4G` - Value - 4G for configuring PrmrrSize token.\n* `8G` - Value - 8G for configuring PrmrrSize token.\n* `16G` - Value - 16G for configuring PrmrrSize token.\n* `32G` - Value - 32G for configuring PrmrrSize token.\n* `64G` - Value - 64G for configuring PrmrrSize token.\n* `128G` - Value - 128G for configuring PrmrrSize token.\n* `256G` - Value - 256G for configuring PrmrrSize token.\n* `512G` - Value - 512G for configuring PrmrrSize token.\n* `128M` - Value - 128M for configuring PrmrrSize token.\n* `256M` - Value - 256M for configuring PrmrrSize token.\n* `512M` - Value - 512M for configuring PrmrrSize token.\n* `Auto` - Value - Auto for configuring PrmrrSize token.\n* `Invalid Config.` - Value - Invalid Config for configuring PrmrrSize token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -12001,6 +12067,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting IOAT Configuration configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.IoatConfigCpmEnum IoatConfigCpm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting IIO Error Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `No` - Value - No for configuring IohErrorEnable token.\n* `Yes` - Value - Yes for configuring IohErrorEnable token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -12292,6 +12369,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.MmcfgBaseEnum MmcfgBase
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting MMIO High Base configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `512G` - Value - 512G for configuring MmiohBase token.\n* `1T` - Value - 1T for configuring MmiohBase token.\n* `2T` - Value - 2T for configuring MmiohBase token.\n* `4T` - Value - 4T for configuring MmiohBase token.\n* `16T` - Value - 16T for configuring MmiohBase token.\n* `24T` - Value - 24T for configuring MmiohBase token.\n* `32T` - Value - 32T for configuring MmiohBase token.\n* `40T` - Value - 40T for configuring MmiohBase token.\n* `56T` - Value - 56T for configuring MmiohBase token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.MmiohBaseEnum MmiohBase
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting MMIO High Granularity Size configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1G` - Value - 1G for configuring MmiohSize token.\n* `4G` - Value - 4G for configuring MmiohSize token.\n* `16G` - Value - 16G for configuring MmiohSize token.\n* `64G` - Value - 64G for configuring MmiohSize token.\n* `256G` - Value - 256G for configuring MmiohSize token.\n* `1024G` - Value - 1024G for configuring MmiohSize token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.MmiohSizeEnum MmiohSize
         {
             get;
             set;
@@ -12929,7 +13028,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting PRMRR Size configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1G` - Value - 1G for configuring PrmrrSize token.\n* `2G` - Value - 2G for configuring PrmrrSize token.\n* `4G` - Value - 4G for configuring PrmrrSize token.\n* `8G` - Value - 8G for configuring PrmrrSize token.\n* `16G` - Value - 16G for configuring PrmrrSize token.\n* `32G` - Value - 32G for configuring PrmrrSize token.\n* `64G` - Value - 64G for configuring PrmrrSize token.\n* `128G` - Value - 128G for configuring PrmrrSize token.\n* `256G` - Value - 256G for configuring PrmrrSize token.\n* `512G` - Value - 512G for configuring PrmrrSize token.\n* `128M` - Value - 128M for configuring PrmrrSize token.\n* `256M` - Value - 256M for configuring PrmrrSize token.\n* `512M` - Value - 512M for configuring PrmrrSize token.\n* `Invalid Config.` - Value - Invalid Config for configuring PrmrrSize token."</para>
+        /// <para type="description">"BIOS Token for setting PRMRR Size configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1G` - Value - 1G for configuring PrmrrSize token.\n* `2G` - Value - 2G for configuring PrmrrSize token.\n* `4G` - Value - 4G for configuring PrmrrSize token.\n* `8G` - Value - 8G for configuring PrmrrSize token.\n* `16G` - Value - 16G for configuring PrmrrSize token.\n* `32G` - Value - 32G for configuring PrmrrSize token.\n* `64G` - Value - 64G for configuring PrmrrSize token.\n* `128G` - Value - 128G for configuring PrmrrSize token.\n* `256G` - Value - 256G for configuring PrmrrSize token.\n* `512G` - Value - 512G for configuring PrmrrSize token.\n* `128M` - Value - 128M for configuring PrmrrSize token.\n* `256M` - Value - 256M for configuring PrmrrSize token.\n* `512M` - Value - 512M for configuring PrmrrSize token.\n* `Auto` - Value - Auto for configuring PrmrrSize token.\n* `Invalid Config.` - Value - Invalid Config for configuring PrmrrSize token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

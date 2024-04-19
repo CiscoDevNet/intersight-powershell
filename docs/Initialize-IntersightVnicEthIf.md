@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< Model.VnicCdn>][-ClassId< VnicEthIf.ClassIdEnum>][-EthAdapterPolicy< Model.VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< Model.VnicEthNetworkPolicyRelationship>][-EthQosPolicy< Model.VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IpLease< Model.IppoolIpLeaseRelationship>][-IscsiBootPolicy< Model.VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< Model.VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< Model.MacpoolLeaseRelationship>][-MacPool< Model.MacpoolPoolRelationship>][-Moid< string>][-Name< string>][-ObjectType< VnicEthIf.ObjectTypeEnum>][-Order< long>][-PinGroupName< string>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-SriovSettings< Model.VnicSriovSettings>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UsnicSettings< Model.VnicUsnicSettings>][-VmqSettings< Model.VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< Model.VnicCdn>][-ClassId< VnicEthIf.ClassIdEnum>][-EthAdapterPolicy< Model.VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< Model.VnicEthNetworkPolicyRelationship>][-EthQosPolicy< Model.VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IpLease< Model.IppoolIpLeaseRelationship>][-IscsiBootPolicy< Model.VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< Model.VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< Model.MacpoolLeaseRelationship>][-MacPool< Model.MacpoolPoolRelationship>][-Moid< string>][-Name< string>][-ObjectType< VnicEthIf.ObjectTypeEnum>][-Order< long>][-PinGroupName< string>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-SrcTemplate< Model.VnicVnicTemplateRelationship>][-SriovSettings< Model.VnicSriovSettings>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-UsnicSettings< Model.VnicUsnicSettings>][-VmqSettings< Model.VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -391,6 +391,24 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SrcTemplate
+A reference to a vnicVnicTemplate resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.VnicVnicTemplateRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SriovSettings
 Single Root Input Output Virtualization (SR-IOV) Settings that enable one physical ethernet socket to appear as multiple NICs to the hypervisor.
 
@@ -430,6 +448,23 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TemplateActions
+
+
+Note :- Use Initialize-IntersightMotemplateActionEntry to create the object of complex type MotemplateActionEntry
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.MotemplateActionEntry]
 Parameter Sets: (All)
 Aliases:
 
@@ -532,6 +567,8 @@ PS C:\> Initialize-IntersightVnicEthIf
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)
 
 [Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
 

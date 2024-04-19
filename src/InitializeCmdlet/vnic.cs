@@ -914,6 +914,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a vnicVnicTemplate resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicVnicTemplateRelationship SrcTemplate
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Single Root Input Output Virtualization (SR-IOV) Settings that enable one physical ethernet socket to appear as multiple NICs to the hypervisor."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -939,6 +949,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
         {
             get;
             set;
@@ -1049,6 +1069,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Profile = this.Profile;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
+            {
+                initObject.SrcTemplate = this.SrcTemplate;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("SriovSettings"))
             {
                 initObject.SriovSettings = this.SriovSettings;
@@ -1060,6 +1084,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("UsnicSettings"))
             {
@@ -2838,6 +2866,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a vnicVhbaTemplate resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicVhbaTemplateRelationship SrcTemplate
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The WWPN address must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN's in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2853,6 +2891,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
         {
             get;
             set;
@@ -2955,6 +3003,10 @@ namespace Intersight.PowerShell
             {
                 initObject.SanConnectivityPolicy = this.SanConnectivityPolicy;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
+            {
+                initObject.SrcTemplate = this.SrcTemplate;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("StaticWwpnAddress"))
             {
                 initObject.StaticWwpnAddress = this.StaticWwpnAddress;
@@ -2962,6 +3014,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
@@ -7129,6 +7185,302 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicVhbaTemplate.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicVhbaTemplate")]
+    public class InitializeIntersightVnicVhbaTemplate : PSCmdlet
+    {
+        public InitializeIntersightVnicVhbaTemplate()
+        {
+            ClassId = VnicVhbaTemplate.ClassIdEnum.VnicVhbaTemplate;
+            ObjectType = VnicVhbaTemplate.ObjectTypeEnum.VnicVhbaTemplate;
+            SwitchId = VnicVhbaTemplate.SwitchIdEnum.None;
+            Type = VnicVhbaTemplate.TypeEnum.FcInitiator;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVhbaTemplate.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the vHBA template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, the configuration of the derived instances may override the template configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableOverride
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicFcAdapterPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicFcAdapterPolicyRelationship FcAdapterPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicFcNetworkPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicFcNetworkPolicyRelationship FcNetworkPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicFcQosPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicFcQosPolicyRelationship FcQosPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricFcZonePolicy resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FabricFcZonePolicyRelationship> FcZonePolicies
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the virtual fibre channel interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVhbaTemplate.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the peer vHBA which belongs to the peer FI."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PeerVhbaName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables retention of LUN ID associations in memory until they are manually cleared."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool PersistentBindings
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Pingroup name associated to vfc for static pinning. SCP deploy will resolve pingroup name and fetches the correspoding uplink port/port channel to pin the vfc traffic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string PinGroupName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fabric port to which the vHBAs will be associated.\n* `None` - Fabric Id is not set to either A or B for the standalone case where the server is not connected to Fabric Interconnects. The value 'None' should be used.\n* `A` - Fabric A of the FI cluster.\n* `B` - Fabric B of the FI cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVhbaTemplate.SwitchIdEnum SwitchId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VHBA Type configuration for SAN Connectivity Policy. This configuration is supported only on Cisco VIC 14XX series and higher series of adapters.\n* `fc-initiator` - The default value set for vHBA Type Configuration. Fc-initiator specifies vHBA as a consumer of storage. Enables SCSI commands to transfer data and status information between host and target storage systems.\n* `fc-nvme-initiator` - Fc-nvme-initiator specifies vHBA as a consumer of storage. Enables NVMe-based message commands to transfer data and status information between host and target storage systems.\n* `fc-nvme-target` - Fc-nvme-target specifies vHBA as a provider of storage volumes to initiators. Enables NVMe-based message commands to transfer data and status information between host and target storage systems. Currently tech-preview, only enabled with an asynchronous driver.\n* `fc-target` - Fc-target specifies vHBA as a provider of storage volumes to initiators. Enables SCSI commands to transfer data and status information between host and target storage systems. fc-target is enabled only with an asynchronous driver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVhbaTemplate.TypeEnum Type
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fcpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FcpoolPoolRelationship WwpnPool
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicVhbaTemplate initObject = new Intersight.Model.VnicVhbaTemplate();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableOverride"))
+            {
+                initObject.EnableOverride = this.EnableOverride;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcAdapterPolicy"))
+            {
+                initObject.FcAdapterPolicy = this.FcAdapterPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcNetworkPolicy"))
+            {
+                initObject.FcNetworkPolicy = this.FcNetworkPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcQosPolicy"))
+            {
+                initObject.FcQosPolicy = this.FcQosPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FcZonePolicies"))
+            {
+                initObject.FcZonePolicies = this.FcZonePolicies;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PeerVhbaName"))
+            {
+                initObject.PeerVhbaName = this.PeerVhbaName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PersistentBindings"))
+            {
+                initObject.PersistentBindings = this.PersistentBindings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PinGroupName"))
+            {
+                initObject.PinGroupName = this.PinGroupName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
+            {
+                initObject.SwitchId = this.SwitchId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WwpnPool"))
+            {
+                initObject.WwpnPool = this.WwpnPool;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize VnicVifStatus.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightVnicVifStatus")]
@@ -7489,6 +7841,371 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("VmmqAdapterPolicy"))
             {
                 initObject.VmmqAdapterPolicy = this.VmmqAdapterPolicy;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicVnicTemplate.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicVnicTemplate")]
+    public class InitializeIntersightVnicVnicTemplate : PSCmdlet
+    {
+        public InitializeIntersightVnicVnicTemplate()
+        {
+            ClassId = VnicVnicTemplate.ClassIdEnum.VnicVnicTemplate;
+            ObjectType = VnicVnicTemplate.ObjectTypeEnum.VnicVnicTemplate;
+            SwitchId = VnicVnicTemplate.SwitchIdEnum.None;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Consistent Device Naming configuration for the virtual NIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicCdn Cdn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVnicTemplate.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the vNIC template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, the configuration of the derived instances may override the template configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableOverride
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicEthAdapterPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicEthAdapterPolicyRelationship EthAdapterPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicEthNetworkPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicEthNetworkPolicyRelationship EthNetworkPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicEthQosPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicEthQosPolicyRelationship EthQosPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricEthNetworkControlPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricEthNetworkControlPolicyRelationship FabricEthNetworkControlPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricEthNetworkGroupPolicy resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FabricEthNetworkGroupPolicyRelationship> FabricEthNetworkGroupPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enabling failover ensures that traffic from the vNIC automatically fails over to the secondary Fabric Interconnect, in case the specified Fabric Interconnect path goes down. Failover applies only to Cisco VICs that are connected to a Fabric Interconnect cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool FailoverEnabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a vnicIscsiBootPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicIscsiBootPolicyRelationship IscsiBootPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a macpoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.MacpoolPoolRelationship MacPool
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the virtual ethernet interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVnicTemplate.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the peer vNIC which belongs to the peer FI."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PeerVnicName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Pingroup name associated to vNIC for static pinning. LCP deploy will resolve pingroup name and fetches the correspoding uplink port/port channel to pin the vNIC traffic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string PinGroupName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Single Root Input Output Virtualization (SR-IOV) Settings that enable one physical ethernet socket to appear as multiple NICs to the hypervisor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicSriovSettings SriovSettings
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fabric port to which the vNICs will be associated.\n* `None` - Fabric Id is not set to either A or B for the standalone case where the server is not connected to Fabric Interconnects. The value 'None' should be used.\n* `A` - Fabric A of the FI cluster.\n* `B` - Fabric B of the FI cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicVnicTemplate.SwitchIdEnum SwitchId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User Space NIC Settings that enable low-latency and higher throughput by bypassing the kernel layer when sending/receiving packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicUsnicSettings UsnicSettings
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Virtual Machine Queue Settings for the virtual interface that allow efficient transfer of network traffic to the guest OS."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicVmqSettings VmqSettings
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.VnicVnicTemplate initObject = new Intersight.Model.VnicVnicTemplate();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Cdn"))
+            {
+                initObject.Cdn = this.Cdn;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableOverride"))
+            {
+                initObject.EnableOverride = this.EnableOverride;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthAdapterPolicy"))
+            {
+                initObject.EthAdapterPolicy = this.EthAdapterPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthNetworkPolicy"))
+            {
+                initObject.EthNetworkPolicy = this.EthNetworkPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthQosPolicy"))
+            {
+                initObject.EthQosPolicy = this.EthQosPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FabricEthNetworkControlPolicy"))
+            {
+                initObject.FabricEthNetworkControlPolicy = this.FabricEthNetworkControlPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FabricEthNetworkGroupPolicy"))
+            {
+                initObject.FabricEthNetworkGroupPolicy = this.FabricEthNetworkGroupPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FailoverEnabled"))
+            {
+                initObject.FailoverEnabled = this.FailoverEnabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IscsiBootPolicy"))
+            {
+                initObject.IscsiBootPolicy = this.IscsiBootPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MacPool"))
+            {
+                initObject.MacPool = this.MacPool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PeerVnicName"))
+            {
+                initObject.PeerVnicName = this.PeerVnicName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PinGroupName"))
+            {
+                initObject.PinGroupName = this.PinGroupName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SriovSettings"))
+            {
+                initObject.SriovSettings = this.SriovSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
+            {
+                initObject.SwitchId = this.SwitchId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UsnicSettings"))
+            {
+                initObject.UsnicSettings = this.UsnicSettings;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VmqSettings"))
+            {
+                initObject.VmqSettings = this.VmqSettings;
             }
             WriteObject(initObject);
         }

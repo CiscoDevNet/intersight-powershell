@@ -5,38 +5,38 @@ online version:
 schema: 2.0.0
 ---
 
-# Remove-IntersightAcmeDrawingBoard
+# Remove-IntersightVnicVhbaTemplate
 
 ## SYNOPSIS
-Remove the AcmeDrawingBoard
+Remove the VnicVhbaTemplate
 
 ## SYNTAX
 
 ```
-Remove-IntersightAcmeDrawingBoard -Moid <String> [<CommonParameters>]
+Remove-IntersightVnicVhbaTemplate -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;AcmeDrawingBoard&apos; resource.
+Delete a &apos;VnicVhbaTemplate&apos; resource.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Remove-IntersightAcmeDrawingBoard -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+PS C:\> Remove-IntersightVnicVhbaTemplate -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
-Above cmdlet removes the specified AcmeDrawingBoard 
+Above cmdlet removes the specified VnicVhbaTemplate 
 
 ### Example 2
 ```powershell
-PS C:\>Get-IntersightAcmeDrawingBoard -Name "MoName"|  Remove-IntersightAcmeDrawingBoard
+PS C:\>Get-IntersightVnicVhbaTemplate -Name "MoName"|  Remove-IntersightVnicVhbaTemplate
 ```
 Above cmdlet pipes the output of Get cmdlet to Remove cmdlet
 
 ## PARAMETERS
 
 ### -Moid
-Specifyies the Moid of AcmeDrawingBoard.
+Specifyies the Moid of VnicVhbaTemplate.
 
 ```yaml
 Type: String
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightAcmeDrawingBoard](./Get-IntersightAcmeDrawingBoard.md)
+[Get-IntersightVnicVhbaTemplate](./Get-IntersightVnicVhbaTemplate.md)
 
-[New-IntersightAcmeDrawingBoard](./New-IntersightAcmeDrawingBoard.md)
+[New-IntersightVnicVhbaTemplate](./New-IntersightVnicVhbaTemplate.md)
 
-[Set-IntersightAcmeDrawingBoard](./Set-IntersightAcmeDrawingBoard.md)
+[Set-IntersightVnicVhbaTemplate](./Set-IntersightVnicVhbaTemplate.md)
 

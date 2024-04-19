@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# New-IntersightAcmeDrawingBoard
+# Initialize-IntersightSchedulerMonthlyCadenceParams
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,12 +14,13 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightAcmeDrawingBoard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ArrayOfAssociatedObjects< System.Collections.Generic.List`1[MoBaseMoRelationship]>][-AssociatedObject< MoBaseMoRelationship>][-Descr< string>][-Moid< string>][[-Name]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSchedulerMonthlyCadenceParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerMonthlyCadenceParams.ClassIdEnum>][-CustomDayOfMonth< SchedulerMonthlyCadenceParams.CustomDayOfMonthEnum>][-DayOfMonth< System.Collections.Generic.List`1[long]>][-ObjectType< SchedulerMonthlyCadenceParams.ObjectTypeEnum>][-WeekDayFormat< Model.SchedulerMonthlyWeekDayFormat>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;AcmeDrawingBoard&apos; resource.
+
+Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
 
@@ -38,14 +39,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ArrayOfAssociatedObjects
-An array of relationships to moBaseMo resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -ClassId
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
 
 ```yaml
-Type: System.Collections.Generic.List`1[MoBaseMoRelationship]
+Type: SchedulerMonthlyCadenceParams.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -56,14 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AssociatedObject
-A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -CustomDayOfMonth
+Significant business days, such as days when reports are generated for analysis.\n* `None` - Placeholder. One of the following two fields must be selected.\n* `FirstWeekDay` - First week day of the month.\n* `MonthLastDay` - The last day of the month.
 
 ```yaml
-Type: MoBaseMoRelationship
+Type: SchedulerMonthlyCadenceParams.CustomDayOfMonthEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -74,11 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Descr
-The description of the drawing board.
+### -DayOfMonth
+
 
 ```yaml
-Type: string
+Type: System.Collections.Generic.List`1[long]
 Parameter Sets: (All)
 Aliases:
 
@@ -89,11 +84,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Moid
-The unique identifier of this Managed Object instance.
+### -ObjectType
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
 
 ```yaml
-Type: string
+Type: SchedulerMonthlyCadenceParams.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -104,28 +99,13 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-The name of the drawing board.
+### -WeekDayFormat
+A format with the week and specific days as arguments.
+
+Note :- Use Initialize-IntersightSchedulerMonthlyWeekDayFormat to create the object of complex type SchedulerMonthlyWeekDayFormat
 
 ```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: true
-Position: Named
-Default value: None
-Accept pipeline input: True False
-Accept wildcard characters: False
-```
-
-### -Tags
-
-
-Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
-
-```yaml
-Type: System.Collections.Generic.List`1[MoTag]
+Type: Model.SchedulerMonthlyWeekDayFormat
 Parameter Sets: (All)
 Aliases:
 
@@ -174,7 +154,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> New-IntersightAcmeDrawingBoard
+PS C:\> Initialize-IntersightSchedulerMonthlyCadenceParams
 ```
 
 { Add example description here }
@@ -193,10 +173,4 @@ PS C:\> New-IntersightAcmeDrawingBoard
 
 ## RELATED LINKS
 
-[Get-IntersightAcmeDrawingBoard](./Get-IntersightAcmeDrawingBoard.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
-[Remove-IntersightAcmeDrawingBoard](./Remove-IntersightAcmeDrawingBoard.md)
-
-[Set-IntersightAcmeDrawingBoard](./Set-IntersightAcmeDrawingBoard.md)
+[Initialize-IntersightSchedulerMonthlyWeekDayFormat](./Initialize-IntersightSchedulerMonthlyWeekDayFormat.md)

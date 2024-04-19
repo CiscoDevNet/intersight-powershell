@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightMarketplaceUseCase [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Dependencies< System.Collections.Generic.List`1[MarketplaceUseCaseDependency]>][-Locales< System.Collections.Generic.List`1[MarketplaceUseCaseLocale]>][[-Moid]< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightMarketplaceUseCase [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< MarketplaceCatalogRelationship>][-Dependencies< System.Collections.Generic.List`1[MarketplaceUseCaseDependency]>][-Locales< System.Collections.Generic.List`1[MarketplaceUseCaseLocale]>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UniqueName< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,24 @@ Update a &apos;MarketplaceUseCase&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Catalog
+A reference to a marketplaceCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: MarketplaceCatalogRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -87,14 +105,13 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Organization
-A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+### -Tags
 
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
 
 ```yaml
-Type: OrganizationOrganizationRelationship
+Type: System.Collections.Generic.List`1[MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -105,13 +122,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tags
-
-
-Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+### -UniqueName
+A unique identifier is used to prevent duplicates.
 
 ```yaml
-Type: System.Collections.Generic.List`1[MoTag]
+Type: string
 Parameter Sets: (All)
 Aliases:
 

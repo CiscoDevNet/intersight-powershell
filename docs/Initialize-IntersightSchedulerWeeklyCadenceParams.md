@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# New-IntersightAcmeFoo
+# Initialize-IntersightSchedulerWeeklyCadenceParams
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,12 +14,13 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightAcmeFoo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSchedulerWeeklyCadenceParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerWeeklyCadenceParams.ClassIdEnum>][-DayOfWeek< System.Collections.Generic.List`1[SchedulerWeeklyCadenceParams.DayOfWeekEnum]>][-ObjectType< SchedulerWeeklyCadenceParams.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;AcmeFoo&apos; resource.
+
+Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
 
@@ -38,11 +39,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Moid
-The unique identifier of this Managed Object instance.
+### -ClassId
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: string
+Type: SchedulerWeeklyCadenceParams.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -53,29 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-The name of the Foo object.
+### -DayOfWeek
+
 
 ```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: true
-Position: Named
-Default value: None
-Accept pipeline input: True False
-Accept wildcard characters: False
-```
-
-### -Organization
-A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: OrganizationOrganizationRelationship
+Type: System.Collections.Generic.List`1[SchedulerWeeklyCadenceParams.DayOfWeekEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -86,13 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tags
-
-
-Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+### -ObjectType
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: System.Collections.Generic.List`1[MoTag]
+Type: SchedulerWeeklyCadenceParams.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -141,7 +122,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> New-IntersightAcmeFoo
+PS C:\> Initialize-IntersightSchedulerWeeklyCadenceParams
 ```
 
 { Add example description here }
@@ -159,11 +140,3 @@ PS C:\> New-IntersightAcmeFoo
 ## NOTES
 
 ## RELATED LINKS
-
-[Get-IntersightAcmeFoo](./Get-IntersightAcmeFoo.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
-[Remove-IntersightAcmeFoo](./Remove-IntersightAcmeFoo.md)
-
-[Set-IntersightAcmeFoo](./Set-IntersightAcmeFoo.md)

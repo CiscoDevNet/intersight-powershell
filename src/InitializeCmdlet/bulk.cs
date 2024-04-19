@@ -107,11 +107,41 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> ExcludePeers
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Used to specify that none of the relationships should be exported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ExcludeRelations
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Specifies whether tags must be exported and will be considered for all the items MOs."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public bool ExportTags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates that exported references for objects which are organization owned should include the organization reference along with the other identity properties."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IncludeOrgIdentity
         {
             get;
             set;
@@ -189,9 +219,21 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExcludePeers"))
+            {
+                initObject.ExcludePeers = this.ExcludePeers;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExcludeRelations"))
+            {
+                initObject.ExcludeRelations = this.ExcludeRelations;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ExportTags"))
             {
                 initObject.ExportTags = this.ExportTags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IncludeOrgIdentity"))
+            {
+                initObject.IncludeOrgIdentity = this.IncludeOrgIdentity;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Items"))
             {
@@ -460,6 +502,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"A user-friendly short name to identify the workflow. Name can only contain letters (a-z, A-Z),\nnumbers (0-9), hyphen (-), period (.), colon (:), space ( ), forward slash (/), comma or an underscore (_)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]{1}[\\sa-zA-Z0-9_.\\,/:-]{0,63}$")]
+        public string WorkflowNameSuffix
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -493,6 +545,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Targets"))
             {
                 initObject.Targets = this.Targets;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowNameSuffix"))
+            {
+                initObject.WorkflowNameSuffix = this.WorkflowNameSuffix;
             }
             WriteObject(initObject);
         }
@@ -622,7 +678,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A user friendly short name to identify the workflow, optionally. Name can only contain letters (a-z, A-Z),\nnumbers (0-9), hyphen (-), period (.), colon (:), space ( ), forward slash (/), comma or an underscore (_)."</para>
+        /// <para type="description">"A user-friendly short name to identify the workflow. Name can only contain letters (a-z, A-Z),\nnumbers (0-9), hyphen (-), period (.), colon (:), space ( ), forward slash (/), comma or an underscore (_)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]{1}[\\sa-zA-Z0-9_.\\,/:-]{0,63}$")]
@@ -794,6 +850,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"A user-friendly short name to identify the workflow. Name can only contain letters (a-z, A-Z),\nnumbers (0-9), hyphen (-), period (.), colon (:), space ( ), forward slash (/), comma or an underscore (_)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]{1}[\\sa-zA-Z0-9_.\\,/:-]{0,63}$")]
+        public string WorkflowNameSuffix
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -831,6 +897,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Targets"))
             {
                 initObject.Targets = this.Targets;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowNameSuffix"))
+            {
+                initObject.WorkflowNameSuffix = this.WorkflowNameSuffix;
             }
             WriteObject(initObject);
         }
@@ -1360,6 +1430,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The individual request to be executed asynchronously."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object Request
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1386,6 +1466,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
             {
                 initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Request"))
+            {
+                initObject.Request = this.Request;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

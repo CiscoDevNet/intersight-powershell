@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightMarketplaceUseCaseVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< MarketplaceUseCaseVersion.ClassIdEnum>][-Locales< System.Collections.Generic.List`1[Model.MarketplaceUseCaseVersionLocale]>][-Moid< string>][-ObjectType< MarketplaceUseCaseVersion.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Resources< System.Collections.Generic.List`1[Model.MarketplaceUseCaseVersionResources]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UseCase< Model.MarketplaceUseCaseRelationship>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightMarketplaceUseCaseVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.MarketplaceCatalogRelationship>][-ClassId< MarketplaceUseCaseVersion.ClassIdEnum>][-Locales< System.Collections.Generic.List`1[Model.MarketplaceUseCaseVersionLocale]>][-Moid< string>][-ObjectType< MarketplaceUseCaseVersion.ObjectTypeEnum>][-Resources< System.Collections.Generic.List`1[Model.MarketplaceUseCaseVersionResources]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UseCase< Model.MarketplaceUseCaseRelationship>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,24 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Catalog
+A reference to a marketplaceCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.MarketplaceCatalogRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -101,24 +119,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Organization
-A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.OrganizationOrganizationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Resources
 
 
@@ -172,7 +172,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-A string version for each use case
+A string version for each use case.
 
 ```yaml
 Type: string

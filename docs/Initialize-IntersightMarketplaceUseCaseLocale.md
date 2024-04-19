@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Contents
-The string field to hold the contents value
+The string field to hold the contents value.
 
 ```yaml
 Type: string
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-The string field to hold the description value
+The string field to hold the description value.
 
 ```yaml
 Type: string
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -Icon
-A base64-encoded image for the use case
+A base64-encoded image for the use case.
 
 ```yaml
 Type: string
@@ -117,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Locale
-The string field to hold the locale
+The string field to hold the locale.
 
 ```yaml
 Type: string
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The string field to hold the name value
+The string field to hold the name value.
 
 ```yaml
 Type: string
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -Summary
-The string field to hold the summary value
+The string field to hold the summary value.
 
 ```yaml
 Type: string
