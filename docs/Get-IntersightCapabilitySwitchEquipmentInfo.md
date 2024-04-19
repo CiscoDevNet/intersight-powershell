@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightAcmeFoo
+# Get-IntersightCapabilitySwitchEquipmentInfo
 
 ## SYNOPSIS
-Get the AcmeFoo
+Get the CapabilitySwitchEquipmentInfo
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightAcmeFoo [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightCapabilitySwitchEquipmentInfo [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightAcmeFoo [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightCapabilitySwitchEquipmentInfo [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;AcmeFoo&apos; resource.,
+Read a &apos;CapabilitySwitchEquipmentInfo&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -34,27 +34,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightAcmeFoo
+PS C:\> $result = Get-IntersightCapabilitySwitchEquipmentInfo
 ```
-Above example returns the list of AcmeFoo.
+Above example returns the list of CapabilitySwitchEquipmentInfo.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightAcmeFoo -Name "MoName"
+PS C:\> $result = Get-IntersightCapabilitySwitchEquipmentInfo -Name "MoName"
 ```
-Above example returns the AcmeFoo matched with name.
+Above example returns the CapabilitySwitchEquipmentInfo matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightAcmeFoo -Organization $organization
+PS C:\> $result = Get-IntersightCapabilitySwitchEquipmentInfo -Organization $organization
 ```
-Above example returns the list of AcmeFoo available under the $organization .
+Above example returns the list of CapabilitySwitchEquipmentInfo available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightAcmeFoo -InlineCount allpages
+PS C:\> $result = Get-IntersightCapabilitySwitchEquipmentInfo -InlineCount allpages
 ```
-Above example returns the list of AcmeFoo along with count.
+Above example returns the list of CapabilitySwitchEquipmentInfo along with count.
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the AcmeFoo.
+Specifies the name of the CapabilitySwitchEquipmentInfo.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the AcmeFoo under it.
+Specifies the organization, to fetch the CapabilitySwitchEquipmentInfo under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -284,9 +284,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightAcmeFoo](./New-IntersightAcmeFoo.md)
+[New-IntersightCapabilitySwitchEquipmentInfo](./New-IntersightCapabilitySwitchEquipmentInfo.md)
 
-[Remove-IntersightAcmeFoo](./Remove-IntersightAcmeFoo.md)
+[Remove-IntersightCapabilitySwitchEquipmentInfo](./Remove-IntersightCapabilitySwitchEquipmentInfo.md)
 
-[Set-IntersightAcmeFoo](./Set-IntersightAcmeFoo.md)
+[Set-IntersightCapabilitySwitchEquipmentInfo](./Set-IntersightCapabilitySwitchEquipmentInfo.md)
 

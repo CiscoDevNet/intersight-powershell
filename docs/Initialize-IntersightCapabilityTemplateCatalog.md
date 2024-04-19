@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightAcmeDrawingBoard
+# Initialize-IntersightCapabilityTemplateCatalog
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAcmeDrawingBoard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ArrayOfAssociatedObjects< System.Collections.Generic.List`1[Model.MoBaseMoRelationship]>][-AssociatedObject< Model.MoBaseMoRelationship>][-ClassId< AcmeDrawingBoard.ClassIdEnum>][-Descr< string>][-Moid< string>][-Name< string>][-ObjectType< AcmeDrawingBoard.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCapabilityTemplateCatalog [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CapabilityTemplateCatalog.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< CapabilityTemplateCatalog.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,62 +39,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ArrayOfAssociatedObjects
-An array of relationships to moBaseMo resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.MoBaseMoRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AssociatedObject
-A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.MoBaseMoRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ClassId
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: AcmeDrawingBoard.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Descr
-The description of the drawing board.
-
-```yaml
-Type: string
+Type: CapabilityTemplateCatalog.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -121,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the drawing board.
+An unique identifer for a capability descriptor.
 
 ```yaml
 Type: string
@@ -139,7 +88,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: AcmeDrawingBoard.ObjectTypeEnum
+Type: CapabilityTemplateCatalog.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -205,7 +154,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightAcmeDrawingBoard
+PS C:\> Initialize-IntersightCapabilityTemplateCatalog
 ```
 
 { Add example description here }

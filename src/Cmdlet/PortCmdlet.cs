@@ -614,6 +614,18 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentIoCardBaseRelationship EquipmentIoCardBase
+        {
+            get;
+            set;
+        }
+
+
 
 
         // <summary>
@@ -1071,6 +1083,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
 

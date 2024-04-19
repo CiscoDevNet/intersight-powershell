@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBulkResult [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkResult.ClassIdEnum>][-Moid< string>][-ObjectType< BulkResult.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBulkResult [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkResult.ClassIdEnum>][-Moid< string>][-ObjectType< BulkResult.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Request< object>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -102,6 +102,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Request
+The individual request to be executed asynchronously.
+
+Note :- Use Initialize-Intersightobject to create the object of complex type object
+
+```yaml
+Type: object
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -177,3 +194,5 @@ PS C:\> Initialize-IntersightBulkResult
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-Intersightobject](./Initialize-Intersightobject.md)

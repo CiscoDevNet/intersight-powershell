@@ -5,38 +5,38 @@ online version:
 schema: 2.0.0
 ---
 
-# Remove-IntersightAcmeFoo
+# Remove-IntersightVnicVnicTemplate
 
 ## SYNOPSIS
-Remove the AcmeFoo
+Remove the VnicVnicTemplate
 
 ## SYNTAX
 
 ```
-Remove-IntersightAcmeFoo -Moid <String> [<CommonParameters>]
+Remove-IntersightVnicVnicTemplate -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;AcmeFoo&apos; resource.
+Delete a &apos;VnicVnicTemplate&apos; resource.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Remove-IntersightAcmeFoo -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+PS C:\> Remove-IntersightVnicVnicTemplate -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
-Above cmdlet removes the specified AcmeFoo 
+Above cmdlet removes the specified VnicVnicTemplate 
 
 ### Example 2
 ```powershell
-PS C:\>Get-IntersightAcmeFoo -Name "MoName"|  Remove-IntersightAcmeFoo
+PS C:\>Get-IntersightVnicVnicTemplate -Name "MoName"|  Remove-IntersightVnicVnicTemplate
 ```
 Above cmdlet pipes the output of Get cmdlet to Remove cmdlet
 
 ## PARAMETERS
 
 ### -Moid
-Specifyies the Moid of AcmeFoo.
+Specifyies the Moid of VnicVnicTemplate.
 
 ```yaml
 Type: String
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightAcmeFoo](./Get-IntersightAcmeFoo.md)
+[Get-IntersightVnicVnicTemplate](./Get-IntersightVnicVnicTemplate.md)
 
-[New-IntersightAcmeFoo](./New-IntersightAcmeFoo.md)
+[New-IntersightVnicVnicTemplate](./New-IntersightVnicVnicTemplate.md)
 
-[Set-IntersightAcmeFoo](./Set-IntersightAcmeFoo.md)
+[Set-IntersightVnicVnicTemplate](./Set-IntersightVnicVnicTemplate.md)
 

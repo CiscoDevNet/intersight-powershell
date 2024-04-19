@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.15830
-- C# SDK version: 1.0.11.15830
+- Intersight.PowerShell version: 1.0.11.16143
+- C# SDK version: 1.0.11.16143
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.15830"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.16143"}
 ```
 or
 
@@ -711,14 +711,6 @@ AccessPolicyInventory | [**Get-IntersightAccessPolicyInventory**](docs/Get-Inter
 AccessPolicy | [**New-IntersightAccessPolicy**](docs/New-IntersightAccessPolicy.md) | Create a 'AccessPolicy' resource.
 AccessPolicy | [**Remove-IntersightAccessPolicy**](docs/Remove-IntersightAccessPolicy.md) | Delete a 'AccessPolicy' resource.
 AccessPolicy | [**Set-IntersightAccessPolicy**](docs/Set-IntersightAccessPolicy.md) | Update a 'AccessPolicy' resource.
-AcmeDrawingBoard | [**Get-IntersightAcmeDrawingBoard**](docs/Get-IntersightAcmeDrawingBoard.md) | Read a 'AcmeDrawingBoard' resource.
-AcmeFoo | [**Get-IntersightAcmeFoo**](docs/Get-IntersightAcmeFoo.md) | Read a 'AcmeFoo' resource.
-AcmeDrawingBoard | [**New-IntersightAcmeDrawingBoard**](docs/New-IntersightAcmeDrawingBoard.md) | Create a 'AcmeDrawingBoard' resource.
-AcmeFoo | [**New-IntersightAcmeFoo**](docs/New-IntersightAcmeFoo.md) | Create a 'AcmeFoo' resource.
-AcmeDrawingBoard | [**Remove-IntersightAcmeDrawingBoard**](docs/Remove-IntersightAcmeDrawingBoard.md) | Delete a 'AcmeDrawingBoard' resource.
-AcmeFoo | [**Remove-IntersightAcmeFoo**](docs/Remove-IntersightAcmeFoo.md) | Delete a 'AcmeFoo' resource.
-AcmeDrawingBoard | [**Set-IntersightAcmeDrawingBoard**](docs/Set-IntersightAcmeDrawingBoard.md) | Update a 'AcmeDrawingBoard' resource.
-AcmeFoo | [**Set-IntersightAcmeFoo**](docs/Set-IntersightAcmeFoo.md) | Update a 'AcmeFoo' resource.
 AdapterConfigPolicy | [**Get-IntersightAdapterConfigPolicy**](docs/Get-IntersightAdapterConfigPolicy.md) | Read a 'AdapterConfigPolicy' resource.
 AdapterExtEthInterface | [**Get-IntersightAdapterExtEthInterface**](docs/Get-IntersightAdapterExtEthInterface.md) | Read a 'AdapterExtEthInterface' resource.
 AdapterHostEthInterface | [**Get-IntersightAdapterHostEthInterface**](docs/Get-IntersightAdapterHostEthInterface.md) | Read a 'AdapterHostEthInterface' resource.
@@ -872,7 +864,9 @@ BootUsbDevice | [**Set-IntersightBootUsbDevice**](docs/Set-IntersightBootUsbDevi
 BootVmediaDevice | [**Set-IntersightBootVmediaDevice**](docs/Set-IntersightBootVmediaDevice.md) | Update a 'BootVmediaDevice' resource.
 BulkExport | [**Get-IntersightBulkExport**](docs/Get-IntersightBulkExport.md) | Read a 'BulkExport' resource.
 BulkExportedItem | [**Get-IntersightBulkExportedItem**](docs/Get-IntersightBulkExportedItem.md) | Read a 'BulkExportedItem' resource.
+BulkMoCloner | [**Get-IntersightBulkMoCloner**](docs/Get-IntersightBulkMoCloner.md) | Read a 'BulkMoCloner' resource.
 BulkMoDeepCloner | [**Get-IntersightBulkMoDeepCloner**](docs/Get-IntersightBulkMoDeepCloner.md) | Read a 'BulkMoDeepCloner' resource.
+BulkMoMerger | [**Get-IntersightBulkMoMerger**](docs/Get-IntersightBulkMoMerger.md) | Read a 'BulkMoMerger' resource.
 BulkRequest | [**Get-IntersightBulkRequest**](docs/Get-IntersightBulkRequest.md) | Read a 'BulkRequest' resource.
 BulkResult | [**Get-IntersightBulkResult**](docs/Get-IntersightBulkResult.md) | Read a 'BulkResult' resource.
 BulkSubRequestObj | [**Get-IntersightBulkSubRequestObj**](docs/Get-IntersightBulkSubRequestObj.md) | Read a 'BulkSubRequestObj' resource.
@@ -923,7 +917,9 @@ CapabilitySiocModuleManufacturingDef | [**Get-IntersightCapabilitySiocModuleManu
 CapabilityStorageControllerUpdateConstraintMeta | [**Get-IntersightCapabilityStorageControllerUpdateConstraintMeta**](docs/Get-IntersightCapabilityStorageControllerUpdateConstraintMeta.md) | Read a 'CapabilityStorageControllerUpdateConstraintMeta' resource.
 CapabilitySwitchCapability | [**Get-IntersightCapabilitySwitchCapability**](docs/Get-IntersightCapabilitySwitchCapability.md) | Read a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**Get-IntersightCapabilitySwitchDescriptor**](docs/Get-IntersightCapabilitySwitchDescriptor.md) | Read a 'CapabilitySwitchDescriptor' resource.
+CapabilitySwitchEquipmentInfo | [**Get-IntersightCapabilitySwitchEquipmentInfo**](docs/Get-IntersightCapabilitySwitchEquipmentInfo.md) | Read a 'CapabilitySwitchEquipmentInfo' resource.
 CapabilitySwitchManufacturingDef | [**Get-IntersightCapabilitySwitchManufacturingDef**](docs/Get-IntersightCapabilitySwitchManufacturingDef.md) | Read a 'CapabilitySwitchManufacturingDef' resource.
+CapabilityTemplateCatalog | [**Get-IntersightCapabilityTemplateCatalog**](docs/Get-IntersightCapabilityTemplateCatalog.md) | Read a 'CapabilityTemplateCatalog' resource.
 CapabilityActionsMetaData | [**New-IntersightCapabilityActionsMetaData**](docs/New-IntersightCapabilityActionsMetaData.md) | Create a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**New-IntersightCapabilityAdapterDeprecatedDef**](docs/New-IntersightCapabilityAdapterDeprecatedDef.md) | Create a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**New-IntersightCapabilityAdapterUnitDescriptor**](docs/New-IntersightCapabilityAdapterUnitDescriptor.md) | Create a 'CapabilityAdapterUnitDescriptor' resource.
@@ -951,6 +947,7 @@ CapabilitySiocModuleDescriptor | [**New-IntersightCapabilitySiocModuleDescriptor
 CapabilitySiocModuleManufacturingDef | [**New-IntersightCapabilitySiocModuleManufacturingDef**](docs/New-IntersightCapabilitySiocModuleManufacturingDef.md) | Create a 'CapabilitySiocModuleManufacturingDef' resource.
 CapabilitySwitchCapability | [**New-IntersightCapabilitySwitchCapability**](docs/New-IntersightCapabilitySwitchCapability.md) | Create a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**New-IntersightCapabilitySwitchDescriptor**](docs/New-IntersightCapabilitySwitchDescriptor.md) | Create a 'CapabilitySwitchDescriptor' resource.
+CapabilitySwitchEquipmentInfo | [**New-IntersightCapabilitySwitchEquipmentInfo**](docs/New-IntersightCapabilitySwitchEquipmentInfo.md) | Create a 'CapabilitySwitchEquipmentInfo' resource.
 CapabilitySwitchManufacturingDef | [**New-IntersightCapabilitySwitchManufacturingDef**](docs/New-IntersightCapabilitySwitchManufacturingDef.md) | Create a 'CapabilitySwitchManufacturingDef' resource.
 CapabilityActionsMetaData | [**Remove-IntersightCapabilityActionsMetaData**](docs/Remove-IntersightCapabilityActionsMetaData.md) | Delete a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**Remove-IntersightCapabilityAdapterDeprecatedDef**](docs/Remove-IntersightCapabilityAdapterDeprecatedDef.md) | Delete a 'CapabilityAdapterDeprecatedDef' resource.
@@ -979,6 +976,7 @@ CapabilitySiocModuleDescriptor | [**Remove-IntersightCapabilitySiocModuleDescrip
 CapabilitySiocModuleManufacturingDef | [**Remove-IntersightCapabilitySiocModuleManufacturingDef**](docs/Remove-IntersightCapabilitySiocModuleManufacturingDef.md) | Delete a 'CapabilitySiocModuleManufacturingDef' resource.
 CapabilitySwitchCapability | [**Remove-IntersightCapabilitySwitchCapability**](docs/Remove-IntersightCapabilitySwitchCapability.md) | Delete a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**Remove-IntersightCapabilitySwitchDescriptor**](docs/Remove-IntersightCapabilitySwitchDescriptor.md) | Delete a 'CapabilitySwitchDescriptor' resource.
+CapabilitySwitchEquipmentInfo | [**Remove-IntersightCapabilitySwitchEquipmentInfo**](docs/Remove-IntersightCapabilitySwitchEquipmentInfo.md) | Delete a 'CapabilitySwitchEquipmentInfo' resource.
 CapabilitySwitchManufacturingDef | [**Remove-IntersightCapabilitySwitchManufacturingDef**](docs/Remove-IntersightCapabilitySwitchManufacturingDef.md) | Delete a 'CapabilitySwitchManufacturingDef' resource.
 CapabilityActionsMetaData | [**Set-IntersightCapabilityActionsMetaData**](docs/Set-IntersightCapabilityActionsMetaData.md) | Update a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**Set-IntersightCapabilityAdapterDeprecatedDef**](docs/Set-IntersightCapabilityAdapterDeprecatedDef.md) | Update a 'CapabilityAdapterDeprecatedDef' resource.
@@ -1008,6 +1006,7 @@ CapabilitySiocModuleDescriptor | [**Set-IntersightCapabilitySiocModuleDescriptor
 CapabilitySiocModuleManufacturingDef | [**Set-IntersightCapabilitySiocModuleManufacturingDef**](docs/Set-IntersightCapabilitySiocModuleManufacturingDef.md) | Update a 'CapabilitySiocModuleManufacturingDef' resource.
 CapabilitySwitchCapability | [**Set-IntersightCapabilitySwitchCapability**](docs/Set-IntersightCapabilitySwitchCapability.md) | Update a 'CapabilitySwitchCapability' resource.
 CapabilitySwitchDescriptor | [**Set-IntersightCapabilitySwitchDescriptor**](docs/Set-IntersightCapabilitySwitchDescriptor.md) | Update a 'CapabilitySwitchDescriptor' resource.
+CapabilitySwitchEquipmentInfo | [**Set-IntersightCapabilitySwitchEquipmentInfo**](docs/Set-IntersightCapabilitySwitchEquipmentInfo.md) | Update a 'CapabilitySwitchEquipmentInfo' resource.
 CapabilitySwitchManufacturingDef | [**Set-IntersightCapabilitySwitchManufacturingDef**](docs/Set-IntersightCapabilitySwitchManufacturingDef.md) | Update a 'CapabilitySwitchManufacturingDef' resource.
 CertificatemanagementPolicy | [**Get-IntersightCertificatemanagementPolicy**](docs/Get-IntersightCertificatemanagementPolicy.md) | Read a 'CertificatemanagementPolicy' resource.
 CertificatemanagementPolicyInventory | [**Get-IntersightCertificatemanagementPolicyInventory**](docs/Get-IntersightCertificatemanagementPolicyInventory.md) | Read a 'CertificatemanagementPolicyInventory' resource.
@@ -1994,6 +1993,7 @@ ManagementInterface | [**Get-IntersightManagementInterface**](docs/Get-Intersigh
 ManagementController | [**Set-IntersightManagementController**](docs/Set-IntersightManagementController.md) | Update a 'ManagementController' resource.
 ManagementEntity | [**Set-IntersightManagementEntity**](docs/Set-IntersightManagementEntity.md) | Update a 'ManagementEntity' resource.
 ManagementInterface | [**Set-IntersightManagementInterface**](docs/Set-IntersightManagementInterface.md) | Update a 'ManagementInterface' resource.
+MarketplaceCatalog | [**Get-IntersightMarketplaceCatalog**](docs/Get-IntersightMarketplaceCatalog.md) | Read a 'MarketplaceCatalog' resource.
 MarketplaceUseCase | [**Get-IntersightMarketplaceUseCase**](docs/Get-IntersightMarketplaceUseCase.md) | Read a 'MarketplaceUseCase' resource.
 MarketplaceUseCaseVersion | [**Get-IntersightMarketplaceUseCaseVersion**](docs/Get-IntersightMarketplaceUseCaseVersion.md) | Read a 'MarketplaceUseCaseVersion' resource.
 MarketplaceUseCase | [**New-IntersightMarketplaceUseCase**](docs/New-IntersightMarketplaceUseCase.md) | Create a 'MarketplaceUseCase' resource.
@@ -2335,6 +2335,12 @@ ResourcepoolPool | [**Remove-IntersightResourcepoolPool**](docs/Remove-Intersigh
 ResourcepoolMembershipReservation | [**Set-IntersightResourcepoolMembershipReservation**](docs/Set-IntersightResourcepoolMembershipReservation.md) | Update a 'ResourcepoolMembershipReservation' resource.
 ResourcepoolPool | [**Set-IntersightResourcepoolPool**](docs/Set-IntersightResourcepoolPool.md) | Update a 'ResourcepoolPool' resource.
 RproxyReverseProxy | [**New-IntersightRproxyReverseProxy**](docs/New-IntersightRproxyReverseProxy.md) | Create a 'RproxyReverseProxy' resource.
+SchedulerTaskResult | [**Get-IntersightSchedulerTaskResult**](docs/Get-IntersightSchedulerTaskResult.md) | Read a 'SchedulerTaskResult' resource.
+SchedulerTaskSchedule | [**Get-IntersightSchedulerTaskSchedule**](docs/Get-IntersightSchedulerTaskSchedule.md) | Read a 'SchedulerTaskSchedule' resource.
+SchedulerTaskSchedule | [**New-IntersightSchedulerTaskSchedule**](docs/New-IntersightSchedulerTaskSchedule.md) | Create a 'SchedulerTaskSchedule' resource.
+SchedulerTaskResult | [**Remove-IntersightSchedulerTaskResult**](docs/Remove-IntersightSchedulerTaskResult.md) | Delete a 'SchedulerTaskResult' resource.
+SchedulerTaskSchedule | [**Remove-IntersightSchedulerTaskSchedule**](docs/Remove-IntersightSchedulerTaskSchedule.md) | Delete a 'SchedulerTaskSchedule' resource.
+SchedulerTaskSchedule | [**Set-IntersightSchedulerTaskSchedule**](docs/Set-IntersightSchedulerTaskSchedule.md) | Update a 'SchedulerTaskSchedule' resource.
 SdcardPolicy | [**Get-IntersightSdcardPolicy**](docs/Get-IntersightSdcardPolicy.md) | Read a 'SdcardPolicy' resource.
 SdcardPolicyInventory | [**Get-IntersightSdcardPolicyInventory**](docs/Get-IntersightSdcardPolicyInventory.md) | Read a 'SdcardPolicyInventory' resource.
 SdcardPolicy | [**New-IntersightSdcardPolicy**](docs/New-IntersightSdcardPolicy.md) | Create a 'SdcardPolicy' resource.
@@ -2764,6 +2770,8 @@ VnicLcpStatus | [**Get-IntersightVnicLcpStatus**](docs/Get-IntersightVnicLcpStat
 VnicSanConnectivityPolicy | [**Get-IntersightVnicSanConnectivityPolicy**](docs/Get-IntersightVnicSanConnectivityPolicy.md) | Read a 'VnicSanConnectivityPolicy' resource.
 VnicSanConnectivityPolicyInventory | [**Get-IntersightVnicSanConnectivityPolicyInventory**](docs/Get-IntersightVnicSanConnectivityPolicyInventory.md) | Read a 'VnicSanConnectivityPolicyInventory' resource.
 VnicScpStatus | [**Get-IntersightVnicScpStatus**](docs/Get-IntersightVnicScpStatus.md) | Read a 'VnicScpStatus' resource.
+VnicVhbaTemplate | [**Get-IntersightVnicVhbaTemplate**](docs/Get-IntersightVnicVhbaTemplate.md) | Read a 'VnicVhbaTemplate' resource.
+VnicVnicTemplate | [**Get-IntersightVnicVnicTemplate**](docs/Get-IntersightVnicVnicTemplate.md) | Read a 'VnicVnicTemplate' resource.
 VnicEthAdapterPolicy | [**New-IntersightVnicEthAdapterPolicy**](docs/New-IntersightVnicEthAdapterPolicy.md) | Create a 'VnicEthAdapterPolicy' resource.
 VnicEthIf | [**New-IntersightVnicEthIf**](docs/New-IntersightVnicEthIf.md) | Create a 'VnicEthIf' resource.
 VnicEthNetworkPolicy | [**New-IntersightVnicEthNetworkPolicy**](docs/New-IntersightVnicEthNetworkPolicy.md) | Create a 'VnicEthNetworkPolicy' resource.
@@ -2777,6 +2785,8 @@ VnicIscsiBootPolicy | [**New-IntersightVnicIscsiBootPolicy**](docs/New-Intersigh
 VnicIscsiStaticTargetPolicy | [**New-IntersightVnicIscsiStaticTargetPolicy**](docs/New-IntersightVnicIscsiStaticTargetPolicy.md) | Create a 'VnicIscsiStaticTargetPolicy' resource.
 VnicLanConnectivityPolicy | [**New-IntersightVnicLanConnectivityPolicy**](docs/New-IntersightVnicLanConnectivityPolicy.md) | Create a 'VnicLanConnectivityPolicy' resource.
 VnicSanConnectivityPolicy | [**New-IntersightVnicSanConnectivityPolicy**](docs/New-IntersightVnicSanConnectivityPolicy.md) | Create a 'VnicSanConnectivityPolicy' resource.
+VnicVhbaTemplate | [**New-IntersightVnicVhbaTemplate**](docs/New-IntersightVnicVhbaTemplate.md) | Create a 'VnicVhbaTemplate' resource.
+VnicVnicTemplate | [**New-IntersightVnicVnicTemplate**](docs/New-IntersightVnicVnicTemplate.md) | Create a 'VnicVnicTemplate' resource.
 VnicEthAdapterPolicy | [**Remove-IntersightVnicEthAdapterPolicy**](docs/Remove-IntersightVnicEthAdapterPolicy.md) | Delete a 'VnicEthAdapterPolicy' resource.
 VnicEthIf | [**Remove-IntersightVnicEthIf**](docs/Remove-IntersightVnicEthIf.md) | Delete a 'VnicEthIf' resource.
 VnicEthNetworkPolicy | [**Remove-IntersightVnicEthNetworkPolicy**](docs/Remove-IntersightVnicEthNetworkPolicy.md) | Delete a 'VnicEthNetworkPolicy' resource.
@@ -2790,6 +2800,8 @@ VnicIscsiBootPolicy | [**Remove-IntersightVnicIscsiBootPolicy**](docs/Remove-Int
 VnicIscsiStaticTargetPolicy | [**Remove-IntersightVnicIscsiStaticTargetPolicy**](docs/Remove-IntersightVnicIscsiStaticTargetPolicy.md) | Delete a 'VnicIscsiStaticTargetPolicy' resource.
 VnicLanConnectivityPolicy | [**Remove-IntersightVnicLanConnectivityPolicy**](docs/Remove-IntersightVnicLanConnectivityPolicy.md) | Delete a 'VnicLanConnectivityPolicy' resource.
 VnicSanConnectivityPolicy | [**Remove-IntersightVnicSanConnectivityPolicy**](docs/Remove-IntersightVnicSanConnectivityPolicy.md) | Delete a 'VnicSanConnectivityPolicy' resource.
+VnicVhbaTemplate | [**Remove-IntersightVnicVhbaTemplate**](docs/Remove-IntersightVnicVhbaTemplate.md) | Delete a 'VnicVhbaTemplate' resource.
+VnicVnicTemplate | [**Remove-IntersightVnicVnicTemplate**](docs/Remove-IntersightVnicVnicTemplate.md) | Delete a 'VnicVnicTemplate' resource.
 VnicEthAdapterPolicy | [**Set-IntersightVnicEthAdapterPolicy**](docs/Set-IntersightVnicEthAdapterPolicy.md) | Update a 'VnicEthAdapterPolicy' resource.
 VnicEthIf | [**Set-IntersightVnicEthIf**](docs/Set-IntersightVnicEthIf.md) | Update a 'VnicEthIf' resource.
 VnicEthNetworkPolicy | [**Set-IntersightVnicEthNetworkPolicy**](docs/Set-IntersightVnicEthNetworkPolicy.md) | Update a 'VnicEthNetworkPolicy' resource.
@@ -2803,6 +2815,8 @@ VnicIscsiBootPolicy | [**Set-IntersightVnicIscsiBootPolicy**](docs/Set-Intersigh
 VnicIscsiStaticTargetPolicy | [**Set-IntersightVnicIscsiStaticTargetPolicy**](docs/Set-IntersightVnicIscsiStaticTargetPolicy.md) | Update a 'VnicIscsiStaticTargetPolicy' resource.
 VnicLanConnectivityPolicy | [**Set-IntersightVnicLanConnectivityPolicy**](docs/Set-IntersightVnicLanConnectivityPolicy.md) | Update a 'VnicLanConnectivityPolicy' resource.
 VnicSanConnectivityPolicy | [**Set-IntersightVnicSanConnectivityPolicy**](docs/Set-IntersightVnicSanConnectivityPolicy.md) | Update a 'VnicSanConnectivityPolicy' resource.
+VnicVhbaTemplate | [**Set-IntersightVnicVhbaTemplate**](docs/Set-IntersightVnicVhbaTemplate.md) | Update a 'VnicVhbaTemplate' resource.
+VnicVnicTemplate | [**Set-IntersightVnicVnicTemplate**](docs/Set-IntersightVnicVnicTemplate.md) | Update a 'VnicVnicTemplate' resource.
 VrfVrf | [**Get-IntersightVrfVrf**](docs/Get-IntersightVrfVrf.md) | Read a 'VrfVrf' resource.
 VrfVrf | [**New-IntersightVrfVrf**](docs/New-IntersightVrfVrf.md) | Create a 'VrfVrf' resource.
 VrfVrf | [**Remove-IntersightVrfVrf**](docs/Remove-IntersightVrfVrf.md) | Delete a 'VrfVrf' resource.

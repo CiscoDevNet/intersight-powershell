@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightManagementController [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EquipmentIoCardBase< EquipmentIoCardBaseRelationship>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UemStreamAdminState< ManagementController.UemStreamAdminStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightManagementController [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UemStreamAdminState< ManagementController.UemStreamAdminStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,24 +28,6 @@ Update a &apos;ManagementController&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EquipmentIoCardBase
-A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: EquipmentIoCardBaseRelationship
 Parameter Sets: (All)
 Aliases:
 

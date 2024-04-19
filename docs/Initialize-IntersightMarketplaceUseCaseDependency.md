@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The string field to hold the key name
+The string field to hold the key name.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-The string field to hold the value
+The string field to hold the value.
 
 ```yaml
 Type: string

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBulkExport [-Action< BulkExport.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkExport.ClassIdEnum>][-ExportTags< bool>][-Items< System.Collections.Generic.List`1[Model.MoMoRef]>][-Moid< string>][-Name< string>][-ObjectType< BulkExport.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBulkExport [-Action< BulkExport.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkExport.ClassIdEnum>][-ExcludePeers< System.Collections.Generic.List`1[string]>][-ExcludeRelations< bool>][-ExportTags< bool>][-IncludeOrgIdentity< bool>][-Items< System.Collections.Generic.List`1[Model.MoMoRef]>][-Moid< string>][-Name< string>][-ObjectType< BulkExport.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,8 +69,53 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ExcludePeers
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExcludeRelations
+Used to specify that none of the relationships should be exported.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ExportTags
 Specifies whether tags must be exported and will be considered for all the items MOs.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IncludeOrgIdentity
+Indicates that exported references for objects which are organization owned should include the organization reference along with the other identity properties.
 
 ```yaml
 Type: bool

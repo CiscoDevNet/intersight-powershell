@@ -199,6 +199,8 @@ PS C:\> New-IntersightCapabilitySwitchCapability
 
 [Initialize-IntersightCapabilitySwitchingModeCapability](./Initialize-IntersightCapabilitySwitchingModeCapability.md)
 
+[Initialize-IntersightFirmwareVersionMap](./Initialize-IntersightFirmwareVersionMap.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightCapabilitySwitchCapability](./Remove-IntersightCapabilitySwitchCapability.md)

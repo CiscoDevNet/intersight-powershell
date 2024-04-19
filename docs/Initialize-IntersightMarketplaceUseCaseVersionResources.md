@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceId
-A string ID for each use case
+A string ID for each use case.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-A string resource type for each use case
+A string resource type for each use case.
 
 ```yaml
 Type: string

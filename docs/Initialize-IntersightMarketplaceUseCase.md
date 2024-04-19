@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightMarketplaceUseCase [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< MarketplaceUseCase.ClassIdEnum>][-Dependencies< System.Collections.Generic.List`1[Model.MarketplaceUseCaseDependency]>][-Locales< System.Collections.Generic.List`1[Model.MarketplaceUseCaseLocale]>][-Moid< string>][-ObjectType< MarketplaceUseCase.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightMarketplaceUseCase [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.MarketplaceCatalogRelationship>][-ClassId< MarketplaceUseCase.ClassIdEnum>][-Dependencies< System.Collections.Generic.List`1[Model.MarketplaceUseCaseDependency]>][-Locales< System.Collections.Generic.List`1[Model.MarketplaceUseCaseLocale]>][-Moid< string>][-ObjectType< MarketplaceUseCase.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UniqueName< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,24 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Catalog
+A reference to a marketplaceCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.MarketplaceCatalogRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -118,14 +136,13 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Organization
-A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+### -Tags
 
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
 
 ```yaml
-Type: Model.OrganizationOrganizationRelationship
+Type: System.Collections.Generic.List`1[Model.MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -136,13 +153,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Tags
-
-
-Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+### -UniqueName
+A unique identifier is used to prevent duplicates.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.MoTag]
+Type: string
 Parameter Sets: (All)
 Aliases:
 

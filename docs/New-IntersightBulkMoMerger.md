@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightBulkMoMerger [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-MergeAction< BulkMoMerger.MergeActionEnum>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[MoBaseMo]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetConfig< MoBaseMo>][-Targets< System.Collections.Generic.List`1[MoBaseMo]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightBulkMoMerger [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-MergeAction< BulkMoMerger.MergeActionEnum>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[MoBaseMo]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetConfig< MoBaseMo>][-Targets< System.Collections.Generic.List`1[MoBaseMo]>][-WorkflowNameSuffix< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -154,6 +154,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -WorkflowNameSuffix
+A user-friendly short name to identify the workflow. Name can only contain letters (a-z, A-Z),\nnumbers (0-9), hyphen (-), period (.), colon (:), space ( ), forward slash (/), comma or an underscore (_).
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -210,6 +225,8 @@ PS C:\> New-IntersightBulkMoMerger
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-IntersightBulkMoMerger](./Get-IntersightBulkMoMerger.md)
 
 [Initialize-IntersightBulkRestResult](./Initialize-IntersightBulkRestResult.md)
 

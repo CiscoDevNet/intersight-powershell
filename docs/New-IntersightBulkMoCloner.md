@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightBulkMoCloner [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ExcludeProperties< System.Collections.Generic.List`1[string]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[MoBaseMo]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Targets< System.Collections.Generic.List`1[MoBaseMo]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightBulkMoCloner [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ExcludeProperties< System.Collections.Generic.List`1[string]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Sources< System.Collections.Generic.List`1[MoBaseMo]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Targets< System.Collections.Generic.List`1[MoBaseMo]>][-WorkflowNameSuffix< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -137,6 +137,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -WorkflowNameSuffix
+A user-friendly short name to identify the workflow. Name can only contain letters (a-z, A-Z),\nnumbers (0-9), hyphen (-), period (.), colon (:), space ( ), forward slash (/), comma or an underscore (_).
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -193,6 +208,8 @@ PS C:\> New-IntersightBulkMoCloner
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-IntersightBulkMoCloner](./Get-IntersightBulkMoCloner.md)
 
 [Initialize-IntersightBulkRestResult](./Initialize-IntersightBulkRestResult.md)
 

@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-A description for the automation
+A description for the automation.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-A name for the automation
+A name for the automation.
 
 ```yaml
 Type: string

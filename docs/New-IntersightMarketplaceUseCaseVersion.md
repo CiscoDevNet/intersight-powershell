@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightMarketplaceUseCaseVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Locales< System.Collections.Generic.List`1[MarketplaceUseCaseVersionLocale]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Resources< System.Collections.Generic.List`1[MarketplaceUseCaseVersionResources]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UseCase< MarketplaceUseCaseRelationship>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightMarketplaceUseCaseVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< MarketplaceCatalogRelationship>][-Locales< System.Collections.Generic.List`1[MarketplaceUseCaseVersionLocale]>][-Moid< string>][-Resources< System.Collections.Generic.List`1[MarketplaceUseCaseVersionResources]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UseCase< MarketplaceUseCaseRelationship>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,24 @@ Create a &apos;MarketplaceUseCaseVersion&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Catalog
+A reference to a marketplaceCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: MarketplaceCatalogRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -60,24 +78,6 @@ The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Organization
-A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: OrganizationOrganizationRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-A string version for each use case
+A string version for each use case.
 
 ```yaml
 Type: string

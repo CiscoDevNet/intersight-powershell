@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FcAdapterPolicy< VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< VnicFcNetworkPolicyRelationship>][-FcQosPolicy< VnicFcQosPolicyRelationship>][-FcZonePolicies< System.Collections.Generic.List`1[FabricFcZonePolicyRelationship]>][[-Moid]< string>][-Name< string>][-Order< long>][-PersistentBindings< bool>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< VnicSanConnectivityPolicyRelationship>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< FcpoolLeaseRelationship>][-WwpnPool< FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVnicFcIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FcAdapterPolicy< VnicFcAdapterPolicyRelationship>][-FcNetworkPolicy< VnicFcNetworkPolicyRelationship>][-FcQosPolicy< VnicFcQosPolicyRelationship>][-FcZonePolicies< System.Collections.Generic.List`1[FabricFcZonePolicyRelationship]>][[-Moid]< string>][-Name< string>][-Order< long>][-PersistentBindings< bool>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SanConnectivityPolicy< VnicSanConnectivityPolicyRelationship>][-SrcTemplate< VnicVhbaTemplateRelationship>][-StaticWwpnAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-Type< VnicFcIf.TypeEnum>][-WwpnAddressType< VnicFcIf.WwpnAddressTypeEnum>][-WwpnLease< FcpoolLeaseRelationship>][-WwpnPool< FcpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -238,6 +238,24 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SrcTemplate
+A reference to a vnicVhbaTemplate resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: VnicVhbaTemplateRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -StaticWwpnAddress
 The WWPN address must be in hexadecimal format xx:xx:xx:xx:xx:xx:xx:xx.\nAllowed ranges are 20:00:00:00:00:00:00:00 to 20:FF:FF:FF:FF:FF:FF:FF or from 50:00:00:00:00:00:00:00 to 5F:FF:FF:FF:FF:FF:FF:FF.\nTo ensure uniqueness of WWN&apos;s in the SAN fabric, you are strongly encouraged to use the WWN prefix - 20:00:00:25:B5:xx:xx:xx.
 
@@ -260,6 +278,23 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TemplateActions
+
+
+Note :- Use Initialize-IntersightMotemplateActionEntry to create the object of complex type MotemplateActionEntry
+
+```yaml
+Type: System.Collections.Generic.List`1[MotemplateActionEntry]
 Parameter Sets: (All)
 Aliases:
 
@@ -396,6 +431,10 @@ PS C:\> Set-IntersightVnicFcIf
 [Get-IntersightVnicFcIf](./Get-IntersightVnicFcIf.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)
+
+[Initialize-IntersightMotemplateSyncError](./Initialize-IntersightMotemplateSyncError.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
 

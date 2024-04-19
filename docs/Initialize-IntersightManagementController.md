@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightManagementController [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ManagementController.ClassIdEnum>][-EquipmentIoCardBase< Model.EquipmentIoCardBaseRelationship>][-Moid< string>][-ObjectType< ManagementController.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UemStreamAdminState< ManagementController.UemStreamAdminStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightManagementController [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ManagementController.ClassIdEnum>][-Moid< string>][-ObjectType< ManagementController.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UemStreamAdminState< ManagementController.UemStreamAdminStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,24 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: ManagementController.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EquipmentIoCardBase
-A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.EquipmentIoCardBaseRelationship
 Parameter Sets: (All)
 Aliases:
 
