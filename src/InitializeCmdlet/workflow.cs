@@ -12950,6 +12950,105 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize WorkflowTaskInfoUpdate.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightWorkflowTaskInfoUpdate")]
+    public class InitializeIntersightWorkflowTaskInfoUpdate : PSCmdlet
+    {
+        public InitializeIntersightWorkflowTaskInfoUpdate()
+        {
+            ClassId = WorkflowTaskInfoUpdate.ClassIdEnum.WorkflowTaskInfoUpdate;
+            ObjectType = WorkflowTaskInfoUpdate.ObjectTypeEnum.WorkflowTaskInfoUpdate;
+            Status = WorkflowTaskInfoUpdate.StatusEnum.Scheduled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkflowTaskInfoUpdate.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Inputs for the specified TaskInfo. Inputs must only be provided for tasks which has included an input definition and the inputs must match the constraints specified in the input definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object Input
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the task being updated and this name must match the task instance name included inside the workflow definition. This name is also captured in the RefName property of the TaskInfo object for the task."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkflowTaskInfoUpdate.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"New status of the task being updated, only Failed and Completed statuses are supported.\n* `Scheduled` - The enum represents the status when task is in scheduled state.\n* `InProgress` - The enum represents the status when task is in-progress state.\n* `NoOp` - The enum represents the status when task is a noop.\n* `Timeout` - The enum represents the status when task has timed out.\n* `Completed` - The enum represents the status when task has completed.\n* `Failed` - The enum represents the status when task has failed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkflowTaskInfoUpdate.StatusEnum Status
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.WorkflowTaskInfoUpdate initObject = new Intersight.Model.WorkflowTaskInfoUpdate();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Input"))
+            {
+                initObject.Input = this.Input;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            {
+                initObject.Status = this.Status;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize WorkflowTaskLoopInfo.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightWorkflowTaskLoopInfo")]
@@ -13776,6 +13875,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.WorkflowBaseDataType> InputDefinition
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"JSON formatted key-value pairs that define the inputs given to the task. Mapping for task inputs can be provided as either static values, direct mapping or advanced mapping using templates. The direct mapping can be specified as '${Source.< input | output | variable>.<JSONPath>}'. 'Source' can be either workflow or the name of an earlier task within the workflow. You can map the task input to either a workflow input, a task output or a variable. Golang template syntax is supported for advanced mapping. A simple flattened example is \"InputParameters\":{ \"input1\":\"${workflow.variable.var1}\", \"input2\":\"prefixStr_{{.global.workflow.input.input1}}\" } where task input1 is mapped directly to variable var1 and task input2 is using a template to prefix a string to workflow input1 and then assign that value."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -13877,6 +13986,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InputDefinition"))
+            {
+                initObject.InputDefinition = this.InputDefinition;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("InputParameters"))
             {
@@ -15157,6 +15270,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Used to update a TaskInfo instance in the WorkflowInfo, it is used as a way to update status and provide user inputs for a WaitTask."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.WorkflowTaskInfoUpdate TaskInfoUpdate
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The workflow context which contains initiator and target information."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -15233,6 +15356,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TaskInfoUpdate"))
+            {
+                initObject.TaskInfoUpdate = this.TaskInfoUpdate;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowCtx"))
             {
@@ -15520,6 +15647,7 @@ namespace Intersight.PowerShell
         {
             ClassId = WorkflowWorkflowProperties.ClassIdEnum.WorkflowWorkflowProperties;
             ObjectType = WorkflowWorkflowProperties.ObjectTypeEnum.WorkflowWorkflowProperties;
+            PublishStatus = WorkflowWorkflowProperties.PublishStatusEnum.Draft;
             SupportStatus = WorkflowWorkflowProperties.SupportStatusEnum.Supported;
 
         }
@@ -15554,11 +15682,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"This flag determines if this workflow publish status is enforced or not."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnablePublishStatus
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public WorkflowWorkflowProperties.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The workflow publish status (Draft, Published, Archived), this property is relevant only when enablePublishStatus is set to true.\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkflowWorkflowProperties.PublishStatusEnum PublishStatus
         {
             get;
             set;
@@ -15616,7 +15764,15 @@ namespace Intersight.PowerShell
             {
                 initObject.EnableDebug = this.EnableDebug;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnablePublishStatus"))
+            {
+                initObject.EnablePublishStatus = this.EnablePublishStatus;
+            }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PublishStatus"))
+            {
+                initObject.PublishStatus = this.PublishStatus;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Retryable"))
             {
                 initObject.Retryable = this.Retryable;

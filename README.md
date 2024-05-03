@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.16143
-- C# SDK version: 1.0.11.16143
+- Intersight.PowerShell version: 1.0.11.16342
+- C# SDK version: 1.0.11.16342
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.16143"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.16342"}
 ```
 or
 
@@ -1019,10 +1019,14 @@ ChassisConfigResult | [**Get-IntersightChassisConfigResult**](docs/Get-Intersigh
 ChassisConfigResultEntry | [**Get-IntersightChassisConfigResultEntry**](docs/Get-IntersightChassisConfigResultEntry.md) | Read a 'ChassisConfigResultEntry' resource.
 ChassisIomProfile | [**Get-IntersightChassisIomProfile**](docs/Get-IntersightChassisIomProfile.md) | Read a 'ChassisIomProfile' resource.
 ChassisProfile | [**Get-IntersightChassisProfile**](docs/Get-IntersightChassisProfile.md) | Read a 'ChassisProfile' resource.
+ChassisProfileTemplate | [**Get-IntersightChassisProfileTemplate**](docs/Get-IntersightChassisProfileTemplate.md) | Read a 'ChassisProfileTemplate' resource.
 ChassisConfigImport | [**New-IntersightChassisConfigImport**](docs/New-IntersightChassisConfigImport.md) | Create a 'ChassisConfigImport' resource.
 ChassisProfile | [**New-IntersightChassisProfile**](docs/New-IntersightChassisProfile.md) | Create a 'ChassisProfile' resource.
+ChassisProfileTemplate | [**New-IntersightChassisProfileTemplate**](docs/New-IntersightChassisProfileTemplate.md) | Create a 'ChassisProfileTemplate' resource.
 ChassisProfile | [**Remove-IntersightChassisProfile**](docs/Remove-IntersightChassisProfile.md) | Delete a 'ChassisProfile' resource.
+ChassisProfileTemplate | [**Remove-IntersightChassisProfileTemplate**](docs/Remove-IntersightChassisProfileTemplate.md) | Delete a 'ChassisProfileTemplate' resource.
 ChassisProfile | [**Set-IntersightChassisProfile**](docs/Set-IntersightChassisProfile.md) | Update a 'ChassisProfile' resource.
+ChassisProfileTemplate | [**Set-IntersightChassisProfileTemplate**](docs/Set-IntersightChassisProfileTemplate.md) | Update a 'ChassisProfileTemplate' resource.
 CloudAwsBillingUnit | [**Get-IntersightCloudAwsBillingUnit**](docs/Get-IntersightCloudAwsBillingUnit.md) | Read a 'CloudAwsBillingUnit' resource.
 CloudAwsKeyPair | [**Get-IntersightCloudAwsKeyPair**](docs/Get-IntersightCloudAwsKeyPair.md) | Read a 'CloudAwsKeyPair' resource.
 CloudAwsNetworkInterface | [**Get-IntersightCloudAwsNetworkInterface**](docs/Get-IntersightCloudAwsNetworkInterface.md) | Read a 'CloudAwsNetworkInterface' resource.
@@ -1202,8 +1206,10 @@ FabricPortPolicy | [**Get-IntersightFabricPortPolicy**](docs/Get-IntersightFabri
 FabricSanPinGroup | [**Get-IntersightFabricSanPinGroup**](docs/Get-IntersightFabricSanPinGroup.md) | Read a 'FabricSanPinGroup' resource.
 FabricServerRole | [**Get-IntersightFabricServerRole**](docs/Get-IntersightFabricServerRole.md) | Read a 'FabricServerRole' resource.
 FabricSwitchClusterProfile | [**Get-IntersightFabricSwitchClusterProfile**](docs/Get-IntersightFabricSwitchClusterProfile.md) | Read a 'FabricSwitchClusterProfile' resource.
+FabricSwitchClusterProfileTemplate | [**Get-IntersightFabricSwitchClusterProfileTemplate**](docs/Get-IntersightFabricSwitchClusterProfileTemplate.md) | Read a 'FabricSwitchClusterProfileTemplate' resource.
 FabricSwitchControlPolicy | [**Get-IntersightFabricSwitchControlPolicy**](docs/Get-IntersightFabricSwitchControlPolicy.md) | Read a 'FabricSwitchControlPolicy' resource.
 FabricSwitchProfile | [**Get-IntersightFabricSwitchProfile**](docs/Get-IntersightFabricSwitchProfile.md) | Read a 'FabricSwitchProfile' resource.
+FabricSwitchProfileTemplate | [**Get-IntersightFabricSwitchProfileTemplate**](docs/Get-IntersightFabricSwitchProfileTemplate.md) | Read a 'FabricSwitchProfileTemplate' resource.
 FabricSystemQosPolicy | [**Get-IntersightFabricSystemQosPolicy**](docs/Get-IntersightFabricSystemQosPolicy.md) | Read a 'FabricSystemQosPolicy' resource.
 FabricUplinkPcRole | [**Get-IntersightFabricUplinkPcRole**](docs/Get-IntersightFabricUplinkPcRole.md) | Read a 'FabricUplinkPcRole' resource.
 FabricUplinkRole | [**Get-IntersightFabricUplinkRole**](docs/Get-IntersightFabricUplinkRole.md) | Read a 'FabricUplinkRole' resource.
@@ -1237,8 +1243,10 @@ FabricPortPolicy | [**New-IntersightFabricPortPolicy**](docs/New-IntersightFabri
 FabricSanPinGroup | [**New-IntersightFabricSanPinGroup**](docs/New-IntersightFabricSanPinGroup.md) | Create a 'FabricSanPinGroup' resource.
 FabricServerRole | [**New-IntersightFabricServerRole**](docs/New-IntersightFabricServerRole.md) | Create a 'FabricServerRole' resource.
 FabricSwitchClusterProfile | [**New-IntersightFabricSwitchClusterProfile**](docs/New-IntersightFabricSwitchClusterProfile.md) | Create a 'FabricSwitchClusterProfile' resource.
+FabricSwitchClusterProfileTemplate | [**New-IntersightFabricSwitchClusterProfileTemplate**](docs/New-IntersightFabricSwitchClusterProfileTemplate.md) | Create a 'FabricSwitchClusterProfileTemplate' resource.
 FabricSwitchControlPolicy | [**New-IntersightFabricSwitchControlPolicy**](docs/New-IntersightFabricSwitchControlPolicy.md) | Create a 'FabricSwitchControlPolicy' resource.
 FabricSwitchProfile | [**New-IntersightFabricSwitchProfile**](docs/New-IntersightFabricSwitchProfile.md) | Create a 'FabricSwitchProfile' resource.
+FabricSwitchProfileTemplate | [**New-IntersightFabricSwitchProfileTemplate**](docs/New-IntersightFabricSwitchProfileTemplate.md) | Create a 'FabricSwitchProfileTemplate' resource.
 FabricSystemQosPolicy | [**New-IntersightFabricSystemQosPolicy**](docs/New-IntersightFabricSystemQosPolicy.md) | Create a 'FabricSystemQosPolicy' resource.
 FabricUplinkPcRole | [**New-IntersightFabricUplinkPcRole**](docs/New-IntersightFabricUplinkPcRole.md) | Create a 'FabricUplinkPcRole' resource.
 FabricUplinkRole | [**New-IntersightFabricUplinkRole**](docs/New-IntersightFabricUplinkRole.md) | Create a 'FabricUplinkRole' resource.
@@ -1268,8 +1276,10 @@ FabricPortPolicy | [**Remove-IntersightFabricPortPolicy**](docs/Remove-Intersigh
 FabricSanPinGroup | [**Remove-IntersightFabricSanPinGroup**](docs/Remove-IntersightFabricSanPinGroup.md) | Delete a 'FabricSanPinGroup' resource.
 FabricServerRole | [**Remove-IntersightFabricServerRole**](docs/Remove-IntersightFabricServerRole.md) | Delete a 'FabricServerRole' resource.
 FabricSwitchClusterProfile | [**Remove-IntersightFabricSwitchClusterProfile**](docs/Remove-IntersightFabricSwitchClusterProfile.md) | Delete a 'FabricSwitchClusterProfile' resource.
+FabricSwitchClusterProfileTemplate | [**Remove-IntersightFabricSwitchClusterProfileTemplate**](docs/Remove-IntersightFabricSwitchClusterProfileTemplate.md) | Delete a 'FabricSwitchClusterProfileTemplate' resource.
 FabricSwitchControlPolicy | [**Remove-IntersightFabricSwitchControlPolicy**](docs/Remove-IntersightFabricSwitchControlPolicy.md) | Delete a 'FabricSwitchControlPolicy' resource.
 FabricSwitchProfile | [**Remove-IntersightFabricSwitchProfile**](docs/Remove-IntersightFabricSwitchProfile.md) | Delete a 'FabricSwitchProfile' resource.
+FabricSwitchProfileTemplate | [**Remove-IntersightFabricSwitchProfileTemplate**](docs/Remove-IntersightFabricSwitchProfileTemplate.md) | Delete a 'FabricSwitchProfileTemplate' resource.
 FabricSystemQosPolicy | [**Remove-IntersightFabricSystemQosPolicy**](docs/Remove-IntersightFabricSystemQosPolicy.md) | Delete a 'FabricSystemQosPolicy' resource.
 FabricUplinkPcRole | [**Remove-IntersightFabricUplinkPcRole**](docs/Remove-IntersightFabricUplinkPcRole.md) | Delete a 'FabricUplinkPcRole' resource.
 FabricUplinkRole | [**Remove-IntersightFabricUplinkRole**](docs/Remove-IntersightFabricUplinkRole.md) | Delete a 'FabricUplinkRole' resource.
@@ -1300,8 +1310,10 @@ FabricPortPolicy | [**Set-IntersightFabricPortPolicy**](docs/Set-IntersightFabri
 FabricSanPinGroup | [**Set-IntersightFabricSanPinGroup**](docs/Set-IntersightFabricSanPinGroup.md) | Update a 'FabricSanPinGroup' resource.
 FabricServerRole | [**Set-IntersightFabricServerRole**](docs/Set-IntersightFabricServerRole.md) | Update a 'FabricServerRole' resource.
 FabricSwitchClusterProfile | [**Set-IntersightFabricSwitchClusterProfile**](docs/Set-IntersightFabricSwitchClusterProfile.md) | Update a 'FabricSwitchClusterProfile' resource.
+FabricSwitchClusterProfileTemplate | [**Set-IntersightFabricSwitchClusterProfileTemplate**](docs/Set-IntersightFabricSwitchClusterProfileTemplate.md) | Update a 'FabricSwitchClusterProfileTemplate' resource.
 FabricSwitchControlPolicy | [**Set-IntersightFabricSwitchControlPolicy**](docs/Set-IntersightFabricSwitchControlPolicy.md) | Update a 'FabricSwitchControlPolicy' resource.
 FabricSwitchProfile | [**Set-IntersightFabricSwitchProfile**](docs/Set-IntersightFabricSwitchProfile.md) | Update a 'FabricSwitchProfile' resource.
+FabricSwitchProfileTemplate | [**Set-IntersightFabricSwitchProfileTemplate**](docs/Set-IntersightFabricSwitchProfileTemplate.md) | Update a 'FabricSwitchProfileTemplate' resource.
 FabricSystemQosPolicy | [**Set-IntersightFabricSystemQosPolicy**](docs/Set-IntersightFabricSystemQosPolicy.md) | Update a 'FabricSystemQosPolicy' resource.
 FabricUplinkPcRole | [**Set-IntersightFabricUplinkPcRole**](docs/Set-IntersightFabricUplinkPcRole.md) | Update a 'FabricUplinkPcRole' resource.
 FabricUplinkRole | [**Set-IntersightFabricUplinkRole**](docs/Set-IntersightFabricUplinkRole.md) | Update a 'FabricUplinkRole' resource.
@@ -1993,7 +2005,6 @@ ManagementInterface | [**Get-IntersightManagementInterface**](docs/Get-Intersigh
 ManagementController | [**Set-IntersightManagementController**](docs/Set-IntersightManagementController.md) | Update a 'ManagementController' resource.
 ManagementEntity | [**Set-IntersightManagementEntity**](docs/Set-IntersightManagementEntity.md) | Update a 'ManagementEntity' resource.
 ManagementInterface | [**Set-IntersightManagementInterface**](docs/Set-IntersightManagementInterface.md) | Update a 'ManagementInterface' resource.
-MarketplaceCatalog | [**Get-IntersightMarketplaceCatalog**](docs/Get-IntersightMarketplaceCatalog.md) | Read a 'MarketplaceCatalog' resource.
 MarketplaceUseCase | [**Get-IntersightMarketplaceUseCase**](docs/Get-IntersightMarketplaceUseCase.md) | Read a 'MarketplaceUseCase' resource.
 MarketplaceUseCaseVersion | [**Get-IntersightMarketplaceUseCaseVersion**](docs/Get-IntersightMarketplaceUseCaseVersion.md) | Read a 'MarketplaceUseCaseVersion' resource.
 MarketplaceUseCase | [**New-IntersightMarketplaceUseCase**](docs/New-IntersightMarketplaceUseCase.md) | Create a 'MarketplaceUseCase' resource.
@@ -2904,3 +2915,7 @@ WorkflowTaskDefinition | [**Set-IntersightWorkflowTaskDefinition**](docs/Set-Int
 WorkflowTaskInfo | [**Set-IntersightWorkflowTaskInfo**](docs/Set-IntersightWorkflowTaskInfo.md) | Update a 'WorkflowTaskInfo' resource.
 WorkflowWorkflowDefinition | [**Set-IntersightWorkflowWorkflowDefinition**](docs/Set-IntersightWorkflowWorkflowDefinition.md) | Update a 'WorkflowWorkflowDefinition' resource.
 WorkflowWorkflowInfo | [**Set-IntersightWorkflowWorkflowInfo**](docs/Set-IntersightWorkflowWorkflowInfo.md) | Update a 'WorkflowWorkflowInfo' resource.
+WorkspaceFolder | [**Get-IntersightWorkspaceFolder**](docs/Get-IntersightWorkspaceFolder.md) | Read a 'WorkspaceFolder' resource.
+WorkspaceFolder | [**New-IntersightWorkspaceFolder**](docs/New-IntersightWorkspaceFolder.md) | Create a 'WorkspaceFolder' resource.
+WorkspaceFolder | [**Remove-IntersightWorkspaceFolder**](docs/Remove-IntersightWorkspaceFolder.md) | Delete a 'WorkspaceFolder' resource.
+WorkspaceFolder | [**Set-IntersightWorkspaceFolder**](docs/Set-IntersightWorkspaceFolder.md) | Update a 'WorkspaceFolder' resource.

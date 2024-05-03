@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWorkflowInfo [-Account< Model.IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< Model.MoBaseMoRelationship>][-ClassId< WorkflowWorkflowInfo.ClassIdEnum>][-FailedWorkflowCleanupDuration< long>][-Input< object>][-Moid< string>][-Name< string>][-ObjectType< WorkflowWorkflowInfo.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Permission< Model.IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WorkflowCtx< Model.WorkflowWorkflowCtx>][-WorkflowDefinition< Model.WorkflowWorkflowDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWorkflowInfo [-Account< Model.IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< Model.MoBaseMoRelationship>][-ClassId< WorkflowWorkflowInfo.ClassIdEnum>][-FailedWorkflowCleanupDuration< long>][-Input< object>][-Moid< string>][-Name< string>][-ObjectType< WorkflowWorkflowInfo.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Permission< Model.IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TaskInfoUpdate< Model.WorkflowTaskInfoUpdate>][-WorkflowCtx< Model.WorkflowWorkflowCtx>][-WorkflowDefinition< Model.WorkflowWorkflowDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -265,6 +265,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -TaskInfoUpdate
+Used to update a TaskInfo instance in the WorkflowInfo, it is used as a way to update status and provide user inputs for a WaitTask.
+
+Note :- Use Initialize-IntersightWorkflowTaskInfoUpdate to create the object of complex type WorkflowTaskInfoUpdate
+
+```yaml
+Type: Model.WorkflowTaskInfoUpdate
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -WorkflowCtx
 The workflow context which contains initiator and target information.
 
@@ -358,6 +375,8 @@ PS C:\> Initialize-IntersightWorkflowWorkflowInfo
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-IntersightWorkflowTaskInfoUpdate](./Initialize-IntersightWorkflowTaskInfoUpdate.md)
 
 [Initialize-IntersightWorkflowWorkflowCtx](./Initialize-IntersightWorkflowWorkflowCtx.md)
 

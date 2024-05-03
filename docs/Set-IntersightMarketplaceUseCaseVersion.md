@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightMarketplaceUseCaseVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< MarketplaceCatalogRelationship>][-Locales< System.Collections.Generic.List`1[MarketplaceUseCaseVersionLocale]>][[-Moid]< string>][-Resources< System.Collections.Generic.List`1[MarketplaceUseCaseVersionResources]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UseCase< MarketplaceUseCaseRelationship>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightMarketplaceUseCaseVersion [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-Locales< System.Collections.Generic.List`1[MarketplaceUseCaseVersionLocale]>][[-Moid]< string>][-Resources< System.Collections.Generic.List`1[MarketplaceUseCaseVersionResource]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UseCase< MarketplaceUseCaseRelationship>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,13 +39,13 @@ Accept wildcard characters: False
 ```
 
 ### -Catalog
-A reference to a marketplaceCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+A reference to a workflowCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: MarketplaceCatalogRelationship
+Type: WorkflowCatalogRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -91,10 +91,10 @@ Accept wildcard characters: False
 ### -Resources
 
 
-Note :- Use Initialize-IntersightMarketplaceUseCaseVersionResources to create the object of complex type MarketplaceUseCaseVersionResources
+Note :- Use Initialize-IntersightMarketplaceUseCaseVersionResource to create the object of complex type MarketplaceUseCaseVersionResource
 
 ```yaml
-Type: System.Collections.Generic.List`1[MarketplaceUseCaseVersionResources]
+Type: System.Collections.Generic.List`1[MarketplaceUseCaseVersionResource]
 Parameter Sets: (All)
 Aliases:
 
@@ -216,7 +216,7 @@ PS C:\> Set-IntersightMarketplaceUseCaseVersion
 
 [Initialize-IntersightMarketplaceUseCaseVersionLocale](./Initialize-IntersightMarketplaceUseCaseVersionLocale.md)
 
-[Initialize-IntersightMarketplaceUseCaseVersionResources](./Initialize-IntersightMarketplaceUseCaseVersionResources.md)
+[Initialize-IntersightMarketplaceUseCaseVersionResource](./Initialize-IntersightMarketplaceUseCaseVersionResource.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

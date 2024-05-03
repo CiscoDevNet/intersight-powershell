@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricSystemQosPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Classes< System.Collections.Generic.List`1[FabricQosClass]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricSystemQosPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Classes< System.Collections.Generic.List`1[FabricQosClass]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -119,13 +119,13 @@ Accept wildcard characters: False
 ```
 
 ### -Profiles
-An array of relationships to fabricSwitchProfile resources.
+An array of relationships to fabricBaseSwitchProfile resources.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: System.Collections.Generic.List`1[FabricSwitchProfileRelationship]
+Type: System.Collections.Generic.List`1[FabricBaseSwitchProfileRelationship]
 Parameter Sets: (All)
 Aliases:
 

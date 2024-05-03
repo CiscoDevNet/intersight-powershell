@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWaitTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWaitTask.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowWaitTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-Prompts< System.Collections.Generic.List`1[Model.WorkflowWaitTaskPrompt]>][-RollbackDisabled< bool>][-VariableParameters< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWaitTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWaitTask.ClassIdEnum>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-InputParameters< object>][-Label< string>][-Name< string>][-ObjectType< WorkflowWaitTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-Prompts< System.Collections.Generic.List`1[Model.WorkflowWaitTaskPrompt]>][-RollbackDisabled< bool>][-VariableParameters< object>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,23 @@ The description of this task instance in the workflow.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InputDefinition
+
+
+Note :- Use Initialize-IntersightWorkflowBaseDataType to create the object of complex type WorkflowBaseDataType
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.WorkflowBaseDataType]
 Parameter Sets: (All)
 Aliases:
 
@@ -266,6 +283,8 @@ PS C:\> Initialize-IntersightWorkflowWaitTask
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
 
 [Initialize-IntersightWorkflowWaitTaskPrompt](./Initialize-IntersightWorkflowWaitTaskPrompt.md)
 

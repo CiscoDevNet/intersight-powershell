@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricSwitchClusterProfile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricSwitchClusterProfile.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchClusterProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchProfiles< System.Collections.Generic.List`1[Model.FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< FabricSwitchClusterProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricSwitchClusterProfile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricSwitchClusterProfile.ClassIdEnum>][-ClusterAssignments< System.Collections.Generic.List`1[Model.FabricClusterAssignment]>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchClusterProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchProfiles< System.Collections.Generic.List`1[Model.FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< FabricSwitchClusterProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,23 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: FabricSwitchClusterProfile.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClusterAssignments
+
+
+Note :- Use Initialize-IntersightFabricClusterAssignment to create the object of complex type FabricClusterAssignment
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.FabricClusterAssignment]
 Parameter Sets: (All)
 Aliases:
 
@@ -271,5 +288,7 @@ PS C:\> Initialize-IntersightFabricSwitchClusterProfile
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightFabricClusterAssignment](./Initialize-IntersightFabricClusterAssignment.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricSwitchControlPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricSwitchControlPolicy.ClassIdEnum>][-Description< string>][-EthernetSwitchingMode< FabricSwitchControlPolicy.EthernetSwitchingModeEnum>][-FabricPcVhbaReset< FabricSwitchControlPolicy.FabricPcVhbaResetEnum>][-FcSwitchingMode< FabricSwitchControlPolicy.FcSwitchingModeEnum>][-MacAgingSettings< Model.FabricMacAgingSettings>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchControlPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.FabricSwitchProfileRelationship]>][-ReservedVlanStartId< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UdldSettings< Model.FabricUdldGlobalSettings>][-VlanPortOptimizationEnabled< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricSwitchControlPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricSwitchControlPolicy.ClassIdEnum>][-Description< string>][-EthernetSwitchingMode< FabricSwitchControlPolicy.EthernetSwitchingModeEnum>][-FabricPcVhbaReset< FabricSwitchControlPolicy.FabricPcVhbaResetEnum>][-FcSwitchingMode< FabricSwitchControlPolicy.FcSwitchingModeEnum>][-MacAgingSettings< Model.FabricMacAgingSettings>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchControlPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.FabricBaseSwitchProfileRelationship]>][-ReservedVlanStartId< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UdldSettings< Model.FabricUdldGlobalSettings>][-VlanPortOptimizationEnabled< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -195,13 +195,13 @@ Accept wildcard characters: False
 ```
 
 ### -Profiles
-An array of relationships to fabricSwitchProfile resources.
+An array of relationships to fabricBaseSwitchProfile resources.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.FabricSwitchProfileRelationship]
+Type: System.Collections.Generic.List`1[Model.FabricBaseSwitchProfileRelationship]
 Parameter Sets: (All)
 Aliases:
 

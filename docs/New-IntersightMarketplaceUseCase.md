@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightMarketplaceUseCase [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< MarketplaceCatalogRelationship>][-Dependencies< System.Collections.Generic.List`1[MarketplaceUseCaseDependency]>][-Locales< System.Collections.Generic.List`1[MarketplaceUseCaseLocale]>][-Moid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UniqueName< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightMarketplaceUseCase [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-Dependencies< System.Collections.Generic.List`1[MarketplaceUseCaseDependency]>][-Locales< System.Collections.Generic.List`1[MarketplaceUseCaseLocale]>][-Moid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UniqueName< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,13 +39,13 @@ Accept wildcard characters: False
 ```
 
 ### -Catalog
-A reference to a marketplaceCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+A reference to a workflowCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: MarketplaceCatalogRelationship
+Type: WorkflowCatalogRelationship
 Parameter Sets: (All)
 Aliases:
 
