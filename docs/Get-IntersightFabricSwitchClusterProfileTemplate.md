@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightMarketplaceCatalog
+# Get-IntersightFabricSwitchClusterProfileTemplate
 
 ## SYNOPSIS
-Get the MarketplaceCatalog
+Get the FabricSwitchClusterProfileTemplate
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightMarketplaceCatalog [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightFabricSwitchClusterProfileTemplate [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightMarketplaceCatalog [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightFabricSwitchClusterProfileTemplate [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;MarketplaceCatalog&apos; resource.,
+Read a &apos;FabricSwitchClusterProfileTemplate&apos; resource.,
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -34,27 +34,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightMarketplaceCatalog
+PS C:\> $result = Get-IntersightFabricSwitchClusterProfileTemplate
 ```
-Above example returns the list of MarketplaceCatalog.
+Above example returns the list of FabricSwitchClusterProfileTemplate.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightMarketplaceCatalog -Name "MoName"
+PS C:\> $result = Get-IntersightFabricSwitchClusterProfileTemplate -Name "MoName"
 ```
-Above example returns the MarketplaceCatalog matched with name.
+Above example returns the FabricSwitchClusterProfileTemplate matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightMarketplaceCatalog -Organization $organization
+PS C:\> $result = Get-IntersightFabricSwitchClusterProfileTemplate -Organization $organization
 ```
-Above example returns the list of MarketplaceCatalog available under the $organization .
+Above example returns the list of FabricSwitchClusterProfileTemplate available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightMarketplaceCatalog -InlineCount allpages
+PS C:\> $result = Get-IntersightFabricSwitchClusterProfileTemplate -InlineCount allpages
 ```
-Above example returns the list of MarketplaceCatalog along with count.
+Above example returns the list of FabricSwitchClusterProfileTemplate along with count.
 
 ## PARAMETERS
 
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the MarketplaceCatalog.
+Specifies the name of the FabricSwitchClusterProfileTemplate.
 
 ```yaml
 Type: String
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the MarketplaceCatalog under it.
+Specifies the organization, to fetch the FabricSwitchClusterProfileTemplate under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -283,4 +283,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-IntersightFabricSwitchClusterProfileTemplate](./New-IntersightFabricSwitchClusterProfileTemplate.md)
+
+[Remove-IntersightFabricSwitchClusterProfileTemplate](./Remove-IntersightFabricSwitchClusterProfileTemplate.md)
+
+[Set-IntersightFabricSwitchClusterProfileTemplate](./Set-IntersightFabricSwitchClusterProfileTemplate.md)
 

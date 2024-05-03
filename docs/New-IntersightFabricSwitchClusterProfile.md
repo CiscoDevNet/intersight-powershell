@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricSwitchClusterProfile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchProfiles< System.Collections.Generic.List`1[FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< FabricSwitchClusterProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricSwitchClusterProfile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClusterAssignments< System.Collections.Generic.List`1[FabricClusterAssignment]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchProfiles< System.Collections.Generic.List`1[FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< FabricSwitchClusterProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,23 @@ Create a &apos;FabricSwitchClusterProfile&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClusterAssignments
+
+
+Note :- Use Initialize-IntersightFabricClusterAssignment to create the object of complex type FabricClusterAssignment
+
+```yaml
+Type: System.Collections.Generic.List`1[FabricClusterAssignment]
 Parameter Sets: (All)
 Aliases:
 
@@ -242,6 +259,8 @@ PS C:\> New-IntersightFabricSwitchClusterProfile
 ## RELATED LINKS
 
 [Get-IntersightFabricSwitchClusterProfile](./Get-IntersightFabricSwitchClusterProfile.md)
+
+[Initialize-IntersightFabricClusterAssignment](./Initialize-IntersightFabricClusterAssignment.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightMarketplaceUseCaseVersionResources
+# Initialize-IntersightMarketplaceUseCaseVersionResource
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightMarketplaceUseCaseVersionResources [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< MarketplaceUseCaseVersionResources.ClassIdEnum>][-ObjectType< MarketplaceUseCaseVersionResources.ObjectTypeEnum>][-ResourceId< string>][-ResourceType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightMarketplaceUseCaseVersionResource [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< MarketplaceUseCaseVersionResource.ClassIdEnum>][-ObjectType< MarketplaceUseCaseVersionResource.ObjectTypeEnum>][-ResourceId< string>][-ResourceType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,7 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: MarketplaceUseCaseVersionResources.ClassIdEnum
+Type: MarketplaceUseCaseVersionResource.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: MarketplaceUseCaseVersionResources.ObjectTypeEnum
+Type: MarketplaceUseCaseVersionResource.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -137,7 +137,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightMarketplaceUseCaseVersionResources
+PS C:\> Initialize-IntersightMarketplaceUseCaseVersionResource
 ```
 
 { Add example description here }

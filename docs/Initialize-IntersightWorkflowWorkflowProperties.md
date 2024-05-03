@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWorkflowProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWorkflowProperties.ClassIdEnum>][-EnableDebug< bool>][-ObjectType< WorkflowWorkflowProperties.ObjectTypeEnum>][-Retryable< bool>][-RollbackOnCancel< bool>][-RollbackOnFailure< bool>][-SupportStatus< WorkflowWorkflowProperties.SupportStatusEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWorkflowProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWorkflowProperties.ClassIdEnum>][-EnableDebug< bool>][-EnablePublishStatus< bool>][-ObjectType< WorkflowWorkflowProperties.ObjectTypeEnum>][-PublishStatus< WorkflowWorkflowProperties.PublishStatusEnum>][-Retryable< bool>][-RollbackOnCancel< bool>][-RollbackOnFailure< bool>][-SupportStatus< WorkflowWorkflowProperties.SupportStatusEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,11 +69,41 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -EnablePublishStatus
+This flag determines if this workflow publish status is enforced or not.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: WorkflowWorkflowProperties.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PublishStatus
+The workflow publish status (Draft, Published, Archived), this property is relevant only when enablePublishStatus is set to true.\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed.
+
+```yaml
+Type: WorkflowWorkflowProperties.PublishStatusEnum
 Parameter Sets: (All)
 Aliases:
 

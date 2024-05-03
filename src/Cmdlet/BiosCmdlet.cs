@@ -711,6 +711,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Fixed SOC P-State SP5 F19h configuration (0 - 2 P State)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^([0-2])$|^(platform-default)$")]
+        public string CbsCmnApbdisDfPstateRs
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting AVX512 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuAvx512 token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuAvx512 token.\n* `enabled` - Value - enabled for configuring CbsCmnCpuAvx512 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnCpuAvx512Enum CbsCmnCpuAvx512
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting Core Performance Boost configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuCpb token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuCpb token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -766,6 +788,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting SEV-ES ASID Space Limit configuration (1 - 1007 ASIDs)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^([1-9]|[1-9]\\d|[1-9]\\d{2}|100[0-7])$|^(platform-default)$")]
+        public string CbsCmnCpuSevAsidSpaceLimit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting CPU SMEE configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuSmee token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuSmee token.\n* `enabled` - Value - enabled for configuring CbsCmnCpuSmee token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -799,11 +832,33 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting EDC Control Throttle configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnEdcControlThrottle token.\n* `disabled` - Value - disabled for configuring CbsCmnEdcControlThrottle token.\n* `enabled` - Value - enabled for configuring CbsCmnEdcControlThrottle token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnEdcControlThrottleEnum CbsCmnEdcControlThrottle
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting Efficiency Mode Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnEfficiencyModeEn token.\n* `Enabled` - Value - Enabled for configuring CbsCmnEfficiencyModeEn token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public BiosPolicy.CbsCmnEfficiencyModeEnEnum CbsCmnEfficiencyModeEn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Power Profile Selection F19h configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Balanced Memory Performance Mode` - Value - Balanced Memory Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Efficiency Mode` - Value - Efficiency Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `High Performance Mode` - Value - High Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Maximum IO Performance Mode` - Value - Maximum IO Performance Mode for configuring CbsCmnEfficiencyModeEnRs token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnEfficiencyModeEnRsEnum CbsCmnEfficiencyModeEnRs
         {
             get;
             set;
@@ -843,6 +898,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting DF PState Frequency Optimizer configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnGnbSmuDffoRs token.\n* `disabled` - Value - disabled for configuring CbsCmnGnbSmuDffoRs token.\n* `enabled` - Value - enabled for configuring CbsCmnGnbSmuDffoRs token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnGnbSmuDffoRsEnum CbsCmnGnbSmuDffoRs
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting DLWM Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnGnbSmuDlwmSupport token.\n* `disabled` - Value - disabled for configuring CbsCmnGnbSmuDlwmSupport token.\n* `enabled` - Value - enabled for configuring CbsCmnGnbSmuDlwmSupport token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnGnbSmuDlwmSupportEnum CbsCmnGnbSmuDlwmSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting CPPC configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnGnbSmucppc token.\n* `disabled` - Value - disabled for configuring CbsCmnGnbSmucppc token.\n* `enabled` - Value - enabled for configuring CbsCmnGnbSmucppc token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -865,11 +942,77 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting Chipset Interleave configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `disabled` - Value - disabled for configuring CbsCmnMemMapBankInterleaveDdr4 token."</para>
+        /// <para type="description">"BIOS Token for setting Power Down Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemCtrllerPwrDnEnDdr token.\n* `disabled` - Value - disabled for configuring CbsCmnMemCtrllerPwrDnEnDdr token.\n* `enabled` - Value - enabled for configuring CbsCmnMemCtrllerPwrDnEnDdr token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnMemCtrllerPwrDnEnDdrEnum CbsCmnMemCtrllerPwrDnEnDdr
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting DRAM Refresh Rate configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `3.9 usec` - Value - 3.9 usec for configuring CbsCmnMemDramRefreshRate token.\n* `7.8 usec` - Value - 7.8 usec for configuring CbsCmnMemDramRefreshRate token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnMemDramRefreshRateEnum CbsCmnMemDramRefreshRate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Chipset Interleave configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `disabled` - Value - disabled for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `enabled` - Value - enabled for configuring CbsCmnMemMapBankInterleaveDdr4 token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public BiosPolicy.CbsCmnMemMapBankInterleaveDdr4Enum CbsCmnMemMapBankInterleaveDdr4
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Memory Clock Speed 7xx2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `667MHz` - Value - 667MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `800MHz` - Value - 800MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `933MHz` - Value - 933MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1067MHz` - Value - 1067MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1200MHz` - Value - 1200MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1333MHz` - Value - 1333MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1467MHz` - Value - 1467MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1600MHz` - Value - 1600MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `Auto` - Value - Auto for configuring CbsCmnMemSpeedDdr47xx2 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnMemSpeedDdr47xx2Enum CbsCmnMemSpeedDdr47xx2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Memory Clock Speed 7xx3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `400MHz` - Value - 400MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `800MHz` - Value - 800MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `933MHz` - Value - 933MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1067MHz` - Value - 1067MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1200MHz` - Value - 1200MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1333MHz` - Value - 1333MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1467MHz` - Value - 1467MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1600MHz` - Value - 1600MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1633MHz` - Value - 1633MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1667MHz` - Value - 1667MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1700MHz` - Value - 1700MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1733MHz` - Value - 1733MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1767MHz` - Value - 1767MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1800MHz` - Value - 1800MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `Auto` - Value - Auto for configuring CbsCmnMemSpeedDdr47xx3 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnMemSpeedDdr47xx3Enum CbsCmnMemSpeedDdr47xx3
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Preferred IO 7xx2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnPreferredIo7xx2 token.\n* `Manual` - Value - Manual for configuring CbsCmnPreferredIo7xx2 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnPreferredIo7xx2Enum CbsCmnPreferredIo7xx2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Preferred IO 7xx3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnPreferredIo7xx3 token.\n* `Bus` - Value - Bus for configuring CbsCmnPreferredIo7xx3 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnPreferredIo7xx3Enum CbsCmnPreferredIo7xx3
         {
             get;
             set;
@@ -887,7 +1030,18 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting CCD Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 CCDs` - Value - 2 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `3 CCDs` - Value - 3 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `4 CCDs` - Value - 4 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `6 CCDs` - Value - 6 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `Auto` - Value - Auto for configuring CbsCpuCcdCtrlSsp token."</para>
+        /// <para type="description">"BIOS Token for setting xGMI Force Link Width configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `0` - Value - 0 for configuring CbsCmnxGmiForceLinkWidthRs token.\n* `1` - Value - 1 for configuring CbsCmnxGmiForceLinkWidthRs token.\n* `2` - Value - 2 for configuring CbsCmnxGmiForceLinkWidthRs token.\n* `Auto` - Value - Auto for configuring CbsCmnxGmiForceLinkWidthRs token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnxGmiForceLinkWidthRsEnum CbsCmnxGmiForceLinkWidthRs
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting CCD Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 CCDs` - Value - 2 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `3 CCDs` - Value - 3 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `4 CCDs` - Value - 4 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `6 CCDs` - Value - 6 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `8 CCDs` - Value - 8 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `10 CCDs` - Value - 10 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `Auto` - Value - Auto for configuring CbsCpuCcdCtrlSsp token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -909,11 +1063,77 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Downcore Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuDownCoreCtrlBergamo token.\n* `EIGHT (4 + 4)` - Value - EIGHT (4 + 4) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `FOUR (2 + 2)` - Value - FOUR (2 + 2) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `FOURTEEN (7 + 7)` - Value - FOURTEEN (7 + 7) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `SIX (3 + 3)` - Value - SIX (3 + 3) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `TEN (5 + 5)` - Value - TEN (5 + 5) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `TWELVE (6 + 6)` - Value - TWELVE (6 + 6) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `TWO (1 + 1)` - Value - TWO (1 + 1) for configuring CbsCpuDownCoreCtrlBergamo token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCpuDownCoreCtrlBergamoEnum CbsCpuDownCoreCtrlBergamo
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting CPU Downcore control F19 M10h-1Fh configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FIVE (5 + 0)` - Value - FIVE (5 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FOUR (4 + 0)` - Value - FOUR (4 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `ONE (1 + 0)` - Value - ONE (1 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `SEVEN (7 + 0)` - Value - SEVEN (7 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `SIX (6 + 0)` - Value - SIX (6 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `THREE (3 + 0)` - Value - THREE (3 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `TWO (2 + 0)` - Value - TWO (2 + 0) for configuring CbsCpuDownCoreCtrlGenoa token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCpuDownCoreCtrlGenoaEnum CbsCpuDownCoreCtrlGenoa
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting CPU SMT Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuSmtCtrl token.\n* `disabled` - Value - disabled for configuring CbsCpuSmtCtrl token.\n* `enabled` - Value - enabled for configuring CbsCpuSmtCtrl token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public BiosPolicy.CbsCpuSmtCtrlEnum CbsCpuSmtCtrl
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Core Watchdog Timer Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuGenCpuWdt token.\n* `disabled` - Value - disabled for configuring CbsDbgCpuGenCpuWdt token.\n* `enabled` - Value - enabled for configuring CbsDbgCpuGenCpuWdt token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsDbgCpuGenCpuWdtEnum CbsDbgCpuGenCpuWdt
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Local APIC Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuLapicMode token.\n* `Compatibility` - Value - Compatibility for configuring CbsDbgCpuLapicMode token.\n* `X2APIC` - Value - X2APIC for configuring CbsDbgCpuLapicMode token.\n* `XAPIC` - Value - XAPIC for configuring CbsDbgCpuLapicMode token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsDbgCpuLapicModeEnum CbsDbgCpuLapicMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Local APIC Mode 7xx2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuLapicMode7xx2 token.\n* `X2APIC` - Value - X2APIC for configuring CbsDbgCpuLapicMode7xx2 token.\n* `XAPIC` - Value - XAPIC for configuring CbsDbgCpuLapicMode7xx2 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsDbgCpuLapicMode7xx2Enum CbsDbgCpuLapicMode7xx2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Local APIC Mode 7xx3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuLapicMode7xx3 token.\n* `Compatibility` - Value - Compatibility for configuring CbsDbgCpuLapicMode7xx3 token.\n* `X2APIC` - Value - X2APIC for configuring CbsDbgCpuLapicMode7xx3 token.\n* `XAPIC` - Value - XAPIC for configuring CbsDbgCpuLapicMode7xx3 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsDbgCpuLapicMode7xx3Enum CbsDbgCpuLapicMode7xx3
         {
             get;
             set;
@@ -942,6 +1162,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting 4-link xGMI max speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `20Gbps` - Value - 20Gbps for configuring CbsDfCmn4linkMaxXgmiSpeed token.\n* `25Gbps` - Value - 25Gbps for configuring CbsDfCmn4linkMaxXgmiSpeed token.\n* `32Gbps` - Value - 32Gbps for configuring CbsDfCmn4linkMaxXgmiSpeed token.\n* `Auto` - Value - Auto for configuring CbsDfCmn4linkMaxXgmiSpeed token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsDfCmn4linkMaxXgmiSpeedEnum CbsDfCmn4linkMaxXgmiSpeed
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting ACPI SRAT L3 Cache As NUMA Domain configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDfCmnAcpiSratL3numa token.\n* `disabled` - Value - disabled for configuring CbsDfCmnAcpiSratL3numa token.\n* `enabled` - Value - enabled for configuring CbsDfCmnAcpiSratL3numa token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -964,11 +1195,33 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting DRAM Scrub Time configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1 hour` - Value - 1 hour for configuring CbsDfCmnDramScrubTime token.\n* `4 hours` - Value - 4 hours for configuring CbsDfCmnDramScrubTime token.\n* `6 hours` - Value - 6 hours for configuring CbsDfCmnDramScrubTime token.\n* `8 hours` - Value - 8 hours for configuring CbsDfCmnDramScrubTime token.\n* `12 hours` - Value - 12 hours for configuring CbsDfCmnDramScrubTime token.\n* `16 hours` - Value - 16 hours for configuring CbsDfCmnDramScrubTime token.\n* `24 hours` - Value - 24 hours for configuring CbsDfCmnDramScrubTime token.\n* `48 hours` - Value - 48 hours for configuring CbsDfCmnDramScrubTime token.\n* `Auto` - Value - Auto for configuring CbsDfCmnDramScrubTime token.\n* `Disabled` - Value - Disabled for configuring CbsDfCmnDramScrubTime token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsDfCmnDramScrubTimeEnum CbsDfCmnDramScrubTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting AMD Memory Interleaving configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDfCmnMemIntlv token.\n* `Channel` - Value - Channel for configuring CbsDfCmnMemIntlv token.\n* `Die` - Value - Die for configuring CbsDfCmnMemIntlv token.\n* `None` - Value - None for configuring CbsDfCmnMemIntlv token.\n* `Socket` - Value - Socket for configuring CbsDfCmnMemIntlv token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public BiosPolicy.CbsDfCmnMemIntlvEnum CbsDfCmnMemIntlv
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Memory Interleaving configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDfCmnMemIntlvControl token.\n* `disabled` - Value - disabled for configuring CbsDfCmnMemIntlvControl token.\n* `enabled` - Value - enabled for configuring CbsDfCmnMemIntlvControl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsDfCmnMemIntlvControlEnum CbsDfCmnMemIntlvControl
         {
             get;
             set;
@@ -986,7 +1239,29 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting SEV-SNP Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// <para type="description">"BIOS Token for setting xGMI Link Configuration configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 xGMI Links` - Value - 2 xGMI Links for configuring CbsDfDbgXgmiLinkCfg token.\n* `3 xGMI Links` - Value - 3 xGMI Links for configuring CbsDfDbgXgmiLinkCfg token.\n* `4 xGMI Links` - Value - 4 xGMI Links for configuring CbsDfDbgXgmiLinkCfg token.\n* `Auto` - Value - Auto for configuring CbsDfDbgXgmiLinkCfg token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsDfDbgXgmiLinkCfgEnum CbsDfDbgXgmiLinkCfg
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting PCIe Ten Bit Tag Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsGnbDbgPcieTbtSupport token.\n* `disabled` - Value - disabled for configuring CbsGnbDbgPcieTbtSupport token.\n* `enabled` - Value - enabled for configuring CbsGnbDbgPcieTbtSupport token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsGnbDbgPcieTbtSupportEnum CbsGnbDbgPcieTbtSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting SEV-SNP Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsSevSnpSupport token.\n* `disabled` - Value - disabled for configuring CbsSevSnpSupport token.\n* `enabled` - Value - enabled for configuring CbsSevSnpSupport token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1277,6 +1552,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
         public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting DFX OSB configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring DfxOsbEn token.\n* `disabled` - Value - disabled for configuring DfxOsbEn token.\n* `enabled` - Value - enabled for configuring DfxOsbEn token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.DfxOsbEnEnum DfxOsbEn
         {
             get;
             set;
@@ -2494,7 +2780,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting PCIe Slot MSTOR Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring PcieSlotMstorraidLinkSpeed token.\n* `Disabled` - Value - Disabled for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN1` - Value - GEN1 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN2` - Value - GEN2 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN3` - Value - GEN3 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN4` - Value - GEN4 for configuring PcieSlotMstorraidLinkSpeed token."</para>
+        /// <para type="description">"BIOS Token for setting PCIe Slot MSTOR Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring PcieSlotMstorraidLinkSpeed token.\n* `Disabled` - Value - Disabled for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN1` - Value - GEN1 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN2` - Value - GEN2 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN3` - Value - GEN3 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN4` - Value - GEN4 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN5` - Value - GEN5 for configuring PcieSlotMstorraidLinkSpeed token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2848,6 +3134,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Re-Size BAR Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.ResizeBarSupportEnum ResizeBarSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Runtime Post Package Repair configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.RuntimePostPackageRepairEnum RuntimePostPackageRepair
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting SATA Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `AHCI` - Value - AHCI for configuring SataModeSelect token.\n* `Disabled` - Value - Disabled for configuring SataModeSelect token.\n* `LSI SW RAID` - Value - LSI SW RAID for configuring SataModeSelect token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2875,6 +3183,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public BiosPolicy.SelectPprTypeEnum SelectPprType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Serial Mux configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.SerialMuxEnum SerialMux
         {
             get;
             set;
@@ -6282,6 +6601,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Fixed SOC P-State SP5 F19h configuration (0 - 2 P State)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^([0-2])$|^(platform-default)$")]
+        public string CbsCmnApbdisDfPstateRs
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting AVX512 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuAvx512 token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuAvx512 token.\n* `enabled` - Value - enabled for configuring CbsCmnCpuAvx512 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnCpuAvx512Enum CbsCmnCpuAvx512
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting Core Performance Boost configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuCpb token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuCpb token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6337,6 +6678,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting SEV-ES ASID Space Limit configuration (1 - 1007 ASIDs)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^([1-9]|[1-9]\\d|[1-9]\\d{2}|100[0-7])$|^(platform-default)$")]
+        public string CbsCmnCpuSevAsidSpaceLimit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting CPU SMEE configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuSmee token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuSmee token.\n* `enabled` - Value - enabled for configuring CbsCmnCpuSmee token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6370,11 +6722,33 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting EDC Control Throttle configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnEdcControlThrottle token.\n* `disabled` - Value - disabled for configuring CbsCmnEdcControlThrottle token.\n* `enabled` - Value - enabled for configuring CbsCmnEdcControlThrottle token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnEdcControlThrottleEnum CbsCmnEdcControlThrottle
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting Efficiency Mode Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnEfficiencyModeEn token.\n* `Enabled` - Value - Enabled for configuring CbsCmnEfficiencyModeEn token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsCmnEfficiencyModeEnEnum CbsCmnEfficiencyModeEn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Power Profile Selection F19h configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Balanced Memory Performance Mode` - Value - Balanced Memory Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Efficiency Mode` - Value - Efficiency Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `High Performance Mode` - Value - High Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Maximum IO Performance Mode` - Value - Maximum IO Performance Mode for configuring CbsCmnEfficiencyModeEnRs token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnEfficiencyModeEnRsEnum CbsCmnEfficiencyModeEnRs
         {
             get;
             set;
@@ -6414,6 +6788,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting DF PState Frequency Optimizer configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnGnbSmuDffoRs token.\n* `disabled` - Value - disabled for configuring CbsCmnGnbSmuDffoRs token.\n* `enabled` - Value - enabled for configuring CbsCmnGnbSmuDffoRs token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnGnbSmuDffoRsEnum CbsCmnGnbSmuDffoRs
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting DLWM Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnGnbSmuDlwmSupport token.\n* `disabled` - Value - disabled for configuring CbsCmnGnbSmuDlwmSupport token.\n* `enabled` - Value - enabled for configuring CbsCmnGnbSmuDlwmSupport token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnGnbSmuDlwmSupportEnum CbsCmnGnbSmuDlwmSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting CPPC configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnGnbSmucppc token.\n* `disabled` - Value - disabled for configuring CbsCmnGnbSmucppc token.\n* `enabled` - Value - enabled for configuring CbsCmnGnbSmucppc token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6436,11 +6832,77 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting Chipset Interleave configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `disabled` - Value - disabled for configuring CbsCmnMemMapBankInterleaveDdr4 token."</para>
+        /// <para type="description">"BIOS Token for setting Power Down Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemCtrllerPwrDnEnDdr token.\n* `disabled` - Value - disabled for configuring CbsCmnMemCtrllerPwrDnEnDdr token.\n* `enabled` - Value - enabled for configuring CbsCmnMemCtrllerPwrDnEnDdr token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnMemCtrllerPwrDnEnDdrEnum CbsCmnMemCtrllerPwrDnEnDdr
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting DRAM Refresh Rate configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `3.9 usec` - Value - 3.9 usec for configuring CbsCmnMemDramRefreshRate token.\n* `7.8 usec` - Value - 7.8 usec for configuring CbsCmnMemDramRefreshRate token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnMemDramRefreshRateEnum CbsCmnMemDramRefreshRate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Chipset Interleave configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `disabled` - Value - disabled for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `enabled` - Value - enabled for configuring CbsCmnMemMapBankInterleaveDdr4 token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsCmnMemMapBankInterleaveDdr4Enum CbsCmnMemMapBankInterleaveDdr4
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Memory Clock Speed 7xx2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `667MHz` - Value - 667MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `800MHz` - Value - 800MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `933MHz` - Value - 933MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1067MHz` - Value - 1067MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1200MHz` - Value - 1200MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1333MHz` - Value - 1333MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1467MHz` - Value - 1467MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1600MHz` - Value - 1600MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `Auto` - Value - Auto for configuring CbsCmnMemSpeedDdr47xx2 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnMemSpeedDdr47xx2Enum CbsCmnMemSpeedDdr47xx2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Memory Clock Speed 7xx3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `400MHz` - Value - 400MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `800MHz` - Value - 800MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `933MHz` - Value - 933MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1067MHz` - Value - 1067MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1200MHz` - Value - 1200MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1333MHz` - Value - 1333MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1467MHz` - Value - 1467MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1600MHz` - Value - 1600MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1633MHz` - Value - 1633MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1667MHz` - Value - 1667MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1700MHz` - Value - 1700MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1733MHz` - Value - 1733MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1767MHz` - Value - 1767MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1800MHz` - Value - 1800MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `Auto` - Value - Auto for configuring CbsCmnMemSpeedDdr47xx3 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnMemSpeedDdr47xx3Enum CbsCmnMemSpeedDdr47xx3
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Preferred IO 7xx2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnPreferredIo7xx2 token.\n* `Manual` - Value - Manual for configuring CbsCmnPreferredIo7xx2 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnPreferredIo7xx2Enum CbsCmnPreferredIo7xx2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Preferred IO 7xx3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnPreferredIo7xx3 token.\n* `Bus` - Value - Bus for configuring CbsCmnPreferredIo7xx3 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnPreferredIo7xx3Enum CbsCmnPreferredIo7xx3
         {
             get;
             set;
@@ -6458,7 +6920,18 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting CCD Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 CCDs` - Value - 2 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `3 CCDs` - Value - 3 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `4 CCDs` - Value - 4 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `6 CCDs` - Value - 6 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `Auto` - Value - Auto for configuring CbsCpuCcdCtrlSsp token."</para>
+        /// <para type="description">"BIOS Token for setting xGMI Force Link Width configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `0` - Value - 0 for configuring CbsCmnxGmiForceLinkWidthRs token.\n* `1` - Value - 1 for configuring CbsCmnxGmiForceLinkWidthRs token.\n* `2` - Value - 2 for configuring CbsCmnxGmiForceLinkWidthRs token.\n* `Auto` - Value - Auto for configuring CbsCmnxGmiForceLinkWidthRs token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnxGmiForceLinkWidthRsEnum CbsCmnxGmiForceLinkWidthRs
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting CCD Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 CCDs` - Value - 2 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `3 CCDs` - Value - 3 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `4 CCDs` - Value - 4 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `6 CCDs` - Value - 6 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `8 CCDs` - Value - 8 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `10 CCDs` - Value - 10 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `Auto` - Value - Auto for configuring CbsCpuCcdCtrlSsp token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -6480,11 +6953,77 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Downcore Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuDownCoreCtrlBergamo token.\n* `EIGHT (4 + 4)` - Value - EIGHT (4 + 4) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `FOUR (2 + 2)` - Value - FOUR (2 + 2) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `FOURTEEN (7 + 7)` - Value - FOURTEEN (7 + 7) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `SIX (3 + 3)` - Value - SIX (3 + 3) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `TEN (5 + 5)` - Value - TEN (5 + 5) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `TWELVE (6 + 6)` - Value - TWELVE (6 + 6) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `TWO (1 + 1)` - Value - TWO (1 + 1) for configuring CbsCpuDownCoreCtrlBergamo token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCpuDownCoreCtrlBergamoEnum CbsCpuDownCoreCtrlBergamo
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting CPU Downcore control F19 M10h-1Fh configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FIVE (5 + 0)` - Value - FIVE (5 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FOUR (4 + 0)` - Value - FOUR (4 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `ONE (1 + 0)` - Value - ONE (1 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `SEVEN (7 + 0)` - Value - SEVEN (7 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `SIX (6 + 0)` - Value - SIX (6 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `THREE (3 + 0)` - Value - THREE (3 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `TWO (2 + 0)` - Value - TWO (2 + 0) for configuring CbsCpuDownCoreCtrlGenoa token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCpuDownCoreCtrlGenoaEnum CbsCpuDownCoreCtrlGenoa
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting CPU SMT Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuSmtCtrl token.\n* `disabled` - Value - disabled for configuring CbsCpuSmtCtrl token.\n* `enabled` - Value - enabled for configuring CbsCpuSmtCtrl token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsCpuSmtCtrlEnum CbsCpuSmtCtrl
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Core Watchdog Timer Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuGenCpuWdt token.\n* `disabled` - Value - disabled for configuring CbsDbgCpuGenCpuWdt token.\n* `enabled` - Value - enabled for configuring CbsDbgCpuGenCpuWdt token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDbgCpuGenCpuWdtEnum CbsDbgCpuGenCpuWdt
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Local APIC Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuLapicMode token.\n* `Compatibility` - Value - Compatibility for configuring CbsDbgCpuLapicMode token.\n* `X2APIC` - Value - X2APIC for configuring CbsDbgCpuLapicMode token.\n* `XAPIC` - Value - XAPIC for configuring CbsDbgCpuLapicMode token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDbgCpuLapicModeEnum CbsDbgCpuLapicMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Local APIC Mode 7xx2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuLapicMode7xx2 token.\n* `X2APIC` - Value - X2APIC for configuring CbsDbgCpuLapicMode7xx2 token.\n* `XAPIC` - Value - XAPIC for configuring CbsDbgCpuLapicMode7xx2 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDbgCpuLapicMode7xx2Enum CbsDbgCpuLapicMode7xx2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Local APIC Mode 7xx3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuLapicMode7xx3 token.\n* `Compatibility` - Value - Compatibility for configuring CbsDbgCpuLapicMode7xx3 token.\n* `X2APIC` - Value - X2APIC for configuring CbsDbgCpuLapicMode7xx3 token.\n* `XAPIC` - Value - XAPIC for configuring CbsDbgCpuLapicMode7xx3 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDbgCpuLapicMode7xx3Enum CbsDbgCpuLapicMode7xx3
         {
             get;
             set;
@@ -6513,6 +7052,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting 4-link xGMI max speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `20Gbps` - Value - 20Gbps for configuring CbsDfCmn4linkMaxXgmiSpeed token.\n* `25Gbps` - Value - 25Gbps for configuring CbsDfCmn4linkMaxXgmiSpeed token.\n* `32Gbps` - Value - 32Gbps for configuring CbsDfCmn4linkMaxXgmiSpeed token.\n* `Auto` - Value - Auto for configuring CbsDfCmn4linkMaxXgmiSpeed token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDfCmn4linkMaxXgmiSpeedEnum CbsDfCmn4linkMaxXgmiSpeed
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting ACPI SRAT L3 Cache As NUMA Domain configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDfCmnAcpiSratL3numa token.\n* `disabled` - Value - disabled for configuring CbsDfCmnAcpiSratL3numa token.\n* `enabled` - Value - enabled for configuring CbsDfCmnAcpiSratL3numa token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6535,11 +7085,33 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting DRAM Scrub Time configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1 hour` - Value - 1 hour for configuring CbsDfCmnDramScrubTime token.\n* `4 hours` - Value - 4 hours for configuring CbsDfCmnDramScrubTime token.\n* `6 hours` - Value - 6 hours for configuring CbsDfCmnDramScrubTime token.\n* `8 hours` - Value - 8 hours for configuring CbsDfCmnDramScrubTime token.\n* `12 hours` - Value - 12 hours for configuring CbsDfCmnDramScrubTime token.\n* `16 hours` - Value - 16 hours for configuring CbsDfCmnDramScrubTime token.\n* `24 hours` - Value - 24 hours for configuring CbsDfCmnDramScrubTime token.\n* `48 hours` - Value - 48 hours for configuring CbsDfCmnDramScrubTime token.\n* `Auto` - Value - Auto for configuring CbsDfCmnDramScrubTime token.\n* `Disabled` - Value - Disabled for configuring CbsDfCmnDramScrubTime token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDfCmnDramScrubTimeEnum CbsDfCmnDramScrubTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting AMD Memory Interleaving configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDfCmnMemIntlv token.\n* `Channel` - Value - Channel for configuring CbsDfCmnMemIntlv token.\n* `Die` - Value - Die for configuring CbsDfCmnMemIntlv token.\n* `None` - Value - None for configuring CbsDfCmnMemIntlv token.\n* `Socket` - Value - Socket for configuring CbsDfCmnMemIntlv token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsDfCmnMemIntlvEnum CbsDfCmnMemIntlv
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Memory Interleaving configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDfCmnMemIntlvControl token.\n* `disabled` - Value - disabled for configuring CbsDfCmnMemIntlvControl token.\n* `enabled` - Value - enabled for configuring CbsDfCmnMemIntlvControl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDfCmnMemIntlvControlEnum CbsDfCmnMemIntlvControl
         {
             get;
             set;
@@ -6557,7 +7129,29 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting SEV-SNP Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// <para type="description">"BIOS Token for setting xGMI Link Configuration configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 xGMI Links` - Value - 2 xGMI Links for configuring CbsDfDbgXgmiLinkCfg token.\n* `3 xGMI Links` - Value - 3 xGMI Links for configuring CbsDfDbgXgmiLinkCfg token.\n* `4 xGMI Links` - Value - 4 xGMI Links for configuring CbsDfDbgXgmiLinkCfg token.\n* `Auto` - Value - Auto for configuring CbsDfDbgXgmiLinkCfg token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDfDbgXgmiLinkCfgEnum CbsDfDbgXgmiLinkCfg
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting PCIe Ten Bit Tag Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsGnbDbgPcieTbtSupport token.\n* `disabled` - Value - disabled for configuring CbsGnbDbgPcieTbtSupport token.\n* `enabled` - Value - enabled for configuring CbsGnbDbgPcieTbtSupport token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsGnbDbgPcieTbtSupportEnum CbsGnbDbgPcieTbtSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting SEV-SNP Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsSevSnpSupport token.\n* `disabled` - Value - disabled for configuring CbsSevSnpSupport token.\n* `enabled` - Value - enabled for configuring CbsSevSnpSupport token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -6838,6 +7432,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
         public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting DFX OSB configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring DfxOsbEn token.\n* `disabled` - Value - disabled for configuring DfxOsbEn token.\n* `enabled` - Value - enabled for configuring DfxOsbEn token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.DfxOsbEnEnum DfxOsbEn
         {
             get;
             set;
@@ -8025,7 +8630,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting PCIe Slot MSTOR Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring PcieSlotMstorraidLinkSpeed token.\n* `Disabled` - Value - Disabled for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN1` - Value - GEN1 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN2` - Value - GEN2 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN3` - Value - GEN3 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN4` - Value - GEN4 for configuring PcieSlotMstorraidLinkSpeed token."</para>
+        /// <para type="description">"BIOS Token for setting PCIe Slot MSTOR Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring PcieSlotMstorraidLinkSpeed token.\n* `Disabled` - Value - Disabled for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN1` - Value - GEN1 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN2` - Value - GEN2 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN3` - Value - GEN3 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN4` - Value - GEN4 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN5` - Value - GEN5 for configuring PcieSlotMstorraidLinkSpeed token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -8389,6 +8994,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Re-Size BAR Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.ResizeBarSupportEnum ResizeBarSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Runtime Post Package Repair configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.RuntimePostPackageRepairEnum RuntimePostPackageRepair
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting SATA Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `AHCI` - Value - AHCI for configuring SataModeSelect token.\n* `Disabled` - Value - Disabled for configuring SataModeSelect token.\n* `LSI SW RAID` - Value - LSI SW RAID for configuring SataModeSelect token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8416,6 +9043,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.SelectPprTypeEnum SelectPprType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Serial Mux configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.SerialMuxEnum SerialMux
         {
             get;
             set;
@@ -11086,6 +11724,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Fixed SOC P-State SP5 F19h configuration (0 - 2 P State)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^([0-2])$|^(platform-default)$")]
+        public string CbsCmnApbdisDfPstateRs
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting AVX512 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuAvx512 token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuAvx512 token.\n* `enabled` - Value - enabled for configuring CbsCmnCpuAvx512 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnCpuAvx512Enum CbsCmnCpuAvx512
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting Core Performance Boost configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuCpb token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuCpb token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -11141,6 +11801,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting SEV-ES ASID Space Limit configuration (1 - 1007 ASIDs)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^([1-9]|[1-9]\\d|[1-9]\\d{2}|100[0-7])$|^(platform-default)$")]
+        public string CbsCmnCpuSevAsidSpaceLimit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting CPU SMEE configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuSmee token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuSmee token.\n* `enabled` - Value - enabled for configuring CbsCmnCpuSmee token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -11174,11 +11845,33 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting EDC Control Throttle configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnEdcControlThrottle token.\n* `disabled` - Value - disabled for configuring CbsCmnEdcControlThrottle token.\n* `enabled` - Value - enabled for configuring CbsCmnEdcControlThrottle token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnEdcControlThrottleEnum CbsCmnEdcControlThrottle
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting Efficiency Mode Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnEfficiencyModeEn token.\n* `Enabled` - Value - Enabled for configuring CbsCmnEfficiencyModeEn token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsCmnEfficiencyModeEnEnum CbsCmnEfficiencyModeEn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Power Profile Selection F19h configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Balanced Memory Performance Mode` - Value - Balanced Memory Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Efficiency Mode` - Value - Efficiency Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `High Performance Mode` - Value - High Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Maximum IO Performance Mode` - Value - Maximum IO Performance Mode for configuring CbsCmnEfficiencyModeEnRs token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnEfficiencyModeEnRsEnum CbsCmnEfficiencyModeEnRs
         {
             get;
             set;
@@ -11218,6 +11911,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting DF PState Frequency Optimizer configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnGnbSmuDffoRs token.\n* `disabled` - Value - disabled for configuring CbsCmnGnbSmuDffoRs token.\n* `enabled` - Value - enabled for configuring CbsCmnGnbSmuDffoRs token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnGnbSmuDffoRsEnum CbsCmnGnbSmuDffoRs
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting DLWM Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnGnbSmuDlwmSupport token.\n* `disabled` - Value - disabled for configuring CbsCmnGnbSmuDlwmSupport token.\n* `enabled` - Value - enabled for configuring CbsCmnGnbSmuDlwmSupport token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnGnbSmuDlwmSupportEnum CbsCmnGnbSmuDlwmSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting CPPC configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnGnbSmucppc token.\n* `disabled` - Value - disabled for configuring CbsCmnGnbSmucppc token.\n* `enabled` - Value - enabled for configuring CbsCmnGnbSmucppc token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -11240,11 +11955,77 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting Chipset Interleave configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `disabled` - Value - disabled for configuring CbsCmnMemMapBankInterleaveDdr4 token."</para>
+        /// <para type="description">"BIOS Token for setting Power Down Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemCtrllerPwrDnEnDdr token.\n* `disabled` - Value - disabled for configuring CbsCmnMemCtrllerPwrDnEnDdr token.\n* `enabled` - Value - enabled for configuring CbsCmnMemCtrllerPwrDnEnDdr token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnMemCtrllerPwrDnEnDdrEnum CbsCmnMemCtrllerPwrDnEnDdr
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting DRAM Refresh Rate configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `3.9 usec` - Value - 3.9 usec for configuring CbsCmnMemDramRefreshRate token.\n* `7.8 usec` - Value - 7.8 usec for configuring CbsCmnMemDramRefreshRate token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnMemDramRefreshRateEnum CbsCmnMemDramRefreshRate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Chipset Interleave configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `disabled` - Value - disabled for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `enabled` - Value - enabled for configuring CbsCmnMemMapBankInterleaveDdr4 token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsCmnMemMapBankInterleaveDdr4Enum CbsCmnMemMapBankInterleaveDdr4
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Memory Clock Speed 7xx2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `667MHz` - Value - 667MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `800MHz` - Value - 800MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `933MHz` - Value - 933MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1067MHz` - Value - 1067MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1200MHz` - Value - 1200MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1333MHz` - Value - 1333MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1467MHz` - Value - 1467MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `1600MHz` - Value - 1600MHz for configuring CbsCmnMemSpeedDdr47xx2 token.\n* `Auto` - Value - Auto for configuring CbsCmnMemSpeedDdr47xx2 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnMemSpeedDdr47xx2Enum CbsCmnMemSpeedDdr47xx2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Memory Clock Speed 7xx3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `400MHz` - Value - 400MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `800MHz` - Value - 800MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `933MHz` - Value - 933MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1067MHz` - Value - 1067MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1200MHz` - Value - 1200MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1333MHz` - Value - 1333MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1467MHz` - Value - 1467MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1600MHz` - Value - 1600MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1633MHz` - Value - 1633MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1667MHz` - Value - 1667MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1700MHz` - Value - 1700MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1733MHz` - Value - 1733MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1767MHz` - Value - 1767MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `1800MHz` - Value - 1800MHz for configuring CbsCmnMemSpeedDdr47xx3 token.\n* `Auto` - Value - Auto for configuring CbsCmnMemSpeedDdr47xx3 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnMemSpeedDdr47xx3Enum CbsCmnMemSpeedDdr47xx3
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Preferred IO 7xx2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnPreferredIo7xx2 token.\n* `Manual` - Value - Manual for configuring CbsCmnPreferredIo7xx2 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnPreferredIo7xx2Enum CbsCmnPreferredIo7xx2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Preferred IO 7xx3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnPreferredIo7xx3 token.\n* `Bus` - Value - Bus for configuring CbsCmnPreferredIo7xx3 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnPreferredIo7xx3Enum CbsCmnPreferredIo7xx3
         {
             get;
             set;
@@ -11262,7 +12043,18 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting CCD Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 CCDs` - Value - 2 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `3 CCDs` - Value - 3 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `4 CCDs` - Value - 4 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `6 CCDs` - Value - 6 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `Auto` - Value - Auto for configuring CbsCpuCcdCtrlSsp token."</para>
+        /// <para type="description">"BIOS Token for setting xGMI Force Link Width configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `0` - Value - 0 for configuring CbsCmnxGmiForceLinkWidthRs token.\n* `1` - Value - 1 for configuring CbsCmnxGmiForceLinkWidthRs token.\n* `2` - Value - 2 for configuring CbsCmnxGmiForceLinkWidthRs token.\n* `Auto` - Value - Auto for configuring CbsCmnxGmiForceLinkWidthRs token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnxGmiForceLinkWidthRsEnum CbsCmnxGmiForceLinkWidthRs
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting CCD Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 CCDs` - Value - 2 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `3 CCDs` - Value - 3 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `4 CCDs` - Value - 4 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `6 CCDs` - Value - 6 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `8 CCDs` - Value - 8 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `10 CCDs` - Value - 10 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `Auto` - Value - Auto for configuring CbsCpuCcdCtrlSsp token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11284,11 +12076,77 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Downcore Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuDownCoreCtrlBergamo token.\n* `EIGHT (4 + 4)` - Value - EIGHT (4 + 4) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `FOUR (2 + 2)` - Value - FOUR (2 + 2) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `FOURTEEN (7 + 7)` - Value - FOURTEEN (7 + 7) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `SIX (3 + 3)` - Value - SIX (3 + 3) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `TEN (5 + 5)` - Value - TEN (5 + 5) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `TWELVE (6 + 6)` - Value - TWELVE (6 + 6) for configuring CbsCpuDownCoreCtrlBergamo token.\n* `TWO (1 + 1)` - Value - TWO (1 + 1) for configuring CbsCpuDownCoreCtrlBergamo token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCpuDownCoreCtrlBergamoEnum CbsCpuDownCoreCtrlBergamo
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting CPU Downcore control F19 M10h-1Fh configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FIVE (5 + 0)` - Value - FIVE (5 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FOUR (4 + 0)` - Value - FOUR (4 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `ONE (1 + 0)` - Value - ONE (1 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `SEVEN (7 + 0)` - Value - SEVEN (7 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `SIX (6 + 0)` - Value - SIX (6 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `THREE (3 + 0)` - Value - THREE (3 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `TWO (2 + 0)` - Value - TWO (2 + 0) for configuring CbsCpuDownCoreCtrlGenoa token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCpuDownCoreCtrlGenoaEnum CbsCpuDownCoreCtrlGenoa
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting CPU SMT Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuSmtCtrl token.\n* `disabled` - Value - disabled for configuring CbsCpuSmtCtrl token.\n* `enabled` - Value - enabled for configuring CbsCpuSmtCtrl token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsCpuSmtCtrlEnum CbsCpuSmtCtrl
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Core Watchdog Timer Enable configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuGenCpuWdt token.\n* `disabled` - Value - disabled for configuring CbsDbgCpuGenCpuWdt token.\n* `enabled` - Value - enabled for configuring CbsDbgCpuGenCpuWdt token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDbgCpuGenCpuWdtEnum CbsDbgCpuGenCpuWdt
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Local APIC Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuLapicMode token.\n* `Compatibility` - Value - Compatibility for configuring CbsDbgCpuLapicMode token.\n* `X2APIC` - Value - X2APIC for configuring CbsDbgCpuLapicMode token.\n* `XAPIC` - Value - XAPIC for configuring CbsDbgCpuLapicMode token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDbgCpuLapicModeEnum CbsDbgCpuLapicMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Local APIC Mode 7xx2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuLapicMode7xx2 token.\n* `X2APIC` - Value - X2APIC for configuring CbsDbgCpuLapicMode7xx2 token.\n* `XAPIC` - Value - XAPIC for configuring CbsDbgCpuLapicMode7xx2 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDbgCpuLapicMode7xx2Enum CbsDbgCpuLapicMode7xx2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Local APIC Mode 7xx3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDbgCpuLapicMode7xx3 token.\n* `Compatibility` - Value - Compatibility for configuring CbsDbgCpuLapicMode7xx3 token.\n* `X2APIC` - Value - X2APIC for configuring CbsDbgCpuLapicMode7xx3 token.\n* `XAPIC` - Value - XAPIC for configuring CbsDbgCpuLapicMode7xx3 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDbgCpuLapicMode7xx3Enum CbsDbgCpuLapicMode7xx3
         {
             get;
             set;
@@ -11317,6 +12175,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting 4-link xGMI max speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `20Gbps` - Value - 20Gbps for configuring CbsDfCmn4linkMaxXgmiSpeed token.\n* `25Gbps` - Value - 25Gbps for configuring CbsDfCmn4linkMaxXgmiSpeed token.\n* `32Gbps` - Value - 32Gbps for configuring CbsDfCmn4linkMaxXgmiSpeed token.\n* `Auto` - Value - Auto for configuring CbsDfCmn4linkMaxXgmiSpeed token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDfCmn4linkMaxXgmiSpeedEnum CbsDfCmn4linkMaxXgmiSpeed
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting ACPI SRAT L3 Cache As NUMA Domain configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDfCmnAcpiSratL3numa token.\n* `disabled` - Value - disabled for configuring CbsDfCmnAcpiSratL3numa token.\n* `enabled` - Value - enabled for configuring CbsDfCmnAcpiSratL3numa token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -11339,11 +12208,33 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting DRAM Scrub Time configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1 hour` - Value - 1 hour for configuring CbsDfCmnDramScrubTime token.\n* `4 hours` - Value - 4 hours for configuring CbsDfCmnDramScrubTime token.\n* `6 hours` - Value - 6 hours for configuring CbsDfCmnDramScrubTime token.\n* `8 hours` - Value - 8 hours for configuring CbsDfCmnDramScrubTime token.\n* `12 hours` - Value - 12 hours for configuring CbsDfCmnDramScrubTime token.\n* `16 hours` - Value - 16 hours for configuring CbsDfCmnDramScrubTime token.\n* `24 hours` - Value - 24 hours for configuring CbsDfCmnDramScrubTime token.\n* `48 hours` - Value - 48 hours for configuring CbsDfCmnDramScrubTime token.\n* `Auto` - Value - Auto for configuring CbsDfCmnDramScrubTime token.\n* `Disabled` - Value - Disabled for configuring CbsDfCmnDramScrubTime token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDfCmnDramScrubTimeEnum CbsDfCmnDramScrubTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting AMD Memory Interleaving configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDfCmnMemIntlv token.\n* `Channel` - Value - Channel for configuring CbsDfCmnMemIntlv token.\n* `Die` - Value - Die for configuring CbsDfCmnMemIntlv token.\n* `None` - Value - None for configuring CbsDfCmnMemIntlv token.\n* `Socket` - Value - Socket for configuring CbsDfCmnMemIntlv token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsDfCmnMemIntlvEnum CbsDfCmnMemIntlv
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Memory Interleaving configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsDfCmnMemIntlvControl token.\n* `disabled` - Value - disabled for configuring CbsDfCmnMemIntlvControl token.\n* `enabled` - Value - enabled for configuring CbsDfCmnMemIntlvControl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDfCmnMemIntlvControlEnum CbsDfCmnMemIntlvControl
         {
             get;
             set;
@@ -11361,7 +12252,29 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting SEV-SNP Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// <para type="description">"BIOS Token for setting xGMI Link Configuration configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 xGMI Links` - Value - 2 xGMI Links for configuring CbsDfDbgXgmiLinkCfg token.\n* `3 xGMI Links` - Value - 3 xGMI Links for configuring CbsDfDbgXgmiLinkCfg token.\n* `4 xGMI Links` - Value - 4 xGMI Links for configuring CbsDfDbgXgmiLinkCfg token.\n* `Auto` - Value - Auto for configuring CbsDfDbgXgmiLinkCfg token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsDfDbgXgmiLinkCfgEnum CbsDfDbgXgmiLinkCfg
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting PCIe Ten Bit Tag Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsGnbDbgPcieTbtSupport token.\n* `disabled` - Value - disabled for configuring CbsGnbDbgPcieTbtSupport token.\n* `enabled` - Value - enabled for configuring CbsGnbDbgPcieTbtSupport token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsGnbDbgPcieTbtSupportEnum CbsGnbDbgPcieTbtSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting SEV-SNP Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsSevSnpSupport token.\n* `disabled` - Value - disabled for configuring CbsSevSnpSupport token.\n* `enabled` - Value - enabled for configuring CbsSevSnpSupport token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11642,6 +12555,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
         public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting DFX OSB configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring DfxOsbEn token.\n* `disabled` - Value - disabled for configuring DfxOsbEn token.\n* `enabled` - Value - enabled for configuring DfxOsbEn token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.DfxOsbEnEnum DfxOsbEn
         {
             get;
             set;
@@ -12829,7 +13753,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"BIOS Token for setting PCIe Slot MSTOR Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring PcieSlotMstorraidLinkSpeed token.\n* `Disabled` - Value - Disabled for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN1` - Value - GEN1 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN2` - Value - GEN2 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN3` - Value - GEN3 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN4` - Value - GEN4 for configuring PcieSlotMstorraidLinkSpeed token."</para>
+        /// <para type="description">"BIOS Token for setting PCIe Slot MSTOR Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring PcieSlotMstorraidLinkSpeed token.\n* `Disabled` - Value - Disabled for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN1` - Value - GEN1 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN2` - Value - GEN2 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN3` - Value - GEN3 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN4` - Value - GEN4 for configuring PcieSlotMstorraidLinkSpeed token.\n* `GEN5` - Value - GEN5 for configuring PcieSlotMstorraidLinkSpeed token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -13193,6 +14117,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Re-Size BAR Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.ResizeBarSupportEnum ResizeBarSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Runtime Post Package Repair configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.RuntimePostPackageRepairEnum RuntimePostPackageRepair
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting SATA Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `AHCI` - Value - AHCI for configuring SataModeSelect token.\n* `Disabled` - Value - Disabled for configuring SataModeSelect token.\n* `LSI SW RAID` - Value - LSI SW RAID for configuring SataModeSelect token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -13220,6 +14166,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.SelectPprTypeEnum SelectPprType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Serial Mux configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.SerialMuxEnum SerialMux
         {
             get;
             set;

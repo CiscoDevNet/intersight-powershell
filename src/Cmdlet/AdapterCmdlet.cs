@@ -2028,6 +2028,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Records the current state of communication between the Virtual Interface Card (VIC) and the Cisco Integrated Management Controller (CIMC) on the server.\n* `Not Applicable` - Set the state of VIC communication to Not Applicable for other Platforms.\n* `Yes` - VIC is reachable from CIMC.\n* `No` - VIC is not reachable from CIMC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public AdapterUnit.VicCommunicableEnum VicCommunicable
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Virtual Id of the adapter in the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]

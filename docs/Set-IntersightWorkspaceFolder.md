@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightMarketplaceCatalog
+# Set-IntersightWorkspaceFolder
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,13 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightMarketplaceCatalog [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< MarketplaceCatalog.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< MarketplaceCatalog.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightWorkspaceFolder [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Archived< bool>][-Assets< System.Collections.Generic.List`1[MoBaseMoRelationship]>][[-Moid]< string>][-Name< string>][-ParentFolder< WorkspaceFolderRelationship>][-SubFolders< System.Collections.Generic.List`1[WorkspaceFolderRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-
-Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
+Update a &apos;WorkspaceFolder&apos; resource.
 
 ## PARAMETERS
 
@@ -39,11 +38,29 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
+### -Archived
+It is to define if folder is archived or not.
 
 ```yaml
-Type: MarketplaceCatalog.ClassIdEnum
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Assets
+An array of relationships to moBaseMo resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[MoBaseMoRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -62,7 +79,7 @@ Type: string
 Parameter Sets: (All)
 Aliases:
 
-Required: false
+Required: true
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
@@ -70,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-A unique name for the catalog.
+The name for this folder. You can have multiple versions of the folder with the same name. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.) or an underscore (_).
 
 ```yaml
 Type: string
@@ -84,11 +101,14 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+### -ParentFolder
+A reference to a workspaceFolder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: MarketplaceCatalog.ObjectTypeEnum
+Type: WorkspaceFolderRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -99,14 +119,14 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Organization
-A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+### -SubFolders
+An array of relationships to workspaceFolder resources.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: Model.OrganizationOrganizationRelationship
+Type: System.Collections.Generic.List`1[WorkspaceFolderRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -123,7 +143,7 @@ Accept wildcard characters: False
 Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.MoTag]
+Type: System.Collections.Generic.List`1[MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -172,7 +192,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightMarketplaceCatalog
+PS C:\> Set-IntersightWorkspaceFolder
 ```
 
 { Add example description here }
@@ -191,4 +211,10 @@ PS C:\> Initialize-IntersightMarketplaceCatalog
 
 ## RELATED LINKS
 
-[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+[Get-IntersightWorkspaceFolder](./Get-IntersightWorkspaceFolder.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightWorkspaceFolder](./New-IntersightWorkspaceFolder.md)
+
+[Remove-IntersightWorkspaceFolder](./Remove-IntersightWorkspaceFolder.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkflowWorkflowInfo [-Account< IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< MoBaseMoRelationship>][-FailedWorkflowCleanupDuration< long>][-Input< object>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Permission< IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WorkflowCtx< WorkflowWorkflowCtx>][-WorkflowDefinition< WorkflowWorkflowDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightWorkflowWorkflowInfo [-Account< IamAccountRelationship>][-Action< WorkflowWorkflowInfo.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedObject< MoBaseMoRelationship>][-FailedWorkflowCleanupDuration< long>][-Input< object>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Permission< IamPermissionRelationship>][-RetryFromTaskName< string>][-SuccessWorkflowCleanupDuration< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskInfoUpdate< WorkflowTaskInfoUpdate>][-WorkflowCtx< WorkflowWorkflowCtx>][-WorkflowDefinition< WorkflowWorkflowDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -234,6 +234,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -TaskInfoUpdate
+Used to update a TaskInfo instance in the WorkflowInfo, it is used as a way to update status and provide user inputs for a WaitTask.
+
+Note :- Use Initialize-IntersightWorkflowTaskInfoUpdate to create the object of complex type WorkflowTaskInfoUpdate
+
+```yaml
+Type: WorkflowTaskInfoUpdate
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -WorkflowCtx
 The workflow context which contains initiator and target information.
 
@@ -331,6 +348,8 @@ PS C:\> New-IntersightWorkflowWorkflowInfo
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightWorkflowMessage](./Initialize-IntersightWorkflowMessage.md)
+
+[Initialize-IntersightWorkflowTaskInfoUpdate](./Initialize-IntersightWorkflowTaskInfoUpdate.md)
 
 [Initialize-IntersightWorkflowWorkflowCtx](./Initialize-IntersightWorkflowWorkflowCtx.md)
 
