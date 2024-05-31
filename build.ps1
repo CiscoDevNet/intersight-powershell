@@ -17,10 +17,24 @@ catch{
 #Check for whether build success or failure
 
 if ($LASTEXITCODE -ne 0){
-    Write-Host "Build failed, PLease fix the code and re-run."
+    Write-Host "Build failed, fix the code and re-run."
     Exit $LASTEXITCODE
 }
 
+# run the unit test
+try
+{
+	dotnet test ./src/Intersight.PowerShellTest/Intersight.PowerShellTest.csproj --logger trx
+}
+catch{
+	throw $_.Exception
+	Exit 1
+}
+
+if ($LASTEXITCODE -ne 0){
+    Write-Host "Unit Test failed, fix the code and re-run."
+    Exit $LASTEXITCODE
+}
 
 # Import the dll and get the list of cmdlet available in the module
 Import-Module -Name $moduleDir\Intersight.PowerShell.dll
@@ -35,7 +49,7 @@ $manifestParam = @{
     Guid = "41ce1a70-9c4b-489f-a153-12fe49b7fe62"
     Author = "Cisco Systems"
     CompanyName = "Cisco Systems"
-    ModuleVersion = "1.0.11.16342"
+    ModuleVersion = "1.0.11.17057"
     Copyright = "(c) 2023 Cisco Systems, Inc. All rights reserved."
     LicenseUri = "https://www.apache.org/licenses/LICENSE-2.0.txt"
     ProjectUri = "https://github.com/CiscoDevNet/intersight-powershell"
@@ -44,7 +58,7 @@ $manifestParam = @{
     PowerShellVersion = "7.3.3"
     CmdletsToExport = $commandList
     Description = "Intersight Powershell module provides the cmdlets to manage, analyze, and automate the IT infrastructure in Intersight."
-    ReleaseNotes = "Intersight.PowerShell - Version 1.0.11.16342
+    ReleaseNotes = "Intersight.PowerShell - Version 1.0.11.17057
 
 Changelog:-
 https://github.com/CiscoDevNet/intersight-powershell/blob/master/CHANGELOG.md

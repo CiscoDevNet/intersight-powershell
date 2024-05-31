@@ -153,7 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-The type of resource that is placed into resource groups or pools. Resource Type can be either &apos;compute.Blade&apos; or &apos;compute.RackUnit for pools.
+The type of resource that is placed into resource groups or pools. Resource Type can be either &apos;compute.Blade&apos; or &apos;compute.RackUnit&apos; for pools.
 
 ```yaml
 Type: string

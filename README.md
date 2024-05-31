@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.16342
-- C# SDK version: 1.0.11.16342
+- Intersight.PowerShell version: 1.0.11.17057
+- C# SDK version: 1.0.11.17057
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.16342"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.17057"}
 ```
 or
 
@@ -723,6 +723,18 @@ AdapterConfigPolicy | [**Remove-IntersightAdapterConfigPolicy**](docs/Remove-Int
 AdapterConfigPolicy | [**Set-IntersightAdapterConfigPolicy**](docs/Set-IntersightAdapterConfigPolicy.md) | Update a 'AdapterConfigPolicy' resource.
 AdapterHostEthInterface | [**Set-IntersightAdapterHostEthInterface**](docs/Set-IntersightAdapterHostEthInterface.md) | Update a 'AdapterHostEthInterface' resource.
 AdapterHostFcInterface | [**Set-IntersightAdapterHostFcInterface**](docs/Set-IntersightAdapterHostFcInterface.md) | Update a 'AdapterHostFcInterface' resource.
+ApicAciPod | [**Get-IntersightApicAciPod**](docs/Get-IntersightApicAciPod.md) | Read a 'ApicAciPod' resource.
+ApicApplication | [**Get-IntersightApicApplication**](docs/Get-IntersightApicApplication.md) | Read a 'ApicApplication' resource.
+ApicApplicationEndpointGroup | [**Get-IntersightApicApplicationEndpointGroup**](docs/Get-IntersightApicApplicationEndpointGroup.md) | Read a 'ApicApplicationEndpointGroup' resource.
+ApicBridgeDomain | [**Get-IntersightApicBridgeDomain**](docs/Get-IntersightApicBridgeDomain.md) | Read a 'ApicBridgeDomain' resource.
+ApicExternalRoutedLayerThreeDomain | [**Get-IntersightApicExternalRoutedLayerThreeDomain**](docs/Get-IntersightApicExternalRoutedLayerThreeDomain.md) | Read a 'ApicExternalRoutedLayerThreeDomain' resource.
+ApicFabricLeafNode | [**Get-IntersightApicFabricLeafNode**](docs/Get-IntersightApicFabricLeafNode.md) | Read a 'ApicFabricLeafNode' resource.
+ApicFabricLeafNodeInterface | [**Get-IntersightApicFabricLeafNodeInterface**](docs/Get-IntersightApicFabricLeafNodeInterface.md) | Read a 'ApicFabricLeafNodeInterface' resource.
+ApicOut | [**Get-IntersightApicOut**](docs/Get-IntersightApicOut.md) | Read a 'ApicOut' resource.
+ApicSubnet | [**Get-IntersightApicSubnet**](docs/Get-IntersightApicSubnet.md) | Read a 'ApicSubnet' resource.
+ApicTenant | [**Get-IntersightApicTenant**](docs/Get-IntersightApicTenant.md) | Read a 'ApicTenant' resource.
+ApicVpcGroup | [**Get-IntersightApicVpcGroup**](docs/Get-IntersightApicVpcGroup.md) | Read a 'ApicVpcGroup' resource.
+ApicVrfs | [**Get-IntersightApicVrfs**](docs/Get-IntersightApicVrfs.md) | Read a 'ApicVrfs' resource.
 ApplianceAppOpStatus | [**Get-IntersightApplianceAppOpStatus**](docs/Get-IntersightApplianceAppOpStatus.md) | Read a 'ApplianceAppOpStatus' resource.
 ApplianceAppStatus | [**Get-IntersightApplianceAppStatus**](docs/Get-IntersightApplianceAppStatus.md) | Read a 'ApplianceAppStatus' resource.
 ApplianceAutoRmaPolicy | [**Get-IntersightApplianceAutoRmaPolicy**](docs/Get-IntersightApplianceAutoRmaPolicy.md) | Read a 'ApplianceAutoRmaPolicy' resource.
@@ -899,6 +911,7 @@ CapabilityFexCapabilityDef | [**Get-IntersightCapabilityFexCapabilityDef**](docs
 CapabilityFexDescriptor | [**Get-IntersightCapabilityFexDescriptor**](docs/Get-IntersightCapabilityFexDescriptor.md) | Read a 'CapabilityFexDescriptor' resource.
 CapabilityFexManufacturingDef | [**Get-IntersightCapabilityFexManufacturingDef**](docs/Get-IntersightCapabilityFexManufacturingDef.md) | Read a 'CapabilityFexManufacturingDef' resource.
 CapabilityGpuEndpointDescriptor | [**Get-IntersightCapabilityGpuEndpointDescriptor**](docs/Get-IntersightCapabilityGpuEndpointDescriptor.md) | Read a 'CapabilityGpuEndpointDescriptor' resource.
+CapabilityHsuIsoFileSupportMeta | [**Get-IntersightCapabilityHsuIsoFileSupportMeta**](docs/Get-IntersightCapabilityHsuIsoFileSupportMeta.md) | Read a 'CapabilityHsuIsoFileSupportMeta' resource.
 CapabilityIoCardCapabilityDef | [**Get-IntersightCapabilityIoCardCapabilityDef**](docs/Get-IntersightCapabilityIoCardCapabilityDef.md) | Read a 'CapabilityIoCardCapabilityDef' resource.
 CapabilityIoCardDescriptor | [**Get-IntersightCapabilityIoCardDescriptor**](docs/Get-IntersightCapabilityIoCardDescriptor.md) | Read a 'CapabilityIoCardDescriptor' resource.
 CapabilityIoCardManufacturingDef | [**Get-IntersightCapabilityIoCardManufacturingDef**](docs/Get-IntersightCapabilityIoCardManufacturingDef.md) | Read a 'CapabilityIoCardManufacturingDef' resource.
@@ -920,6 +933,8 @@ CapabilitySwitchDescriptor | [**Get-IntersightCapabilitySwitchDescriptor**](docs
 CapabilitySwitchEquipmentInfo | [**Get-IntersightCapabilitySwitchEquipmentInfo**](docs/Get-IntersightCapabilitySwitchEquipmentInfo.md) | Read a 'CapabilitySwitchEquipmentInfo' resource.
 CapabilitySwitchManufacturingDef | [**Get-IntersightCapabilitySwitchManufacturingDef**](docs/Get-IntersightCapabilitySwitchManufacturingDef.md) | Read a 'CapabilitySwitchManufacturingDef' resource.
 CapabilityTemplateCatalog | [**Get-IntersightCapabilityTemplateCatalog**](docs/Get-IntersightCapabilityTemplateCatalog.md) | Read a 'CapabilityTemplateCatalog' resource.
+CapabilityUpdateOrderMeta | [**Get-IntersightCapabilityUpdateOrderMeta**](docs/Get-IntersightCapabilityUpdateOrderMeta.md) | Read a 'CapabilityUpdateOrderMeta' resource.
+CapabilityVicDescriptor | [**Get-IntersightCapabilityVicDescriptor**](docs/Get-IntersightCapabilityVicDescriptor.md) | Read a 'CapabilityVicDescriptor' resource.
 CapabilityActionsMetaData | [**New-IntersightCapabilityActionsMetaData**](docs/New-IntersightCapabilityActionsMetaData.md) | Create a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**New-IntersightCapabilityAdapterDeprecatedDef**](docs/New-IntersightCapabilityAdapterDeprecatedDef.md) | Create a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**New-IntersightCapabilityAdapterUnitDescriptor**](docs/New-IntersightCapabilityAdapterUnitDescriptor.md) | Create a 'CapabilityAdapterUnitDescriptor' resource.
@@ -949,6 +964,7 @@ CapabilitySwitchCapability | [**New-IntersightCapabilitySwitchCapability**](docs
 CapabilitySwitchDescriptor | [**New-IntersightCapabilitySwitchDescriptor**](docs/New-IntersightCapabilitySwitchDescriptor.md) | Create a 'CapabilitySwitchDescriptor' resource.
 CapabilitySwitchEquipmentInfo | [**New-IntersightCapabilitySwitchEquipmentInfo**](docs/New-IntersightCapabilitySwitchEquipmentInfo.md) | Create a 'CapabilitySwitchEquipmentInfo' resource.
 CapabilitySwitchManufacturingDef | [**New-IntersightCapabilitySwitchManufacturingDef**](docs/New-IntersightCapabilitySwitchManufacturingDef.md) | Create a 'CapabilitySwitchManufacturingDef' resource.
+CapabilityVicDescriptor | [**New-IntersightCapabilityVicDescriptor**](docs/New-IntersightCapabilityVicDescriptor.md) | Create a 'CapabilityVicDescriptor' resource.
 CapabilityActionsMetaData | [**Remove-IntersightCapabilityActionsMetaData**](docs/Remove-IntersightCapabilityActionsMetaData.md) | Delete a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**Remove-IntersightCapabilityAdapterDeprecatedDef**](docs/Remove-IntersightCapabilityAdapterDeprecatedDef.md) | Delete a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**Remove-IntersightCapabilityAdapterUnitDescriptor**](docs/Remove-IntersightCapabilityAdapterUnitDescriptor.md) | Delete a 'CapabilityAdapterUnitDescriptor' resource.
@@ -978,6 +994,7 @@ CapabilitySwitchCapability | [**Remove-IntersightCapabilitySwitchCapability**](d
 CapabilitySwitchDescriptor | [**Remove-IntersightCapabilitySwitchDescriptor**](docs/Remove-IntersightCapabilitySwitchDescriptor.md) | Delete a 'CapabilitySwitchDescriptor' resource.
 CapabilitySwitchEquipmentInfo | [**Remove-IntersightCapabilitySwitchEquipmentInfo**](docs/Remove-IntersightCapabilitySwitchEquipmentInfo.md) | Delete a 'CapabilitySwitchEquipmentInfo' resource.
 CapabilitySwitchManufacturingDef | [**Remove-IntersightCapabilitySwitchManufacturingDef**](docs/Remove-IntersightCapabilitySwitchManufacturingDef.md) | Delete a 'CapabilitySwitchManufacturingDef' resource.
+CapabilityVicDescriptor | [**Remove-IntersightCapabilityVicDescriptor**](docs/Remove-IntersightCapabilityVicDescriptor.md) | Delete a 'CapabilityVicDescriptor' resource.
 CapabilityActionsMetaData | [**Set-IntersightCapabilityActionsMetaData**](docs/Set-IntersightCapabilityActionsMetaData.md) | Update a 'CapabilityActionsMetaData' resource.
 CapabilityAdapterDeprecatedDef | [**Set-IntersightCapabilityAdapterDeprecatedDef**](docs/Set-IntersightCapabilityAdapterDeprecatedDef.md) | Update a 'CapabilityAdapterDeprecatedDef' resource.
 CapabilityAdapterUnitDescriptor | [**Set-IntersightCapabilityAdapterUnitDescriptor**](docs/Set-IntersightCapabilityAdapterUnitDescriptor.md) | Update a 'CapabilityAdapterUnitDescriptor' resource.
@@ -1008,6 +1025,7 @@ CapabilitySwitchCapability | [**Set-IntersightCapabilitySwitchCapability**](docs
 CapabilitySwitchDescriptor | [**Set-IntersightCapabilitySwitchDescriptor**](docs/Set-IntersightCapabilitySwitchDescriptor.md) | Update a 'CapabilitySwitchDescriptor' resource.
 CapabilitySwitchEquipmentInfo | [**Set-IntersightCapabilitySwitchEquipmentInfo**](docs/Set-IntersightCapabilitySwitchEquipmentInfo.md) | Update a 'CapabilitySwitchEquipmentInfo' resource.
 CapabilitySwitchManufacturingDef | [**Set-IntersightCapabilitySwitchManufacturingDef**](docs/Set-IntersightCapabilitySwitchManufacturingDef.md) | Update a 'CapabilitySwitchManufacturingDef' resource.
+CapabilityVicDescriptor | [**Set-IntersightCapabilityVicDescriptor**](docs/Set-IntersightCapabilityVicDescriptor.md) | Update a 'CapabilityVicDescriptor' resource.
 CertificatemanagementPolicy | [**Get-IntersightCertificatemanagementPolicy**](docs/Get-IntersightCertificatemanagementPolicy.md) | Read a 'CertificatemanagementPolicy' resource.
 CertificatemanagementPolicyInventory | [**Get-IntersightCertificatemanagementPolicyInventory**](docs/Get-IntersightCertificatemanagementPolicyInventory.md) | Read a 'CertificatemanagementPolicyInventory' resource.
 CertificatemanagementPolicy | [**New-IntersightCertificatemanagementPolicy**](docs/New-IntersightCertificatemanagementPolicy.md) | Create a 'CertificatemanagementPolicy' resource.
@@ -1109,6 +1127,16 @@ DeviceconnectorPolicy | [**Get-IntersightDeviceconnectorPolicy**](docs/Get-Inter
 DeviceconnectorPolicy | [**New-IntersightDeviceconnectorPolicy**](docs/New-IntersightDeviceconnectorPolicy.md) | Create a 'DeviceconnectorPolicy' resource.
 DeviceconnectorPolicy | [**Remove-IntersightDeviceconnectorPolicy**](docs/Remove-IntersightDeviceconnectorPolicy.md) | Delete a 'DeviceconnectorPolicy' resource.
 DeviceconnectorPolicy | [**Set-IntersightDeviceconnectorPolicy**](docs/Set-IntersightDeviceconnectorPolicy.md) | Update a 'DeviceconnectorPolicy' resource.
+DnacDevice | [**Get-IntersightDnacDevice**](docs/Get-IntersightDnacDevice.md) | Read a 'DnacDevice' resource.
+DnacDeviceInterface | [**Get-IntersightDnacDeviceInterface**](docs/Get-IntersightDnacDeviceInterface.md) | Read a 'DnacDeviceInterface' resource.
+DnacExternalBorderNode | [**Get-IntersightDnacExternalBorderNode**](docs/Get-IntersightDnacExternalBorderNode.md) | Read a 'DnacExternalBorderNode' resource.
+DnacExternalBorderNodeInterface | [**Get-IntersightDnacExternalBorderNodeInterface**](docs/Get-IntersightDnacExternalBorderNodeInterface.md) | Read a 'DnacExternalBorderNodeInterface' resource.
+DnacFabricSite | [**Get-IntersightDnacFabricSite**](docs/Get-IntersightDnacFabricSite.md) | Read a 'DnacFabricSite' resource.
+DnacSite | [**Get-IntersightDnacSite**](docs/Get-IntersightDnacSite.md) | Read a 'DnacSite' resource.
+DnacSiteIpPool | [**Get-IntersightDnacSiteIpPool**](docs/Get-IntersightDnacSiteIpPool.md) | Read a 'DnacSiteIpPool' resource.
+DnacTemplate | [**Get-IntersightDnacTemplate**](docs/Get-IntersightDnacTemplate.md) | Read a 'DnacTemplate' resource.
+DnacTransit | [**Get-IntersightDnacTransit**](docs/Get-IntersightDnacTransit.md) | Read a 'DnacTransit' resource.
+DnacVirtualNetworkFabricSite | [**Get-IntersightDnacVirtualNetworkFabricSite**](docs/Get-IntersightDnacVirtualNetworkFabricSite.md) | Read a 'DnacVirtualNetworkFabricSite' resource.
 EquipmentChassis | [**Get-IntersightEquipmentChassis**](docs/Get-IntersightEquipmentChassis.md) | Read a 'EquipmentChassis' resource.
 EquipmentChassisIdPool | [**Get-IntersightEquipmentChassisIdPool**](docs/Get-IntersightEquipmentChassisIdPool.md) | Read a 'EquipmentChassisIdPool' resource.
 EquipmentChassisIdentity | [**Get-IntersightEquipmentChassisIdentity**](docs/Get-IntersightEquipmentChassisIdentity.md) | Read a 'EquipmentChassisIdentity' resource.
@@ -1435,6 +1463,10 @@ FirmwareServerConfigurationUtilityDistributable | [**Set-IntersightFirmwareServe
 FirmwareStorageControllerDescriptor | [**Set-IntersightFirmwareStorageControllerDescriptor**](docs/Set-IntersightFirmwareStorageControllerDescriptor.md) | Update a 'FirmwareStorageControllerDescriptor' resource.
 FirmwareUnsupportedVersionUpgrade | [**Set-IntersightFirmwareUnsupportedVersionUpgrade**](docs/Set-IntersightFirmwareUnsupportedVersionUpgrade.md) | Update a 'FirmwareUnsupportedVersionUpgrade' resource.
 FirmwareUpgrade | [**Set-IntersightFirmwareUpgrade**](docs/Set-IntersightFirmwareUpgrade.md) | Update a 'FirmwareUpgrade' resource.
+FmcDevice | [**Get-IntersightFmcDevice**](docs/Get-IntersightFmcDevice.md) | Read a 'FmcDevice' resource.
+FmcDeviceHaPair | [**Get-IntersightFmcDeviceHaPair**](docs/Get-IntersightFmcDeviceHaPair.md) | Read a 'FmcDeviceHaPair' resource.
+FmcDomain | [**Get-IntersightFmcDomain**](docs/Get-IntersightFmcDomain.md) | Read a 'FmcDomain' resource.
+FmcPhysicalInterface | [**Get-IntersightFmcPhysicalInterface**](docs/Get-IntersightFmcPhysicalInterface.md) | Read a 'FmcPhysicalInterface' resource.
 ForecastCatalog | [**Get-IntersightForecastCatalog**](docs/Get-IntersightForecastCatalog.md) | Read a 'ForecastCatalog' resource.
 ForecastDefinition | [**Get-IntersightForecastDefinition**](docs/Get-IntersightForecastDefinition.md) | Read a 'ForecastDefinition' resource.
 ForecastInstance | [**Get-IntersightForecastInstance**](docs/Get-IntersightForecastInstance.md) | Read a 'ForecastInstance' resource.
@@ -2033,6 +2065,9 @@ MemoryPersistentMemoryPolicy | [**Set-IntersightMemoryPersistentMemoryPolicy**](
 MemoryPersistentMemoryRegion | [**Set-IntersightMemoryPersistentMemoryRegion**](docs/Set-IntersightMemoryPersistentMemoryRegion.md) | Update a 'MemoryPersistentMemoryRegion' resource.
 MemoryPersistentMemoryUnit | [**Set-IntersightMemoryPersistentMemoryUnit**](docs/Set-IntersightMemoryPersistentMemoryUnit.md) | Update a 'MemoryPersistentMemoryUnit' resource.
 MemoryUnit | [**Set-IntersightMemoryUnit**](docs/Set-IntersightMemoryUnit.md) | Update a 'MemoryUnit' resource.
+MerakiDevice | [**Get-IntersightMerakiDevice**](docs/Get-IntersightMerakiDevice.md) | Read a 'MerakiDevice' resource.
+MerakiNetwork | [**Get-IntersightMerakiNetwork**](docs/Get-IntersightMerakiNetwork.md) | Read a 'MerakiNetwork' resource.
+MerakiOrganization | [**Get-IntersightMerakiOrganization**](docs/Get-IntersightMerakiOrganization.md) | Read a 'MerakiOrganization' resource.
 MetaDefinition | [**Get-IntersightMetaDefinition**](docs/Get-IntersightMetaDefinition.md) | Read a 'MetaDefinition' resource.
 MetaDefinition | [**Remove-IntersightMetaDefinition**](docs/Remove-IntersightMetaDefinition.md) | Delete a 'MetaDefinition' resource.
 MetricsMetricsExploration | [**Get-IntersightMetricsMetricsExploration**](docs/Get-IntersightMetricsMetricsExploration.md) | Read a 'MetricsMetricsExploration' resource.
@@ -2352,6 +2387,14 @@ SchedulerTaskSchedule | [**New-IntersightSchedulerTaskSchedule**](docs/New-Inter
 SchedulerTaskResult | [**Remove-IntersightSchedulerTaskResult**](docs/Remove-IntersightSchedulerTaskResult.md) | Delete a 'SchedulerTaskResult' resource.
 SchedulerTaskSchedule | [**Remove-IntersightSchedulerTaskSchedule**](docs/Remove-IntersightSchedulerTaskSchedule.md) | Delete a 'SchedulerTaskSchedule' resource.
 SchedulerTaskSchedule | [**Set-IntersightSchedulerTaskSchedule**](docs/Set-IntersightSchedulerTaskSchedule.md) | Update a 'SchedulerTaskSchedule' resource.
+SdaaciConnection | [**Get-IntersightSdaaciConnection**](docs/Get-IntersightSdaaciConnection.md) | Read a 'SdaaciConnection' resource.
+SdaaciConnectionDetail | [**Get-IntersightSdaaciConnectionDetail**](docs/Get-IntersightSdaaciConnectionDetail.md) | Read a 'SdaaciConnectionDetail' resource.
+SdaaciConnection | [**New-IntersightSdaaciConnection**](docs/New-IntersightSdaaciConnection.md) | Create a 'SdaaciConnection' resource.
+SdaaciConnectionDetail | [**New-IntersightSdaaciConnectionDetail**](docs/New-IntersightSdaaciConnectionDetail.md) | Create a 'SdaaciConnectionDetail' resource.
+SdaaciConnection | [**Remove-IntersightSdaaciConnection**](docs/Remove-IntersightSdaaciConnection.md) | Delete a 'SdaaciConnection' resource.
+SdaaciConnectionDetail | [**Remove-IntersightSdaaciConnectionDetail**](docs/Remove-IntersightSdaaciConnectionDetail.md) | Delete a 'SdaaciConnectionDetail' resource.
+SdaaciConnection | [**Set-IntersightSdaaciConnection**](docs/Set-IntersightSdaaciConnection.md) | Update a 'SdaaciConnection' resource.
+SdaaciConnectionDetail | [**Set-IntersightSdaaciConnectionDetail**](docs/Set-IntersightSdaaciConnectionDetail.md) | Update a 'SdaaciConnectionDetail' resource.
 SdcardPolicy | [**Get-IntersightSdcardPolicy**](docs/Get-IntersightSdcardPolicy.md) | Read a 'SdcardPolicy' resource.
 SdcardPolicyInventory | [**Get-IntersightSdcardPolicyInventory**](docs/Get-IntersightSdcardPolicyInventory.md) | Read a 'SdcardPolicyInventory' resource.
 SdcardPolicy | [**New-IntersightSdcardPolicy**](docs/New-IntersightSdcardPolicy.md) | Create a 'SdcardPolicy' resource.
@@ -2855,6 +2898,7 @@ WorkflowTaskDefinition | [**Get-IntersightWorkflowTaskDefinition**](docs/Get-Int
 WorkflowTaskInfo | [**Get-IntersightWorkflowTaskInfo**](docs/Get-IntersightWorkflowTaskInfo.md) | Read a 'WorkflowTaskInfo' resource.
 WorkflowTaskMetadata | [**Get-IntersightWorkflowTaskMetadata**](docs/Get-IntersightWorkflowTaskMetadata.md) | Read a 'WorkflowTaskMetadata' resource.
 WorkflowTemplateFunctionMeta | [**Get-IntersightWorkflowTemplateFunctionMeta**](docs/Get-IntersightWorkflowTemplateFunctionMeta.md) | Read a 'WorkflowTemplateFunctionMeta' resource.
+WorkflowUiDisplayMetadata | [**Get-IntersightWorkflowUiDisplayMetadata**](docs/Get-IntersightWorkflowUiDisplayMetadata.md) | Read a 'WorkflowUiDisplayMetadata' resource.
 WorkflowWorkflowDefinition | [**Get-IntersightWorkflowWorkflowDefinition**](docs/Get-IntersightWorkflowWorkflowDefinition.md) | Read a 'WorkflowWorkflowDefinition' resource.
 WorkflowWorkflowInfo | [**Get-IntersightWorkflowWorkflowInfo**](docs/Get-IntersightWorkflowWorkflowInfo.md) | Read a 'WorkflowWorkflowInfo' resource.
 WorkflowWorkflowMetadata | [**Get-IntersightWorkflowWorkflowMetadata**](docs/Get-IntersightWorkflowWorkflowMetadata.md) | Read a 'WorkflowWorkflowMetadata' resource.
@@ -2876,6 +2920,7 @@ WorkflowSshBatchExecutor | [**New-IntersightWorkflowSshBatchExecutor**](docs/New
 WorkflowTaskDefinition | [**New-IntersightWorkflowTaskDefinition**](docs/New-IntersightWorkflowTaskDefinition.md) | Create a 'WorkflowTaskDefinition' resource.
 WorkflowTemplateEvaluation | [**New-IntersightWorkflowTemplateEvaluation**](docs/New-IntersightWorkflowTemplateEvaluation.md) | Create a 'WorkflowTemplateEvaluation' resource.
 WorkflowTemplateParser | [**New-IntersightWorkflowTemplateParser**](docs/New-IntersightWorkflowTemplateParser.md) | Create a 'WorkflowTemplateParser' resource.
+WorkflowUiDisplayMetadata | [**New-IntersightWorkflowUiDisplayMetadata**](docs/New-IntersightWorkflowUiDisplayMetadata.md) | Create a 'WorkflowUiDisplayMetadata' resource.
 WorkflowWorkflowDefinition | [**New-IntersightWorkflowWorkflowDefinition**](docs/New-IntersightWorkflowWorkflowDefinition.md) | Create a 'WorkflowWorkflowDefinition' resource.
 WorkflowWorkflowInfo | [**New-IntersightWorkflowWorkflowInfo**](docs/New-IntersightWorkflowWorkflowInfo.md) | Create a 'WorkflowWorkflowInfo' resource.
 WorkflowAnsibleBatchExecutor | [**Remove-IntersightWorkflowAnsibleBatchExecutor**](docs/Remove-IntersightWorkflowAnsibleBatchExecutor.md) | Delete a 'WorkflowAnsibleBatchExecutor' resource.
@@ -2894,6 +2939,7 @@ WorkflowServiceItemInstance | [**Remove-IntersightWorkflowServiceItemInstance**]
 WorkflowServiceItemOutput | [**Remove-IntersightWorkflowServiceItemOutput**](docs/Remove-IntersightWorkflowServiceItemOutput.md) | Delete a 'WorkflowServiceItemOutput' resource.
 WorkflowSshBatchExecutor | [**Remove-IntersightWorkflowSshBatchExecutor**](docs/Remove-IntersightWorkflowSshBatchExecutor.md) | Delete a 'WorkflowSshBatchExecutor' resource.
 WorkflowTaskDefinition | [**Remove-IntersightWorkflowTaskDefinition**](docs/Remove-IntersightWorkflowTaskDefinition.md) | Delete a 'WorkflowTaskDefinition' resource.
+WorkflowUiDisplayMetadata | [**Remove-IntersightWorkflowUiDisplayMetadata**](docs/Remove-IntersightWorkflowUiDisplayMetadata.md) | Delete a 'WorkflowUiDisplayMetadata' resource.
 WorkflowWorkflowDefinition | [**Remove-IntersightWorkflowWorkflowDefinition**](docs/Remove-IntersightWorkflowWorkflowDefinition.md) | Delete a 'WorkflowWorkflowDefinition' resource.
 WorkflowWorkflowInfo | [**Remove-IntersightWorkflowWorkflowInfo**](docs/Remove-IntersightWorkflowWorkflowInfo.md) | Delete a 'WorkflowWorkflowInfo' resource.
 WorkflowAnsibleBatchExecutor | [**Set-IntersightWorkflowAnsibleBatchExecutor**](docs/Set-IntersightWorkflowAnsibleBatchExecutor.md) | Update a 'WorkflowAnsibleBatchExecutor' resource.
@@ -2913,6 +2959,7 @@ WorkflowServiceItemOutput | [**Set-IntersightWorkflowServiceItemOutput**](docs/S
 WorkflowSshBatchExecutor | [**Set-IntersightWorkflowSshBatchExecutor**](docs/Set-IntersightWorkflowSshBatchExecutor.md) | Update a 'WorkflowSshBatchExecutor' resource.
 WorkflowTaskDefinition | [**Set-IntersightWorkflowTaskDefinition**](docs/Set-IntersightWorkflowTaskDefinition.md) | Update a 'WorkflowTaskDefinition' resource.
 WorkflowTaskInfo | [**Set-IntersightWorkflowTaskInfo**](docs/Set-IntersightWorkflowTaskInfo.md) | Update a 'WorkflowTaskInfo' resource.
+WorkflowUiDisplayMetadata | [**Set-IntersightWorkflowUiDisplayMetadata**](docs/Set-IntersightWorkflowUiDisplayMetadata.md) | Update a 'WorkflowUiDisplayMetadata' resource.
 WorkflowWorkflowDefinition | [**Set-IntersightWorkflowWorkflowDefinition**](docs/Set-IntersightWorkflowWorkflowDefinition.md) | Update a 'WorkflowWorkflowDefinition' resource.
 WorkflowWorkflowInfo | [**Set-IntersightWorkflowWorkflowInfo**](docs/Set-IntersightWorkflowWorkflowInfo.md) | Update a 'WorkflowWorkflowInfo' resource.
 WorkspaceFolder | [**Get-IntersightWorkspaceFolder**](docs/Get-IntersightWorkspaceFolder.md) | Read a 'WorkspaceFolder' resource.

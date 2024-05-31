@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourceReservation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ResourceReservation.ClassIdEnum>][-Groups< System.Collections.Generic.List`1[Model.ResourceGroupRelationship]>][-MarkFail< bool>][-Moid< string>][-ObjectType< ResourceReservation.ObjectTypeEnum>][-ResourceType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightResourceReservation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ResourceReservation.ClassIdEnum>][-Description< string>][-Expiration< DateTime>][-Groups< System.Collections.Generic.List`1[Model.ResourceGroupRelationship]>][-Identity< Model.MoBaseMoRelationship>][-MarkFail< bool>][-Moid< string>][-ObjectType< ResourceReservation.ObjectTypeEnum>][-ReservationSelector< string>][-ResourceType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,6 +54,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Description
+Details of the use case for which the reservation was created, such as decommissioning.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Expiration
+The resource reservation includes an expiration date and a timestamp indicating when this management object will be cleared. The expiration date is set during the decommissioning process and is maintained for a period of 3 months.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Groups
 An array of relationships to resourceGroup resources.
 
@@ -62,6 +92,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.ResourceGroupRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Identity
+A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.MoBaseMoRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -117,8 +165,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ReservationSelector
+The unique identification of the resource is based on the resource OData string, which is mentioned as part of the ReservationSelector. For example, &apos;Serial eq &apos;EM6259AE6B&apos;.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ResourceType
-Type of resources which will get filled into the resource groups.
+The type of resource that is placed into resource groups or pools. Resource Type can be either &apos;compute.Blade&apos; or &apos;compute.RackUnit&apos; for pools.
 
 ```yaml
 Type: string
@@ -205,5 +268,7 @@ PS C:\> Initialize-IntersightResourceReservation
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

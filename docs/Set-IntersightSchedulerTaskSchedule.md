@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-An Enum describing the type of scheduler to use.\n* `None` - No value was set for the schedule type (Enum value None).\n* `OneTime` - Define a one-time task execution time that will not automatically repeat.\n* `Recurring` - Specify a recurring task cadence based on a predefined pattern, such as daily, weekly, monthly, yearly, or every &lt;interval&gt; pattern.
+An Enum describing the type of scheduler to use.\n* `None` - No value was set for the schedule type (Enum value None).\n* `OneTime` - Define a one-time task execution time that will not automatically repeat.\n* `Recurring` - Specify a recurring task cadence based on a predefined pattern, such as daily, weekly, monthly, yearly, or every &lt;interval&gt; pattern. This option is not currently supported.
 
 ```yaml
 Type: SchedulerTaskSchedule.TypeEnum
