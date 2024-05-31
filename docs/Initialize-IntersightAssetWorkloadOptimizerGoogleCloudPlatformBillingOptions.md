@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceLevelCostEnabled
-This flag will enable querying of detailed usage cost with resource level information included.  If not enabled, cost export data will be queried, if dataset and table name are provided.
+This flag will enable querying of detailed usage cost with resource level information included. If not enabled, cost export data will be queried, if dataset and table name are provided.
 
 ```yaml
 Type: bool

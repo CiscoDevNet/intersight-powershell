@@ -129,6 +129,8 @@ PS C:\> Set-IntersightStoragePureArray
 
 [Get-IntersightStoragePureArray](./Get-IntersightStoragePureArray.md)
 
+[Initialize-IntersightEquipmentDeviceLocation](./Initialize-IntersightEquipmentDeviceLocation.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightStorageBaseCapacity](./Initialize-IntersightStorageBaseCapacity.md)

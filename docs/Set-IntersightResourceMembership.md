@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightResourceMembership [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Reevaluate< bool>][-Resource< MoBaseMoRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightResourceMembership [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Reevaluate< bool>][-Resource< MoBaseMoRelationship>][-ResourceAncestors< System.Collections.Generic.List`1[MoBaseMoRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -76,6 +76,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: MoBaseMoRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceAncestors
+An array of relationships to moBaseMo resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[MoBaseMoRelationship]
 Parameter Sets: (All)
 Aliases:
 

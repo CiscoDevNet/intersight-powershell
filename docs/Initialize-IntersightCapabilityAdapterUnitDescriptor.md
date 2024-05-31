@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCapabilityAdapterUnitDescriptor [-AdapterGeneration< CapabilityAdapterUnitDescriptor.AdapterGenerationEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[Model.CapabilityCapabilityRelationship]>][-ClassId< CapabilityAdapterUnitDescriptor.ClassIdEnum>][-ConnectivityOrder< string>][-Description< string>][-EthernetPortSpeed< long>][-Features< System.Collections.Generic.List`1[Model.CapabilityFeatureConfig]>][-FibreChannelPortSpeed< long>][-FibreChannelScsiIoqLimit< long>][-IsAzureQosSupported< bool>][-IsGeneveSupported< bool>][-IsSecureBootSupported< bool>][-MaxEthRxRingSize< long>][-MaxEthTxRingSize< long>][-MaxRocev2Interfaces< long>][-Model< string>][-Moid< string>][-NumDcePorts< long>][-NumberOfPciLinks< long>][-ObjectType< CapabilityAdapterUnitDescriptor.ObjectTypeEnum>][-PciLink< long>][-PromCardType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCapabilityAdapterUnitDescriptor [-AdapterGeneration< CapabilityAdapterUnitDescriptor.AdapterGenerationEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[Model.CapabilityCapabilityRelationship]>][-ClassId< CapabilityAdapterUnitDescriptor.ClassIdEnum>][-ConnectivityOrder< string>][-Description< string>][-EthernetPortSpeed< long>][-Features< System.Collections.Generic.List`1[Model.CapabilityFeatureConfig]>][-FibreChannelPortSpeed< long>][-FibreChannelScsiIoqLimit< long>][-IsAzureQosSupported< bool>][-IsGeneveSupported< bool>][-IsSecureBootSupported< bool>][-MaxEthRxRingSize< long>][-MaxEthTxRingSize< long>][-MaxRocev2Interfaces< long>][-Model< string>][-Moid< string>][-NumDcePorts< long>][-NumberOfPciLinks< long>][-ObjectType< CapabilityAdapterUnitDescriptor.ObjectTypeEnum>][-PciLink< long>][-PromCardType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-VicId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -408,6 +408,21 @@ Accept wildcard characters: False
 
 ### -Version
 The firmware or software version of the endpoint, for which this capability information is applicable.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VicId
+Vic Id assigned for the adapter.
 
 ```yaml
 Type: string
