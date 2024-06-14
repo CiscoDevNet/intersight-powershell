@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.17057
-- C# SDK version: 1.0.11.17057
+- Intersight.PowerShell version: 1.0.11.17227
+- C# SDK version: 1.0.11.17227
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.17057"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.17227"}
 ```
 or
 
@@ -774,6 +774,7 @@ ApplianceSystemOpStatus | [**Get-IntersightApplianceSystemOpStatus**](docs/Get-I
 ApplianceSystemStatus | [**Get-IntersightApplianceSystemStatus**](docs/Get-IntersightApplianceSystemStatus.md) | Read a 'ApplianceSystemStatus' resource.
 ApplianceUpgrade | [**Get-IntersightApplianceUpgrade**](docs/Get-IntersightApplianceUpgrade.md) | Read a 'ApplianceUpgrade' resource.
 ApplianceUpgradePolicy | [**Get-IntersightApplianceUpgradePolicy**](docs/Get-IntersightApplianceUpgradePolicy.md) | Read a 'ApplianceUpgradePolicy' resource.
+ApplianceUpgradeTracker | [**Get-IntersightApplianceUpgradeTracker**](docs/Get-IntersightApplianceUpgradeTracker.md) | Read a 'ApplianceUpgradeTracker' resource.
 ApplianceAutoRmaPolicy | [**New-IntersightApplianceAutoRmaPolicy**](docs/New-IntersightApplianceAutoRmaPolicy.md) | Create a 'ApplianceAutoRmaPolicy' resource.
 ApplianceBackup | [**New-IntersightApplianceBackup**](docs/New-IntersightApplianceBackup.md) | Create a 'ApplianceBackup' resource.
 ApplianceBackupPolicy | [**New-IntersightApplianceBackupPolicy**](docs/New-IntersightApplianceBackupPolicy.md) | Create a 'ApplianceBackupPolicy' resource.
@@ -2419,6 +2420,8 @@ ServerProfile | [**Remove-IntersightServerProfile**](docs/Remove-IntersightServe
 ServerProfileTemplate | [**Remove-IntersightServerProfileTemplate**](docs/Remove-IntersightServerProfileTemplate.md) | Delete a 'ServerProfileTemplate' resource.
 ServerProfile | [**Set-IntersightServerProfile**](docs/Set-IntersightServerProfile.md) | Update a 'ServerProfile' resource.
 ServerProfileTemplate | [**Set-IntersightServerProfileTemplate**](docs/Set-IntersightServerProfileTemplate.md) | Update a 'ServerProfileTemplate' resource.
+ServicenowChangeRequest | [**Get-IntersightServicenowChangeRequest**](docs/Get-IntersightServicenowChangeRequest.md) | Read a 'ServicenowChangeRequest' resource.
+ServicenowIncident | [**Get-IntersightServicenowIncident**](docs/Get-IntersightServicenowIncident.md) | Read a 'ServicenowIncident' resource.
 SmtpPolicy | [**Get-IntersightSmtpPolicy**](docs/Get-IntersightSmtpPolicy.md) | Read a 'SmtpPolicy' resource.
 SmtpPolicy | [**New-IntersightSmtpPolicy**](docs/New-IntersightSmtpPolicy.md) | Create a 'SmtpPolicy' resource.
 SmtpPolicy | [**Remove-IntersightSmtpPolicy**](docs/Remove-IntersightSmtpPolicy.md) | Delete a 'SmtpPolicy' resource.
@@ -2543,6 +2546,9 @@ StorageHitachiHostLun | [**Get-IntersightStorageHitachiHostLun**](docs/Get-Inter
 StorageHitachiParityGroup | [**Get-IntersightStorageHitachiParityGroup**](docs/Get-IntersightStorageHitachiParityGroup.md) | Read a 'StorageHitachiParityGroup' resource.
 StorageHitachiPool | [**Get-IntersightStorageHitachiPool**](docs/Get-IntersightStorageHitachiPool.md) | Read a 'StorageHitachiPool' resource.
 StorageHitachiPort | [**Get-IntersightStorageHitachiPort**](docs/Get-IntersightStorageHitachiPort.md) | Read a 'StorageHitachiPort' resource.
+StorageHitachiRemoteCopyPairGad | [**Get-IntersightStorageHitachiRemoteCopyPairGad**](docs/Get-IntersightStorageHitachiRemoteCopyPairGad.md) | Read a 'StorageHitachiRemoteCopyPairGad' resource.
+StorageHitachiRemoteCopyPairTc | [**Get-IntersightStorageHitachiRemoteCopyPairTc**](docs/Get-IntersightStorageHitachiRemoteCopyPairTc.md) | Read a 'StorageHitachiRemoteCopyPairTc' resource.
+StorageHitachiRemoteCopyPairUr | [**Get-IntersightStorageHitachiRemoteCopyPairUr**](docs/Get-IntersightStorageHitachiRemoteCopyPairUr.md) | Read a 'StorageHitachiRemoteCopyPairUr' resource.
 StorageHitachiRemoteReplication | [**Get-IntersightStorageHitachiRemoteReplication**](docs/Get-IntersightStorageHitachiRemoteReplication.md) | Read a 'StorageHitachiRemoteReplication' resource.
 StorageHitachiSnapshot | [**Get-IntersightStorageHitachiSnapshot**](docs/Get-IntersightStorageHitachiSnapshot.md) | Read a 'StorageHitachiSnapshot' resource.
 StorageHitachiVolume | [**Get-IntersightStorageHitachiVolume**](docs/Get-IntersightStorageHitachiVolume.md) | Read a 'StorageHitachiVolume' resource.
