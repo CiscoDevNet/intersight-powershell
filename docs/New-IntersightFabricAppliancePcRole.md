@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-EthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< FabricEthNetworkGroupPolicyRelationship>][-LinkAggregationPolicy< FabricLinkAggregationPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][-Moid< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-EthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< FabricEthNetworkGroupPolicyRelationship>][-Fec< FabricAppliancePcRole.FecEnum>][-LinkAggregationPolicy< FabricLinkAggregationPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][-Moid< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -79,6 +79,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: FabricEthNetworkGroupPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Fec
+Forward error correction configuration for Appliance Port Channel member ports.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+
+```yaml
+Type: FabricAppliancePcRole.FecEnum
 Parameter Sets: (All)
 Aliases:
 

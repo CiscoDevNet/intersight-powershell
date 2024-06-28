@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIwotenantMaintenanceNotification [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IwotenantMaintenanceNotification.ClassIdEnum>][-I18nKey< string>][-IwoId< string>][-MaintenanceStartTime< DateTime>][-Moid< string>][-NtfnMessage< string>][-ObjectType< IwotenantMaintenanceNotification.ObjectTypeEnum>][-ShowFromTime< DateTime>][-ShowUntilTime< DateTime>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIwotenantMaintenanceNotification [-Account< Model.IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IwotenantMaintenanceNotification.ClassIdEnum>][-I18nKey< string>][-IwoId< string>][-MaintenanceStartTime< DateTime>][-Moid< string>][-NtfnMessage< string>][-ObjectType< IwotenantMaintenanceNotification.ObjectTypeEnum>][-ShowFromTime< DateTime>][-ShowUntilTime< DateTime>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,6 +23,24 @@ Initialize-IntersightIwotenantMaintenanceNotification [-AdditionalProperties< Sy
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
+
+### -Account
+A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.IamAccountRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 

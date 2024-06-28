@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIwotenantMaintenanceNotification [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-I18nKey< string>][-IwoId< string>][-MaintenanceStartTime< DateTime>][-Moid< string>][-NtfnMessage< string>][-ShowFromTime< DateTime>][-ShowUntilTime< DateTime>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIwotenantMaintenanceNotification [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-I18nKey< string>][-IwoId< string>][-MaintenanceStartTime< DateTime>][-Moid< string>][-NtfnMessage< string>][-ShowFromTime< DateTime>][-ShowUntilTime< DateTime>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -22,6 +22,24 @@ New-IntersightIwotenantMaintenanceNotification [-AdditionalProperties< System.Co
 Create a &apos;IwotenantMaintenanceNotification&apos; resource.
 
 ## PARAMETERS
+
+### -Account
+A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamAccountRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 

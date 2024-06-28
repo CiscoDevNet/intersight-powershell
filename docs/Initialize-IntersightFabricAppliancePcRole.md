@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-ClassId< FabricAppliancePcRole.ClassIdEnum>][-EthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< Model.FabricEthNetworkGroupPolicyRelationship>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][-Moid< string>][-ObjectType< FabricAppliancePcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-ClassId< FabricAppliancePcRole.ClassIdEnum>][-EthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< Model.FabricEthNetworkGroupPolicyRelationship>][-Fec< FabricAppliancePcRole.FecEnum>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][-Moid< string>][-ObjectType< FabricAppliancePcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -95,6 +95,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.FabricEthNetworkGroupPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Fec
+Forward error correction configuration for Appliance Port Channel member ports.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+
+```yaml
+Type: FabricAppliancePcRole.FecEnum
 Parameter Sets: (All)
 Aliases:
 
