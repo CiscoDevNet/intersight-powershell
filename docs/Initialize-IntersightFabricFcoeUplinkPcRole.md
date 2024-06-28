@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricFcoeUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcoeUplinkPcRole.AdminSpeedEnum>][-ClassId< FabricFcoeUplinkPcRole.ClassIdEnum>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< Model.FabricLinkControlPolicyRelationship>][-Moid< string>][-ObjectType< FabricFcoeUplinkPcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricFcoeUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcoeUplinkPcRole.AdminSpeedEnum>][-ClassId< FabricFcoeUplinkPcRole.ClassIdEnum>][-Fec< FabricFcoeUplinkPcRole.FecEnum>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< Model.FabricLinkControlPolicyRelationship>][-Moid< string>][-ObjectType< FabricFcoeUplinkPcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: FabricFcoeUplinkPcRole.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Fec
+Forward error correction configuration for Fcoe Uplink Port Channel member ports.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+
+```yaml
+Type: FabricFcoeUplinkPcRole.FecEnum
 Parameter Sets: (All)
 Aliases:
 

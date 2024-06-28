@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricFcoeUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcoeUplinkPcRole.AdminSpeedEnum>][-LinkAggregationPolicy< FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][[-Moid]< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricFcoeUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcoeUplinkPcRole.AdminSpeedEnum>][-Fec< FabricFcoeUplinkPcRole.FecEnum>][-LinkAggregationPolicy< FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][[-Moid]< string>][-PcId< long>][-PortPolicy< FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,21 @@ Admin configured speed for the port.\n* `Auto` - Admin configurable speed AUTO (
 
 ```yaml
 Type: FabricFcoeUplinkPcRole.AdminSpeedEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Fec
+Forward error correction configuration for Fcoe Uplink Port Channel member ports.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+
+```yaml
+Type: FabricFcoeUplinkPcRole.FecEnum
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkPcRole.AdminSpeedEnum>][-ClassId< FabricUplinkPcRole.ClassIdEnum>][-EthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-FlowControlPolicy< Model.FabricFlowControlPolicyRelationship>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< Model.FabricLinkControlPolicyRelationship>][-Moid< string>][-ObjectType< FabricUplinkPcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkPcRole.AdminSpeedEnum>][-ClassId< FabricUplinkPcRole.ClassIdEnum>][-EthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-Fec< FabricUplinkPcRole.FecEnum>][-FlowControlPolicy< Model.FabricFlowControlPolicyRelationship>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< Model.FabricLinkControlPolicyRelationship>][-Moid< string>][-ObjectType< FabricUplinkPcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,6 +77,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Fec
+Forward error correction configuration for Uplink Port Channel member ports.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+
+```yaml
+Type: FabricUplinkPcRole.FecEnum
 Parameter Sets: (All)
 Aliases:
 
