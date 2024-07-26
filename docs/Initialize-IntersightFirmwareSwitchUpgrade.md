@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareSwitchUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareSwitchUpgrade.ClassIdEnum>][-DirectDownload< Model.FirmwareDirectDownload>][-Distributable< Model.FirmwareDistributableRelationship>][-EnableFabricEvacuation< bool>][-FileServer< Model.SoftwarerepositoryFileServer>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[Model.NetworkElementRelationship]>][-NetworkShare< Model.FirmwareNetworkShare>][-ObjectType< FirmwareSwitchUpgrade.ObjectTypeEnum>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareSwitchUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UpgradeType< FirmwareSwitchUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareSwitchUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareSwitchUpgrade.ClassIdEnum>][-DirectDownload< Model.FirmwareDirectDownload>][-Distributable< Model.FirmwareDistributableRelationship>][-EnableFabricEvacuation< bool>][-FileServer< Model.SoftwarerepositoryFileServer>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[Model.NetworkElementRelationship]>][-NetworkShare< Model.FirmwareNetworkShare>][-ObjectType< FirmwareSwitchUpgrade.ObjectTypeEnum>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-SkipEstimateImpact< bool>][-SkipWaitForIoPathConnectivity< bool>][-Status< FirmwareSwitchUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UpgradeType< FirmwareSwitchUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -206,6 +206,21 @@ Accept wildcard characters: False
 
 ### -SkipEstimateImpact
 User has the option to skip the estimate impact calculation.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SkipWaitForIoPathConnectivity
+The flag to enable or disable the option to wait for IO paths connectivity during the switch firmware upgrade.
 
 ```yaml
 Type: bool

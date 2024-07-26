@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSoftwarerepositoryDownloadSpec [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AuthToken< string>][-Certificate< string>][-ClassId< SoftwarerepositoryDownloadSpec.ClassIdEnum>][-File< Model.SoftwarerepositoryFileRelationship>][-Filename< string>][-Md5sum< string>][-Moid< string>][-ObjectType< SoftwarerepositoryDownloadSpec.ObjectTypeEnum>][-Size< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Url< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSoftwarerepositoryDownloadSpec [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AuthToken< string>][-CdnDisabled< bool>][-Certificate< string>][-ClassId< SoftwarerepositoryDownloadSpec.ClassIdEnum>][-File< Model.SoftwarerepositoryFileRelationship>][-Filename< string>][-Md5sum< string>][-Moid< string>][-ObjectType< SoftwarerepositoryDownloadSpec.ObjectTypeEnum>][-Size< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Url< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The OAuth2 token that will be used during image download by the endpoint to auth
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CdnDisabled
+A boolean flag which indicates that the generated pre-signed url is not a CDN URL. An URL to Intersight storage source will be returned with the old domain name. This flag should be used when the  pre-signed CDN URL is not accessible from endpoint/appliance.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

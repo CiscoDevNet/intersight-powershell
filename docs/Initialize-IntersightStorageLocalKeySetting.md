@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExistingKey
-Existing key which is already configured on the server.
+Current Security Key Passphrase which is already configured on the server.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -NewKey
-New key to be configured on the controller.
+New Security Key Passphrase to be configured on the controller.
 
 ```yaml
 Type: string

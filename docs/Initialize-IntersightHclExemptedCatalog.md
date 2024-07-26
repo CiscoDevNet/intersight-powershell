@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightHclExemptedCatalog [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HclExemptedCatalog.ClassIdEnum>][-Comments< string>][-Moid< string>][-Name< string>][-ObjectType< HclExemptedCatalog.ObjectTypeEnum>][-OsVendor< string>][-OsVersion< string>][-ProcessorName< string>][-ProductModels< System.Collections.Generic.List`1[string]>][-ProductType< HclExemptedCatalog.ProductTypeEnum>][-ServerPid< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UcsVersion< string>][-VersionType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHclExemptedCatalog [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HclExemptedCatalog.ClassIdEnum>][-Comments< string>][-Moid< string>][-Name< string>][-ObjectType< HclExemptedCatalog.ObjectTypeEnum>][-OsVendor< string>][-OsVersion< string>][-Personality< string>][-ProcessorName< string>][-ProductModels< System.Collections.Generic.List`1[string]>][-ProductType< HclExemptedCatalog.ProductTypeEnum>][-ServerPid< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UcsVersion< string>][-VersionType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -131,6 +131,21 @@ Accept wildcard characters: False
 
 ### -OsVersion
 Version of the Operating system.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Personality
+It indicates the personality of the sever.
 
 ```yaml
 Type: string

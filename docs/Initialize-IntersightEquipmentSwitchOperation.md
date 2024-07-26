@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentSwitchOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminEvacState< EquipmentSwitchOperation.AdminEvacStateEnum>][-AdminLocatorLedAction< EquipmentSwitchOperation.AdminLocatorLedActionEnum>][-AdminLocatorLedActionState< EquipmentSwitchOperation.AdminLocatorLedActionStateEnum>][-ClassId< EquipmentSwitchOperation.ClassIdEnum>][-ConfigEvacState< EquipmentSwitchOperation.ConfigEvacStateEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-ForceEvac< bool>][-Moid< string>][-ObjectType< EquipmentSwitchOperation.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentSwitchOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminEvacState< EquipmentSwitchOperation.AdminEvacStateEnum>][-AdminLocatorLedAction< EquipmentSwitchOperation.AdminLocatorLedActionEnum>][-AdminLocatorLedActionState< EquipmentSwitchOperation.AdminLocatorLedActionStateEnum>][-ClassId< EquipmentSwitchOperation.ClassIdEnum>][-ConfigEvacState< EquipmentSwitchOperation.ConfigEvacStateEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-ForceEvac< bool>][-Moid< string>][-ObjectType< EquipmentSwitchOperation.ObjectTypeEnum>][-ResetAction< Model.EquipmentResetAction>][-ResetActionState< EquipmentSwitchOperation.ResetActionStateEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -177,6 +177,38 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ResetAction
+An action to initiate a reboot of the Fabric Interconnect with an optional fabric evacuation beforehand.
+
+Note :- Use Initialize-IntersightEquipmentResetAction to create the object of complex type EquipmentResetAction
+
+```yaml
+Type: Model.EquipmentResetAction
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResetActionState
+Current status of the reset operation executed on the Fabric Interconnect.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.
+
+```yaml
+Type: EquipmentSwitchOperation.ResetActionStateEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -250,5 +282,7 @@ PS C:\> Initialize-IntersightEquipmentSwitchOperation
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightEquipmentResetAction](./Initialize-IntersightEquipmentResetAction.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

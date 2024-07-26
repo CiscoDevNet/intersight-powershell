@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.17412
-- C# SDK version: 1.0.11.17412
+- Intersight.PowerShell version: 1.0.11.17769
+- C# SDK version: 1.0.11.17769
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.17412"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.17769"}
 ```
 or
 
@@ -922,6 +922,7 @@ CapabilityPortGroupAggregationDef | [**Get-IntersightCapabilityPortGroupAggregat
 CapabilityProcessorUnitUpdateConstraintMeta | [**Get-IntersightCapabilityProcessorUnitUpdateConstraintMeta**](docs/Get-IntersightCapabilityProcessorUnitUpdateConstraintMeta.md) | Read a 'CapabilityProcessorUnitUpdateConstraintMeta' resource.
 CapabilityPsuDescriptor | [**Get-IntersightCapabilityPsuDescriptor**](docs/Get-IntersightCapabilityPsuDescriptor.md) | Read a 'CapabilityPsuDescriptor' resource.
 CapabilityPsuManufacturingDef | [**Get-IntersightCapabilityPsuManufacturingDef**](docs/Get-IntersightCapabilityPsuManufacturingDef.md) | Read a 'CapabilityPsuManufacturingDef' resource.
+CapabilityServerActionsMeta | [**Get-IntersightCapabilityServerActionsMeta**](docs/Get-IntersightCapabilityServerActionsMeta.md) | Read a 'CapabilityServerActionsMeta' resource.
 CapabilityServerDescriptor | [**Get-IntersightCapabilityServerDescriptor**](docs/Get-IntersightCapabilityServerDescriptor.md) | Read a 'CapabilityServerDescriptor' resource.
 CapabilityServerModelsCapabilityDef | [**Get-IntersightCapabilityServerModelsCapabilityDef**](docs/Get-IntersightCapabilityServerModelsCapabilityDef.md) | Read a 'CapabilityServerModelsCapabilityDef' resource.
 CapabilityServerSchemaDescriptor | [**Get-IntersightCapabilityServerSchemaDescriptor**](docs/Get-IntersightCapabilityServerSchemaDescriptor.md) | Read a 'CapabilityServerSchemaDescriptor' resource.
@@ -986,6 +987,7 @@ CapabilityIoCardManufacturingDef | [**Remove-IntersightCapabilityIoCardManufactu
 CapabilityPortGroupAggregationDef | [**Remove-IntersightCapabilityPortGroupAggregationDef**](docs/Remove-IntersightCapabilityPortGroupAggregationDef.md) | Delete a 'CapabilityPortGroupAggregationDef' resource.
 CapabilityPsuDescriptor | [**Remove-IntersightCapabilityPsuDescriptor**](docs/Remove-IntersightCapabilityPsuDescriptor.md) | Delete a 'CapabilityPsuDescriptor' resource.
 CapabilityPsuManufacturingDef | [**Remove-IntersightCapabilityPsuManufacturingDef**](docs/Remove-IntersightCapabilityPsuManufacturingDef.md) | Delete a 'CapabilityPsuManufacturingDef' resource.
+CapabilityServerActionsMeta | [**Remove-IntersightCapabilityServerActionsMeta**](docs/Remove-IntersightCapabilityServerActionsMeta.md) | Delete a 'CapabilityServerActionsMeta' resource.
 CapabilityServerDescriptor | [**Remove-IntersightCapabilityServerDescriptor**](docs/Remove-IntersightCapabilityServerDescriptor.md) | Delete a 'CapabilityServerDescriptor' resource.
 CapabilityServerModelsCapabilityDef | [**Remove-IntersightCapabilityServerModelsCapabilityDef**](docs/Remove-IntersightCapabilityServerModelsCapabilityDef.md) | Delete a 'CapabilityServerModelsCapabilityDef' resource.
 CapabilityServerSchemaDescriptor | [**Remove-IntersightCapabilityServerSchemaDescriptor**](docs/Remove-IntersightCapabilityServerSchemaDescriptor.md) | Delete a 'CapabilityServerSchemaDescriptor' resource.
@@ -1017,6 +1019,7 @@ CapabilityIoCardManufacturingDef | [**Set-IntersightCapabilityIoCardManufacturin
 CapabilityPortGroupAggregationDef | [**Set-IntersightCapabilityPortGroupAggregationDef**](docs/Set-IntersightCapabilityPortGroupAggregationDef.md) | Update a 'CapabilityPortGroupAggregationDef' resource.
 CapabilityPsuDescriptor | [**Set-IntersightCapabilityPsuDescriptor**](docs/Set-IntersightCapabilityPsuDescriptor.md) | Update a 'CapabilityPsuDescriptor' resource.
 CapabilityPsuManufacturingDef | [**Set-IntersightCapabilityPsuManufacturingDef**](docs/Set-IntersightCapabilityPsuManufacturingDef.md) | Update a 'CapabilityPsuManufacturingDef' resource.
+CapabilityServerActionsMeta | [**Set-IntersightCapabilityServerActionsMeta**](docs/Set-IntersightCapabilityServerActionsMeta.md) | Update a 'CapabilityServerActionsMeta' resource.
 CapabilityServerDescriptor | [**Set-IntersightCapabilityServerDescriptor**](docs/Set-IntersightCapabilityServerDescriptor.md) | Update a 'CapabilityServerDescriptor' resource.
 CapabilityServerModelsCapabilityDef | [**Set-IntersightCapabilityServerModelsCapabilityDef**](docs/Set-IntersightCapabilityServerModelsCapabilityDef.md) | Update a 'CapabilityServerModelsCapabilityDef' resource.
 CapabilityServerSchemaDescriptor | [**Set-IntersightCapabilityServerSchemaDescriptor**](docs/Set-IntersightCapabilityServerSchemaDescriptor.md) | Update a 'CapabilityServerSchemaDescriptor' resource.
@@ -1028,6 +1031,9 @@ CapabilitySwitchDescriptor | [**Set-IntersightCapabilitySwitchDescriptor**](docs
 CapabilitySwitchEquipmentInfo | [**Set-IntersightCapabilitySwitchEquipmentInfo**](docs/Set-IntersightCapabilitySwitchEquipmentInfo.md) | Update a 'CapabilitySwitchEquipmentInfo' resource.
 CapabilitySwitchManufacturingDef | [**Set-IntersightCapabilitySwitchManufacturingDef**](docs/Set-IntersightCapabilitySwitchManufacturingDef.md) | Update a 'CapabilitySwitchManufacturingDef' resource.
 CapabilityVicDescriptor | [**Set-IntersightCapabilityVicDescriptor**](docs/Set-IntersightCapabilityVicDescriptor.md) | Update a 'CapabilityVicDescriptor' resource.
+CatalystsdwanConfigGroup | [**Get-IntersightCatalystsdwanConfigGroup**](docs/Get-IntersightCatalystsdwanConfigGroup.md) | Read a 'CatalystsdwanConfigGroup' resource.
+CatalystsdwanPolicyGroup | [**Get-IntersightCatalystsdwanPolicyGroup**](docs/Get-IntersightCatalystsdwanPolicyGroup.md) | Read a 'CatalystsdwanPolicyGroup' resource.
+CatalystsdwanVedgeDevice | [**Get-IntersightCatalystsdwanVedgeDevice**](docs/Get-IntersightCatalystsdwanVedgeDevice.md) | Read a 'CatalystsdwanVedgeDevice' resource.
 CertificatemanagementPolicy | [**Get-IntersightCertificatemanagementPolicy**](docs/Get-IntersightCertificatemanagementPolicy.md) | Read a 'CertificatemanagementPolicy' resource.
 CertificatemanagementPolicyInventory | [**Get-IntersightCertificatemanagementPolicyInventory**](docs/Get-IntersightCertificatemanagementPolicyInventory.md) | Read a 'CertificatemanagementPolicyInventory' resource.
 CertificatemanagementPolicy | [**New-IntersightCertificatemanagementPolicy**](docs/New-IntersightCertificatemanagementPolicy.md) | Create a 'CertificatemanagementPolicy' resource.
@@ -1076,6 +1082,8 @@ CommHttpProxyPolicy | [**Set-IntersightCommHttpProxyPolicy**](docs/Set-Intersigh
 ComputeBlade | [**Get-IntersightComputeBlade**](docs/Get-IntersightComputeBlade.md) | Read a 'ComputeBlade' resource.
 ComputeBladeIdentity | [**Get-IntersightComputeBladeIdentity**](docs/Get-IntersightComputeBladeIdentity.md) | Read a 'ComputeBladeIdentity' resource.
 ComputeBoard | [**Get-IntersightComputeBoard**](docs/Get-IntersightComputeBoard.md) | Read a 'ComputeBoard' resource.
+ComputeDownloadStatus | [**Get-IntersightComputeDownloadStatus**](docs/Get-IntersightComputeDownloadStatus.md) | Read a 'ComputeDownloadStatus' resource.
+ComputeHostUtilityOperation | [**Get-IntersightComputeHostUtilityOperation**](docs/Get-IntersightComputeHostUtilityOperation.md) | Read a 'ComputeHostUtilityOperation' resource.
 ComputeMapping | [**Get-IntersightComputeMapping**](docs/Get-IntersightComputeMapping.md) | Read a 'ComputeMapping' resource.
 ComputePersonality | [**Get-IntersightComputePersonality**](docs/Get-IntersightComputePersonality.md) | Read a 'ComputePersonality' resource.
 ComputePhysicalSummary | [**Get-IntersightComputePhysicalSummary**](docs/Get-IntersightComputePhysicalSummary.md) | Read a 'ComputePhysicalSummary' resource.
@@ -1085,6 +1093,7 @@ ComputeServerIdPool | [**Get-IntersightComputeServerIdPool**](docs/Get-Intersigh
 ComputeServerPowerPolicy | [**Get-IntersightComputeServerPowerPolicy**](docs/Get-IntersightComputeServerPowerPolicy.md) | Read a 'ComputeServerPowerPolicy' resource.
 ComputeServerSetting | [**Get-IntersightComputeServerSetting**](docs/Get-IntersightComputeServerSetting.md) | Read a 'ComputeServerSetting' resource.
 ComputeVmedia | [**Get-IntersightComputeVmedia**](docs/Get-IntersightComputeVmedia.md) | Read a 'ComputeVmedia' resource.
+ComputeHostUtilityOperation | [**New-IntersightComputeHostUtilityOperation**](docs/New-IntersightComputeHostUtilityOperation.md) | Create a 'ComputeHostUtilityOperation' resource.
 ComputeRackUnit | [**Remove-IntersightComputeRackUnit**](docs/Remove-IntersightComputeRackUnit.md) | Delete a 'ComputeRackUnit' resource.
 ComputeRackUnitIdentity | [**Remove-IntersightComputeRackUnitIdentity**](docs/Remove-IntersightComputeRackUnitIdentity.md) | Delete a 'ComputeRackUnitIdentity' resource.
 ComputeServerPowerPolicy | [**Remove-IntersightComputeServerPowerPolicy**](docs/Remove-IntersightComputeServerPowerPolicy.md) | Delete a 'ComputeServerPowerPolicy' resource.
@@ -2094,6 +2103,8 @@ MemoryUnit | [**Set-IntersightMemoryUnit**](docs/Set-IntersightMemoryUnit.md) | 
 MerakiDevice | [**Get-IntersightMerakiDevice**](docs/Get-IntersightMerakiDevice.md) | Read a 'MerakiDevice' resource.
 MerakiNetwork | [**Get-IntersightMerakiNetwork**](docs/Get-IntersightMerakiNetwork.md) | Read a 'MerakiNetwork' resource.
 MerakiOrganization | [**Get-IntersightMerakiOrganization**](docs/Get-IntersightMerakiOrganization.md) | Read a 'MerakiOrganization' resource.
+MerakiPortProfile | [**Get-IntersightMerakiPortProfile**](docs/Get-IntersightMerakiPortProfile.md) | Read a 'MerakiPortProfile' resource.
+MerakiTag | [**Get-IntersightMerakiTag**](docs/Get-IntersightMerakiTag.md) | Read a 'MerakiTag' resource.
 MetaDefinition | [**Get-IntersightMetaDefinition**](docs/Get-IntersightMetaDefinition.md) | Read a 'MetaDefinition' resource.
 MetaDefinition | [**Remove-IntersightMetaDefinition**](docs/Remove-IntersightMetaDefinition.md) | Delete a 'MetaDefinition' resource.
 MetricsMetricsExploration | [**Get-IntersightMetricsMetricsExploration**](docs/Get-IntersightMetricsMetricsExploration.md) | Read a 'MetricsMetricsExploration' resource.
@@ -2145,6 +2156,7 @@ NiaapiNiaMetadata | [**Get-IntersightNiaapiNiaMetadata**](docs/Get-IntersightNia
 NiaapiNibFileDownloader | [**Get-IntersightNiaapiNibFileDownloader**](docs/Get-IntersightNiaapiNibFileDownloader.md) | Read a 'NiaapiNibFileDownloader' resource.
 NiaapiNibMetadata | [**Get-IntersightNiaapiNibMetadata**](docs/Get-IntersightNiaapiNibMetadata.md) | Read a 'NiaapiNibMetadata' resource.
 NiaapiPuvScriptDownloader | [**Get-IntersightNiaapiPuvScriptDownloader**](docs/Get-IntersightNiaapiPuvScriptDownloader.md) | Read a 'NiaapiPuvScriptDownloader' resource.
+NiaapiSnValidatorMetadata | [**Get-IntersightNiaapiSnValidatorMetadata**](docs/Get-IntersightNiaapiSnValidatorMetadata.md) | Read a 'NiaapiSnValidatorMetadata' resource.
 NiaapiUpgradeAssistFile | [**Get-IntersightNiaapiUpgradeAssistFile**](docs/Get-IntersightNiaapiUpgradeAssistFile.md) | Read a 'NiaapiUpgradeAssistFile' resource.
 NiaapiVersionRegex | [**Get-IntersightNiaapiVersionRegex**](docs/Get-IntersightNiaapiVersionRegex.md) | Read a 'NiaapiVersionRegex' resource.
 NiatelemetryAaaLdapProviderDetails | [**Get-IntersightNiatelemetryAaaLdapProviderDetails**](docs/Get-IntersightNiatelemetryAaaLdapProviderDetails.md) | Read a 'NiatelemetryAaaLdapProviderDetails' resource.
@@ -2723,6 +2735,7 @@ TaskHyperFlexManagementScopedInventory | [**New-IntersightTaskHyperFlexManagemen
 TaskHyperflexScopedInventory | [**New-IntersightTaskHyperflexScopedInventory**](docs/New-IntersightTaskHyperflexScopedInventory.md) | Create a 'TaskHyperflexScopedInventory' resource.
 TaskMdsScopedInventory | [**New-IntersightTaskMdsScopedInventory**](docs/New-IntersightTaskMdsScopedInventory.md) | Create a 'TaskMdsScopedInventory' resource.
 TaskMdsSystemScopedInventory | [**New-IntersightTaskMdsSystemScopedInventory**](docs/New-IntersightTaskMdsSystemScopedInventory.md) | Create a 'TaskMdsSystemScopedInventory' resource.
+TaskMerakiScopedInventory | [**New-IntersightTaskMerakiScopedInventory**](docs/New-IntersightTaskMerakiScopedInventory.md) | Create a 'TaskMerakiScopedInventory' resource.
 TaskNetAppScopedInventory | [**New-IntersightTaskNetAppScopedInventory**](docs/New-IntersightTaskNetAppScopedInventory.md) | Create a 'TaskNetAppScopedInventory' resource.
 TaskNexusScopedInventory | [**New-IntersightTaskNexusScopedInventory**](docs/New-IntersightTaskNexusScopedInventory.md) | Create a 'TaskNexusScopedInventory' resource.
 TaskNexusSystemScopedInventory | [**New-IntersightTaskNexusSystemScopedInventory**](docs/New-IntersightTaskNexusSystemScopedInventory.md) | Create a 'TaskNexusSystemScopedInventory' resource.

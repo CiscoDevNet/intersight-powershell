@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+     <IncludeAssets>compile</IncludeAssets>
+    <AssemblyName>Intersight.PowerShell</AssemblyName>
+    <PackageId>PSIntersight</PackageId>
+    <Version>1.0.11.17769</Version>
+    <OutputType>Library</OutputType>
+    <Authors>Cisco Systems</Authors>
+    <Company>Cisco Systems</Company>
+    <Copyright>No Copyright</Copyright>
+    <RepositoryUrl>https://github.com/CiscoDevNet/intersight-powershell.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management.Automation" Version="7.2.0" >
+    <IncludeAssets>compile</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="CompareNETObjects" Version="4.61.0" />
+    <PackageReference Include="JsonSubTypes" Version="2.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="RestSharp" Version="110.2.0" />
+    <PackageReference Include="Polly" Version="7.2.3" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Intersight">
+    <HintPath>..\Lib\Intersight.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
