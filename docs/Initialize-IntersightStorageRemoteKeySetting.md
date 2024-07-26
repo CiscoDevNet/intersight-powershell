@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageRemoteKeySetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AuthCredentials< Model.StorageKmipAuthCredentials>][-ClassId< StorageRemoteKeySetting.ClassIdEnum>][-ObjectType< StorageRemoteKeySetting.ObjectTypeEnum>][-PrimaryServer< Model.StorageKmipServer>][-SecondaryServer< Model.StorageKmipServer>][-ServerCertificate< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageRemoteKeySetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AuthCredentials< Model.StorageKmipAuthCredentials>][-ClassId< StorageRemoteKeySetting.ClassIdEnum>][-ExistingKey< string>][-ObjectType< StorageRemoteKeySetting.ObjectTypeEnum>][-PrimaryServer< Model.StorageKmipServer>][-SecondaryServer< Model.StorageKmipServer>][-ServerCertificate< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -61,6 +61,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: StorageRemoteKeySetting.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExistingKey
+Current Security Key Passphrase which is already configured on the server.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightStorageKeySetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageKeySetting.ClassIdEnum>][-ObjectType< StorageKeySetting.ObjectTypeEnum>][-RemoteKey< Model.StorageRemoteKeySetting>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStorageKeySetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StorageKeySetting.ClassIdEnum>][-KeyType< StorageKeySetting.KeyTypeEnum>][-ManualKey< Model.StorageLocalKeySetting>][-ObjectType< StorageKeySetting.ObjectTypeEnum>][-RemoteKey< Model.StorageRemoteKeySetting>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,6 +54,38 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -KeyType
+Method to be used for fetching the encryption key.\n* `Kmip` - Remote encryption using KMIP.\n* `Manual` - Drive encryption using manual key.
+
+```yaml
+Type: StorageKeySetting.KeyTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ManualKey
+Manual key configuration.
+
+Note :- Use Initialize-IntersightStorageLocalKeySetting to create the object of complex type StorageLocalKeySetting
+
+```yaml
+Type: Model.StorageLocalKeySetting
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
@@ -70,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteKey
-Remote key encryption using KMIP configuraiton.
+Remote key encryption using KMIP configuration.
 
 Note :- Use Initialize-IntersightStorageRemoteKeySetting to create the object of complex type StorageRemoteKeySetting
 
@@ -142,5 +174,7 @@ PS C:\> Initialize-IntersightStorageKeySetting
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightStorageLocalKeySetting](./Initialize-IntersightStorageLocalKeySetting.md)
 
 [Initialize-IntersightStorageRemoteKeySetting](./Initialize-IntersightStorageRemoteKeySetting.md)

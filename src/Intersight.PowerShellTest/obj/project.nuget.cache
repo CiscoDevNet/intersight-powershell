@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gH5RrQCmofvJ6Xp3QvUreyKZekCUsKVUZvTGSaIS3mEkMUP+8DI3YQIjJQ0jOFx96DnGaKcdIK6qWt1RlGh2Dw==",
+  "dgSpecHash": "Q3nSu6DIaGWaVAZQ4YYjvzKgmqqLGj1kgR+cG1IGH31cnYCVMq7b6AdHMA5wd3XnzJmT+Oums5bAY99EPT02nw==",
   "success": true,
-  "projectFilePath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.17412/src/Intersight.PowerShellTest/Intersight.PowerShellTest.csproj",
+  "projectFilePath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.17769/src/Intersight.PowerShellTest/Intersight.PowerShellTest.csproj",
   "expectedPackageFiles": [
     "/var/lib/jenkins/.nuget/packages/comparenetobjects/4.61.0/comparenetobjects.4.61.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
