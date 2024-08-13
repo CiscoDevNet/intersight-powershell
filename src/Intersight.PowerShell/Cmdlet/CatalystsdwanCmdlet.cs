@@ -382,23 +382,13 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
-        /// <para type="description">"UUID for the Catalyst SDWAN Vedge Device."</para>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public string DeviceId
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"The Catalyst SDWAN device model."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string DeviceModel
+        public string DeviceMoId
         {
             get;
             set;
@@ -416,11 +406,22 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Catalyst SDWAN device type."</para>
+        /// <para type="description">"The categorization of the device type. Optional parameter to categorize devices by product type. For example, Meraki device types are wireless, appliance, switch, systemsManager, camera, cellularGateway, sensor, and secureConnect."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DeviceType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Dn
         {
             get;
             set;
@@ -438,11 +439,33 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The hardware version of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string HardwareVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The Catalyst SDWAN device host name."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string HostName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
         {
             get;
             set;
@@ -460,11 +483,33 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Administrator defined name for the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
         {
             get;
             set;
@@ -495,6 +540,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Presence
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentFruRelationship PreviousFru
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The Catalyst SDWAN device reachability."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -517,11 +584,33 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Catalyst SDWAN device serial number."</para>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public string SerialNumber
+        public string Revision
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Rn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Serial
         {
             get;
             set;
@@ -584,6 +673,28 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"The Catalyst SDWAN device template status."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string TemplateStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Unique identity of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$")]
+        public string Uuid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The Catalyst SDWAN device validity."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -595,7 +706,18 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Catalyst SDWAN device version."</para>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Current running software version of the device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

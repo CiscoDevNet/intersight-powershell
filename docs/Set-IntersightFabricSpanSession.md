@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the SPAN session.
+Name of the SPAN session. The name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.) or an underscore (_).
 
 ```yaml
 Type: string

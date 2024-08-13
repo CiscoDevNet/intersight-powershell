@@ -5536,6 +5536,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Collect tag information from Dynatrace."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool CollectTagInfo
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Overwrite Hypervisor or Cloud Provider Virtual Machine metrics with data from the target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5574,6 +5584,10 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CollectTagInfo"))
+            {
+                initObject.CollectTagInfo = this.CollectTagInfo;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("CollectVmMetrics"))
             {
                 initObject.CollectVmMetrics = this.CollectVmMetrics;
@@ -6332,6 +6346,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Collect tag information from NewRelic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool CollectTagInfo
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Overwrite Hypervisor or Cloud Provider Virtual Machine metrics with data from the target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6374,6 +6398,10 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CollectTagInfo"))
+            {
+                initObject.CollectTagInfo = this.CollectTagInfo;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("CollectVmMetrics"))
             {
                 initObject.CollectVmMetrics = this.CollectVmMetrics;

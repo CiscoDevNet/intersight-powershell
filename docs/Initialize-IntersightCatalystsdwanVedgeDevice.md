@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCatalystsdwanVedgeDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CatalystsdwanVedgeDevice.ClassIdEnum>][-ConfigStatusMessage< string>][-DeviceId< string>][-DeviceModel< string>][-DeviceState< string>][-DeviceType< string>][-HostName< string>][-Moid< string>][-ObjectType< CatalystsdwanVedgeDevice.ObjectTypeEnum>][-PlatformFamily< string>][-Reachability< string>][-SerialNumber< string>][-SiteId< string>][-SiteName< string>][-SpOrganizationName< string>][-SystemIp< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Validity< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCatalystsdwanVedgeDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CatalystsdwanVedgeDevice.ClassIdEnum>][-ConfigStatusMessage< string>][-DeviceState< string>][-HostName< string>][-Moid< string>][-ObjectType< CatalystsdwanVedgeDevice.ObjectTypeEnum>][-PlatformFamily< string>][-Reachability< string>][-SiteId< string>][-SiteName< string>][-SpOrganizationName< string>][-SystemIp< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateStatus< string>][-Validity< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,53 +69,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DeviceId
-UUID for the Catalyst SDWAN Vedge Device.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DeviceModel
-The Catalyst SDWAN device model.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -DeviceState
 The Catalyst SDWAN device state.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DeviceType
-The Catalyst SDWAN device type.
 
 ```yaml
 Type: string
@@ -191,21 +146,6 @@ Accept wildcard characters: False
 
 ### -Reachability
 The Catalyst SDWAN device reachability.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SerialNumber
-The Catalyst SDWAN device serial number.
 
 ```yaml
 Type: string
@@ -296,8 +236,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Validity
-The Catalyst SDWAN device validity.
+### -TemplateStatus
+The Catalyst SDWAN device template status.
 
 ```yaml
 Type: string
@@ -311,8 +251,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Version
-The Catalyst SDWAN device version.
+### -Validity
+The Catalyst SDWAN device validity.
 
 ```yaml
 Type: string

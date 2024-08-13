@@ -565,6 +565,7 @@ namespace Intersight.PowerShell
         {
             ClassId = NetworkElementSummary.ClassIdEnum.NetworkElementSummary;
             ObjectType = NetworkElementSummary.ObjectTypeEnum.NetworkElementSummary;
+            Thermal = NetworkElementSummary.ThermalEnum.Unknown;
 
         }
         // <summary>
@@ -583,6 +584,26 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public NetworkElementSummary.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Connection status of the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ConnectionStatus
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The default domain name configured on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+([-.]{1}[a-zA-Z0-9]+)*$")]
+        public string DefaultDomain
         {
             get;
             set;
@@ -608,11 +629,51 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Part number of the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PartNumber
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The status of the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Status
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"System up time of the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SystemUpTime
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Thermal status of the fabric interconnect.\n* `unknown` - The default state of the sensor (in case no data is received).\n* `ok` - State of the sensor indicating the sensor's temperature range is okay.\n* `upper-non-recoverable` - State of the sensor indicating that the temperature is extremely high above normal range.\n* `upper-critical` - State of the sensor indicating that the temperature is above normal range.\n* `upper-non-critical` - State of the sensor indicating that the temperature is a little above the normal range.\n* `lower-non-critical` - State of the sensor indicating that the temperature is a little below the normal range.\n* `lower-critical` - State of the sensor indicating that the temperature is below normal range.\n* `lower-non-recoverable` - State of the sensor indicating that the temperature is extremely below normal range."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkElementSummary.ThermalEnum Thermal
         {
             get;
             set;
@@ -626,14 +687,38 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConnectionStatus"))
+            {
+                initObject.ConnectionStatus = this.ConnectionStatus;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultDomain"))
+            {
+                initObject.DefaultDomain = this.DefaultDomain;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PartNumber"))
+            {
+                initObject.PartNumber = this.PartNumber;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            {
+                initObject.Status = this.Status;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SystemUpTime"))
+            {
+                initObject.SystemUpTime = this.SystemUpTime;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Thermal"))
+            {
+                initObject.Thermal = this.Thermal;
             }
             WriteObject(initObject);
         }

@@ -68,8 +68,14 @@ namespace Intersight.PowerShell
                 }
 
                 var methodInfo = GetMethodInfo(MethodName);
-                Object[] argList = new[] { ModelObject, default(string), default(string), 0 };
-                var result = methodInfo.Invoke(ApiInstance, argList);
+                var parameterInfo = methodInfo.GetParameters();
+                List<object> argList = new List<object>();
+                argList.Add(ModelObject);
+                for (int i = 1; i < parameterInfo.Length; i++)
+                {
+                    argList.Add(parameterInfo[i].DefaultValue);
+                }
+                var result = methodInfo.Invoke(ApiInstance, argList.ToArray());
                 if (Json.IsPresent)
                 {
                     WriteResponseJson(result);

@@ -112,7 +112,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Stage in the build process these logs belong to.\n* `None` - Default value for the log stage.\n* `Backend` - Logs corresponding to backend build.\n* `Ui` - Logs corresponding to ui build stage.\n* `Apidocs` - Logs corresponding to the apidocs build stage."</para>
+        /// <para type="description">"Stage in the build process these logs belong to.\n* `None` - Default value for the log stage.\n* `Backend` - Logs corresponding to backend build.\n* `Ui` - Logs corresponding to ui build stage.\n* `Apidocs` - Logs corresponding to the apidocs build stage.\n* `MetricsCollectorBackend` - Logs corresponding to Metrics Collector backend build.\n* `MetricsCollectorDependentBackend` - Logs corresponding to Metrics Collector backend build.\n* `MetricsCollectorUi` - Logs corresponding to Metrics Collector ui build stage."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -909,7 +909,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Status of build for inventory collection.\n* `None` - Default value of the status. i.e. done nothing.\n* `BackendInProgress` - The backend build is in progress.\n* `BackendFailed` - The backend build has failed.\n* `DockerInProgress` - The docker build is in progress.\n* `DockerFailed` - The docker build has failed.\n* `UiInProgress` - The UI build is in progress.\n* `UiFailed` - The inventory UI build has failed.\n* `ApidocsInProgress` - The apidocs build is in progress.\n* `ApidocsFailed` - The apidocs build has failed.\n* `Completed` - The operation completed successfully."</para>
+        /// <para type="description">"Status of build for inventory collection.\n* `None` - Default value of the status. i.e. done nothing.\n* `BackendInProgress` - The backend build is in progress.\n* `BackendFailed` - The backend build has failed.\n* `MetricsCollectorBackendInProgress` - The Metrics Collector backend build is in progress.\n* `MetricsCollectorBackendFailed` - The Metrics Collector backend build has failed.\n* `DockerInProgress` - The docker build is in progress.\n* `DockerFailed` - The docker build has failed.\n* `UiInProgress` - The UI build is in progress.\n* `UiFailed` - The inventory UI build has failed.\n* `MetricsCollectorUiInProgress` - The Metrics Collector UI build is in progress.\n* `MetricsCollectorUiFailed` - The Metrics Collector UI build has failed.\n* `MetricsCollectorDependentBackendInProgress` - The Metrics Collector dependent backend build is in progress.\n* `MetricsCollectorDependentBackendFailed` - The Metrics Collector dependent backend build has failed.\n* `MetricsCollectorDependentDockerInProgress` - The Metrics Collector dependent docker build is in progress.\n* `MetricsCollectorDependentDockerFailed` - The Metrics Collector dependent docker build has failed.\n* `ApidocsInProgress` - The apidocs build is in progress.\n* `ApidocsFailed` - The apidocs build has failed.\n* `Completed` - The operation completed successfully."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -976,6 +976,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"A reference to a partnerintegrationMetrics resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public PartnerintegrationMetricsRelationship Metrics
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -1166,7 +1177,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Stage in the build process these logs belong to.\n* `None` - Default value for the log stage.\n* `Backend` - Logs corresponding to backend build.\n* `Ui` - Logs corresponding to ui build stage.\n* `Apidocs` - Logs corresponding to the apidocs build stage."</para>
+        /// <para type="description">"Stage in the build process these logs belong to.\n* `None` - Default value for the log stage.\n* `Backend` - Logs corresponding to backend build.\n* `Ui` - Logs corresponding to ui build stage.\n* `Apidocs` - Logs corresponding to the apidocs build stage.\n* `MetricsCollectorBackend` - Logs corresponding to Metrics Collector backend build.\n* `MetricsCollectorDependentBackend` - Logs corresponding to Metrics Collector backend build.\n* `MetricsCollectorUi` - Logs corresponding to Metrics Collector ui build stage."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1177,6 +1188,126 @@ namespace Intersight.PowerShell
         }
 
 
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get PartnerintegrationMetrics.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationMetrics", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightPartnerintegrationMetrics : GetCmdletBase
+    {
+        public GetIntersightPartnerintegrationMetrics()
+        {
+            ApiInstance = new PartnerintegrationApi(Config);
+            MethodName = "GetPartnerintegrationMetricsListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a partnerintegrationInventory resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public PartnerintegrationInventoryRelationship Inventory
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Placeholder name for the Metrics."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
 
 
 
@@ -1760,6 +1891,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"A reference to a partnerintegrationMetrics resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationMetricsRelationship Metrics
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"An array of relationships to partnerintegrationModel resources."</para>
@@ -1805,6 +1947,95 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New PartnerintegrationMetrics.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationMetrics")]
+    public class NewIntersightPartnerintegrationMetrics : NewCmdletBase
+    {
+        public NewIntersightPartnerintegrationMetrics()
+        {
+            ApiInstance = new PartnerintegrationApi(Config);
+            ModelObject = new PartnerintegrationMetrics();
+            MethodName = "CreatePartnerintegrationMetricsWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Transformation model in metrics format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationMetricsModel Data
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a partnerintegrationInventory resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationInventoryRelationship Inventory
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Placeholder name for the Metrics."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
 
 
 
@@ -1957,6 +2188,18 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new PartnerintegrationApi(Config);
             MethodName = "DeletePartnerintegrationInventoryWithHttpInfo";
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove PartnerintegrationMetrics.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationMetrics")]
+    public class RemoveIntersightPartnerintegrationMetrics : RemoveCmdletBase
+    {
+        public RemoveIntersightPartnerintegrationMetrics()
+        {
+            ApiInstance = new PartnerintegrationApi(Config);
+            MethodName = "DeletePartnerintegrationMetricsWithHttpInfo";
         }
     }
     /// <summary>
@@ -2429,6 +2672,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"A reference to a partnerintegrationMetrics resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationMetricsRelationship Metrics
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"An array of relationships to partnerintegrationModel resources."</para>
@@ -2474,6 +2728,95 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set PartnerintegrationMetrics.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationMetrics")]
+    public class SetIntersightPartnerintegrationMetrics : SetCmdletBase
+    {
+        public SetIntersightPartnerintegrationMetrics()
+        {
+            ApiInstance = new PartnerintegrationApi(Config);
+            ModelObject = new PartnerintegrationMetrics();
+            MethodName = "UpdatePartnerintegrationMetricsWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Transformation model in metrics format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationMetricsModel Data
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a partnerintegrationInventory resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationInventoryRelationship Inventory
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Placeholder name for the Metrics."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
 
 
 

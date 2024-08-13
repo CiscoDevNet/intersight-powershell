@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetWorkloadOptimizerNewRelicOptions [-AccountId< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetWorkloadOptimizerNewRelicOptions.ClassIdEnum>][-CollectVmMetrics< bool>][-ObjectType< AssetWorkloadOptimizerNewRelicOptions.ObjectTypeEnum>][-Region< AssetWorkloadOptimizerNewRelicOptions.RegionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetWorkloadOptimizerNewRelicOptions [-AccountId< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetWorkloadOptimizerNewRelicOptions.ClassIdEnum>][-CollectTagInfo< bool>][-CollectVmMetrics< bool>][-ObjectType< AssetWorkloadOptimizerNewRelicOptions.ObjectTypeEnum>][-Region< AssetWorkloadOptimizerNewRelicOptions.RegionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: AssetWorkloadOptimizerNewRelicOptions.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CollectTagInfo
+Collect tag information from NewRelic.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

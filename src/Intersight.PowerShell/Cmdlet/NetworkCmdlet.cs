@@ -1364,7 +1364,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// <para type="description">"The MoId of the registered device that coresponds to the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1419,7 +1419,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The fault summary of the network Element out-of-band management interface."</para>
+        /// <para type="description">"The fault summary for the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1540,6 +1540,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship InventoryParent
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"IP version 4 address is saved in this property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1584,7 +1595,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
+        /// <para type="description">"This field identifies the model of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1606,7 +1617,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Name of the ElementSummary object is saved in this property."</para>
+        /// <para type="description">"The admin configured name of the system."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1848,20 +1859,9 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description">"The flag to indicate the firmware of peer Fabric Interconnect is out of sync."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public bool PeerFirmwareOutOfSync
-        {
-            get;
-            set;
-        }
-
 
         // <summary>
-        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
+        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1894,7 +1894,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
+        /// <para type="description">"The product revision of the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1916,7 +1916,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
+        /// <para type="description">"This field identifies the serial of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1938,7 +1938,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The source object type of this view MO."</para>
+        /// <para type="description">"Stores the source object type used to fill the properties of this object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2027,18 +2027,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The user defined label assigned to the switch."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
-        public string UserLabel
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
+        /// <para type="description">"This field identifies the vendor of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2049,7 +2038,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Version holds the firmware version related information."</para>
+        /// <para type="description">"Firmware version of the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

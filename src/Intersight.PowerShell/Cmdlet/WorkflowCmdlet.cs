@@ -580,7 +580,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Publish status of the catalog item.\n* `NotPublished` - A state of the service item or catalog item which is not yet published.\n* `Published` - A state denoting that the service item or catalog item is published."</para>
+        /// <para type="description">"Publish status of the catalog item.\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2196,6 +2196,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The user identifier who created or cloned the service item definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string CreateUser
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The Cisco Validated Design (CVD) Identifier that this service item provides."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2273,6 +2284,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The user identifier who last updated the service item definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ModUser
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2308,7 +2330,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Publish status of the service item.\n* `NotPublished` - A state of the service item or catalog item which is not yet published.\n* `Published` - A state denoting that the service item or catalog item is published."</para>
+        /// <para type="description">"The publish status of service item (Draft, Published, Archived).\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2353,7 +2375,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The user identifier who created or updated the service item definition."</para>
+        /// <para type="description">"This attribute is deprecated and replaced by createUser and modUser."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5522,7 +5544,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Publish status of the catalog item.\n* `NotPublished` - A state of the service item or catalog item which is not yet published.\n* `Published` - A state denoting that the service item or catalog item is published."</para>
+        /// <para type="description">"Publish status of the catalog item.\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -6766,6 +6788,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"The Cisco Validated Design (CVD) Identifier that this service item provides."</para>
         /// </summary>
@@ -6813,6 +6836,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -6839,7 +6863,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Publish status of the service item.\n* `NotPublished` - A state of the service item or catalog item which is not yet published.\n* `Published` - A state denoting that the service item or catalog item is published."</para>
+        /// <para type="description">"The publish status of service item (Draft, Published, Archived).\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -9007,7 +9031,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Publish status of the catalog item.\n* `NotPublished` - A state of the service item or catalog item which is not yet published.\n* `Published` - A state denoting that the service item or catalog item is published."</para>
+        /// <para type="description">"Publish status of the catalog item.\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -10251,6 +10275,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"The Cisco Validated Design (CVD) Identifier that this service item provides."</para>
         /// </summary>
@@ -10298,6 +10323,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -10324,7 +10350,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Publish status of the service item.\n* `NotPublished` - A state of the service item or catalog item which is not yet published.\n* `Published` - A state denoting that the service item or catalog item is published."</para>
+        /// <para type="description">"The publish status of service item (Draft, Published, Archived).\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

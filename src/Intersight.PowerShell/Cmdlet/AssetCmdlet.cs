@@ -1606,11 +1606,22 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The device connector's public key used by Intersight to authenticate a connection from the device connector. The public key is used to verify that the signature a device connector sends on connect has been signed by the connector's private key stored on the device's filesystem. Must be a PEM encoded RSA public key string."</para>
+        /// <para type="description">"The device connector's public key used by Intersight to authenticate a connection from the device connector. The public key is used to verify that the signature a device connector sends on connect has been signed by the connector's private key stored on the device's filesystem. Must be a PEM encoded RSA or Ed22519 public key string."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string PublicAccessKey
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The device connector public key used by Intersight for encryption. The public key is used to encrypt ephemeral aes keys to be used for decrypting sensitive data from Intersight. Must be a PEM encoded RSA public key string."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PublicEncryptionKey
         {
             get;
             set;
@@ -3310,6 +3321,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

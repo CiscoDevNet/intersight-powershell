@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightComputePhysicalSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ComputePhysicalSummary.ClassIdEnum>][-Moid< string>][-ObjectType< ComputePhysicalSummary.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightComputePhysicalSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ComputePhysicalSummary.ClassIdEnum>][-FrontPanelLockState< ComputePhysicalSummary.FrontPanelLockStateEnum>][-Moid< string>][-ObjectType< ComputePhysicalSummary.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: ComputePhysicalSummary.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FrontPanelLockState
+The actual front panel state of the server.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state.
+
+```yaml
+Type: ComputePhysicalSummary.FrontPanelLockStateEnum
 Parameter Sets: (All)
 Aliases:
 

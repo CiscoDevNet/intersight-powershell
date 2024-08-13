@@ -1671,6 +1671,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightComputePhysicalSummary()
         {
             ClassId = ComputePhysicalSummary.ClassIdEnum.ComputePhysicalSummary;
+            FrontPanelLockState = ComputePhysicalSummary.FrontPanelLockStateEnum.None;
             ObjectType = ComputePhysicalSummary.ObjectTypeEnum.ComputePhysicalSummary;
 
         }
@@ -1690,6 +1691,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ComputePhysicalSummary.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The actual front panel state of the server.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePhysicalSummary.FrontPanelLockStateEnum FrontPanelLockState
         {
             get;
             set;
@@ -1733,6 +1744,10 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FrontPanelLockState"))
+            {
+                initObject.FrontPanelLockState = this.FrontPanelLockState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
