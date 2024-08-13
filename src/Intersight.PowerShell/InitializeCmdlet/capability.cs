@@ -5290,6 +5290,62 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CapabilityServerComponentConstraint.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCapabilityServerComponentConstraint")]
+    public class InitializeIntersightCapabilityServerComponentConstraint : PSCmdlet
+    {
+        public InitializeIntersightCapabilityServerComponentConstraint()
+        {
+            ClassId = CapabilityServerComponentConstraint.ClassIdEnum.CapabilityServerComponentConstraint;
+            ObjectType = CapabilityServerComponentConstraint.ObjectTypeEnum.CapabilityServerComponentConstraint;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityServerComponentConstraint.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityServerComponentConstraint.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.CapabilityServerComponentConstraint initObject = new Intersight.Model.CapabilityServerComponentConstraint();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CapabilityServerDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCapabilityServerDescriptor")]

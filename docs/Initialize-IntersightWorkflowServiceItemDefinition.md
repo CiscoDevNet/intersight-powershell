@@ -228,7 +228,7 @@ Accept wildcard characters: False
 ```
 
 ### -PublishStatus
-Publish status of the service item.\n* `NotPublished` - A state of the service item or catalog item which is not yet published.\n* `Published` - A state denoting that the service item or catalog item is published.
+The publish status of service item (Draft, Published, Archived).\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed.
 
 ```yaml
 Type: WorkflowServiceItemDefinition.PublishStatusEnum

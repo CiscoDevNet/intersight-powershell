@@ -760,6 +760,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a partnerintegrationMetrics resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.PartnerintegrationMetricsRelationship Metrics
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"An array of relationships to partnerintegrationModel resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -839,6 +849,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Etls"))
             {
                 initObject.Etls = this.Etls;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Metrics"))
+            {
+                initObject.Metrics = this.Metrics;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Models"))
             {
@@ -945,6 +959,258 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PartnerintegrationMetrics.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPartnerintegrationMetrics")]
+    public class InitializeIntersightPartnerintegrationMetrics : PSCmdlet
+    {
+        public InitializeIntersightPartnerintegrationMetrics()
+        {
+            ClassId = PartnerintegrationMetrics.ClassIdEnum.PartnerintegrationMetrics;
+            ObjectType = PartnerintegrationMetrics.ObjectTypeEnum.PartnerintegrationMetrics;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationMetrics.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Transformation model in metrics format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.PartnerintegrationMetricsModel Data
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a partnerintegrationInventory resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.PartnerintegrationInventoryRelationship Inventory
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Placeholder name for the Metrics."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationMetrics.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.PartnerintegrationMetrics initObject = new Intersight.Model.PartnerintegrationMetrics();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Data"))
+            {
+                initObject.Data = this.Data;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Inventory"))
+            {
+                initObject.Inventory = this.Inventory;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PartnerintegrationMetricsModel.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPartnerintegrationMetricsModel")]
+    public class InitializeIntersightPartnerintegrationMetricsModel : PSCmdlet
+    {
+        public InitializeIntersightPartnerintegrationMetricsModel()
+        {
+            ClassId = PartnerintegrationMetricsModel.ClassIdEnum.PartnerintegrationMetricsModel;
+            ObjectType = PartnerintegrationMetricsModel.ObjectTypeEnum.PartnerintegrationMetricsModel;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Transformation attributes model in yaml format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object Attributes
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationMetricsModel.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Transformation druid instrument exporters model in yaml format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object DruidInstrumentExporters
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Transformation instruments model in yaml format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object Instruments
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Transformation meter providers model in yaml format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object MeterProviders
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Transformation metrics model in yaml format."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object Metrics
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationMetricsModel.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            Intersight.Model.PartnerintegrationMetricsModel initObject = new Intersight.Model.PartnerintegrationMetricsModel();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Attributes"))
+            {
+                initObject.Attributes = this.Attributes;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DruidInstrumentExporters"))
+            {
+                initObject.DruidInstrumentExporters = this.DruidInstrumentExporters;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Instruments"))
+            {
+                initObject.Instruments = this.Instruments;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MeterProviders"))
+            {
+                initObject.MeterProviders = this.MeterProviders;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Metrics"))
+            {
+                initObject.Metrics = this.Metrics;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

@@ -1773,7 +1773,7 @@ namespace Intersight.PowerShell
         {
             ClassId = WorkflowCatalogItemDefinition.ClassIdEnum.WorkflowCatalogItemDefinition;
             ObjectType = WorkflowCatalogItemDefinition.ObjectTypeEnum.WorkflowCatalogItemDefinition;
-            PublishStatus = WorkflowCatalogItemDefinition.PublishStatusEnum.NotPublished;
+            PublishStatus = WorkflowCatalogItemDefinition.PublishStatusEnum.Draft;
             SupportStatus = WorkflowCatalogItemDefinition.SupportStatusEnum.Supported;
 
         }
@@ -1858,7 +1858,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Publish status of the catalog item.\n* `NotPublished` - A state of the service item or catalog item which is not yet published.\n* `Published` - A state denoting that the service item or catalog item is published."</para>
+        /// <para type="description">"Publish status of the catalog item.\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -9667,7 +9667,7 @@ namespace Intersight.PowerShell
         {
             ClassId = WorkflowServiceItemDefinition.ClassIdEnum.WorkflowServiceItemDefinition;
             ObjectType = WorkflowServiceItemDefinition.ObjectTypeEnum.WorkflowServiceItemDefinition;
-            PublishStatus = WorkflowServiceItemDefinition.PublishStatusEnum.NotPublished;
+            PublishStatus = WorkflowServiceItemDefinition.PublishStatusEnum.Draft;
             SupportStatus = WorkflowServiceItemDefinition.SupportStatusEnum.Supported;
 
         }
@@ -9802,7 +9802,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Publish status of the service item.\n* `NotPublished` - A state of the service item or catalog item which is not yet published.\n* `Published` - A state denoting that the service item or catalog item is published."</para>
+        /// <para type="description">"The publish status of service item (Draft, Published, Archived).\n* `Draft` - The enum specifies the option as Draft which means the meta definition is being designed and tested.\n* `Published` - The enum specifies the option as Published which means the meta definition is ready for consumption.\n* `Archived` - The enum specifies the option as Archived which means the meta definition is archived and can no longer be consumed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -13013,7 +13013,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"New status of the task being updated, only Failed and Completed statuses are supported.\n* `Scheduled` - The enum represents the status when task is in scheduled state.\n* `InProgress` - The enum represents the status when task is in-progress state.\n* `NoOp` - The enum represents the status when task is a noop.\n* `Timeout` - The enum represents the status when task has timed out.\n* `Completed` - The enum represents the status when task has completed.\n* `Failed` - The enum represents the status when task has failed."</para>
+        /// <para type="description">"New status of the task being updated, only Failed and Completed statuses are supported, Completed is the default value in case no status is provided.\n* `Scheduled` - The enum represents the status when task is in scheduled state.\n* `InProgress` - The enum represents the status when task is in-progress state.\n* `NoOp` - The enum represents the status when task is a noop.\n* `Timeout` - The enum represents the status when task has timed out.\n* `Completed` - The enum represents the status when task has completed.\n* `Failed` - The enum represents the status when task has failed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

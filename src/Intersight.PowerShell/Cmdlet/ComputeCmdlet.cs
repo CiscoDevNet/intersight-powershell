@@ -2187,7 +2187,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The amount of memory available on the server."</para>
+        /// <para type="description">"Total memeory of the server in MB."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2231,7 +2231,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"CPU Capacity = Number of CPU Sockets x Enabled Cores x Speed (GHz)."</para>
+        /// <para type="description">"Total processing capacity of the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2253,7 +2253,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// <para type="description">"The MoId of the registered device that coresponds to the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2352,6 +2352,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship InventoryParent
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The IPv4 address configured on the management interface of the Integrated Management Controller."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2397,7 +2408,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The lifecycle state of the server. This will map to the discovery lifecycle as represented in the server Identity object.\n* `None` - Default state of an equipment. This should be an initial state when no state is defined for an equipment.\n* `Active` - Default Lifecycle State for a physical entity.\n* `Decommissioned` - Decommission Lifecycle state.\n* `DiscoveryInProgress` - DiscoveryInProgress Lifecycle state.\n* `DiscoveryFailed` - DiscoveryFailed Lifecycle state.\n* `FirmwareUpgradeInProgress` - Firmware upgrade is in progress on given physical entity.\n* `SecureEraseInProgress` - Secure Erase is in progress on given physical entity.\n* `BladeMigrationInProgress` - Server slot migration is in progress on given physical entity.\n* `SlotMismatch` - The blade server is detected in a different chassis/slot than it was previously."</para>
+        /// <para type="description">"The lifecycle of the blade server.\n* `None` - Default state of an equipment. This should be an initial state when no state is defined for an equipment.\n* `Active` - Default Lifecycle State for a physical entity.\n* `Decommissioned` - Decommission Lifecycle state.\n* `DiscoveryInProgress` - DiscoveryInProgress Lifecycle state.\n* `DiscoveryFailed` - DiscoveryFailed Lifecycle state.\n* `FirmwareUpgradeInProgress` - Firmware upgrade is in progress on given physical entity.\n* `SecureEraseInProgress` - Secure Erase is in progress on given physical entity.\n* `BladeMigrationInProgress` - Server slot migration is in progress on given physical entity.\n* `SlotMismatch` - The blade server is detected in a different chassis/slot than it was previously."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2452,7 +2463,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
+        /// <para type="description">"This field identifies the model of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2496,7 +2507,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The total number of CPU cores present on the server."</para>
+        /// <para type="description">"The total number of CPU cores enabled on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2597,7 +2608,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The package version of the Host Service Utility (HSU) for this server."</para>
+        /// <para type="description">"Bundle version which the firmware belongs to."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2620,7 +2631,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The Rack unit software Personality."</para>
+        /// <para type="description">"Unique identity of added software personality."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2642,7 +2653,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
+        /// <para type="description">"This field identifies the presence (equipped) or absence of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2664,7 +2675,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
+        /// <para type="description">"This field identifies the revision of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2697,7 +2708,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
+        /// <para type="description">"This field identifies the serial of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2752,7 +2763,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The source object type of this view MO."</para>
+        /// <para type="description">"Stores the source object type. This feild will either be RackUnit or Blade."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2819,7 +2830,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
+        /// <para type="description">"This field identifies the vendor of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

@@ -386,41 +386,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"UUID for the Catalyst SDWAN Vedge Device."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string DeviceId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Catalyst SDWAN device model."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string DeviceModel
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The Catalyst SDWAN device state."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string DeviceState
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The Catalyst SDWAN device type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string DeviceType
         {
             get;
             set;
@@ -476,16 +446,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The Catalyst SDWAN device serial number."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string SerialNumber
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The Catalyst SDWAN device site id."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -536,21 +496,21 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The Catalyst SDWAN device validity."</para>
+        /// <para type="description">"The Catalyst SDWAN device template status."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string Validity
+        public string TemplateStatus
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"The Catalyst SDWAN device version."</para>
+        /// <para type="description">"The Catalyst SDWAN device validity."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public string Version
+        public string Validity
         {
             get;
             set;
@@ -568,21 +528,9 @@ namespace Intersight.PowerShell
             {
                 initObject.ConfigStatusMessage = this.ConfigStatusMessage;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceId"))
-            {
-                initObject.DeviceId = this.DeviceId;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceModel"))
-            {
-                initObject.DeviceModel = this.DeviceModel;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("DeviceState"))
             {
                 initObject.DeviceState = this.DeviceState;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceType"))
-            {
-                initObject.DeviceType = this.DeviceType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("HostName"))
             {
@@ -600,10 +548,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Reachability"))
             {
                 initObject.Reachability = this.Reachability;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("SerialNumber"))
-            {
-                initObject.SerialNumber = this.SerialNumber;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SiteId"))
             {
@@ -625,13 +569,13 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateStatus"))
+            {
+                initObject.TemplateStatus = this.TemplateStatus;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Validity"))
             {
                 initObject.Validity = this.Validity;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
-            {
-                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }

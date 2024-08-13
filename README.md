@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.17769
-- C# SDK version: 1.0.11.17769
+- Intersight.PowerShell version: 1.0.11.17956
+- C# SDK version: 1.0.11.17956
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.17769"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.17956"}
 ```
 or
 
@@ -2309,21 +2309,25 @@ PartnerintegrationEtl | [**Get-IntersightPartnerintegrationEtl**](docs/Get-Inter
 PartnerintegrationFile | [**Get-IntersightPartnerintegrationFile**](docs/Get-IntersightPartnerintegrationFile.md) | Read a 'PartnerintegrationFile' resource.
 PartnerintegrationInventory | [**Get-IntersightPartnerintegrationInventory**](docs/Get-IntersightPartnerintegrationInventory.md) | Read a 'PartnerintegrationInventory' resource.
 PartnerintegrationLogs | [**Get-IntersightPartnerintegrationLogs**](docs/Get-IntersightPartnerintegrationLogs.md) | Read a 'PartnerintegrationLogs' resource.
+PartnerintegrationMetrics | [**Get-IntersightPartnerintegrationMetrics**](docs/Get-IntersightPartnerintegrationMetrics.md) | Read a 'PartnerintegrationMetrics' resource.
 PartnerintegrationModel | [**Get-IntersightPartnerintegrationModel**](docs/Get-IntersightPartnerintegrationModel.md) | Read a 'PartnerintegrationModel' resource.
 PartnerintegrationDeviceConnector | [**New-IntersightPartnerintegrationDeviceConnector**](docs/New-IntersightPartnerintegrationDeviceConnector.md) | Create a 'PartnerintegrationDeviceConnector' resource.
 PartnerintegrationEtl | [**New-IntersightPartnerintegrationEtl**](docs/New-IntersightPartnerintegrationEtl.md) | Create a 'PartnerintegrationEtl' resource.
 PartnerintegrationFile | [**New-IntersightPartnerintegrationFile**](docs/New-IntersightPartnerintegrationFile.md) | Create a 'PartnerintegrationFile' resource.
 PartnerintegrationInventory | [**New-IntersightPartnerintegrationInventory**](docs/New-IntersightPartnerintegrationInventory.md) | Create a 'PartnerintegrationInventory' resource.
+PartnerintegrationMetrics | [**New-IntersightPartnerintegrationMetrics**](docs/New-IntersightPartnerintegrationMetrics.md) | Create a 'PartnerintegrationMetrics' resource.
 PartnerintegrationModel | [**New-IntersightPartnerintegrationModel**](docs/New-IntersightPartnerintegrationModel.md) | Create a 'PartnerintegrationModel' resource.
 PartnerintegrationDeviceConnector | [**Remove-IntersightPartnerintegrationDeviceConnector**](docs/Remove-IntersightPartnerintegrationDeviceConnector.md) | Delete a 'PartnerintegrationDeviceConnector' resource.
 PartnerintegrationEtl | [**Remove-IntersightPartnerintegrationEtl**](docs/Remove-IntersightPartnerintegrationEtl.md) | Delete a 'PartnerintegrationEtl' resource.
 PartnerintegrationFile | [**Remove-IntersightPartnerintegrationFile**](docs/Remove-IntersightPartnerintegrationFile.md) | Delete a 'PartnerintegrationFile' resource.
 PartnerintegrationInventory | [**Remove-IntersightPartnerintegrationInventory**](docs/Remove-IntersightPartnerintegrationInventory.md) | Delete a 'PartnerintegrationInventory' resource.
+PartnerintegrationMetrics | [**Remove-IntersightPartnerintegrationMetrics**](docs/Remove-IntersightPartnerintegrationMetrics.md) | Delete a 'PartnerintegrationMetrics' resource.
 PartnerintegrationModel | [**Remove-IntersightPartnerintegrationModel**](docs/Remove-IntersightPartnerintegrationModel.md) | Delete a 'PartnerintegrationModel' resource.
 PartnerintegrationDeviceConnector | [**Set-IntersightPartnerintegrationDeviceConnector**](docs/Set-IntersightPartnerintegrationDeviceConnector.md) | Update a 'PartnerintegrationDeviceConnector' resource.
 PartnerintegrationEtl | [**Set-IntersightPartnerintegrationEtl**](docs/Set-IntersightPartnerintegrationEtl.md) | Update a 'PartnerintegrationEtl' resource.
 PartnerintegrationFile | [**Set-IntersightPartnerintegrationFile**](docs/Set-IntersightPartnerintegrationFile.md) | Update a 'PartnerintegrationFile' resource.
 PartnerintegrationInventory | [**Set-IntersightPartnerintegrationInventory**](docs/Set-IntersightPartnerintegrationInventory.md) | Update a 'PartnerintegrationInventory' resource.
+PartnerintegrationMetrics | [**Set-IntersightPartnerintegrationMetrics**](docs/Set-IntersightPartnerintegrationMetrics.md) | Update a 'PartnerintegrationMetrics' resource.
 PartnerintegrationModel | [**Set-IntersightPartnerintegrationModel**](docs/Set-IntersightPartnerintegrationModel.md) | Update a 'PartnerintegrationModel' resource.
 PciCoprocessorCard | [**Get-IntersightPciCoprocessorCard**](docs/Get-IntersightPciCoprocessorCard.md) | Read a 'PciCoprocessorCard' resource.
 PciDevice | [**Get-IntersightPciDevice**](docs/Get-IntersightPciDevice.md) | Read a 'PciDevice' resource.

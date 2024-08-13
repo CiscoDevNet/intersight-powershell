@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightPartnerintegrationInventory [-Action< PartnerintegrationInventory.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BuildFlags< string>][-Etls< System.Collections.Generic.List`1[PartnerintegrationEtlRelationship]>][-Models< System.Collections.Generic.List`1[PartnerintegrationModelRelationship]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightPartnerintegrationInventory [-Action< PartnerintegrationInventory.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BuildFlags< string>][-Etls< System.Collections.Generic.List`1[PartnerintegrationEtlRelationship]>][-Metrics< PartnerintegrationMetricsRelationship>][-Models< System.Collections.Generic.List`1[PartnerintegrationModelRelationship]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -76,6 +76,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[PartnerintegrationEtlRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Metrics
+A reference to a partnerintegrationMetrics resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: PartnerintegrationMetricsRelationship
 Parameter Sets: (All)
 Aliases:
 

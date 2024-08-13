@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Model
-Model deatils of component.
+Model details of component.
 
 ```yaml
 Type: string
