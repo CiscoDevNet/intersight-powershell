@@ -3901,10 +3901,10 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Label for the enum value. A user friendly short string to identify the enum value. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote ('), forward slash (/), or an underscore (_) and must have an alphanumeric character."</para>
+        /// <para type="description">"Label for the enum value. A user friendly short string to identify the enum value. Label can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), single quote ('), forward slash (/), round parenthesis ( () ), or an underscore (_) and must have an alphanumeric character."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9]+[+\\s\\/a-zA-Z0-9_'.:-]{0,92}$")]
+        [ValidatePattern("^[a-zA-Z0-9]+[+\\s\\/a-zA-Z0-9)(_'.:-]{0,92}$")]
         public string Label
         {
             get;
@@ -3921,10 +3921,10 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Enum value for this enum entry. Value will be passed to the workflow as string type for execution. Value can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), forward slash (/), or an underscore (_)."</para>
+        /// <para type="description">"Enum value for this enum entry. Value will be passed to the workflow as string type for execution. Value can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ), round parenthesis ( () ), forward slash (/), or an underscore (_)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_.:-]*[+\\s\\/a-zA-Z0-9_.:-]{1,64}$")]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]*[+\\s\\/a-zA-Z0-9)(_.:-]{1,64}$")]
         public string Value
         {
             get;
