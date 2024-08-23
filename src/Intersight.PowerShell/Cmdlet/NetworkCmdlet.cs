@@ -2027,6 +2027,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The user defined label assigned to the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string UserLabel
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"This field identifies the vendor of the given component."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
