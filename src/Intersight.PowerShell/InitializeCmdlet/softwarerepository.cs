@@ -15,6 +15,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightSoftwarerepositoryApplianceUpload()
         {
+            ClassId = SoftwarerepositoryApplianceUpload.ClassIdEnum.SoftwarerepositoryApplianceUpload;
+            ObjectType = SoftwarerepositoryApplianceUpload.ObjectTypeEnum.SoftwarerepositoryApplianceUpload;
 
         }
         // <summary>
@@ -50,6 +52,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryApplianceUpload initObject = new Intersight.Model.SoftwarerepositoryApplianceUpload();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -157,6 +160,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryAuthorization initObject = new Intersight.Model.SoftwarerepositoryAuthorization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -324,6 +328,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryCachedImage initObject = new Intersight.Model.SoftwarerepositoryCachedImage();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -436,6 +441,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryCatalog initObject = new Intersight.Model.SoftwarerepositoryCatalog();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -642,6 +648,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryCategoryMapper initObject = new Intersight.Model.SoftwarerepositoryCategoryMapper();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -854,6 +861,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryCategoryMapperModel initObject = new Intersight.Model.SoftwarerepositoryCategoryMapperModel();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1040,6 +1048,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryCategorySupportConstraint initObject = new Intersight.Model.SoftwarerepositoryCategorySupportConstraint();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1182,6 +1191,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryCategoryUnsupportedModels initObject = new Intersight.Model.SoftwarerepositoryCategoryUnsupportedModels();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1298,6 +1308,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryCifsServer initObject = new Intersight.Model.SoftwarerepositoryCifsServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1410,6 +1421,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryConstraintModels initObject = new Intersight.Model.SoftwarerepositoryConstraintModels();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1582,6 +1594,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryDownloadSpec initObject = new Intersight.Model.SoftwarerepositoryDownloadSpec();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1676,6 +1689,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryFileServer initObject = new Intersight.Model.SoftwarerepositoryFileServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1762,6 +1776,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryHttpServer initObject = new Intersight.Model.SoftwarerepositoryHttpServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1830,6 +1845,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryImportResult initObject = new Intersight.Model.SoftwarerepositoryImportResult();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1906,6 +1922,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryLocalMachine initObject = new Intersight.Model.SoftwarerepositoryLocalMachine();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1980,6 +1997,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryNfsServer initObject = new Intersight.Model.SoftwarerepositoryNfsServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2191,6 +2209,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryOperatingSystemFile initObject = new Intersight.Model.SoftwarerepositoryOperatingSystemFile();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2388,6 +2407,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryRelease initObject = new Intersight.Model.SoftwarerepositoryRelease();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2516,6 +2536,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SoftwarerepositoryUnsupportedModelConstraint initObject = new Intersight.Model.SoftwarerepositoryUnsupportedModelConstraint();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

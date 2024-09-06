@@ -165,6 +165,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.VmediaMapping initObject = new Intersight.Model.VmediaMapping();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -365,6 +366,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.VmediaPolicy initObject = new Intersight.Model.VmediaPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -481,6 +483,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.VmediaPolicyInventory initObject = new Intersight.Model.VmediaPolicyInventory();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

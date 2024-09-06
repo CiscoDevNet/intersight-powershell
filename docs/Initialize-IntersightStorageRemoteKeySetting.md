@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExistingKey
-Current Security Key Passphrase which is already configured on the server.
+Current Security Key Passphrase which is already configured on the server. From the security context, the passphrase should be at least 8 characters long and should include at least one uppercase letter, one lowercase letter, one number, and one special character.
 
 ```yaml
 Type: string

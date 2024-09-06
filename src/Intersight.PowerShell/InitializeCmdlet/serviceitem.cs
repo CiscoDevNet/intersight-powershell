@@ -52,6 +52,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServiceitemHealthCheckErrorElement initObject = new Intersight.Model.ServiceitemHealthCheckErrorElement();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -71,6 +72,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightServiceitemMessage()
         {
+            ClassId = ServiceitemMessage.ClassIdEnum.ServiceitemMessage;
+            ObjectType = ServiceitemMessage.ObjectTypeEnum.ServiceitemMessage;
 
         }
         // <summary>
@@ -106,6 +109,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServiceitemMessage initObject = new Intersight.Model.ServiceitemMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -162,6 +166,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServiceitemSelectionCriteriaInput initObject = new Intersight.Model.ServiceitemSelectionCriteriaInput();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSchedulerRecurringScheduleParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerRecurringScheduleParams.ClassIdEnum>][-ObjectType< SchedulerRecurringScheduleParams.ObjectTypeEnum>][-StartTime< DateTime>][-TimeZone< SchedulerRecurringScheduleParams.VarTimeZoneEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSchedulerRecurringScheduleParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cadence< SchedulerRecurringScheduleParams.CadenceEnum>][-ClassId< SchedulerRecurringScheduleParams.ClassIdEnum>][-EndAfterOccurrences< long>][-EndTime< DateTime>][-FailureThreshold< long>][-ObjectType< SchedulerRecurringScheduleParams.ObjectTypeEnum>][-Params< Model.SchedulerBaseCadenceParams>][-StartTime< DateTime>][-TimeZone< SchedulerRecurringScheduleParams.VarTimeZoneEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,8 +39,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Cadence
+Allowed values for a recurring schedule cadence.\n* `None` - No value set for the cadence type (Enum value None).\n* `Every` - Use the &apos;Every&apos; cadence for tasks that need to be run frequently and are relatively small or quick to execute. This could include tasks such as checking the status of a service every 15 minutes, or updating a counter.\n* `Daily` - A Daily cadence allows for a scheduled task to be run every day or every n-interval days.\n* `Weekly` - A Weekly cadence allows for a scheduled task to be run every week or every n-interval weeks on specific days.\n* `Monthly` - A Montly cadence allows for a scheduled task to be run every month on specific days.
+
+```yaml
+Type: SchedulerRecurringScheduleParams.CadenceEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
 Type: SchedulerRecurringScheduleParams.ClassIdEnum
@@ -54,8 +69,53 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -EndAfterOccurrences
+Specify the number of occurrences (instead of an end-time) for a recurring schedule.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EndTime
+End time for the recurring schedule. The schedule will not run beyond this time. If using the endAfterOccurrences parameter instead, this field should be set to zero time, i.e, 0001-01-01T00:00:00Z.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FailureThreshold
+The maximum number of consecutive failures until the recurring scheduled task is suspended by the system. The default is 1.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: SchedulerRecurringScheduleParams.ObjectTypeEnum
@@ -69,8 +129,25 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Params
+The cadence for the recurring schedule. Different parameters are used depending on the schedule type.
+
+Note :- Use Initialize-IntersightSchedulerBaseCadenceParams to create the object of complex type SchedulerBaseCadenceParams
+
+```yaml
+Type: Model.SchedulerBaseCadenceParams
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -StartTime
-The schedule start time. A future time is required. When the start time is updated, it is mandatory to specify the corresponding timeZone property as well.
+The schedule start time. A future time is required.
 
 ```yaml
 Type: DateTime
@@ -157,3 +234,5 @@ PS C:\> Initialize-IntersightSchedulerRecurringScheduleParams
 ## RELATED LINKS
 
 [Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
+
+[Initialize-IntersightSchedulerBaseCadenceParams](./Initialize-IntersightSchedulerBaseCadenceParams.md)

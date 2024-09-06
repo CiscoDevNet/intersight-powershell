@@ -164,6 +164,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FeedbackFeedbackData initObject = new Intersight.Model.FeedbackFeedbackData();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountName"))
             {
@@ -294,6 +295,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FeedbackFeedbackPost initObject = new Intersight.Model.FeedbackFeedbackPost();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

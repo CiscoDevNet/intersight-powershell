@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -StartTime
-The schedule start time. A future time is required. When the start time is updated, it is mandatory to specify the corresponding timeZone property as well.
+The schedule start time. A future time is required.
 
 ```yaml
 Type: DateTime

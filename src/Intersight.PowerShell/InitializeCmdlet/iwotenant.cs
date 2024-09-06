@@ -142,6 +142,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.IwotenantMaintenanceNotification initObject = new Intersight.Model.IwotenantMaintenanceNotification();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -284,6 +285,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.IwotenantMigrate initObject = new Intersight.Model.IwotenantMigrate();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -440,6 +442,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.IwotenantTenantCustomization initObject = new Intersight.Model.IwotenantTenantCustomization();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -558,6 +561,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.IwotenantTenantStatus initObject = new Intersight.Model.IwotenantTenantStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {

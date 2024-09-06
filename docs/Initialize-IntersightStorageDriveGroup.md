@@ -149,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -SecureDriveGroup
-Enables/disables the drive encryption on all the drives used in this policy. This flag just enables the drive security and only after remote key setting configured, the actual encryption will be done.
+Enables/disables the drive security on all the drives used in this policy. This flag just enables the drive security and only after Remote/Manual key setting configured, the actual security will be applied.
 
 ```yaml
 Type: bool

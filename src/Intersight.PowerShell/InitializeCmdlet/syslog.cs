@@ -63,6 +63,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SyslogLocalClientBase initObject = new Intersight.Model.SyslogLocalClientBase();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -134,6 +135,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SyslogLocalFileLoggingClient initObject = new Intersight.Model.SyslogLocalFileLoggingClient();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -274,6 +276,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SyslogPolicy initObject = new Intersight.Model.SyslogPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -382,6 +385,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SyslogPolicyInventory initObject = new Intersight.Model.SyslogPolicyInventory();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -498,6 +502,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SyslogRemoteClientBase initObject = new Intersight.Model.SyslogRemoteClientBase();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -626,6 +631,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SyslogRemoteLoggingClient initObject = new Intersight.Model.SyslogRemoteLoggingClient();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

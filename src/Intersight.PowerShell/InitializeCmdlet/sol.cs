@@ -154,6 +154,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SolPolicy initObject = new Intersight.Model.SolPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -270,6 +271,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SolPolicyInventory initObject = new Intersight.Model.SolPolicyInventory();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

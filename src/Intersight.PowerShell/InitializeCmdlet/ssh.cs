@@ -142,6 +142,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SshPolicy initObject = new Intersight.Model.SshPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -254,6 +255,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SshPolicyInventory initObject = new Intersight.Model.SshPolicyInventory();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

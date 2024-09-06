@@ -72,6 +72,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyActionParam initObject = new Intersight.Model.PolicyActionParam();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -99,6 +100,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightPolicyActionQualifier()
         {
+            ClassId = PolicyActionQualifier.ClassIdEnum.PolicyActionQualifier;
+            ObjectType = PolicyActionQualifier.ObjectTypeEnum.PolicyActionQualifier;
 
         }
         // <summary>
@@ -134,6 +137,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyActionQualifier initObject = new Intersight.Model.PolicyActionQualifier();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -220,6 +224,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyConfigChange initObject = new Intersight.Model.PolicyConfigChange();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -288,6 +293,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyConfigChangeContext initObject = new Intersight.Model.PolicyConfigChangeContext();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -374,6 +380,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyConfigChangeDisruptionDetailType initObject = new Intersight.Model.PolicyConfigChangeDisruptionDetailType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -462,6 +469,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyConfigContext initObject = new Intersight.Model.PolicyConfigContext();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -576,6 +584,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyConfigResultContext initObject = new Intersight.Model.PolicyConfigResultContext();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -652,6 +661,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyPolicyError initObject = new Intersight.Model.PolicyPolicyError();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -708,6 +718,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyPolicyStatus initObject = new Intersight.Model.PolicyPolicyStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -727,6 +738,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightPolicyQualifier()
         {
+            ClassId = PolicyQualifier.ClassIdEnum.PolicyQualifier;
+            ObjectType = PolicyQualifier.ObjectTypeEnum.PolicyQualifier;
 
         }
         // <summary>
@@ -762,6 +775,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyQualifier initObject = new Intersight.Model.PolicyQualifier();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -838,6 +852,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyScheduledAction initObject = new Intersight.Model.PolicyScheduledAction();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {

@@ -52,6 +52,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.MonitoringCategoryStatus initObject = new Intersight.Model.MonitoringCategoryStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -138,6 +139,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.MonitoringHealthStatus initObject = new Intersight.Model.MonitoringHealthStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

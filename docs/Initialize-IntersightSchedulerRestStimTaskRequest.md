@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Timeout
-Upper limit on the execution time of a scheduled task. Helps purge run-away scheduled tasks.
+Upper limit on the execution time of a scheduled task. Helps purge run-away scheduled tasks.\nNot supported in this release.
 
 ```yaml
 Type: long

@@ -72,6 +72,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConvergedinfraAdapterComplianceDetails initObject = new Intersight.Model.ConvergedinfraAdapterComplianceDetails();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -156,6 +157,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConvergedinfraAlarmSummary initObject = new Intersight.Model.ConvergedinfraAlarmSummary();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -260,6 +262,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConvergedinfraComplianceSummary initObject = new Intersight.Model.ConvergedinfraComplianceSummary();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -393,6 +396,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConvergedinfraPod initObject = new Intersight.Model.ConvergedinfraPod();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -493,6 +497,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConvergedinfraPodComplianceInfo initObject = new Intersight.Model.ConvergedinfraPodComplianceInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -557,6 +562,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConvergedinfraPodSummary initObject = new Intersight.Model.ConvergedinfraPodSummary();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -633,6 +639,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConvergedinfraServerComplianceDetails initObject = new Intersight.Model.ConvergedinfraServerComplianceDetails();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -717,6 +724,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConvergedinfraStorageComplianceDetails initObject = new Intersight.Model.ConvergedinfraStorageComplianceDetails();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -801,6 +809,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConvergedinfraSwitchComplianceDetails initObject = new Intersight.Model.ConvergedinfraSwitchComplianceDetails();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

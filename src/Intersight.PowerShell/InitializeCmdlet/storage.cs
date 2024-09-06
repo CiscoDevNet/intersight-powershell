@@ -113,6 +113,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageAutomaticDriveGroup initObject = new Intersight.Model.StorageAutomaticDriveGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -191,6 +192,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageBaseCapacity initObject = new Intersight.Model.StorageBaseCapacity();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -245,6 +247,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageBaseInitiator initObject = new Intersight.Model.StorageBaseInitiator();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -321,6 +324,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageBatteryBackupUnit initObject = new Intersight.Model.StorageBatteryBackupUnit();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -585,6 +589,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageController initObject = new Intersight.Model.StorageController();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -741,6 +746,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageControllerDrive initObject = new Intersight.Model.StorageControllerDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -885,6 +891,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageDiskGroup initObject = new Intersight.Model.StorageDiskGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -993,6 +1000,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageDiskSlot initObject = new Intersight.Model.StorageDiskSlot();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1106,7 +1114,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Enables/disables the drive encryption on all the drives used in this policy. This flag just enables the drive security and only after remote key setting configured, the actual encryption will be done."</para>
+        /// <para type="description">"Enables/disables the drive security on all the drives used in this policy. This flag just enables the drive security and only after Remote/Manual key setting configured, the actual security will be applied."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1148,6 +1156,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageDriveGroup initObject = new Intersight.Model.StorageDriveGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1238,7 +1247,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Key details for supporting disk encryption."</para>
+        /// <para type="description">"Key details for supporting drive security."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1310,6 +1319,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageDriveSecurityPolicy initObject = new Intersight.Model.StorageDriveSecurityPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1414,6 +1424,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageEnclosure initObject = new Intersight.Model.StorageEnclosure();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1588,6 +1599,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageEnclosureDisk initObject = new Intersight.Model.StorageEnclosureDisk();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1748,6 +1760,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageEnclosureDiskSlotEp initObject = new Intersight.Model.StorageEnclosureDiskSlotEp();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1828,6 +1841,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageExternalLun initObject = new Intersight.Model.StorageExternalLun();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1884,6 +1898,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageExternalParityGroup initObject = new Intersight.Model.StorageExternalParityGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1940,6 +1955,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageExternalPath initObject = new Intersight.Model.StorageExternalPath();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2016,6 +2032,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageFileItem initObject = new Intersight.Model.StorageFileItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2100,6 +2117,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageFlexFlashController initObject = new Intersight.Model.StorageFlexFlashController();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2294,6 +2312,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageFlexFlashControllerProps initObject = new Intersight.Model.StorageFlexFlashControllerProps();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2462,6 +2481,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageFlexFlashPhysicalDrive initObject = new Intersight.Model.StorageFlexFlashPhysicalDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2622,6 +2642,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageFlexFlashVirtualDrive initObject = new Intersight.Model.StorageFlexFlashVirtualDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2770,6 +2791,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageFlexUtilController initObject = new Intersight.Model.StorageFlexUtilController();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3050,6 +3072,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageFlexUtilPhysicalDrive initObject = new Intersight.Model.StorageFlexUtilPhysicalDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3286,6 +3309,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageFlexUtilVirtualDrive initObject = new Intersight.Model.StorageFlexUtilVirtualDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3402,6 +3426,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiArray initObject = new Intersight.Model.StorageHitachiArray();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3466,6 +3491,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiArrayUtilization initObject = new Intersight.Model.StorageHitachiArrayUtilization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3485,6 +3511,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightStorageHitachiCapacity()
         {
+            ClassId = StorageHitachiCapacity.ClassIdEnum.StorageHitachiCapacity;
+            ObjectType = StorageHitachiCapacity.ObjectTypeEnum.StorageHitachiCapacity;
 
         }
         // <summary>
@@ -3520,6 +3548,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiCapacity initObject = new Intersight.Model.StorageHitachiCapacity();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3596,6 +3625,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiController initObject = new Intersight.Model.StorageHitachiController();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3680,6 +3710,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiDisk initObject = new Intersight.Model.StorageHitachiDisk();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3764,6 +3795,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiExternalParityGroup initObject = new Intersight.Model.StorageHitachiExternalParityGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3848,6 +3880,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiExternalPathGroup initObject = new Intersight.Model.StorageHitachiExternalPathGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3932,6 +3965,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiExternalStorageLun initObject = new Intersight.Model.StorageHitachiExternalStorageLun();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4016,6 +4050,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiExternalStoragePort initObject = new Intersight.Model.StorageHitachiExternalStoragePort();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4100,6 +4135,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiHost initObject = new Intersight.Model.StorageHitachiHost();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4184,6 +4220,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiHostLun initObject = new Intersight.Model.StorageHitachiHostLun();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4248,6 +4285,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiInitiator initObject = new Intersight.Model.StorageHitachiInitiator();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4324,6 +4362,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiParityGroup initObject = new Intersight.Model.StorageHitachiParityGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4408,6 +4447,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiPool initObject = new Intersight.Model.StorageHitachiPool();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4492,6 +4532,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiPort initObject = new Intersight.Model.StorageHitachiPort();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4576,6 +4617,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiRemoteCopyPairGad initObject = new Intersight.Model.StorageHitachiRemoteCopyPairGad();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4660,6 +4702,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiRemoteCopyPairTc initObject = new Intersight.Model.StorageHitachiRemoteCopyPairTc();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4744,6 +4787,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiRemoteCopyPairUr initObject = new Intersight.Model.StorageHitachiRemoteCopyPairUr();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4828,6 +4872,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiRemoteReplication initObject = new Intersight.Model.StorageHitachiRemoteReplication();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4912,6 +4957,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiSnapshot initObject = new Intersight.Model.StorageHitachiSnapshot();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4996,6 +5042,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiVolume initObject = new Intersight.Model.StorageHitachiVolume();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5080,6 +5127,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHitachiVolumeMigrationPair initObject = new Intersight.Model.StorageHitachiVolumeMigrationPair();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5144,6 +5192,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHyperFlexIscsiInitiator initObject = new Intersight.Model.StorageHyperFlexIscsiInitiator();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5220,6 +5269,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHyperFlexStorageContainer initObject = new Intersight.Model.StorageHyperFlexStorageContainer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5304,6 +5354,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageHyperFlexVolume initObject = new Intersight.Model.StorageHyperFlexVolume();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5331,6 +5382,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightStorageInitiator()
         {
+            ClassId = StorageInitiator.ClassIdEnum.StorageInitiator;
+            ObjectType = StorageInitiator.ObjectTypeEnum.StorageInitiator;
 
         }
         // <summary>
@@ -5366,6 +5419,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageInitiator initObject = new Intersight.Model.StorageInitiator();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5442,6 +5496,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageItem initObject = new Intersight.Model.StorageItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5495,7 +5550,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Method to be used for fetching the encryption key.\n* `Kmip` - Remote encryption using KMIP.\n* `Manual` - Drive encryption using manual key."</para>
+        /// <para type="description">"Method to be used for fetching the security key.\n* `Kmip` - Remote security using KMIP.\n* `Manual` - Drive security using manual key."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -5525,7 +5580,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Remote key encryption using KMIP configuration."</para>
+        /// <para type="description">"Remote key security using KMIP configuration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -5537,6 +5592,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageKeySetting initObject = new Intersight.Model.StorageKeySetting();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5635,6 +5691,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageKmipAuthCredentials initObject = new Intersight.Model.StorageKmipAuthCredentials();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5691,7 +5748,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Enable the selected KMIP Server configuration for encryption. This flag just enables the drive security and only after remote key setting configured, the actual encryption will be done."</para>
+        /// <para type="description">"Enable the selected KMIP Server configuration for security. This flag just enables the drive security and only after remote key setting configured, the actual security will be applied."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -5743,6 +5800,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageKmipServer initObject = new Intersight.Model.StorageKmipServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5803,17 +5861,17 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Current Security Key Passphrase which is already configured on the server."</para>
+        /// <para type="description">"Current Security Key Passphrase which is already configured on the server. From the security context, the passphrase should be at least 8 characters long and should include at least one uppercase letter, one lowercase letter, one number, and one special character."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
+
         public string ExistingKey
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"New Security Key Passphrase to be configured on the controller."</para>
+        /// <para type="description">"New Security Key Passphrase to be configured on the server. From the security context, the passphrase should be at least 8 characters long and should include at least one uppercase letter, one lowercase letter, one number, and one special character."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
@@ -5835,6 +5893,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageLocalKeySetting initObject = new Intersight.Model.StorageLocalKeySetting();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5930,6 +5989,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageM2VirtualDriveConfig initObject = new Intersight.Model.StorageM2VirtualDriveConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6018,6 +6078,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageManualDriveGroup initObject = new Intersight.Model.StorageManualDriveGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6102,6 +6163,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppAggregate initObject = new Intersight.Model.StorageNetAppAggregate();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6186,6 +6248,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppAggregateEvent initObject = new Intersight.Model.StorageNetAppAggregateEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6250,6 +6313,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppAutoSupport initObject = new Intersight.Model.StorageNetAppAutoSupport();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6326,6 +6390,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppBaseDisk initObject = new Intersight.Model.StorageNetAppBaseDisk();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6390,6 +6455,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppCifsAcl initObject = new Intersight.Model.StorageNetAppCifsAcl();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6466,6 +6532,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppCifsService initObject = new Intersight.Model.StorageNetAppCifsService();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6550,6 +6617,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppCifsShare initObject = new Intersight.Model.StorageNetAppCifsShare();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6634,6 +6702,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppCloudTarget initObject = new Intersight.Model.StorageNetAppCloudTarget();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6718,6 +6787,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppCluster initObject = new Intersight.Model.StorageNetAppCluster();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6802,6 +6872,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppClusterEvent initObject = new Intersight.Model.StorageNetAppClusterEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6886,6 +6957,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppClusterSnapMirrorPolicy initObject = new Intersight.Model.StorageNetAppClusterSnapMirrorPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6970,6 +7042,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppClusterSnapshotPolicy initObject = new Intersight.Model.StorageNetAppClusterSnapshotPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7054,6 +7127,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppDataIpInterface initObject = new Intersight.Model.StorageNetAppDataIpInterface();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7138,6 +7212,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppDataIpInterfaceEvent initObject = new Intersight.Model.StorageNetAppDataIpInterfaceEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7222,6 +7297,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppDiskEvent initObject = new Intersight.Model.StorageNetAppDiskEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7306,6 +7382,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppEthernetPort initObject = new Intersight.Model.StorageNetAppEthernetPort();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7390,6 +7467,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppEthernetPortEvent initObject = new Intersight.Model.StorageNetAppEthernetPortEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7454,6 +7532,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppEthernetPortLag initObject = new Intersight.Model.StorageNetAppEthernetPortLag();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7510,6 +7589,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppEthernetPortVlan initObject = new Intersight.Model.StorageNetAppEthernetPortVlan();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7586,6 +7666,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppExportPolicy initObject = new Intersight.Model.StorageNetAppExportPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7650,6 +7731,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppExportPolicyRule initObject = new Intersight.Model.StorageNetAppExportPolicyRule();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7726,6 +7808,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppFcInterface initObject = new Intersight.Model.StorageNetAppFcInterface();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7810,6 +7893,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppFcInterfaceEvent initObject = new Intersight.Model.StorageNetAppFcInterfaceEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7894,6 +7978,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppFcPort initObject = new Intersight.Model.StorageNetAppFcPort();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7978,6 +8063,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppFcPortEvent initObject = new Intersight.Model.StorageNetAppFcPortEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8042,6 +8128,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppHighAvailability initObject = new Intersight.Model.StorageNetAppHighAvailability();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8118,6 +8205,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppInitiatorGroup initObject = new Intersight.Model.StorageNetAppInitiatorGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8202,6 +8290,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppIpInterface initObject = new Intersight.Model.StorageNetAppIpInterface();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8286,6 +8375,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppIpInterfaceEvent initObject = new Intersight.Model.StorageNetAppIpInterfaceEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8370,6 +8460,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppIscsiService initObject = new Intersight.Model.StorageNetAppIscsiService();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8454,6 +8545,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppLicense initObject = new Intersight.Model.StorageNetAppLicense();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8538,6 +8630,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppLun initObject = new Intersight.Model.StorageNetAppLun();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8622,6 +8715,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppLunEvent initObject = new Intersight.Model.StorageNetAppLunEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8706,6 +8800,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppLunMap initObject = new Intersight.Model.StorageNetAppLunMap();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8790,6 +8885,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppNamespace initObject = new Intersight.Model.StorageNetAppNamespace();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8874,6 +8970,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppNfsClient initObject = new Intersight.Model.StorageNetAppNfsClient();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8958,6 +9055,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppNfsService initObject = new Intersight.Model.StorageNetAppNfsService();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9042,6 +9140,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppNode initObject = new Intersight.Model.StorageNetAppNode();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9126,6 +9225,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppNodeCdpNeighbor initObject = new Intersight.Model.StorageNetAppNodeCdpNeighbor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9210,6 +9310,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppNodeEvent initObject = new Intersight.Model.StorageNetAppNodeEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9294,6 +9395,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppNonDataIpInterface initObject = new Intersight.Model.StorageNetAppNonDataIpInterface();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9378,6 +9480,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppNonDataIpInterfaceEvent initObject = new Intersight.Model.StorageNetAppNonDataIpInterfaceEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9462,6 +9565,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppNtpServer initObject = new Intersight.Model.StorageNetAppNtpServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9526,6 +9630,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppPerformanceMetricsAverage initObject = new Intersight.Model.StorageNetAppPerformanceMetricsAverage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9582,6 +9687,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppPort initObject = new Intersight.Model.StorageNetAppPort();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9658,6 +9764,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppQtree initObject = new Intersight.Model.StorageNetAppQtree();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9742,6 +9849,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppSchedule initObject = new Intersight.Model.StorageNetAppSchedule();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9826,6 +9934,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppSensor initObject = new Intersight.Model.StorageNetAppSensor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9910,6 +10019,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppSnapMirrorRelationship initObject = new Intersight.Model.StorageNetAppSnapMirrorRelationship();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9974,6 +10084,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppSnapshotPolicySchedule initObject = new Intersight.Model.StorageNetAppSnapshotPolicySchedule();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10030,6 +10141,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppStorageClusterEfficiency initObject = new Intersight.Model.StorageNetAppStorageClusterEfficiency();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10086,6 +10198,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppStorageUtilization initObject = new Intersight.Model.StorageNetAppStorageUtilization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10162,6 +10275,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppStorageVm initObject = new Intersight.Model.StorageNetAppStorageVm();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10246,6 +10360,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppSvmEvent initObject = new Intersight.Model.StorageNetAppSvmEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10330,6 +10445,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppSvmSnapMirrorPolicy initObject = new Intersight.Model.StorageNetAppSvmSnapMirrorPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10414,6 +10530,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppSvmSnapshotPolicy initObject = new Intersight.Model.StorageNetAppSvmSnapshotPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10498,6 +10615,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppVolume initObject = new Intersight.Model.StorageNetAppVolume();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10582,6 +10700,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppVolumeEvent initObject = new Intersight.Model.StorageNetAppVolumeEvent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10666,6 +10785,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNetAppVolumeSnapshot initObject = new Intersight.Model.StorageNetAppVolumeSnapshot();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10730,6 +10850,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNvmeDedicatedHotSpareConfiguration initObject = new Intersight.Model.StorageNvmeDedicatedHotSpareConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10786,6 +10907,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNvmePhysicalDiskState initObject = new Intersight.Model.StorageNvmePhysicalDiskState();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10882,6 +11004,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNvmeRaidConfiguration initObject = new Intersight.Model.StorageNvmeRaidConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10954,6 +11077,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNvmeRaidDriveGroup initObject = new Intersight.Model.StorageNvmeRaidDriveGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11010,6 +11134,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageNvmeVirtualDriveConfiguration initObject = new Intersight.Model.StorageNvmeVirtualDriveConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11336,6 +11461,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePhysicalDisk initObject = new Intersight.Model.StoragePhysicalDisk();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11530,6 +11656,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePhysicalDiskExtension initObject = new Intersight.Model.StoragePhysicalDiskExtension();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11628,6 +11755,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePhysicalDiskUsage initObject = new Intersight.Model.StoragePhysicalDiskUsage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11716,6 +11844,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureArray initObject = new Intersight.Model.StoragePureArray();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11800,6 +11929,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureArrayAlerts initObject = new Intersight.Model.StoragePureArrayAlerts();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11864,6 +11994,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureArrayUtilization initObject = new Intersight.Model.StoragePureArrayUtilization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11940,6 +12071,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureController initObject = new Intersight.Model.StoragePureController();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12024,6 +12156,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureDisk initObject = new Intersight.Model.StoragePureDisk();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12051,6 +12184,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightStoragePureDiskUtilization()
         {
+            ClassId = StoragePureDiskUtilization.ClassIdEnum.StoragePureDiskUtilization;
+            ObjectType = StoragePureDiskUtilization.ObjectTypeEnum.StoragePureDiskUtilization;
 
         }
         // <summary>
@@ -12086,6 +12221,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureDiskUtilization initObject = new Intersight.Model.StoragePureDiskUtilization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12162,6 +12298,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureHost initObject = new Intersight.Model.StoragePureHost();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12246,6 +12383,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureHostGroup initObject = new Intersight.Model.StoragePureHostGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12330,6 +12468,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureHostLun initObject = new Intersight.Model.StoragePureHostLun();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12357,6 +12496,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightStoragePureHostUtilization()
         {
+            ClassId = StoragePureHostUtilization.ClassIdEnum.StoragePureHostUtilization;
+            ObjectType = StoragePureHostUtilization.ObjectTypeEnum.StoragePureHostUtilization;
 
         }
         // <summary>
@@ -12392,6 +12533,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureHostUtilization initObject = new Intersight.Model.StoragePureHostUtilization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12468,6 +12610,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePurePort initObject = new Intersight.Model.StoragePurePort();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12592,6 +12735,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureProtectionGroup initObject = new Intersight.Model.StoragePureProtectionGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12692,6 +12836,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureProtectionGroupSnapshot initObject = new Intersight.Model.StoragePureProtectionGroupSnapshot();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12756,6 +12901,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureReplicationBlackout initObject = new Intersight.Model.StoragePureReplicationBlackout();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12832,6 +12978,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureReplicationSchedule initObject = new Intersight.Model.StoragePureReplicationSchedule();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12926,6 +13073,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureSnapshotSchedule initObject = new Intersight.Model.StoragePureSnapshotSchedule();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13014,6 +13162,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureTargetArray initObject = new Intersight.Model.StoragePureTargetArray();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13098,6 +13247,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureVolume initObject = new Intersight.Model.StoragePureVolume();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13182,6 +13332,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureVolumeSnapshot initObject = new Intersight.Model.StoragePureVolumeSnapshot();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13209,6 +13360,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightStoragePureVolumeUtilization()
         {
+            ClassId = StoragePureVolumeUtilization.ClassIdEnum.StoragePureVolumeUtilization;
+            ObjectType = StoragePureVolumeUtilization.ObjectTypeEnum.StoragePureVolumeUtilization;
 
         }
         // <summary>
@@ -13244,6 +13397,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StoragePureVolumeUtilization initObject = new Intersight.Model.StoragePureVolumeUtilization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13330,6 +13484,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageR0Drive initObject = new Intersight.Model.StorageR0Drive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13396,10 +13551,10 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Current Security Key Passphrase which is already configured on the server."</para>
+        /// <para type="description">"Current Security Key Passphrase which is already configured on the server. From the security context, the passphrase should be at least 8 characters long and should include at least one uppercase letter, one lowercase letter, one number, and one special character."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]+$")]
+
         public string ExistingKey
         {
             get;
@@ -13448,6 +13603,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageRemoteKeySetting initObject = new Intersight.Model.StorageRemoteKeySetting();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13564,6 +13720,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageSasExpander initObject = new Intersight.Model.StorageSasExpander();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13656,6 +13813,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageSasPort initObject = new Intersight.Model.StorageSasPort();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13720,6 +13878,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageSpace initObject = new Intersight.Model.StorageSpace();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13836,6 +13995,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageSpan initObject = new Intersight.Model.StorageSpan();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13926,6 +14086,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageSpanDrives initObject = new Intersight.Model.StorageSpanDrives();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13986,6 +14147,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageStorageContainerHostMountStatus initObject = new Intersight.Model.StorageStorageContainerHostMountStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14005,6 +14167,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightStorageStorageContainerUtilization()
         {
+            ClassId = StorageStorageContainerUtilization.ClassIdEnum.StorageStorageContainerUtilization;
+            ObjectType = StorageStorageContainerUtilization.ObjectTypeEnum.StorageStorageContainerUtilization;
 
         }
         // <summary>
@@ -14040,6 +14204,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageStorageContainerUtilization initObject = new Intersight.Model.StorageStorageContainerUtilization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14258,6 +14423,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageStoragePolicy initObject = new Intersight.Model.StorageStoragePolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14398,6 +14564,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageVdMemberEp initObject = new Intersight.Model.StorageVdMemberEp();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14512,6 +14679,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageVirtualDrive initObject = new Intersight.Model.StorageVirtualDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14638,6 +14806,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageVirtualDriveConfiguration initObject = new Intersight.Model.StorageVirtualDriveConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14744,6 +14913,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageVirtualDriveContainer initObject = new Intersight.Model.StorageVirtualDriveContainer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14832,6 +15002,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageVirtualDriveExtension initObject = new Intersight.Model.StorageVirtualDriveExtension();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14946,6 +15117,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageVirtualDriveIdentity initObject = new Intersight.Model.StorageVirtualDriveIdentity();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -15077,6 +15249,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageVirtualDrivePolicy initObject = new Intersight.Model.StorageVirtualDrivePolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccessPolicy"))
             {
@@ -15116,6 +15289,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightStorageVolumeUtilization()
         {
+            ClassId = StorageVolumeUtilization.ClassIdEnum.StorageVolumeUtilization;
+            ObjectType = StorageVolumeUtilization.ObjectTypeEnum.StorageVolumeUtilization;
 
         }
         // <summary>
@@ -15151,6 +15326,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.StorageVolumeUtilization initObject = new Intersight.Model.StorageVolumeUtilization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

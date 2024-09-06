@@ -282,6 +282,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServicenowChangeRequest initObject = new Intersight.Model.ServicenowChangeRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -660,6 +661,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServicenowIncident initObject = new Intersight.Model.ServicenowIncident();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

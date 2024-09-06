@@ -103,6 +103,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ExternalsiteAuthorization initObject = new Intersight.Model.ExternalsiteAuthorization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeyType
-Method to be used for fetching the encryption key.\n* `Kmip` - Remote encryption using KMIP.\n* `Manual` - Drive encryption using manual key.
+Method to be used for fetching the security key.\n* `Kmip` - Remote security using KMIP.\n* `Manual` - Drive security using manual key.
 
 ```yaml
 Type: StorageKeySetting.KeyTypeEnum
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteKey
-Remote key encryption using KMIP configuration.
+Remote key security using KMIP configuration.
 
 Note :- Use Initialize-IntersightStorageRemoteKeySetting to create the object of complex type StorageRemoteKeySetting
 

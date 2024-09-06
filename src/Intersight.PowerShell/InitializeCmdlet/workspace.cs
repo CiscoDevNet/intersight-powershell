@@ -122,6 +122,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkspaceFolder initObject = new Intersight.Model.WorkspaceFolder();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

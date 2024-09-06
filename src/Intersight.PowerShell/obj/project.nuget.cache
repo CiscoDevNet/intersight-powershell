@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pFuZvs2yhq23416zWNpmgvZrY60DUJRBfg9osDcr9mUd0QLDwBHTR0kfSksXI8Pli9zUcbcE1cRWYocPWqiG7A==",
+  "dgSpecHash": "HM0v7yrsithzDhkPONNQSa4+BOMh0OjE5yMN0S+aXGQ5RfwOZ6eRSc6i59J4/QtrzW650dEDkK6J5Ii1GPedmw==",
   "success": true,
-  "projectFilePath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.18012/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
+  "projectFilePath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.18369/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
   "expectedPackageFiles": [
     "/var/lib/jenkins/.nuget/packages/comparenetobjects/4.61.0/comparenetobjects.4.61.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/jsonsubtypes/2.0.1/jsonsubtypes.2.0.1.nupkg.sha512",
@@ -17,7 +17,7 @@
     "/var/lib/jenkins/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/polly/7.2.3/polly.7.2.3.nupkg.sha512",
-    "/var/lib/jenkins/.nuget/packages/restsharp/110.2.0/restsharp.110.2.0.nupkg.sha512",
+    "/var/lib/jenkins/.nuget/packages/restsharp/112.0.0/restsharp.112.0.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/system.codedom/6.0.0/system.codedom.6.0.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/system.configuration.configurationmanager/6.0.0/system.configuration.configurationmanager.6.0.0.nupkg.sha512",
@@ -34,8 +34,6 @@
     "/var/lib/jenkins/.nuget/packages/system.security.cryptography.protecteddata/6.0.0/system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/system.security.permissions/6.0.0/system.security.permissions.6.0.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
-    "/var/lib/jenkins/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
-    "/var/lib/jenkins/.nuget/packages/system.text.json/7.0.2/system.text.json.7.0.2.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512"
   ],
   "logs": []

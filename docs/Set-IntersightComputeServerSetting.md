@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< CertificatemanagementCertificateBase>][-ClearSel< ComputeServerSetting.ClearSelEnum>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-CollectSel< ComputeServerSetting.CollectSelEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][-HostInitConfiguration< string>][-KvmReset< ComputeServerSetting.KvmResetEnum>][[-Moid]< string>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< ComputePersistentMemoryOperation>][-PersonalitySetting< ComputePersonalitySetting>][-ServerConfig< ComputeServerConfig>][-ServerOpStatus< System.Collections.Generic.List`1[ComputeServerOpStatus]>][-StorageControllerOperation< ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< ComputeStoragePhysicalDriveOperation>][-StorageUtilityImageOperation< ComputeStorageUtilityImageOperation>][-StorageVirtualDriveOperation< ComputeStorageVirtualDriveOperation>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TpmReset< ComputeServerSetting.TpmResetEnum>][-TunneledKvmState< ComputeServerSetting.TunneledKvmStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightComputeServerSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedState< ComputeServerSetting.AdminLocatorLedStateEnum>][-AdminPowerState< ComputeServerSetting.AdminPowerStateEnum>][-CertificatesAction< CertificatemanagementCertificateBase>][-ClearSel< ComputeServerSetting.ClearSelEnum>][-CmosReset< ComputeServerSetting.CmosResetEnum>][-CollectSel< ComputeServerSetting.CollectSelEnum>][-FrontPanelLockState< ComputeServerSetting.FrontPanelLockStateEnum>][-HostInitConfiguration< string>][-KvmReset< ComputeServerSetting.KvmResetEnum>][[-Moid]< string>][-OneTimeBootDevice< string>][-PersistentMemoryOperation< ComputePersistentMemoryOperation>][-PersonalitySetting< ComputePersonalitySetting>][-ResetMemoryErrors< ComputeServerSetting.ResetMemoryErrorsEnum>][-ServerConfig< ComputeServerConfig>][-ServerOpStatus< System.Collections.Generic.List`1[ComputeServerOpStatus]>][-StorageControllerOperation< ComputeStorageControllerOperation>][-StoragePhysicalDriveOperation< ComputeStoragePhysicalDriveOperation>][-StorageUtilityImageOperation< ComputeStorageUtilityImageOperation>][-StorageVirtualDriveOperation< ComputeStorageVirtualDriveOperation>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TpmReset< ComputeServerSetting.TpmResetEnum>][-TunneledKvmState< ComputeServerSetting.TunneledKvmStateEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -229,6 +229,21 @@ Note :- Use Initialize-IntersightComputePersonalitySetting to create the object 
 
 ```yaml
 Type: ComputePersonalitySetting
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResetMemoryErrors
+Reset Correctable and Uncorrectable ECC errors on all the DIMMs present in the server.\n* `Ready` - Reset memory errors operation is allowed on the server in this state.\n* `Reset` - Trigger reset memory errors operation on a server.
+
+```yaml
+Type: ComputeServerSetting.ResetMemoryErrorsEnum
 Parameter Sets: (All)
 Aliases:
 

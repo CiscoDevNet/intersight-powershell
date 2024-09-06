@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -KeySetting
-Key details for supporting disk encryption.
+Key details for supporting drive security.
 
 Note :- Use Initialize-IntersightStorageKeySetting to create the object of complex type StorageKeySetting
 

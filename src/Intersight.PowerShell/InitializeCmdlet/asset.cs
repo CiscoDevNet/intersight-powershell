@@ -52,6 +52,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetAddressInformation initObject = new Intersight.Model.AssetAddressInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -108,6 +109,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetAlarmSummary initObject = new Intersight.Model.AssetAlarmSummary();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -174,6 +176,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetApiKeyCredential initObject = new Intersight.Model.AssetApiKeyCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -252,6 +255,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetClaimSignature initObject = new Intersight.Model.AssetClaimSignature();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -336,6 +340,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetClientCertificateCredential initObject = new Intersight.Model.AssetClientCertificateCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -363,6 +368,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightAssetCloudConnection()
         {
+            ClassId = AssetCloudConnection.ClassIdEnum.AssetCloudConnection;
+            ObjectType = AssetCloudConnection.ObjectTypeEnum.AssetCloudConnection;
 
         }
         // <summary>
@@ -408,6 +415,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetCloudConnection initObject = new Intersight.Model.AssetCloudConnection();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -498,6 +506,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetClusterMember initObject = new Intersight.Model.AssetClusterMember();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -574,6 +583,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetConnection initObject = new Intersight.Model.AssetConnection();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -634,6 +644,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetContractInformation initObject = new Intersight.Model.AssetContractInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -688,6 +699,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetCredential initObject = new Intersight.Model.AssetCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -744,6 +756,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetCustomerInformation initObject = new Intersight.Model.AssetCustomerInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -820,6 +833,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeployment initObject = new Intersight.Model.AssetDeployment();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -884,6 +898,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeploymentAlarmInfo initObject = new Intersight.Model.AssetDeploymentAlarmInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -960,6 +975,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeploymentDevice initObject = new Intersight.Model.AssetDeploymentDevice();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1024,6 +1040,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeploymentDeviceAlarmInfo initObject = new Intersight.Model.AssetDeploymentDeviceAlarmInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1080,6 +1097,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeploymentDeviceInformation initObject = new Intersight.Model.AssetDeploymentDeviceInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1186,6 +1204,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeviceClaim initObject = new Intersight.Model.AssetDeviceClaim();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1302,6 +1321,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeviceConfiguration initObject = new Intersight.Model.AssetDeviceConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1394,6 +1414,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeviceConnectorManager initObject = new Intersight.Model.AssetDeviceConnectorManager();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1489,6 +1510,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeviceContractInformation initObject = new Intersight.Model.AssetDeviceContractInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1840,6 +1862,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeviceContractNotification initObject = new Intersight.Model.AssetDeviceContractNotification();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1971,6 +1994,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightAssetDeviceEndpointLocalCredential()
         {
+            ClassId = AssetDeviceEndpointLocalCredential.ClassIdEnum.AssetDeviceEndpointLocalCredential;
+            ObjectType = AssetDeviceEndpointLocalCredential.ObjectTypeEnum.AssetDeviceEndpointLocalCredential;
 
         }
         // <summary>
@@ -2006,6 +2031,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeviceEndpointLocalCredential initObject = new Intersight.Model.AssetDeviceEndpointLocalCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2062,6 +2088,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeviceInformation initObject = new Intersight.Model.AssetDeviceInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2178,6 +2205,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeviceRegistration initObject = new Intersight.Model.AssetDeviceRegistration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccessKeyId"))
             {
@@ -2258,6 +2286,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeviceStatistics initObject = new Intersight.Model.AssetDeviceStatistics();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2314,6 +2343,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetDeviceTransaction initObject = new Intersight.Model.AssetDeviceTransaction();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2380,6 +2410,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetGenericTargetClaimOptions initObject = new Intersight.Model.AssetGenericTargetClaimOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2440,6 +2471,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetGlobalUltimate initObject = new Intersight.Model.AssetGlobalUltimate();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2517,6 +2549,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetGoogleCloudPlatformServiceAccountKeyCredential initObject = new Intersight.Model.AssetGoogleCloudPlatformServiceAccountKeyCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2631,6 +2664,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetHttpConnection initObject = new Intersight.Model.AssetHttpConnection();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2670,6 +2704,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightAssetIntersightDeviceConnectorConnection()
         {
+            ClassId = AssetIntersightDeviceConnectorConnection.ClassIdEnum.AssetIntersightDeviceConnectorConnection;
+            ObjectType = AssetIntersightDeviceConnectorConnection.ObjectTypeEnum.AssetIntersightDeviceConnectorConnection;
 
         }
         // <summary>
@@ -2715,6 +2751,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetIntersightDeviceConnectorConnection initObject = new Intersight.Model.AssetIntersightDeviceConnectorConnection();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2785,6 +2822,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetMerakiCloudOptions initObject = new Intersight.Model.AssetMerakiCloudOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2845,6 +2883,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetMeteringType initObject = new Intersight.Model.AssetMeteringType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2921,6 +2960,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetNewRelicCredential initObject = new Intersight.Model.AssetNewRelicCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2948,6 +2988,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightAssetNoAuthenticationCredential()
         {
+            ClassId = AssetNoAuthenticationCredential.ClassIdEnum.AssetNoAuthenticationCredential;
+            ObjectType = AssetNoAuthenticationCredential.ObjectTypeEnum.AssetNoAuthenticationCredential;
 
         }
         // <summary>
@@ -2983,6 +3025,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetNoAuthenticationCredential initObject = new Intersight.Model.AssetNoAuthenticationCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3069,6 +3112,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetOauthBearerTokenCredential initObject = new Intersight.Model.AssetOauthBearerTokenCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3157,6 +3201,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetOauthClientIdSecretCredential initObject = new Intersight.Model.AssetOauthClientIdSecretCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3231,6 +3276,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetOrchestrationCivpVmwareVcenterOptions initObject = new Intersight.Model.AssetOrchestrationCivpVmwareVcenterOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3301,6 +3347,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetOrchestrationHitachiVirtualStoragePlatformOptions initObject = new Intersight.Model.AssetOrchestrationHitachiVirtualStoragePlatformOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3371,6 +3418,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetOrchestrationHsmVmwareVcenterOptions initObject = new Intersight.Model.AssetOrchestrationHsmVmwareVcenterOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3394,6 +3442,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightAssetOrchestrationService()
         {
+            ClassId = AssetOrchestrationService.ClassIdEnum.AssetOrchestrationService;
+            ObjectType = AssetOrchestrationService.ObjectTypeEnum.AssetOrchestrationService;
 
         }
         // <summary>
@@ -3439,6 +3489,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetOrchestrationService initObject = new Intersight.Model.AssetOrchestrationService();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3539,6 +3590,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetParentConnectionSignature initObject = new Intersight.Model.AssetParentConnectionSignature();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3641,6 +3693,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetPrivateKeyCredential initObject = new Intersight.Model.AssetPrivateKeyCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3709,6 +3762,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetProductInformation initObject = new Intersight.Model.AssetProductInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3815,6 +3869,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetScopedTargetConnection initObject = new Intersight.Model.AssetScopedTargetConnection();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3899,6 +3954,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetService initObject = new Intersight.Model.AssetService();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3979,6 +4035,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetServiceNowCredential initObject = new Intersight.Model.AssetServiceNowCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4041,6 +4098,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetServiceOptions initObject = new Intersight.Model.AssetServiceOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4127,6 +4185,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetSshConnection initObject = new Intersight.Model.AssetSshConnection();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4215,6 +4274,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetSubscription initObject = new Intersight.Model.AssetSubscription();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4309,6 +4369,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetSubscriptionAccount initObject = new Intersight.Model.AssetSubscriptionAccount();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -4397,6 +4458,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetSubscriptionDeviceContractInformation initObject = new Intersight.Model.AssetSubscriptionDeviceContractInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4461,6 +4523,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetSudiInfo initObject = new Intersight.Model.AssetSudiInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4618,6 +4681,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetTarget initObject = new Intersight.Model.AssetTarget();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -4714,6 +4778,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetTargetKey initObject = new Intersight.Model.AssetTargetKey();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4800,6 +4865,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetTargetSignature initObject = new Intersight.Model.AssetTargetSignature();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4831,6 +4897,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightAssetTargetStatusDetails()
         {
+            ClassId = AssetTargetStatusDetails.ClassIdEnum.AssetTargetStatusDetails;
+            ObjectType = AssetTargetStatusDetails.ObjectTypeEnum.AssetTargetStatusDetails;
 
         }
         // <summary>
@@ -4866,6 +4934,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetTargetStatusDetails initObject = new Intersight.Model.AssetTargetStatusDetails();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4885,6 +4954,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightAssetTerraformIntegrationService()
         {
+            ClassId = AssetTerraformIntegrationService.ClassIdEnum.AssetTerraformIntegrationService;
+            ObjectType = AssetTerraformIntegrationService.ObjectTypeEnum.AssetTerraformIntegrationService;
 
         }
         // <summary>
@@ -4930,6 +5001,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetTerraformIntegrationService initObject = new Intersight.Model.AssetTerraformIntegrationService();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5020,6 +5092,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetTerraformIntegrationTerraformAgentOptions initObject = new Intersight.Model.AssetTerraformIntegrationTerraformAgentOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5108,6 +5181,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetTerraformIntegrationTerraformCloudOptions initObject = new Intersight.Model.AssetTerraformIntegrationTerraformCloudOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5192,6 +5266,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetUsernamePasswordCredential initObject = new Intersight.Model.AssetUsernamePasswordCredential();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5266,6 +5341,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetVirtualizationAmazonWebServiceOptions initObject = new Intersight.Model.AssetVirtualizationAmazonWebServiceOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5289,6 +5365,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightAssetVirtualizationService()
         {
+            ClassId = AssetVirtualizationService.ClassIdEnum.AssetVirtualizationService;
+            ObjectType = AssetVirtualizationService.ObjectTypeEnum.AssetVirtualizationService;
 
         }
         // <summary>
@@ -5334,6 +5412,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetVirtualizationService initObject = new Intersight.Model.AssetVirtualizationService();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5394,6 +5473,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetVmHost initObject = new Intersight.Model.AssetVmHost();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5480,6 +5560,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerAmazonWebServicesBillingOptions initObject = new Intersight.Model.AssetWorkloadOptimizerAmazonWebServicesBillingOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5578,6 +5659,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerDynatraceOptions initObject = new Intersight.Model.AssetWorkloadOptimizerDynatraceOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5716,6 +5798,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerGoogleCloudPlatformBillingOptions initObject = new Intersight.Model.AssetWorkloadOptimizerGoogleCloudPlatformBillingOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5820,6 +5903,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerHypervOptions initObject = new Intersight.Model.AssetWorkloadOptimizerHypervOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5924,6 +6008,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureApplicationInsightsOptions initObject = new Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureApplicationInsightsOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6036,6 +6121,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureBillingOptions initObject = new Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureBillingOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6118,6 +6204,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions initObject = new Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureEnterpriseAgreementOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6199,6 +6286,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions initObject = new Intersight.Model.AssetWorkloadOptimizerMicrosoftAzureServicePrincipalOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6283,6 +6371,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerMicrosoftSqlServerOptions initObject = new Intersight.Model.AssetWorkloadOptimizerMicrosoftSqlServerOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6388,6 +6477,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerNewRelicOptions initObject = new Intersight.Model.AssetWorkloadOptimizerNewRelicOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountId"))
             {
@@ -6480,6 +6570,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerOpenStackOptions initObject = new Intersight.Model.AssetWorkloadOptimizerOpenStackOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6554,6 +6645,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerOracleDatabaseServerOptions initObject = new Intersight.Model.AssetWorkloadOptimizerOracleDatabaseServerOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6634,6 +6726,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerRedHatOpenStackOptions initObject = new Intersight.Model.AssetWorkloadOptimizerRedHatOpenStackOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6661,6 +6754,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightAssetWorkloadOptimizerService()
         {
+            ClassId = AssetWorkloadOptimizerService.ClassIdEnum.AssetWorkloadOptimizerService;
+            ObjectType = AssetWorkloadOptimizerService.ObjectTypeEnum.AssetWorkloadOptimizerService;
 
         }
         // <summary>
@@ -6706,6 +6801,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerService initObject = new Intersight.Model.AssetWorkloadOptimizerService();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6786,6 +6882,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AssetWorkloadOptimizerVmwareVcenterOptions initObject = new Intersight.Model.AssetWorkloadOptimizerVmwareVcenterOptions();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

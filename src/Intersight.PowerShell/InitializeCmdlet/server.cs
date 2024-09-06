@@ -134,6 +134,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServerConfigChangeDetail initObject = new Intersight.Model.ServerConfigChangeDetail();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -302,6 +303,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServerConfigImport initObject = new Intersight.Model.ServerConfigImport();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -420,6 +422,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServerConfigResult initObject = new Intersight.Model.ServerConfigResult();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -578,6 +581,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServerConfigResultEntry initObject = new Intersight.Model.ServerConfigResultEntry();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -700,6 +704,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServerDisruption initObject = new Intersight.Model.ServerDisruption();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -731,6 +736,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightServerPendingWorkflowTrigger()
         {
+            ClassId = ServerPendingWorkflowTrigger.ClassIdEnum.ServerPendingWorkflowTrigger;
+            ObjectType = ServerPendingWorkflowTrigger.ObjectTypeEnum.ServerPendingWorkflowTrigger;
 
         }
         // <summary>
@@ -766,6 +773,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServerPendingWorkflowTrigger initObject = new Intersight.Model.ServerPendingWorkflowTrigger();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1086,6 +1094,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServerProfile initObject = new Intersight.Model.ServerProfile();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -1399,6 +1408,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServerProfileTemplate initObject = new Intersight.Model.ServerProfileTemplate();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -1545,6 +1555,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ServerServerAssignTypeSlot initObject = new Intersight.Model.ServerServerAssignTypeSlot();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

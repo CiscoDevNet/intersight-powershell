@@ -204,6 +204,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseAccountLicenseData initObject = new Intersight.Model.LicenseAccountLicenseData();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -450,6 +451,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseCustomerOp initObject = new Intersight.Model.LicenseCustomerOp();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
             {
@@ -628,6 +630,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseIksCustomerOp initObject = new Intersight.Model.LicenseIksCustomerOp();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
             {
@@ -742,6 +745,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseIksLicenseCount initObject = new Intersight.Model.LicenseIksLicenseCount();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
             {
@@ -890,6 +894,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseIncCustomerOp initObject = new Intersight.Model.LicenseIncCustomerOp();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
             {
@@ -1008,6 +1013,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseIncLicenseCount initObject = new Intersight.Model.LicenseIncLicenseCount();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
             {
@@ -1157,6 +1163,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseIwoCustomerOp initObject = new Intersight.Model.LicenseIwoCustomerOp();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
             {
@@ -1275,6 +1282,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseIwoLicenseCount initObject = new Intersight.Model.LicenseIwoLicenseCount();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
             {
@@ -1393,6 +1401,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseLicenseInfo initObject = new Intersight.Model.LicenseLicenseInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
             {
@@ -1499,6 +1508,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseLicenseInfoView initObject = new Intersight.Model.LicenseLicenseInfoView();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
             {
@@ -1628,6 +1638,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseLicenseRegistrationStatus initObject = new Intersight.Model.LicenseLicenseRegistrationStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountCreationState"))
             {
@@ -1758,6 +1769,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseLicenseReservationOp initObject = new Intersight.Model.LicenseLicenseReservationOp();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1874,6 +1886,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseSmartlicenseToken initObject = new Intersight.Model.LicenseSmartlicenseToken();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
             {
@@ -1946,6 +1959,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.LicenseSubstituteLicense initObject = new Intersight.Model.LicenseSubstituteLicense();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

@@ -122,6 +122,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ContentBaseParameter initObject = new Intersight.Model.ContentBaseParameter();
             if (this.MyInvocation.BoundParameters.ContainsKey("AcceptSingleValue"))
             {
@@ -226,6 +227,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ContentComplexType initObject = new Intersight.Model.ContentComplexType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -253,7 +255,9 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightContentParameter()
         {
+            ClassId = ContentParameter.ClassIdEnum.ContentParameter;
             ItemType = ContentParameter.ItemTypeEnum.Simple;
+            ObjectType = ContentParameter.ObjectTypeEnum.ContentParameter;
             Type = ContentParameter.TypeEnum.Simple;
 
         }
@@ -360,6 +364,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ContentParameter initObject = new Intersight.Model.ContentParameter();
             if (this.MyInvocation.BoundParameters.ContainsKey("AcceptSingleValue"))
             {
@@ -546,6 +551,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ContentTextParameter initObject = new Intersight.Model.ContentTextParameter();
             if (this.MyInvocation.BoundParameters.ContainsKey("AcceptSingleValue"))
             {

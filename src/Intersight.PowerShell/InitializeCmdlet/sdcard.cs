@@ -15,6 +15,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightSdcardDiagnostics()
         {
+            ClassId = SdcardDiagnostics.ClassIdEnum.SdcardDiagnostics;
+            ObjectType = SdcardDiagnostics.ObjectTypeEnum.SdcardDiagnostics;
 
         }
         // <summary>
@@ -60,6 +62,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdcardDiagnostics initObject = new Intersight.Model.SdcardDiagnostics();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -83,6 +86,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightSdcardDrivers()
         {
+            ClassId = SdcardDrivers.ClassIdEnum.SdcardDrivers;
+            ObjectType = SdcardDrivers.ObjectTypeEnum.SdcardDrivers;
 
         }
         // <summary>
@@ -128,6 +133,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdcardDrivers initObject = new Intersight.Model.SdcardDrivers();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -151,6 +157,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightSdcardHostUpgradeUtility()
         {
+            ClassId = SdcardHostUpgradeUtility.ClassIdEnum.SdcardHostUpgradeUtility;
+            ObjectType = SdcardHostUpgradeUtility.ObjectTypeEnum.SdcardHostUpgradeUtility;
 
         }
         // <summary>
@@ -196,6 +204,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdcardHostUpgradeUtility initObject = new Intersight.Model.SdcardHostUpgradeUtility();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -276,6 +285,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdcardOperatingSystem initObject = new Intersight.Model.SdcardOperatingSystem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -361,6 +371,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdcardPartition initObject = new Intersight.Model.SdcardPartition();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -495,6 +506,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdcardPolicy initObject = new Intersight.Model.SdcardPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -599,6 +611,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdcardPolicyInventory initObject = new Intersight.Model.SdcardPolicyInventory();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -626,6 +639,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightSdcardServerConfigurationUtility()
         {
+            ClassId = SdcardServerConfigurationUtility.ClassIdEnum.SdcardServerConfigurationUtility;
+            ObjectType = SdcardServerConfigurationUtility.ObjectTypeEnum.SdcardServerConfigurationUtility;
 
         }
         // <summary>
@@ -671,6 +686,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdcardServerConfigurationUtility initObject = new Intersight.Model.SdcardServerConfigurationUtility();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -751,6 +767,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdcardUserPartition initObject = new Intersight.Model.SdcardUserPartition();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -823,6 +840,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdcardVirtualDrive initObject = new Intersight.Model.SdcardVirtualDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

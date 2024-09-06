@@ -102,6 +102,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ProcessorUnit initObject = new Intersight.Model.ProcessorUnit();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

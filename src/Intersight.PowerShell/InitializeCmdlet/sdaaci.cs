@@ -253,6 +253,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdaaciConnection initObject = new Intersight.Model.SdaaciConnection();
             if (this.MyInvocation.BoundParameters.ContainsKey("AciL3Out"))
             {
@@ -550,6 +551,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SdaaciConnectionDetail initObject = new Intersight.Model.SdaaciConnectionDetail();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

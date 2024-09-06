@@ -72,6 +72,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.RackUnitPersonality initObject = new Intersight.Model.RackUnitPersonality();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

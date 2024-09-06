@@ -172,6 +172,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.OprsDeployment initObject = new Intersight.Model.OprsDeployment();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -296,6 +297,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.OprsKvpair initObject = new Intersight.Model.OprsKvpair();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -430,6 +432,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.OprsSyncTargetListMessage initObject = new Intersight.Model.OprsSyncTargetListMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

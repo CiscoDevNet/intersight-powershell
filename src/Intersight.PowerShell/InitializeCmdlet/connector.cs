@@ -15,6 +15,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightConnectorCloseStreamMessage()
         {
+            ClassId = ConnectorCloseStreamMessage.ClassIdEnum.ConnectorCloseStreamMessage;
+            ObjectType = ConnectorCloseStreamMessage.ObjectTypeEnum.ConnectorCloseStreamMessage;
 
         }
         // <summary>
@@ -80,6 +82,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorCloseStreamMessage initObject = new Intersight.Model.ConnectorCloseStreamMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -268,6 +271,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorCommandControlMessage initObject = new Intersight.Model.ConnectorCommandControlMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -432,6 +436,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorCommandTerminalStream initObject = new Intersight.Model.ConnectorCommandTerminalStream();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -542,6 +547,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorEventLog initObject = new Intersight.Model.ConnectorEventLog();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -640,6 +646,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorExpectPrompt initObject = new Intersight.Model.ConnectorExpectPrompt();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -671,6 +678,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightConnectorFetchStreamMessage()
         {
+            ClassId = ConnectorFetchStreamMessage.ClassIdEnum.ConnectorFetchStreamMessage;
+            ObjectType = ConnectorFetchStreamMessage.ObjectTypeEnum.ConnectorFetchStreamMessage;
 
         }
         // <summary>
@@ -736,6 +745,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorFetchStreamMessage initObject = new Intersight.Model.ConnectorFetchStreamMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -825,6 +835,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorFileChecksum initObject = new Intersight.Model.ConnectorFileChecksum();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -950,6 +961,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorFileMessage initObject = new Intersight.Model.ConnectorFileMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1150,6 +1162,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorHttpRequest initObject = new Intersight.Model.ConnectorHttpRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1252,6 +1265,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorPlatformParamBase initObject = new Intersight.Model.ConnectorPlatformParamBase();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1408,6 +1422,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorSshConfig initObject = new Intersight.Model.ConnectorSshConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1594,6 +1609,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorSshMessage initObject = new Intersight.Model.ConnectorSshMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1649,6 +1665,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightConnectorStartStream()
         {
+            ClassId = ConnectorStartStream.ClassIdEnum.ConnectorStartStream;
+            ObjectType = ConnectorStartStream.ObjectTypeEnum.ConnectorStartStream;
 
         }
         // <summary>
@@ -1714,6 +1732,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorStartStream initObject = new Intersight.Model.ConnectorStartStream();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1745,6 +1764,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightConnectorStartStreamFromDevice()
         {
+            ClassId = ConnectorStartStreamFromDevice.ClassIdEnum.ConnectorStartStreamFromDevice;
+            ObjectType = ConnectorStartStreamFromDevice.ObjectTypeEnum.ConnectorStartStreamFromDevice;
 
         }
         // <summary>
@@ -1810,6 +1831,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorStartStreamFromDevice initObject = new Intersight.Model.ConnectorStartStreamFromDevice();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1841,6 +1863,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightConnectorStreamAcknowledge()
         {
+            ClassId = ConnectorStreamAcknowledge.ClassIdEnum.ConnectorStreamAcknowledge;
+            ObjectType = ConnectorStreamAcknowledge.ObjectTypeEnum.ConnectorStreamAcknowledge;
 
         }
         // <summary>
@@ -1906,6 +1930,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorStreamAcknowledge initObject = new Intersight.Model.ConnectorStreamAcknowledge();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1937,6 +1962,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightConnectorStreamInput()
         {
+            ClassId = ConnectorStreamInput.ClassIdEnum.ConnectorStreamInput;
+            ObjectType = ConnectorStreamInput.ObjectTypeEnum.ConnectorStreamInput;
 
         }
         // <summary>
@@ -2002,6 +2029,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorStreamInput initObject = new Intersight.Model.ConnectorStreamInput();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2033,6 +2061,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightConnectorStreamKeepalive()
         {
+            ClassId = ConnectorStreamKeepalive.ClassIdEnum.ConnectorStreamKeepalive;
+            ObjectType = ConnectorStreamKeepalive.ObjectTypeEnum.ConnectorStreamKeepalive;
 
         }
         // <summary>
@@ -2098,6 +2128,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorStreamKeepalive initObject = new Intersight.Model.ConnectorStreamKeepalive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2247,6 +2278,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorTargetChangeMessage initObject = new Intersight.Model.ConnectorTargetChangeMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2385,6 +2417,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorTargetSpecification initObject = new Intersight.Model.ConnectorTargetSpecification();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2541,6 +2574,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorUrl initObject = new Intersight.Model.ConnectorUrl();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2720,6 +2754,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorWinrmRequest initObject = new Intersight.Model.ConnectorWinrmRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2902,6 +2937,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorXmlApiMessage initObject = new Intersight.Model.ConnectorXmlApiMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

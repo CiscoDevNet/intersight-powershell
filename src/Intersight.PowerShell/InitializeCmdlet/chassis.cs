@@ -134,6 +134,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ChassisConfigChangeDetail initObject = new Intersight.Model.ChassisConfigChangeDetail();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -302,6 +303,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ChassisConfigImport initObject = new Intersight.Model.ChassisConfigImport();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -420,6 +422,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ChassisConfigResult initObject = new Intersight.Model.ChassisConfigResult();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -578,6 +581,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ChassisConfigResultEntry initObject = new Intersight.Model.ChassisConfigResultEntry();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -802,6 +806,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ChassisIomProfile initObject = new Intersight.Model.ChassisIomProfile();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -1062,6 +1067,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ChassisProfile initObject = new Intersight.Model.ChassisProfile();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -1310,6 +1316,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ChassisProfileTemplate initObject = new Intersight.Model.ChassisProfileTemplate();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {

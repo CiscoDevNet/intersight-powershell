@@ -82,6 +82,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UuidpoolBlock initObject = new Intersight.Model.UuidpoolBlock();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -241,6 +242,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UuidpoolPool initObject = new Intersight.Model.UuidpoolPool();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -393,6 +395,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UuidpoolPoolMember initObject = new Intersight.Model.UuidpoolPoolMember();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -534,6 +537,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UuidpoolReservation initObject = new Intersight.Model.UuidpoolReservation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -577,6 +581,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightUuidpoolReservationReference()
         {
+            ClassId = UuidpoolReservationReference.ClassIdEnum.UuidpoolReservationReference;
+            ObjectType = UuidpoolReservationReference.ObjectTypeEnum.UuidpoolReservationReference;
 
         }
         // <summary>
@@ -622,6 +628,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UuidpoolReservationReference initObject = new Intersight.Model.UuidpoolReservationReference();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -702,6 +709,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UuidpoolUniverse initObject = new Intersight.Model.UuidpoolUniverse();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -796,6 +804,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UuidpoolUuidBlock initObject = new Intersight.Model.UuidpoolUuidBlock();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -945,6 +954,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UuidpoolUuidLease initObject = new Intersight.Model.UuidpoolUuidLease();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

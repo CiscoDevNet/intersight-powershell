@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Intersight.PowerShell/1.0.11.18012": {
+      "Intersight.PowerShell/1.0.11.18369": {
         "dependencies": {
           "CompareNETObjects": "4.61.0",
           "JsonSubTypes": "2.0.1",
           "Newtonsoft.Json": "13.0.3",
           "Polly": "7.2.3",
-          "RestSharp": "110.2.0",
+          "RestSharp": "112.0.0",
           "System.ComponentModel.Annotations": "5.0.0",
           "System.Management.Automation": "7.2.0",
           "Intersight": "0.0.0.0"
@@ -85,14 +85,11 @@
           }
         }
       },
-      "RestSharp/110.2.0": {
-        "dependencies": {
-          "System.Text.Json": "7.0.2"
-        },
+      "RestSharp/112.0.0": {
         "runtime": {
           "lib/net6.0/RestSharp.dll": {
-            "assemblyVersion": "110.2.0.0",
-            "fileVersion": "110.2.0.0"
+            "assemblyVersion": "112.0.0.0",
+            "fileVersion": "112.0.0.0"
           }
         }
       },
@@ -141,14 +138,7 @@
           "System.Text.Encoding.CodePages": "6.0.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
-        "runtime": {
-          "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
-        }
-      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Security.AccessControl/6.0.0": {},
       "System.Security.Cryptography.Pkcs/6.0.0": {
         "dependencies": {
@@ -167,37 +157,6 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
-      "System.Text.Encodings.Web/7.0.0": {
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
-        "runtime": {
-          "lib/net6.0/System.Text.Encodings.Web.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
-          }
-        },
-        "runtimeTargets": {
-          "runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll": {
-            "rid": "browser",
-            "assetType": "runtime",
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.22.51805"
-          }
-        }
-      },
-      "System.Text.Json/7.0.2": {
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
-          "System.Text.Encodings.Web": "7.0.0"
-        },
-        "runtime": {
-          "lib/net6.0/System.Text.Json.dll": {
-            "assemblyVersion": "7.0.0.0",
-            "fileVersion": "7.0.323.6910"
-          }
-        }
-      },
       "System.Windows.Extensions/6.0.0": {
         "dependencies": {
           "System.Drawing.Common": "6.0.0"
@@ -214,7 +173,7 @@
     }
   },
   "libraries": {
-    "Intersight.PowerShell/1.0.11.18012": {
+    "Intersight.PowerShell/1.0.11.18369": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -310,12 +269,12 @@
       "path": "polly/7.2.3",
       "hashPath": "polly.7.2.3.nupkg.sha512"
     },
-    "RestSharp/110.2.0": {
+    "RestSharp/112.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FXGw0IMcqY7yO/hzS9QrD3iNswNgb9UxJnxWmfOxmGs4kRlZWqdtBoGPLuhlbgsDzX1RFo4WKui8TGGKXWKalw==",
-      "path": "restsharp/110.2.0",
-      "hashPath": "restsharp.110.2.0.nupkg.sha512"
+      "sha512": "sha512-vezxJ6DLk0eDx+rmXwVHQvJ3elZCJfnLd8neRrkA+IvTs9falf2CEAolsjI1YKkkHTOvG13xWTnHK7gU0zgaaw==",
+      "path": "restsharp/112.0.0",
+      "hashPath": "restsharp.112.0.0.nupkg.sha512"
     },
     "System.CodeDom/6.0.0": {
       "type": "package",
@@ -428,20 +387,6 @@
       "sha512": "sha512-ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
       "path": "system.text.encoding.codepages/6.0.0",
       "hashPath": "system.text.encoding.codepages.6.0.0.nupkg.sha512"
-    },
-    "System.Text.Encodings.Web/7.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-OP6umVGxc0Z0MvZQBVigj4/U31Pw72ITihDWP9WiWDm+q5aoe0GaJivsfYGq53o6dxH7DcXWiCTl7+0o2CGdmg==",
-      "path": "system.text.encodings.web/7.0.0",
-      "hashPath": "system.text.encodings.web.7.0.0.nupkg.sha512"
-    },
-    "System.Text.Json/7.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/LZf/JrGyilojqwpaywb+sSz8Tew7ij4K/Sk+UW8AKfAK7KRhR6mKpKtTm06cYA7bCpGTWfYksIW+mVsdxPegQ==",
-      "path": "system.text.json/7.0.2",
-      "hashPath": "system.text.json.7.0.2.nupkg.sha512"
     },
     "System.Windows.Extensions/6.0.0": {
       "type": "package",

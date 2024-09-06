@@ -72,6 +72,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.TerminalAuditLog initObject = new Intersight.Model.TerminalAuditLog();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

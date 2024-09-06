@@ -21,7 +21,7 @@ namespace Intersight.PowerShell
 
         }
         // <summary>
-        /// <para type="description">"The default SNMPv1, SNMPv2c community name or SNMPv3 username to include on any trap messages sent to the SNMP host. The name can be 18 characters long."</para>
+        /// <para type="description">"The default SNMPv1, SNMPv2c community name or SNMPv3 username to include on any trap messages sent to the SNMP host. The name can be 32 characters long."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -233,6 +233,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SnmpPolicy initObject = new Intersight.Model.SnmpPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AccessCommunityString"))
             {
@@ -381,6 +382,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SnmpPolicyInventory initObject = new Intersight.Model.SnmpPolicyInventory();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -517,6 +519,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SnmpTrap initObject = new Intersight.Model.SnmpTrap();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -664,6 +667,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SnmpUser initObject = new Intersight.Model.SnmpUser();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

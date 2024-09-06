@@ -15,6 +15,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiApicCcoPost()
         {
+            ClassId = NiaapiApicCcoPost.ClassIdEnum.NiaapiApicCcoPost;
+            ObjectType = NiaapiApicCcoPost.ObjectTypeEnum.NiaapiApicCcoPost;
 
         }
         // <summary>
@@ -120,6 +122,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiApicCcoPost initObject = new Intersight.Model.NiaapiApicCcoPost();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -167,6 +170,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiApicFieldNotice()
         {
+            ClassId = NiaapiApicFieldNotice.ClassIdEnum.NiaapiApicFieldNotice;
+            ObjectType = NiaapiApicFieldNotice.ObjectTypeEnum.NiaapiApicFieldNotice;
 
         }
         // <summary>
@@ -312,6 +317,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiApicFieldNotice initObject = new Intersight.Model.NiaapiApicFieldNotice();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -375,6 +381,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiApicHweol()
         {
+            ClassId = NiaapiApicHweol.ClassIdEnum.NiaapiApicHweol;
+            ObjectType = NiaapiApicHweol.ObjectTypeEnum.NiaapiApicHweol;
 
         }
         // <summary>
@@ -670,6 +678,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiApicHweol initObject = new Intersight.Model.NiaapiApicHweol();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -793,6 +802,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiApicLatestMaintainedRelease()
         {
+            ClassId = NiaapiApicLatestMaintainedRelease.ClassIdEnum.NiaapiApicLatestMaintainedRelease;
+            ObjectType = NiaapiApicLatestMaintainedRelease.ObjectTypeEnum.NiaapiApicLatestMaintainedRelease;
 
         }
         // <summary>
@@ -878,6 +889,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiApicLatestMaintainedRelease initObject = new Intersight.Model.NiaapiApicLatestMaintainedRelease();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -917,6 +929,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiApicReleaseRecommend()
         {
+            ClassId = NiaapiApicReleaseRecommend.ClassIdEnum.NiaapiApicReleaseRecommend;
+            ObjectType = NiaapiApicReleaseRecommend.ObjectTypeEnum.NiaapiApicReleaseRecommend;
 
         }
         // <summary>
@@ -1012,6 +1026,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiApicReleaseRecommend initObject = new Intersight.Model.NiaapiApicReleaseRecommend();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1055,6 +1070,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiApicSweol()
         {
+            ClassId = NiaapiApicSweol.ClassIdEnum.NiaapiApicSweol;
+            ObjectType = NiaapiApicSweol.ObjectTypeEnum.NiaapiApicSweol;
 
         }
         // <summary>
@@ -1290,6 +1307,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiApicSweol initObject = new Intersight.Model.NiaapiApicSweol();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1389,6 +1407,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiDcnmCcoPost()
         {
+            ClassId = NiaapiDcnmCcoPost.ClassIdEnum.NiaapiDcnmCcoPost;
+            ObjectType = NiaapiDcnmCcoPost.ObjectTypeEnum.NiaapiDcnmCcoPost;
 
         }
         // <summary>
@@ -1494,6 +1514,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiDcnmCcoPost initObject = new Intersight.Model.NiaapiDcnmCcoPost();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1541,6 +1562,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiDcnmFieldNotice()
         {
+            ClassId = NiaapiDcnmFieldNotice.ClassIdEnum.NiaapiDcnmFieldNotice;
+            ObjectType = NiaapiDcnmFieldNotice.ObjectTypeEnum.NiaapiDcnmFieldNotice;
 
         }
         // <summary>
@@ -1686,6 +1709,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiDcnmFieldNotice initObject = new Intersight.Model.NiaapiDcnmFieldNotice();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1749,6 +1773,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiDcnmHweol()
         {
+            ClassId = NiaapiDcnmHweol.ClassIdEnum.NiaapiDcnmHweol;
+            ObjectType = NiaapiDcnmHweol.ObjectTypeEnum.NiaapiDcnmHweol;
 
         }
         // <summary>
@@ -2044,6 +2070,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiDcnmHweol initObject = new Intersight.Model.NiaapiDcnmHweol();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2167,6 +2194,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiDcnmLatestMaintainedRelease()
         {
+            ClassId = NiaapiDcnmLatestMaintainedRelease.ClassIdEnum.NiaapiDcnmLatestMaintainedRelease;
+            ObjectType = NiaapiDcnmLatestMaintainedRelease.ObjectTypeEnum.NiaapiDcnmLatestMaintainedRelease;
 
         }
         // <summary>
@@ -2252,6 +2281,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiDcnmLatestMaintainedRelease initObject = new Intersight.Model.NiaapiDcnmLatestMaintainedRelease();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2291,6 +2321,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiDcnmReleaseRecommend()
         {
+            ClassId = NiaapiDcnmReleaseRecommend.ClassIdEnum.NiaapiDcnmReleaseRecommend;
+            ObjectType = NiaapiDcnmReleaseRecommend.ObjectTypeEnum.NiaapiDcnmReleaseRecommend;
 
         }
         // <summary>
@@ -2386,6 +2418,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiDcnmReleaseRecommend initObject = new Intersight.Model.NiaapiDcnmReleaseRecommend();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2429,6 +2462,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightNiaapiDcnmSweol()
         {
+            ClassId = NiaapiDcnmSweol.ClassIdEnum.NiaapiDcnmSweol;
+            ObjectType = NiaapiDcnmSweol.ObjectTypeEnum.NiaapiDcnmSweol;
 
         }
         // <summary>
@@ -2664,6 +2699,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiDcnmSweol initObject = new Intersight.Model.NiaapiDcnmSweol();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2830,6 +2866,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiDetail initObject = new Intersight.Model.NiaapiDetail();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2938,6 +2975,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiFileDownloader initObject = new Intersight.Model.NiaapiFileDownloader();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3090,6 +3128,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiNewReleaseDetail initObject = new Intersight.Model.NiaapiNewReleaseDetail();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3248,6 +3287,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiNiaMetadata initObject = new Intersight.Model.NiaapiNiaMetadata();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3372,6 +3412,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiNibFileDownloader initObject = new Intersight.Model.NiaapiNibFileDownloader();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3514,6 +3555,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiNibMetadata initObject = new Intersight.Model.NiaapiNibMetadata();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3638,6 +3680,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiPuvScriptDownloader initObject = new Intersight.Model.NiaapiPuvScriptDownloader();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3740,6 +3783,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiRevisionInfo initObject = new Intersight.Model.NiaapiRevisionInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3858,6 +3902,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiSnValidatorMetadata initObject = new Intersight.Model.NiaapiSnValidatorMetadata();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3954,6 +3999,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiSoftwareRegex initObject = new Intersight.Model.NiaapiSoftwareRegex();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4058,6 +4104,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiUpgradeAssistFile initObject = new Intersight.Model.NiaapiUpgradeAssistFile();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4180,6 +4227,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiVersionRegex initObject = new Intersight.Model.NiaapiVersionRegex();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4306,6 +4354,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.NiaapiVersionRegexPlatform initObject = new Intersight.Model.NiaapiVersionRegexPlatform();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

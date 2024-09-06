@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSchedulerWeeklyCadenceParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerWeeklyCadenceParams.ClassIdEnum>][-DayOfWeek< System.Collections.Generic.List`1[SchedulerWeeklyCadenceParams.DayOfWeekEnum]>][-ObjectType< SchedulerWeeklyCadenceParams.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSchedulerWeeklyCadenceParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerWeeklyCadenceParams.ClassIdEnum>][-DayOfWeek< System.Collections.Generic.List`1[SchedulerWeeklyCadenceParams.DayOfWeekEnum]>][-ObjectType< SchedulerWeeklyCadenceParams.ObjectTypeEnum>][-RunEvery< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,6 +74,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: SchedulerWeeklyCadenceParams.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RunEvery
+A weekly interval for a task execution. If an interval is not explicitly specified, the task will be executed once every week by default.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

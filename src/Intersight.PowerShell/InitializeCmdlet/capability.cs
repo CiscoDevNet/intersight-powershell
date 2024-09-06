@@ -142,6 +142,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityActionsMetaData initObject = new Intersight.Model.CapabilityActionsMetaData();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -284,6 +285,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityAdapterDeprecatedDef initObject = new Intersight.Model.CapabilityAdapterDeprecatedDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -390,6 +392,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityAdapterFirmwareRequirement initObject = new Intersight.Model.CapabilityAdapterFirmwareRequirement();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -699,6 +702,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityAdapterUnitDescriptor initObject = new Intersight.Model.CapabilityAdapterUnitDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdapterGeneration"))
             {
@@ -829,7 +833,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -859,7 +863,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -881,6 +885,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityAdapterUpdateConstraintMeta initObject = new Intersight.Model.CapabilityAdapterUpdateConstraintMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -979,6 +984,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityAdapterUpgradeSupportMeta initObject = new Intersight.Model.CapabilityAdapterUpgradeSupportMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1087,6 +1093,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityCatalog initObject = new Intersight.Model.CapabilityCatalog();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1239,6 +1246,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityChassisDescriptor initObject = new Intersight.Model.CapabilityChassisDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1427,6 +1435,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityChassisManufacturingDef initObject = new Intersight.Model.CapabilityChassisManufacturingDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1553,6 +1562,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityChassisUpgradeSupportMeta initObject = new Intersight.Model.CapabilityChassisUpgradeSupportMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1701,6 +1711,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityCimcFirmwareDescriptor initObject = new Intersight.Model.CapabilityCimcFirmwareDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1809,6 +1820,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityCpuEndpointDescriptor initObject = new Intersight.Model.CapabilityCpuEndpointDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1893,6 +1905,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityDimmsEndpointDescriptor initObject = new Intersight.Model.CapabilityDimmsEndpointDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1977,6 +1990,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityDrivesEndpointDescriptor initObject = new Intersight.Model.CapabilityDrivesEndpointDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2172,6 +2186,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityEquipmentPhysicalDef initObject = new Intersight.Model.CapabilityEquipmentPhysicalDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2501,6 +2516,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityEquipmentSlotArray initObject = new Intersight.Model.CapabilityEquipmentSlotArray();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2725,6 +2741,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityFanModuleDescriptor initObject = new Intersight.Model.CapabilityFanModuleDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2903,6 +2920,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityFanModuleManufacturingDef initObject = new Intersight.Model.CapabilityFanModuleManufacturingDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3077,6 +3095,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityFeatureConfig initObject = new Intersight.Model.CapabilityFeatureConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3205,6 +3224,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityFexCapabilityDef initObject = new Intersight.Model.CapabilityFexCapabilityDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3357,6 +3377,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityFexDescriptor initObject = new Intersight.Model.CapabilityFexDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3545,6 +3566,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityFexManufacturingDef initObject = new Intersight.Model.CapabilityFexManufacturingDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3661,6 +3683,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityGpuEndpointDescriptor initObject = new Intersight.Model.CapabilityGpuEndpointDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3755,6 +3778,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityHsuIsoFileSupportMeta initObject = new Intersight.Model.CapabilityHsuIsoFileSupportMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3823,6 +3847,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityHsuIsoModelSpecificConstraint initObject = new Intersight.Model.CapabilityHsuIsoModelSpecificConstraint();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3919,6 +3944,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityIoCardCapabilityDef initObject = new Intersight.Model.CapabilityIoCardCapabilityDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4142,6 +4168,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityIoCardDescriptor initObject = new Intersight.Model.CapabilityIoCardDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4348,6 +4375,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityIoCardManufacturingDef initObject = new Intersight.Model.CapabilityIoCardManufacturingDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4470,6 +4498,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityIomUpgradeSupportMeta initObject = new Intersight.Model.CapabilityIomUpgradeSupportMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4598,6 +4627,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityPortGroupAggregationDef initObject = new Intersight.Model.CapabilityPortGroupAggregationDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4718,6 +4748,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityPortRange initObject = new Intersight.Model.CapabilityPortRange();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4753,6 +4784,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightCapabilityProcessorUnitUpdateConstraintMeta()
         {
+            ClassId = CapabilityProcessorUnitUpdateConstraintMeta.ClassIdEnum.CapabilityProcessorUnitUpdateConstraintMeta;
+            ObjectType = CapabilityProcessorUnitUpdateConstraintMeta.ObjectTypeEnum.CapabilityProcessorUnitUpdateConstraintMeta;
 
         }
         // <summary>
@@ -4818,6 +4851,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityProcessorUnitUpdateConstraintMeta initObject = new Intersight.Model.CapabilityProcessorUnitUpdateConstraintMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4966,6 +5000,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityPsuDescriptor initObject = new Intersight.Model.CapabilityPsuDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5144,6 +5179,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityPsuManufacturingDef initObject = new Intersight.Model.CapabilityPsuManufacturingDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5266,6 +5302,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityServerActionsMeta initObject = new Intersight.Model.CapabilityServerActionsMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5334,6 +5371,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityServerComponentConstraint initObject = new Intersight.Model.CapabilityServerComponentConstraint();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5480,6 +5518,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityServerDescriptor initObject = new Intersight.Model.CapabilityServerDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5622,6 +5661,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityServerModelsCapabilityDef initObject = new Intersight.Model.CapabilityServerModelsCapabilityDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5788,6 +5828,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityServerSchemaDescriptor initObject = new Intersight.Model.CapabilityServerSchemaDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5910,6 +5951,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityServerUpgradeSupportMeta initObject = new Intersight.Model.CapabilityServerUpgradeSupportMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6018,6 +6060,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySiocModuleCapabilityDef initObject = new Intersight.Model.CapabilitySiocModuleCapabilityDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6170,6 +6213,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySiocModuleDescriptor initObject = new Intersight.Model.CapabilitySiocModuleDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6348,6 +6392,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySiocModuleManufacturingDef initObject = new Intersight.Model.CapabilitySiocModuleManufacturingDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6403,6 +6448,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightCapabilityStorageControllerUpdateConstraintMeta()
         {
+            ClassId = CapabilityStorageControllerUpdateConstraintMeta.ClassIdEnum.CapabilityStorageControllerUpdateConstraintMeta;
+            ObjectType = CapabilityStorageControllerUpdateConstraintMeta.ObjectTypeEnum.CapabilityStorageControllerUpdateConstraintMeta;
 
         }
         // <summary>
@@ -6468,6 +6515,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityStorageControllerUpdateConstraintMeta initObject = new Intersight.Model.CapabilityStorageControllerUpdateConstraintMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6597,6 +6645,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySwitchCapability initObject = new Intersight.Model.CapabilitySwitchCapability();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6777,6 +6826,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySwitchDescriptor initObject = new Intersight.Model.CapabilitySwitchDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6903,6 +6953,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySwitchEquipmentInfo initObject = new Intersight.Model.CapabilitySwitchEquipmentInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7072,6 +7123,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySwitchManufacturingDef initObject = new Intersight.Model.CapabilitySwitchManufacturingDef();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7318,6 +7370,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySwitchNetworkLimits initObject = new Intersight.Model.CapabilitySwitchNetworkLimits();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7484,6 +7537,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySwitchStorageLimits initObject = new Intersight.Model.CapabilitySwitchStorageLimits();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7590,6 +7644,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySwitchSystemLimits initObject = new Intersight.Model.CapabilitySwitchSystemLimits();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7679,6 +7734,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilitySwitchingModeCapability initObject = new Intersight.Model.CapabilitySwitchingModeCapability();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7773,6 +7829,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityTemplateCatalog initObject = new Intersight.Model.CapabilityTemplateCatalog();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7862,6 +7919,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityUnsupportedFeatureConfig initObject = new Intersight.Model.CapabilityUnsupportedFeatureConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7926,6 +7984,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityUpdateOrderListType initObject = new Intersight.Model.CapabilityUpdateOrderListType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8012,6 +8071,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityUpdateOrderMeta initObject = new Intersight.Model.CapabilityUpdateOrderMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8130,6 +8190,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CapabilityVicDescriptor initObject = new Intersight.Model.CapabilityVicDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

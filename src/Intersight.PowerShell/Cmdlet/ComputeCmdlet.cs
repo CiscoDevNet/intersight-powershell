@@ -4384,6 +4384,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Reset Correctable and Uncorrectable ECC errors on all the DIMMs present in the server.\n* `Ready` - Reset memory errors operation is allowed on the server in this state.\n* `Reset` - Trigger reset memory errors operation on a server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeServerSetting.ResetMemoryErrorsEnum ResetMemoryErrors
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -6475,6 +6486,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Reset Correctable and Uncorrectable ECC errors on all the DIMMs present in the server.\n* `Ready` - Reset memory errors operation is allowed on the server in this state.\n* `Reset` - Trigger reset memory errors operation on a server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeServerSetting.ResetMemoryErrorsEnum ResetMemoryErrors
+        {
+            get;
+            set;
+        }
 
 
 

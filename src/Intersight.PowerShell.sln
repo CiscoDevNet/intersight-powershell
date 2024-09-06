@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intersight.PowerShell", "Intersight.PowerShell\Intersight.PowerShell.csproj", "{E4D54B0C-75CE-4CF9-A035-18BE8C5EA699}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intersight.PowerShell", "Intersight.PowerShell\Intersight.PowerShell.csproj", "{4009D6C8-0673-4225-9D2F-AA79A5371EFE}"
 EndProject
 Project("{951E3E32-4DFA-4091-81DB-4100C2CAB9BE}") = "Intersight.PowerShellTest", "Intersight.PowerShellTest\Intersight.PowerShellTest.csproj", "{7A47A690-0082-435C-B099-04B773D7A651}"
 EndProject
@@ -13,10 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E4D54B0C-75CE-4CF9-A035-18BE8C5EA699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E4D54B0C-75CE-4CF9-A035-18BE8C5EA699}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E4D54B0C-75CE-4CF9-A035-18BE8C5EA699}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E4D54B0C-75CE-4CF9-A035-18BE8C5EA699}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4009D6C8-0673-4225-9D2F-AA79A5371EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4009D6C8-0673-4225-9D2F-AA79A5371EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4009D6C8-0673-4225-9D2F-AA79A5371EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4009D6C8-0673-4225-9D2F-AA79A5371EFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -82,6 +82,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.TemplateTransformationStage initObject = new Intersight.Model.TemplateTransformationStage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

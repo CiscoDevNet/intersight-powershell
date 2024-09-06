@@ -52,6 +52,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorpackConnectorPackUpdate initObject = new Intersight.Model.ConnectorpackConnectorPackUpdate();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -149,6 +150,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorpackConnectorPackUpgrade initObject = new Intersight.Model.ConnectorpackConnectorPackUpgrade();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -251,6 +253,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ConnectorpackUpgradeImpact initObject = new Intersight.Model.ConnectorpackUpgradeImpact();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Interval
-An interval specified as string where valid time units are \&quot;ns\&quot;, \&quot;us\&quot;, \&quot;ms\&quot;, \&quot;s\&quot;, \&quot;m\&quot;, \&quot;h\&quot;. The calender calculations use a gregorian calendar with no leap seconds. The default is 24h.
+An interval specified as string where valid time units are \&quot;s\&quot;, \&quot;m\&quot;, \&quot;h\&quot;. The minimum interval is 15 minutes and the maximum is 24 hours.
 
 ```yaml
 Type: string
