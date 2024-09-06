@@ -72,6 +72,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PartnerintegrationDcLogs initObject = new Intersight.Model.PartnerintegrationDcLogs();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -187,6 +188,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PartnerintegrationDeviceConnector initObject = new Intersight.Model.PartnerintegrationDeviceConnector();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -283,6 +285,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PartnerintegrationDocIssues initObject = new Intersight.Model.PartnerintegrationDocIssues();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -397,6 +400,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PartnerintegrationEtl initObject = new Intersight.Model.PartnerintegrationEtl();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -625,6 +629,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PartnerintegrationFile initObject = new Intersight.Model.PartnerintegrationFile();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -832,6 +837,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PartnerintegrationInventory initObject = new Intersight.Model.PartnerintegrationInventory();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -944,6 +950,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PartnerintegrationLogs initObject = new Intersight.Model.PartnerintegrationLogs();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1058,6 +1065,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PartnerintegrationMetrics initObject = new Intersight.Model.PartnerintegrationMetrics();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1184,6 +1192,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PartnerintegrationMetricsModel initObject = new Intersight.Model.PartnerintegrationMetricsModel();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1310,6 +1319,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PartnerintegrationModel initObject = new Intersight.Model.PartnerintegrationModel();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

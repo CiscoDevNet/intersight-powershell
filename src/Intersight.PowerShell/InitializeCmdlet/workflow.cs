@@ -50,6 +50,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowAbstractResourceSelector initObject = new Intersight.Model.WorkflowAbstractResourceSelector();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -236,6 +237,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowAnsibleBatchExecutor initObject = new Intersight.Model.WorkflowAnsibleBatchExecutor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -494,6 +496,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowAnsiblePlaySession initObject = new Intersight.Model.WorkflowAnsiblePlaySession();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -718,6 +721,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowApi initObject = new Intersight.Model.WorkflowApi();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -918,6 +922,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowArrayDataType initObject = new Intersight.Model.WorkflowArrayDataType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1012,6 +1017,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowArrayItem initObject = new Intersight.Model.WorkflowArrayItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1068,6 +1074,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowAssociatedRoles initObject = new Intersight.Model.WorkflowAssociatedRoles();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1192,6 +1199,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowBaseDataType initObject = new Intersight.Model.WorkflowBaseDataType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1285,6 +1293,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowBaseOperation initObject = new Intersight.Model.WorkflowBaseOperation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1485,6 +1494,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowBatchApiExecutor initObject = new Intersight.Model.WorkflowBatchApiExecutor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1628,6 +1638,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowCancelableType initObject = new Intersight.Model.WorkflowCancelableType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1736,6 +1747,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowCatalog initObject = new Intersight.Model.WorkflowCatalog();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1910,6 +1922,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowCatalogItemDefinition initObject = new Intersight.Model.WorkflowCatalogItemDefinition();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2116,6 +2129,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowCatalogServiceRequest initObject = new Intersight.Model.WorkflowCatalogServiceRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2407,6 +2421,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowCliCommand initObject = new Intersight.Model.WorkflowCliCommand();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2559,6 +2574,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowComments initObject = new Intersight.Model.WorkflowComments();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2663,6 +2679,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowConstraints initObject = new Intersight.Model.WorkflowConstraints();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2745,6 +2762,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowCustomArrayItem initObject = new Intersight.Model.WorkflowCustomArrayItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2825,6 +2843,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowCustomDataProperty initObject = new Intersight.Model.WorkflowCustomDataProperty();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2969,6 +2988,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowCustomDataType initObject = new Intersight.Model.WorkflowCustomDataType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3157,6 +3177,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowCustomDataTypeDefinition initObject = new Intersight.Model.WorkflowCustomDataTypeDefinition();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3253,6 +3274,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowCustomDataTypeProperties initObject = new Intersight.Model.WorkflowCustomDataTypeProperties();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3339,6 +3361,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowDecisionCase initObject = new Intersight.Model.WorkflowDecisionCase();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3477,6 +3500,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowDecisionTask initObject = new Intersight.Model.WorkflowDecisionTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3581,6 +3605,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowDefaultValue initObject = new Intersight.Model.WorkflowDefaultValue();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3666,6 +3691,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowDisplayMeta initObject = new Intersight.Model.WorkflowDisplayMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3821,6 +3847,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowDynamicTemplateParserDataType initObject = new Intersight.Model.WorkflowDynamicTemplateParserDataType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3933,6 +3960,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowEnumEntry initObject = new Intersight.Model.WorkflowEnumEntry();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4077,6 +4105,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowErrorResponseHandler initObject = new Intersight.Model.WorkflowErrorResponseHandler();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4185,6 +4214,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowExpectPrompt initObject = new Intersight.Model.WorkflowExpectPrompt();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4212,6 +4242,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightWorkflowFailureEndTask()
         {
+            ClassId = WorkflowFailureEndTask.ClassIdEnum.WorkflowFailureEndTask;
+            ObjectType = WorkflowFailureEndTask.ObjectTypeEnum.WorkflowFailureEndTask;
 
         }
         // <summary>
@@ -4277,6 +4309,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowFailureEndTask initObject = new Intersight.Model.WorkflowFailureEndTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4375,6 +4408,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowFileDownloadOp initObject = new Intersight.Model.WorkflowFileDownloadOp();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4584,6 +4618,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowFileOperations initObject = new Intersight.Model.WorkflowFileOperations();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4716,6 +4751,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowFileTemplateOp initObject = new Intersight.Model.WorkflowFileTemplateOp();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4840,6 +4876,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowFileTransfer initObject = new Intersight.Model.WorkflowFileTransfer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4970,6 +5007,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowForkTask initObject = new Intersight.Model.WorkflowForkTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5076,6 +5114,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowInitiatorContext initObject = new Intersight.Model.WorkflowInitiatorContext();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5144,6 +5183,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowInternalProperties initObject = new Intersight.Model.WorkflowInternalProperties();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5240,6 +5280,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowJoinTask initObject = new Intersight.Model.WorkflowJoinTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5402,6 +5443,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowLoopTask initObject = new Intersight.Model.WorkflowLoopTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5494,6 +5536,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowMessage initObject = new Intersight.Model.WorkflowMessage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5630,6 +5673,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowMoInventoryDataType initObject = new Intersight.Model.WorkflowMoInventoryDataType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5749,6 +5793,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowMoInventoryProperty initObject = new Intersight.Model.WorkflowMoInventoryProperty();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5827,6 +5872,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowMoReferenceArrayItem initObject = new Intersight.Model.WorkflowMoReferenceArrayItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5897,6 +5943,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowMoReferenceAutoArrayItem initObject = new Intersight.Model.WorkflowMoReferenceAutoArrayItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6037,6 +6084,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowMoReferenceAutoDataType initObject = new Intersight.Model.WorkflowMoReferenceAutoDataType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6165,6 +6213,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowMoReferenceAutoProperty initObject = new Intersight.Model.WorkflowMoReferenceAutoProperty();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6317,6 +6366,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowMoReferenceDataType initObject = new Intersight.Model.WorkflowMoReferenceDataType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6445,6 +6495,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowMoReferenceProperty initObject = new Intersight.Model.WorkflowMoReferenceProperty();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6538,6 +6589,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowOperationTypeDecommission initObject = new Intersight.Model.WorkflowOperationTypeDecommission();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6565,6 +6617,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightWorkflowOperationTypeDeployment()
         {
+            ClassId = WorkflowOperationTypeDeployment.ClassIdEnum.WorkflowOperationTypeDeployment;
+            ObjectType = WorkflowOperationTypeDeployment.ObjectTypeEnum.WorkflowOperationTypeDeployment;
             OperationType = WorkflowOperationTypeDeployment.OperationTypeEnum.PostDeployment;
 
         }
@@ -6611,6 +6665,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowOperationTypeDeployment initObject = new Intersight.Model.WorkflowOperationTypeDeployment();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6702,6 +6757,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowOperationTypePostDeployment initObject = new Intersight.Model.WorkflowOperationTypePostDeployment();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6821,6 +6877,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowParameterSet initObject = new Intersight.Model.WorkflowParameterSet();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7037,6 +7094,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowPowerShellApi initObject = new Intersight.Model.WorkflowPowerShellApi();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7289,6 +7347,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowPowerShellBatchApiExecutor initObject = new Intersight.Model.WorkflowPowerShellBatchApiExecutor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7411,6 +7470,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowPrimitiveArrayItem initObject = new Intersight.Model.WorkflowPrimitiveArrayItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7512,6 +7572,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowPrimitiveDataProperty initObject = new Intersight.Model.WorkflowPrimitiveDataProperty();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7664,6 +7725,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowPrimitiveDataType initObject = new Intersight.Model.WorkflowPrimitiveDataType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7835,6 +7897,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowProperties initObject = new Intersight.Model.WorkflowProperties();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7933,6 +7996,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowResourceInlineSelector initObject = new Intersight.Model.WorkflowResourceInlineSelector();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8013,6 +8077,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowResourceSelectorCriteria initObject = new Intersight.Model.WorkflowResourceSelectorCriteria();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8040,6 +8105,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightWorkflowResultHandler()
         {
+            ClassId = WorkflowResultHandler.ClassIdEnum.WorkflowResultHandler;
+            ObjectType = WorkflowResultHandler.ObjectTypeEnum.WorkflowResultHandler;
 
         }
         // <summary>
@@ -8075,6 +8142,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowResultHandler initObject = new Intersight.Model.WorkflowResultHandler();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8191,6 +8259,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowRollbackTask initObject = new Intersight.Model.WorkflowRollbackTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8332,6 +8401,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowRollbackWorkflow initObject = new Intersight.Model.WorkflowRollbackWorkflow();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -8442,6 +8512,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowRollbackWorkflowTask initObject = new Intersight.Model.WorkflowRollbackWorkflowTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8531,6 +8602,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowSelectorProperty initObject = new Intersight.Model.WorkflowSelectorProperty();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8558,6 +8630,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightWorkflowSequenceParams()
         {
+            ClassId = WorkflowSequenceParams.ClassIdEnum.WorkflowSequenceParams;
+            ObjectType = WorkflowSequenceParams.ObjectTypeEnum.WorkflowSequenceParams;
 
         }
         // <summary>
@@ -8593,6 +8667,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowSequenceParams initObject = new Intersight.Model.WorkflowSequenceParams();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8729,6 +8804,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowSerialLoopTask initObject = new Intersight.Model.WorkflowSerialLoopTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9008,6 +9084,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemActionDefinition initObject = new Intersight.Model.WorkflowServiceItemActionDefinition();
             if (this.MyInvocation.BoundParameters.ContainsKey("ActionProperties"))
             {
@@ -9231,6 +9308,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemActionInstance initObject = new Intersight.Model.WorkflowServiceItemActionInstance();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -9344,6 +9422,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemActionProperties initObject = new Intersight.Model.WorkflowServiceItemActionProperties();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9478,6 +9557,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemActionWorkflowDefinition initObject = new Intersight.Model.WorkflowServiceItemActionWorkflowDefinition();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9622,6 +9702,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemAttribute initObject = new Intersight.Model.WorkflowServiceItemAttribute();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -9844,6 +9925,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemDefinition initObject = new Intersight.Model.WorkflowServiceItemDefinition();
             if (this.MyInvocation.BoundParameters.ContainsKey("ActionDefinitions"))
             {
@@ -10047,6 +10129,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemHealthCheckDefinition initObject = new Intersight.Model.WorkflowServiceItemHealthCheckDefinition();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10159,6 +10242,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemHealthCheckExecution initObject = new Intersight.Model.WorkflowServiceItemHealthCheckExecution();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10253,6 +10337,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemInputDefinitionType initObject = new Intersight.Model.WorkflowServiceItemInputDefinitionType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10421,6 +10506,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemInstance initObject = new Intersight.Model.WorkflowServiceItemInstance();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10567,6 +10653,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemOutput initObject = new Intersight.Model.WorkflowServiceItemOutput();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10683,6 +10770,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowServiceItemType initObject = new Intersight.Model.WorkflowServiceItemType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -10885,6 +10973,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowSshBatchExecutor initObject = new Intersight.Model.WorkflowSshBatchExecutor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11073,6 +11162,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowSshCmd initObject = new Intersight.Model.WorkflowSshCmd();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11241,6 +11331,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowSshConfig initObject = new Intersight.Model.WorkflowSshConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11510,6 +11601,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowSshSession initObject = new Intersight.Model.WorkflowSshSession();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11678,6 +11770,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowStartTask initObject = new Intersight.Model.WorkflowStartTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11860,6 +11953,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowSubWorkflowTask initObject = new Intersight.Model.WorkflowSubWorkflowTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -11923,6 +12017,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightWorkflowSuccessEndTask()
         {
+            ClassId = WorkflowSuccessEndTask.ClassIdEnum.WorkflowSuccessEndTask;
+            ObjectType = WorkflowSuccessEndTask.ObjectTypeEnum.WorkflowSuccessEndTask;
 
         }
         // <summary>
@@ -11988,6 +12084,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowSuccessEndTask initObject = new Intersight.Model.WorkflowSuccessEndTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12056,6 +12153,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTargetContext initObject = new Intersight.Model.WorkflowTargetContext();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12232,6 +12330,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTargetDataType initObject = new Intersight.Model.WorkflowTargetDataType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12396,6 +12495,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTargetProperty initObject = new Intersight.Model.WorkflowTargetProperty();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12486,6 +12586,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTaskConstraints initObject = new Intersight.Model.WorkflowTaskConstraints();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12586,6 +12687,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTaskDebugLog initObject = new Intersight.Model.WorkflowTaskDebugLog();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12788,6 +12890,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTaskDefinition initObject = new Intersight.Model.WorkflowTaskDefinition();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -12926,6 +13029,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTaskInfo initObject = new Intersight.Model.WorkflowTaskInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13025,6 +13129,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTaskInfoUpdate initObject = new Intersight.Model.WorkflowTaskInfoUpdate();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13093,6 +13198,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTaskLoopInfo initObject = new Intersight.Model.WorkflowTaskLoopInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13219,6 +13325,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTaskMetadata initObject = new Intersight.Model.WorkflowTaskMetadata();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13303,6 +13410,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTaskRetryInfo initObject = new Intersight.Model.WorkflowTaskRetryInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13409,6 +13517,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTemplateEvaluation initObject = new Intersight.Model.WorkflowTemplateEvaluation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13505,6 +13614,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTemplateFunctionMeta initObject = new Intersight.Model.WorkflowTemplateFunctionMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13599,6 +13709,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowTemplateParser initObject = new Intersight.Model.WorkflowTemplateParser();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13717,6 +13828,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowUiDisplayMetadata initObject = new Intersight.Model.WorkflowUiDisplayMetadata();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13813,6 +13925,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowUiFormConfig initObject = new Intersight.Model.WorkflowUiFormConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13907,6 +14020,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowUiInputFilter initObject = new Intersight.Model.WorkflowUiInputFilter();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -13995,6 +14109,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowUiViewConfig initObject = new Intersight.Model.WorkflowUiViewConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14059,6 +14174,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowValidationError initObject = new Intersight.Model.WorkflowValidationError();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14115,6 +14231,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowValidationInformation initObject = new Intersight.Model.WorkflowValidationInformation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14271,6 +14388,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWaitTask initObject = new Intersight.Model.WorkflowWaitTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14408,6 +14526,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWaitTaskPrompt initObject = new Intersight.Model.WorkflowWaitTaskPrompt();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14671,6 +14790,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWebApi initObject = new Intersight.Model.WorkflowWebApi();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -14913,6 +15033,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWorkerTask initObject = new Intersight.Model.WorkflowWorkerTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -15023,6 +15144,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWorkflowCtx initObject = new Intersight.Model.WorkflowWorkflowCtx();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -15263,6 +15385,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWorkflowDefinition initObject = new Intersight.Model.WorkflowWorkflowDefinition();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -15354,6 +15477,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightWorkflowWorkflowEngineProperties()
         {
+            ClassId = WorkflowWorkflowEngineProperties.ClassIdEnum.WorkflowWorkflowEngineProperties;
+            ObjectType = WorkflowWorkflowEngineProperties.ObjectTypeEnum.WorkflowWorkflowEngineProperties;
 
         }
         // <summary>
@@ -15389,6 +15514,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWorkflowEngineProperties initObject = new Intersight.Model.WorkflowWorkflowEngineProperties();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -15596,6 +15722,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWorkflowInfo initObject = new Intersight.Model.WorkflowWorkflowInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -15675,6 +15802,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightWorkflowWorkflowInfoAutoRestartProperties()
         {
+            ClassId = WorkflowWorkflowInfoAutoRestartProperties.ClassIdEnum.WorkflowWorkflowInfoAutoRestartProperties;
+            ObjectType = WorkflowWorkflowInfoAutoRestartProperties.ObjectTypeEnum.WorkflowWorkflowInfoAutoRestartProperties;
 
         }
         // <summary>
@@ -15710,6 +15839,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWorkflowInfoAutoRestartProperties initObject = new Intersight.Model.WorkflowWorkflowInfoAutoRestartProperties();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -15766,6 +15896,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWorkflowInfoProperties initObject = new Intersight.Model.WorkflowWorkflowInfoProperties();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -15892,6 +16023,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWorkflowMetadata initObject = new Intersight.Model.WorkflowWorkflowMetadata();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -16048,6 +16180,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWorkflowProperties initObject = new Intersight.Model.WorkflowWorkflowProperties();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -16160,6 +16293,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowWorkflowTask initObject = new Intersight.Model.WorkflowWorkflowTask();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -16191,6 +16325,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightWorkflowXmlApi()
         {
+            ClassId = WorkflowXmlApi.ClassIdEnum.WorkflowXmlApi;
+            ObjectType = WorkflowXmlApi.ObjectTypeEnum.WorkflowXmlApi;
 
         }
         // <summary>
@@ -16336,6 +16472,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkflowXmlApi initObject = new Intersight.Model.WorkflowXmlApi();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

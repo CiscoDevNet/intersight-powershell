@@ -82,6 +82,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.RproxyReverseProxy initObject = new Intersight.Model.RproxyReverseProxy();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {

@@ -30,7 +30,7 @@ namespace Intersight.PowerShell
                     throw new Exception(string.Format("{0} ModelObject should not be null", this.MyInvocation.InvocationName));
                 }
 
-                ProcessRelationshipParam();
+                PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
 
                 var propertyList = this.ModelObject.GetType().GetProperties();
                 foreach (var item in propertyList)

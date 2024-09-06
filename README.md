@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.18012
-- C# SDK version: 1.0.11.18012
+- Intersight.PowerShell version: 1.0.11.18369
+- C# SDK version: 1.0.11.18369
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.18012"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.18369"}
 ```
 or
 
@@ -1148,6 +1148,7 @@ DnacSiteIpPool | [**Get-IntersightDnacSiteIpPool**](docs/Get-IntersightDnacSiteI
 DnacTemplate | [**Get-IntersightDnacTemplate**](docs/Get-IntersightDnacTemplate.md) | Read a 'DnacTemplate' resource.
 DnacTransit | [**Get-IntersightDnacTransit**](docs/Get-IntersightDnacTransit.md) | Read a 'DnacTransit' resource.
 DnacVirtualNetworkFabricSite | [**Get-IntersightDnacVirtualNetworkFabricSite**](docs/Get-IntersightDnacVirtualNetworkFabricSite.md) | Read a 'DnacVirtualNetworkFabricSite' resource.
+EnergyMetrics | [**New-IntersightEnergyMetrics**](docs/New-IntersightEnergyMetrics.md) | Create a 'EnergyMetrics' resource.
 EquipmentChassis | [**Get-IntersightEquipmentChassis**](docs/Get-IntersightEquipmentChassis.md) | Read a 'EquipmentChassis' resource.
 EquipmentChassisIdPool | [**Get-IntersightEquipmentChassisIdPool**](docs/Get-IntersightEquipmentChassisIdPool.md) | Read a 'EquipmentChassisIdPool' resource.
 EquipmentChassisIdentity | [**Get-IntersightEquipmentChassisIdentity**](docs/Get-IntersightEquipmentChassisIdentity.md) | Read a 'EquipmentChassisIdentity' resource.

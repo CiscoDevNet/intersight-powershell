@@ -52,6 +52,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeAlarmSummary initObject = new Intersight.Model.ComputeAlarmSummary();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -470,6 +471,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeBlade initObject = new Intersight.Model.ComputeBlade();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -721,6 +723,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeBladeIdentity initObject = new Intersight.Model.ComputeBladeIdentity();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -817,6 +820,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeBoard initObject = new Intersight.Model.ComputeBoard();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -951,6 +955,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeDownloadStatus initObject = new Intersight.Model.ComputeDownloadStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1076,6 +1081,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeHostUtilityOperation initObject = new Intersight.Model.ComputeHostUtilityOperation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1148,6 +1154,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeIpAddress initObject = new Intersight.Model.ComputeIpAddress();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1234,6 +1241,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeMapping initObject = new Intersight.Model.ComputeMapping();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1265,6 +1273,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightComputePendingWorkflowTrigger()
         {
+            ClassId = ComputePendingWorkflowTrigger.ClassIdEnum.ComputePendingWorkflowTrigger;
+            ObjectType = ComputePendingWorkflowTrigger.ObjectTypeEnum.ComputePendingWorkflowTrigger;
 
         }
         // <summary>
@@ -1300,6 +1310,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputePendingWorkflowTrigger initObject = new Intersight.Model.ComputePendingWorkflowTrigger();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1376,6 +1387,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputePersistentMemoryModule initObject = new Intersight.Model.ComputePersistentMemoryModule();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1471,6 +1483,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputePersistentMemoryOperation initObject = new Intersight.Model.ComputePersistentMemoryOperation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1559,6 +1572,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputePersonality initObject = new Intersight.Model.ComputePersonality();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1643,6 +1657,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputePersonalitySetting initObject = new Intersight.Model.ComputePersonalitySetting();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalInformation"))
             {
@@ -1738,6 +1753,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputePhysicalSummary initObject = new Intersight.Model.ComputePhysicalSummary();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2178,6 +2194,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeRackUnit initObject = new Intersight.Model.ComputeRackUnit();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2433,6 +2450,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeRackUnitIdentity initObject = new Intersight.Model.ComputeRackUnitIdentity();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2529,6 +2547,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeServerConfig initObject = new Intersight.Model.ComputeServerConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2613,6 +2632,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeServerIdPool initObject = new Intersight.Model.ComputeServerIdPool();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2698,6 +2718,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeServerOpStatus initObject = new Intersight.Model.ComputeServerOpStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2833,6 +2854,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeServerPowerPolicy initObject = new Intersight.Model.ComputeServerPowerPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2889,6 +2911,7 @@ namespace Intersight.PowerShell
             FrontPanelLockState = ComputeServerSetting.FrontPanelLockStateEnum.None;
             KvmReset = ComputeServerSetting.KvmResetEnum.Ready;
             ObjectType = ComputeServerSetting.ObjectTypeEnum.ComputeServerSetting;
+            ResetMemoryErrors = ComputeServerSetting.ResetMemoryErrorsEnum.Ready;
             TpmReset = ComputeServerSetting.TpmResetEnum.None;
             TunneledKvmState = ComputeServerSetting.TunneledKvmStateEnum.Ready;
 
@@ -3054,6 +3077,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Reset Correctable and Uncorrectable ECC errors on all the DIMMs present in the server.\n* `Ready` - Reset memory errors operation is allowed on the server in this state.\n* `Reset` - Trigger reset memory errors operation on a server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeServerSetting.ResetMemoryErrorsEnum ResetMemoryErrors
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The common server configurable properties between a server and a server profile."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -3146,6 +3179,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeServerSetting initObject = new Intersight.Model.ComputeServerSetting();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3204,6 +3238,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PersonalitySetting"))
             {
                 initObject.PersonalitySetting = this.PersonalitySetting;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResetMemoryErrors"))
+            {
+                initObject.ResetMemoryErrors = this.ResetMemoryErrors;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ServerConfig"))
             {
@@ -3331,6 +3369,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeStorageControllerOperation initObject = new Intersight.Model.ComputeStorageControllerOperation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3413,6 +3452,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeStoragePhysicalDrive initObject = new Intersight.Model.ComputeStoragePhysicalDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3514,6 +3554,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeStoragePhysicalDriveOperation initObject = new Intersight.Model.ComputeStoragePhysicalDriveOperation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3617,6 +3658,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeStorageUtilityImageOperation initObject = new Intersight.Model.ComputeStorageUtilityImageOperation();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -3695,6 +3737,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeStorageVirtualDrive initObject = new Intersight.Model.ComputeStorageVirtualDrive();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3786,6 +3829,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeStorageVirtualDriveOperation initObject = new Intersight.Model.ComputeStorageVirtualDriveOperation();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3884,6 +3928,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ComputeVmedia initObject = new Intersight.Model.ComputeVmedia();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

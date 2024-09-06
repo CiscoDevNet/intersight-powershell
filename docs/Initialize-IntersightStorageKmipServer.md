@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableDriveSecurity
-Enable the selected KMIP Server configuration for encryption. This flag just enables the drive security and only after remote key setting configured, the actual encryption will be done.
+Enable the selected KMIP Server configuration for security. This flag just enables the drive security and only after remote key setting configured, the actual security will be applied.
 
 ```yaml
 Type: bool

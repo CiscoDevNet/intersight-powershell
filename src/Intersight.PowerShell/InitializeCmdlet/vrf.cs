@@ -92,6 +92,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.VrfVrf initObject = new Intersight.Model.VrfVrf();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

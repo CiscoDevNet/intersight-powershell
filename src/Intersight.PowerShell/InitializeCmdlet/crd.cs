@@ -172,6 +172,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CrdCustomResource initObject = new Intersight.Model.CrdCustomResource();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -296,6 +297,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CrdCustomResourceConfigProperty initObject = new Intersight.Model.CrdCustomResourceConfigProperty();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

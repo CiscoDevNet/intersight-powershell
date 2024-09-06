@@ -933,18 +933,6 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description">"Platform for which the constraint is to be enforced."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string SupportedPlatform
-        {
-            get;
-            set;
-        }
-
-
 
 
 
@@ -4897,7 +4885,6 @@ namespace Intersight.PowerShell
 
 
 
-
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityPsuDescriptor.</para>
@@ -6562,7 +6549,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-
 
 
 

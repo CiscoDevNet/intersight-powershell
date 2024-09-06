@@ -34,7 +34,7 @@ namespace Intersight.PowerShell
                     throw new Exception("Moid cannot be empty or null.");
                 }
 
-                ProcessRelationshipParam();
+                PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
                 var changedProperties = GetChangedProperty();
                 var propertyInfos = this.ModelObject.GetType().GetProperties();
                 foreach (var propertyInfo in propertyInfos)

@@ -52,6 +52,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkApiResult initObject = new Intersight.Model.BulkApiResult();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -209,6 +210,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkExport initObject = new Intersight.Model.BulkExport();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -325,6 +327,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkExportedItem initObject = new Intersight.Model.BulkExportedItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -389,6 +392,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkHttpHeader initObject = new Intersight.Model.BulkHttpHeader();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -515,6 +519,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkMoCloner initObject = new Intersight.Model.BulkMoCloner();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -690,6 +695,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkMoDeepCloner initObject = new Intersight.Model.BulkMoDeepCloner();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -863,6 +869,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkMoMerger initObject = new Intersight.Model.BulkMoMerger();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -914,6 +921,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightBulkMultiRelationEntryPatch()
         {
+            ClassId = BulkMultiRelationEntryPatch.ClassIdEnum.BulkMultiRelationEntryPatch;
+            ObjectType = BulkMultiRelationEntryPatch.ObjectTypeEnum.BulkMultiRelationEntryPatch;
 
         }
         // <summary>
@@ -949,6 +958,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkMultiRelationEntryPatch initObject = new Intersight.Model.BulkMultiRelationEntryPatch();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -968,6 +978,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightBulkPatchContent()
         {
+            ClassId = BulkPatchContent.ClassIdEnum.BulkPatchContent;
+            ObjectType = BulkPatchContent.ObjectTypeEnum.BulkPatchContent;
 
         }
         // <summary>
@@ -1003,6 +1015,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkPatchContent initObject = new Intersight.Model.BulkPatchContent();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1151,6 +1164,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkRequest initObject = new Intersight.Model.BulkRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("ActionOnError"))
             {
@@ -1243,6 +1257,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkRestResult initObject = new Intersight.Model.BulkRestResult();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1340,6 +1355,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkRestSubRequest initObject = new Intersight.Model.BulkRestSubRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1452,6 +1468,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkResult initObject = new Intersight.Model.BulkResult();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1487,6 +1504,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightBulkSecResourceRoles()
         {
+            ClassId = BulkSecResourceRoles.ClassIdEnum.BulkSecResourceRoles;
+            ObjectType = BulkSecResourceRoles.ObjectTypeEnum.BulkSecResourceRoles;
 
         }
         // <summary>
@@ -1522,6 +1541,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkSecResourceRoles initObject = new Intersight.Model.BulkSecResourceRoles();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1599,6 +1619,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkSubRequest initObject = new Intersight.Model.BulkSubRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1734,6 +1755,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkSubRequestObj initObject = new Intersight.Model.BulkSubRequestObj();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

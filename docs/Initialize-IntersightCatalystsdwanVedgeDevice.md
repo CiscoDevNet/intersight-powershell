@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCatalystsdwanVedgeDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CatalystsdwanVedgeDevice.ClassIdEnum>][-ConfigStatusMessage< string>][-DeviceState< string>][-HostName< string>][-Moid< string>][-ObjectType< CatalystsdwanVedgeDevice.ObjectTypeEnum>][-PlatformFamily< string>][-Reachability< string>][-SiteId< string>][-SiteName< string>][-SpOrganizationName< string>][-SystemIp< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateStatus< string>][-Validity< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCatalystsdwanVedgeDevice [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CatalystsdwanVedgeDevice.ClassIdEnum>][-ConfigStatusMessage< string>][-DeviceId< string>][-DeviceState< string>][-HostName< string>][-Moid< string>][-ObjectType< CatalystsdwanVedgeDevice.ObjectTypeEnum>][-PlatformFamily< string>][-Reachability< string>][-SiteId< string>][-SiteName< string>][-SpOrganizationName< string>][-SystemIp< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateStatus< string>][-Validity< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -56,6 +56,21 @@ Accept wildcard characters: False
 
 ### -ConfigStatusMessage
 The Catalyst SDWAN device config status message.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DeviceId
+The Catalyst SDWAN device id.
 
 ```yaml
 Type: string

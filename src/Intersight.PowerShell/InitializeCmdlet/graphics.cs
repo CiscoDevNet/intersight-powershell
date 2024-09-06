@@ -112,6 +112,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.GraphicsCard initObject = new Intersight.Model.GraphicsCard();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -212,6 +213,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.GraphicsController initObject = new Intersight.Model.GraphicsController();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

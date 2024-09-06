@@ -83,6 +83,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.OauthAccessToken initObject = new Intersight.Model.OauthAccessToken();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -202,6 +203,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.OauthAuthorization initObject = new Intersight.Model.OauthAuthorization();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

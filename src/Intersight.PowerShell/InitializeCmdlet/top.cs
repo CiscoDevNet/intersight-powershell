@@ -102,6 +102,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.TopSystem initObject = new Intersight.Model.TopSystem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

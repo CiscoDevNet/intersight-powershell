@@ -112,6 +112,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.EtherHostPort initObject = new Intersight.Model.EtherHostPort();
             if (this.MyInvocation.BoundParameters.ContainsKey("AcknowledgedPeerInterface"))
             {
@@ -252,6 +253,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.EtherNetworkPort initObject = new Intersight.Model.EtherNetworkPort();
             if (this.MyInvocation.BoundParameters.ContainsKey("AcknowledgedPeerInterface"))
             {
@@ -372,6 +374,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.EtherPhysicalPort initObject = new Intersight.Model.EtherPhysicalPort();
             if (this.MyInvocation.BoundParameters.ContainsKey("AcknowledgedPeerInterface"))
             {
@@ -474,6 +477,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.EtherPortChannel initObject = new Intersight.Model.EtherPortChannel();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

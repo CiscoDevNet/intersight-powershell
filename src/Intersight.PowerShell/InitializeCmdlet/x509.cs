@@ -62,6 +62,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.X509Certificate initObject = new Intersight.Model.X509Certificate();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

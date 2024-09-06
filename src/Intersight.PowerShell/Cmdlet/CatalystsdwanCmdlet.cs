@@ -382,6 +382,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The Catalyst SDWAN device id."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceId
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The database identifier of the registered device of an object."</para>

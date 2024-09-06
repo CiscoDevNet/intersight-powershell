@@ -24,7 +24,7 @@ Create a &apos;SchedulerTaskSchedule&apos; resource.
 ## PARAMETERS
 
 ### -Action
-The action of the scheduled task such as suspend or resume.\n* `None` - No action is set (default).\n* `Suspend` - Suspend a scheduled task indefinitely.\n* `Resume` - Resume a suspended scheduled task.\n* `SuspendTill` - Suspend the scheduled task until a specified end-date.
+The action of the scheduled task such as suspend or resume.\n* `None` - No action is set (default).\n* `Suspend` - Suspend a scheduled task indefinitely.\n* `Resume` - Resume a suspended scheduled task.\n* `SuspendTill` - Suspend the scheduled task until a specified end-date. Not supported in this release.
 
 ```yaml
 Type: SchedulerTaskSchedule.ActionEnum
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScheduleParams
-According to the schedule type this property is evaluated. If the property Type is set to OneTime, then the ObjectType must be scheduler.OneTimeScheduleParams.
+According to the schedule type this property is evaluated. If the property Type is set to OneTime, then the ObjectType must be scheduler.OneTimeScheduleParams. If the Type is Recurring, then the ObjectType must be scheduler.RecurringScheduleParams.
 
 Note :- Use Initialize-IntersightSchedulerBaseScheduleParams to create the object of complex type SchedulerBaseScheduleParams
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-An Enum describing the type of scheduler to use.\n* `None` - No value was set for the schedule type (Enum value None).\n* `OneTime` - Define a one-time task execution time that will not automatically repeat.\n* `Recurring` - Specify a recurring task cadence based on a predefined pattern, such as daily, weekly, monthly, yearly, or every &lt;interval&gt; pattern. This option is not currently supported.
+An Enum describing the type of scheduler to use.\n* `None` - No value was set for the schedule type (Enum value None).\n* `OneTime` - Define a one-time task execution time that will not automatically repeat.\n* `Recurring` - Specify a recurring task cadence based on a predefined pattern, such as daily, weekly, monthly, or every &lt;interval&gt; pattern.
 
 ```yaml
 Type: SchedulerTaskSchedule.TypeEnum

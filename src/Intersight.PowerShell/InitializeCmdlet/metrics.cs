@@ -142,6 +142,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.MetricsMetricCriterion initObject = new Intersight.Model.MetricsMetricCriterion();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -344,6 +345,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.MetricsMetricsExploration initObject = new Intersight.Model.MetricsMetricsExploration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

@@ -15,6 +15,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightSearchSearchItem()
         {
+            ClassId = SearchSearchItem.ClassIdEnum.SearchSearchItem;
+            ObjectType = SearchSearchItem.ObjectTypeEnum.SearchSearchItem;
 
         }
         // <summary>
@@ -70,6 +72,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SearchSearchItem initObject = new Intersight.Model.SearchSearchItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -154,6 +157,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SearchTagItem initObject = new Intersight.Model.SearchTagItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

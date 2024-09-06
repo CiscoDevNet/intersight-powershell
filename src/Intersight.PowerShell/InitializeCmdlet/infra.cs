@@ -80,6 +80,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.InfraBaseGpuConfiguration initObject = new Intersight.Model.InfraBaseGpuConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -111,6 +112,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightInfraGpuConfiguration()
         {
+            ClassId = InfraGpuConfiguration.ClassIdEnum.InfraGpuConfiguration;
+            ObjectType = InfraGpuConfiguration.ObjectTypeEnum.InfraGpuConfiguration;
 
         }
         // <summary>
@@ -176,6 +179,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.InfraGpuConfiguration initObject = new Intersight.Model.InfraGpuConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -274,6 +278,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.InfraHardwareInfo initObject = new Intersight.Model.InfraHardwareInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -342,6 +347,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.InfraMetaData initObject = new Intersight.Model.InfraMetaData();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -438,6 +444,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.InfraMigGpuConfiguration initObject = new Intersight.Model.InfraMigGpuConfiguration();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

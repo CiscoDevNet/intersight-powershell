@@ -73,6 +73,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.MotemplateActionEntry initObject = new Intersight.Model.MotemplateActionEntry();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -158,6 +159,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.MotemplateActionParam initObject = new Intersight.Model.MotemplateActionParam();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -222,6 +224,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.MotemplateSyncError initObject = new Intersight.Model.MotemplateSyncError();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

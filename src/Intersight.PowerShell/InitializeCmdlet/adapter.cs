@@ -112,6 +112,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterAdapterConfig initObject = new Intersight.Model.AdapterAdapterConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -262,6 +263,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterConfigPolicy initObject = new Intersight.Model.AdapterConfigPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -367,6 +369,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterDceInterfaceSettings initObject = new Intersight.Model.AdapterDceInterfaceSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -441,6 +444,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterEthSettings initObject = new Intersight.Model.AdapterEthSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -551,6 +555,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterExtEthInterface initObject = new Intersight.Model.AdapterExtEthInterface();
             if (this.MyInvocation.BoundParameters.ContainsKey("AcknowledgedPeerInterface"))
             {
@@ -637,6 +642,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterFcSettings initObject = new Intersight.Model.AdapterFcSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -808,6 +814,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterHostEthInterface initObject = new Intersight.Model.AdapterHostEthInterface();
             if (this.MyInvocation.BoundParameters.ContainsKey("AcknowledgedPeerInterface"))
             {
@@ -969,6 +976,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterHostFcInterface initObject = new Intersight.Model.AdapterHostFcInterface();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1069,6 +1077,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterHostIscsiInterface initObject = new Intersight.Model.AdapterHostIscsiInterface();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1143,6 +1152,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterPhysicalNicModeSettings initObject = new Intersight.Model.AdapterPhysicalNicModeSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1213,6 +1223,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterPortChannelSettings initObject = new Intersight.Model.AdapterPortChannelSettings();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1303,6 +1314,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterUnit initObject = new Intersight.Model.AdapterUnit();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdapterUnitExpander"))
             {
@@ -1401,6 +1413,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.AdapterUnitExpander initObject = new Intersight.Model.AdapterUnitExpander();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdapterUnit"))
             {

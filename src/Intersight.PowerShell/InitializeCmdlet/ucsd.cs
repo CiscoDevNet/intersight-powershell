@@ -92,6 +92,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UcsdBackupInfo initObject = new Intersight.Model.UcsdBackupInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -164,6 +165,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UcsdConnectorPack initObject = new Intersight.Model.UcsdConnectorPack();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -280,6 +282,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.UcsdUcsdRestoreParameters initObject = new Intersight.Model.UcsdUcsdRestoreParameters();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

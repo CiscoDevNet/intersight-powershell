@@ -1875,7 +1875,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Enables/disables the drive encryption on all the drives used in this policy. This flag just enables the drive security and only after remote key setting configured, the actual encryption will be done."</para>
+        /// <para type="description">"Enables/disables the drive security on all the drives used in this policy. This flag just enables the drive security and only after Remote/Manual key setting configured, the actual security will be applied."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -29514,7 +29514,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Enables/disables the drive encryption on all the drives used in this policy. This flag just enables the drive security and only after remote key setting configured, the actual encryption will be done."</para>
+        /// <para type="description">"Enables/disables the drive security on all the drives used in this policy. This flag just enables the drive security and only after Remote/Manual key setting configured, the actual security will be applied."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -29600,7 +29600,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Key details for supporting disk encryption."</para>
+        /// <para type="description">"Key details for supporting drive security."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -30512,7 +30512,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Enables/disables the drive encryption on all the drives used in this policy. This flag just enables the drive security and only after remote key setting configured, the actual encryption will be done."</para>
+        /// <para type="description">"Enables/disables the drive security on all the drives used in this policy. This flag just enables the drive security and only after Remote/Manual key setting configured, the actual security will be applied."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -30598,7 +30598,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Key details for supporting disk encryption."</para>
+        /// <para type="description">"Key details for supporting drive security."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

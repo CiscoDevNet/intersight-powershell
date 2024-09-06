@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSchedulerMonthlyCadenceParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerMonthlyCadenceParams.ClassIdEnum>][-CustomDayOfMonth< SchedulerMonthlyCadenceParams.CustomDayOfMonthEnum>][-DayOfMonth< System.Collections.Generic.List`1[long]>][-ObjectType< SchedulerMonthlyCadenceParams.ObjectTypeEnum>][-WeekDayFormat< Model.SchedulerMonthlyWeekDayFormat>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSchedulerMonthlyCadenceParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerMonthlyCadenceParams.ClassIdEnum>][-CustomDayOfMonth< SchedulerMonthlyCadenceParams.CustomDayOfMonthEnum>][-DayOfMonth< System.Collections.Generic.List`1[long]>][-ObjectType< SchedulerMonthlyCadenceParams.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -99,23 +99,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -WeekDayFormat
-A format with the week and specific days as arguments.
-
-Note :- Use Initialize-IntersightSchedulerMonthlyWeekDayFormat to create the object of complex type SchedulerMonthlyWeekDayFormat
-
-```yaml
-Type: Model.SchedulerMonthlyWeekDayFormat
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Json
 Returns the json payload received in response.
 
@@ -172,5 +155,3 @@ PS C:\> Initialize-IntersightSchedulerMonthlyCadenceParams
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightSchedulerMonthlyWeekDayFormat](./Initialize-IntersightSchedulerMonthlyWeekDayFormat.md)

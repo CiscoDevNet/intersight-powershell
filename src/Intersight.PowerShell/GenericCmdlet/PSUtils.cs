@@ -368,5 +368,79 @@ namespace Intersight.PowerShell
             }
             return false;
         }
+        /// <summary>
+        /// Process Relationship parameter and convert non MoMoRef object
+        /// to MoMoRef.
+        /// </summary>
+        public static void ProcessRelationshipParam(Dictionary<string, object> boundParameters)
+        {
+            foreach (var item in boundParameters)
+            {
+                if (item.Value == null)
+                    continue;
+
+                var itemValue = item.Value;
+                var valueType = itemValue.GetType();
+
+                if (valueType.Name == "List`1")
+                {
+                    var listTypes = valueType.GetGenericArguments();
+                    if (listTypes != null && listTypes.Length > 0 && !listTypes[0].Name.EndsWith("Relationship"))
+                    {
+                        continue;
+                    }
+
+                    var processedList = new List<object>();
+                    foreach (var innerItem in (IList)itemValue)
+                    {
+                        ConvertManagedObjectToMoRef(innerItem);
+                    }
+                }
+                else if (valueType.Name.EndsWith("Relationship"))
+                {
+                    ConvertManagedObjectToMoRef(itemValue);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Convert Non MoMoRef object to MoMoRef object for a relationship object. 
+        /// </summary>
+        /// <param name="managedObject"></param>
+        public static void ConvertManagedObjectToMoRef(object managedObject)
+        {
+            var valueTypeName = managedObject.GetType().Name;
+            if (!valueTypeName.EndsWith("Relationship"))
+            {
+                return;
+            }
+
+            object actualInstance = null;
+            var actualInstanceInfo = managedObject.GetType().GetProperty("ActualInstance");
+
+            if (actualInstanceInfo != null)
+            {
+                actualInstance = actualInstanceInfo.GetValue(managedObject);
+            }
+
+            if (actualInstance.GetType() == typeof(MoMoRef))
+            {
+                return;
+            }
+
+            if (actualInstance is MoBaseMo)
+            {
+                var moBase = actualInstance as MoBaseMo;
+                var objectType = actualInstance.GetType().GetProperty("ObjectType", BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance).GetValue(actualInstance);
+                var moMoRef = new MoMoRef()
+                {
+                    Moid = moBase.Moid,
+                    ObjectType = (MoMoRef.ObjectTypeEnum)Enum.Parse(typeof(MoMoRef.ObjectTypeEnum), objectType.ToString()),
+                    ClassId = MoMoRef.ClassIdEnum.MoMoRef,
+                };
+                managedObject.GetType().GetProperty("ActualInstance").SetValue(managedObject, moMoRef);
+            }
+        }
+
     }
 }

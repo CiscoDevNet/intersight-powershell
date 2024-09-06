@@ -122,6 +122,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CatalystsdwanConfigGroup initObject = new Intersight.Model.CatalystsdwanConfigGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -296,6 +297,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CatalystsdwanPolicyGroup initObject = new Intersight.Model.CatalystsdwanPolicyGroup();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -381,6 +383,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string ConfigStatusMessage
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Catalyst SDWAN device id."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DeviceId
         {
             get;
             set;
@@ -518,6 +530,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CatalystsdwanVedgeDevice initObject = new Intersight.Model.CatalystsdwanVedgeDevice();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -527,6 +540,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ConfigStatusMessage"))
             {
                 initObject.ConfigStatusMessage = this.ConfigStatusMessage;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DeviceId"))
+            {
+                initObject.DeviceId = this.DeviceId;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("DeviceState"))
             {

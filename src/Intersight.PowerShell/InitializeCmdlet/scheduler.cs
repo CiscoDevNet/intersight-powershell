@@ -8,6 +8,61 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize SchedulerBaseCadenceParams.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightSchedulerBaseCadenceParams")]
+    public class InitializeIntersightSchedulerBaseCadenceParams : PSCmdlet
+    {
+        public InitializeIntersightSchedulerBaseCadenceParams()
+        {
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SchedulerBaseCadenceParams.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SchedulerBaseCadenceParams.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.SchedulerBaseCadenceParams initObject = new Intersight.Model.SchedulerBaseCadenceParams();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize SchedulerBaseScheduleParams.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightSchedulerBaseScheduleParams")]
@@ -49,7 +104,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The schedule start time. A future time is required. When the start time is updated, it is mandatory to specify the corresponding timeZone property as well."</para>
+        /// <para type="description">"The schedule start time. A future time is required."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -71,6 +126,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerBaseScheduleParams initObject = new Intersight.Model.SchedulerBaseScheduleParams();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -136,7 +192,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Run every day by default if not specified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
+        [ValidateRange(1, 31)]
         public long RunEvery
         {
             get;
@@ -145,6 +201,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerDailyCadenceParams initObject = new Intersight.Model.SchedulerDailyCadenceParams();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -193,7 +250,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An interval specified as string where valid time units are \"ns\", \"us\", \"ms\", \"s\", \"m\", \"h\". The calender calculations use a gregorian calendar with no leap seconds. The default is 24h."</para>
+        /// <para type="description">"An interval specified as string where valid time units are \"s\", \"m\", \"h\". The minimum interval is 15 minutes and the maximum is 24 hours."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -215,6 +272,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerEveryCadenceParams initObject = new Intersight.Model.SchedulerEveryCadenceParams();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -238,7 +296,9 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightSchedulerMonthlyCadenceParams()
         {
+            ClassId = SchedulerMonthlyCadenceParams.ClassIdEnum.SchedulerMonthlyCadenceParams;
             CustomDayOfMonth = SchedulerMonthlyCadenceParams.CustomDayOfMonthEnum.None;
+            ObjectType = SchedulerMonthlyCadenceParams.ObjectTypeEnum.SchedulerMonthlyCadenceParams;
 
         }
         // <summary>
@@ -291,19 +351,10 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"A format with the week and specific days as arguments."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.SchedulerMonthlyWeekDayFormat WeekDayFormat
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerMonthlyCadenceParams initObject = new Intersight.Model.SchedulerMonthlyCadenceParams();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -319,92 +370,6 @@ namespace Intersight.PowerShell
                 initObject.DayOfMonth = this.DayOfMonth;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("WeekDayFormat"))
-            {
-                initObject.WeekDayFormat = this.WeekDayFormat;
-            }
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SchedulerMonthlyWeekDayFormat.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSchedulerMonthlyWeekDayFormat")]
-    public class InitializeIntersightSchedulerMonthlyWeekDayFormat : PSCmdlet
-    {
-        public InitializeIntersightSchedulerMonthlyWeekDayFormat()
-        {
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public SchedulerMonthlyWeekDayFormat.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<SchedulerMonthlyWeekDayFormat.DayOfWeekEnum> DayOfWeek
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public SchedulerMonthlyWeekDayFormat.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The week of the month, 1 through 5."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 5)]
-        public long WeekOfMonth
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.SchedulerMonthlyWeekDayFormat initObject = new Intersight.Model.SchedulerMonthlyWeekDayFormat();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
-            {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DayOfWeek"))
-            {
-                initObject.DayOfWeek = this.DayOfWeek;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("WeekOfMonth"))
-            {
-                initObject.WeekOfMonth = this.WeekOfMonth;
-            }
             WriteObject(initObject);
         }
 
@@ -417,6 +382,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightSchedulerOneTimeScheduleParams()
         {
+            ClassId = SchedulerOneTimeScheduleParams.ClassIdEnum.SchedulerOneTimeScheduleParams;
+            ObjectType = SchedulerOneTimeScheduleParams.ObjectTypeEnum.SchedulerOneTimeScheduleParams;
             TimeZone = SchedulerOneTimeScheduleParams.VarTimeZoneEnum.PacificNiue;
 
         }
@@ -451,7 +418,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The schedule start time. A future time is required. When the start time is updated, it is mandatory to specify the corresponding timeZone property as well."</para>
+        /// <para type="description">"The schedule start time. A future time is required."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -473,6 +440,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerOneTimeScheduleParams initObject = new Intersight.Model.SchedulerOneTimeScheduleParams();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -500,6 +468,9 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightSchedulerRecurringScheduleParams()
         {
+            Cadence = SchedulerRecurringScheduleParams.CadenceEnum.None;
+            ClassId = SchedulerRecurringScheduleParams.ClassIdEnum.SchedulerRecurringScheduleParams;
+            ObjectType = SchedulerRecurringScheduleParams.ObjectTypeEnum.SchedulerRecurringScheduleParams;
             TimeZone = SchedulerRecurringScheduleParams.VarTimeZoneEnum.PacificNiue;
 
         }
@@ -514,7 +485,17 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"Allowed values for a recurring schedule cadence.\n* `None` - No value set for the cadence type (Enum value None).\n* `Every` - Use the 'Every' cadence for tasks that need to be run frequently and are relatively small or quick to execute. This could include tasks such as checking the status of a service every 15 minutes, or updating a counter.\n* `Daily` - A Daily cadence allows for a scheduled task to be run every day or every n-interval days.\n* `Weekly` - A Weekly cadence allows for a scheduled task to be run every week or every n-interval weeks on specific days.\n* `Monthly` - A Montly cadence allows for a scheduled task to be run every month on specific days."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SchedulerRecurringScheduleParams.CadenceEnum Cadence
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -524,7 +505,37 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"Specify the number of occurrences (instead of an end-time) for a recurring schedule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long EndAfterOccurrences
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"End time for the recurring schedule. The schedule will not run beyond this time. If using the endAfterOccurrences parameter instead, this field should be set to zero time, i.e, 0001-01-01T00:00:00Z."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime EndTime
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The maximum number of consecutive failures until the recurring scheduled task is suspended by the system. The default is 1."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 10)]
+        public long FailureThreshold
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -534,7 +545,17 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The schedule start time. A future time is required. When the start time is updated, it is mandatory to specify the corresponding timeZone property as well."</para>
+        /// <para type="description">"The cadence for the recurring schedule. Different parameters are used depending on the schedule type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.SchedulerBaseCadenceParams Params
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The schedule start time. A future time is required."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -556,13 +577,34 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerRecurringScheduleParams initObject = new Intersight.Model.SchedulerRecurringScheduleParams();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Cadence"))
+            {
+                initObject.Cadence = this.Cadence;
+            }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EndAfterOccurrences"))
+            {
+                initObject.EndAfterOccurrences = this.EndAfterOccurrences;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EndTime"))
+            {
+                initObject.EndTime = this.EndTime;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FailureThreshold"))
+            {
+                initObject.FailureThreshold = this.FailureThreshold;
+            }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Params"))
+            {
+                initObject.Params = this.Params;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("StartTime"))
             {
                 initObject.StartTime = this.StartTime;
@@ -668,7 +710,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Upper limit on the execution time of a scheduled task. Helps purge run-away scheduled tasks."</para>
+        /// <para type="description">"Upper limit on the execution time of a scheduled task. Helps purge run-away scheduled tasks.\nNot supported in this release."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -690,6 +732,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerRestStimTaskRequest initObject = new Intersight.Model.SchedulerRestStimTaskRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -804,6 +847,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerTaskResult initObject = new Intersight.Model.SchedulerTaskResult();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -872,6 +916,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerTaskResultStatus initObject = new Intersight.Model.SchedulerTaskResultStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -898,7 +943,7 @@ namespace Intersight.PowerShell
 
         }
         // <summary>
-        /// <para type="description">"The action of the scheduled task such as suspend or resume.\n* `None` - No action is set (default).\n* `Suspend` - Suspend a scheduled task indefinitely.\n* `Resume` - Resume a suspended scheduled task.\n* `SuspendTill` - Suspend the scheduled task until a specified end-date."</para>
+        /// <para type="description">"The action of the scheduled task such as suspend or resume.\n* `None` - No action is set (default).\n* `Suspend` - Suspend a scheduled task indefinitely.\n* `Resume` - Resume a suspended scheduled task.\n* `SuspendTill` - Suspend the scheduled task until a specified end-date. Not supported in this release."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -968,7 +1013,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"According to the schedule type this property is evaluated. If the property Type is set to OneTime, then the ObjectType must be scheduler.OneTimeScheduleParams."</para>
+        /// <para type="description">"According to the schedule type this property is evaluated. If the property Type is set to OneTime, then the ObjectType must be scheduler.OneTimeScheduleParams. If the Type is Recurring, then the ObjectType must be scheduler.RecurringScheduleParams."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1008,7 +1053,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An Enum describing the type of scheduler to use.\n* `None` - No value was set for the schedule type (Enum value None).\n* `OneTime` - Define a one-time task execution time that will not automatically repeat.\n* `Recurring` - Specify a recurring task cadence based on a predefined pattern, such as daily, weekly, monthly, yearly, or every <interval> pattern. This option is not currently supported."</para>
+        /// <para type="description">"An Enum describing the type of scheduler to use.\n* `None` - No value was set for the schedule type (Enum value None).\n* `OneTime` - Define a one-time task execution time that will not automatically repeat.\n* `Recurring` - Specify a recurring task cadence based on a predefined pattern, such as daily, weekly, monthly, or every <interval> pattern."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1020,6 +1065,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerTaskSchedule initObject = new Intersight.Model.SchedulerTaskSchedule();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -1112,6 +1158,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerTaskScheduleStatus initObject = new Intersight.Model.SchedulerTaskScheduleStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1175,9 +1222,20 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"A weekly interval for a task execution. If an interval is not explicitly specified, the task will be executed once every week by default."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 52)]
+        public long RunEvery
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.SchedulerWeeklyCadenceParams initObject = new Intersight.Model.SchedulerWeeklyCadenceParams();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1189,118 +1247,9 @@ namespace Intersight.PowerShell
                 initObject.DayOfWeek = this.DayOfWeek;
             }
             initObject.ObjectType = this.ObjectType;
-            WriteObject(initObject);
-        }
-
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize SchedulerYearlyCadenceParams.</para>
-    /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightSchedulerYearlyCadenceParams")]
-    public class InitializeIntersightSchedulerYearlyCadenceParams : PSCmdlet
-    {
-        public InitializeIntersightSchedulerYearlyCadenceParams()
-        {
-            ClassId = SchedulerYearlyCadenceParams.ClassIdEnum.SchedulerYearlyCadenceParams;
-            CustomDayOfMonth = SchedulerYearlyCadenceParams.CustomDayOfMonthEnum.None;
-            ObjectType = SchedulerYearlyCadenceParams.ObjectTypeEnum.SchedulerYearlyCadenceParams;
-
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public SchedulerYearlyCadenceParams.ClassIdEnum ClassId
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"Significant business days, such as days when reports are generated for analysis.\n* `None` - Placeholder. One of the following two fields must be selected.\n* `FirstWeekDay` - First week day of the month.\n* `MonthLastDay` - The last day of the month."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public SchedulerYearlyCadenceParams.CustomDayOfMonthEnum CustomDayOfMonth
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<long> DayOfMonth
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<SchedulerYearlyCadenceParams.MonthOfYearEnum> MonthOfYear
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public SchedulerYearlyCadenceParams.ObjectTypeEnum ObjectType
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A format with the week and specific days as arguments."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.SchedulerMonthlyWeekDayFormat WeekDayFormat
-        {
-            get;
-            set;
-        }
-
-        protected override void ProcessRecord()
-        {
-            Intersight.Model.SchedulerYearlyCadenceParams initObject = new Intersight.Model.SchedulerYearlyCadenceParams();
-            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("RunEvery"))
             {
-                initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("CustomDayOfMonth"))
-            {
-                initObject.CustomDayOfMonth = this.CustomDayOfMonth;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("DayOfMonth"))
-            {
-                initObject.DayOfMonth = this.DayOfMonth;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("MonthOfYear"))
-            {
-                initObject.MonthOfYear = this.MonthOfYear;
-            }
-            initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("WeekDayFormat"))
-            {
-                initObject.WeekDayFormat = this.WeekDayFormat;
+                initObject.RunEvery = this.RunEvery;
             }
             WriteObject(initObject);
         }

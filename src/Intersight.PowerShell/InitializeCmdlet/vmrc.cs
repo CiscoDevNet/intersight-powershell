@@ -93,6 +93,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.VmrcConsole initObject = new Intersight.Model.VmrcConsole();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

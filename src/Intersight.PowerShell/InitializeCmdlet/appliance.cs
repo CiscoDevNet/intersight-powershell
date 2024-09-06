@@ -52,6 +52,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceApiStatus initObject = new Intersight.Model.ApplianceApiStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -128,6 +129,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceAppOpStatus initObject = new Intersight.Model.ApplianceAppOpStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -212,6 +214,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceAppStatus initObject = new Intersight.Model.ApplianceAppStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -316,6 +319,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceAutoRmaPolicy initObject = new Intersight.Model.ApplianceAutoRmaPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -489,6 +493,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceBackup initObject = new Intersight.Model.ApplianceBackup();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -605,6 +610,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceBackupMonitor initObject = new Intersight.Model.ApplianceBackupMonitor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -810,6 +816,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceBackupPolicy initObject = new Intersight.Model.ApplianceBackupPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -1003,6 +1010,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceBackupRotateData initObject = new Intersight.Model.ApplianceBackupRotateData();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1091,6 +1099,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceCertRenewalPhase initObject = new Intersight.Model.ApplianceCertRenewalPhase();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1177,6 +1186,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceCertificateSetting initObject = new Intersight.Model.ApplianceCertificateSetting();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1345,6 +1355,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceClusterInfo initObject = new Intersight.Model.ApplianceClusterInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1404,6 +1415,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightApplianceClusterInstall()
         {
+            ClassId = ApplianceClusterInstall.ClassIdEnum.ApplianceClusterInstall;
+            ObjectType = ApplianceClusterInstall.ObjectTypeEnum.ApplianceClusterInstall;
 
         }
         // <summary>
@@ -1479,6 +1492,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceClusterInstall initObject = new Intersight.Model.ApplianceClusterInstall();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1551,6 +1565,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceClusterInstallPhase initObject = new Intersight.Model.ApplianceClusterInstallPhase();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1667,6 +1682,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceClusterReplaceNode initObject = new Intersight.Model.ApplianceClusterReplaceNode();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1787,6 +1803,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceDataExportPolicy initObject = new Intersight.Model.ApplianceDataExportPolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -1909,6 +1926,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceDeviceCertificate initObject = new Intersight.Model.ApplianceDeviceCertificate();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2075,6 +2093,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceDeviceClaim initObject = new Intersight.Model.ApplianceDeviceClaim();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2197,6 +2216,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceDeviceClusterInstall initObject = new Intersight.Model.ApplianceDeviceClusterInstall();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2295,6 +2315,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceDeviceState initObject = new Intersight.Model.ApplianceDeviceState();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2454,6 +2475,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceDeviceUpgradePolicy initObject = new Intersight.Model.ApplianceDeviceUpgradePolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2596,6 +2618,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceDiagSetting initObject = new Intersight.Model.ApplianceDiagSetting();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -2784,6 +2807,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceExternalSyslogSetting initObject = new Intersight.Model.ApplianceExternalSyslogSetting();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -2914,6 +2938,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceFileGateway initObject = new Intersight.Model.ApplianceFileGateway();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -3002,6 +3027,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceFileSystemOpStatus initObject = new Intersight.Model.ApplianceFileSystemOpStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3096,6 +3122,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceFileSystemStatus initObject = new Intersight.Model.ApplianceFileSystemStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3184,6 +3211,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceGroupOpStatus initObject = new Intersight.Model.ApplianceGroupOpStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3268,6 +3296,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceGroupStatus initObject = new Intersight.Model.ApplianceGroupStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3352,6 +3381,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceImageBundle initObject = new Intersight.Model.ApplianceImageBundle();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3416,6 +3446,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceKeyValuePair initObject = new Intersight.Model.ApplianceKeyValuePair();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3502,6 +3533,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceMetaManifest initObject = new Intersight.Model.ApplianceMetaManifest();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -3601,6 +3633,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceMetadataManifestVersion initObject = new Intersight.Model.ApplianceMetadataManifestVersion();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3699,6 +3732,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceMetricsConfig initObject = new Intersight.Model.ApplianceMetricsConfig();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3787,6 +3821,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceNetworkLinkStatus initObject = new Intersight.Model.ApplianceNetworkLinkStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3851,6 +3886,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceNetworkStatus initObject = new Intersight.Model.ApplianceNetworkStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3927,6 +3963,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceNodeInfo initObject = new Intersight.Model.ApplianceNodeInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3991,6 +4028,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceNodeIpInfo initObject = new Intersight.Model.ApplianceNodeIpInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4067,6 +4105,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceNodeOpStatus initObject = new Intersight.Model.ApplianceNodeOpStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4151,6 +4190,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceNodeStatus initObject = new Intersight.Model.ApplianceNodeStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4235,6 +4275,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceReleaseNote initObject = new Intersight.Model.ApplianceReleaseNote();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4390,6 +4431,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceRemoteFileImport initObject = new Intersight.Model.ApplianceRemoteFileImport();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4583,6 +4625,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceRestore initObject = new Intersight.Model.ApplianceRestore();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4739,6 +4782,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceSetupInfo initObject = new Intersight.Model.ApplianceSetupInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -4840,6 +4884,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceStatusCheck initObject = new Intersight.Model.ApplianceStatusCheck();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4935,6 +4980,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceSystemInfo initObject = new Intersight.Model.ApplianceSystemInfo();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5023,6 +5069,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceSystemOpStatus initObject = new Intersight.Model.ApplianceSystemOpStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5107,6 +5154,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceSystemStatus initObject = new Intersight.Model.ApplianceSystemStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5221,6 +5269,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceUpgrade initObject = new Intersight.Model.ApplianceUpgrade();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -5408,6 +5457,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceUpgradePolicy initObject = new Intersight.Model.ApplianceUpgradePolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -5538,6 +5588,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ApplianceUpgradeTracker initObject = new Intersight.Model.ApplianceUpgradeTracker();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {

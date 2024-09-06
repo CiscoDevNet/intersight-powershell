@@ -82,6 +82,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.TerraformCloudResource initObject = new Intersight.Model.TerraformCloudResource();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -331,6 +332,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.TerraformExecutor initObject = new Intersight.Model.TerraformExecutor();
             if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
             {
@@ -479,6 +481,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.TerraformRunstate initObject = new Intersight.Model.TerraformRunstate();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

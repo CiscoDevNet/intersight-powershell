@@ -72,6 +72,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.RecommendationCapacityRunway initObject = new Intersight.Model.RecommendationCapacityRunway();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -156,6 +157,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.RecommendationClusterExpansion initObject = new Intersight.Model.RecommendationClusterExpansion();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -251,6 +253,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.RecommendationHardwareExpansionRequest initObject = new Intersight.Model.RecommendationHardwareExpansionRequest();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -392,6 +395,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.RecommendationHardwareExpansionRequestItem initObject = new Intersight.Model.RecommendationHardwareExpansionRequestItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -496,6 +500,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.RecommendationPhysicalItem initObject = new Intersight.Model.RecommendationPhysicalItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -601,6 +606,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.RecommendationPurchaseOrderEstimate initObject = new Intersight.Model.RecommendationPurchaseOrderEstimate();
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
@@ -693,6 +699,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.RecommendationPurchaseOrderList initObject = new Intersight.Model.RecommendationPurchaseOrderList();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -777,6 +784,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.RecommendationSoftwareItem initObject = new Intersight.Model.RecommendationSoftwareItem();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

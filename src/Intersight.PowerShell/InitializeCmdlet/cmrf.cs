@@ -15,6 +15,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightCmrfCmRf()
         {
+            ClassId = CmrfCmRf.ClassIdEnum.CmrfCmRf;
+            ObjectType = CmrfCmRf.ObjectTypeEnum.CmrfCmRf;
 
         }
         // <summary>
@@ -50,6 +52,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CmrfCmRf initObject = new Intersight.Model.CmrfCmRf();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

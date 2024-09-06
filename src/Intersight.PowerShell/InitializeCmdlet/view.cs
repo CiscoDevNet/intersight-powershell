@@ -15,6 +15,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightViewHealthStatus()
         {
+            ClassId = ViewHealthStatus.ClassIdEnum.ViewHealthStatus;
+            ObjectType = ViewHealthStatus.ObjectTypeEnum.ViewHealthStatus;
 
         }
         // <summary>
@@ -70,6 +72,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ViewHealthStatus initObject = new Intersight.Model.ViewHealthStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -97,6 +100,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightViewServer()
         {
+            ClassId = ViewServer.ClassIdEnum.ViewServer;
+            ObjectType = ViewServer.ObjectTypeEnum.ViewServer;
 
         }
         // <summary>
@@ -152,6 +157,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ViewServer initObject = new Intersight.Model.ViewServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

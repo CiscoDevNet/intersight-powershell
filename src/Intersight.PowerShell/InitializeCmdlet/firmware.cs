@@ -143,6 +143,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareBaseImpact initObject = new Intersight.Model.FirmwareBaseImpact();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -198,6 +199,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareBiosDescriptor()
         {
+            ClassId = FirmwareBiosDescriptor.ClassIdEnum.FirmwareBiosDescriptor;
+            ObjectType = FirmwareBiosDescriptor.ObjectTypeEnum.FirmwareBiosDescriptor;
 
         }
         // <summary>
@@ -333,6 +336,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareBiosDescriptor initObject = new Intersight.Model.FirmwareBiosDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -392,6 +396,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareBoardControllerDescriptor()
         {
+            ClassId = FirmwareBoardControllerDescriptor.ClassIdEnum.FirmwareBoardControllerDescriptor;
+            ObjectType = FirmwareBoardControllerDescriptor.ObjectTypeEnum.FirmwareBoardControllerDescriptor;
 
         }
         // <summary>
@@ -527,6 +533,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareBoardControllerDescriptor initObject = new Intersight.Model.FirmwareBoardControllerDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -745,6 +752,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareChassisUpgrade initObject = new Intersight.Model.FirmwareChassisUpgrade();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -972,6 +980,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareChassisUpgradeImpact initObject = new Intersight.Model.FirmwareChassisUpgradeImpact();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1097,6 +1106,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareCifsServer initObject = new Intersight.Model.FirmwareCifsServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1124,6 +1134,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareCimcDescriptor()
         {
+            ClassId = FirmwareCimcDescriptor.ClassIdEnum.FirmwareCimcDescriptor;
+            ObjectType = FirmwareCimcDescriptor.ObjectTypeEnum.FirmwareCimcDescriptor;
 
         }
         // <summary>
@@ -1259,6 +1271,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareCimcDescriptor initObject = new Intersight.Model.FirmwareCimcDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1459,6 +1472,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareComponentImpact initObject = new Intersight.Model.FirmwareComponentImpact();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1667,6 +1681,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareComponentMeta initObject = new Intersight.Model.FirmwareComponentMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -1730,6 +1745,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareDimmDescriptor()
         {
+            ClassId = FirmwareDimmDescriptor.ClassIdEnum.FirmwareDimmDescriptor;
+            ObjectType = FirmwareDimmDescriptor.ObjectTypeEnum.FirmwareDimmDescriptor;
 
         }
         // <summary>
@@ -1865,6 +1882,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareDimmDescriptor initObject = new Intersight.Model.FirmwareDimmDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2013,6 +2031,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareDirectDownload initObject = new Intersight.Model.FirmwareDirectDownload();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2361,6 +2380,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareDistributable initObject = new Intersight.Model.FirmwareDistributable();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2627,6 +2647,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareDistributableMeta initObject = new Intersight.Model.FirmwareDistributableMeta();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -2686,6 +2707,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareDriveDescriptor()
         {
+            ClassId = FirmwareDriveDescriptor.ClassIdEnum.FirmwareDriveDescriptor;
+            ObjectType = FirmwareDriveDescriptor.ObjectTypeEnum.FirmwareDriveDescriptor;
 
         }
         // <summary>
@@ -2821,6 +2844,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareDriveDescriptor initObject = new Intersight.Model.FirmwareDriveDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3198,6 +3222,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareDriverDistributable initObject = new Intersight.Model.FirmwareDriverDistributable();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3386,6 +3411,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareEula initObject = new Intersight.Model.FirmwareEula();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3470,6 +3496,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareExcludeComponentPidListType initObject = new Intersight.Model.FirmwareExcludeComponentPidListType();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3647,6 +3674,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareFabricUpgradeImpact initObject = new Intersight.Model.FirmwareFabricUpgradeImpact();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3807,6 +3835,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareFirmwareInventory initObject = new Intersight.Model.FirmwareFirmwareInventory();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3947,6 +3976,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareFirmwareSummary initObject = new Intersight.Model.FirmwareFirmwareSummary();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -3990,6 +4020,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareGpuDescriptor()
         {
+            ClassId = FirmwareGpuDescriptor.ClassIdEnum.FirmwareGpuDescriptor;
+            ObjectType = FirmwareGpuDescriptor.ObjectTypeEnum.FirmwareGpuDescriptor;
 
         }
         // <summary>
@@ -4125,6 +4157,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareGpuDescriptor initObject = new Intersight.Model.FirmwareGpuDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4184,6 +4217,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareHbaDescriptor()
         {
+            ClassId = FirmwareHbaDescriptor.ClassIdEnum.FirmwareHbaDescriptor;
+            ObjectType = FirmwareHbaDescriptor.ObjectTypeEnum.FirmwareHbaDescriptor;
 
         }
         // <summary>
@@ -4319,6 +4354,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareHbaDescriptor initObject = new Intersight.Model.FirmwareHbaDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4435,6 +4471,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareHttpServer initObject = new Intersight.Model.FirmwareHttpServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4462,6 +4499,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareIomDescriptor()
         {
+            ClassId = FirmwareIomDescriptor.ClassIdEnum.FirmwareIomDescriptor;
+            ObjectType = FirmwareIomDescriptor.ObjectTypeEnum.FirmwareIomDescriptor;
 
         }
         // <summary>
@@ -4597,6 +4636,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareIomDescriptor initObject = new Intersight.Model.FirmwareIomDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4714,6 +4754,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareModelBundleVersion initObject = new Intersight.Model.FirmwareModelBundleVersion();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -4741,6 +4782,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareMswitchDescriptor()
         {
+            ClassId = FirmwareMswitchDescriptor.ClassIdEnum.FirmwareMswitchDescriptor;
+            ObjectType = FirmwareMswitchDescriptor.ObjectTypeEnum.FirmwareMswitchDescriptor;
 
         }
         // <summary>
@@ -4876,6 +4919,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareMswitchDescriptor initObject = new Intersight.Model.FirmwareMswitchDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5044,6 +5088,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareNetworkShare initObject = new Intersight.Model.FirmwareNetworkShare();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5148,6 +5193,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareNfsServer initObject = new Intersight.Model.FirmwareNfsServer();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5175,6 +5221,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareNxosDescriptor()
         {
+            ClassId = FirmwareNxosDescriptor.ClassIdEnum.FirmwareNxosDescriptor;
+            ObjectType = FirmwareNxosDescriptor.ObjectTypeEnum.FirmwareNxosDescriptor;
 
         }
         // <summary>
@@ -5310,6 +5358,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareNxosDescriptor initObject = new Intersight.Model.FirmwareNxosDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5369,6 +5418,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwarePcieDescriptor()
         {
+            ClassId = FirmwarePcieDescriptor.ClassIdEnum.FirmwarePcieDescriptor;
+            ObjectType = FirmwarePcieDescriptor.ObjectTypeEnum.FirmwarePcieDescriptor;
 
         }
         // <summary>
@@ -5504,6 +5555,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwarePcieDescriptor initObject = new Intersight.Model.FirmwarePcieDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5691,6 +5743,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwarePolicy initObject = new Intersight.Model.FirmwarePolicy();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -5746,6 +5799,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwarePsuDescriptor()
         {
+            ClassId = FirmwarePsuDescriptor.ClassIdEnum.FirmwarePsuDescriptor;
+            ObjectType = FirmwarePsuDescriptor.ObjectTypeEnum.FirmwarePsuDescriptor;
 
         }
         // <summary>
@@ -5881,6 +5936,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwarePsuDescriptor initObject = new Intersight.Model.FirmwarePsuDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6007,6 +6063,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareRunningFirmware initObject = new Intersight.Model.FirmwareRunningFirmware();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6038,6 +6095,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareSasExpanderDescriptor()
         {
+            ClassId = FirmwareSasExpanderDescriptor.ClassIdEnum.FirmwareSasExpanderDescriptor;
+            ObjectType = FirmwareSasExpanderDescriptor.ObjectTypeEnum.FirmwareSasExpanderDescriptor;
 
         }
         // <summary>
@@ -6173,6 +6232,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareSasExpanderDescriptor initObject = new Intersight.Model.FirmwareSasExpanderDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6510,6 +6570,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareServerConfigurationUtilityDistributable initObject = new Intersight.Model.FirmwareServerConfigurationUtilityDistributable();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6785,6 +6846,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareServerUpgradeImpact initObject = new Intersight.Model.FirmwareServerUpgradeImpact();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -6852,6 +6914,8 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareStorageControllerDescriptor()
         {
+            ClassId = FirmwareStorageControllerDescriptor.ClassIdEnum.FirmwareStorageControllerDescriptor;
+            ObjectType = FirmwareStorageControllerDescriptor.ObjectTypeEnum.FirmwareStorageControllerDescriptor;
 
         }
         // <summary>
@@ -6987,6 +7051,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareStorageControllerDescriptor initObject = new Intersight.Model.FirmwareStorageControllerDescriptor();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7215,6 +7280,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareSwitchUpgrade initObject = new Intersight.Model.FirmwareSwitchUpgrade();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7424,6 +7490,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareUnsupportedVersionUpgrade initObject = new Intersight.Model.FirmwareUnsupportedVersionUpgrade();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7663,6 +7730,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareUpgrade initObject = new Intersight.Model.FirmwareUpgrade();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -7897,6 +7965,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareUpgradeImpact initObject = new Intersight.Model.FirmwareUpgradeImpact();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8073,6 +8142,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareUpgradeImpactStatus initObject = new Intersight.Model.FirmwareUpgradeImpactStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8331,6 +8401,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareUpgradeStatus initObject = new Intersight.Model.FirmwareUpgradeStatus();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8485,6 +8556,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareUpgradeValidity initObject = new Intersight.Model.FirmwareUpgradeValidity();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -8553,6 +8625,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FirmwareVersionMap initObject = new Intersight.Model.FirmwareVersionMap();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
