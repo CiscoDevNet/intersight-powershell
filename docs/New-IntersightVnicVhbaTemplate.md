@@ -156,7 +156,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the virtual fibre channel interface.
+Name of the vHBA template.
 
 ```yaml
 Type: string

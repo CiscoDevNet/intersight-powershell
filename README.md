@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.18369
-- C# SDK version: 1.0.11.18369
+- Intersight.PowerShell version: 1.0.11.18534
+- C# SDK version: 1.0.11.18534
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.18369"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.18534"}
 ```
 or
 
@@ -2194,6 +2194,8 @@ NiatelemetryDcnmFexDetails | [**Get-IntersightNiatelemetryDcnmFexDetails**](docs
 NiatelemetryDcnmModuleDetails | [**Get-IntersightNiatelemetryDcnmModuleDetails**](docs/Get-IntersightNiatelemetryDcnmModuleDetails.md) | Read a 'NiatelemetryDcnmModuleDetails' resource.
 NiatelemetryDcnmPsuDetails | [**Get-IntersightNiatelemetryDcnmPsuDetails**](docs/Get-IntersightNiatelemetryDcnmPsuDetails.md) | Read a 'NiatelemetryDcnmPsuDetails' resource.
 NiatelemetryDcnmTransceiverDetails | [**Get-IntersightNiatelemetryDcnmTransceiverDetails**](docs/Get-IntersightNiatelemetryDcnmTransceiverDetails.md) | Read a 'NiatelemetryDcnmTransceiverDetails' resource.
+NiatelemetryDomInfoObject | [**Get-IntersightNiatelemetryDomInfoObject**](docs/Get-IntersightNiatelemetryDomInfoObject.md) | Read a 'NiatelemetryDomInfoObject' resource.
+NiatelemetryDomThresInfoObject | [**Get-IntersightNiatelemetryDomThresInfoObject**](docs/Get-IntersightNiatelemetryDomThresInfoObject.md) | Read a 'NiatelemetryDomThresInfoObject' resource.
 NiatelemetryEpg | [**Get-IntersightNiatelemetryEpg**](docs/Get-IntersightNiatelemetryEpg.md) | Read a 'NiatelemetryEpg' resource.
 NiatelemetryFabricModuleDetails | [**Get-IntersightNiatelemetryFabricModuleDetails**](docs/Get-IntersightNiatelemetryFabricModuleDetails.md) | Read a 'NiatelemetryFabricModuleDetails' resource.
 NiatelemetryFabricNodeControlDetails | [**Get-IntersightNiatelemetryFabricNodeControlDetails**](docs/Get-IntersightNiatelemetryFabricNodeControlDetails.md) | Read a 'NiatelemetryFabricNodeControlDetails' resource.
@@ -2759,10 +2761,6 @@ TechsupportmanagementCollectionControlPolicy | [**Remove-IntersightTechsupportma
 TechsupportmanagementTechSupportBundle | [**Remove-IntersightTechsupportmanagementTechSupportBundle**](docs/Remove-IntersightTechsupportmanagementTechSupportBundle.md) | Delete a 'TechsupportmanagementTechSupportBundle' resource.
 TechsupportmanagementCollectionControlPolicy | [**Set-IntersightTechsupportmanagementCollectionControlPolicy**](docs/Set-IntersightTechsupportmanagementCollectionControlPolicy.md) | Update a 'TechsupportmanagementCollectionControlPolicy' resource.
 TerminalAuditLog | [**Get-IntersightTerminalAuditLog**](docs/Get-IntersightTerminalAuditLog.md) | Read a 'TerminalAuditLog' resource.
-TerraformExecutor | [**Get-IntersightTerraformExecutor**](docs/Get-IntersightTerraformExecutor.md) | Read a 'TerraformExecutor' resource.
-TerraformExecutor | [**New-IntersightTerraformExecutor**](docs/New-IntersightTerraformExecutor.md) | Create a 'TerraformExecutor' resource.
-TerraformExecutor | [**Remove-IntersightTerraformExecutor**](docs/Remove-IntersightTerraformExecutor.md) | Delete a 'TerraformExecutor' resource.
-TerraformExecutor | [**Set-IntersightTerraformExecutor**](docs/Set-IntersightTerraformExecutor.md) | Update a 'TerraformExecutor' resource.
 ThermalPolicy | [**Get-IntersightThermalPolicy**](docs/Get-IntersightThermalPolicy.md) | Read a 'ThermalPolicy' resource.
 ThermalPolicyInventory | [**Get-IntersightThermalPolicyInventory**](docs/Get-IntersightThermalPolicyInventory.md) | Read a 'ThermalPolicyInventory' resource.
 ThermalPolicy | [**New-IntersightThermalPolicy**](docs/New-IntersightThermalPolicy.md) | Create a 'ThermalPolicy' resource.

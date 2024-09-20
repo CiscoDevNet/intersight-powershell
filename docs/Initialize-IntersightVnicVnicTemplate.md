@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of the virtual ethernet interface.
+Name of the vNIC template.
 
 ```yaml
 Type: string

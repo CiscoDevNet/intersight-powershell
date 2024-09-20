@@ -6495,7 +6495,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Name of the virtual fibre channel interface."</para>
+        /// <para type="description">"Name of the vHBA template."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
@@ -6815,7 +6815,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Name of the virtual ethernet interface."</para>
+        /// <para type="description">"Name of the vNIC template."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
@@ -9405,7 +9405,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Name of the virtual fibre channel interface."</para>
+        /// <para type="description">"Name of the vHBA template."</para>
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
@@ -9684,7 +9684,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Name of the virtual ethernet interface."</para>
+        /// <para type="description">"Name of the vNIC template."</para>
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
@@ -12472,7 +12472,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Name of the virtual fibre channel interface."</para>
+        /// <para type="description">"Name of the vHBA template."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
@@ -12751,7 +12751,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Name of the virtual ethernet interface."</para>
+        /// <para type="description">"Name of the vNIC template."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9-._:]+$")]

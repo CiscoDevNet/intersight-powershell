@@ -3596,7 +3596,7 @@ namespace Intersight.PowerShell
 
         }
         // <summary>
-        /// <para type="description">"Actions that can be performed by the storage utility.\n* `None` - No action by storage utility.\n* `Upload` - Upload action by storage utility.\n* `TurnOnImageVisibility` - Turn on image's visibility.\n* `TurnOffImageVisibility` - Turn off image's visibility."</para>
+        /// <para type="description">"Actions that can be performed by the storage utility.\n* `None` - No action by storage utility.\n* `Upload` - Upload action by storage utility.\n* `TurnOnImageVisibility` - Turn on image's visibility.\n* `TurnOffImageVisibility` - Turn off image's visibility.\n* `Remove` - Removes images from a server's utility storage."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

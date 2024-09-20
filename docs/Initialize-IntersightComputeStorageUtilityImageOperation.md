@@ -25,7 +25,7 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 ## PARAMETERS
 
 ### -Action
-Actions that can be performed by the storage utility.\n* `None` - No action by storage utility.\n* `Upload` - Upload action by storage utility.\n* `TurnOnImageVisibility` - Turn on image&apos;s visibility.\n* `TurnOffImageVisibility` - Turn off image&apos;s visibility.
+Actions that can be performed by the storage utility.\n* `None` - No action by storage utility.\n* `Upload` - Upload action by storage utility.\n* `TurnOnImageVisibility` - Turn on image&apos;s visibility.\n* `TurnOffImageVisibility` - Turn off image&apos;s visibility.\n* `Remove` - Removes images from a server&apos;s utility storage.
 
 ```yaml
 Type: ComputeStorageUtilityImageOperation.ActionEnum
