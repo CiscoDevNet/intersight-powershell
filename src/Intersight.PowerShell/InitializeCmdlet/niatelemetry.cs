@@ -6796,6 +6796,752 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryDomInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryDomInfo")]
+    public class InitializeIntersightNiatelemetryDomInfo : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryDomInfo()
+        {
+            ClassId = NiatelemetryDomInfo.ClassIdEnum.NiatelemetryDomInfo;
+            ObjectType = NiatelemetryDomInfo.ObjectTypeEnum.NiatelemetryDomInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns Average value of the transceiver sensor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Avg
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDomInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns distinguished name of the transceiver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns instant value of the  transceiversensor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Instant
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns Maximum value reported by the transceiver sensor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Max
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns Minimum value reported by the transceiver sensor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Min
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDomInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns transceiver sensor's unit identifier."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Unit
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns calibration value (unit) of transceiver sensor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryDomInfo initObject = new Intersight.Model.NiatelemetryDomInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Avg"))
+            {
+                initObject.Avg = this.Avg;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Dn"))
+            {
+                initObject.Dn = this.Dn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Instant"))
+            {
+                initObject.Instant = this.Instant;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Max"))
+            {
+                initObject.Max = this.Max;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Min"))
+            {
+                initObject.Min = this.Min;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Unit"))
+            {
+                initObject.Unit = this.Unit;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryDomInfoObject.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryDomInfoObject")]
+    public class InitializeIntersightNiatelemetryDomInfoObject : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryDomInfoObject()
+        {
+            ClassId = NiatelemetryDomInfoObject.ClassIdEnum.NiatelemetryDomInfoObject;
+            ObjectType = NiatelemetryDomInfoObject.ObjectTypeEnum.NiatelemetryDomInfoObject;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDomInfoObject.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Collection id is for index of one of 4 records in the timestamp interval for the particular dom threshold info."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CollectionId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NiatelemetryDomInfo> DomInfo
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDomInfoObject.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of record NEXUS. This determines the type of platform where inventory was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of record being pushed. This determines what was the API version for data available from the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of device being inventoried. The serial number is unique per device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Serial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Line card slot of device being inventoried - The linecard number is specific to serial of a device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SlotId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryDomInfoObject initObject = new Intersight.Model.NiatelemetryDomInfoObject();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CollectionId"))
+            {
+                initObject.CollectionId = this.CollectionId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DomInfo"))
+            {
+                initObject.DomInfo = this.DomInfo;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
+            {
+                initObject.RecordType = this.RecordType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordVersion"))
+            {
+                initObject.RecordVersion = this.RecordVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Serial"))
+            {
+                initObject.Serial = this.Serial;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryDomThresInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryDomThresInfo")]
+    public class InitializeIntersightNiatelemetryDomThresInfo : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryDomThresInfo()
+        {
+            ClassId = NiatelemetryDomThresInfo.ClassIdEnum.NiatelemetryDomThresInfo;
+            ObjectType = NiatelemetryDomThresInfo.ObjectTypeEnum.NiatelemetryDomThresInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDomThresInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns distinguished name of the transceiver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns highalarm value of the transceiver sensor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string HighAlarm
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns highwarning value of the transceiver sensor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string HighWarning
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns lowalarm value of the transceiver sensor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LowAlarm
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns lowwarning value of the transceiver sensor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string LowWarning
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns numlanes of the transceiver sensors."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NumLanes
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDomThresInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns part number of the transceiver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PartNumber
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns type of the transceiver sfp or qsfp."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Type
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns type name of the transceiver sfp or qsfp."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string TypeName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns calibration value (unit) of transceiver sensor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Unit
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns vendor name string of the transceiver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VendorName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns vendor part number of the transceiver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VendorPn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns vendor revision number of the transceiver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VendorRev
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns vendor serial number of the transceiver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VendorSn
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Returns version identifier of the transceiver."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string VersionId
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryDomThresInfo initObject = new Intersight.Model.NiatelemetryDomThresInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Dn"))
+            {
+                initObject.Dn = this.Dn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("HighAlarm"))
+            {
+                initObject.HighAlarm = this.HighAlarm;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("HighWarning"))
+            {
+                initObject.HighWarning = this.HighWarning;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LowAlarm"))
+            {
+                initObject.LowAlarm = this.LowAlarm;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LowWarning"))
+            {
+                initObject.LowWarning = this.LowWarning;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NumLanes"))
+            {
+                initObject.NumLanes = this.NumLanes;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PartNumber"))
+            {
+                initObject.PartNumber = this.PartNumber;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TypeName"))
+            {
+                initObject.TypeName = this.TypeName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Unit"))
+            {
+                initObject.Unit = this.Unit;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VendorName"))
+            {
+                initObject.VendorName = this.VendorName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VendorPn"))
+            {
+                initObject.VendorPn = this.VendorPn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VendorRev"))
+            {
+                initObject.VendorRev = this.VendorRev;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VendorSn"))
+            {
+                initObject.VendorSn = this.VendorSn;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VersionId"))
+            {
+                initObject.VersionId = this.VersionId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryDomThresInfoObject.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryDomThresInfoObject")]
+    public class InitializeIntersightNiatelemetryDomThresInfoObject : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryDomThresInfoObject()
+        {
+            ClassId = NiatelemetryDomThresInfoObject.ClassIdEnum.NiatelemetryDomThresInfoObject;
+            ObjectType = NiatelemetryDomThresInfoObject.ObjectTypeEnum.NiatelemetryDomThresInfoObject;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDomThresInfoObject.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NiatelemetryDomThresInfo> DomThresInfo
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryDomThresInfoObject.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of record NEXUS - This determines the type of platform where inventory was collected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Version of record being pushed - This determines what was the API version for data available from the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RecordVersion
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of device being inventoried - The serial number is unique per device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Serial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Line card slot of device being inventoried - The linecard number is specific to serial of a device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SlotId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryDomThresInfoObject initObject = new Intersight.Model.NiatelemetryDomThresInfoObject();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DomThresInfo"))
+            {
+                initObject.DomThresInfo = this.DomThresInfo;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
+            {
+                initObject.RecordType = this.RecordType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordVersion"))
+            {
+                initObject.RecordVersion = this.RecordVersion;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Serial"))
+            {
+                initObject.Serial = this.Serial;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
+            {
+                initObject.SlotId = this.SlotId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryEpg.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryEpg")]
