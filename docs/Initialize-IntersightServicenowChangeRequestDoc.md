@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightPolicyinventoryJobInfo
+# Initialize-IntersightServicenowChangeRequestDoc
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPolicyinventoryJobInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyinventoryJobInfo.ClassIdEnum>][-ObjectType< PolicyinventoryJobInfo.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightServicenowChangeRequestDoc [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ServicenowChangeRequestDoc.ClassIdEnum>][-ExampleValue< string>][-InternalType< string>][-Label< string>][-Moid< string>][-ObjectType< ServicenowChangeRequestDoc.ObjectTypeEnum>][-PropertyName< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,7 +43,67 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: PolicyinventoryJobInfo.ClassIdEnum
+Type: ServicenowChangeRequestDoc.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExampleValue
+Example value for Change request property.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InternalType
+Internal type for Change request property.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Label
+Label for Change request property.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Moid
+The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -58,7 +118,39 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: PolicyinventoryJobInfo.ObjectTypeEnum
+Type: ServicenowChangeRequestDoc.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PropertyName
+Name for Change request property.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -107,7 +199,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightPolicyinventoryJobInfo
+PS C:\> Initialize-IntersightServicenowChangeRequestDoc
 ```
 
 { Add example description here }
@@ -125,3 +217,5 @@ PS C:\> Initialize-IntersightPolicyinventoryJobInfo
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

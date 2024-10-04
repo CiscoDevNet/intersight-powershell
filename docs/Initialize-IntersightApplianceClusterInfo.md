@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightApplianceClusterInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceClusterInfo.ClassIdEnum>][-DeploymentSize< string>][-Gateway< string>][-Hostip< string>][-Hostname< string>][-Moid< string>][-ObjectType< ApplianceClusterInfo.ObjectTypeEnum>][-Peerkey< string>][-Responsekey< string>][-Subnetmask< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceClusterInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceClusterInfo.ClassIdEnum>][-DeploymentSize< string>][-Gateway< string>][-Hostip< string>][-Hostname< string>][-InstallerVersion< string>][-Moid< string>][-ObjectType< ApplianceClusterInfo.ObjectTypeEnum>][-PartitionDatabase< long>][-PartitionFileCisco< long>][-PartitionOptData< long>][-PartitionOptKafka< long>][-PartitionOptMongo< long>][-PartitionVarLibDocker< long>][-PartitionVarLog< long>][-Peerkey< string>][-Responsekey< string>][-Subnetmask< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -114,6 +114,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -InstallerVersion
+Installer version used to install on peer node.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -134,6 +149,111 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: ApplianceClusterInfo.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PartitionDatabase
+The partition size for /opt/database of this node.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PartitionFileCisco
+The partition size for /Cisco of this node.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PartitionOptData
+The partition size for /opt/cisco/data of this node.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PartitionOptKafka
+The partition size for /opt/kafka of this node.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PartitionOptMongo
+The partition size for /opt/mongodb of this node.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PartitionVarLibDocker
+The partition size for /var/lib/docker of this node.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PartitionVarLog
+The partition size for /var of this node.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

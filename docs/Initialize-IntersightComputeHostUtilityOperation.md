@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightComputeHostUtilityOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ComputeHostUtilityOperation.ClassIdEnum>][-HostUtilityOperationMode< ComputeHostUtilityOperation.HostUtilityOperationModeEnum>][-Moid< string>][-ObjectType< ComputeHostUtilityOperation.ObjectTypeEnum>][-Server< Model.ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightComputeHostUtilityOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ComputeHostUtilityOperation.ClassIdEnum>][-HostOpConfig< Model.ComputeHostUtilityOperationConfguration>][-HostUtilityOperationMode< ComputeHostUtilityOperation.HostUtilityOperationModeEnum>][-Moid< string>][-ObjectType< ComputeHostUtilityOperation.ObjectTypeEnum>][-Server< Model.ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,8 +54,25 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -HostOpConfig
+Host operation related configuration such as scrub components those need to be cleared while scrub are specified using this configuration.
+
+Note :- Use Initialize-IntersightComputeHostUtilityOperationConfguration to create the object of complex type ComputeHostUtilityOperationConfguration
+
+```yaml
+Type: Model.ComputeHostUtilityOperationConfguration
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -HostUtilityOperationMode
-Host utility operation need to be performed in the endpoint.\n* `None` - Host utility mode of the operation is set to none by default.\n* `SecureErase` - EU LOT-9 secure data cleanup on the server components.\n* `SecureEraseWithDecommission` - EU LOT-9 secure data cleanup on the server components and do decommission.
+Host utility operation need to be performed in the endpoint.\n* `None` - Host utility mode of the operation is set to none by default.\n* `SecureErase` - EU LOT-9 secure data cleanup on the server components.\n* `SecureEraseWithDecommission` - EU LOT-9 secure data cleanup on the server components and do decommission.\n* `Scrub` - Quick cleanup on storage and BIOS.
 
 ```yaml
 Type: ComputeHostUtilityOperation.HostUtilityOperationModeEnum
@@ -190,5 +207,7 @@ PS C:\> Initialize-IntersightComputeHostUtilityOperation
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightComputeHostUtilityOperationConfguration](./Initialize-IntersightComputeHostUtilityOperationConfguration.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

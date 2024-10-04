@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationIpAddressInfo
+# Initialize-IntersightMemoryPolicy
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationIpAddressInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationIpAddressInfo.ClassIdEnum>][-GatewayIp< string>][-IpAddress< string>][-ObjectType< VirtualizationIpAddressInfo.ObjectTypeEnum>][-SubnetMask< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightMemoryPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< MemoryPolicy.ClassIdEnum>][-Description< string>][-EnableDimmBlocklisting< bool>][-Moid< string>][-Name< string>][-ObjectType< MemoryPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,7 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: VirtualizationIpAddressInfo.ClassIdEnum
+Type: MemoryPolicy.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -54,8 +54,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -GatewayIp
-IP address of the device on network which forwards local traffic to other networks.
+### -Description
+Description of the policy.
 
 ```yaml
 Type: string
@@ -69,8 +69,38 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -IpAddress
-An IP address is a 32-bit number. It uniquely identifies a host in given network.
+### -EnableDimmBlocklisting
+Enable DIMM Blocklisting on the server.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Moid
+The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+Name of the concrete policy.
 
 ```yaml
 Type: string
@@ -88,7 +118,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: VirtualizationIpAddressInfo.ObjectTypeEnum
+Type: MemoryPolicy.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -99,11 +129,49 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SubnetMask
-A 32 bit number which helps to identify the host and rest of the network.
+### -Organization
+A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: string
+Type: Model.OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Profiles
+An array of relationships to policyAbstractConfigProfile resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -152,7 +220,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationIpAddressInfo
+PS C:\> Initialize-IntersightMemoryPolicy
 ```
 
 { Add example description here }
@@ -170,3 +238,5 @@ PS C:\> Initialize-IntersightVirtualizationIpAddressInfo
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

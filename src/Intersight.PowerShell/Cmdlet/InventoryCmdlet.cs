@@ -33,22 +33,11 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Configuration state of server profile config context."</para>
+        /// <para type="description">"A reference to a assetClusterMember resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
-        public string ConfigState
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Control action of server profile config context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string ControlAction
+        public AssetClusterMemberRelationship ClusterMember
         {
             get;
             set;
@@ -66,6 +55,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Subscribe/Unsubscribe events for the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool DisableEvents
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The DomainGroup ID for this managed object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -77,16 +77,49 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Error state of server profile config context."</para>
+        /// <para type="description">"Information regarding the number of events recorded for this device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public string ErrorState
+        public long EventCounter
         {
             get;
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Indicates whether the event counter enabled for the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EventCounterEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time interval (in hours) between job runs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long Interval
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Last Reinventory time of the device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime LastReInventoryTime
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -110,17 +143,6 @@ namespace Intersight.PowerShell
             set;
         }
 
-        // <summary>
-        /// <para type="description">"Operational state of server profile config context."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string OperState
-        {
-            get;
-            set;
-        }
-
 
         // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -135,11 +157,11 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Server profile MO ID of the server."</para>
+        /// <para type="description">"Number of full inventory within the given time."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public string ProfileMoId
+        public long ReInventoryCount
         {
             get;
             set;

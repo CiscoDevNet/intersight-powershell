@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -InbandVlan
-VLAN to be used for server access over Inband network.
+VLAN to be used for server access over Inband network. When Inband is enabled, only numbers between 4 to 4093 are allowed.
 
 ```yaml
 Type: long

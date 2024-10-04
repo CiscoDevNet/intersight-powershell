@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationAwsVmNetworkConfiguration
+# Initialize-IntersightTaskFileDownloadInfo
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationAwsVmNetworkConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationAwsVmNetworkConfiguration.ClassIdEnum>][-Interfaces< System.Collections.Generic.List`1[Model.VirtualizationNetworkInterface]>][-ObjectType< VirtualizationAwsVmNetworkConfiguration.ObjectTypeEnum>][-VpcId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightTaskFileDownloadInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TaskFileDownloadInfo.ClassIdEnum>][-Contents< string>][-ObjectType< TaskFileDownloadInfo.ObjectTypeEnum>][-Path< string>][-Source< string>][-Type< TaskFileDownloadInfo.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,10 +40,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: VirtualizationAwsVmNetworkConfiguration.ClassIdEnum
+Type: TaskFileDownloadInfo.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -54,13 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Interfaces
-
-
-Note :- Use Initialize-IntersightVirtualizationNetworkInterface to create the object of complex type VirtualizationNetworkInterface
+### -Contents
+When the type of the download is inline, it will read the file from the contents here.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.VirtualizationNetworkInterface]
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -72,10 +70,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: VirtualizationAwsVmNetworkConfiguration.ObjectTypeEnum
+Type: TaskFileDownloadInfo.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -86,11 +84,41 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VpcId
-Virtual Private Cloud (Amazon VPC) enables you to launch AWS resources into a virtual network that you have defined.
+### -Path
+The path of the download from the specified source location for type S3, then this is the object key.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Source
+The source of the download location and if type is S3, then this is the bucket name. In case of MoRef download type \nthe source will have the Moid of the workflow definition.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Type
+The type of download location is captured in type.\n* `S3` - Download workflow from S3.\n* `Local` - Download workflow from local path.\n* `Inline` - Workflow is provided inline.\n* `MoRef` - Start an existing workflow registered with given Moid.
+
+```yaml
+Type: TaskFileDownloadInfo.TypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -139,7 +167,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationAwsVmNetworkConfiguration
+PS C:\> Initialize-IntersightTaskFileDownloadInfo
 ```
 
 { Add example description here }
@@ -157,5 +185,3 @@ PS C:\> Initialize-IntersightVirtualizationAwsVmNetworkConfiguration
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightVirtualizationNetworkInterface](./Initialize-IntersightVirtualizationNetworkInterface.md)

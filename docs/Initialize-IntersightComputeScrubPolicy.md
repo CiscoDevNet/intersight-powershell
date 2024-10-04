@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationAwsVmConfiguration
+# Initialize-IntersightComputeScrubPolicy
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationAwsVmConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AvailabilityZoneId< string>][-ClassId< VirtualizationAwsVmConfiguration.ClassIdEnum>][-Compute< Model.VirtualizationCloudVmComputeConfiguration>][-ImageId< string>][-KeyPairName< string>][-Network< Model.VirtualizationCloudVmNetworkConfiguration>][-ObjectType< VirtualizationAwsVmConfiguration.ObjectTypeEnum>][-RegionId< string>][-SecurityGroups< System.Collections.Generic.List`1[string]>][-Storage< Model.VirtualizationCloudVmStorageConfiguration>][-VmId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightComputeScrubPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ComputeScrubPolicy.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ComputeScrubPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-ScrubTargets< System.Collections.Generic.List`1[ComputeScrubPolicy.ScrubTargetsEnum]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,26 +39,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -AvailabilityZoneId
-Availability zone for the VM.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: VirtualizationAwsVmConfiguration.ClassIdEnum
+Type: ComputeScrubPolicy.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -69,25 +54,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Compute
-Cloud virtual machine compute specifications.
-
-Note :- Use Initialize-IntersightVirtualizationCloudVmComputeConfiguration to create the object of complex type VirtualizationCloudVmComputeConfiguration
-
-```yaml
-Type: Model.VirtualizationCloudVmComputeConfiguration
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ImageId
-Virtual machine image used by this VM.
+### -Description
+Description of the policy.
 
 ```yaml
 Type: string
@@ -101,8 +69,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -KeyPairName
-Keypair for accessing the VM.
+### -Moid
+The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
@@ -116,13 +84,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Network
-Cloud virtual machine network specifications.
-
-Note :- Use Initialize-IntersightVirtualizationCloudVmNetworkConfiguration to create the object of complex type VirtualizationCloudVmNetworkConfiguration
+### -Name
+Name of the concrete policy.
 
 ```yaml
-Type: Model.VirtualizationCloudVmNetworkConfiguration
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -134,10 +100,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: VirtualizationAwsVmConfiguration.ObjectTypeEnum
+Type: ComputeScrubPolicy.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -148,11 +114,14 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RegionId
-Region where the VM instance is created.
+### -Organization
+A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: string
+Type: Model.OrganizationOrganizationRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -163,11 +132,14 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -SecurityGroups
+### -Profiles
+An array of relationships to policyAbstractConfigProfile resources.
 
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: System.Collections.Generic.List`1[string]
+Type: System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -178,13 +150,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Storage
-Cloud Virtual machine disk information.
+### -ScrubTargets
 
-Note :- Use Initialize-IntersightVirtualizationCloudVmStorageConfiguration to create the object of complex type VirtualizationCloudVmStorageConfiguration
 
 ```yaml
-Type: Model.VirtualizationCloudVmStorageConfiguration
+Type: System.Collections.Generic.List`1[ComputeScrubPolicy.ScrubTargetsEnum]
 Parameter Sets: (All)
 Aliases:
 
@@ -195,11 +165,13 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VmId
-Unique Identifier of the cloud VM.
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
 
 ```yaml
-Type: string
+Type: System.Collections.Generic.List`1[Model.MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -248,7 +220,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationAwsVmConfiguration
+PS C:\> Initialize-IntersightComputeScrubPolicy
 ```
 
 { Add example description here }
@@ -267,8 +239,4 @@ PS C:\> Initialize-IntersightVirtualizationAwsVmConfiguration
 
 ## RELATED LINKS
 
-[Initialize-IntersightVirtualizationCloudVmComputeConfiguration](./Initialize-IntersightVirtualizationCloudVmComputeConfiguration.md)
-
-[Initialize-IntersightVirtualizationCloudVmNetworkConfiguration](./Initialize-IntersightVirtualizationCloudVmNetworkConfiguration.md)
-
-[Initialize-IntersightVirtualizationCloudVmStorageConfiguration](./Initialize-IntersightVirtualizationCloudVmStorageConfiguration.md)
+[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

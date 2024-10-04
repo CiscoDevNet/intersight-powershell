@@ -8,6 +8,161 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TaskCatalystSdwanScopedInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTaskCatalystSdwanScopedInventory")]
+    public class InitializeIntersightTaskCatalystSdwanScopedInventory : PSCmdlet
+    {
+        public InitializeIntersightTaskCatalystSdwanScopedInventory()
+        {
+            ClassId = TaskCatalystSdwanScopedInventory.ClassIdEnum.TaskCatalystSdwanScopedInventory;
+            ObjectType = TaskCatalystSdwanScopedInventory.ObjectTypeEnum.TaskCatalystSdwanScopedInventory;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TaskCatalystSdwanScopedInventory.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A property that uniquely identifies the object to be inventoried as a part of the scoped inventory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string NamingProperty
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TaskCatalystSdwanScopedInventory.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Set of queries to identify objects to be inventoried as part of this scoped inventory action."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public object Queries
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the object for which scoped inventory needs to be run."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Type
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> Values
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.TaskCatalystSdwanScopedInventory initObject = new Intersight.Model.TaskCatalystSdwanScopedInventory();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NamingProperty"))
+            {
+                initObject.NamingProperty = this.NamingProperty;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Queries"))
+            {
+                initObject.Queries = this.Queries;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RegisteredDevice"))
+            {
+                initObject.RegisteredDevice = this.RegisteredDevice;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Values"))
+            {
+                initObject.Values = this.Values;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize TaskFabricMosScopedInventory.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightTaskFabricMosScopedInventory")]
@@ -157,6 +312,120 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Values"))
             {
                 initObject.Values = this.Values;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TaskFileDownloadInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTaskFileDownloadInfo")]
+    public class InitializeIntersightTaskFileDownloadInfo : PSCmdlet
+    {
+        public InitializeIntersightTaskFileDownloadInfo()
+        {
+            ClassId = TaskFileDownloadInfo.ClassIdEnum.TaskFileDownloadInfo;
+            ObjectType = TaskFileDownloadInfo.ObjectTypeEnum.TaskFileDownloadInfo;
+            Type = TaskFileDownloadInfo.TypeEnum.S3;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TaskFileDownloadInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When the type of the download is inline, it will read the file from the contents here."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Contents
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TaskFileDownloadInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The path of the download from the specified source location for type S3, then this is the object key."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Path
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The source of the download location and if type is S3, then this is the bucket name. In case of MoRef download type \nthe source will have the Moid of the workflow definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Source
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The type of download location is captured in type.\n* `S3` - Download workflow from S3.\n* `Local` - Download workflow from local path.\n* `Inline` - Workflow is provided inline.\n* `MoRef` - Start an existing workflow registered with given Moid."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TaskFileDownloadInfo.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.TaskFileDownloadInfo initObject = new Intersight.Model.TaskFileDownloadInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Contents"))
+            {
+                initObject.Contents = this.Contents;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Path"))
+            {
+                initObject.Path = this.Path;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Source"))
+            {
+                initObject.Source = this.Source;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
+            {
+                initObject.Type = this.Type;
             }
             WriteObject(initObject);
         }
@@ -2172,6 +2441,204 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Values"))
             {
                 initObject.Values = this.Values;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TaskWorkflowAction.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTaskWorkflowAction")]
+    public class InitializeIntersightTaskWorkflowAction : PSCmdlet
+    {
+        public InitializeIntersightTaskWorkflowAction()
+        {
+            Action = TaskWorkflowAction.ActionEnum.Start;
+            ClassId = TaskWorkflowAction.ClassIdEnum.TaskWorkflowAction;
+            ObjectType = TaskWorkflowAction.ObjectTypeEnum.TaskWorkflowAction;
+
+        }
+        // <summary>
+        /// <para type="description">"Action for test workflow.\n* `start` - Start action for the workflow.\n* `stop` - Stop action for the workflow."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TaskWorkflowAction.ActionEnum Action
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TaskWorkflowAction.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Json formatted string input parameters to workflow."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InputParams
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When true, this workflow type will be triggered as a dynamic workflow, if not it will be treated as a static workflow."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsDynamic
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TaskWorkflowAction.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When true, the retry operation can be performed on the workflow."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Retryable
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This key can be set so that the workflow execution can be sequenced with workflows having the same key. An example usecase is say there are diferent workflows which operate on the server, and are executed at the same time on the same server and the sequence key for all the workflows are same, then workflow engine will enforce that the workflow execution are sequenced and started one after the other, based on timestamp of the arrival of the execution requests."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SequenceKey
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When true, the workflow will wait for previous one to complete before starting a new one."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool WaitOnDuplicate
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Json formatted string that has the contents of the workflow context used when starting a workflow."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string WorkflowContext
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Path to workflow metadata file that will be published and started."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.TaskFileDownloadInfo WorkflowFile
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.TaskWorkflowAction initObject = new Intersight.Model.TaskWorkflowAction();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
+            {
+                initObject.Action = this.Action;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("InputParams"))
+            {
+                initObject.InputParams = this.InputParams;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsDynamic"))
+            {
+                initObject.IsDynamic = this.IsDynamic;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Retryable"))
+            {
+                initObject.Retryable = this.Retryable;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SequenceKey"))
+            {
+                initObject.SequenceKey = this.SequenceKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WaitOnDuplicate"))
+            {
+                initObject.WaitOnDuplicate = this.WaitOnDuplicate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowContext"))
+            {
+                initObject.WorkflowContext = this.WorkflowContext;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WorkflowFile"))
+            {
+                initObject.WorkflowFile = this.WorkflowFile;
             }
             WriteObject(initObject);
         }

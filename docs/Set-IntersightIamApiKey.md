@@ -251,6 +251,8 @@ PS C:\> Set-IntersightIamApiKey
 
 [Get-IntersightIamApiKey](./Get-IntersightIamApiKey.md)
 
+[Initialize-IntersightIamSwitchScopePermissions](./Initialize-IntersightIamSwitchScopePermissions.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPkixKeyGenerationSpec](./Initialize-IntersightPkixKeyGenerationSpec.md)

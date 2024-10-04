@@ -275,10 +275,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"VLAN to be used for server access over Inband network."</para>
+        /// <para type="description">"VLAN to be used for server access over Inband network. When Inband is enabled, only numbers between 4 to 4093 are allowed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidateRange(4, 4093)]
+
         public long InbandVlan
         {
             get;
@@ -474,10 +474,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"VLAN to be used for server access over Inband network."</para>
+        /// <para type="description">"VLAN to be used for server access over Inband network. When Inband is enabled, only numbers between 4 to 4093 are allowed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidateRange(4, 4093)]
+
         public long InbandVlan
         {
             get;
@@ -662,10 +662,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"VLAN to be used for server access over Inband network."</para>
+        /// <para type="description">"VLAN to be used for server access over Inband network. When Inband is enabled, only numbers between 4 to 4093 are allowed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(4, 4093)]
+
         public long InbandVlan
         {
             get;
@@ -851,10 +851,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"VLAN to be used for server access over Inband network."</para>
+        /// <para type="description">"VLAN to be used for server access over Inband network. When Inband is enabled, only numbers between 4 to 4093 are allowed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(4, 4093)]
+
         public long InbandVlan
         {
             get;
