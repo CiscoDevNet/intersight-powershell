@@ -977,7 +977,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The equipment's lifecycle status.\n* `None` - Default state of an equipment. This should be an initial state when no state is defined for an equipment.\n* `Active` - Default Lifecycle State for a physical entity.\n* `Decommissioned` - Decommission Lifecycle state.\n* `DecommissionInProgress` - Decommission Inprogress Lifecycle state.\n* `RecommissionInProgress` - Recommission Inprogress Lifecycle state.\n* `OperationFailed` - Failed Operation Lifecycle state.\n* `ReackInProgress` - ReackInProgress Lifecycle state.\n* `RemoveInProgress` - RemoveInProgress Lifecycle state.\n* `Discovered` - Discovered Lifecycle state.\n* `DiscoveryInProgress` - DiscoveryInProgress Lifecycle state.\n* `DiscoveryFailed` - DiscoveryFailed Lifecycle state.\n* `FirmwareUpgradeInProgress` - Firmware upgrade is in progress on given physical entity.\n* `SecureEraseInProgress` - Secure Erase is in progress on given physical entity.\n* `BladeMigrationInProgress` - Server slot migration is in progress on given physical entity.\n* `Inactive` - Inactive Lifecycle state.\n* `ReplaceInProgress` - ReplaceInProgress Lifecycle state.\n* `SlotMismatch` - The blade server is detected in a different chassis/slot than it was previously.\n* `ReplacementPendingUserAction` - A new blade server is detected, and discovery is pending cleanup of old blade originally discovered in the new blade's location.\n* `Removed` - The blade server has been removed from its discovered slot, and not detected anywhere else within the domain.\n* `Moved` - The blade server has been moved from its discovered location to a new location within the domain.\n* `Replaced` - The blade server has been removed from its discovered location and another blade has been inserted. in that location.\n* `MovedAndReplaced` - The blade server has been moved from its discovered location to a new location within the domain and another blade has been inserted into the previously discovered location.\n* `DomainRmaPendingUserAction` - Domain RMA detected due to the presence of an old pair of FIs with mismatched serial numbers within the same account. User to either initiate the 'Replace Domain workflow' or unclaim the old domain."</para>
+        /// <para type="description">"The equipment's lifecycle status.\n* `None` - Default state of an equipment. This should be an initial state when no state is defined for an equipment.\n* `Active` - Default Lifecycle State for a physical entity.\n* `Decommissioned` - Decommission Lifecycle state.\n* `DecommissionInProgress` - Decommission Inprogress Lifecycle state.\n* `RecommissionInProgress` - Recommission Inprogress Lifecycle state.\n* `OperationFailed` - Failed Operation Lifecycle state.\n* `ReackInProgress` - ReackInProgress Lifecycle state.\n* `RemoveInProgress` - RemoveInProgress Lifecycle state.\n* `Discovered` - Discovered Lifecycle state.\n* `DiscoveryInProgress` - DiscoveryInProgress Lifecycle state.\n* `DiscoveryFailed` - DiscoveryFailed Lifecycle state.\n* `FirmwareUpgradeInProgress` - Firmware upgrade is in progress on given physical entity.\n* `SecureEraseInProgress` - Secure Erase is in progress on given physical entity.\n* `ScrubInProgress` - Scrub is in progress on given physical entity.\n* `BladeMigrationInProgress` - Server slot migration is in progress on given physical entity.\n* `Inactive` - Inactive Lifecycle state.\n* `ReplaceInProgress` - ReplaceInProgress Lifecycle state.\n* `SlotMismatch` - The blade server is detected in a different chassis/slot than it was previously.\n* `ReplacementPendingUserAction` - A new blade server is detected, and discovery is pending cleanup of old blade originally discovered in the new blade's location.\n* `Removed` - The blade server has been removed from its discovered slot, and not detected anywhere else within the domain.\n* `Moved` - The blade server has been moved from its discovered location to a new location within the domain.\n* `Replaced` - The blade server has been removed from its discovered location and another blade has been inserted. in that location.\n* `MovedAndReplaced` - The blade server has been moved from its discovered location to a new location within the domain and another blade has been inserted into the previously discovered location.\n* `DomainRmaPendingUserAction` - Domain RMA detected due to the presence of an old pair of FIs with mismatched serial numbers within the same account. User to either initiate the 'Replace Domain workflow' or unclaim the old domain."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6527,6 +6527,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -6598,6 +6599,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
@@ -6626,6 +6628,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public FabricSwitchClusterProfileRelationship SwitchClusterProfile
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Value indicating the switch side on which the switch profile or template has to be deployed.\n* `None` - Switch side not defined for the policy configurations in the switch profile or template.\n* `A` - Policy configurations in the switch profile or template to be deployed on fabric interconnect A.\n* `B` - Policy configurations in the switch profile or template to be deployed on fabric interconnect B."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricSwitchProfile.SwitchIdEnum SwitchId
         {
             get;
             set;
@@ -6706,6 +6719,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -6776,6 +6790,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
@@ -6804,6 +6819,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public FabricSwitchClusterProfileTemplateRelationship SwitchClusterProfileTemplate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Value indicating the switch side on which the switch profile or template has to be deployed.\n* `None` - Switch side not defined for the policy configurations in the switch profile or template.\n* `A` - Policy configurations in the switch profile or template to be deployed on fabric interconnect A.\n* `B` - Policy configurations in the switch profile or template to be deployed on fabric interconnect B."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricSwitchProfileTemplate.SwitchIdEnum SwitchId
         {
             get;
             set;
@@ -12342,6 +12368,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -12392,6 +12419,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -12421,6 +12449,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FabricSwitchClusterProfileRelationship SwitchClusterProfile
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Value indicating the switch side on which the switch profile or template has to be deployed.\n* `None` - Switch side not defined for the policy configurations in the switch profile or template.\n* `A` - Policy configurations in the switch profile or template to be deployed on fabric interconnect A.\n* `B` - Policy configurations in the switch profile or template to be deployed on fabric interconnect B."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfile.SwitchIdEnum SwitchId
         {
             get;
             set;
@@ -12510,6 +12549,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -12559,6 +12599,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -12588,6 +12629,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FabricSwitchClusterProfileTemplateRelationship SwitchClusterProfileTemplate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Value indicating the switch side on which the switch profile or template has to be deployed.\n* `None` - Switch side not defined for the policy configurations in the switch profile or template.\n* `A` - Policy configurations in the switch profile or template to be deployed on fabric interconnect A.\n* `B` - Policy configurations in the switch profile or template to be deployed on fabric interconnect B."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfileTemplate.SwitchIdEnum SwitchId
         {
             get;
             set;
@@ -17555,6 +17607,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -17605,6 +17658,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -17634,6 +17688,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FabricSwitchClusterProfileRelationship SwitchClusterProfile
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Value indicating the switch side on which the switch profile or template has to be deployed.\n* `None` - Switch side not defined for the policy configurations in the switch profile or template.\n* `A` - Policy configurations in the switch profile or template to be deployed on fabric interconnect A.\n* `B` - Policy configurations in the switch profile or template to be deployed on fabric interconnect B."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfile.SwitchIdEnum SwitchId
         {
             get;
             set;
@@ -17723,6 +17788,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -17772,6 +17838,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -17801,6 +17868,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FabricSwitchClusterProfileTemplateRelationship SwitchClusterProfileTemplate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Value indicating the switch side on which the switch profile or template has to be deployed.\n* `None` - Switch side not defined for the policy configurations in the switch profile or template.\n* `A` - Policy configurations in the switch profile or template to be deployed on fabric interconnect A.\n* `B` - Policy configurations in the switch profile or template to be deployed on fabric interconnect B."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfileTemplate.SwitchIdEnum SwitchId
         {
             get;
             set;

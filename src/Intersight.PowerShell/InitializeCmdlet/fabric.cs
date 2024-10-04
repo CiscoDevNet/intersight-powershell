@@ -7163,6 +7163,7 @@ namespace Intersight.PowerShell
         {
             ClassId = FabricSwitchProfile.ClassIdEnum.FabricSwitchProfile;
             ObjectType = FabricSwitchProfile.ObjectTypeEnum.FabricSwitchProfile;
+            SwitchId = FabricSwitchProfile.SwitchIdEnum.None;
             Type = FabricSwitchProfile.TypeEnum.Instance;
 
         }
@@ -7307,6 +7308,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Value indicating the switch side on which the switch profile or template has to be deployed.\n* `None` - Switch side not defined for the policy configurations in the switch profile or template.\n* `A` - Policy configurations in the switch profile or template to be deployed on fabric interconnect A.\n* `B` - Policy configurations in the switch profile or template to be deployed on fabric interconnect B."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfile.SwitchIdEnum SwitchId
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -7381,6 +7392,10 @@ namespace Intersight.PowerShell
             {
                 initObject.SwitchClusterProfile = this.SwitchClusterProfile;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
+            {
+                initObject.SwitchId = this.SwitchId;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
@@ -7403,6 +7418,7 @@ namespace Intersight.PowerShell
         {
             ClassId = FabricSwitchProfileTemplate.ClassIdEnum.FabricSwitchProfileTemplate;
             ObjectType = FabricSwitchProfileTemplate.ObjectTypeEnum.FabricSwitchProfileTemplate;
+            SwitchId = FabricSwitchProfileTemplate.SwitchIdEnum.None;
             Type = FabricSwitchProfileTemplate.TypeEnum.Instance;
 
         }
@@ -7537,6 +7553,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Value indicating the switch side on which the switch profile or template has to be deployed.\n* `None` - Switch side not defined for the policy configurations in the switch profile or template.\n* `A` - Policy configurations in the switch profile or template to be deployed on fabric interconnect A.\n* `B` - Policy configurations in the switch profile or template to be deployed on fabric interconnect B."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfileTemplate.SwitchIdEnum SwitchId
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -7606,6 +7632,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SwitchClusterProfileTemplate"))
             {
                 initObject.SwitchClusterProfileTemplate = this.SwitchClusterProfileTemplate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
+            {
+                initObject.SwitchId = this.SwitchId;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

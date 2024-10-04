@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationCloudVmNetworkConfiguration
+# Initialize-IntersightServicenowIncidentDoc
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationCloudVmNetworkConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationCloudVmNetworkConfiguration.ClassIdEnum>][-Interfaces< System.Collections.Generic.List`1[Model.VirtualizationNetworkInterface]>][-ObjectType< VirtualizationCloudVmNetworkConfiguration.ObjectTypeEnum>][-VpcId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightServicenowIncidentDoc [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ServicenowIncidentDoc.ClassIdEnum>][-ExampleValue< string>][-InternalType< string>][-Label< string>][-Moid< string>][-ObjectType< ServicenowIncidentDoc.ObjectTypeEnum>][-PropertyName< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,10 +40,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: VirtualizationCloudVmNetworkConfiguration.ClassIdEnum
+Type: ServicenowIncidentDoc.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -54,13 +54,56 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Interfaces
-
-
-Note :- Use Initialize-IntersightVirtualizationNetworkInterface to create the object of complex type VirtualizationNetworkInterface
+### -ExampleValue
+Example value for Incident property.
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.VirtualizationNetworkInterface]
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InternalType
+Internal type for Incident property.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Label
+Label for Incident property.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Moid
+The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -72,10 +115,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: VirtualizationCloudVmNetworkConfiguration.ObjectTypeEnum
+Type: ServicenowIncidentDoc.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -86,11 +129,28 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VpcId
-Virtual Private Cloud (Amazon VPC) enables you to launch AWS resources into a virtual network that you have defined.
+### -PropertyName
+Name for Incident property.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -139,7 +199,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationCloudVmNetworkConfiguration
+PS C:\> Initialize-IntersightServicenowIncidentDoc
 ```
 
 { Add example description here }
@@ -158,4 +218,4 @@ PS C:\> Initialize-IntersightVirtualizationCloudVmNetworkConfiguration
 
 ## RELATED LINKS
 
-[Initialize-IntersightVirtualizationNetworkInterface](./Initialize-IntersightVirtualizationNetworkInterface.md)
+[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

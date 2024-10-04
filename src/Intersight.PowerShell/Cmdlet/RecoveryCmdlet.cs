@@ -297,6 +297,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -396,6 +397,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -1519,6 +1521,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -1600,6 +1603,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"A reference to a recoveryScheduleConfigPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -2359,6 +2363,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -2440,6 +2445,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"A reference to a recoveryScheduleConfigPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>

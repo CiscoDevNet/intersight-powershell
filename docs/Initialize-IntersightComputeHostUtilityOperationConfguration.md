@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationCloudVmStorageConfiguration
+# Initialize-IntersightComputeHostUtilityOperationConfguration
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationCloudVmStorageConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationCloudVmStorageConfiguration.ClassIdEnum>][-ObjectType< VirtualizationCloudVmStorageConfiguration.ObjectTypeEnum>][-Volumes< System.Collections.Generic.List`1[Model.VirtualizationVolumeInfo]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightComputeHostUtilityOperationConfguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ComputeHostUtilityOperationConfguration.ClassIdEnum>][-ObjectType< ComputeHostUtilityOperationConfguration.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,7 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
 
 ```yaml
-Type: VirtualizationCloudVmStorageConfiguration.ClassIdEnum
+Type: ComputeHostUtilityOperationConfguration.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -58,24 +58,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
 
 ```yaml
-Type: VirtualizationCloudVmStorageConfiguration.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Volumes
-
-
-Note :- Use Initialize-IntersightVirtualizationVolumeInfo to create the object of complex type VirtualizationVolumeInfo
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.VirtualizationVolumeInfo]
+Type: ComputeHostUtilityOperationConfguration.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -124,7 +107,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationCloudVmStorageConfiguration
+PS C:\> Initialize-IntersightComputeHostUtilityOperationConfguration
 ```
 
 { Add example description here }
@@ -142,5 +125,3 @@ PS C:\> Initialize-IntersightVirtualizationCloudVmStorageConfiguration
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightVirtualizationVolumeInfo](./Initialize-IntersightVirtualizationVolumeInfo.md)

@@ -706,6 +706,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -807,6 +808,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -931,6 +933,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -1009,6 +1012,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -1133,6 +1137,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -1211,6 +1216,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -1473,6 +1479,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -1533,6 +1540,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -1664,6 +1672,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -1724,6 +1733,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description"></para>
@@ -1883,6 +1893,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -1943,6 +1954,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -2074,6 +2086,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the profile."</para>
         /// </summary>
@@ -2134,6 +2147,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description"></para>

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricSwitchProfileTemplate [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchClusterProfileTemplate< FabricSwitchClusterProfileTemplateRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< FabricSwitchProfileTemplate.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricSwitchProfileTemplate [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchClusterProfileTemplate< FabricSwitchClusterProfileTemplateRelationship>][-SwitchId< FabricSwitchProfileTemplate.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< FabricSwitchProfileTemplate.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -193,6 +193,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: FabricSwitchClusterProfileTemplateRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SwitchId
+Value indicating the switch side on which the switch profile or template has to be deployed.\n* `None` - Switch side not defined for the policy configurations in the switch profile or template.\n* `A` - Policy configurations in the switch profile or template to be deployed on fabric interconnect A.\n* `B` - Policy configurations in the switch profile or template to be deployed on fabric interconnect B.
+
+```yaml
+Type: FabricSwitchProfileTemplate.SwitchIdEnum
 Parameter Sets: (All)
 Aliases:
 

@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationVolumeInfo
+# New-IntersightTaskWorkflowAction
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,15 +14,29 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationVolumeInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bootable< bool>][-ClassId< VirtualizationVolumeInfo.ClassIdEnum>][-DeleteOnTermination< bool>][-Encryption< bool>][-Iops< long>][-ObjectType< VirtualizationVolumeInfo.ObjectTypeEnum>][-Order< long>][-Throughput< long>][-VolumeName< string>][-VolumeSize< long>][-VolumeType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightTaskWorkflowAction [-Action< TaskWorkflowAction.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-InputParams< string>][-IsDynamic< bool>][-Moid< string>][-Retryable< bool>][-SequenceKey< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WaitOnDuplicate< bool>][-WorkflowContext< string>][-WorkflowFile< TaskFileDownloadInfo>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-
-Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
+Create a &apos;TaskWorkflowAction&apos; resource.
 
 ## PARAMETERS
+
+### -Action
+Action for test workflow.\n* `start` - Start action for the workflow.\n* `stop` - Stop action for the workflow.
+
+```yaml
+Type: TaskWorkflowAction.ActionEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 
@@ -39,128 +53,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Bootable
-Set to true, if the volume should be a root disk.
-
-```yaml
-Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
-
-```yaml
-Type: VirtualizationVolumeInfo.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -DeleteOnTermination
-Set to true, to delete the volume on termination of the VM the volume is attached to.
-
-```yaml
-Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Encryption
-Set to true, if the volume should be encrypted.
-
-```yaml
-Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Iops
-IOPS for the volume for applicable volume types.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
-
-```yaml
-Type: VirtualizationVolumeInfo.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Order
-Order of the disk attachment to the VM.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Throughput
-Throughput for the volume for applicable volume types.
-
-```yaml
-Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -VolumeName
-Name assigned to the volume created.
+### -InputParams
+Json formatted string input parameters to workflow.
 
 ```yaml
 Type: string
@@ -174,11 +68,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VolumeSize
-Size of the volume created in GB.
+### -IsDynamic
+When true, this workflow type will be triggered as a dynamic workflow, if not it will be treated as a static workflow.
 
 ```yaml
-Type: long
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
@@ -189,11 +83,105 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -VolumeType
-Id of the volume or storage type of this volume.
+### -Moid
+The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Retryable
+When true, the retry operation can be performed on the workflow.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SequenceKey
+This key can be set so that the workflow execution can be sequenced with workflows having the same key. An example usecase is say there are diferent workflows which operate on the server, and are executed at the same time on the same server and the sequence key for all the workflows are same, then workflow engine will enforce that the workflow execution are sequenced and started one after the other, based on timestamp of the arrival of the execution requests.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+
+```yaml
+Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WaitOnDuplicate
+When true, the workflow will wait for previous one to complete before starting a new one.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkflowContext
+Json formatted string that has the contents of the workflow context used when starting a workflow.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WorkflowFile
+Path to workflow metadata file that will be published and started.
+
+Note :- Use Initialize-IntersightTaskFileDownloadInfo to create the object of complex type TaskFileDownloadInfo
+
+```yaml
+Type: TaskFileDownloadInfo
 Parameter Sets: (All)
 Aliases:
 
@@ -242,7 +230,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationVolumeInfo
+PS C:\> New-IntersightTaskWorkflowAction
 ```
 
 { Add example description here }
@@ -260,3 +248,11 @@ PS C:\> Initialize-IntersightVirtualizationVolumeInfo
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-IntersightTaskWorkflowAction](./Get-IntersightTaskWorkflowAction.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightTaskFileDownloadInfo](./Initialize-IntersightTaskFileDownloadInfo.md)
+
+[Set-IntersightTaskWorkflowAction](./Set-IntersightTaskWorkflowAction.md)

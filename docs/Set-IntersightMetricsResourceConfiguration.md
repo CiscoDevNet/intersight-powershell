@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightVirtualizationAwsVmComputeConfiguration
+# Set-IntersightMetricsResourceConfiguration
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,13 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVirtualizationAwsVmComputeConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< VirtualizationAwsVmComputeConfiguration.ClassIdEnum>][-InstanceTypeId< string>][-ObjectType< VirtualizationAwsVmComputeConfiguration.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightMetricsResourceConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Enabled< bool>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-
-Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
+Update a &apos;MetricsResourceConfiguration&apos; resource.
 
 ## PARAMETERS
 
@@ -39,11 +38,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+### -Enabled
+Metric collection is enabled for this resource, when enabled all available metrics are collected from the resource into Intersight.
 
 ```yaml
-Type: VirtualizationAwsVmComputeConfiguration.ClassIdEnum
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
@@ -54,26 +53,28 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -InstanceTypeId
-Instance Type used by this VM.
+### -Moid
+The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
 Parameter Sets: (All)
 Aliases:
 
-Required: false
+Required: true
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
 
 ```yaml
-Type: VirtualizationAwsVmComputeConfiguration.ObjectTypeEnum
+Type: System.Collections.Generic.List`1[MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -122,7 +123,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightVirtualizationAwsVmComputeConfiguration
+PS C:\> Set-IntersightMetricsResourceConfiguration
 ```
 
 { Add example description here }
@@ -140,3 +141,9 @@ PS C:\> Initialize-IntersightVirtualizationAwsVmComputeConfiguration
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-IntersightMetricsResourceConfiguration](./Get-IntersightMetricsResourceConfiguration.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[New-IntersightMetricsResourceConfiguration](./New-IntersightMetricsResourceConfiguration.md)

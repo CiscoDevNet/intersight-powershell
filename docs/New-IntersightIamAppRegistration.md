@@ -316,6 +316,8 @@ PS C:\> New-IntersightIamAppRegistration
 
 [Initialize-IntersightIamAppRegistration.ResponseTypesEnum](./Initialize-IntersightIamAppRegistration.ResponseTypesEnum.md)
 
+[Initialize-IntersightIamSwitchScopePermissions](./Initialize-IntersightIamSwitchScopePermissions.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightIamAppRegistration](./Remove-IntersightIamAppRegistration.md)
