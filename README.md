@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.18775
-- C# SDK version: 1.0.11.18775
+- Intersight.PowerShell version: 1.0.11.2024100405
+- C# SDK version: 1.0.11.2024100405
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.18775"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2024100405"}
 ```
 or
 
@@ -1058,28 +1058,10 @@ ChassisProfile | [**Remove-IntersightChassisProfile**](docs/Remove-IntersightCha
 ChassisProfileTemplate | [**Remove-IntersightChassisProfileTemplate**](docs/Remove-IntersightChassisProfileTemplate.md) | Delete a 'ChassisProfileTemplate' resource.
 ChassisProfile | [**Set-IntersightChassisProfile**](docs/Set-IntersightChassisProfile.md) | Update a 'ChassisProfile' resource.
 ChassisProfileTemplate | [**Set-IntersightChassisProfileTemplate**](docs/Set-IntersightChassisProfileTemplate.md) | Update a 'ChassisProfileTemplate' resource.
-CloudAwsBillingUnit | [**Get-IntersightCloudAwsBillingUnit**](docs/Get-IntersightCloudAwsBillingUnit.md) | Read a 'CloudAwsBillingUnit' resource.
-CloudAwsKeyPair | [**Get-IntersightCloudAwsKeyPair**](docs/Get-IntersightCloudAwsKeyPair.md) | Read a 'CloudAwsKeyPair' resource.
-CloudAwsNetworkInterface | [**Get-IntersightCloudAwsNetworkInterface**](docs/Get-IntersightCloudAwsNetworkInterface.md) | Read a 'CloudAwsNetworkInterface' resource.
-CloudAwsOrganizationalUnit | [**Get-IntersightCloudAwsOrganizationalUnit**](docs/Get-IntersightCloudAwsOrganizationalUnit.md) | Read a 'CloudAwsOrganizationalUnit' resource.
-CloudAwsSecurityGroup | [**Get-IntersightCloudAwsSecurityGroup**](docs/Get-IntersightCloudAwsSecurityGroup.md) | Read a 'CloudAwsSecurityGroup' resource.
-CloudAwsSubnet | [**Get-IntersightCloudAwsSubnet**](docs/Get-IntersightCloudAwsSubnet.md) | Read a 'CloudAwsSubnet' resource.
-CloudAwsVirtualMachine | [**Get-IntersightCloudAwsVirtualMachine**](docs/Get-IntersightCloudAwsVirtualMachine.md) | Read a 'CloudAwsVirtualMachine' resource.
-CloudAwsVolume | [**Get-IntersightCloudAwsVolume**](docs/Get-IntersightCloudAwsVolume.md) | Read a 'CloudAwsVolume' resource.
-CloudAwsVpc | [**Get-IntersightCloudAwsVpc**](docs/Get-IntersightCloudAwsVpc.md) | Read a 'CloudAwsVpc' resource.
-CloudRegions | [**Get-IntersightCloudRegions**](docs/Get-IntersightCloudRegions.md) | Read a 'CloudRegions' resource.
-CloudSkuContainerType | [**Get-IntersightCloudSkuContainerType**](docs/Get-IntersightCloudSkuContainerType.md) | Read a 'CloudSkuContainerType' resource.
-CloudSkuDatabaseType | [**Get-IntersightCloudSkuDatabaseType**](docs/Get-IntersightCloudSkuDatabaseType.md) | Read a 'CloudSkuDatabaseType' resource.
-CloudSkuInstanceType | [**Get-IntersightCloudSkuInstanceType**](docs/Get-IntersightCloudSkuInstanceType.md) | Read a 'CloudSkuInstanceType' resource.
-CloudSkuNetworkType | [**Get-IntersightCloudSkuNetworkType**](docs/Get-IntersightCloudSkuNetworkType.md) | Read a 'CloudSkuNetworkType' resource.
-CloudSkuRegionRateCards | [**Get-IntersightCloudSkuRegionRateCards**](docs/Get-IntersightCloudSkuRegionRateCards.md) | Read a 'CloudSkuRegionRateCards' resource.
-CloudSkuVolumeType | [**Get-IntersightCloudSkuVolumeType**](docs/Get-IntersightCloudSkuVolumeType.md) | Read a 'CloudSkuVolumeType' resource.
 CloudTfcAgentpool | [**Get-IntersightCloudTfcAgentpool**](docs/Get-IntersightCloudTfcAgentpool.md) | Read a 'CloudTfcAgentpool' resource.
 CloudTfcOrganization | [**Get-IntersightCloudTfcOrganization**](docs/Get-IntersightCloudTfcOrganization.md) | Read a 'CloudTfcOrganization' resource.
 CloudTfcWorkspace | [**Get-IntersightCloudTfcWorkspace**](docs/Get-IntersightCloudTfcWorkspace.md) | Read a 'CloudTfcWorkspace' resource.
 CloudCollectInventory | [**New-IntersightCloudCollectInventory**](docs/New-IntersightCloudCollectInventory.md) | Create a 'CloudCollectInventory' resource.
-CloudAwsVirtualMachine | [**Set-IntersightCloudAwsVirtualMachine**](docs/Set-IntersightCloudAwsVirtualMachine.md) | Update a 'CloudAwsVirtualMachine' resource.
-CloudRegions | [**Set-IntersightCloudRegions**](docs/Set-IntersightCloudRegions.md) | Update a 'CloudRegions' resource.
 CommHttpProxyPolicy | [**Get-IntersightCommHttpProxyPolicy**](docs/Get-IntersightCommHttpProxyPolicy.md) | Read a 'CommHttpProxyPolicy' resource.
 CommHttpProxyPolicy | [**New-IntersightCommHttpProxyPolicy**](docs/New-IntersightCommHttpProxyPolicy.md) | Create a 'CommHttpProxyPolicy' resource.
 CommHttpProxyPolicy | [**Remove-IntersightCommHttpProxyPolicy**](docs/Remove-IntersightCommHttpProxyPolicy.md) | Delete a 'CommHttpProxyPolicy' resource.
@@ -2771,7 +2753,6 @@ TaskNetAppScopedInventory | [**New-IntersightTaskNetAppScopedInventory**](docs/N
 TaskNexusScopedInventory | [**New-IntersightTaskNexusScopedInventory**](docs/New-IntersightTaskNexusScopedInventory.md) | Create a 'TaskNexusScopedInventory' resource.
 TaskNexusSystemScopedInventory | [**New-IntersightTaskNexusSystemScopedInventory**](docs/New-IntersightTaskNexusSystemScopedInventory.md) | Create a 'TaskNexusSystemScopedInventory' resource.
 TaskNexusVlanScopedInventory | [**New-IntersightTaskNexusVlanScopedInventory**](docs/New-IntersightTaskNexusVlanScopedInventory.md) | Create a 'TaskNexusVlanScopedInventory' resource.
-TaskPublicCloudScopedInventory | [**New-IntersightTaskPublicCloudScopedInventory**](docs/New-IntersightTaskPublicCloudScopedInventory.md) | Create a 'TaskPublicCloudScopedInventory' resource.
 TaskPureScopedInventory | [**New-IntersightTaskPureScopedInventory**](docs/New-IntersightTaskPureScopedInventory.md) | Create a 'TaskPureScopedInventory' resource.
 TaskServerScopedInventory | [**New-IntersightTaskServerScopedInventory**](docs/New-IntersightTaskServerScopedInventory.md) | Create a 'TaskServerScopedInventory' resource.
 TaskWorkflowAction | [**New-IntersightTaskWorkflowAction**](docs/New-IntersightTaskWorkflowAction.md) | Create a 'TaskWorkflowAction' resource.
@@ -2972,6 +2953,7 @@ WorkflowTaskInfo | [**Get-IntersightWorkflowTaskInfo**](docs/Get-IntersightWorkf
 WorkflowTaskMetadata | [**Get-IntersightWorkflowTaskMetadata**](docs/Get-IntersightWorkflowTaskMetadata.md) | Read a 'WorkflowTaskMetadata' resource.
 WorkflowTemplateFunctionMeta | [**Get-IntersightWorkflowTemplateFunctionMeta**](docs/Get-IntersightWorkflowTemplateFunctionMeta.md) | Read a 'WorkflowTemplateFunctionMeta' resource.
 WorkflowUiDisplayMetadata | [**Get-IntersightWorkflowUiDisplayMetadata**](docs/Get-IntersightWorkflowUiDisplayMetadata.md) | Read a 'WorkflowUiDisplayMetadata' resource.
+WorkflowVariable | [**Get-IntersightWorkflowVariable**](docs/Get-IntersightWorkflowVariable.md) | Read a 'WorkflowVariable' resource.
 WorkflowWorkflowDefinition | [**Get-IntersightWorkflowWorkflowDefinition**](docs/Get-IntersightWorkflowWorkflowDefinition.md) | Read a 'WorkflowWorkflowDefinition' resource.
 WorkflowWorkflowInfo | [**Get-IntersightWorkflowWorkflowInfo**](docs/Get-IntersightWorkflowWorkflowInfo.md) | Read a 'WorkflowWorkflowInfo' resource.
 WorkflowWorkflowMetadata | [**Get-IntersightWorkflowWorkflowMetadata**](docs/Get-IntersightWorkflowWorkflowMetadata.md) | Read a 'WorkflowWorkflowMetadata' resource.
@@ -2994,6 +2976,7 @@ WorkflowTaskDefinition | [**New-IntersightWorkflowTaskDefinition**](docs/New-Int
 WorkflowTemplateEvaluation | [**New-IntersightWorkflowTemplateEvaluation**](docs/New-IntersightWorkflowTemplateEvaluation.md) | Create a 'WorkflowTemplateEvaluation' resource.
 WorkflowTemplateParser | [**New-IntersightWorkflowTemplateParser**](docs/New-IntersightWorkflowTemplateParser.md) | Create a 'WorkflowTemplateParser' resource.
 WorkflowUiDisplayMetadata | [**New-IntersightWorkflowUiDisplayMetadata**](docs/New-IntersightWorkflowUiDisplayMetadata.md) | Create a 'WorkflowUiDisplayMetadata' resource.
+WorkflowVariable | [**New-IntersightWorkflowVariable**](docs/New-IntersightWorkflowVariable.md) | Create a 'WorkflowVariable' resource.
 WorkflowWorkflowDefinition | [**New-IntersightWorkflowWorkflowDefinition**](docs/New-IntersightWorkflowWorkflowDefinition.md) | Create a 'WorkflowWorkflowDefinition' resource.
 WorkflowWorkflowInfo | [**New-IntersightWorkflowWorkflowInfo**](docs/New-IntersightWorkflowWorkflowInfo.md) | Create a 'WorkflowWorkflowInfo' resource.
 WorkflowAnsibleBatchExecutor | [**Remove-IntersightWorkflowAnsibleBatchExecutor**](docs/Remove-IntersightWorkflowAnsibleBatchExecutor.md) | Delete a 'WorkflowAnsibleBatchExecutor' resource.
@@ -3013,6 +2996,7 @@ WorkflowServiceItemOutput | [**Remove-IntersightWorkflowServiceItemOutput**](doc
 WorkflowSshBatchExecutor | [**Remove-IntersightWorkflowSshBatchExecutor**](docs/Remove-IntersightWorkflowSshBatchExecutor.md) | Delete a 'WorkflowSshBatchExecutor' resource.
 WorkflowTaskDefinition | [**Remove-IntersightWorkflowTaskDefinition**](docs/Remove-IntersightWorkflowTaskDefinition.md) | Delete a 'WorkflowTaskDefinition' resource.
 WorkflowUiDisplayMetadata | [**Remove-IntersightWorkflowUiDisplayMetadata**](docs/Remove-IntersightWorkflowUiDisplayMetadata.md) | Delete a 'WorkflowUiDisplayMetadata' resource.
+WorkflowVariable | [**Remove-IntersightWorkflowVariable**](docs/Remove-IntersightWorkflowVariable.md) | Delete a 'WorkflowVariable' resource.
 WorkflowWorkflowDefinition | [**Remove-IntersightWorkflowWorkflowDefinition**](docs/Remove-IntersightWorkflowWorkflowDefinition.md) | Delete a 'WorkflowWorkflowDefinition' resource.
 WorkflowWorkflowInfo | [**Remove-IntersightWorkflowWorkflowInfo**](docs/Remove-IntersightWorkflowWorkflowInfo.md) | Delete a 'WorkflowWorkflowInfo' resource.
 WorkflowAnsibleBatchExecutor | [**Set-IntersightWorkflowAnsibleBatchExecutor**](docs/Set-IntersightWorkflowAnsibleBatchExecutor.md) | Update a 'WorkflowAnsibleBatchExecutor' resource.
@@ -3033,6 +3017,7 @@ WorkflowSshBatchExecutor | [**Set-IntersightWorkflowSshBatchExecutor**](docs/Set
 WorkflowTaskDefinition | [**Set-IntersightWorkflowTaskDefinition**](docs/Set-IntersightWorkflowTaskDefinition.md) | Update a 'WorkflowTaskDefinition' resource.
 WorkflowTaskInfo | [**Set-IntersightWorkflowTaskInfo**](docs/Set-IntersightWorkflowTaskInfo.md) | Update a 'WorkflowTaskInfo' resource.
 WorkflowUiDisplayMetadata | [**Set-IntersightWorkflowUiDisplayMetadata**](docs/Set-IntersightWorkflowUiDisplayMetadata.md) | Update a 'WorkflowUiDisplayMetadata' resource.
+WorkflowVariable | [**Set-IntersightWorkflowVariable**](docs/Set-IntersightWorkflowVariable.md) | Update a 'WorkflowVariable' resource.
 WorkflowWorkflowDefinition | [**Set-IntersightWorkflowWorkflowDefinition**](docs/Set-IntersightWorkflowWorkflowDefinition.md) | Update a 'WorkflowWorkflowDefinition' resource.
 WorkflowWorkflowInfo | [**Set-IntersightWorkflowWorkflowInfo**](docs/Set-IntersightWorkflowWorkflowInfo.md) | Update a 'WorkflowWorkflowInfo' resource.
 WorkspaceFolder | [**Get-IntersightWorkspaceFolder**](docs/Get-IntersightWorkspaceFolder.md) | Read a 'WorkspaceFolder' resource.

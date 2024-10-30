@@ -60,16 +60,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Fabric extender identifier for this port."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ModuleId
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -126,10 +116,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("EquipmentIoCardBase"))
             {
                 initObject.EquipmentIoCardBase = this.EquipmentIoCardBase;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ModuleId"))
-            {
-                initObject.ModuleId = this.ModuleId;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
