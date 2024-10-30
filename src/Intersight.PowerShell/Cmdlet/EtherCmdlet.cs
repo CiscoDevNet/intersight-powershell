@@ -43,6 +43,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Administratively configured state (enabled/disabled) for this port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AdminState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Breakout port member in the fabric extender."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1439,6 +1450,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a equipmentIoCardBase resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -1453,16 +1465,6 @@ namespace Intersight.PowerShell
 
 
 
-        // <summary>
-        /// <para type="description">"Fabric extender identifier for this port."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long ModuleId
-        {
-            get;
-            set;
-        }
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>

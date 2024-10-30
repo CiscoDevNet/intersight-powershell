@@ -5,7 +5,8 @@
      <IncludeAssets>compile</IncludeAssets>
     <AssemblyName>Intersight.PowerShell</AssemblyName>
     <PackageId>PSIntersight</PackageId>
-    <Version>1.0.11.18775</Version>
+    <AssemblyVersion>1.0.11</AssemblyVersion>
+    <Version>1.0.11.2024100405</Version>
     <OutputType>Library</OutputType>
     <Authors>Cisco Systems</Authors>
     <Company>Cisco Systems</Company>

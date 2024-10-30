@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEtherHostPort [-AcknowledgedPeerInterface< PortInterfaceBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EquipmentIoCardBase< EquipmentIoCardBaseRelationship>][-ModuleId< long>][[-Moid]< string>][-PeerInterface< PortInterfaceBaseRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEtherHostPort [-AcknowledgedPeerInterface< PortInterfaceBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EquipmentIoCardBase< EquipmentIoCardBaseRelationship>][[-Moid]< string>][-PeerInterface< PortInterfaceBaseRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -64,21 +64,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: EquipmentIoCardBaseRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ModuleId
-Fabric extender identifier for this port.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 

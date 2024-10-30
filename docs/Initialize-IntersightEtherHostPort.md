@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEtherHostPort [-AcknowledgedPeerInterface< Model.PortInterfaceBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EtherHostPort.ClassIdEnum>][-EquipmentIoCardBase< Model.EquipmentIoCardBaseRelationship>][-ModuleId< long>][-Moid< string>][-ObjectType< EtherHostPort.ObjectTypeEnum>][-PeerInterface< Model.PortInterfaceBaseRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEtherHostPort [-AcknowledgedPeerInterface< Model.PortInterfaceBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EtherHostPort.ClassIdEnum>][-EquipmentIoCardBase< Model.EquipmentIoCardBaseRelationship>][-Moid< string>][-ObjectType< EtherHostPort.ObjectTypeEnum>][-PeerInterface< Model.PortInterfaceBaseRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -80,21 +80,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.EquipmentIoCardBaseRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ModuleId
-Fabric extender identifier for this port.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 
