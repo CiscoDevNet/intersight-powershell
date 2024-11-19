@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2024100405
-- C# SDK version: 1.0.11.2024100405
+- Intersight.PowerShell version: 1.0.11.2024101709
+- C# SDK version: 1.0.11.2024101709
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2024100405"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2024101709"}
 ```
 or
 
@@ -904,6 +904,7 @@ CapabilityChassisUpgradeSupportMeta | [**Get-IntersightCapabilityChassisUpgradeS
 CapabilityCimcFirmwareDescriptor | [**Get-IntersightCapabilityCimcFirmwareDescriptor**](docs/Get-IntersightCapabilityCimcFirmwareDescriptor.md) | Read a 'CapabilityCimcFirmwareDescriptor' resource.
 CapabilityCpuEndpointDescriptor | [**Get-IntersightCapabilityCpuEndpointDescriptor**](docs/Get-IntersightCapabilityCpuEndpointDescriptor.md) | Read a 'CapabilityCpuEndpointDescriptor' resource.
 CapabilityDimmsEndpointDescriptor | [**Get-IntersightCapabilityDimmsEndpointDescriptor**](docs/Get-IntersightCapabilityDimmsEndpointDescriptor.md) | Read a 'CapabilityDimmsEndpointDescriptor' resource.
+CapabilityDomainPolicyRequirement | [**Get-IntersightCapabilityDomainPolicyRequirement**](docs/Get-IntersightCapabilityDomainPolicyRequirement.md) | Read a 'CapabilityDomainPolicyRequirement' resource.
 CapabilityDrivesEndpointDescriptor | [**Get-IntersightCapabilityDrivesEndpointDescriptor**](docs/Get-IntersightCapabilityDrivesEndpointDescriptor.md) | Read a 'CapabilityDrivesEndpointDescriptor' resource.
 CapabilityEquipmentPhysicalDef | [**Get-IntersightCapabilityEquipmentPhysicalDef**](docs/Get-IntersightCapabilityEquipmentPhysicalDef.md) | Read a 'CapabilityEquipmentPhysicalDef' resource.
 CapabilityEquipmentSlotArray | [**Get-IntersightCapabilityEquipmentSlotArray**](docs/Get-IntersightCapabilityEquipmentSlotArray.md) | Read a 'CapabilityEquipmentSlotArray' resource.
@@ -2298,6 +2299,7 @@ OsConfigurationFile | [**Get-IntersightOsConfigurationFile**](docs/Get-Intersigh
 OsDistribution | [**Get-IntersightOsDistribution**](docs/Get-IntersightOsDistribution.md) | Read a 'OsDistribution' resource.
 OsInstall | [**Get-IntersightOsInstall**](docs/Get-IntersightOsInstall.md) | Read a 'OsInstall' resource.
 OsSupportedVersion | [**Get-IntersightOsSupportedVersion**](docs/Get-IntersightOsSupportedVersion.md) | Read a 'OsSupportedVersion' resource.
+OsValidRemoteTarget | [**Get-IntersightOsValidRemoteTarget**](docs/Get-IntersightOsValidRemoteTarget.md) | Read a 'OsValidRemoteTarget' resource.
 OsBulkInstallInfo | [**New-IntersightOsBulkInstallInfo**](docs/New-IntersightOsBulkInstallInfo.md) | Create a 'OsBulkInstallInfo' resource.
 OsConfigurationFile | [**New-IntersightOsConfigurationFile**](docs/New-IntersightOsConfigurationFile.md) | Create a 'OsConfigurationFile' resource.
 OsInstall | [**New-IntersightOsInstall**](docs/New-IntersightOsInstall.md) | Create a 'OsInstall' resource.

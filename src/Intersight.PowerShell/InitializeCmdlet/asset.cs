@@ -6349,6 +6349,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Discovery path to define if its scope target entities or hostname or IP address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DiscoveryPath
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Active Directory domain, if required for this account."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6382,6 +6392,10 @@ namespace Intersight.PowerShell
                 initObject.BrowserServicePort = this.BrowserServicePort;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DiscoveryPath"))
+            {
+                initObject.DiscoveryPath = this.DiscoveryPath;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("FullDomainName"))
             {
                 initObject.FullDomainName = this.FullDomainName;

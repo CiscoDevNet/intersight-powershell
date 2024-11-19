@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetWorkloadOptimizerMicrosoftSqlServerOptions [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BrowserServicePort< long>][-ClassId< AssetWorkloadOptimizerMicrosoftSqlServerOptions.ClassIdEnum>][-FullDomainName< string>][-ObjectType< AssetWorkloadOptimizerMicrosoftSqlServerOptions.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetWorkloadOptimizerMicrosoftSqlServerOptions [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BrowserServicePort< long>][-ClassId< AssetWorkloadOptimizerMicrosoftSqlServerOptions.ClassIdEnum>][-DiscoveryPath< string>][-FullDomainName< string>][-ObjectType< AssetWorkloadOptimizerMicrosoftSqlServerOptions.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: AssetWorkloadOptimizerMicrosoftSqlServerOptions.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DiscoveryPath
+Discovery path to define if its scope target entities or hostname or IP address.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

@@ -81,21 +81,21 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// <para type="description">"A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public SdaaciConnection.ClassIdEnum ClassId
+        public Model.AssetTargetRelationship CatalystCenterTarget
         {
             get;
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.AssetTargetRelationship DnacTarget
+        public SdaaciConnection.ClassIdEnum ClassId
         {
             get;
             set;
@@ -279,11 +279,11 @@ namespace Intersight.PowerShell
             {
                 initObject.CampusFabricSite = this.CampusFabricSite;
             }
-            initObject.ClassId = this.ClassId;
-            if (this.MyInvocation.BoundParameters.ContainsKey("DnacTarget"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CatalystCenterTarget"))
             {
-                initObject.DnacTarget = this.DnacTarget;
+                initObject.CatalystCenterTarget = this.CatalystCenterTarget;
             }
+            initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("Epg"))
             {
                 initObject.Epg = this.Epg;

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightSdaaciConnection [-AciL3Out< string>][-AciMatchRuleName< string>][-AciTenant< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ApicTarget< AssetTargetRelationship>][-CampusFabricSite< string>][-DnacTarget< AssetTargetRelationship>][-Epg< string>][-EpgSubnet< string>][-FirewallDevice< string>][-FirewallDomain< string>][-FmcTarget< AssetTargetRelationship>][[-Moid]< string>][-NodeProfile< string>][-Organization< OrganizationOrganizationRelationship>][-Status< SdaaciConnection.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Transit< string>][-VirtualNetwork< string>][-VnEpg< string>][-Vrf< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightSdaaciConnection [-AciL3Out< string>][-AciMatchRuleName< string>][-AciTenant< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ApicTarget< AssetTargetRelationship>][-CampusFabricSite< string>][-CatalystCenterTarget< AssetTargetRelationship>][-Epg< string>][-EpgSubnet< string>][-FirewallDevice< string>][-FirewallDomain< string>][-FmcTarget< AssetTargetRelationship>][[-Moid]< string>][-NodeProfile< string>][-Organization< OrganizationOrganizationRelationship>][-Status< SdaaciConnection.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Transit< string>][-VirtualNetwork< string>][-VnEpg< string>][-Vrf< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -116,7 +116,7 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DnacTarget
+### -CatalystCenterTarget
 A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 

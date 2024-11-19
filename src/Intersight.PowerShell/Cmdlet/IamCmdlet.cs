@@ -3588,7 +3588,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"LDAP server domain the Group resides in."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$")]
         public string Domain
         {
             get;
@@ -3606,6 +3606,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"LDAP Group DN in the LDAP server database."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^([^+\\-][a-zA-Z0-9=!#$%()*+,-.:;@ _{|}~?&]*)$")]
+        public string GroupDn
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"A reference to a iamLdapPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -3984,6 +3995,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"LDAP server vendor type used for authentication.\n* `OpenLDAP` - Open source LDAP server for remote authentication.\n* `MSAD` - Microsoft active directory for remote authentication."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamLdapProvider.VendorEnum Vendor
+        {
+            get;
+            set;
+        }
 
 
 
@@ -9093,7 +9115,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"LDAP server domain the Group resides in."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$")]
         public string Domain
         {
             get;
@@ -9107,6 +9129,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<IamEndPointRoleRelationship> EndPointRole
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"LDAP Group DN in the LDAP server database."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([^+\\-][a-zA-Z0-9=!#$%()*+,-.:;@ _{|}~?&]*)$")]
+        public string GroupDn
         {
             get;
             set;
@@ -9433,6 +9466,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"LDAP server vendor type used for authentication.\n* `OpenLDAP` - Open source LDAP server for remote authentication.\n* `MSAD` - Microsoft active directory for remote authentication."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapProvider.VendorEnum Vendor
         {
             get;
             set;
@@ -12487,7 +12531,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"LDAP server domain the Group resides in."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$")]
         public string Domain
         {
             get;
@@ -12501,6 +12545,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<IamEndPointRoleRelationship> EndPointRole
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"LDAP Group DN in the LDAP server database."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([^+\\-][a-zA-Z0-9=!#$%()*+,-.:;@ _{|}~?&]*)$")]
+        public string GroupDn
         {
             get;
             set;
@@ -12827,6 +12882,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"LDAP server vendor type used for authentication.\n* `OpenLDAP` - Open source LDAP server for remote authentication.\n* `MSAD` - Microsoft active directory for remote authentication."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapProvider.VendorEnum Vendor
         {
             get;
             set;

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicEthAdapterPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvancedFilter< bool>][-ArfsSettings< VnicArfsSettings>][-CompletionQueueSettings< VnicCompletionQueueSettings>][-Description< string>][-GeneveEnabled< bool>][-InterruptScaling< bool>][-InterruptSettings< VnicEthInterruptSettings>][[-Moid]< string>][-Name< string>][-NvgreSettings< VnicNvgreSettings>][-Organization< OrganizationOrganizationRelationship>][-PtpSettings< VnicPtpSettings>][-RoceSettings< VnicRoceSettings>][-RssHashSettings< VnicRssHashSettings>][-RssSettings< bool>][-RxQueueSettings< VnicEthRxQueueSettings>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TcpOffloadSettings< VnicTcpOffloadSettings>][-TxQueueSettings< VnicEthTxQueueSettings>][-UplinkFailbackTimeout< long>][-VxlanSettings< VnicVxlanSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVnicEthAdapterPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvancedFilter< bool>][-ArfsSettings< VnicArfsSettings>][-CompletionQueueSettings< VnicCompletionQueueSettings>][-Description< string>][-EtherChannelPinningEnabled< bool>][-GeneveEnabled< bool>][-InterruptScaling< bool>][-InterruptSettings< VnicEthInterruptSettings>][[-Moid]< string>][-Name< string>][-NvgreSettings< VnicNvgreSettings>][-Organization< OrganizationOrganizationRelationship>][-PtpSettings< VnicPtpSettings>][-RoceSettings< VnicRoceSettings>][-RssHashSettings< VnicRssHashSettings>][-RssSettings< bool>][-RxQueueSettings< VnicEthRxQueueSettings>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TcpOffloadSettings< VnicTcpOffloadSettings>][-TxQueueSettings< VnicEthTxQueueSettings>][-UplinkFailbackTimeout< long>][-VxlanSettings< VnicVxlanSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -92,6 +92,21 @@ Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EtherChannelPinningEnabled
+Enables Ether Channel Pinning to combine multiple physical links between two network switches into a single logical link. Transmit Queue Count should be at least 2 to enable ether channel pinning.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

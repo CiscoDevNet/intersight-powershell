@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Intersight.PowerShellTest/1.0.11-20241004054146473": {
+      "Intersight.PowerShellTest/1.0.11-20241017091918219": {
         "dependencies": {
           "MSTest.TestAdapter": "2.2.8",
           "MSTest.TestFramework": "2.2.8",
           "Microsoft.NET.Test.Sdk": "17.1.0",
-          "PSIntersight": "1.0.11.2024100405",
+          "PSIntersight": "1.0.11.2024101709",
           "System.Management.Automation": "7.2.2",
           "coverlet.collector": "3.1.2",
           "Intersight": "0.0.0.0"
@@ -1725,7 +1725,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
-      "PSIntersight/1.0.11.2024100405": {
+      "PSIntersight/1.0.11.2024101709": {
         "dependencies": {
           "CompareNETObjects": "4.61.0",
           "JsonSubTypes": "2.0.1",
@@ -1750,7 +1750,7 @@
     }
   },
   "libraries": {
-    "Intersight.PowerShellTest/1.0.11-20241004054146473": {
+    "Intersight.PowerShellTest/1.0.11-20241017091918219": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -2553,7 +2553,7 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
-    "PSIntersight/1.0.11.2024100405": {
+    "PSIntersight/1.0.11.2024101709": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

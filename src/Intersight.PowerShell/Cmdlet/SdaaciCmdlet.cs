@@ -88,22 +88,22 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The time when this managed object was created."</para>
+        /// <para type="description">"A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
-        public DateTime CreateTime
+        public AssetTargetRelationship CatalystCenterTarget
         {
             get;
             set;
         }
 
         // <summary>
-        /// <para type="description">"A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public AssetTargetRelationship DnacTarget
+        public DateTime CreateTime
         {
             get;
             set;
@@ -634,17 +634,17 @@ namespace Intersight.PowerShell
             set;
         }
 
-
         // <summary>
         /// <para type="description">"A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public AssetTargetRelationship DnacTarget
+        public AssetTargetRelationship CatalystCenterTarget
         {
             get;
             set;
         }
+
 
 
         // <summary>
@@ -1122,17 +1122,17 @@ namespace Intersight.PowerShell
             set;
         }
 
-
         // <summary>
         /// <para type="description">"A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public AssetTargetRelationship DnacTarget
+        public AssetTargetRelationship CatalystCenterTarget
         {
             get;
             set;
         }
+
 
 
         // <summary>
