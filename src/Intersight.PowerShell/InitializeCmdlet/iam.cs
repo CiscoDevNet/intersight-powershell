@@ -3794,7 +3794,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"LDAP server domain the Group resides in."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9-]+(.[a-zA-Z0-9-]+)*$")]
         public string Domain
         {
             get;
@@ -3806,6 +3806,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.IamEndPointRoleRelationship> EndPointRole
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"LDAP Group DN in the LDAP server database."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([^+\\-][a-zA-Z0-9=!#$%()*+,-.:;@ _{|}~?&]*)$")]
+        public string GroupDn
         {
             get;
             set;
@@ -3877,6 +3887,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("EndPointRole"))
             {
                 initObject.EndPointRole = this.EndPointRole;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GroupDn"))
+            {
+                initObject.GroupDn = this.GroupDn;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("LdapPolicy"))
             {
@@ -4163,6 +4177,7 @@ namespace Intersight.PowerShell
         {
             ClassId = IamLdapProvider.ClassIdEnum.IamLdapProvider;
             ObjectType = IamLdapProvider.ObjectTypeEnum.IamLdapProvider;
+            Vendor = IamLdapProvider.VendorEnum.OpenLDAP;
 
         }
         // <summary>
@@ -4245,6 +4260,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"LDAP server vendor type used for authentication.\n* `OpenLDAP` - Open source LDAP server for remote authentication.\n* `MSAD` - Microsoft active directory for remote authentication."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapProvider.VendorEnum Vendor
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -4275,6 +4300,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
+            {
+                initObject.Vendor = this.Vendor;
             }
             WriteObject(initObject);
         }

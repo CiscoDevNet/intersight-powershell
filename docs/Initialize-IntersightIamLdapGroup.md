@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamLdapGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamLdapGroup.ClassIdEnum>][-Domain< string>][-EndPointRole< System.Collections.Generic.List`1[Model.IamEndPointRoleRelationship]>][-LdapPolicy< Model.IamLdapPolicyRelationship>][-Moid< string>][-Name< string>][-ObjectType< IamLdapGroup.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamLdapGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamLdapGroup.ClassIdEnum>][-Domain< string>][-EndPointRole< System.Collections.Generic.List`1[Model.IamEndPointRoleRelationship]>][-GroupDn< string>][-LdapPolicy< Model.IamLdapPolicyRelationship>][-Moid< string>][-Name< string>][-ObjectType< IamLdapGroup.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,6 +77,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.IamEndPointRoleRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GroupDn
+LDAP Group DN in the LDAP server database.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

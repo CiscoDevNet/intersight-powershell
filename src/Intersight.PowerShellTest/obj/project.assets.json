@@ -2269,7 +2269,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "PSIntersight/1.0.11.2024100405": {
+      "PSIntersight/1.0.11.2024101709": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -7549,7 +7549,7 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "PSIntersight/1.0.11.2024100405": {
+    "PSIntersight/1.0.11.2024101709": {
       "type": "project",
       "path": "../Intersight.PowerShell/Intersight.PowerShell.csproj",
       "msbuildProject": "../Intersight.PowerShell/Intersight.PowerShell.csproj"
@@ -7560,7 +7560,7 @@
       "MSTest.TestAdapter >= 2.2.8",
       "MSTest.TestFramework >= 2.2.8",
       "Microsoft.NET.Test.Sdk >= 17.1.0",
-      "PSIntersight >= 1.0.11.2024100405",
+      "PSIntersight >= 1.0.11.2024101709",
       "System.Management.Automation >= 7.2.2",
       "coverlet.collector >= 3.1.2"
     ]
@@ -7569,13 +7569,13 @@
     "/var/lib/jenkins/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.11-20241004054146473",
+    "version": "1.0.11-20241017091918219",
     "restore": {
-      "projectUniqueName": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2024100405/src/Intersight.PowerShellTest/Intersight.PowerShellTest.csproj",
+      "projectUniqueName": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2024101709/src/Intersight.PowerShellTest/Intersight.PowerShellTest.csproj",
       "projectName": "Intersight.PowerShellTest",
-      "projectPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2024100405/src/Intersight.PowerShellTest/Intersight.PowerShellTest.csproj",
+      "projectPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2024101709/src/Intersight.PowerShellTest/Intersight.PowerShellTest.csproj",
       "packagesPath": "/var/lib/jenkins/.nuget/packages/",
-      "outputPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2024100405/src/Intersight.PowerShellTest/obj/",
+      "outputPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2024101709/src/Intersight.PowerShellTest/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/var/lib/jenkins/.nuget/NuGet/NuGet.Config"
@@ -7590,8 +7590,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2024100405/src/Intersight.PowerShell/Intersight.PowerShell.csproj": {
-              "projectPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2024100405/src/Intersight.PowerShell/Intersight.PowerShell.csproj"
+            "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2024101709/src/Intersight.PowerShell/Intersight.PowerShell.csproj": {
+              "projectPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2024101709/src/Intersight.PowerShell/Intersight.PowerShell.csproj"
             }
           }
         }

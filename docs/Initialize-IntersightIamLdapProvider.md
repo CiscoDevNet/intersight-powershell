@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamLdapProvider [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamLdapProvider.ClassIdEnum>][-LdapPolicy< Model.IamLdapPolicyRelationship>][-Moid< string>][-ObjectType< IamLdapProvider.ObjectTypeEnum>][-Port< long>][-Server< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamLdapProvider [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamLdapProvider.ClassIdEnum>][-LdapPolicy< Model.IamLdapPolicyRelationship>][-Moid< string>][-ObjectType< IamLdapProvider.ObjectTypeEnum>][-Port< long>][-Server< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< IamLdapProvider.VendorEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -139,6 +139,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Vendor
+LDAP server vendor type used for authentication.\n* `OpenLDAP` - Open source LDAP server for remote authentication.\n* `MSAD` - Microsoft active directory for remote authentication.
+
+```yaml
+Type: IamLdapProvider.VendorEnum
 Parameter Sets: (All)
 Aliases:
 

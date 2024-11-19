@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightPowerPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocatedBudget< long>][-Description< string>][-DynamicRebalancing< PowerPolicy.DynamicRebalancingEnum>][-ExtendedPowerCapacity< PowerPolicy.ExtendedPowerCapacityEnum>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PowerPriority< PowerPolicy.PowerPriorityEnum>][-PowerProfiling< PowerPolicy.PowerProfilingEnum>][-PowerRestoreState< PowerPolicy.PowerRestoreStateEnum>][-PowerSaveMode< PowerPolicy.PowerSaveModeEnum>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-RedundancyMode< PowerPolicy.RedundancyModeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightPowerPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocatedBudget< long>][-Description< string>][-DynamicRebalancing< PowerPolicy.DynamicRebalancingEnum>][-ExtendedPowerCapacity< PowerPolicy.ExtendedPowerCapacityEnum>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PowerPriority< PowerPolicy.PowerPriorityEnum>][-PowerProfiling< PowerPolicy.PowerProfilingEnum>][-PowerRestoreState< PowerPolicy.PowerRestoreStateEnum>][-PowerSaveMode< PowerPolicy.PowerSaveModeEnum>][-ProcessorPackagePowerLimit< PowerPolicy.ProcessorPackagePowerLimitEnum>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-RedundancyMode< PowerPolicy.RedundancyModeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -196,6 +196,21 @@ Sets the power save mode of the chassis. If the requested power budget is less t
 
 ```yaml
 Type: PowerPolicy.PowerSaveModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ProcessorPackagePowerLimit
+Sets the Processor Package Power Limit (PPL) of a server. PPL refers to the amount of power that a CPU can draw from the power supply. The Processor Package Power Limit (PPL) feature is currently available exclusively on Cisco UCS C225/C245 M8 servers.\n* `Default` - Set the Package Power Limit to the platform defined default value.\n* `Maximum` - Set the Package Power Limit to the platform defined maximum value.\n* `Minimum` - Set the Package Power Limit to the platform defined minimum value.
+
+```yaml
+Type: PowerPolicy.ProcessorPackagePowerLimitEnum
 Parameter Sets: (All)
 Aliases:
 

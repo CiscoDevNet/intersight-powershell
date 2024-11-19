@@ -108,6 +108,7 @@ namespace Intersight.PowerShell
             PowerProfiling = PowerPolicy.PowerProfilingEnum.Enabled;
             PowerRestoreState = PowerPolicy.PowerRestoreStateEnum.AlwaysOff;
             PowerSaveMode = PowerPolicy.PowerSaveModeEnum.Enabled;
+            ProcessorPackagePowerLimit = PowerPolicy.ProcessorPackagePowerLimitEnum.Default;
             RedundancyMode = PowerPolicy.RedundancyModeEnum.Grid;
 
         }
@@ -252,6 +253,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Sets the Processor Package Power Limit (PPL) of a server. PPL refers to the amount of power that a CPU can draw from the power supply. The Processor Package Power Limit (PPL) feature is currently available exclusively on Cisco UCS C225/C245 M8 servers.\n* `Default` - Set the Package Power Limit to the platform defined default value.\n* `Maximum` - Set the Package Power Limit to the platform defined maximum value.\n* `Minimum` - Set the Package Power Limit to the platform defined minimum value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PowerPolicy.ProcessorPackagePowerLimitEnum ProcessorPackagePowerLimit
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -335,6 +346,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PowerSaveMode"))
             {
                 initObject.PowerSaveMode = this.PowerSaveMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProcessorPackagePowerLimit"))
+            {
+                initObject.ProcessorPackagePowerLimit = this.ProcessorPackagePowerLimit;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
             {

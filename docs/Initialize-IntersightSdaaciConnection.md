@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSdaaciConnection [-AciL3Out< string>][-AciMatchRuleName< string>][-AciTenant< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ApicTarget< Model.AssetTargetRelationship>][-CampusFabricSite< string>][-ClassId< SdaaciConnection.ClassIdEnum>][-DnacTarget< Model.AssetTargetRelationship>][-Epg< string>][-EpgSubnet< string>][-FirewallDevice< string>][-FirewallDomain< string>][-FmcTarget< Model.AssetTargetRelationship>][-Moid< string>][-NodeProfile< string>][-ObjectType< SdaaciConnection.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Status< SdaaciConnection.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Transit< string>][-VirtualNetwork< string>][-VnEpg< string>][-Vrf< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSdaaciConnection [-AciL3Out< string>][-AciMatchRuleName< string>][-AciTenant< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ApicTarget< Model.AssetTargetRelationship>][-CampusFabricSite< string>][-CatalystCenterTarget< Model.AssetTargetRelationship>][-ClassId< SdaaciConnection.ClassIdEnum>][-Epg< string>][-EpgSubnet< string>][-FirewallDevice< string>][-FirewallDomain< string>][-FmcTarget< Model.AssetTargetRelationship>][-Moid< string>][-NodeProfile< string>][-ObjectType< SdaaciConnection.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Status< SdaaciConnection.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Transit< string>][-VirtualNetwork< string>][-VnEpg< string>][-Vrf< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -117,11 +117,14 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
+### -CatalystCenterTarget
+A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: SdaaciConnection.ClassIdEnum
+Type: Model.AssetTargetRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -132,14 +135,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -DnacTarget
-A reference to a assetTarget resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -ClassId
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: Model.AssetTargetRelationship
+Type: SdaaciConnection.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 

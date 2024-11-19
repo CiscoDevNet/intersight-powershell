@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicEthAdapterPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvancedFilter< bool>][-ArfsSettings< Model.VnicArfsSettings>][-ClassId< VnicEthAdapterPolicy.ClassIdEnum>][-CompletionQueueSettings< Model.VnicCompletionQueueSettings>][-Description< string>][-GeneveEnabled< bool>][-InterruptScaling< bool>][-InterruptSettings< Model.VnicEthInterruptSettings>][-Moid< string>][-Name< string>][-NvgreSettings< Model.VnicNvgreSettings>][-ObjectType< VnicEthAdapterPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PtpSettings< Model.VnicPtpSettings>][-RoceSettings< Model.VnicRoceSettings>][-RssHashSettings< Model.VnicRssHashSettings>][-RssSettings< bool>][-RxQueueSettings< Model.VnicEthRxQueueSettings>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TcpOffloadSettings< Model.VnicTcpOffloadSettings>][-TxQueueSettings< Model.VnicEthTxQueueSettings>][-UplinkFailbackTimeout< long>][-VxlanSettings< Model.VnicVxlanSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicEthAdapterPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdvancedFilter< bool>][-ArfsSettings< Model.VnicArfsSettings>][-ClassId< VnicEthAdapterPolicy.ClassIdEnum>][-CompletionQueueSettings< Model.VnicCompletionQueueSettings>][-Description< string>][-EtherChannelPinningEnabled< bool>][-GeneveEnabled< bool>][-InterruptScaling< bool>][-InterruptSettings< Model.VnicEthInterruptSettings>][-Moid< string>][-Name< string>][-NvgreSettings< Model.VnicNvgreSettings>][-ObjectType< VnicEthAdapterPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PtpSettings< Model.VnicPtpSettings>][-RoceSettings< Model.VnicRoceSettings>][-RssHashSettings< Model.VnicRssHashSettings>][-RssSettings< bool>][-RxQueueSettings< Model.VnicEthRxQueueSettings>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TcpOffloadSettings< Model.VnicTcpOffloadSettings>][-TxQueueSettings< Model.VnicEthTxQueueSettings>][-UplinkFailbackTimeout< long>][-VxlanSettings< Model.VnicVxlanSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -108,6 +108,21 @@ Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EtherChannelPinningEnabled
+Enables Ether Channel Pinning to combine multiple physical links between two network switches into a single logical link. Transmit Queue Count should be at least 2 to enable ether channel pinning.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
