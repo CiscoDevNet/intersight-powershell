@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourcepoolPool [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< ResourcepoolPool.AssignmentOrderEnum>][-ClassId< ResourcepoolPool.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ResourcepoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PoolType< ResourcepoolPool.PoolTypeEnum>][-ResourcePoolParameters< Model.ResourcepoolResourcePoolParameters>][-ResourceType< ResourcepoolPool.ResourceTypeEnum>][-Selectors< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightResourcepoolPool [-Action< ResourcepoolPool.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< ResourcepoolPool.AssignmentOrderEnum>][-ClassId< ResourcepoolPool.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ResourcepoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PoolType< ResourcepoolPool.PoolTypeEnum>][-QualificationPolicies< System.Collections.Generic.List`1[Model.ResourcepoolQualificationPolicyRelationship]>][-ResourcePoolParameters< Model.ResourcepoolResourcePoolParameters>][-ResourceType< ResourcepoolPool.ResourceTypeEnum>][-Selectors< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,6 +23,21 @@ Initialize-IntersightResourcepoolPool [-AdditionalProperties< System.Collections
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
+
+### -Action
+The pool is evaluated for resources with associated policies based on action. This action will help users to re-sync the resources for a pool.\n* `None` - The pool will not be considered for evaluation.\n* `ReEvaluate` - The resources in the pool will be re-evaluated against the server pool qualification associated with it.
+
+```yaml
+Type: ResourcepoolPool.ActionEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 
@@ -148,10 +163,28 @@ Accept wildcard characters: False
 ```
 
 ### -PoolType
-The resource management type in the pool, it can be either static or dynamic.\n* `Static` - The resources in the pool will not be changed until user manually update it.\n* `Dynamic` - The resources in the pool will be updated dynamically based on the condition.
+The resource management type in the pool, it can be either static or dynamic.\n* `Static` - The resources in the pool will not be changed until user manually update it.\n* `Dynamic` - The resources in the pool will be updated dynamically based on the condition.\n* `Hybrid` - The resources in the pool can be added by the user statically or dynamically, based on the matching conditions of the qualification policy. If the pool contains both statically added resources and resources added based on the qualification policy, the pool type can be classified as hybrid.
 
 ```yaml
 Type: ResourcepoolPool.PoolTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -QualificationPolicies
+An array of relationships to resourcepoolQualificationPolicy resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.ResourcepoolQualificationPolicyRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -180,7 +213,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-The type of the resource present in the pool, example &apos;server&apos; its combination of RackUnit and Blade.\n* `None` - The resource cannot consider for Resource Pool.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.
+The type of the resource present in the pool, example &apos;server&apos; its combination of RackUnit and Blade.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.\n* `None` - The resource cannot consider for Resource Pool.
 
 ```yaml
 Type: ResourcepoolPool.ResourceTypeEnum

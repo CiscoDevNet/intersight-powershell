@@ -232,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-The type of resource present in the pool, such as &apos;server&apos; can be a RackUnit or Blade.\n* `None` - The resource cannot consider for Resource Pool.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.
+The type of resource present in the pool, such as &apos;server&apos; can be a RackUnit or Blade.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.\n* `None` - The resource cannot consider for Resource Pool.
 
 ```yaml
 Type: ResourcepoolLease.ResourceTypeEnum

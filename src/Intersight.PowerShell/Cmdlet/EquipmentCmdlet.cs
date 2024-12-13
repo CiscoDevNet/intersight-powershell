@@ -772,6 +772,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Determines the default configuration deployment state for a chassis.\n* `NA` - Configuration deployment is not applicable for the chassis.\n* `Pending` - Configuration is not deployed to either A or B side IO card of the chassis.\n* `Applied` - Configuration is deployed to both A and B side IO cards of the chassis.\n* `PendingA` - Configuration deployment is pending in the A side IO card of the chassis.\n* `PendingB` - Configuration deployment is pending in the B side IO card of the chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public EquipmentChassisIdentity.ResetToDefaultEnum ResetToDefault
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The serial number of the equipment."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -8848,6 +8859,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

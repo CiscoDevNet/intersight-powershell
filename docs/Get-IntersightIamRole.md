@@ -25,10 +25,11 @@ Get-IntersightIamRole [-Count <Boolean>] [-InlineCount <String>] [-Select <Strin
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;IamRole&apos; resource.,
+Read a &apos;IamRole&apos; resource.
+A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
-Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
+
 
 ## EXAMPLES
 

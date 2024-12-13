@@ -8497,10 +8497,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -_@#$%^&*! special characters."</para>
+        /// <para type="description">"HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -._@#$%^&*! special characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^[a-zA-Z0-9!@#$%^&*_-]{10,}$")]
+        [ValidatePattern("^[a-zA-Z0-9!@#$%^&*_.-]{10,}$")]
         public string HxdpRootPwd
         {
             get;
@@ -16434,10 +16434,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -_@#$%^&*! special characters."</para>
+        /// <para type="description">"HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -._@#$%^&*! special characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9!@#$%^&*_-]{10,}$")]
+        [ValidatePattern("^[a-zA-Z0-9!@#$%^&*_.-]{10,}$")]
         public string HxdpRootPwd
         {
             get;
@@ -22911,10 +22911,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -_@#$%^&*! special characters."</para>
+        /// <para type="description">"HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -._@#$%^&*! special characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9!@#$%^&*_-]{10,}$")]
+        [ValidatePattern("^[a-zA-Z0-9!@#$%^&*_.-]{10,}$")]
         public string HxdpRootPwd
         {
             get;

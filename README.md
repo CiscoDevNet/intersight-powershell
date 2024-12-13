@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2024101709
-- C# SDK version: 1.0.11.2024101709
+- Intersight.PowerShell version: 1.0.11.2024112619
+- C# SDK version: 1.0.11.2024112619
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2024101709"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2024112619"}
 ```
 or
 
@@ -344,6 +344,8 @@ The cmdlets follow Get-Intersight<MO> naming pattern.
 ### 4.1. Reading list of objects
 When the Get cmdlet is used without any parameter, it returns list of objects.
 The return type is a collection, even when there is a single object.
+
+**NOTE** A maximum of 10,000 objects can be retrieved by Get cmdlets in a single invocation.
 
 
 ```powershell
@@ -1495,10 +1497,34 @@ ForecastCatalog | [**Get-IntersightForecastCatalog**](docs/Get-IntersightForecas
 ForecastDefinition | [**Get-IntersightForecastDefinition**](docs/Get-IntersightForecastDefinition.md) | Read a 'ForecastDefinition' resource.
 ForecastInstance | [**Get-IntersightForecastInstance**](docs/Get-IntersightForecastInstance.md) | Read a 'ForecastInstance' resource.
 ForecastInstance | [**Set-IntersightForecastInstance**](docs/Set-IntersightForecastInstance.md) | Update a 'ForecastInstance' resource.
+FunctionsFunction | [**Get-IntersightFunctionsFunction**](docs/Get-IntersightFunctionsFunction.md) | Read a 'FunctionsFunction' resource.
+FunctionsRuntime | [**Get-IntersightFunctionsRuntime**](docs/Get-IntersightFunctionsRuntime.md) | Read a 'FunctionsRuntime' resource.
+FunctionsUpload | [**Get-IntersightFunctionsUpload**](docs/Get-IntersightFunctionsUpload.md) | Read a 'FunctionsUpload' resource.
+FunctionsFunction | [**New-IntersightFunctionsFunction**](docs/New-IntersightFunctionsFunction.md) | Create a 'FunctionsFunction' resource.
+FunctionsRuntime | [**New-IntersightFunctionsRuntime**](docs/New-IntersightFunctionsRuntime.md) | Create a 'FunctionsRuntime' resource.
+FunctionsUpload | [**New-IntersightFunctionsUpload**](docs/New-IntersightFunctionsUpload.md) | Create a 'FunctionsUpload' resource.
+FunctionsFunction | [**Remove-IntersightFunctionsFunction**](docs/Remove-IntersightFunctionsFunction.md) | Delete a 'FunctionsFunction' resource.
+FunctionsRuntime | [**Remove-IntersightFunctionsRuntime**](docs/Remove-IntersightFunctionsRuntime.md) | Delete a 'FunctionsRuntime' resource.
+FunctionsUpload | [**Remove-IntersightFunctionsUpload**](docs/Remove-IntersightFunctionsUpload.md) | Delete a 'FunctionsUpload' resource.
+FunctionsFunction | [**Set-IntersightFunctionsFunction**](docs/Set-IntersightFunctionsFunction.md) | Update a 'FunctionsFunction' resource.
+FunctionsRuntime | [**Set-IntersightFunctionsRuntime**](docs/Set-IntersightFunctionsRuntime.md) | Update a 'FunctionsRuntime' resource.
+FunctionsUpload | [**Set-IntersightFunctionsUpload**](docs/Set-IntersightFunctionsUpload.md) | Update a 'FunctionsUpload' resource.
 GraphicsCard | [**Get-IntersightGraphicsCard**](docs/Get-IntersightGraphicsCard.md) | Read a 'GraphicsCard' resource.
 GraphicsController | [**Get-IntersightGraphicsController**](docs/Get-IntersightGraphicsController.md) | Read a 'GraphicsController' resource.
 GraphicsCard | [**Set-IntersightGraphicsCard**](docs/Set-IntersightGraphicsCard.md) | Update a 'GraphicsCard' resource.
 GraphicsController | [**Set-IntersightGraphicsController**](docs/Set-IntersightGraphicsController.md) | Update a 'GraphicsController' resource.
+HciAlarm | [**Get-IntersightHciAlarm**](docs/Get-IntersightHciAlarm.md) | Read a 'HciAlarm' resource.
+HciCluster | [**Get-IntersightHciCluster**](docs/Get-IntersightHciCluster.md) | Read a 'HciCluster' resource.
+HciCompliance | [**Get-IntersightHciCompliance**](docs/Get-IntersightHciCompliance.md) | Read a 'HciCompliance' resource.
+HciDisk | [**Get-IntersightHciDisk**](docs/Get-IntersightHciDisk.md) | Read a 'HciDisk' resource.
+HciDomainManager | [**Get-IntersightHciDomainManager**](docs/Get-IntersightHciDomainManager.md) | Read a 'HciDomainManager' resource.
+HciEntitlement | [**Get-IntersightHciEntitlement**](docs/Get-IntersightHciEntitlement.md) | Read a 'HciEntitlement' resource.
+HciGpu | [**Get-IntersightHciGpu**](docs/Get-IntersightHciGpu.md) | Read a 'HciGpu' resource.
+HciLicense | [**Get-IntersightHciLicense**](docs/Get-IntersightHciLicense.md) | Read a 'HciLicense' resource.
+HciNode | [**Get-IntersightHciNode**](docs/Get-IntersightHciNode.md) | Read a 'HciNode' resource.
+HciViolation | [**Get-IntersightHciViolation**](docs/Get-IntersightHciViolation.md) | Read a 'HciViolation' resource.
+HciCluster | [**Set-IntersightHciCluster**](docs/Set-IntersightHciCluster.md) | Update a 'HciCluster' resource.
+HciNode | [**Set-IntersightHciNode**](docs/Set-IntersightHciNode.md) | Update a 'HciNode' resource.
 HclDriverImage | [**Get-IntersightHclDriverImage**](docs/Get-IntersightHclDriverImage.md) | Read a 'HclDriverImage' resource.
 HclExemptedCatalog | [**Get-IntersightHclExemptedCatalog**](docs/Get-IntersightHclExemptedCatalog.md) | Read a 'HclExemptedCatalog' resource.
 HclHwCatalogInfo | [**Get-IntersightHclHwCatalogInfo**](docs/Get-IntersightHclHwCatalogInfo.md) | Read a 'HclHwCatalogInfo' resource.
@@ -2421,13 +2447,17 @@ ResourcepoolLeaseResource | [**Get-IntersightResourcepoolLeaseResource**](docs/G
 ResourcepoolMembershipReservation | [**Get-IntersightResourcepoolMembershipReservation**](docs/Get-IntersightResourcepoolMembershipReservation.md) | Read a 'ResourcepoolMembershipReservation' resource.
 ResourcepoolPool | [**Get-IntersightResourcepoolPool**](docs/Get-IntersightResourcepoolPool.md) | Read a 'ResourcepoolPool' resource.
 ResourcepoolPoolMember | [**Get-IntersightResourcepoolPoolMember**](docs/Get-IntersightResourcepoolPoolMember.md) | Read a 'ResourcepoolPoolMember' resource.
+ResourcepoolQualificationPolicy | [**Get-IntersightResourcepoolQualificationPolicy**](docs/Get-IntersightResourcepoolQualificationPolicy.md) | Read a 'ResourcepoolQualificationPolicy' resource.
 ResourcepoolUniverse | [**Get-IntersightResourcepoolUniverse**](docs/Get-IntersightResourcepoolUniverse.md) | Read a 'ResourcepoolUniverse' resource.
 ResourcepoolPool | [**New-IntersightResourcepoolPool**](docs/New-IntersightResourcepoolPool.md) | Create a 'ResourcepoolPool' resource.
+ResourcepoolQualificationPolicy | [**New-IntersightResourcepoolQualificationPolicy**](docs/New-IntersightResourcepoolQualificationPolicy.md) | Create a 'ResourcepoolQualificationPolicy' resource.
 ResourcepoolLease | [**Remove-IntersightResourcepoolLease**](docs/Remove-IntersightResourcepoolLease.md) | Delete a 'ResourcepoolLease' resource.
 ResourcepoolMembershipReservation | [**Remove-IntersightResourcepoolMembershipReservation**](docs/Remove-IntersightResourcepoolMembershipReservation.md) | Delete a 'ResourcepoolMembershipReservation' resource.
 ResourcepoolPool | [**Remove-IntersightResourcepoolPool**](docs/Remove-IntersightResourcepoolPool.md) | Delete a 'ResourcepoolPool' resource.
+ResourcepoolQualificationPolicy | [**Remove-IntersightResourcepoolQualificationPolicy**](docs/Remove-IntersightResourcepoolQualificationPolicy.md) | Delete a 'ResourcepoolQualificationPolicy' resource.
 ResourcepoolMembershipReservation | [**Set-IntersightResourcepoolMembershipReservation**](docs/Set-IntersightResourcepoolMembershipReservation.md) | Update a 'ResourcepoolMembershipReservation' resource.
 ResourcepoolPool | [**Set-IntersightResourcepoolPool**](docs/Set-IntersightResourcepoolPool.md) | Update a 'ResourcepoolPool' resource.
+ResourcepoolQualificationPolicy | [**Set-IntersightResourcepoolQualificationPolicy**](docs/Set-IntersightResourcepoolQualificationPolicy.md) | Update a 'ResourcepoolQualificationPolicy' resource.
 RproxyReverseProxy | [**New-IntersightRproxyReverseProxy**](docs/New-IntersightRproxyReverseProxy.md) | Create a 'RproxyReverseProxy' resource.
 SchedulerTaskResult | [**Get-IntersightSchedulerTaskResult**](docs/Get-IntersightSchedulerTaskResult.md) | Read a 'SchedulerTaskResult' resource.
 SchedulerTaskSchedule | [**Get-IntersightSchedulerTaskSchedule**](docs/Get-IntersightSchedulerTaskSchedule.md) | Read a 'SchedulerTaskSchedule' resource.
@@ -2745,6 +2775,7 @@ TamSecurityAdvisory | [**Set-IntersightTamSecurityAdvisory**](docs/Set-Intersigh
 TaskWorkflowAction | [**Get-IntersightTaskWorkflowAction**](docs/Get-IntersightTaskWorkflowAction.md) | Read a 'TaskWorkflowAction' resource.
 TaskCatalystSdwanScopedInventory | [**New-IntersightTaskCatalystSdwanScopedInventory**](docs/New-IntersightTaskCatalystSdwanScopedInventory.md) | Create a 'TaskCatalystSdwanScopedInventory' resource.
 TaskFabricMosScopedInventory | [**New-IntersightTaskFabricMosScopedInventory**](docs/New-IntersightTaskFabricMosScopedInventory.md) | Create a 'TaskFabricMosScopedInventory' resource.
+TaskHciScopedInventory | [**New-IntersightTaskHciScopedInventory**](docs/New-IntersightTaskHciScopedInventory.md) | Create a 'TaskHciScopedInventory' resource.
 TaskHitachiScopedInventory | [**New-IntersightTaskHitachiScopedInventory**](docs/New-IntersightTaskHitachiScopedInventory.md) | Create a 'TaskHitachiScopedInventory' resource.
 TaskHyperFlexManagementScopedInventory | [**New-IntersightTaskHyperFlexManagementScopedInventory**](docs/New-IntersightTaskHyperFlexManagementScopedInventory.md) | Create a 'TaskHyperFlexManagementScopedInventory' resource.
 TaskHyperflexScopedInventory | [**New-IntersightTaskHyperflexScopedInventory**](docs/New-IntersightTaskHyperflexScopedInventory.md) | Create a 'TaskHyperflexScopedInventory' resource.
@@ -2931,6 +2962,14 @@ VrfVrf | [**Get-IntersightVrfVrf**](docs/Get-IntersightVrfVrf.md) | Read a 'VrfV
 VrfVrf | [**New-IntersightVrfVrf**](docs/New-IntersightVrfVrf.md) | Create a 'VrfVrf' resource.
 VrfVrf | [**Remove-IntersightVrfVrf**](docs/Remove-IntersightVrfVrf.md) | Delete a 'VrfVrf' resource.
 VrfVrf | [**Set-IntersightVrfVrf**](docs/Set-IntersightVrfVrf.md) | Update a 'VrfVrf' resource.
+WebhookEndpoint | [**Get-IntersightWebhookEndpoint**](docs/Get-IntersightWebhookEndpoint.md) | Read a 'WebhookEndpoint' resource.
+WebhookSchema | [**Get-IntersightWebhookSchema**](docs/Get-IntersightWebhookSchema.md) | Read a 'WebhookSchema' resource.
+WebhookEndpoint | [**New-IntersightWebhookEndpoint**](docs/New-IntersightWebhookEndpoint.md) | Create a 'WebhookEndpoint' resource.
+WebhookSchema | [**New-IntersightWebhookSchema**](docs/New-IntersightWebhookSchema.md) | Create a 'WebhookSchema' resource.
+WebhookEndpoint | [**Remove-IntersightWebhookEndpoint**](docs/Remove-IntersightWebhookEndpoint.md) | Delete a 'WebhookEndpoint' resource.
+WebhookSchema | [**Remove-IntersightWebhookSchema**](docs/Remove-IntersightWebhookSchema.md) | Delete a 'WebhookSchema' resource.
+WebhookEndpoint | [**Set-IntersightWebhookEndpoint**](docs/Set-IntersightWebhookEndpoint.md) | Update a 'WebhookEndpoint' resource.
+WebhookSchema | [**Set-IntersightWebhookSchema**](docs/Set-IntersightWebhookSchema.md) | Update a 'WebhookSchema' resource.
 WorkflowAnsibleBatchExecutor | [**Get-IntersightWorkflowAnsibleBatchExecutor**](docs/Get-IntersightWorkflowAnsibleBatchExecutor.md) | Read a 'WorkflowAnsibleBatchExecutor' resource.
 WorkflowBatchApiExecutor | [**Get-IntersightWorkflowBatchApiExecutor**](docs/Get-IntersightWorkflowBatchApiExecutor.md) | Read a 'WorkflowBatchApiExecutor' resource.
 WorkflowCatalog | [**Get-IntersightWorkflowCatalog**](docs/Get-IntersightWorkflowCatalog.md) | Read a 'WorkflowCatalog' resource.

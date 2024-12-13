@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCmrfCmRf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CmrfCmRf.ClassIdEnum>][-ObjectType< CmrfCmRf.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCmrfCmRf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CmrfCmRf.ClassIdEnum>][-ObjectType< CmrfCmRf.ObjectTypeEnum>][-Selector< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: CmrfCmRf.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Selector
+An OData $filter expression which describes the REST resource to be referenced. This field may\nbe set instead of &apos;moid&apos; by clients.\n1. If &apos;moid&apos; is set this field is ignored.\n1. If &apos;selector&apos; is set and &apos;moid&apos; is empty/absent from the request, Intersight determines the Moid of the\nresource matching the filter expression and populates it in the Cmrf that is part of the object\ninstance being inserted/updated to fulfill the REST request.\nAn error is returned if the filter matches zero or more than one REST resource.\nAn example filter string is: Serial eq &apos;3AA8B7T11&apos;.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

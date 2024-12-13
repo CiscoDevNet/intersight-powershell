@@ -25,10 +25,11 @@ Get-IntersightIaasCustomTaskInfo [-Count <Boolean>] [-InlineCount <String>] [-Se
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;IaasCustomTaskInfo&apos; resource.,
+Read a &apos;IaasCustomTaskInfo&apos; resource.
+A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
-Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
+
 
 ## EXAMPLES
 

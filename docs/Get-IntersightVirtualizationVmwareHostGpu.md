@@ -25,10 +25,11 @@ Get-IntersightVirtualizationVmwareHostGpu [-Count <Boolean>] [-InlineCount <Stri
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;VirtualizationVmwareHostGpu&apos; resource.,
+Read a &apos;VirtualizationVmwareHostGpu&apos; resource.
+A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
-Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
+
 
 ## EXAMPLES
 

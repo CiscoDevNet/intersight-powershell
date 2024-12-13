@@ -99,6 +99,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The REST URL for the operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string HttpOperation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The instance id of AuditRecordLocal, which is used to identify if the comming AuditRecordLocal was already processed before."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
