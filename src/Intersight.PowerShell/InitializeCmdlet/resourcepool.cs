@@ -18,7 +18,7 @@ namespace Intersight.PowerShell
             AllocationType = ResourcepoolLease.AllocationTypeEnum.Dynamic;
             ClassId = ResourcepoolLease.ClassIdEnum.ResourcepoolLease;
             ObjectType = ResourcepoolLease.ObjectTypeEnum.ResourcepoolLease;
-            ResourceType = ResourcepoolLease.ResourceTypeEnum.None;
+            ResourceType = ResourcepoolLease.ResourceTypeEnum.Server;
 
         }
         // <summary>
@@ -152,7 +152,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The type of resource present in the pool, such as 'server' can be a RackUnit or Blade.\n* `None` - The resource cannot consider for Resource Pool.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade."</para>
+        /// <para type="description">"The type of resource present in the pool, such as 'server' can be a RackUnit or Blade.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.\n* `None` - The resource cannot consider for Resource Pool."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -565,12 +565,23 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightResourcepoolPool()
         {
+            Action = ResourcepoolPool.ActionEnum.None;
             AssignmentOrder = ResourcepoolPool.AssignmentOrderEnum.Sequential;
             ClassId = ResourcepoolPool.ClassIdEnum.ResourcepoolPool;
             ObjectType = ResourcepoolPool.ObjectTypeEnum.ResourcepoolPool;
             PoolType = ResourcepoolPool.PoolTypeEnum.Static;
-            ResourceType = ResourcepoolPool.ResourceTypeEnum.None;
+            ResourceType = ResourcepoolPool.ResourceTypeEnum.Server;
 
+        }
+        // <summary>
+        /// <para type="description">"The pool is evaluated for resources with associated policies based on action. This action will help users to re-sync the resources for a pool.\n* `None` - The pool will not be considered for evaluation.\n* `ReEvaluate` - The resources in the pool will be re-evaluated against the server pool qualification associated with it."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolPool.ActionEnum Action
+        {
+            get;
+            set;
         }
         // <summary>
         /// <para type="description"></para>
@@ -653,11 +664,21 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The resource management type in the pool, it can be either static or dynamic.\n* `Static` - The resources in the pool will not be changed until user manually update it.\n* `Dynamic` - The resources in the pool will be updated dynamically based on the condition."</para>
+        /// <para type="description">"The resource management type in the pool, it can be either static or dynamic.\n* `Static` - The resources in the pool will not be changed until user manually update it.\n* `Dynamic` - The resources in the pool will be updated dynamically based on the condition.\n* `Hybrid` - The resources in the pool can be added by the user statically or dynamically, based on the matching conditions of the qualification policy. If the pool contains both statically added resources and resources added based on the qualification policy, the pool type can be classified as hybrid."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ResourcepoolPool.PoolTypeEnum PoolType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to resourcepoolQualificationPolicy resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ResourcepoolQualificationPolicyRelationship> QualificationPolicies
         {
             get;
             set;
@@ -673,7 +694,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The type of the resource present in the pool, example 'server' its combination of RackUnit and Blade.\n* `None` - The resource cannot consider for Resource Pool.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade."</para>
+        /// <para type="description">"The type of the resource present in the pool, example 'server' its combination of RackUnit and Blade.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.\n* `None` - The resource cannot consider for Resource Pool."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -707,6 +728,10 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.ResourcepoolPool initObject = new Intersight.Model.ResourcepoolPool();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
+            {
+                initObject.Action = this.Action;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -736,6 +761,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PoolType"))
             {
                 initObject.PoolType = this.PoolType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("QualificationPolicies"))
+            {
+                initObject.QualificationPolicies = this.QualificationPolicies;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ResourcePoolParameters"))
             {
@@ -785,16 +814,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public bool Assigned
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"An array of relationships to moBaseMo resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<Model.MoBaseMoRelationship> AssignedToEntity
         {
             get;
             set;
@@ -862,10 +881,6 @@ namespace Intersight.PowerShell
             {
                 initObject.Assigned = this.Assigned;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AssignedToEntity"))
-            {
-                initObject.AssignedToEntity = this.AssignedToEntity;
-            }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("Features"))
             {
@@ -880,6 +895,275 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolQualificationPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolQualificationPolicy")]
+    public class InitializeIntersightResourcepoolQualificationPolicy : PSCmdlet
+    {
+        public InitializeIntersightResourcepoolQualificationPolicy()
+        {
+            ClassId = ResourcepoolQualificationPolicy.ClassIdEnum.ResourcepoolQualificationPolicy;
+            ObjectType = ResourcepoolQualificationPolicy.ObjectTypeEnum.ResourcepoolQualificationPolicy;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolQualificationPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolQualificationPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ResourceResourceQualifier> Qualifiers
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to resourcepoolPool resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ResourcepoolPoolRelationship> ResourcePools
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ResourcepoolQualificationPolicy initObject = new Intersight.Model.ResourcepoolQualificationPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Qualifiers"))
+            {
+                initObject.Qualifiers = this.Qualifiers;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourcePools"))
+            {
+                initObject.ResourcePools = this.ResourcePools;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolQualificationType.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolQualificationType")]
+    public class InitializeIntersightResourcepoolQualificationType : PSCmdlet
+    {
+        public InitializeIntersightResourcepoolQualificationType()
+        {
+            ClassId = ResourcepoolQualificationType.ClassIdEnum.ResourcepoolQualificationType;
+            ObjectType = ResourcepoolQualificationType.ObjectTypeEnum.ResourcepoolQualificationType;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolQualificationType.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolQualificationType.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ResourcepoolQualificationType initObject = new Intersight.Model.ResourcepoolQualificationType();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolResourceEvaluationStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolResourceEvaluationStatus")]
+    public class InitializeIntersightResourcepoolResourceEvaluationStatus : PSCmdlet
+    {
+        public InitializeIntersightResourcepoolResourceEvaluationStatus()
+        {
+            ClassId = ResourcepoolResourceEvaluationStatus.ClassIdEnum.ResourcepoolResourceEvaluationStatus;
+            ObjectType = ResourcepoolResourceEvaluationStatus.ObjectTypeEnum.ResourcepoolResourceEvaluationStatus;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolResourceEvaluationStatus.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolResourceEvaluationStatus.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ResourcepoolResourceEvaluationStatus initObject = new Intersight.Model.ResourcepoolResourceEvaluationStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

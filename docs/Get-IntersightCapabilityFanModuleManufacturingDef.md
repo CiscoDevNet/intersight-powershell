@@ -25,10 +25,11 @@ Get-IntersightCapabilityFanModuleManufacturingDef [-Count <Boolean>] [-InlineCou
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;CapabilityFanModuleManufacturingDef&apos; resource.,
+Read a &apos;CapabilityFanModuleManufacturingDef&apos; resource.
+A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
-Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
+
 
 ## EXAMPLES
 

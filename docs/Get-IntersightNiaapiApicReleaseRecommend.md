@@ -25,10 +25,11 @@ Get-IntersightNiaapiApicReleaseRecommend [-Count <Boolean>] [-InlineCount <Strin
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;NiaapiApicReleaseRecommend&apos; resource.,
+Read a &apos;NiaapiApicReleaseRecommend&apos; resource.
+A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
-Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
+
 
 ## EXAMPLES
 

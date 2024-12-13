@@ -25,10 +25,11 @@ Get-IntersightCondAlarm [-Count <Boolean>] [-InlineCount <String>] [-Select <Str
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;CondAlarm&apos; resource.,
+Read a &apos;CondAlarm&apos; resource.
+A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
-Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
+
 
 ## EXAMPLES
 

@@ -307,6 +307,8 @@ PS C:\> $ntpPolicyList.Count
  ---
  It returns the ntp policy named "PSNtp"
 
+**_NOTE_** A maximum of 10,000 objects can be retrieved by Get cmdlets in a single invocation
+
  ```powershell
 PS C:\> $getNtp = Get-IntersightNtpPolicy -Name PSNtp
 PS C:\> $getNtp

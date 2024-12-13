@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourcepoolPoolMember [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assigned< bool>][-AssignedToEntity< System.Collections.Generic.List`1[Model.MoBaseMoRelationship]>][-ClassId< ResourcepoolPoolMember.ClassIdEnum>][-Features< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< ResourcepoolPoolMember.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightResourcepoolPoolMember [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Assigned< bool>][-ClassId< ResourcepoolPoolMember.ClassIdEnum>][-Features< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< ResourcepoolPoolMember.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,24 +44,6 @@ Boolean to represent whether the ID is in use.
 
 ```yaml
 Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -AssignedToEntity
-An array of relationships to moBaseMo resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.MoBaseMoRelationship]
 Parameter Sets: (All)
 Aliases:
 

@@ -34,7 +34,7 @@ namespace Intersight.PowerShell
         public int? Skip { get; set; } = null;
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
-        public int? Top { get; set; } = null;
+        public int? Top { get; set; } = Constants.MaxTop;
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
         public string At { get; set; } = null;
@@ -54,12 +54,14 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
         public SwitchParameter WithHttpInfo { get; set; }
 
-        private List<object> result;
+        private object ActualInstanceResult;
+
+        private object WithHttpInfoResponse;
         #endregion
 
         public GetCmdletBase()
         {
-            result = new List<object>();
+
         }
 
         protected override void ProcessRecord()
@@ -71,7 +73,7 @@ namespace Intersight.PowerShell
                 if (this.ParameterSetName.Equals("CmdletParam", StringComparison.OrdinalIgnoreCase))
                 {
                     var queryString = CreateFilterQuery();
-                    argList = new object[] { queryString, null, null, null, null, null, null, null, null, null, null, 0 };
+                    argList = new object[] { queryString, null, Top, null, null, null, null, null, null, null, null, 0 };
 
                 }
                 else if (this.ParameterSetName.Equals("QueryParam", StringComparison.OrdinalIgnoreCase))
@@ -79,35 +81,34 @@ namespace Intersight.PowerShell
                     argList = new object[] { Filter, Orderby, Top, Skip, Select, Expand, Apply, Count, InlineCount, At, Tag, 0 };
                 }
 
-                var methodResult = methodInfo.Invoke(ApiInstance, argList);
+                //set inlinecount to allpages
+                argList[8] = "allpages";
+                WriteVerbose(String.Format("Invoking {0}", ApiInstance.GetType().Name));
+                var getResult = methodInfo.Invoke(ApiInstance, argList);
 
-                if (Json.IsPresent)
-                {
-                    WriteResponseJson(methodResult);
-                }
-                else if (WithHttpInfo.IsPresent)
-                {
-                    WriteObject(methodResult);
-                }
-                else
-                {
-                    methodResult = WriteResponseData(methodResult, false);
-                    var propertyInfo = methodResult.GetType().GetProperty("ActualInstance");
-                    Object actualInstanceVal = propertyInfo.GetValue(methodResult);
+                var TotalObjectCount = GetObjectCount(getResult);
+                WriteVerbose(String.Format("Total Count {0}", TotalObjectCount));
+                var fetchedObjectCount = GetFetchedObjectCount(getResult);
+                WriteVerbose(string.Format("{0} objects fetched", fetchedObjectCount));
 
-                    if (this.ParameterSetName.Equals("QueryParam", StringComparison.OrdinalIgnoreCase))
+                // check if either of the switch parameter is specified then return only first 1000 objects.
+                if (Json.IsPresent || WithHttpInfo.IsPresent)
+                {
+                    WithHttpInfoResponse = getResult;
+                    return;
+                }
+
+                StoreResult(getResult);
+
+                if (TotalObjectCount > fetchedObjectCount && !(this.ParameterSetName == "QueryParam" && (this.MyInvocation.BoundParameters.ContainsKey("Skip") ||
+                this.MyInvocation.BoundParameters.ContainsKey("Top")) ||
+                this.MyInvocation.BoundParameters.ContainsKey("Apply")))
+                {
+                    if (!this.MyInvocation.BoundParameters.ContainsKey("InlineCount"))
                     {
-                        WriteObject(actualInstanceVal);
+                        argList[8] = null;
                     }
-                    else
-                    {
-                        var actualResult = actualInstanceVal.GetType().GetProperty("Results").GetValue(actualInstanceVal);
-                        List<Object> collection = new List<Object>((IEnumerable<Object>)actualResult);
-                        if (result != null)
-                        {
-                            result.AddRange(collection);
-                        }
-                    }
+                    getPaginatedResult(methodInfo, argList, TotalObjectCount, fetchedObjectCount);
                 }
             }
             catch (Exception ex)
@@ -118,15 +119,34 @@ namespace Intersight.PowerShell
 
         protected override void EndProcessing()
         {
-            if (result != null && result.Count > 0)
+            if (Json.IsPresent || WithHttpInfo.IsPresent)
             {
-                if (result.Count == 1)
+                if (WithHttpInfo.IsPresent)
                 {
-                    WriteObject(result[0]);
+                    WriteObject(WithHttpInfoResponse);
                 }
                 else
                 {
-                    WriteObject(result.ToArray(), true);
+                    WriteResponseJson(WithHttpInfoResponse);
+                }
+                return;
+            }
+
+            if (this.ParameterSetName == "QueryParam")
+            {
+                WriteObject(ActualInstanceResult);
+            }
+            else if (this.ParameterSetName == "CmdletParam")
+            {
+                var actualResult = ActualInstanceResult.GetType().GetProperty(Constants.Results).GetValue(ActualInstanceResult);
+                var collection = new List<Object>((IEnumerable<Object>)actualResult);
+                if (collection.Count == 1)
+                {
+                    WriteObject(collection[0]);
+                }
+                else
+                {
+                    WriteObject(collection.ToArray(), true);
                 }
             }
         }
@@ -208,6 +228,79 @@ namespace Intersight.PowerShell
                 i++;
             }
             return queryString.ToString();
+        }
+
+        // Get Paginated result if the total number of object is more than 1000. it can fetched maximum 10000 objects or as per
+        // NUMBER_OF_PAGE configured.
+        private void getPaginatedResult(MethodInfo methodInfo, object[] argList, int totalObjectCount, int fetchedObjectCount)
+        {
+            WriteVerbose(string.Format("Fetching  {0} objects out of {1}", Math.Min(Constants.MaxTop * Constants.NUMBER_OF_PAGE, totalObjectCount), totalObjectCount));
+            for (int i = 1; i < Constants.NUMBER_OF_PAGE; i++)
+            {
+                if (fetchedObjectCount >= totalObjectCount)
+                {
+                    break;
+                }
+
+                // set the skip query parameter
+                argList[3] = fetchedObjectCount;
+                var getResult = methodInfo.Invoke(ApiInstance, argList);
+                fetchedObjectCount += GetFetchedObjectCount(getResult);
+                StoreResult(getResult);
+                WriteVerbose(string.Format("Fetched {0} Objects", fetchedObjectCount));
+
+            }
+        }
+
+        // Store the result
+        private void StoreResult(object responseObject)
+        {
+            var tempResult = WriteResponseData(responseObject, false);
+            var actualInstancePropInfo = tempResult.GetType().GetProperty(Constants.ActualInstance);
+            var actualInstanceVal = actualInstancePropInfo.GetValue(tempResult);
+            var actualResult = actualInstanceVal.GetType().GetProperty(Constants.Results).GetValue(actualInstanceVal);
+
+            if (ActualInstanceResult != null)
+            {
+                var resultPropInfo = ActualInstanceResult.GetType().GetProperty(Constants.Results);
+                var tempR = resultPropInfo.GetValue(ActualInstanceResult);
+                var addMethodInfo = tempR.GetType().GetMethod("AddRange");
+                addMethodInfo.Invoke(tempR, new object[] { actualResult });
+            }
+            else
+            {
+                ActualInstanceResult = actualInstanceVal;
+            }
+        }
+
+        // Gets the Count Value from API response
+        private int GetObjectCount(object ResponseObject)
+        {
+            var tempResult = WriteResponseData(ResponseObject, false);
+            var actualInstancePropInfo = tempResult.GetType().GetProperty(Constants.ActualInstance);
+            if (actualInstancePropInfo != null)
+            {
+                var actualInstanceVal = actualInstancePropInfo.GetValue(tempResult);
+                int count = (int)actualInstanceVal.GetType().GetProperty(Constants.Count).GetValue(actualInstanceVal, null);
+                return count;
+            }
+            return -1;
+        }
+
+        // Get the count of actual fetched objects
+        private int GetFetchedObjectCount(object ResponseObject)
+        {
+            var tempResult = WriteResponseData(ResponseObject, false);
+            var actualInstancePropInfo = tempResult.GetType().GetProperty(Constants.ActualInstance);
+            if (actualInstancePropInfo != null)
+            {
+                var actualInstanceVal = actualInstancePropInfo.GetValue(tempResult);
+                var innerResult = actualInstanceVal.GetType().GetProperty(Constants.Results).GetValue(actualInstanceVal, null);
+                var collection = new List<Object>((IEnumerable<Object>)innerResult);
+                return collection.Count;
+            }
+
+            return -1;
         }
     }
 }

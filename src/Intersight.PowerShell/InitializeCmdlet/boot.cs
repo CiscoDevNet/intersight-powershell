@@ -967,7 +967,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Boot resource location in URI format."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
+        [ValidatePattern("^$|^[hH][tT][tT][pP][sS]?://[^\\s/$.?#].[^\\s]*$")]
         public string Uri
         {
             get;
