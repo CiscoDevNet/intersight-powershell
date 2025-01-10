@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowLoopTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowLoopTask.ClassIdEnum>][-Count< string>][-Description< string>][-Label< string>][-LoopStartTask< string>][-Name< string>][-NumberOfBatches< long>][-ObjectType< WorkflowLoopTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-Parallel< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowLoopTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowLoopTask.ClassIdEnum>][-Count< string>][-Description< string>][-FailurePolicy< WorkflowLoopTask.FailurePolicyEnum>][-Label< string>][-LoopStartTask< string>][-Name< string>][-NumberOfBatches< long>][-ObjectType< WorkflowLoopTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-Parallel< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -84,6 +84,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -FailurePolicy
+The policy to handle the failure of an iteration within a parallel loop.\n* `FailOnFirstFailure` - The enum specifies the option as FailOnFirstFailure where the loop task will fail if one of the iteration in the loop fails. The running iterations will be cancelled on first failure and the loop will be marked as failed.\n* `ContinueOnFailure` - The enum specifies the option as ContinueOnFailure where the loop task will continue with all iterations, even if one fails. Running iterations will not be canceled, but the loop will be marked as failed after all iterations are complete.
+
+```yaml
+Type: WorkflowLoopTask.FailurePolicyEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Label
 A user defined label identifier of the workflow task used for UI display.
 
@@ -130,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -NumberOfBatches
-When tasks are run in parallel and the count is large, the actual number of task run in parallel can be controlled by this property. If count is 100 and numberOfBatches is 5 then 20 tasks are run in parallel 5 times. Parallel batch size must be less than the count. In cases where count is dynamic and depends on input given during workflow execution, if that count is less than batch then empty batches might get created which do not have any tasks under them.
+All iterations of the loop run in parallel within a single batch, with a maximum of 100 iterations. To run more than 100 iterations, you can increase the number of batches. The configuration is acceptable as long as the total number of iterations divided by the number of batches is less than 100. Adjusting the number of batches also allows you to control how many iterations run in parallel. For example, if the total count is 100 and you set the number of batches to 5, then 20 tasks will run in parallel across the 5 batches. It&apos;s important to note that the number of batches must be less than the total count. If the count is dynamic and falls below the number of batches, this may result in empty batches with no tasks.
 
 ```yaml
 Type: long
