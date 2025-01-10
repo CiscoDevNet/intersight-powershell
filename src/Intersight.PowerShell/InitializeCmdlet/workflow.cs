@@ -5374,6 +5374,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightWorkflowLoopTask()
         {
             ClassId = WorkflowLoopTask.ClassIdEnum.WorkflowLoopTask;
+            FailurePolicy = WorkflowLoopTask.FailurePolicyEnum.FailOnFirstFailure;
             ObjectType = WorkflowLoopTask.ObjectTypeEnum.WorkflowLoopTask;
 
         }
@@ -5418,6 +5419,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The policy to handle the failure of an iteration within a parallel loop.\n* `FailOnFirstFailure` - The enum specifies the option as FailOnFirstFailure where the loop task will fail if one of the iteration in the loop fails. The running iterations will be cancelled on first failure and the loop will be marked as failed.\n* `ContinueOnFailure` - The enum specifies the option as ContinueOnFailure where the loop task will continue with all iterations, even if one fails. Running iterations will not be canceled, but the loop will be marked as failed after all iterations are complete."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkflowLoopTask.FailurePolicyEnum FailurePolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A user defined label identifier of the workflow task used for UI display."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5448,7 +5459,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"When tasks are run in parallel and the count is large, the actual number of task run in parallel can be controlled by this property. If count is 100 and numberOfBatches is 5 then 20 tasks are run in parallel 5 times. Parallel batch size must be less than the count. In cases where count is dynamic and depends on input given during workflow execution, if that count is less than batch then empty batches might get created which do not have any tasks under them."</para>
+        /// <para type="description">"All iterations of the loop run in parallel within a single batch, with a maximum of 100 iterations. To run more than 100 iterations, you can increase the number of batches. The configuration is acceptable as long as the total number of iterations divided by the number of batches is less than 100. Adjusting the number of batches also allows you to control how many iterations run in parallel. For example, if the total count is 100 and you set the number of batches to 5, then 20 tasks will run in parallel across the 5 batches. It's important to note that the number of batches must be less than the total count. If the count is dynamic and falls below the number of batches, this may result in empty batches with no tasks."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -5514,6 +5525,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FailurePolicy"))
+            {
+                initObject.FailurePolicy = this.FailurePolicy;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Label"))
             {

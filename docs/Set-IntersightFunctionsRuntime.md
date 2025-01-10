@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFunctionsRuntime [-Action< FunctionsRuntime.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-CodeFileName< string>][-Components< System.Collections.Generic.List`1[FunctionsRuntimeComponent]>][-Description< string>][-DisplayName< string>][-LanguageName< FunctionsRuntime.LanguageNameEnum>][-LanguageVersion< string>][[-Moid]< string>][-Name< string>][-Note< string>][-RuntimeUploadMoid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFunctionsRuntime [-Action< FunctionsRuntime.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< WorkflowCatalogRelationship>][-CodeFileName< string>][-CodeTemplate< string>][-Components< System.Collections.Generic.List`1[FunctionsRuntimeComponent]>][-Description< string>][-DisplayName< string>][-LanguageName< FunctionsRuntime.LanguageNameEnum>][-LanguageVersion< string>][[-Moid]< string>][-Name< string>][-Note< string>][-RuntimeUploadMoid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -73,6 +73,21 @@ Accept wildcard characters: False
 
 ### -CodeFileName
 Name of file containing function source code.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CodeTemplate
+Template to guide on how to compose code.
 
 ```yaml
 Type: string

@@ -29815,6 +29815,70 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New StorageNetAppVolumeSnapshot.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightStorageNetAppVolumeSnapshot")]
+    public class NewIntersightStorageNetAppVolumeSnapshot : NewCmdletBase
+    {
+        public NewIntersightStorageNetAppVolumeSnapshot()
+        {
+            ApiInstance = new StorageApi(Config);
+            ModelObject = new StorageNetAppVolumeSnapshot();
+            MethodName = "CreateStorageNetAppVolumeSnapshotWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New StorageStoragePolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightStorageStoragePolicy")]
@@ -30046,6 +30110,18 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new StorageApi(Config);
             MethodName = "DeleteStorageDriveSecurityPolicyWithHttpInfo";
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove StorageNetAppVolumeSnapshot.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightStorageNetAppVolumeSnapshot")]
+    public class RemoveIntersightStorageNetAppVolumeSnapshot : RemoveCmdletBase
+    {
+        public RemoveIntersightStorageNetAppVolumeSnapshot()
+        {
+            ApiInstance = new StorageApi(Config);
+            MethodName = "DeleteStorageNetAppVolumeSnapshotWithHttpInfo";
         }
     }
     /// <summary>
@@ -32377,6 +32453,70 @@ namespace Intersight.PowerShell
 
 
 
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set StorageNetAppVolumeSnapshot.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageNetAppVolumeSnapshot")]
+    public class SetIntersightStorageNetAppVolumeSnapshot : SetCmdletBase
+    {
+        public SetIntersightStorageNetAppVolumeSnapshot()
+        {
+            ApiInstance = new StorageApi(Config);
+            ModelObject = new StorageNetAppVolumeSnapshot();
+            MethodName = "UpdateStorageNetAppVolumeSnapshotWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
 
 
     }

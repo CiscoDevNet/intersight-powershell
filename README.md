@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2024112619
-- C# SDK version: 1.0.11.2024112619
+- Intersight.PowerShell version: 1.0.11.2024120409
+- C# SDK version: 1.0.11.2024120409
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2024112619"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2024120409"}
 ```
 or
 
@@ -1498,15 +1498,18 @@ ForecastDefinition | [**Get-IntersightForecastDefinition**](docs/Get-IntersightF
 ForecastInstance | [**Get-IntersightForecastInstance**](docs/Get-IntersightForecastInstance.md) | Read a 'ForecastInstance' resource.
 ForecastInstance | [**Set-IntersightForecastInstance**](docs/Set-IntersightForecastInstance.md) | Update a 'ForecastInstance' resource.
 FunctionsFunction | [**Get-IntersightFunctionsFunction**](docs/Get-IntersightFunctionsFunction.md) | Read a 'FunctionsFunction' resource.
+FunctionsFunctionVersion | [**Get-IntersightFunctionsFunctionVersion**](docs/Get-IntersightFunctionsFunctionVersion.md) | Read a 'FunctionsFunctionVersion' resource.
 FunctionsRuntime | [**Get-IntersightFunctionsRuntime**](docs/Get-IntersightFunctionsRuntime.md) | Read a 'FunctionsRuntime' resource.
 FunctionsUpload | [**Get-IntersightFunctionsUpload**](docs/Get-IntersightFunctionsUpload.md) | Read a 'FunctionsUpload' resource.
 FunctionsFunction | [**New-IntersightFunctionsFunction**](docs/New-IntersightFunctionsFunction.md) | Create a 'FunctionsFunction' resource.
+FunctionsFunctionVersion | [**New-IntersightFunctionsFunctionVersion**](docs/New-IntersightFunctionsFunctionVersion.md) | Create a 'FunctionsFunctionVersion' resource.
 FunctionsRuntime | [**New-IntersightFunctionsRuntime**](docs/New-IntersightFunctionsRuntime.md) | Create a 'FunctionsRuntime' resource.
 FunctionsUpload | [**New-IntersightFunctionsUpload**](docs/New-IntersightFunctionsUpload.md) | Create a 'FunctionsUpload' resource.
 FunctionsFunction | [**Remove-IntersightFunctionsFunction**](docs/Remove-IntersightFunctionsFunction.md) | Delete a 'FunctionsFunction' resource.
 FunctionsRuntime | [**Remove-IntersightFunctionsRuntime**](docs/Remove-IntersightFunctionsRuntime.md) | Delete a 'FunctionsRuntime' resource.
 FunctionsUpload | [**Remove-IntersightFunctionsUpload**](docs/Remove-IntersightFunctionsUpload.md) | Delete a 'FunctionsUpload' resource.
 FunctionsFunction | [**Set-IntersightFunctionsFunction**](docs/Set-IntersightFunctionsFunction.md) | Update a 'FunctionsFunction' resource.
+FunctionsFunctionVersion | [**Set-IntersightFunctionsFunctionVersion**](docs/Set-IntersightFunctionsFunctionVersion.md) | Update a 'FunctionsFunctionVersion' resource.
 FunctionsRuntime | [**Set-IntersightFunctionsRuntime**](docs/Set-IntersightFunctionsRuntime.md) | Update a 'FunctionsRuntime' resource.
 FunctionsUpload | [**Set-IntersightFunctionsUpload**](docs/Set-IntersightFunctionsUpload.md) | Update a 'FunctionsUpload' resource.
 GraphicsCard | [**Get-IntersightGraphicsCard**](docs/Get-IntersightGraphicsCard.md) | Read a 'GraphicsCard' resource.
@@ -2714,9 +2717,11 @@ StorageVirtualDriveExtension | [**Get-IntersightStorageVirtualDriveExtension**](
 StorageVirtualDriveIdentity | [**Get-IntersightStorageVirtualDriveIdentity**](docs/Get-IntersightStorageVirtualDriveIdentity.md) | Read a 'StorageVirtualDriveIdentity' resource.
 StorageDriveGroup | [**New-IntersightStorageDriveGroup**](docs/New-IntersightStorageDriveGroup.md) | Create a 'StorageDriveGroup' resource.
 StorageDriveSecurityPolicy | [**New-IntersightStorageDriveSecurityPolicy**](docs/New-IntersightStorageDriveSecurityPolicy.md) | Create a 'StorageDriveSecurityPolicy' resource.
+StorageNetAppVolumeSnapshot | [**New-IntersightStorageNetAppVolumeSnapshot**](docs/New-IntersightStorageNetAppVolumeSnapshot.md) | Create a 'StorageNetAppVolumeSnapshot' resource.
 StorageStoragePolicy | [**New-IntersightStorageStoragePolicy**](docs/New-IntersightStorageStoragePolicy.md) | Create a 'StorageStoragePolicy' resource.
 StorageDriveGroup | [**Remove-IntersightStorageDriveGroup**](docs/Remove-IntersightStorageDriveGroup.md) | Delete a 'StorageDriveGroup' resource.
 StorageDriveSecurityPolicy | [**Remove-IntersightStorageDriveSecurityPolicy**](docs/Remove-IntersightStorageDriveSecurityPolicy.md) | Delete a 'StorageDriveSecurityPolicy' resource.
+StorageNetAppVolumeSnapshot | [**Remove-IntersightStorageNetAppVolumeSnapshot**](docs/Remove-IntersightStorageNetAppVolumeSnapshot.md) | Delete a 'StorageNetAppVolumeSnapshot' resource.
 StorageStoragePolicy | [**Remove-IntersightStorageStoragePolicy**](docs/Remove-IntersightStorageStoragePolicy.md) | Delete a 'StorageStoragePolicy' resource.
 StorageBatteryBackupUnit | [**Set-IntersightStorageBatteryBackupUnit**](docs/Set-IntersightStorageBatteryBackupUnit.md) | Update a 'StorageBatteryBackupUnit' resource.
 StorageController | [**Set-IntersightStorageController**](docs/Set-IntersightStorageController.md) | Update a 'StorageController' resource.
@@ -2735,6 +2740,7 @@ StorageFlexUtilPhysicalDrive | [**Set-IntersightStorageFlexUtilPhysicalDrive**](
 StorageFlexUtilVirtualDrive | [**Set-IntersightStorageFlexUtilVirtualDrive**](docs/Set-IntersightStorageFlexUtilVirtualDrive.md) | Update a 'StorageFlexUtilVirtualDrive' resource.
 StorageHitachiArray | [**Set-IntersightStorageHitachiArray**](docs/Set-IntersightStorageHitachiArray.md) | Update a 'StorageHitachiArray' resource.
 StorageNetAppCluster | [**Set-IntersightStorageNetAppCluster**](docs/Set-IntersightStorageNetAppCluster.md) | Update a 'StorageNetAppCluster' resource.
+StorageNetAppVolumeSnapshot | [**Set-IntersightStorageNetAppVolumeSnapshot**](docs/Set-IntersightStorageNetAppVolumeSnapshot.md) | Update a 'StorageNetAppVolumeSnapshot' resource.
 StoragePhysicalDisk | [**Set-IntersightStoragePhysicalDisk**](docs/Set-IntersightStoragePhysicalDisk.md) | Update a 'StoragePhysicalDisk' resource.
 StoragePhysicalDiskExtension | [**Set-IntersightStoragePhysicalDiskExtension**](docs/Set-IntersightStoragePhysicalDiskExtension.md) | Update a 'StoragePhysicalDiskExtension' resource.
 StoragePhysicalDiskUsage | [**Set-IntersightStoragePhysicalDiskUsage**](docs/Set-IntersightStoragePhysicalDiskUsage.md) | Update a 'StoragePhysicalDiskUsage' resource.

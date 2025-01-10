@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFunctionsRuntime [-Action< FunctionsRuntime.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< FunctionsRuntime.ClassIdEnum>][-CodeFileName< string>][-Components< System.Collections.Generic.List`1[Model.FunctionsRuntimeComponent]>][-Description< string>][-DisplayName< string>][-LanguageName< FunctionsRuntime.LanguageNameEnum>][-LanguageVersion< string>][-Moid< string>][-Name< string>][-Note< string>][-ObjectType< FunctionsRuntime.ObjectTypeEnum>][-RuntimeUploadMoid< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFunctionsRuntime [-Action< FunctionsRuntime.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< FunctionsRuntime.ClassIdEnum>][-CodeFileName< string>][-CodeTemplate< string>][-Components< System.Collections.Generic.List`1[Model.FunctionsRuntimeComponent]>][-Description< string>][-DisplayName< string>][-LanguageName< FunctionsRuntime.LanguageNameEnum>][-LanguageVersion< string>][-Moid< string>][-Name< string>][-Note< string>][-ObjectType< FunctionsRuntime.ObjectTypeEnum>][-RuntimeUploadMoid< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -89,6 +89,21 @@ Accept wildcard characters: False
 
 ### -CodeFileName
 Name of file containing function source code.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CodeTemplate
+Template to guide on how to compose code.
 
 ```yaml
 Type: string

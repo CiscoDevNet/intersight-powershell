@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFunctionsFunction [-Action< FunctionsFunction.ActionEnum>][-ActionExecution< Model.WorkflowWorkflowInfoRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FunctionsFunction.ClassIdEnum>][-Code< string>][-Description< string>][-DisplayName< string>][-Moid< string>][-Name< string>][-ObjectType< FunctionsFunction.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Runtime< Model.FunctionsRuntimeRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TaskDefinition< Model.WorkflowTaskDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFunctionsFunction [-Action< FunctionsFunction.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FunctionsFunction.ClassIdEnum>][-Code< string>][-Description< string>][-DisplayName< string>][-Moid< string>][-Name< string>][-ObjectType< FunctionsFunction.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-RuntimeMoid< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -25,28 +25,10 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 ## PARAMETERS
 
 ### -Action
-Action of the function such as build, deploy, undeploy, delete.\n* `None` - No action is set, this is the default value for action field.\n* `Build` - Build an instance of a Function.\n* `Deploy` - Deploy the build Function.\n* `Undeploy` - Undeploy a Function that was previously successfully deployed.\n* `Delete` - Delete a Function that has yet to be deployed or that was recently undeployed.
+Action of the function such as build, deploy, undeploy.\n* `None` - No action is set, this is the default value for action field.\n* `Publish` - Publish a Function that was saved or built.
 
 ```yaml
 Type: FunctionsFunction.ActionEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ActionExecution
-A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.WorkflowWorkflowInfoRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -88,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Code
-Custom function code for Function MO.
+Custom function code to create the first function version, mandatory in function creation payload.
 
 ```yaml
 Type: string
@@ -195,14 +177,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Runtime
-A reference to a functionsRuntime resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -RuntimeMoid
+Moid of runtime which is used to create the first function version, mandatory in function creation payload.
 
 ```yaml
-Type: Model.FunctionsRuntimeRelationship
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -230,14 +209,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -TaskDefinition
-A reference to a workflowTaskDefinition resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -Version
+The target version of the function, which is needed by action.
 
 ```yaml
-Type: Model.WorkflowTaskDefinitionRelationship
+Type: long
 Parameter Sets: (All)
 Aliases:
 

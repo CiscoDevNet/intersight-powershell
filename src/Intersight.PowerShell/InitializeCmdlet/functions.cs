@@ -21,21 +21,11 @@ namespace Intersight.PowerShell
 
         }
         // <summary>
-        /// <para type="description">"Action of the function such as build, deploy, undeploy, delete.\n* `None` - No action is set, this is the default value for action field.\n* `Build` - Build an instance of a Function.\n* `Deploy` - Deploy the build Function.\n* `Undeploy` - Undeploy a Function that was previously successfully deployed.\n* `Delete` - Delete a Function that has yet to be deployed or that was recently undeployed."</para>
+        /// <para type="description">"Action of the function such as build, deploy, undeploy.\n* `None` - No action is set, this is the default value for action field.\n* `Publish` - Publish a Function that was saved or built."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FunctionsFunction.ActionEnum Action
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.WorkflowWorkflowInfoRelationship ActionExecution
         {
             get;
             set;
@@ -61,7 +51,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Custom function code for Function MO."</para>
+        /// <para type="description">"Custom function code to create the first function version, mandatory in function creation payload."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -104,7 +94,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The name of the function. Name can only contain letters (a-z), numbers (0-9), hyphen (-)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-z0-9]{1}[a-z0-9-]{0,62}[a-z0-9]{1}$")]
+        [ValidatePattern("^[a-zA-Z0-9]{1}[a-zA-Z0-9-]{0,62}[a-zA-Z0-9]{1}$")]
         public string Name
         {
             get;
@@ -131,11 +121,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a functionsRuntime resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"Moid of runtime which is used to create the first function version, mandatory in function creation payload."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.FunctionsRuntimeRelationship Runtime
+        public string RuntimeMoid
         {
             get;
             set;
@@ -151,11 +141,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a workflowTaskDefinition resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"The target version of the function, which is needed by action."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.WorkflowTaskDefinitionRelationship TaskDefinition
+        public long Version
         {
             get;
             set;
@@ -168,10 +158,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
                 initObject.Action = this.Action;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ActionExecution"))
-            {
-                initObject.ActionExecution = this.ActionExecution;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
@@ -203,17 +189,17 @@ namespace Intersight.PowerShell
             {
                 initObject.Organization = this.Organization;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Runtime"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("RuntimeMoid"))
             {
-                initObject.Runtime = this.Runtime;
+                initObject.RuntimeMoid = this.RuntimeMoid;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("TaskDefinition"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
-                initObject.TaskDefinition = this.TaskDefinition;
+                initObject.VarVersion = this.Version;
             }
             WriteObject(initObject);
         }
@@ -272,6 +258,147 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FunctionsFunctionVersion.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFunctionsFunctionVersion")]
+    public class InitializeIntersightFunctionsFunctionVersion : PSCmdlet
+    {
+        public InitializeIntersightFunctionsFunctionVersion()
+        {
+            ClassId = FunctionsFunctionVersion.ClassIdEnum.FunctionsFunctionVersion;
+            ObjectType = FunctionsFunctionVersion.ObjectTypeEnum.FunctionsFunctionVersion;
+
+        }
+        // <summary>
+        /// <para type="description">"A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.WorkflowWorkflowInfoRelationship ActionExecution
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FunctionsFunctionVersion.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Custom function code for Function MO."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Code
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a functionsFunction resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FunctionsFunctionRelationship Function
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FunctionsFunctionVersion.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a functionsRuntime resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FunctionsRuntimeRelationship Runtime
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FunctionsFunctionVersion initObject = new Intersight.Model.FunctionsFunctionVersion();
+            if (this.MyInvocation.BoundParameters.ContainsKey("ActionExecution"))
+            {
+                initObject.ActionExecution = this.ActionExecution;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Code"))
+            {
+                initObject.Code = this.Code;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Function"))
+            {
+                initObject.Function = this.Function;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Runtime"))
+            {
+                initObject.Runtime = this.Runtime;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
             WriteObject(initObject);
         }
 
@@ -336,6 +463,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9]{1}[a-zA-Z0-9_.-]{0,63}$")]
         public string CodeFileName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Template to guide on how to compose code."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CodeTemplate
         {
             get;
             set;
@@ -471,6 +608,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("CodeFileName"))
             {
                 initObject.CodeFileName = this.CodeFileName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CodeTemplate"))
+            {
+                initObject.CodeTemplate = this.CodeTemplate;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Components"))
             {

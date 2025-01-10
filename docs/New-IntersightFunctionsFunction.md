@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFunctionsFunction [-Action< FunctionsFunction.ActionEnum>][-ActionExecution< WorkflowWorkflowInfoRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Code< string>][-Description< string>][-DisplayName< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Runtime< FunctionsRuntimeRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskDefinition< WorkflowTaskDefinitionRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFunctionsFunction [-Action< FunctionsFunction.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Code< string>][-Description< string>][-DisplayName< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-RuntimeMoid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -24,28 +24,10 @@ Create a &apos;FunctionsFunction&apos; resource.
 ## PARAMETERS
 
 ### -Action
-Action of the function such as build, deploy, undeploy, delete.\n* `None` - No action is set, this is the default value for action field.\n* `Build` - Build an instance of a Function.\n* `Deploy` - Deploy the build Function.\n* `Undeploy` - Undeploy a Function that was previously successfully deployed.\n* `Delete` - Delete a Function that has yet to be deployed or that was recently undeployed.
+Action of the function such as build, deploy, undeploy.\n* `None` - No action is set, this is the default value for action field.\n* `Publish` - Publish a Function that was saved or built.
 
 ```yaml
 Type: FunctionsFunction.ActionEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ActionExecution
-A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: WorkflowWorkflowInfoRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -72,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Code
-Custom function code for Function MO.
+Custom function code to create the first function version, mandatory in function creation payload.
 
 ```yaml
 Type: string
@@ -164,14 +146,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Runtime
-A reference to a functionsRuntime resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -RuntimeMoid
+Moid of runtime which is used to create the first function version, mandatory in function creation payload.
 
 ```yaml
-Type: FunctionsRuntimeRelationship
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -199,14 +178,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -TaskDefinition
-A reference to a workflowTaskDefinition resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -Version
+The target version of the function, which is needed by action.
 
 ```yaml
-Type: WorkflowTaskDefinitionRelationship
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -275,8 +251,6 @@ PS C:\> New-IntersightFunctionsFunction
 ## RELATED LINKS
 
 [Get-IntersightFunctionsFunction](./Get-IntersightFunctionsFunction.md)
-
-[Initialize-IntersightFunctionsFunctionLastAction](./Initialize-IntersightFunctionsFunctionLastAction.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
