@@ -49,16 +49,16 @@ $manifestParam = @{
     Guid = "41ce1a70-9c4b-489f-a153-12fe49b7fe62"
     Author = "Cisco Systems"
     CompanyName = "Cisco Systems"
-    ModuleVersion = "1.0.11.2024120409"
-    Copyright = "(c) 2023 Cisco Systems, Inc. All rights reserved."
+    ModuleVersion = "1.0.11.2025020308"
+    Copyright = "(c) 2025 Cisco Systems, Inc. All rights reserved."
     LicenseUri = "https://www.apache.org/licenses/LICENSE-2.0.txt"
     ProjectUri = "https://github.com/CiscoDevNet/intersight-powershell"
     CompatiblePSEditions = "Core"
     Tag = @('PSEdition_Core','Windows','Linux','MacOSX','Intersight','IntersightCmdlets')
-    PowerShellVersion = "7.3.3"
+    PowerShellVersion = "7.4.0"
     CmdletsToExport = $commandList
     Description = "Intersight Powershell module provides the cmdlets to manage, analyze, and automate the IT infrastructure in Intersight."
-    ReleaseNotes = "Intersight.PowerShell - Version 1.0.11.2024120409
+    ReleaseNotes = "Intersight.PowerShell - Version 1.0.11.2025020308
 
 Changelog:-
 https://github.com/CiscoDevNet/intersight-powershell/blob/master/CHANGELOG.md

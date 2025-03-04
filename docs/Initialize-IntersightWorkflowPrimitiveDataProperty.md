@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowPrimitiveDataProperty [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowPrimitiveDataProperty.ClassIdEnum>][-Constraints< Model.WorkflowConstraints>][-InventorySelector< System.Collections.Generic.List`1[Model.WorkflowMoReferenceProperty]>][-ObjectType< WorkflowPrimitiveDataProperty.ObjectTypeEnum>][-Secure< bool>][-Type< WorkflowPrimitiveDataProperty.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowPrimitiveDataProperty [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowPrimitiveDataProperty.ClassIdEnum>][-Constraints< Model.WorkflowConstraints>][-DataSourceSelector< System.Collections.Generic.List`1[Model.WorkflowDataSourceSelector]>][-InventorySelector< System.Collections.Generic.List`1[Model.WorkflowMoReferenceProperty]>][-ObjectType< WorkflowPrimitiveDataProperty.ObjectTypeEnum>][-Secure< bool>][-Type< WorkflowPrimitiveDataProperty.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -61,6 +61,23 @@ Note :- Use Initialize-IntersightWorkflowConstraints to create the object of com
 
 ```yaml
 Type: Model.WorkflowConstraints
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DataSourceSelector
+
+
+Note :- Use Initialize-IntersightWorkflowDataSourceSelector to create the object of complex type WorkflowDataSourceSelector
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.WorkflowDataSourceSelector]
 Parameter Sets: (All)
 Aliases:
 
@@ -191,5 +208,7 @@ PS C:\> Initialize-IntersightWorkflowPrimitiveDataProperty
 ## RELATED LINKS
 
 [Initialize-IntersightWorkflowConstraints](./Initialize-IntersightWorkflowConstraints.md)
+
+[Initialize-IntersightWorkflowDataSourceSelector](./Initialize-IntersightWorkflowDataSourceSelector.md)
 
 [Initialize-IntersightWorkflowMoReferenceProperty](./Initialize-IntersightWorkflowMoReferenceProperty.md)

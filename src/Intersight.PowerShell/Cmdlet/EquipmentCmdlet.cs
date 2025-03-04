@@ -3775,7 +3775,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Configured Mode of the Hybrid Drive slot.\n* `` - Hybrid Drive slot  mode is not applicable.\n* `RAID` - Hybrid Drive slot mode is RAID.\n* `Direct` - Hybrid Drive slot mode is Direct."</para>
+        /// <para type="description">"The Configured Mode of the Hybrid Drive slot.\n* `` - Hybrid Drive slot mode is not applicable.\n* `Controller` - Hybrid Drive slot mode is Controller.\n* `Direct` - Hybrid Drive slot mode is Direct."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3909,7 +3909,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Requested Mode for the Hybrid Drive slot.\n* `` - Hybrid Drive slot  mode is not applicable.\n* `RAID` - Hybrid Drive slot mode is RAID.\n* `Direct` - Hybrid Drive slot mode is Direct."</para>
+        /// <para type="description">"The Requested Mode for the Hybrid Drive slot.\n* `` - Hybrid Drive slot mode is not applicable.\n* `Controller` - Hybrid Drive slot mode is Controller.\n* `Direct` - Hybrid Drive slot mode is Direct."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7596,6 +7596,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Name of the switch on which the switch operation is performed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SwitchName
+        {
+            get;
+            set;
+        }
+
 
 
 
@@ -10869,6 +10880,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>

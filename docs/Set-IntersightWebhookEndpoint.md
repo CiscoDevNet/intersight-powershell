@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWebhookEndpoint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Schemas< System.Collections.Generic.List`1[WebhookSchemaRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightWebhookEndpoint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AppCredentials< IamAppCredentials>][-AppRegistration< IamAppRegistrationRelationship>][-AuthType< WebhookEndpoint.AuthTypeEnum>][-CredentialsAction< WebhookEndpoint.CredentialsActionEnum>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Schemas< System.Collections.Generic.List`1[WebhookSchemaRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,71 @@ Update a &apos;WebhookEndpoint&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AppCredentials
+Stores the credentials for the specified authentication type.
+
+Note :- Use Initialize-IntersightIamAppCredentials to create the object of complex type IamAppCredentials
+
+```yaml
+Type: IamAppCredentials
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AppRegistration
+A reference to a iamAppRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamAppRegistrationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthType
+Type of authentication used by the clientApp.\n* `basic` - The client uses basic username/password authentication. The password is expected to be a JWT token.\n* `none` - No authentication method specified by the client.\n* `bearer-token` - The client uses a long-lived bearer token to authenticate.\n* `auth-code` - The client uses OAuth Authorization Grant Flow without PKCE for authentication.\n* `client-credentials` - The client uses OAuth Client Credentials Flow for authentication.
+
+```yaml
+Type: WebhookEndpoint.AuthTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CredentialsAction
+An action to be performed on the credentials.\n* `none` - No action to be performed.\n* `regenerateCredentials` - Allows for revocation and regeneration of a token. The old token associated with the client application. will not be usable and a new token will be generated.
+
+```yaml
+Type: WebhookEndpoint.CredentialsActionEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -179,6 +244,8 @@ PS C:\> Set-IntersightWebhookEndpoint
 ## RELATED LINKS
 
 [Get-IntersightWebhookEndpoint](./Get-IntersightWebhookEndpoint.md)
+
+[Initialize-IntersightIamAppCredentials](./Initialize-IntersightIamAppCredentials.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2024120409
-- C# SDK version: 1.0.11.2024120409
+- Intersight.PowerShell version: 1.0.11.2025020308
+- C# SDK version: 1.0.11.2025020308
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -88,8 +88,8 @@ The Cisco Intersight.PowerShell module is updated frequently to be in sync with 
 
 <a name="requirements"></a>
 ### 1.1. Requirements
-- PowerShell 7.3.3 or later
-- net6.0 SDK or later
+- PowerShell 7.4.0 or later
+- net8.0 SDK or later
 
 <a name="dependencies"></a>
 #### Dependencies
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2024120409"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025020308"}
 ```
 or
 
@@ -748,6 +748,7 @@ ApplianceCertificateSetting | [**Get-IntersightApplianceCertificateSetting**](do
 ApplianceClusterInfo | [**Get-IntersightApplianceClusterInfo**](docs/Get-IntersightApplianceClusterInfo.md) | Read a 'ApplianceClusterInfo' resource.
 ApplianceClusterInstall | [**Get-IntersightApplianceClusterInstall**](docs/Get-IntersightApplianceClusterInstall.md) | Read a 'ApplianceClusterInstall' resource.
 ApplianceClusterReplaceNode | [**Get-IntersightApplianceClusterReplaceNode**](docs/Get-IntersightApplianceClusterReplaceNode.md) | Read a 'ApplianceClusterReplaceNode' resource.
+ApplianceClusterWorkerNode | [**Get-IntersightApplianceClusterWorkerNode**](docs/Get-IntersightApplianceClusterWorkerNode.md) | Read a 'ApplianceClusterWorkerNode' resource.
 ApplianceDataExportPolicy | [**Get-IntersightApplianceDataExportPolicy**](docs/Get-IntersightApplianceDataExportPolicy.md) | Read a 'ApplianceDataExportPolicy' resource.
 ApplianceDeviceCertificate | [**Get-IntersightApplianceDeviceCertificate**](docs/Get-IntersightApplianceDeviceCertificate.md) | Read a 'ApplianceDeviceCertificate' resource.
 ApplianceDeviceClaim | [**Get-IntersightApplianceDeviceClaim**](docs/Get-IntersightApplianceDeviceClaim.md) | Read a 'ApplianceDeviceClaim' resource.
@@ -783,6 +784,9 @@ ApplianceBackup | [**New-IntersightApplianceBackup**](docs/New-IntersightApplian
 ApplianceBackupPolicy | [**New-IntersightApplianceBackupPolicy**](docs/New-IntersightApplianceBackupPolicy.md) | Create a 'ApplianceBackupPolicy' resource.
 ApplianceClusterInfo | [**New-IntersightApplianceClusterInfo**](docs/New-IntersightApplianceClusterInfo.md) | Create a 'ApplianceClusterInfo' resource.
 ApplianceClusterReplaceNode | [**New-IntersightApplianceClusterReplaceNode**](docs/New-IntersightApplianceClusterReplaceNode.md) | Create a 'ApplianceClusterReplaceNode' resource.
+ApplianceClusterWorkerNode | [**New-IntersightApplianceClusterWorkerNode**](docs/New-IntersightApplianceClusterWorkerNode.md) | Create a 'ApplianceClusterWorkerNode' resource.
+ApplianceClusterWorkerNodeReplace | [**New-IntersightApplianceClusterWorkerNodeReplace**](docs/New-IntersightApplianceClusterWorkerNodeReplace.md) | Create a 'ApplianceClusterWorkerNodeReplace' resource.
+ApplianceClusterWorkerNodeReuse | [**New-IntersightApplianceClusterWorkerNodeReuse**](docs/New-IntersightApplianceClusterWorkerNodeReuse.md) | Create a 'ApplianceClusterWorkerNodeReuse' resource.
 ApplianceDataExportPolicy | [**New-IntersightApplianceDataExportPolicy**](docs/New-IntersightApplianceDataExportPolicy.md) | Create a 'ApplianceDataExportPolicy' resource.
 ApplianceDeviceClaim | [**New-IntersightApplianceDeviceClaim**](docs/New-IntersightApplianceDeviceClaim.md) | Create a 'ApplianceDeviceClaim' resource.
 ApplianceDiagSetting | [**New-IntersightApplianceDiagSetting**](docs/New-IntersightApplianceDiagSetting.md) | Create a 'ApplianceDiagSetting' resource.
@@ -800,6 +804,7 @@ ApplianceCertificateSetting | [**Set-IntersightApplianceCertificateSetting**](do
 ApplianceClusterInfo | [**Set-IntersightApplianceClusterInfo**](docs/Set-IntersightApplianceClusterInfo.md) | Update a 'ApplianceClusterInfo' resource.
 ApplianceClusterInstall | [**Set-IntersightApplianceClusterInstall**](docs/Set-IntersightApplianceClusterInstall.md) | Update a 'ApplianceClusterInstall' resource.
 ApplianceClusterReplaceNode | [**Set-IntersightApplianceClusterReplaceNode**](docs/Set-IntersightApplianceClusterReplaceNode.md) | Update a 'ApplianceClusterReplaceNode' resource.
+ApplianceClusterWorkerNode | [**Set-IntersightApplianceClusterWorkerNode**](docs/Set-IntersightApplianceClusterWorkerNode.md) | Update a 'ApplianceClusterWorkerNode' resource.
 ApplianceDataExportPolicy | [**Set-IntersightApplianceDataExportPolicy**](docs/Set-IntersightApplianceDataExportPolicy.md) | Update a 'ApplianceDataExportPolicy' resource.
 ApplianceDeviceClaim | [**Set-IntersightApplianceDeviceClaim**](docs/Set-IntersightApplianceDeviceClaim.md) | Update a 'ApplianceDeviceClaim' resource.
 ApplianceDeviceUpgradePolicy | [**Set-IntersightApplianceDeviceUpgradePolicy**](docs/Set-IntersightApplianceDeviceUpgradePolicy.md) | Update a 'ApplianceDeviceUpgradePolicy' resource.
@@ -915,6 +920,7 @@ CapabilityFanModuleManufacturingDef | [**Get-IntersightCapabilityFanModuleManufa
 CapabilityFexCapabilityDef | [**Get-IntersightCapabilityFexCapabilityDef**](docs/Get-IntersightCapabilityFexCapabilityDef.md) | Read a 'CapabilityFexCapabilityDef' resource.
 CapabilityFexDescriptor | [**Get-IntersightCapabilityFexDescriptor**](docs/Get-IntersightCapabilityFexDescriptor.md) | Read a 'CapabilityFexDescriptor' resource.
 CapabilityFexManufacturingDef | [**Get-IntersightCapabilityFexManufacturingDef**](docs/Get-IntersightCapabilityFexManufacturingDef.md) | Read a 'CapabilityFexManufacturingDef' resource.
+CapabilityFexSupportMeta | [**Get-IntersightCapabilityFexSupportMeta**](docs/Get-IntersightCapabilityFexSupportMeta.md) | Read a 'CapabilityFexSupportMeta' resource.
 CapabilityGpuEndpointDescriptor | [**Get-IntersightCapabilityGpuEndpointDescriptor**](docs/Get-IntersightCapabilityGpuEndpointDescriptor.md) | Read a 'CapabilityGpuEndpointDescriptor' resource.
 CapabilityHsuIsoFileSupportMeta | [**Get-IntersightCapabilityHsuIsoFileSupportMeta**](docs/Get-IntersightCapabilityHsuIsoFileSupportMeta.md) | Read a 'CapabilityHsuIsoFileSupportMeta' resource.
 CapabilityIoCardCapabilityDef | [**Get-IntersightCapabilityIoCardCapabilityDef**](docs/Get-IntersightCapabilityIoCardCapabilityDef.md) | Read a 'CapabilityIoCardCapabilityDef' resource.
@@ -2046,6 +2052,8 @@ KvmSession | [**Set-IntersightKvmSession**](docs/Set-IntersightKvmSession.md) | 
 KvmTunneledKvmPolicy | [**Set-IntersightKvmTunneledKvmPolicy**](docs/Set-IntersightKvmTunneledKvmPolicy.md) | Update a 'KvmTunneledKvmPolicy' resource.
 LicenseAccountLicenseData | [**Get-IntersightLicenseAccountLicenseData**](docs/Get-IntersightLicenseAccountLicenseData.md) | Read a 'LicenseAccountLicenseData' resource.
 LicenseCustomerOp | [**Get-IntersightLicenseCustomerOp**](docs/Get-IntersightLicenseCustomerOp.md) | Read a 'LicenseCustomerOp' resource.
+LicenseErpCustomerOp | [**Get-IntersightLicenseErpCustomerOp**](docs/Get-IntersightLicenseErpCustomerOp.md) | Read a 'LicenseErpCustomerOp' resource.
+LicenseErpLicenseCount | [**Get-IntersightLicenseErpLicenseCount**](docs/Get-IntersightLicenseErpLicenseCount.md) | Read a 'LicenseErpLicenseCount' resource.
 LicenseIksCustomerOp | [**Get-IntersightLicenseIksCustomerOp**](docs/Get-IntersightLicenseIksCustomerOp.md) | Read a 'LicenseIksCustomerOp' resource.
 LicenseIksLicenseCount | [**Get-IntersightLicenseIksLicenseCount**](docs/Get-IntersightLicenseIksLicenseCount.md) | Read a 'LicenseIksLicenseCount' resource.
 LicenseIncCustomerOp | [**Get-IntersightLicenseIncCustomerOp**](docs/Get-IntersightLicenseIncCustomerOp.md) | Read a 'LicenseIncCustomerOp' resource.
@@ -2057,6 +2065,7 @@ LicenseLicenseInfoView | [**Get-IntersightLicenseLicenseInfoView**](docs/Get-Int
 LicenseLicenseRegistrationStatus | [**Get-IntersightLicenseLicenseRegistrationStatus**](docs/Get-IntersightLicenseLicenseRegistrationStatus.md) | Read a 'LicenseLicenseRegistrationStatus' resource.
 LicenseLicenseReservationOp | [**Get-IntersightLicenseLicenseReservationOp**](docs/Get-IntersightLicenseLicenseReservationOp.md) | Read a 'LicenseLicenseReservationOp' resource.
 LicenseSmartlicenseToken | [**Get-IntersightLicenseSmartlicenseToken**](docs/Get-IntersightLicenseSmartlicenseToken.md) | Read a 'LicenseSmartlicenseToken' resource.
+LicenseErpLicenseCount | [**New-IntersightLicenseErpLicenseCount**](docs/New-IntersightLicenseErpLicenseCount.md) | Create a 'LicenseErpLicenseCount' resource.
 LicenseIksLicenseCount | [**New-IntersightLicenseIksLicenseCount**](docs/New-IntersightLicenseIksLicenseCount.md) | Create a 'LicenseIksLicenseCount' resource.
 LicenseIncLicenseCount | [**New-IntersightLicenseIncLicenseCount**](docs/New-IntersightLicenseIncLicenseCount.md) | Create a 'LicenseIncLicenseCount' resource.
 LicenseIwoLicenseCount | [**New-IntersightLicenseIwoLicenseCount**](docs/New-IntersightLicenseIwoLicenseCount.md) | Create a 'LicenseIwoLicenseCount' resource.
@@ -2064,6 +2073,8 @@ LicenseLicenseInfo | [**New-IntersightLicenseLicenseInfo**](docs/New-IntersightL
 LicenseLicenseReservationOp | [**New-IntersightLicenseLicenseReservationOp**](docs/New-IntersightLicenseLicenseReservationOp.md) | Create a 'LicenseLicenseReservationOp' resource.
 LicenseAccountLicenseData | [**Set-IntersightLicenseAccountLicenseData**](docs/Set-IntersightLicenseAccountLicenseData.md) | Update a 'LicenseAccountLicenseData' resource.
 LicenseCustomerOp | [**Set-IntersightLicenseCustomerOp**](docs/Set-IntersightLicenseCustomerOp.md) | Update a 'LicenseCustomerOp' resource.
+LicenseErpCustomerOp | [**Set-IntersightLicenseErpCustomerOp**](docs/Set-IntersightLicenseErpCustomerOp.md) | Update a 'LicenseErpCustomerOp' resource.
+LicenseErpLicenseCount | [**Set-IntersightLicenseErpLicenseCount**](docs/Set-IntersightLicenseErpLicenseCount.md) | Update a 'LicenseErpLicenseCount' resource.
 LicenseIksCustomerOp | [**Set-IntersightLicenseIksCustomerOp**](docs/Set-IntersightLicenseIksCustomerOp.md) | Update a 'LicenseIksCustomerOp' resource.
 LicenseIksLicenseCount | [**Set-IntersightLicenseIksLicenseCount**](docs/Set-IntersightLicenseIksLicenseCount.md) | Update a 'LicenseIksLicenseCount' resource.
 LicenseIncCustomerOp | [**Set-IntersightLicenseIncCustomerOp**](docs/Set-IntersightLicenseIncCustomerOp.md) | Update a 'LicenseIncCustomerOp' resource.
@@ -2505,9 +2516,13 @@ ServicenowChangeRequestDoc | [**Get-IntersightServicenowChangeRequestDoc**](docs
 ServicenowIncident | [**Get-IntersightServicenowIncident**](docs/Get-IntersightServicenowIncident.md) | Read a 'ServicenowIncident' resource.
 ServicenowIncidentDoc | [**Get-IntersightServicenowIncidentDoc**](docs/Get-IntersightServicenowIncidentDoc.md) | Read a 'ServicenowIncidentDoc' resource.
 SmtpPolicy | [**Get-IntersightSmtpPolicy**](docs/Get-IntersightSmtpPolicy.md) | Read a 'SmtpPolicy' resource.
+SmtpPolicyTest | [**Get-IntersightSmtpPolicyTest**](docs/Get-IntersightSmtpPolicyTest.md) | Read a 'SmtpPolicyTest' resource.
 SmtpPolicy | [**New-IntersightSmtpPolicy**](docs/New-IntersightSmtpPolicy.md) | Create a 'SmtpPolicy' resource.
+SmtpPolicyTest | [**New-IntersightSmtpPolicyTest**](docs/New-IntersightSmtpPolicyTest.md) | Create a 'SmtpPolicyTest' resource.
 SmtpPolicy | [**Remove-IntersightSmtpPolicy**](docs/Remove-IntersightSmtpPolicy.md) | Delete a 'SmtpPolicy' resource.
+SmtpPolicyTest | [**Remove-IntersightSmtpPolicyTest**](docs/Remove-IntersightSmtpPolicyTest.md) | Delete a 'SmtpPolicyTest' resource.
 SmtpPolicy | [**Set-IntersightSmtpPolicy**](docs/Set-IntersightSmtpPolicy.md) | Update a 'SmtpPolicy' resource.
+SmtpPolicyTest | [**Set-IntersightSmtpPolicyTest**](docs/Set-IntersightSmtpPolicyTest.md) | Update a 'SmtpPolicyTest' resource.
 SnmpPolicy | [**Get-IntersightSnmpPolicy**](docs/Get-IntersightSnmpPolicy.md) | Read a 'SnmpPolicy' resource.
 SnmpPolicyInventory | [**Get-IntersightSnmpPolicyInventory**](docs/Get-IntersightSnmpPolicyInventory.md) | Read a 'SnmpPolicyInventory' resource.
 SnmpPolicy | [**New-IntersightSnmpPolicy**](docs/New-IntersightSnmpPolicy.md) | Create a 'SnmpPolicy' resource.
@@ -2625,6 +2640,7 @@ StorageHitachiExternalStorageLun | [**Get-IntersightStorageHitachiExternalStorag
 StorageHitachiExternalStoragePort | [**Get-IntersightStorageHitachiExternalStoragePort**](docs/Get-IntersightStorageHitachiExternalStoragePort.md) | Read a 'StorageHitachiExternalStoragePort' resource.
 StorageHitachiHost | [**Get-IntersightStorageHitachiHost**](docs/Get-IntersightStorageHitachiHost.md) | Read a 'StorageHitachiHost' resource.
 StorageHitachiHostLun | [**Get-IntersightStorageHitachiHostLun**](docs/Get-IntersightStorageHitachiHostLun.md) | Read a 'StorageHitachiHostLun' resource.
+StorageHitachiNvmSubsystem | [**Get-IntersightStorageHitachiNvmSubsystem**](docs/Get-IntersightStorageHitachiNvmSubsystem.md) | Read a 'StorageHitachiNvmSubsystem' resource.
 StorageHitachiParityGroup | [**Get-IntersightStorageHitachiParityGroup**](docs/Get-IntersightStorageHitachiParityGroup.md) | Read a 'StorageHitachiParityGroup' resource.
 StorageHitachiPool | [**Get-IntersightStorageHitachiPool**](docs/Get-IntersightStorageHitachiPool.md) | Read a 'StorageHitachiPool' resource.
 StorageHitachiPort | [**Get-IntersightStorageHitachiPort**](docs/Get-IntersightStorageHitachiPort.md) | Read a 'StorageHitachiPort' resource.

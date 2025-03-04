@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBiosPolicy [-AcsControlGpu1state< BiosPolicy.AcsControlGpu1stateEnum>][-AcsControlGpu2state< BiosPolicy.AcsControlGpu2stateEnum>][-AcsControlGpu3state< BiosPolicy.AcsControlGpu3stateEnum>][-AcsControlGpu4state< BiosPolicy.AcsControlGpu4stateEnum>][-AcsControlGpu5state< BiosPolicy.AcsControlGpu5stateEnum>][-AcsControlGpu6state< BiosPolicy.AcsControlGpu6stateEnum>][-AcsControlGpu7state< BiosPolicy.AcsControlGpu7stateEnum>][-AcsControlGpu8state< BiosPolicy.AcsControlGpu8stateEnum>][-AcsControlSlot11state< BiosPolicy.AcsControlSlot11stateEnum>][-AcsControlSlot12state< BiosPolicy.AcsControlSlot12stateEnum>][-AcsControlSlot13state< BiosPolicy.AcsControlSlot13stateEnum>][-AcsControlSlot14state< BiosPolicy.AcsControlSlot14stateEnum>][-AdaptiveRefreshMgmtLevel< BiosPolicy.AdaptiveRefreshMgmtLevelEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdjacentCacheLinePrefetch< BiosPolicy.AdjacentCacheLinePrefetchEnum>][-AdvancedMemTest< BiosPolicy.AdvancedMemTestEnum>][-AllUsbDevices< BiosPolicy.AllUsbDevicesEnum>][-Altitude< BiosPolicy.AltitudeEnum>][-AspmSupport< BiosPolicy.AspmSupportEnum>][-AssertNmiOnPerr< BiosPolicy.AssertNmiOnPerrEnum>][-AssertNmiOnSerr< BiosPolicy.AssertNmiOnSerrEnum>][-AutoCcState< BiosPolicy.AutoCcStateEnum>][-AutonumousCstateEnable< BiosPolicy.AutonumousCstateEnableEnum>][-BaudRate< BiosPolicy.BaudRateEnum>][-BmeDmaMitigation< BiosPolicy.BmeDmaMitigationEnum>][-BootOptionNumRetry< BiosPolicy.BootOptionNumRetryEnum>][-BootOptionReCoolDown< BiosPolicy.BootOptionReCoolDownEnum>][-BootOptionRetry< BiosPolicy.BootOptionRetryEnum>][-BootPerformanceMode< BiosPolicy.BootPerformanceModeEnum>][-BurstAndPostponedRefresh< BiosPolicy.BurstAndPostponedRefreshEnum>][-C1autoDemotion< BiosPolicy.C1autoDemotionEnum>][-C1autoUnDemotion< BiosPolicy.C1autoUnDemotionEnum>][-CbsCmnApbdis< BiosPolicy.CbsCmnApbdisEnum>][-CbsCmnApbdisDfPstateRs< string>][-CbsCmnCpuAvx512< BiosPolicy.CbsCmnCpuAvx512Enum>][-CbsCmnCpuCpb< BiosPolicy.CbsCmnCpuCpbEnum>][-CbsCmnCpuGenDowncoreCtrl< BiosPolicy.CbsCmnCpuGenDowncoreCtrlEnum>][-CbsCmnCpuGlobalCstateCtrl< BiosPolicy.CbsCmnCpuGlobalCstateCtrlEnum>][-CbsCmnCpuL1streamHwPrefetcher< BiosPolicy.CbsCmnCpuL1streamHwPrefetcherEnum>][-CbsCmnCpuL2streamHwPrefetcher< BiosPolicy.CbsCmnCpuL2streamHwPrefetcherEnum>][-CbsCmnCpuSevAsidSpaceLimit< string>][-CbsCmnCpuSmee< BiosPolicy.CbsCmnCpuSmeeEnum>][-CbsCmnCpuStreamingStoresCtrl< BiosPolicy.CbsCmnCpuStreamingStoresCtrlEnum>][-CbsCmnDeterminismSlider< BiosPolicy.CbsCmnDeterminismSliderEnum>][-CbsCmnEdcControlThrottle< BiosPolicy.CbsCmnEdcControlThrottleEnum>][-CbsCmnEfficiencyModeEn< BiosPolicy.CbsCmnEfficiencyModeEnEnum>][-CbsCmnEfficiencyModeEnRs< BiosPolicy.CbsCmnEfficiencyModeEnRsEnum>][-CbsCmnFixedSocPstate< BiosPolicy.CbsCmnFixedSocPstateEnum>][-CbsCmnGnbNbIommu< BiosPolicy.CbsCmnGnbNbIommuEnum>][-CbsCmnGnbSmuDfCstates< BiosPolicy.CbsCmnGnbSmuDfCstatesEnum>][-CbsCmnGnbSmuDffoRs< BiosPolicy.CbsCmnGnbSmuDffoRsEnum>][-CbsCmnGnbSmuDlwmSupport< BiosPolicy.CbsCmnGnbSmuDlwmSupportEnum>][-CbsCmnGnbSmucppc< BiosPolicy.CbsCmnGnbSmucppcEnum>][-CbsCmnMemCtrlBankGroupSwapDdr4< BiosPolicy.CbsCmnMemCtrlBankGroupSwapDdr4Enum>][-CbsCmnMemCtrllerPwrDnEnDdr< BiosPolicy.CbsCmnMemCtrllerPwrDnEnDdrEnum>][-CbsCmnMemMapBankInterleaveDdr4< BiosPolicy.CbsCmnMemMapBankInterleaveDdr4Enum>][-CbsCmnMemSpeedDdr47xx2< BiosPolicy.CbsCmnMemSpeedDdr47xx2Enum>][-CbsCmnMemSpeedDdr47xx3< BiosPolicy.CbsCmnMemSpeedDdr47xx3Enum>][-CbsCmnPreferredIo7xx2< BiosPolicy.CbsCmnPreferredIo7xx2Enum>][-CbsCmnPreferredIo7xx3< BiosPolicy.CbsCmnPreferredIo7xx3Enum>][-CbsCmncTdpCtl< BiosPolicy.CbsCmncTdpCtlEnum>][-CbsCmnxGmiForceLinkWidthRs< BiosPolicy.CbsCmnxGmiForceLinkWidthRsEnum>][-CbsCpuCcdCtrlSsp< BiosPolicy.CbsCpuCcdCtrlSspEnum>][-CbsCpuCoreCtrl< BiosPolicy.CbsCpuCoreCtrlEnum>][-CbsCpuDownCoreCtrlBergamo< BiosPolicy.CbsCpuDownCoreCtrlBergamoEnum>][-CbsCpuDownCoreCtrlGenoa< BiosPolicy.CbsCpuDownCoreCtrlGenoaEnum>][-CbsCpuSmtCtrl< BiosPolicy.CbsCpuSmtCtrlEnum>][-CbsDbgCpuGenCpuWdt< BiosPolicy.CbsDbgCpuGenCpuWdtEnum>][-CbsDbgCpuLapicMode< BiosPolicy.CbsDbgCpuLapicModeEnum>][-CbsDbgCpuSnpMemCover< BiosPolicy.CbsDbgCpuSnpMemCoverEnum>][-CbsDbgCpuSnpMemSizeCover< string>][-CbsDfCmn4linkMaxXgmiSpeed< BiosPolicy.CbsDfCmn4linkMaxXgmiSpeedEnum>][-CbsDfCmnAcpiSratL3numa< BiosPolicy.CbsDfCmnAcpiSratL3numaEnum>][-CbsDfCmnDramNps< BiosPolicy.CbsDfCmnDramNpsEnum>][-CbsDfCmnDramScrubTime< BiosPolicy.CbsDfCmnDramScrubTimeEnum>][-CbsDfCmnMemIntlv< BiosPolicy.CbsDfCmnMemIntlvEnum>][-CbsDfCmnMemIntlvControl< BiosPolicy.CbsDfCmnMemIntlvControlEnum>][-CbsDfCmnMemIntlvSize< BiosPolicy.CbsDfCmnMemIntlvSizeEnum>][-CbsDfDbgXgmiLinkCfg< BiosPolicy.CbsDfDbgXgmiLinkCfgEnum>][-CbsGnbDbgPcieTbtSupport< BiosPolicy.CbsGnbDbgPcieTbtSupportEnum>][-CbsSevSnpSupport< BiosPolicy.CbsSevSnpSupportEnum>][-CdnEnable< BiosPolicy.CdnEnableEnum>][-CdnSupport< BiosPolicy.CdnSupportEnum>][-ChannelInterLeave< BiosPolicy.ChannelInterLeaveEnum>][-CiscoAdaptiveMemTraining< BiosPolicy.CiscoAdaptiveMemTrainingEnum>][-CiscoDebugLevel< BiosPolicy.CiscoDebugLevelEnum>][-CiscoOpromLaunchOptimization< BiosPolicy.CiscoOpromLaunchOptimizationEnum>][-CiscoXgmiMaxSpeed< BiosPolicy.CiscoXgmiMaxSpeedEnum>][-CkeLowPolicy< BiosPolicy.CkeLowPolicyEnum>][-ClassId< BiosPolicy.ClassIdEnum>][-ClosedLoopThermThrotl< BiosPolicy.ClosedLoopThermThrotlEnum>][-CmciEnable< BiosPolicy.CmciEnableEnum>][-ConfigTdp< BiosPolicy.ConfigTdpEnum>][-ConfigTdpLevel< BiosPolicy.ConfigTdpLevelEnum>][-ConsoleRedirection< BiosPolicy.ConsoleRedirectionEnum>][-CoreMultiProcessing< BiosPolicy.CoreMultiProcessingEnum>][-CpuEnergyPerformance< BiosPolicy.CpuEnergyPerformanceEnum>][-CpuFrequencyFloor< BiosPolicy.CpuFrequencyFloorEnum>][-CpuPaLimit< BiosPolicy.CpuPaLimitEnum>][-CpuPerfEnhancement< BiosPolicy.CpuPerfEnhancementEnum>][-CpuPerformance< BiosPolicy.CpuPerformanceEnum>][-CpuPowerManagement< BiosPolicy.CpuPowerManagementEnum>][-CrQos< BiosPolicy.CrQosEnum>][-CrfastgoConfig< BiosPolicy.CrfastgoConfigEnum>][-DcpmmFirmwareDowngrade< BiosPolicy.DcpmmFirmwareDowngradeEnum>][-DemandScrub< BiosPolicy.DemandScrubEnum>][-Description< string>][-DfxOsbEn< BiosPolicy.DfxOsbEnEnum>][-DirectCacheAccess< BiosPolicy.DirectCacheAccessEnum>][-DmaCtrlOptIn< BiosPolicy.DmaCtrlOptInEnum>][-DramClockThrottling< BiosPolicy.DramClockThrottlingEnum>][-DramRefreshRate< BiosPolicy.DramRefreshRateEnum>][-DramSwThermalThrottling< BiosPolicy.DramSwThermalThrottlingEnum>][-EadrSupport< BiosPolicy.EadrSupportEnum>][-EdpcEn< BiosPolicy.EdpcEnEnum>][-EnableClockSpreadSpec< BiosPolicy.EnableClockSpreadSpecEnum>][-EnableMktme< BiosPolicy.EnableMktmeEnum>][-EnableRmt< BiosPolicy.EnableRmtEnum>][-EnableSgx< BiosPolicy.EnableSgxEnum>][-EnableTdx< BiosPolicy.EnableTdxEnum>][-EnableTdxSeamldr< BiosPolicy.EnableTdxSeamldrEnum>][-EnableTme< BiosPolicy.EnableTmeEnum>][-EnergyEfficientTurbo< BiosPolicy.EnergyEfficientTurboEnum>][-EngPerfTuning< BiosPolicy.EngPerfTuningEnum>][-EnhancedIntelSpeedStepTech< BiosPolicy.EnhancedIntelSpeedStepTechEnum>][-EpochUpdate< BiosPolicy.EpochUpdateEnum>][-EppEnable< BiosPolicy.EppEnableEnum>][-EppProfile< BiosPolicy.EppProfileEnum>][-ErrorCheckScrub< BiosPolicy.ErrorCheckScrubEnum>][-ExecuteDisableBit< BiosPolicy.ExecuteDisableBitEnum>][-ExtendedApic< BiosPolicy.ExtendedApicEnum>][-FlowControl< BiosPolicy.FlowControlEnum>][-Frb2enable< BiosPolicy.Frb2enableEnum>][-HardwarePrefetch< BiosPolicy.HardwarePrefetchEnum>][-HwpmEnable< BiosPolicy.HwpmEnableEnum>][-ImcInterleave< BiosPolicy.ImcInterleaveEnum>][-IntelDynamicSpeedSelect< BiosPolicy.IntelDynamicSpeedSelectEnum>][-IntelHyperThreadingTech< BiosPolicy.IntelHyperThreadingTechEnum>][-IntelSpeedSelect< BiosPolicy.IntelSpeedSelectEnum>][-IntelTurboBoostTech< BiosPolicy.IntelTurboBoostTechEnum>][-IntelVirtualizationTechnology< BiosPolicy.IntelVirtualizationTechnologyEnum>][-IntelVtForDirectedIo< BiosPolicy.IntelVtForDirectedIoEnum>][-IntelVtdCoherencySupport< BiosPolicy.IntelVtdCoherencySupportEnum>][-IntelVtdInterruptRemapping< BiosPolicy.IntelVtdInterruptRemappingEnum>][-IntelVtdPassThroughDmaSupport< BiosPolicy.IntelVtdPassThroughDmaSupportEnum>][-IntelVtdatsSupport< BiosPolicy.IntelVtdatsSupportEnum>][-IoatConfigCpm< BiosPolicy.IoatConfigCpmEnum>][-IohErrorEnable< BiosPolicy.IohErrorEnableEnum>][-IohResource< BiosPolicy.IohResourceEnum>][-IpPrefetch< BiosPolicy.IpPrefetchEnum>][-Ipv4http< BiosPolicy.Ipv4httpEnum>][-Ipv4pxe< BiosPolicy.Ipv4pxeEnum>][-Ipv6http< BiosPolicy.Ipv6httpEnum>][-Ipv6pxe< BiosPolicy.Ipv6pxeEnum>][-KtiPrefetch< BiosPolicy.KtiPrefetchEnum>][-LegacyOsRedirection< BiosPolicy.LegacyOsRedirectionEnum>][-LegacyUsbSupport< BiosPolicy.LegacyUsbSupportEnum>][-LlcAlloc< BiosPolicy.LlcAllocEnum>][-LlcPrefetch< BiosPolicy.LlcPrefetchEnum>][-LomPort0state< BiosPolicy.LomPort0stateEnum>][-LomPort1state< BiosPolicy.LomPort1stateEnum>][-LomPort2state< BiosPolicy.LomPort2stateEnum>][-LomPort3state< BiosPolicy.LomPort3stateEnum>][-LomPortsAllState< BiosPolicy.LomPortsAllStateEnum>][-LvDdrMode< BiosPolicy.LvDdrModeEnum>][-MakeDeviceNonBootable< BiosPolicy.MakeDeviceNonBootableEnum>][-MemoryBandwidthBoost< BiosPolicy.MemoryBandwidthBoostEnum>][-MemoryInterLeave< BiosPolicy.MemoryInterLeaveEnum>][-MemoryMappedIoAbove4gb< BiosPolicy.MemoryMappedIoAbove4gbEnum>][-MemoryRefreshRate< BiosPolicy.MemoryRefreshRateEnum>][-MemorySizeLimit< string>][-MemoryThermalThrottling< BiosPolicy.MemoryThermalThrottlingEnum>][-MirroringMode< BiosPolicy.MirroringModeEnum>][-MmcfgBase< BiosPolicy.MmcfgBaseEnum>][-MmiohBase< BiosPolicy.MmiohBaseEnum>][-MmiohSize< BiosPolicy.MmiohSizeEnum>][-Moid< string>][-Name< string>][-NetworkStack< BiosPolicy.NetworkStackEnum>][-NumaOptimized< BiosPolicy.NumaOptimizedEnum>][-NvmdimmPerformConfig< BiosPolicy.NvmdimmPerformConfigEnum>][-ObjectType< BiosPolicy.ObjectTypeEnum>][-Onboard10gbitLom< BiosPolicy.Onboard10gbitLomEnum>][-OnboardGbitLom< BiosPolicy.OnboardGbitLomEnum>][-OnboardScuStorageSupport< BiosPolicy.OnboardScuStorageSupportEnum>][-OnboardScuStorageSwStack< BiosPolicy.OnboardScuStorageSwStackEnum>][-OperationMode< BiosPolicy.OperationModeEnum>][-OptimizedPowerMode< BiosPolicy.OptimizedPowerModeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-OsBootWatchdogTimer< BiosPolicy.OsBootWatchdogTimerEnum>][-OsBootWatchdogTimerPolicy< BiosPolicy.OsBootWatchdogTimerPolicyEnum>][-OsBootWatchdogTimerTimeout< BiosPolicy.OsBootWatchdogTimerTimeoutEnum>][-OutOfBandMgmtPort< BiosPolicy.OutOfBandMgmtPortEnum>][-PackageCstateLimit< BiosPolicy.PackageCstateLimitEnum>][-PanicHighWatermark< BiosPolicy.PanicHighWatermarkEnum>][-PartialCacheLineSparing< BiosPolicy.PartialCacheLineSparingEnum>][-PartialMirrorModeConfig< BiosPolicy.PartialMirrorModeConfigEnum>][-PartialMirrorPercent< string>][-PartialMirrorValue1< string>][-PartialMirrorValue2< string>][-PartialMirrorValue3< string>][-PartialMirrorValue4< string>][-PatrolScrub< BiosPolicy.PatrolScrubEnum>][-PatrolScrubDuration< string>][-PcIeRasSupport< BiosPolicy.PcIeRasSupportEnum>][-PcIeSsdHotPlugSupport< BiosPolicy.PcIeSsdHotPlugSupportEnum>][-PchPciePllSsc< string>][-PchUsb30mode< BiosPolicy.PchUsb30modeEnum>][-PciOptionRoMs< BiosPolicy.PciOptionRoMsEnum>][-PciRomClp< BiosPolicy.PciRomClpEnum>][-PcieAriSupport< BiosPolicy.PcieAriSupportEnum>][-PciePllSsc< BiosPolicy.PciePllSscEnum>][-PcieSlotMraid1linkSpeed< BiosPolicy.PcieSlotMraid1linkSpeedEnum>][-PcieSlotMraid1optionRom< BiosPolicy.PcieSlotMraid1optionRomEnum>][-PcieSlotMraid2linkSpeed< BiosPolicy.PcieSlotMraid2linkSpeedEnum>][-PcieSlotMraid2optionRom< BiosPolicy.PcieSlotMraid2optionRomEnum>][-PcieSlotMstorraidLinkSpeed< BiosPolicy.PcieSlotMstorraidLinkSpeedEnum>][-PcieSlotMstorraidOptionRom< BiosPolicy.PcieSlotMstorraidOptionRomEnum>][-PcieSlotNvme1linkSpeed< BiosPolicy.PcieSlotNvme1linkSpeedEnum>][-PcieSlotNvme1optionRom< BiosPolicy.PcieSlotNvme1optionRomEnum>][-PcieSlotNvme2linkSpeed< BiosPolicy.PcieSlotNvme2linkSpeedEnum>][-PcieSlotNvme2optionRom< BiosPolicy.PcieSlotNvme2optionRomEnum>][-PcieSlotNvme3linkSpeed< BiosPolicy.PcieSlotNvme3linkSpeedEnum>][-PcieSlotNvme3optionRom< BiosPolicy.PcieSlotNvme3optionRomEnum>][-PcieSlotNvme4linkSpeed< BiosPolicy.PcieSlotNvme4linkSpeedEnum>][-PcieSlotNvme4optionRom< BiosPolicy.PcieSlotNvme4optionRomEnum>][-PcieSlotNvme5linkSpeed< BiosPolicy.PcieSlotNvme5linkSpeedEnum>][-PcieSlotNvme5optionRom< BiosPolicy.PcieSlotNvme5optionRomEnum>][-PcieSlotNvme6linkSpeed< BiosPolicy.PcieSlotNvme6linkSpeedEnum>][-PcieSlotNvme6optionRom< BiosPolicy.PcieSlotNvme6optionRomEnum>][-PcieSlotsCdnEnable< BiosPolicy.PcieSlotsCdnEnableEnum>][-PopSupport< BiosPolicy.PopSupportEnum>][-PostErrorPause< BiosPolicy.PostErrorPauseEnum>][-PostPackageRepair< BiosPolicy.PostPackageRepairEnum>][-PrmrrSize< BiosPolicy.PrmrrSizeEnum>][-ProcessorC1e< BiosPolicy.ProcessorC1eEnum>][-ProcessorC3report< BiosPolicy.ProcessorC3reportEnum>][-ProcessorC6report< BiosPolicy.ProcessorC6reportEnum>][-ProcessorCstate< BiosPolicy.ProcessorCstateEnum>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Psata< BiosPolicy.PsataEnum>][-PstateCoordType< BiosPolicy.PstateCoordTypeEnum>][-PuttyKeyPad< BiosPolicy.PuttyKeyPadEnum>][-PwrPerfTuning< BiosPolicy.PwrPerfTuningEnum>][-QpiLinkFrequency< BiosPolicy.QpiLinkFrequencyEnum>][-QpiLinkSpeed< BiosPolicy.QpiLinkSpeedEnum>][-QpiSnoopMode< BiosPolicy.QpiSnoopModeEnum>][-RankInterLeave< BiosPolicy.RankInterLeaveEnum>][-RedirectionAfterPost< BiosPolicy.RedirectionAfterPostEnum>][-ResizeBarSupport< BiosPolicy.ResizeBarSupportEnum>][-RuntimePostPackageRepair< BiosPolicy.RuntimePostPackageRepairEnum>][-SataModeSelect< BiosPolicy.SataModeSelectEnum>][-SelectMemoryRasConfiguration< BiosPolicy.SelectMemoryRasConfigurationEnum>][-SelectPprType< BiosPolicy.SelectPprTypeEnum>][-SerialMux< BiosPolicy.SerialMuxEnum>][-SerialPortAenable< BiosPolicy.SerialPortAenableEnum>][-Sev< BiosPolicy.SevEnum>][-SgxAutoRegistrationAgent< BiosPolicy.SgxAutoRegistrationAgentEnum>][-SgxEpoch0< string>][-SgxEpoch1< string>][-SgxFactoryReset< BiosPolicy.SgxFactoryResetEnum>][-SgxLePubKeyHash0< string>][-SgxLePubKeyHash1< string>][-SgxLePubKeyHash2< string>][-SgxLePubKeyHash3< string>][-SgxLeWr< BiosPolicy.SgxLeWrEnum>][-SgxPackageInfoInBandAccess< BiosPolicy.SgxPackageInfoInBandAccessEnum>][-SgxQos< BiosPolicy.SgxQosEnum>][-Sha1pcrBank< BiosPolicy.Sha1pcrBankEnum>][-Sha256pcrBank< BiosPolicy.Sha256pcrBankEnum>][-Sha384pcrBank< BiosPolicy.Sha384pcrBankEnum>][-SinglePctlEnable< BiosPolicy.SinglePctlEnableEnum>][-Slot10linkSpeed< BiosPolicy.Slot10linkSpeedEnum>][-Slot10state< BiosPolicy.Slot10stateEnum>][-Slot11linkSpeed< BiosPolicy.Slot11linkSpeedEnum>][-Slot11state< BiosPolicy.Slot11stateEnum>][-Slot12linkSpeed< BiosPolicy.Slot12linkSpeedEnum>][-Slot12state< BiosPolicy.Slot12stateEnum>][-Slot13state< BiosPolicy.Slot13stateEnum>][-Slot14state< BiosPolicy.Slot14stateEnum>][-Slot1linkSpeed< BiosPolicy.Slot1linkSpeedEnum>][-Slot1state< BiosPolicy.Slot1stateEnum>][-Slot2linkSpeed< BiosPolicy.Slot2linkSpeedEnum>][-Slot2state< BiosPolicy.Slot2stateEnum>][-Slot3linkSpeed< BiosPolicy.Slot3linkSpeedEnum>][-Slot3state< BiosPolicy.Slot3stateEnum>][-Slot4linkSpeed< BiosPolicy.Slot4linkSpeedEnum>][-Slot4state< BiosPolicy.Slot4stateEnum>][-Slot5linkSpeed< BiosPolicy.Slot5linkSpeedEnum>][-Slot5state< BiosPolicy.Slot5stateEnum>][-Slot6linkSpeed< BiosPolicy.Slot6linkSpeedEnum>][-Slot6state< BiosPolicy.Slot6stateEnum>][-Slot7linkSpeed< BiosPolicy.Slot7linkSpeedEnum>][-Slot7state< BiosPolicy.Slot7stateEnum>][-Slot8linkSpeed< BiosPolicy.Slot8linkSpeedEnum>][-Slot8state< BiosPolicy.Slot8stateEnum>][-Slot9linkSpeed< BiosPolicy.Slot9linkSpeedEnum>][-Slot9state< BiosPolicy.Slot9stateEnum>][-SlotFlomLinkSpeed< BiosPolicy.SlotFlomLinkSpeedEnum>][-SlotFrontNvme10linkSpeed< BiosPolicy.SlotFrontNvme10linkSpeedEnum>][-SlotFrontNvme10optionRom< BiosPolicy.SlotFrontNvme10optionRomEnum>][-SlotFrontNvme11linkSpeed< BiosPolicy.SlotFrontNvme11linkSpeedEnum>][-SlotFrontNvme11optionRom< BiosPolicy.SlotFrontNvme11optionRomEnum>][-SlotFrontNvme12linkSpeed< BiosPolicy.SlotFrontNvme12linkSpeedEnum>][-SlotFrontNvme12optionRom< BiosPolicy.SlotFrontNvme12optionRomEnum>][-SlotFrontNvme13linkSpeed< BiosPolicy.SlotFrontNvme13linkSpeedEnum>][-SlotFrontNvme13optionRom< BiosPolicy.SlotFrontNvme13optionRomEnum>][-SlotFrontNvme14linkSpeed< BiosPolicy.SlotFrontNvme14linkSpeedEnum>][-SlotFrontNvme14optionRom< BiosPolicy.SlotFrontNvme14optionRomEnum>][-SlotFrontNvme15linkSpeed< BiosPolicy.SlotFrontNvme15linkSpeedEnum>][-SlotFrontNvme15optionRom< BiosPolicy.SlotFrontNvme15optionRomEnum>][-SlotFrontNvme16linkSpeed< BiosPolicy.SlotFrontNvme16linkSpeedEnum>][-SlotFrontNvme16optionRom< BiosPolicy.SlotFrontNvme16optionRomEnum>][-SlotFrontNvme17linkSpeed< BiosPolicy.SlotFrontNvme17linkSpeedEnum>][-SlotFrontNvme17optionRom< BiosPolicy.SlotFrontNvme17optionRomEnum>][-SlotFrontNvme18linkSpeed< BiosPolicy.SlotFrontNvme18linkSpeedEnum>][-SlotFrontNvme18optionRom< BiosPolicy.SlotFrontNvme18optionRomEnum>][-SlotFrontNvme19linkSpeed< BiosPolicy.SlotFrontNvme19linkSpeedEnum>][-SlotFrontNvme19optionRom< BiosPolicy.SlotFrontNvme19optionRomEnum>][-SlotFrontNvme1linkSpeed< BiosPolicy.SlotFrontNvme1linkSpeedEnum>][-SlotFrontNvme1optionRom< BiosPolicy.SlotFrontNvme1optionRomEnum>][-SlotFrontNvme20linkSpeed< BiosPolicy.SlotFrontNvme20linkSpeedEnum>][-SlotFrontNvme20optionRom< BiosPolicy.SlotFrontNvme20optionRomEnum>][-SlotFrontNvme21linkSpeed< BiosPolicy.SlotFrontNvme21linkSpeedEnum>][-SlotFrontNvme21optionRom< BiosPolicy.SlotFrontNvme21optionRomEnum>][-SlotFrontNvme22linkSpeed< BiosPolicy.SlotFrontNvme22linkSpeedEnum>][-SlotFrontNvme22optionRom< BiosPolicy.SlotFrontNvme22optionRomEnum>][-SlotFrontNvme23linkSpeed< BiosPolicy.SlotFrontNvme23linkSpeedEnum>][-SlotFrontNvme23optionRom< BiosPolicy.SlotFrontNvme23optionRomEnum>][-SlotFrontNvme24linkSpeed< BiosPolicy.SlotFrontNvme24linkSpeedEnum>][-SlotFrontNvme24optionRom< BiosPolicy.SlotFrontNvme24optionRomEnum>][-SlotFrontNvme2linkSpeed< BiosPolicy.SlotFrontNvme2linkSpeedEnum>][-SlotFrontNvme2optionRom< BiosPolicy.SlotFrontNvme2optionRomEnum>][-SlotFrontNvme3linkSpeed< BiosPolicy.SlotFrontNvme3linkSpeedEnum>][-SlotFrontNvme3optionRom< BiosPolicy.SlotFrontNvme3optionRomEnum>][-SlotFrontNvme4linkSpeed< BiosPolicy.SlotFrontNvme4linkSpeedEnum>][-SlotFrontNvme4optionRom< BiosPolicy.SlotFrontNvme4optionRomEnum>][-SlotFrontNvme5linkSpeed< BiosPolicy.SlotFrontNvme5linkSpeedEnum>][-SlotFrontNvme5optionRom< BiosPolicy.SlotFrontNvme5optionRomEnum>][-SlotFrontNvme6linkSpeed< BiosPolicy.SlotFrontNvme6linkSpeedEnum>][-SlotFrontNvme6optionRom< BiosPolicy.SlotFrontNvme6optionRomEnum>][-SlotFrontNvme7linkSpeed< BiosPolicy.SlotFrontNvme7linkSpeedEnum>][-SlotFrontNvme7optionRom< BiosPolicy.SlotFrontNvme7optionRomEnum>][-SlotFrontNvme8linkSpeed< BiosPolicy.SlotFrontNvme8linkSpeedEnum>][-SlotFrontNvme8optionRom< BiosPolicy.SlotFrontNvme8optionRomEnum>][-SlotFrontNvme9linkSpeed< BiosPolicy.SlotFrontNvme9linkSpeedEnum>][-SlotFrontNvme9optionRom< BiosPolicy.SlotFrontNvme9optionRomEnum>][-SlotFrontSlot5linkSpeed< BiosPolicy.SlotFrontSlot5linkSpeedEnum>][-SlotFrontSlot6linkSpeed< BiosPolicy.SlotFrontSlot6linkSpeedEnum>][-SlotGpu1state< BiosPolicy.SlotGpu1stateEnum>][-SlotGpu2state< BiosPolicy.SlotGpu2stateEnum>][-SlotGpu3state< BiosPolicy.SlotGpu3stateEnum>][-SlotGpu4state< BiosPolicy.SlotGpu4stateEnum>][-SlotGpu5state< BiosPolicy.SlotGpu5stateEnum>][-SlotGpu6state< BiosPolicy.SlotGpu6stateEnum>][-SlotGpu7state< BiosPolicy.SlotGpu7stateEnum>][-SlotGpu8state< BiosPolicy.SlotGpu8stateEnum>][-SlotHbaLinkSpeed< BiosPolicy.SlotHbaLinkSpeedEnum>][-SlotHbaState< BiosPolicy.SlotHbaStateEnum>][-SlotLom1link< BiosPolicy.SlotLom1linkEnum>][-SlotLom2link< BiosPolicy.SlotLom2linkEnum>][-SlotMezzState< BiosPolicy.SlotMezzStateEnum>][-SlotMlomLinkSpeed< BiosPolicy.SlotMlomLinkSpeedEnum>][-SlotMlomState< BiosPolicy.SlotMlomStateEnum>][-SlotMraidLinkSpeed< BiosPolicy.SlotMraidLinkSpeedEnum>][-SlotMraidState< BiosPolicy.SlotMraidStateEnum>][-SlotN10state< BiosPolicy.SlotN10stateEnum>][-SlotN11state< BiosPolicy.SlotN11stateEnum>][-SlotN12state< BiosPolicy.SlotN12stateEnum>][-SlotN13state< BiosPolicy.SlotN13stateEnum>][-SlotN14state< BiosPolicy.SlotN14stateEnum>][-SlotN15state< BiosPolicy.SlotN15stateEnum>][-SlotN16state< BiosPolicy.SlotN16stateEnum>][-SlotN17state< BiosPolicy.SlotN17stateEnum>][-SlotN18state< BiosPolicy.SlotN18stateEnum>][-SlotN19state< BiosPolicy.SlotN19stateEnum>][-SlotN1state< BiosPolicy.SlotN1stateEnum>][-SlotN20state< BiosPolicy.SlotN20stateEnum>][-SlotN21state< BiosPolicy.SlotN21stateEnum>][-SlotN22state< BiosPolicy.SlotN22stateEnum>][-SlotN23state< BiosPolicy.SlotN23stateEnum>][-SlotN24state< BiosPolicy.SlotN24stateEnum>][-SlotN2state< BiosPolicy.SlotN2stateEnum>][-SlotN3state< BiosPolicy.SlotN3stateEnum>][-SlotN4state< BiosPolicy.SlotN4stateEnum>][-SlotN5state< BiosPolicy.SlotN5stateEnum>][-SlotN6state< BiosPolicy.SlotN6stateEnum>][-SlotN7state< BiosPolicy.SlotN7stateEnum>][-SlotN8state< BiosPolicy.SlotN8stateEnum>][-SlotN9state< BiosPolicy.SlotN9stateEnum>][-SlotRaidLinkSpeed< BiosPolicy.SlotRaidLinkSpeedEnum>][-SlotRaidState< BiosPolicy.SlotRaidStateEnum>][-SlotRearNvme1linkSpeed< BiosPolicy.SlotRearNvme1linkSpeedEnum>][-SlotRearNvme1state< BiosPolicy.SlotRearNvme1stateEnum>][-SlotRearNvme2linkSpeed< BiosPolicy.SlotRearNvme2linkSpeedEnum>][-SlotRearNvme2state< BiosPolicy.SlotRearNvme2stateEnum>][-SlotRearNvme3linkSpeed< BiosPolicy.SlotRearNvme3linkSpeedEnum>][-SlotRearNvme3state< BiosPolicy.SlotRearNvme3stateEnum>][-SlotRearNvme4linkSpeed< BiosPolicy.SlotRearNvme4linkSpeedEnum>][-SlotRearNvme4state< BiosPolicy.SlotRearNvme4stateEnum>][-SlotRearNvme5state< BiosPolicy.SlotRearNvme5stateEnum>][-SlotRearNvme6state< BiosPolicy.SlotRearNvme6stateEnum>][-SlotRearNvme7state< BiosPolicy.SlotRearNvme7stateEnum>][-SlotRearNvme8state< BiosPolicy.SlotRearNvme8stateEnum>][-SlotRiser1linkSpeed< BiosPolicy.SlotRiser1linkSpeedEnum>][-SlotRiser1slot1linkSpeed< BiosPolicy.SlotRiser1slot1linkSpeedEnum>][-SlotRiser1slot2linkSpeed< BiosPolicy.SlotRiser1slot2linkSpeedEnum>][-SlotRiser1slot3linkSpeed< BiosPolicy.SlotRiser1slot3linkSpeedEnum>][-SlotRiser2linkSpeed< BiosPolicy.SlotRiser2linkSpeedEnum>][-SlotRiser2slot4linkSpeed< BiosPolicy.SlotRiser2slot4linkSpeedEnum>][-SlotRiser2slot5linkSpeed< BiosPolicy.SlotRiser2slot5linkSpeedEnum>][-SlotRiser2slot6linkSpeed< BiosPolicy.SlotRiser2slot6linkSpeedEnum>][-SlotSasState< BiosPolicy.SlotSasStateEnum>][-SlotSsdSlot1linkSpeed< BiosPolicy.SlotSsdSlot1linkSpeedEnum>][-SlotSsdSlot2linkSpeed< BiosPolicy.SlotSsdSlot2linkSpeedEnum>][-Smee< BiosPolicy.SmeeEnum>][-SmtMode< BiosPolicy.SmtModeEnum>][-Snc< BiosPolicy.SncEnum>][-SnoopyModeFor2lm< BiosPolicy.SnoopyModeFor2lmEnum>][-SnoopyModeForAd< BiosPolicy.SnoopyModeForAdEnum>][-SparingMode< BiosPolicy.SparingModeEnum>][-SrIov< BiosPolicy.SrIovEnum>][-StreamerPrefetch< BiosPolicy.StreamerPrefetchEnum>][-SvmMode< BiosPolicy.SvmModeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TerminalType< BiosPolicy.TerminalTypeEnum>][-TpmControl< BiosPolicy.TpmControlEnum>][-TpmPendingOperation< BiosPolicy.TpmPendingOperationEnum>][-TpmPpiRequired< BiosPolicy.TpmPpiRequiredEnum>][-TpmSupport< BiosPolicy.TpmSupportEnum>][-Tsme< BiosPolicy.TsmeEnum>][-TxtSupport< BiosPolicy.TxtSupportEnum>][-UcsmBootOrderRule< BiosPolicy.UcsmBootOrderRuleEnum>][-UfsDisable< BiosPolicy.UfsDisableEnum>][-UmaBasedClustering< BiosPolicy.UmaBasedClusteringEnum>][-UpiLinkEnablement< BiosPolicy.UpiLinkEnablementEnum>][-UpiPowerManagement< BiosPolicy.UpiPowerManagementEnum>][-UsbEmul6064< BiosPolicy.UsbEmul6064Enum>][-UsbPortFront< BiosPolicy.UsbPortFrontEnum>][-UsbPortInternal< BiosPolicy.UsbPortInternalEnum>][-UsbPortKvm< BiosPolicy.UsbPortKvmEnum>][-UsbPortRear< BiosPolicy.UsbPortRearEnum>][-UsbPortSdCard< BiosPolicy.UsbPortSdCardEnum>][-UsbPortVmedia< BiosPolicy.UsbPortVmediaEnum>][-UsbXhciSupport< BiosPolicy.UsbXhciSupportEnum>][-VgaPriority< BiosPolicy.VgaPriorityEnum>][-VirtualNuma< BiosPolicy.VirtualNumaEnum>][-VmdEnable< BiosPolicy.VmdEnableEnum>][-VolMemoryMode< BiosPolicy.VolMemoryModeEnum>][-WorkLoadConfig< BiosPolicy.WorkLoadConfigEnum>][-X2apicOptOut< BiosPolicy.X2apicOptOutEnum>][-XptPrefetch< BiosPolicy.XptPrefetchEnum>][-XptRemotePrefetch< BiosPolicy.XptRemotePrefetchEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBiosPolicy [-AcpiSratSpFlagEn< BiosPolicy.AcpiSratSpFlagEnEnum>][-AcsControlGpu1state< BiosPolicy.AcsControlGpu1stateEnum>][-AcsControlGpu2state< BiosPolicy.AcsControlGpu2stateEnum>][-AcsControlGpu3state< BiosPolicy.AcsControlGpu3stateEnum>][-AcsControlGpu4state< BiosPolicy.AcsControlGpu4stateEnum>][-AcsControlGpu5state< BiosPolicy.AcsControlGpu5stateEnum>][-AcsControlGpu6state< BiosPolicy.AcsControlGpu6stateEnum>][-AcsControlGpu7state< BiosPolicy.AcsControlGpu7stateEnum>][-AcsControlGpu8state< BiosPolicy.AcsControlGpu8stateEnum>][-AcsControlSlot11state< BiosPolicy.AcsControlSlot11stateEnum>][-AcsControlSlot12state< BiosPolicy.AcsControlSlot12stateEnum>][-AcsControlSlot13state< BiosPolicy.AcsControlSlot13stateEnum>][-AcsControlSlot14state< BiosPolicy.AcsControlSlot14stateEnum>][-AdaptiveRefreshMgmtLevel< BiosPolicy.AdaptiveRefreshMgmtLevelEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdjacentCacheLinePrefetch< BiosPolicy.AdjacentCacheLinePrefetchEnum>][-AdvancedMemTest< BiosPolicy.AdvancedMemTestEnum>][-AllUsbDevices< BiosPolicy.AllUsbDevicesEnum>][-Altitude< BiosPolicy.AltitudeEnum>][-AspmSupport< BiosPolicy.AspmSupportEnum>][-AssertNmiOnPerr< BiosPolicy.AssertNmiOnPerrEnum>][-AssertNmiOnSerr< BiosPolicy.AssertNmiOnSerrEnum>][-AutoCcState< BiosPolicy.AutoCcStateEnum>][-AutonumousCstateEnable< BiosPolicy.AutonumousCstateEnableEnum>][-BaudRate< BiosPolicy.BaudRateEnum>][-BmeDmaMitigation< BiosPolicy.BmeDmaMitigationEnum>][-BootOptionNumRetry< BiosPolicy.BootOptionNumRetryEnum>][-BootOptionReCoolDown< BiosPolicy.BootOptionReCoolDownEnum>][-BootOptionRetry< BiosPolicy.BootOptionRetryEnum>][-BootPerformanceMode< BiosPolicy.BootPerformanceModeEnum>][-BurstAndPostponedRefresh< BiosPolicy.BurstAndPostponedRefreshEnum>][-C1autoDemotion< BiosPolicy.C1autoDemotionEnum>][-C1autoUnDemotion< BiosPolicy.C1autoUnDemotionEnum>][-CbsCmnApbdis< BiosPolicy.CbsCmnApbdisEnum>][-CbsCmnApbdisDfPstateRs< string>][-CbsCmnCpuAvx512< BiosPolicy.CbsCmnCpuAvx512Enum>][-CbsCmnCpuCpb< BiosPolicy.CbsCmnCpuCpbEnum>][-CbsCmnCpuGenDowncoreCtrl< BiosPolicy.CbsCmnCpuGenDowncoreCtrlEnum>][-CbsCmnCpuGlobalCstateCtrl< BiosPolicy.CbsCmnCpuGlobalCstateCtrlEnum>][-CbsCmnCpuL1streamHwPrefetcher< BiosPolicy.CbsCmnCpuL1streamHwPrefetcherEnum>][-CbsCmnCpuL2streamHwPrefetcher< BiosPolicy.CbsCmnCpuL2streamHwPrefetcherEnum>][-CbsCmnCpuSevAsidSpaceLimit< string>][-CbsCmnCpuSmee< BiosPolicy.CbsCmnCpuSmeeEnum>][-CbsCmnCpuStreamingStoresCtrl< BiosPolicy.CbsCmnCpuStreamingStoresCtrlEnum>][-CbsCmnDeterminismSlider< BiosPolicy.CbsCmnDeterminismSliderEnum>][-CbsCmnEdcControlThrottle< BiosPolicy.CbsCmnEdcControlThrottleEnum>][-CbsCmnEfficiencyModeEn< BiosPolicy.CbsCmnEfficiencyModeEnEnum>][-CbsCmnEfficiencyModeEnRs< BiosPolicy.CbsCmnEfficiencyModeEnRsEnum>][-CbsCmnFixedSocPstate< BiosPolicy.CbsCmnFixedSocPstateEnum>][-CbsCmnGnbNbIommu< BiosPolicy.CbsCmnGnbNbIommuEnum>][-CbsCmnGnbSmuDfCstates< BiosPolicy.CbsCmnGnbSmuDfCstatesEnum>][-CbsCmnGnbSmuDffoRs< BiosPolicy.CbsCmnGnbSmuDffoRsEnum>][-CbsCmnGnbSmuDlwmSupport< BiosPolicy.CbsCmnGnbSmuDlwmSupportEnum>][-CbsCmnGnbSmucppc< BiosPolicy.CbsCmnGnbSmucppcEnum>][-CbsCmnMemCtrlBankGroupSwapDdr4< BiosPolicy.CbsCmnMemCtrlBankGroupSwapDdr4Enum>][-CbsCmnMemCtrllerPwrDnEnDdr< BiosPolicy.CbsCmnMemCtrllerPwrDnEnDdrEnum>][-CbsCmnMemMapBankInterleaveDdr4< BiosPolicy.CbsCmnMemMapBankInterleaveDdr4Enum>][-CbsCmnMemSpeedDdr47xx2< BiosPolicy.CbsCmnMemSpeedDdr47xx2Enum>][-CbsCmnMemSpeedDdr47xx3< BiosPolicy.CbsCmnMemSpeedDdr47xx3Enum>][-CbsCmnPreferredIo7xx2< BiosPolicy.CbsCmnPreferredIo7xx2Enum>][-CbsCmnPreferredIo7xx3< BiosPolicy.CbsCmnPreferredIo7xx3Enum>][-CbsCmncTdpCtl< BiosPolicy.CbsCmncTdpCtlEnum>][-CbsCmnxGmiForceLinkWidthRs< BiosPolicy.CbsCmnxGmiForceLinkWidthRsEnum>][-CbsCpuCcdCtrlSsp< BiosPolicy.CbsCpuCcdCtrlSspEnum>][-CbsCpuCoreCtrl< BiosPolicy.CbsCpuCoreCtrlEnum>][-CbsCpuDownCoreCtrlBergamo< BiosPolicy.CbsCpuDownCoreCtrlBergamoEnum>][-CbsCpuDownCoreCtrlGenoa< BiosPolicy.CbsCpuDownCoreCtrlGenoaEnum>][-CbsCpuSmtCtrl< BiosPolicy.CbsCpuSmtCtrlEnum>][-CbsDbgCpuGenCpuWdt< BiosPolicy.CbsDbgCpuGenCpuWdtEnum>][-CbsDbgCpuLapicMode< BiosPolicy.CbsDbgCpuLapicModeEnum>][-CbsDbgCpuSnpMemCover< BiosPolicy.CbsDbgCpuSnpMemCoverEnum>][-CbsDbgCpuSnpMemSizeCover< string>][-CbsDfCmn4linkMaxXgmiSpeed< BiosPolicy.CbsDfCmn4linkMaxXgmiSpeedEnum>][-CbsDfCmnAcpiSratL3numa< BiosPolicy.CbsDfCmnAcpiSratL3numaEnum>][-CbsDfCmnDramNps< BiosPolicy.CbsDfCmnDramNpsEnum>][-CbsDfCmnDramScrubTime< BiosPolicy.CbsDfCmnDramScrubTimeEnum>][-CbsDfCmnMemIntlv< BiosPolicy.CbsDfCmnMemIntlvEnum>][-CbsDfCmnMemIntlvControl< BiosPolicy.CbsDfCmnMemIntlvControlEnum>][-CbsDfCmnMemIntlvSize< BiosPolicy.CbsDfCmnMemIntlvSizeEnum>][-CbsDfDbgXgmiLinkCfg< BiosPolicy.CbsDfDbgXgmiLinkCfgEnum>][-CbsGnbDbgPcieTbtSupport< BiosPolicy.CbsGnbDbgPcieTbtSupportEnum>][-CbsSevSnpSupport< BiosPolicy.CbsSevSnpSupportEnum>][-CdnEnable< BiosPolicy.CdnEnableEnum>][-CdnSupport< BiosPolicy.CdnSupportEnum>][-ChannelInterLeave< BiosPolicy.ChannelInterLeaveEnum>][-CiscoAdaptiveMemTraining< BiosPolicy.CiscoAdaptiveMemTrainingEnum>][-CiscoDebugLevel< BiosPolicy.CiscoDebugLevelEnum>][-CiscoOpromLaunchOptimization< BiosPolicy.CiscoOpromLaunchOptimizationEnum>][-CiscoXgmiMaxSpeed< BiosPolicy.CiscoXgmiMaxSpeedEnum>][-CkeLowPolicy< BiosPolicy.CkeLowPolicyEnum>][-ClassId< BiosPolicy.ClassIdEnum>][-ClosedLoopThermThrotl< BiosPolicy.ClosedLoopThermThrotlEnum>][-CmciEnable< BiosPolicy.CmciEnableEnum>][-ConfigTdp< BiosPolicy.ConfigTdpEnum>][-ConfigTdpLevel< BiosPolicy.ConfigTdpLevelEnum>][-ConsoleRedirection< BiosPolicy.ConsoleRedirectionEnum>][-CoreMultiProcessing< BiosPolicy.CoreMultiProcessingEnum>][-CpuEnergyPerformance< BiosPolicy.CpuEnergyPerformanceEnum>][-CpuFrequencyFloor< BiosPolicy.CpuFrequencyFloorEnum>][-CpuPaLimit< BiosPolicy.CpuPaLimitEnum>][-CpuPerfEnhancement< BiosPolicy.CpuPerfEnhancementEnum>][-CpuPerformance< BiosPolicy.CpuPerformanceEnum>][-CpuPowerManagement< BiosPolicy.CpuPowerManagementEnum>][-CrQos< BiosPolicy.CrQosEnum>][-CrfastgoConfig< BiosPolicy.CrfastgoConfigEnum>][-DcpmmFirmwareDowngrade< BiosPolicy.DcpmmFirmwareDowngradeEnum>][-DemandScrub< BiosPolicy.DemandScrubEnum>][-Description< string>][-DfxOsbEn< BiosPolicy.DfxOsbEnEnum>][-DirectCacheAccess< BiosPolicy.DirectCacheAccessEnum>][-DmaCtrlOptIn< BiosPolicy.DmaCtrlOptInEnum>][-DramClockThrottling< BiosPolicy.DramClockThrottlingEnum>][-DramRefreshRate< BiosPolicy.DramRefreshRateEnum>][-DramSwThermalThrottling< BiosPolicy.DramSwThermalThrottlingEnum>][-EadrSupport< BiosPolicy.EadrSupportEnum>][-EdpcEn< BiosPolicy.EdpcEnEnum>][-EnableClockSpreadSpec< BiosPolicy.EnableClockSpreadSpecEnum>][-EnableMktme< BiosPolicy.EnableMktmeEnum>][-EnableRmt< BiosPolicy.EnableRmtEnum>][-EnableSgx< BiosPolicy.EnableSgxEnum>][-EnableTdx< BiosPolicy.EnableTdxEnum>][-EnableTdxSeamldr< BiosPolicy.EnableTdxSeamldrEnum>][-EnableTme< BiosPolicy.EnableTmeEnum>][-EnergyEfficientTurbo< BiosPolicy.EnergyEfficientTurboEnum>][-EngPerfTuning< BiosPolicy.EngPerfTuningEnum>][-EnhancedIntelSpeedStepTech< BiosPolicy.EnhancedIntelSpeedStepTechEnum>][-EpochUpdate< BiosPolicy.EpochUpdateEnum>][-EppEnable< BiosPolicy.EppEnableEnum>][-EppProfile< BiosPolicy.EppProfileEnum>][-ErrorCheckScrub< BiosPolicy.ErrorCheckScrubEnum>][-ExecuteDisableBit< BiosPolicy.ExecuteDisableBitEnum>][-ExtendedApic< BiosPolicy.ExtendedApicEnum>][-FlowControl< BiosPolicy.FlowControlEnum>][-Frb2enable< BiosPolicy.Frb2enableEnum>][-HardwarePrefetch< BiosPolicy.HardwarePrefetchEnum>][-HwpmEnable< BiosPolicy.HwpmEnableEnum>][-ImcInterleave< BiosPolicy.ImcInterleaveEnum>][-IntelDynamicSpeedSelect< BiosPolicy.IntelDynamicSpeedSelectEnum>][-IntelHyperThreadingTech< BiosPolicy.IntelHyperThreadingTechEnum>][-IntelSpeedSelect< BiosPolicy.IntelSpeedSelectEnum>][-IntelTurboBoostTech< BiosPolicy.IntelTurboBoostTechEnum>][-IntelVirtualizationTechnology< BiosPolicy.IntelVirtualizationTechnologyEnum>][-IntelVtForDirectedIo< BiosPolicy.IntelVtForDirectedIoEnum>][-IntelVtdCoherencySupport< BiosPolicy.IntelVtdCoherencySupportEnum>][-IntelVtdInterruptRemapping< BiosPolicy.IntelVtdInterruptRemappingEnum>][-IntelVtdPassThroughDmaSupport< BiosPolicy.IntelVtdPassThroughDmaSupportEnum>][-IntelVtdatsSupport< BiosPolicy.IntelVtdatsSupportEnum>][-IoatConfigCpm< BiosPolicy.IoatConfigCpmEnum>][-IohErrorEnable< BiosPolicy.IohErrorEnableEnum>][-IohResource< BiosPolicy.IohResourceEnum>][-IpPrefetch< BiosPolicy.IpPrefetchEnum>][-Ipv4http< BiosPolicy.Ipv4httpEnum>][-Ipv4pxe< BiosPolicy.Ipv4pxeEnum>][-Ipv6http< BiosPolicy.Ipv6httpEnum>][-Ipv6pxe< BiosPolicy.Ipv6pxeEnum>][-KtiPrefetch< BiosPolicy.KtiPrefetchEnum>][-LatencyOptimizedMode< BiosPolicy.LatencyOptimizedModeEnum>][-LegacyOsRedirection< BiosPolicy.LegacyOsRedirectionEnum>][-LegacyUsbSupport< BiosPolicy.LegacyUsbSupportEnum>][-LlcAlloc< BiosPolicy.LlcAllocEnum>][-LlcPrefetch< BiosPolicy.LlcPrefetchEnum>][-LomPort0state< BiosPolicy.LomPort0stateEnum>][-LomPort1state< BiosPolicy.LomPort1stateEnum>][-LomPort2state< BiosPolicy.LomPort2stateEnum>][-LomPort3state< BiosPolicy.LomPort3stateEnum>][-LomPortsAllState< BiosPolicy.LomPortsAllStateEnum>][-LvDdrMode< BiosPolicy.LvDdrModeEnum>][-MakeDeviceNonBootable< BiosPolicy.MakeDeviceNonBootableEnum>][-MemoryBandwidthBoost< BiosPolicy.MemoryBandwidthBoostEnum>][-MemoryInterLeave< BiosPolicy.MemoryInterLeaveEnum>][-MemoryMappedIoAbove4gb< BiosPolicy.MemoryMappedIoAbove4gbEnum>][-MemoryRefreshRate< BiosPolicy.MemoryRefreshRateEnum>][-MemorySizeLimit< string>][-MemoryThermalThrottling< BiosPolicy.MemoryThermalThrottlingEnum>][-MirroringMode< BiosPolicy.MirroringModeEnum>][-MmcfgBase< BiosPolicy.MmcfgBaseEnum>][-MmiohBase< BiosPolicy.MmiohBaseEnum>][-MmiohSize< BiosPolicy.MmiohSizeEnum>][-Moid< string>][-Name< string>][-NetworkStack< BiosPolicy.NetworkStackEnum>][-NumaOptimized< BiosPolicy.NumaOptimizedEnum>][-NvmdimmPerformConfig< BiosPolicy.NvmdimmPerformConfigEnum>][-ObjectType< BiosPolicy.ObjectTypeEnum>][-Onboard10gbitLom< BiosPolicy.Onboard10gbitLomEnum>][-OnboardGbitLom< BiosPolicy.OnboardGbitLomEnum>][-OnboardScuStorageSupport< BiosPolicy.OnboardScuStorageSupportEnum>][-OnboardScuStorageSwStack< BiosPolicy.OnboardScuStorageSwStackEnum>][-OperationMode< BiosPolicy.OperationModeEnum>][-OptimizedPowerMode< BiosPolicy.OptimizedPowerModeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-OsBootWatchdogTimer< BiosPolicy.OsBootWatchdogTimerEnum>][-OsBootWatchdogTimerPolicy< BiosPolicy.OsBootWatchdogTimerPolicyEnum>][-OsBootWatchdogTimerTimeout< BiosPolicy.OsBootWatchdogTimerTimeoutEnum>][-OutOfBandMgmtPort< BiosPolicy.OutOfBandMgmtPortEnum>][-PackageCstateLimit< BiosPolicy.PackageCstateLimitEnum>][-PanicHighWatermark< BiosPolicy.PanicHighWatermarkEnum>][-PartialCacheLineSparing< BiosPolicy.PartialCacheLineSparingEnum>][-PartialMirrorModeConfig< BiosPolicy.PartialMirrorModeConfigEnum>][-PartialMirrorPercent< string>][-PartialMirrorValue1< string>][-PartialMirrorValue2< string>][-PartialMirrorValue3< string>][-PartialMirrorValue4< string>][-PatrolScrub< BiosPolicy.PatrolScrubEnum>][-PatrolScrubDuration< string>][-PcIeRasSupport< BiosPolicy.PcIeRasSupportEnum>][-PcIeSsdHotPlugSupport< BiosPolicy.PcIeSsdHotPlugSupportEnum>][-PchPciePllSsc< string>][-PchUsb30mode< BiosPolicy.PchUsb30modeEnum>][-PciOptionRoMs< BiosPolicy.PciOptionRoMsEnum>][-PciRomClp< BiosPolicy.PciRomClpEnum>][-PcieAriSupport< BiosPolicy.PcieAriSupportEnum>][-PciePllSsc< BiosPolicy.PciePllSscEnum>][-PcieSlotMraid1linkSpeed< BiosPolicy.PcieSlotMraid1linkSpeedEnum>][-PcieSlotMraid1optionRom< BiosPolicy.PcieSlotMraid1optionRomEnum>][-PcieSlotMraid2linkSpeed< BiosPolicy.PcieSlotMraid2linkSpeedEnum>][-PcieSlotMraid2optionRom< BiosPolicy.PcieSlotMraid2optionRomEnum>][-PcieSlotMstorraidLinkSpeed< BiosPolicy.PcieSlotMstorraidLinkSpeedEnum>][-PcieSlotMstorraidOptionRom< BiosPolicy.PcieSlotMstorraidOptionRomEnum>][-PcieSlotNvme1linkSpeed< BiosPolicy.PcieSlotNvme1linkSpeedEnum>][-PcieSlotNvme1optionRom< BiosPolicy.PcieSlotNvme1optionRomEnum>][-PcieSlotNvme2linkSpeed< BiosPolicy.PcieSlotNvme2linkSpeedEnum>][-PcieSlotNvme2optionRom< BiosPolicy.PcieSlotNvme2optionRomEnum>][-PcieSlotNvme3linkSpeed< BiosPolicy.PcieSlotNvme3linkSpeedEnum>][-PcieSlotNvme3optionRom< BiosPolicy.PcieSlotNvme3optionRomEnum>][-PcieSlotNvme4linkSpeed< BiosPolicy.PcieSlotNvme4linkSpeedEnum>][-PcieSlotNvme4optionRom< BiosPolicy.PcieSlotNvme4optionRomEnum>][-PcieSlotNvme5linkSpeed< BiosPolicy.PcieSlotNvme5linkSpeedEnum>][-PcieSlotNvme5optionRom< BiosPolicy.PcieSlotNvme5optionRomEnum>][-PcieSlotNvme6linkSpeed< BiosPolicy.PcieSlotNvme6linkSpeedEnum>][-PcieSlotNvme6optionRom< BiosPolicy.PcieSlotNvme6optionRomEnum>][-PcieSlotsCdnEnable< BiosPolicy.PcieSlotsCdnEnableEnum>][-PopSupport< BiosPolicy.PopSupportEnum>][-PostErrorPause< BiosPolicy.PostErrorPauseEnum>][-PostPackageRepair< BiosPolicy.PostPackageRepairEnum>][-PreBootDmaProtection< BiosPolicy.PreBootDmaProtectionEnum>][-PrmrrSize< BiosPolicy.PrmrrSizeEnum>][-ProcessorC1e< BiosPolicy.ProcessorC1eEnum>][-ProcessorC3report< BiosPolicy.ProcessorC3reportEnum>][-ProcessorC6report< BiosPolicy.ProcessorC6reportEnum>][-ProcessorCstate< BiosPolicy.ProcessorCstateEnum>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Psata< BiosPolicy.PsataEnum>][-PstateCoordType< BiosPolicy.PstateCoordTypeEnum>][-PuttyKeyPad< BiosPolicy.PuttyKeyPadEnum>][-PwrPerfTuning< BiosPolicy.PwrPerfTuningEnum>][-QpiLinkFrequency< BiosPolicy.QpiLinkFrequencyEnum>][-QpiLinkSpeed< BiosPolicy.QpiLinkSpeedEnum>][-QpiSnoopMode< BiosPolicy.QpiSnoopModeEnum>][-RankInterLeave< BiosPolicy.RankInterLeaveEnum>][-RedirectionAfterPost< BiosPolicy.RedirectionAfterPostEnum>][-ResizeBarSupport< BiosPolicy.ResizeBarSupportEnum>][-RuntimePostPackageRepair< BiosPolicy.RuntimePostPackageRepairEnum>][-SataModeSelect< BiosPolicy.SataModeSelectEnum>][-SelectMemoryRasConfiguration< BiosPolicy.SelectMemoryRasConfigurationEnum>][-SelectPprType< BiosPolicy.SelectPprTypeEnum>][-SerialMux< BiosPolicy.SerialMuxEnum>][-SerialPortAenable< BiosPolicy.SerialPortAenableEnum>][-Sev< BiosPolicy.SevEnum>][-SgxAutoRegistrationAgent< BiosPolicy.SgxAutoRegistrationAgentEnum>][-SgxEpoch0< string>][-SgxEpoch1< string>][-SgxFactoryReset< BiosPolicy.SgxFactoryResetEnum>][-SgxLePubKeyHash0< string>][-SgxLePubKeyHash1< string>][-SgxLePubKeyHash2< string>][-SgxLePubKeyHash3< string>][-SgxLeWr< BiosPolicy.SgxLeWrEnum>][-SgxPackageInfoInBandAccess< BiosPolicy.SgxPackageInfoInBandAccessEnum>][-SgxQos< BiosPolicy.SgxQosEnum>][-Sha1pcrBank< BiosPolicy.Sha1pcrBankEnum>][-Sha256pcrBank< BiosPolicy.Sha256pcrBankEnum>][-Sha384pcrBank< BiosPolicy.Sha384pcrBankEnum>][-SinglePctlEnable< BiosPolicy.SinglePctlEnableEnum>][-Slot10linkSpeed< BiosPolicy.Slot10linkSpeedEnum>][-Slot10state< BiosPolicy.Slot10stateEnum>][-Slot11linkSpeed< BiosPolicy.Slot11linkSpeedEnum>][-Slot11state< BiosPolicy.Slot11stateEnum>][-Slot12linkSpeed< BiosPolicy.Slot12linkSpeedEnum>][-Slot12state< BiosPolicy.Slot12stateEnum>][-Slot13state< BiosPolicy.Slot13stateEnum>][-Slot14state< BiosPolicy.Slot14stateEnum>][-Slot1linkSpeed< BiosPolicy.Slot1linkSpeedEnum>][-Slot1state< BiosPolicy.Slot1stateEnum>][-Slot2linkSpeed< BiosPolicy.Slot2linkSpeedEnum>][-Slot2state< BiosPolicy.Slot2stateEnum>][-Slot3linkSpeed< BiosPolicy.Slot3linkSpeedEnum>][-Slot3state< BiosPolicy.Slot3stateEnum>][-Slot4linkSpeed< BiosPolicy.Slot4linkSpeedEnum>][-Slot4state< BiosPolicy.Slot4stateEnum>][-Slot5linkSpeed< BiosPolicy.Slot5linkSpeedEnum>][-Slot5state< BiosPolicy.Slot5stateEnum>][-Slot6linkSpeed< BiosPolicy.Slot6linkSpeedEnum>][-Slot6state< BiosPolicy.Slot6stateEnum>][-Slot7linkSpeed< BiosPolicy.Slot7linkSpeedEnum>][-Slot7state< BiosPolicy.Slot7stateEnum>][-Slot8linkSpeed< BiosPolicy.Slot8linkSpeedEnum>][-Slot8state< BiosPolicy.Slot8stateEnum>][-Slot9linkSpeed< BiosPolicy.Slot9linkSpeedEnum>][-Slot9state< BiosPolicy.Slot9stateEnum>][-SlotFlomLinkSpeed< BiosPolicy.SlotFlomLinkSpeedEnum>][-SlotFrontNvme10linkSpeed< BiosPolicy.SlotFrontNvme10linkSpeedEnum>][-SlotFrontNvme10optionRom< BiosPolicy.SlotFrontNvme10optionRomEnum>][-SlotFrontNvme11linkSpeed< BiosPolicy.SlotFrontNvme11linkSpeedEnum>][-SlotFrontNvme11optionRom< BiosPolicy.SlotFrontNvme11optionRomEnum>][-SlotFrontNvme12linkSpeed< BiosPolicy.SlotFrontNvme12linkSpeedEnum>][-SlotFrontNvme12optionRom< BiosPolicy.SlotFrontNvme12optionRomEnum>][-SlotFrontNvme13linkSpeed< BiosPolicy.SlotFrontNvme13linkSpeedEnum>][-SlotFrontNvme13optionRom< BiosPolicy.SlotFrontNvme13optionRomEnum>][-SlotFrontNvme14linkSpeed< BiosPolicy.SlotFrontNvme14linkSpeedEnum>][-SlotFrontNvme14optionRom< BiosPolicy.SlotFrontNvme14optionRomEnum>][-SlotFrontNvme15linkSpeed< BiosPolicy.SlotFrontNvme15linkSpeedEnum>][-SlotFrontNvme15optionRom< BiosPolicy.SlotFrontNvme15optionRomEnum>][-SlotFrontNvme16linkSpeed< BiosPolicy.SlotFrontNvme16linkSpeedEnum>][-SlotFrontNvme16optionRom< BiosPolicy.SlotFrontNvme16optionRomEnum>][-SlotFrontNvme17linkSpeed< BiosPolicy.SlotFrontNvme17linkSpeedEnum>][-SlotFrontNvme17optionRom< BiosPolicy.SlotFrontNvme17optionRomEnum>][-SlotFrontNvme18linkSpeed< BiosPolicy.SlotFrontNvme18linkSpeedEnum>][-SlotFrontNvme18optionRom< BiosPolicy.SlotFrontNvme18optionRomEnum>][-SlotFrontNvme19linkSpeed< BiosPolicy.SlotFrontNvme19linkSpeedEnum>][-SlotFrontNvme19optionRom< BiosPolicy.SlotFrontNvme19optionRomEnum>][-SlotFrontNvme1linkSpeed< BiosPolicy.SlotFrontNvme1linkSpeedEnum>][-SlotFrontNvme1optionRom< BiosPolicy.SlotFrontNvme1optionRomEnum>][-SlotFrontNvme20linkSpeed< BiosPolicy.SlotFrontNvme20linkSpeedEnum>][-SlotFrontNvme20optionRom< BiosPolicy.SlotFrontNvme20optionRomEnum>][-SlotFrontNvme21linkSpeed< BiosPolicy.SlotFrontNvme21linkSpeedEnum>][-SlotFrontNvme21optionRom< BiosPolicy.SlotFrontNvme21optionRomEnum>][-SlotFrontNvme22linkSpeed< BiosPolicy.SlotFrontNvme22linkSpeedEnum>][-SlotFrontNvme22optionRom< BiosPolicy.SlotFrontNvme22optionRomEnum>][-SlotFrontNvme23linkSpeed< BiosPolicy.SlotFrontNvme23linkSpeedEnum>][-SlotFrontNvme23optionRom< BiosPolicy.SlotFrontNvme23optionRomEnum>][-SlotFrontNvme24linkSpeed< BiosPolicy.SlotFrontNvme24linkSpeedEnum>][-SlotFrontNvme24optionRom< BiosPolicy.SlotFrontNvme24optionRomEnum>][-SlotFrontNvme25linkSpeed< BiosPolicy.SlotFrontNvme25linkSpeedEnum>][-SlotFrontNvme25optionRom< BiosPolicy.SlotFrontNvme25optionRomEnum>][-SlotFrontNvme26linkSpeed< BiosPolicy.SlotFrontNvme26linkSpeedEnum>][-SlotFrontNvme26optionRom< BiosPolicy.SlotFrontNvme26optionRomEnum>][-SlotFrontNvme27linkSpeed< BiosPolicy.SlotFrontNvme27linkSpeedEnum>][-SlotFrontNvme27optionRom< BiosPolicy.SlotFrontNvme27optionRomEnum>][-SlotFrontNvme28linkSpeed< BiosPolicy.SlotFrontNvme28linkSpeedEnum>][-SlotFrontNvme28optionRom< BiosPolicy.SlotFrontNvme28optionRomEnum>][-SlotFrontNvme29linkSpeed< BiosPolicy.SlotFrontNvme29linkSpeedEnum>][-SlotFrontNvme29optionRom< BiosPolicy.SlotFrontNvme29optionRomEnum>][-SlotFrontNvme2linkSpeed< BiosPolicy.SlotFrontNvme2linkSpeedEnum>][-SlotFrontNvme2optionRom< BiosPolicy.SlotFrontNvme2optionRomEnum>][-SlotFrontNvme30linkSpeed< BiosPolicy.SlotFrontNvme30linkSpeedEnum>][-SlotFrontNvme30optionRom< BiosPolicy.SlotFrontNvme30optionRomEnum>][-SlotFrontNvme31linkSpeed< BiosPolicy.SlotFrontNvme31linkSpeedEnum>][-SlotFrontNvme31optionRom< BiosPolicy.SlotFrontNvme31optionRomEnum>][-SlotFrontNvme32linkSpeed< BiosPolicy.SlotFrontNvme32linkSpeedEnum>][-SlotFrontNvme32optionRom< BiosPolicy.SlotFrontNvme32optionRomEnum>][-SlotFrontNvme3linkSpeed< BiosPolicy.SlotFrontNvme3linkSpeedEnum>][-SlotFrontNvme3optionRom< BiosPolicy.SlotFrontNvme3optionRomEnum>][-SlotFrontNvme4linkSpeed< BiosPolicy.SlotFrontNvme4linkSpeedEnum>][-SlotFrontNvme4optionRom< BiosPolicy.SlotFrontNvme4optionRomEnum>][-SlotFrontNvme5linkSpeed< BiosPolicy.SlotFrontNvme5linkSpeedEnum>][-SlotFrontNvme5optionRom< BiosPolicy.SlotFrontNvme5optionRomEnum>][-SlotFrontNvme6linkSpeed< BiosPolicy.SlotFrontNvme6linkSpeedEnum>][-SlotFrontNvme6optionRom< BiosPolicy.SlotFrontNvme6optionRomEnum>][-SlotFrontNvme7linkSpeed< BiosPolicy.SlotFrontNvme7linkSpeedEnum>][-SlotFrontNvme7optionRom< BiosPolicy.SlotFrontNvme7optionRomEnum>][-SlotFrontNvme8linkSpeed< BiosPolicy.SlotFrontNvme8linkSpeedEnum>][-SlotFrontNvme8optionRom< BiosPolicy.SlotFrontNvme8optionRomEnum>][-SlotFrontNvme9linkSpeed< BiosPolicy.SlotFrontNvme9linkSpeedEnum>][-SlotFrontNvme9optionRom< BiosPolicy.SlotFrontNvme9optionRomEnum>][-SlotFrontSlot5linkSpeed< BiosPolicy.SlotFrontSlot5linkSpeedEnum>][-SlotFrontSlot6linkSpeed< BiosPolicy.SlotFrontSlot6linkSpeedEnum>][-SlotGpu1state< BiosPolicy.SlotGpu1stateEnum>][-SlotGpu2state< BiosPolicy.SlotGpu2stateEnum>][-SlotGpu3state< BiosPolicy.SlotGpu3stateEnum>][-SlotGpu4state< BiosPolicy.SlotGpu4stateEnum>][-SlotGpu5state< BiosPolicy.SlotGpu5stateEnum>][-SlotGpu6state< BiosPolicy.SlotGpu6stateEnum>][-SlotGpu7state< BiosPolicy.SlotGpu7stateEnum>][-SlotGpu8state< BiosPolicy.SlotGpu8stateEnum>][-SlotHbaLinkSpeed< BiosPolicy.SlotHbaLinkSpeedEnum>][-SlotHbaState< BiosPolicy.SlotHbaStateEnum>][-SlotLom1link< BiosPolicy.SlotLom1linkEnum>][-SlotLom2link< BiosPolicy.SlotLom2linkEnum>][-SlotMezzState< BiosPolicy.SlotMezzStateEnum>][-SlotMlomLinkSpeed< BiosPolicy.SlotMlomLinkSpeedEnum>][-SlotMlomState< BiosPolicy.SlotMlomStateEnum>][-SlotMraidLinkSpeed< BiosPolicy.SlotMraidLinkSpeedEnum>][-SlotMraidState< BiosPolicy.SlotMraidStateEnum>][-SlotN10state< BiosPolicy.SlotN10stateEnum>][-SlotN11state< BiosPolicy.SlotN11stateEnum>][-SlotN12state< BiosPolicy.SlotN12stateEnum>][-SlotN13state< BiosPolicy.SlotN13stateEnum>][-SlotN14state< BiosPolicy.SlotN14stateEnum>][-SlotN15state< BiosPolicy.SlotN15stateEnum>][-SlotN16state< BiosPolicy.SlotN16stateEnum>][-SlotN17state< BiosPolicy.SlotN17stateEnum>][-SlotN18state< BiosPolicy.SlotN18stateEnum>][-SlotN19state< BiosPolicy.SlotN19stateEnum>][-SlotN1state< BiosPolicy.SlotN1stateEnum>][-SlotN20state< BiosPolicy.SlotN20stateEnum>][-SlotN21state< BiosPolicy.SlotN21stateEnum>][-SlotN22state< BiosPolicy.SlotN22stateEnum>][-SlotN23state< BiosPolicy.SlotN23stateEnum>][-SlotN24state< BiosPolicy.SlotN24stateEnum>][-SlotN2state< BiosPolicy.SlotN2stateEnum>][-SlotN3state< BiosPolicy.SlotN3stateEnum>][-SlotN4state< BiosPolicy.SlotN4stateEnum>][-SlotN5state< BiosPolicy.SlotN5stateEnum>][-SlotN6state< BiosPolicy.SlotN6stateEnum>][-SlotN7state< BiosPolicy.SlotN7stateEnum>][-SlotN8state< BiosPolicy.SlotN8stateEnum>][-SlotN9state< BiosPolicy.SlotN9stateEnum>][-SlotRaidLinkSpeed< BiosPolicy.SlotRaidLinkSpeedEnum>][-SlotRaidState< BiosPolicy.SlotRaidStateEnum>][-SlotRearNvme1linkSpeed< BiosPolicy.SlotRearNvme1linkSpeedEnum>][-SlotRearNvme1state< BiosPolicy.SlotRearNvme1stateEnum>][-SlotRearNvme2linkSpeed< BiosPolicy.SlotRearNvme2linkSpeedEnum>][-SlotRearNvme2state< BiosPolicy.SlotRearNvme2stateEnum>][-SlotRearNvme3linkSpeed< BiosPolicy.SlotRearNvme3linkSpeedEnum>][-SlotRearNvme3state< BiosPolicy.SlotRearNvme3stateEnum>][-SlotRearNvme4linkSpeed< BiosPolicy.SlotRearNvme4linkSpeedEnum>][-SlotRearNvme4state< BiosPolicy.SlotRearNvme4stateEnum>][-SlotRearNvme5state< BiosPolicy.SlotRearNvme5stateEnum>][-SlotRearNvme6state< BiosPolicy.SlotRearNvme6stateEnum>][-SlotRearNvme7state< BiosPolicy.SlotRearNvme7stateEnum>][-SlotRearNvme8state< BiosPolicy.SlotRearNvme8stateEnum>][-SlotRiser1linkSpeed< BiosPolicy.SlotRiser1linkSpeedEnum>][-SlotRiser1slot1linkSpeed< BiosPolicy.SlotRiser1slot1linkSpeedEnum>][-SlotRiser1slot2linkSpeed< BiosPolicy.SlotRiser1slot2linkSpeedEnum>][-SlotRiser1slot3linkSpeed< BiosPolicy.SlotRiser1slot3linkSpeedEnum>][-SlotRiser2linkSpeed< BiosPolicy.SlotRiser2linkSpeedEnum>][-SlotRiser2slot4linkSpeed< BiosPolicy.SlotRiser2slot4linkSpeedEnum>][-SlotRiser2slot5linkSpeed< BiosPolicy.SlotRiser2slot5linkSpeedEnum>][-SlotRiser2slot6linkSpeed< BiosPolicy.SlotRiser2slot6linkSpeedEnum>][-SlotSasState< BiosPolicy.SlotSasStateEnum>][-SlotSsdSlot1linkSpeed< BiosPolicy.SlotSsdSlot1linkSpeedEnum>][-SlotSsdSlot2linkSpeed< BiosPolicy.SlotSsdSlot2linkSpeedEnum>][-Smee< BiosPolicy.SmeeEnum>][-SmtMode< BiosPolicy.SmtModeEnum>][-Snc< BiosPolicy.SncEnum>][-SnoopyModeFor2lm< BiosPolicy.SnoopyModeFor2lmEnum>][-SnoopyModeForAd< BiosPolicy.SnoopyModeForAdEnum>][-SparingMode< BiosPolicy.SparingModeEnum>][-SrIov< BiosPolicy.SrIovEnum>][-StreamerPrefetch< BiosPolicy.StreamerPrefetchEnum>][-SvmMode< BiosPolicy.SvmModeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TerminalType< BiosPolicy.TerminalTypeEnum>][-TpmControl< BiosPolicy.TpmControlEnum>][-TpmPendingOperation< BiosPolicy.TpmPendingOperationEnum>][-TpmPpiRequired< BiosPolicy.TpmPpiRequiredEnum>][-TpmSupport< BiosPolicy.TpmSupportEnum>][-Tsme< BiosPolicy.TsmeEnum>][-TxtSupport< BiosPolicy.TxtSupportEnum>][-UcsmBootOrderRule< BiosPolicy.UcsmBootOrderRuleEnum>][-UefiMemMapSpFlagEn< BiosPolicy.UefiMemMapSpFlagEnEnum>][-UfsDisable< BiosPolicy.UfsDisableEnum>][-UmaBasedClustering< BiosPolicy.UmaBasedClusteringEnum>][-UpiLinkEnablement< BiosPolicy.UpiLinkEnablementEnum>][-UpiPowerManagement< BiosPolicy.UpiPowerManagementEnum>][-UsbEmul6064< BiosPolicy.UsbEmul6064Enum>][-UsbPortFront< BiosPolicy.UsbPortFrontEnum>][-UsbPortInternal< BiosPolicy.UsbPortInternalEnum>][-UsbPortKvm< BiosPolicy.UsbPortKvmEnum>][-UsbPortRear< BiosPolicy.UsbPortRearEnum>][-UsbPortSdCard< BiosPolicy.UsbPortSdCardEnum>][-UsbPortVmedia< BiosPolicy.UsbPortVmediaEnum>][-UsbXhciSupport< BiosPolicy.UsbXhciSupportEnum>][-VgaPriority< BiosPolicy.VgaPriorityEnum>][-VirtualNuma< BiosPolicy.VirtualNumaEnum>][-VmdEnable< BiosPolicy.VmdEnableEnum>][-VolMemoryMode< BiosPolicy.VolMemoryModeEnum>][-WorkLoadConfig< BiosPolicy.WorkLoadConfigEnum>][-X2apicOptOut< BiosPolicy.X2apicOptOutEnum>][-XptPrefetch< BiosPolicy.XptPrefetchEnum>][-XptRemotePrefetch< BiosPolicy.XptRemotePrefetchEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,6 +23,21 @@ Initialize-IntersightBiosPolicy [-AcsControlGpu1state< BiosPolicy.AcsControlGpu1
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
+
+### -AcpiSratSpFlagEn
+BIOS Token for setting ACPI SRAT Special Purpose Memory Flag configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.AcpiSratSpFlagEnEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AcsControlGpu1state
 BIOS Token for setting ACS Control GPU 1 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
@@ -715,7 +730,7 @@ Accept wildcard characters: False
 ```
 
 ### -CbsCmnEfficiencyModeEnRs
-BIOS Token for setting Power Profile Selection F19h configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Balanced Memory Performance Mode` - Value - Balanced Memory Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Efficiency Mode` - Value - Efficiency Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `High Performance Mode` - Value - High Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Maximum IO Performance Mode` - Value - Maximum IO Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.
+BIOS Token for setting Power Profile Selection F19h configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnEfficiencyModeEnRs token.\n* `Balanced Core Memory Performance Mode` - Value - Balanced Core Memory Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Balanced Core Performance Mode` - Value - Balanced Core Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Balanced Memory Performance Mode` - Value - Balanced Memory Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Efficiency Mode` - Value - Efficiency Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `High Performance Mode` - Value - High Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.\n* `Maximum IO Performance Mode` - Value - Maximum IO Performance Mode for configuring CbsCmnEfficiencyModeEnRs token.
 
 ```yaml
 Type: BiosPolicy.CbsCmnEfficiencyModeEnRsEnum
@@ -850,7 +865,7 @@ Accept wildcard characters: False
 ```
 
 ### -CbsCmnMemMapBankInterleaveDdr4
-BIOS Token for setting Chipset Interleave configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `disabled` - Value - disabled for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `Enabled` - Value - Enabled for configuring CbsCmnMemMapBankInterleaveDdr4 token.
+BIOS Token for setting Chipset Interleave configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `disabled` - Value - disabled for configuring CbsCmnMemMapBankInterleaveDdr4 token.\n* `enabled` - Value - enabled for configuring CbsCmnMemMapBankInterleaveDdr4 token.
 
 ```yaml
 Type: BiosPolicy.CbsCmnMemMapBankInterleaveDdr4Enum
@@ -955,7 +970,7 @@ Accept wildcard characters: False
 ```
 
 ### -CbsCpuCcdCtrlSsp
-BIOS Token for setting CCD Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 CCDs` - Value - 2 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `3 CCDs` - Value - 3 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `4 CCDs` - Value - 4 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `6 CCDs` - Value - 6 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `8 CCDs` - Value - 8 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `10 CCDs` - Value - 10 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `Auto` - Value - Auto for configuring CbsCpuCcdCtrlSsp token.
+BIOS Token for setting CCD Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `2 CCDs` - Value - 2 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `3 CCDs` - Value - 3 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `4 CCDs` - Value - 4 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `6 CCDs` - Value - 6 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `8 CCDs` - Value - 8 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `10 CCDs` - Value - 10 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `12 CCDs` - Value - 12 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `14 CCDs` - Value - 14 CCDs for configuring CbsCpuCcdCtrlSsp token.\n* `Auto` - Value - Auto for configuring CbsCpuCcdCtrlSsp token.
 
 ```yaml
 Type: BiosPolicy.CbsCpuCcdCtrlSspEnum
@@ -1000,7 +1015,7 @@ Accept wildcard characters: False
 ```
 
 ### -CbsCpuDownCoreCtrlGenoa
-BIOS Token for setting CPU Downcore control F19 M10h-1Fh configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuDownCoreCtrlGenoa token.\n* `ONE (1 + 0)` - Value - ONE (1 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `TWO (2 + 0)` - Value - TWO (2 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `THREE (3 + 0)` - Value - THREE (3 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FOUR (4 + 0)` - Value - FOUR (4 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FIVE (5 + 0)` - Value - FIVE (5 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `SIX (6 + 0)` - Value - SIX (6 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `SEVEN (7 + 0)` - Value - SEVEN (7 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.
+BIOS Token for setting CPU Downcore control F19 M10h-1Fh configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCpuDownCoreCtrlGenoa token.\n* `ONE (1 + 0)` - Value - ONE (1 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `TWO (2 + 0)` - Value - TWO (2 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `THREE (3 + 0)` - Value - THREE (3 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FOUR (4 + 0)` - Value - FOUR (4 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FIVE (5 + 0)` - Value - FIVE (5 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `SIX (6 + 0)` - Value - SIX (6 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `SEVEN (7 + 0)` - Value - SEVEN (7 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `EIGHT (8 + 0)` - Value - EIGHT (8 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `NINE (9 + 0)` - Value - NINE (9 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `TEN (10 + 0)` - Value - TEN (10 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `ELEVEN (11 + 0)` - Value - ELEVEN (11 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `TWELVE (12 + 0)` - Value - TWELVE (12 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `THIRTEEN (13 + 0)` - Value - THIRTEEN (13 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FOURTEEN (14 + 0)` - Value - FOURTEEN (14 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.\n* `FIFTEEN (15 + 0)` - Value - FIFTEEN (15 + 0) for configuring CbsCpuDownCoreCtrlGenoa token.
 
 ```yaml
 Type: BiosPolicy.CbsCpuDownCoreCtrlGenoaEnum
@@ -1900,7 +1915,7 @@ Accept wildcard characters: False
 ```
 
 ### -EpochUpdate
-BIOS Token for setting Select Owner EPOCH Input Type configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Change to New Random Owner EPOCHs` - Value - Change to New Random Owner EPOCHs for configuring EpochUpdate token.\n* `Manual User Defined Owner EPOCHs` - Value - Manual User Defined Owner EPOCHs for configuring EpochUpdate token.\n* `SGX Owner EPOCH activated` - Value - SGX Owner EPOCH activated for configuring EpochUpdate token.
+BIOS Token for setting Select Owner EPOCH Input Type configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Change to New Random Owner EPOCHs` - Value - Change to New Random Owner EPOCHs for configuring EpochUpdate token.\n* `Manual User Defined Owner EPOCHs` - Value - Manual User Defined Owner EPOCHs for configuring EpochUpdate token.\n* `SGX Owner EPOCH activated` - Value - SGX Owner EPOCH activated for configuring EpochUpdate token.\n* `SGX Owner EPOCH deactivated` - Value - SGX Owner EPOCH deactivated for configuring EpochUpdate token.
 
 ```yaml
 Type: BiosPolicy.EpochUpdateEnum
@@ -2095,7 +2110,7 @@ Accept wildcard characters: False
 ```
 
 ### -IntelSpeedSelect
-BIOS Token for setting Intel Speed Select configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring IntelSpeedSelect token.\n* `Base` - Value - Base for configuring IntelSpeedSelect token.\n* `Config 1` - Value - Config 1 for configuring IntelSpeedSelect token.\n* `Config 2` - Value - Config 2 for configuring IntelSpeedSelect token.\n* `Config 3` - Value - Config 3 for configuring IntelSpeedSelect token.\n* `Config 4` - Value - Config 4 for configuring IntelSpeedSelect token.
+BIOS Token for setting Intel Speed Select configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring IntelSpeedSelect token.\n* `Base` - Value - Base for configuring IntelSpeedSelect token.\n* `Config 1` - Value - Config 1 for configuring IntelSpeedSelect token.\n* `Config 2` - Value - Config 2 for configuring IntelSpeedSelect token.\n* `Config 3` - Value - Config 3 for configuring IntelSpeedSelect token.\n* `Config 4` - Value - Config 4 for configuring IntelSpeedSelect token.\n* `Level 0` - Value - Level 0 for configuring IntelSpeedSelect token.\n* `Level 1` - Value - Level 1 for configuring IntelSpeedSelect token.\n* `Level 2` - Value - Level 2 for configuring IntelSpeedSelect token.\n* `Level 3` - Value - Level 3 for configuring IntelSpeedSelect token.\n* `Level 4` - Value - Level 4 for configuring IntelSpeedSelect token.
 
 ```yaml
 Type: BiosPolicy.IntelSpeedSelectEnum
@@ -2339,6 +2354,21 @@ BIOS Token for setting KTI Prefetch configuration.\n* `platform-default` - Defau
 
 ```yaml
 Type: BiosPolicy.KtiPrefetchEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LatencyOptimizedMode
+BIOS Token for setting Latency Optimized Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.LatencyOptimizedModeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -3537,6 +3567,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PreBootDmaProtection
+BIOS Token for setting PreBoot DMA Protection configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.PreBootDmaProtectionEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -PrmrrSize
 BIOS Token for setting PRMRR Size configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `1G` - Value - 1G for configuring PrmrrSize token.\n* `2G` - Value - 2G for configuring PrmrrSize token.\n* `4G` - Value - 4G for configuring PrmrrSize token.\n* `8G` - Value - 8G for configuring PrmrrSize token.\n* `16G` - Value - 16G for configuring PrmrrSize token.\n* `32G` - Value - 32G for configuring PrmrrSize token.\n* `64G` - Value - 64G for configuring PrmrrSize token.\n* `128G` - Value - 128G for configuring PrmrrSize token.\n* `256G` - Value - 256G for configuring PrmrrSize token.\n* `512G` - Value - 512G for configuring PrmrrSize token.\n* `128M` - Value - 128M for configuring PrmrrSize token.\n* `256M` - Value - 256M for configuring PrmrrSize token.\n* `512M` - Value - 512M for configuring PrmrrSize token.\n* `Auto` - Value - Auto for configuring PrmrrSize token.\n* `Invalid Config.` - Value - Invalid Config for configuring PrmrrSize token.
 
@@ -3583,7 +3628,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProcessorC6report
-BIOS Token for setting Processor C6 Report configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+BIOS Token for setting Processor C6 Report configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring ProcessorC6report token.\n* `disabled` - Value - disabled for configuring ProcessorC6report token.\n* `enabled` - Value - enabled for configuring ProcessorC6report token.
 
 ```yaml
 Type: BiosPolicy.ProcessorC6reportEnum
@@ -3706,7 +3751,7 @@ Accept wildcard characters: False
 ```
 
 ### -QpiLinkSpeed
-BIOS Token for setting UPI Link Frequency Select configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `10.4GT/s` - Value - 10.4GT/s for configuring QpiLinkSpeed token.\n* `11.2GT/s` - Value - 11.2GT/s for configuring QpiLinkSpeed token.\n* `12.8GT/s` - Value - 12.8GT/s for configuring QpiLinkSpeed token.\n* `14.4GT/s` - Value - 14.4GT/s for configuring QpiLinkSpeed token.\n* `16.0GT/s` - Value - 16.0GT/s for configuring QpiLinkSpeed token.\n* `20.0GT/s` - Value - 20.0GT/s for configuring QpiLinkSpeed token.\n* `9.6GT/s` - Value - 9.6GT/s for configuring QpiLinkSpeed token.\n* `Auto` - Value - Auto for configuring QpiLinkSpeed token.
+BIOS Token for setting UPI Link Frequency Select configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `10.4GT/s` - Value - 10.4GT/s for configuring QpiLinkSpeed token.\n* `11.2GT/s` - Value - 11.2GT/s for configuring QpiLinkSpeed token.\n* `12.8GT/s` - Value - 12.8GT/s for configuring QpiLinkSpeed token.\n* `14.4GT/s` - Value - 14.4GT/s for configuring QpiLinkSpeed token.\n* `16.0GT/s` - Value - 16.0GT/s for configuring QpiLinkSpeed token.\n* `20.0GT/s` - Value - 20.0GT/s for configuring QpiLinkSpeed token.\n* `24.0GT/s` - Value - 24.0GT/s for configuring QpiLinkSpeed token.\n* `9.6GT/s` - Value - 9.6GT/s for configuring QpiLinkSpeed token.\n* `Auto` - Value - Auto for configuring QpiLinkSpeed token.\n* `Use Per Link Setting` - Value - Use Per Link Setting for configuring QpiLinkSpeed token.
 
 ```yaml
 Type: BiosPolicy.QpiLinkSpeedEnum
@@ -4995,6 +5040,156 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SlotFrontNvme25linkSpeed
+BIOS Token for setting PCIe Slot:Front NVME 25 Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring SlotFrontNvme25linkSpeed token.\n* `Disabled` - Value - Disabled for configuring SlotFrontNvme25linkSpeed token.\n* `GEN1` - Value - GEN1 for configuring SlotFrontNvme25linkSpeed token.\n* `GEN2` - Value - GEN2 for configuring SlotFrontNvme25linkSpeed token.\n* `GEN3` - Value - GEN3 for configuring SlotFrontNvme25linkSpeed token.\n* `GEN4` - Value - GEN4 for configuring SlotFrontNvme25linkSpeed token.\n* `GEN5` - Value - GEN5 for configuring SlotFrontNvme25linkSpeed token.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme25linkSpeedEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme25optionRom
+BIOS Token for setting Front NVME 25 OptionROM configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme25optionRomEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme26linkSpeed
+BIOS Token for setting PCIe Slot:Front NVME 26 Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring SlotFrontNvme26linkSpeed token.\n* `Disabled` - Value - Disabled for configuring SlotFrontNvme26linkSpeed token.\n* `GEN1` - Value - GEN1 for configuring SlotFrontNvme26linkSpeed token.\n* `GEN2` - Value - GEN2 for configuring SlotFrontNvme26linkSpeed token.\n* `GEN3` - Value - GEN3 for configuring SlotFrontNvme26linkSpeed token.\n* `GEN4` - Value - GEN4 for configuring SlotFrontNvme26linkSpeed token.\n* `GEN5` - Value - GEN5 for configuring SlotFrontNvme26linkSpeed token.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme26linkSpeedEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme26optionRom
+BIOS Token for setting Front NVME 26 OptionROM configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme26optionRomEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme27linkSpeed
+BIOS Token for setting PCIe Slot:Front NVME 27 Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring SlotFrontNvme27linkSpeed token.\n* `Disabled` - Value - Disabled for configuring SlotFrontNvme27linkSpeed token.\n* `GEN1` - Value - GEN1 for configuring SlotFrontNvme27linkSpeed token.\n* `GEN2` - Value - GEN2 for configuring SlotFrontNvme27linkSpeed token.\n* `GEN3` - Value - GEN3 for configuring SlotFrontNvme27linkSpeed token.\n* `GEN4` - Value - GEN4 for configuring SlotFrontNvme27linkSpeed token.\n* `GEN5` - Value - GEN5 for configuring SlotFrontNvme27linkSpeed token.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme27linkSpeedEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme27optionRom
+BIOS Token for setting Front NVME 27 OptionROM configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme27optionRomEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme28linkSpeed
+BIOS Token for setting PCIe Slot:Front NVME 28 Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring SlotFrontNvme28linkSpeed token.\n* `Disabled` - Value - Disabled for configuring SlotFrontNvme28linkSpeed token.\n* `GEN1` - Value - GEN1 for configuring SlotFrontNvme28linkSpeed token.\n* `GEN2` - Value - GEN2 for configuring SlotFrontNvme28linkSpeed token.\n* `GEN3` - Value - GEN3 for configuring SlotFrontNvme28linkSpeed token.\n* `GEN4` - Value - GEN4 for configuring SlotFrontNvme28linkSpeed token.\n* `GEN5` - Value - GEN5 for configuring SlotFrontNvme28linkSpeed token.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme28linkSpeedEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme28optionRom
+BIOS Token for setting Front NVME 28 OptionROM configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme28optionRomEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme29linkSpeed
+BIOS Token for setting PCIe Slot:Front NVME 29 Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring SlotFrontNvme29linkSpeed token.\n* `Disabled` - Value - Disabled for configuring SlotFrontNvme29linkSpeed token.\n* `GEN1` - Value - GEN1 for configuring SlotFrontNvme29linkSpeed token.\n* `GEN2` - Value - GEN2 for configuring SlotFrontNvme29linkSpeed token.\n* `GEN3` - Value - GEN3 for configuring SlotFrontNvme29linkSpeed token.\n* `GEN4` - Value - GEN4 for configuring SlotFrontNvme29linkSpeed token.\n* `GEN5` - Value - GEN5 for configuring SlotFrontNvme29linkSpeed token.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme29linkSpeedEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme29optionRom
+BIOS Token for setting Front NVME 29 OptionROM configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme29optionRomEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SlotFrontNvme2linkSpeed
 BIOS Token for setting PCIe Slot:Front NVME 2 Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring SlotFrontNvme2linkSpeed token.\n* `Disabled` - Value - Disabled for configuring SlotFrontNvme2linkSpeed token.\n* `GEN1` - Value - GEN1 for configuring SlotFrontNvme2linkSpeed token.\n* `GEN2` - Value - GEN2 for configuring SlotFrontNvme2linkSpeed token.\n* `GEN3` - Value - GEN3 for configuring SlotFrontNvme2linkSpeed token.\n* `GEN4` - Value - GEN4 for configuring SlotFrontNvme2linkSpeed token.\n* `GEN5` - Value - GEN5 for configuring SlotFrontNvme2linkSpeed token.
 
@@ -5015,6 +5210,96 @@ BIOS Token for setting Front NVME 2 OptionROM configuration.\n* `platform-defaul
 
 ```yaml
 Type: BiosPolicy.SlotFrontNvme2optionRomEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme30linkSpeed
+BIOS Token for setting PCIe Slot:Front NVME 30 Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring SlotFrontNvme30linkSpeed token.\n* `Disabled` - Value - Disabled for configuring SlotFrontNvme30linkSpeed token.\n* `GEN1` - Value - GEN1 for configuring SlotFrontNvme30linkSpeed token.\n* `GEN2` - Value - GEN2 for configuring SlotFrontNvme30linkSpeed token.\n* `GEN3` - Value - GEN3 for configuring SlotFrontNvme30linkSpeed token.\n* `GEN4` - Value - GEN4 for configuring SlotFrontNvme30linkSpeed token.\n* `GEN5` - Value - GEN5 for configuring SlotFrontNvme30linkSpeed token.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme30linkSpeedEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme30optionRom
+BIOS Token for setting Front NVME 30 OptionROM configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme30optionRomEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme31linkSpeed
+BIOS Token for setting PCIe Slot:Front NVME 31 Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring SlotFrontNvme31linkSpeed token.\n* `Disabled` - Value - Disabled for configuring SlotFrontNvme31linkSpeed token.\n* `GEN1` - Value - GEN1 for configuring SlotFrontNvme31linkSpeed token.\n* `GEN2` - Value - GEN2 for configuring SlotFrontNvme31linkSpeed token.\n* `GEN3` - Value - GEN3 for configuring SlotFrontNvme31linkSpeed token.\n* `GEN4` - Value - GEN4 for configuring SlotFrontNvme31linkSpeed token.\n* `GEN5` - Value - GEN5 for configuring SlotFrontNvme31linkSpeed token.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme31linkSpeedEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme31optionRom
+BIOS Token for setting Front NVME 31 OptionROM configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme31optionRomEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme32linkSpeed
+BIOS Token for setting PCIe Slot:Front NVME 32 Link Speed configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring SlotFrontNvme32linkSpeed token.\n* `Disabled` - Value - Disabled for configuring SlotFrontNvme32linkSpeed token.\n* `GEN1` - Value - GEN1 for configuring SlotFrontNvme32linkSpeed token.\n* `GEN2` - Value - GEN2 for configuring SlotFrontNvme32linkSpeed token.\n* `GEN3` - Value - GEN3 for configuring SlotFrontNvme32linkSpeed token.\n* `GEN4` - Value - GEN4 for configuring SlotFrontNvme32linkSpeed token.\n* `GEN5` - Value - GEN5 for configuring SlotFrontNvme32linkSpeed token.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme32linkSpeedEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SlotFrontNvme32optionRom
+BIOS Token for setting Front NVME 32 OptionROM configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.SlotFrontNvme32optionRomEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -6527,8 +6812,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -UefiMemMapSpFlagEn
+BIOS Token for setting UEFI Memory Map Special Purpose Memory Flag configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+
+```yaml
+Type: BiosPolicy.UefiMemMapSpFlagEnEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -UfsDisable
-BIOS Token for setting Uncore Frequency Scaling configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+BIOS Token for setting Uncore Frequency Scaling configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `disabled` - Value - disabled for configuring UfsDisable token.\n* `enabled` - Value - enabled for configuring UfsDisable token.\n* `Mode 0` - Value - Mode 0 for configuring UfsDisable token.\n* `Mode 1` - Value - Mode 1 for configuring UfsDisable token.
 
 ```yaml
 Type: BiosPolicy.UfsDisableEnum

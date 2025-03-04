@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightApplianceClusterInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceClusterInfo.ClassIdEnum>][-DeploymentSize< string>][-Gateway< string>][-Hostip< string>][-Hostname< string>][-InstallerVersion< string>][-Moid< string>][-ObjectType< ApplianceClusterInfo.ObjectTypeEnum>][-PartitionDatabase< long>][-PartitionFileCisco< long>][-PartitionOptData< long>][-PartitionOptKafka< long>][-PartitionOptMongo< long>][-PartitionVarLibDocker< long>][-PartitionVarLog< long>][-Peerkey< string>][-Responsekey< string>][-Subnetmask< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceClusterInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BuildType< string>][-ClassId< ApplianceClusterInfo.ClassIdEnum>][-DeploymentSize< string>][-Gateway< string>][-Hostip< string>][-Hostname< string>][-InstallerVersion< string>][-Moid< string>][-NodeType< ApplianceClusterInfo.NodeTypeEnum>][-ObjectType< ApplianceClusterInfo.ObjectTypeEnum>][-PartitionDatabase< long>][-PartitionFileCisco< long>][-PartitionOptData< long>][-PartitionOptKafka< long>][-PartitionOptMongo< long>][-PartitionVarLibDocker< long>][-PartitionVarLog< long>][-Peerkey< string>][-Responsekey< string>][-Subnetmask< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,21 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -BuildType
+The build type of the Intersight Virtual Appliance.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -134,6 +149,21 @@ The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NodeType
+The node type of Intersight Virtual Appliance.\n* `standalone` - Single Node Intersight Virtual Appliance.\n* `management` - Management node type when Intersight Virtual Appliance is running as management-worker deployment.\n* `hamanagement` - Management node type when Intersight Virtual Appliance is running as multi node HA deployment.\n* `metrics` - Metrics node when Intersight Virtual Appliance is running management-metrics node.
+
+```yaml
+Type: ApplianceClusterInfo.NodeTypeEnum
 Parameter Sets: (All)
 Aliases:
 

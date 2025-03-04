@@ -47,7 +47,12 @@ namespace Intersight.PowerShell
                         {
                             continue;
                         }
-
+                        // Handle for DateTime to be always sent in UTC format
+                        if (this.MyInvocation.BoundParameters[propName].GetType() == typeof(DateTime))
+                        {
+                            DateTime receivedDateTime = (DateTime)this.MyInvocation.BoundParameters[propName];
+                            this.MyInvocation.BoundParameters[propName] = receivedDateTime.ToUniversalTime();
+                        }
                         item.SetValue(ModelObject, this.MyInvocation.BoundParameters[propName]);
                     }
                     else
