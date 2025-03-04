@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightLicenseAccountLicenseData [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< LicenseAccountLicenseData.ClassIdEnum>][-CustomerOp< Model.LicenseCustomerOpRelationship>][-DefaultLicenseType< LicenseAccountLicenseData.DefaultLicenseTypeEnum>][-DefaultLicenseTypeNewerModels< LicenseAccountLicenseData.DefaultLicenseTypeNewerModelsEnum>][-IksCustomerOp< Model.LicenseIksCustomerOpRelationship>][-IksLicenseCount< Model.LicenseIksLicenseCountRelationship>][-IncCustomerOp< Model.LicenseIncCustomerOpRelationship>][-IncLicenseCount< Model.LicenseIncLicenseCountRelationship>][-IwoCustomerOp< Model.LicenseIwoCustomerOpRelationship>][-IwoLicenseCount< Model.LicenseIwoLicenseCountRelationship>][-LicenseInfoView< Model.LicenseLicenseInfoViewRelationship>][-LicenseRegistrationStatus< Model.LicenseLicenseRegistrationStatusRelationship>][-Licenseinfos< System.Collections.Generic.List`1[Model.LicenseLicenseInfoRelationship]>][-Moid< string>][-ObjectType< LicenseAccountLicenseData.ObjectTypeEnum>][-SmartlicenseToken< Model.LicenseSmartlicenseTokenRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightLicenseAccountLicenseData [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< LicenseAccountLicenseData.ClassIdEnum>][-CustomerOp< Model.LicenseCustomerOpRelationship>][-DefaultLicenseType< LicenseAccountLicenseData.DefaultLicenseTypeEnum>][-DefaultLicenseTypeNewerModels< LicenseAccountLicenseData.DefaultLicenseTypeNewerModelsEnum>][-ErpCustomerOp< Model.LicenseErpCustomerOpRelationship>][-ErpLicenseCount< Model.LicenseErpLicenseCountRelationship>][-IksCustomerOp< Model.LicenseIksCustomerOpRelationship>][-IksLicenseCount< Model.LicenseIksLicenseCountRelationship>][-IncCustomerOp< Model.LicenseIncCustomerOpRelationship>][-IncLicenseCount< Model.LicenseIncLicenseCountRelationship>][-IwoCustomerOp< Model.LicenseIwoCustomerOpRelationship>][-IwoLicenseCount< Model.LicenseIwoLicenseCountRelationship>][-LicenseInfoView< Model.LicenseLicenseInfoViewRelationship>][-LicenseRegistrationStatus< Model.LicenseLicenseRegistrationStatusRelationship>][-Licenseinfos< System.Collections.Generic.List`1[Model.LicenseLicenseInfoRelationship]>][-Moid< string>][-ObjectType< LicenseAccountLicenseData.ObjectTypeEnum>][-SmartlicenseToken< Model.LicenseSmartlicenseTokenRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -92,6 +92,42 @@ Default license tier for newer model M7+ servers set by the user.\n* `Base` - Ba
 
 ```yaml
 Type: LicenseAccountLicenseData.DefaultLicenseTypeNewerModelsEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ErpCustomerOp
+A reference to a licenseErpCustomerOp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.LicenseErpCustomerOpRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ErpLicenseCount
+A reference to a licenseErpLicenseCount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.LicenseErpLicenseCountRelationship
 Parameter Sets: (All)
 Aliases:
 

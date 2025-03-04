@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWebhookEndpoint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WebhookEndpoint.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< WebhookEndpoint.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Schemas< System.Collections.Generic.List`1[Model.WebhookSchemaRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWebhookEndpoint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AppCredentials< Model.IamAppCredentials>][-AppRegistration< Model.IamAppRegistrationRelationship>][-AuthType< WebhookEndpoint.AuthTypeEnum>][-ClassId< WebhookEndpoint.ClassIdEnum>][-CredentialsAction< WebhookEndpoint.CredentialsActionEnum>][-Moid< string>][-Name< string>][-ObjectType< WebhookEndpoint.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Schemas< System.Collections.Generic.List`1[Model.WebhookSchemaRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,11 +39,76 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -AppCredentials
+Stores the credentials for the specified authentication type.
+
+Note :- Use Initialize-IntersightIamAppCredentials to create the object of complex type IamAppCredentials
+
+```yaml
+Type: Model.IamAppCredentials
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AppRegistration
+A reference to a iamAppRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.IamAppRegistrationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthType
+Type of authentication used by the clientApp.\n* `basic` - The client uses basic username/password authentication. The password is expected to be a JWT token.\n* `none` - No authentication method specified by the client.\n* `bearer-token` - The client uses a long-lived bearer token to authenticate.\n* `auth-code` - The client uses OAuth Authorization Grant Flow without PKCE for authentication.\n* `client-credentials` - The client uses OAuth Client Credentials Flow for authentication.
+
+```yaml
+Type: WebhookEndpoint.AuthTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ClassId
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
 Type: WebhookEndpoint.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CredentialsAction
+An action to be performed on the credentials.\n* `none` - No action to be performed.\n* `regenerateCredentials` - Allows for revocation and regeneration of a token. The old token associated with the client application. will not be usable and a new token will be generated.
+
+```yaml
+Type: WebhookEndpoint.CredentialsActionEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -208,5 +273,7 @@ PS C:\> Initialize-IntersightWebhookEndpoint
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightIamAppCredentials](./Initialize-IntersightIamAppCredentials.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

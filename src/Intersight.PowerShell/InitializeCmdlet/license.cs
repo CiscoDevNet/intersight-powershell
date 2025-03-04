@@ -72,6 +72,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a licenseErpCustomerOp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseErpCustomerOpRelationship ErpCustomerOp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a licenseErpLicenseCount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseErpLicenseCountRelationship ErpLicenseCount
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a licenseIksCustomerOp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -222,6 +242,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("DefaultLicenseTypeNewerModels"))
             {
                 initObject.DefaultLicenseTypeNewerModels = this.DefaultLicenseTypeNewerModels;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ErpCustomerOp"))
+            {
+                initObject.ErpCustomerOp = this.ErpCustomerOp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ErpLicenseCount"))
+            {
+                initObject.ErpLicenseCount = this.ErpLicenseCount;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("IksCustomerOp"))
             {
@@ -507,6 +535,260 @@ namespace Intersight.PowerShell
             {
                 initObject.ShowAgentTechSupport = this.ShowAgentTechSupport;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize LicenseErpCustomerOp.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightLicenseErpCustomerOp")]
+    public class InitializeIntersightLicenseErpCustomerOp : PSCmdlet
+    {
+        public InitializeIntersightLicenseErpCustomerOp()
+        {
+            ClassId = LicenseErpCustomerOp.ClassIdEnum.LicenseErpCustomerOp;
+            ObjectType = LicenseErpCustomerOp.ObjectTypeEnum.LicenseErpCustomerOp;
+
+        }
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The ERP license administrative state.\nSet this property to 'true' to activate the ERP license entitlements."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ActiveAdmin
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseErpCustomerOp.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable trial for ERP licensing."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableTrial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The default Trial or Grace period the customer is entitled to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long EvaluationPeriod
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of days the trial Trial or Grace period is extended. The trial or grace period can be extended once."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long ExtraEvaluation
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseErpCustomerOp.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.LicenseErpCustomerOp initObject = new Intersight.Model.LicenseErpCustomerOp();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
+            {
+                initObject.AccountLicenseData = this.AccountLicenseData;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ActiveAdmin"))
+            {
+                initObject.ActiveAdmin = this.ActiveAdmin;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableTrial"))
+            {
+                initObject.EnableTrial = this.EnableTrial;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EvaluationPeriod"))
+            {
+                initObject.EvaluationPeriod = this.EvaluationPeriod;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExtraEvaluation"))
+            {
+                initObject.ExtraEvaluation = this.ExtraEvaluation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize LicenseErpLicenseCount.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightLicenseErpLicenseCount")]
+    public class InitializeIntersightLicenseErpLicenseCount : PSCmdlet
+    {
+        public InitializeIntersightLicenseErpLicenseCount()
+        {
+            ClassId = LicenseErpLicenseCount.ClassIdEnum.LicenseErpLicenseCount;
+            ObjectType = LicenseErpLicenseCount.ObjectTypeEnum.LicenseErpLicenseCount;
+
+        }
+        // <summary>
+        /// <para type="description">"A reference to a licenseAccountLicenseData resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.LicenseAccountLicenseDataRelationship AccountLicenseData
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseErpLicenseCount.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public LicenseErpLicenseCount.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.LicenseErpLicenseCount initObject = new Intersight.Model.LicenseErpLicenseCount();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountLicenseData"))
+            {
+                initObject.AccountLicenseData = this.AccountLicenseData;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;

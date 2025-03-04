@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowServiceItemDefinition [-ActionDefinitions< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionDefinitionRelationship]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowMultipleServiceItemInstances< bool>][-AttributeDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkflowServiceItemDefinition.ClassIdEnum>][-CvdId< string>][-DeleteInstanceOnDecommission< bool>][-Description< string>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowServiceItemDefinition.ObjectTypeEnum>][-PublishStatus< WorkflowServiceItemDefinition.PublishStatusEnum>][-SupportStatus< WorkflowServiceItemDefinition.SupportStatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowServiceItemDefinition [-ActionDefinitions< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionDefinitionRelationship]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowMultipleServiceItemInstances< bool>][-AttributeDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkflowServiceItemDefinition.ClassIdEnum>][-CvdId< string>][-DefaultVersion< bool>][-DeleteInstanceOnDecommission< bool>][-Description< string>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowServiceItemDefinition.ObjectTypeEnum>][-PublishStatus< WorkflowServiceItemDefinition.PublishStatusEnum>][-SupportStatus< WorkflowServiceItemDefinition.SupportStatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -127,6 +127,21 @@ The Cisco Validated Design (CVD) Identifier that this service item provides.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultVersion
+The flag to indicate that this is the default version of the service item.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

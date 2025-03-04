@@ -119,6 +119,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Parent MoId of the fault from managed system. For example, Blade moid for adaptor fault."</para>
         /// </summary>
@@ -203,6 +204,39 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Alarm flapping state. This will be set to Flapping or Cooldown if both (A) this type of alarm is being monitored for flapping conditions, and (B) the alarm has recently transitioned to an active state (Critical, Warning or Info) followed by a Cleared state or vice versa. LastTransitionTime is a better field to use to know whether a particular alarm recently changed state.\n* `NotFlapping` - The enum value None says that no recent flaps have occurred.\n* `Flapping` - The enum value Flapping says that the alarm has become active recently, after being active and then cleared previously.\n* `Cooldown` - The enum value Cooldown says that the alarm is cleared, but was recently active.\n* `Unknown` - The enum value Unknown indicates that you might not have the latest version of the property meta."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public CondAlarm.FlappingEnum Flapping
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Alarm flapping counter. This will be incremented every time the state of the alarm transitions to an active state (Critical, Warning or Info) followed by a Cleared state or vice versa. If no more transitions occur within the system-defined flap interval (usually less than 5 minutes), the counter will be reset to zero. This represents the amount of times the alarm has flapped between an active and a cleared state since the last time the Flapping state was cleared."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long FlappingCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Alarm flapping start time. Only when the flapping state is Flapping or Cooldown, this will be set to the time the alarm began flapping. If the flapping state is NotFlapping, this timestamp may be set to zero or any other time and should be ignored."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime FlappingStartTime
         {
             get;
             set;
@@ -1393,6 +1427,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The vendor detail of the adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string InvVendor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1754,6 +1799,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a condAlarmDefinition resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -1764,6 +1810,9 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
 
 
 

@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fec
-Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108 and should be set as Cl74.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108 and should be set as Cl74.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.\n* `rs-cons16` - Forward Error Correction option \&quot;rs-cons16\&quot;.\n* `rs-ieee` - Forward Error Correction option \&quot;rs-ieee\&quot;.\n* `Off` - Turn off Forward Error Correction.
 
 ```yaml
 Type: FabricServerRole.FecEnum

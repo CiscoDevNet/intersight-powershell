@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
      <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
      <IncludeAssets>compile</IncludeAssets>
     <AssemblyName>Intersight.PowerShell</AssemblyName>
     <PackageId>PSIntersight</PackageId>
     <AssemblyVersion>1.0.11</AssemblyVersion>
-    <Version>1.0.11.2024120409</Version>
+    <Version>1.0.11.2025020308</Version>
     <OutputType>Library</OutputType>
     <Authors>Cisco Systems</Authors>
     <Company>Cisco Systems</Company>

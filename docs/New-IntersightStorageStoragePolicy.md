@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DefaultDriveMode< StorageStoragePolicy.DefaultDriveModeEnum>][-Description< string>][-DirectAttachedNvmeSlots< string>][-DriveGroup< System.Collections.Generic.List`1[StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< StorageM2VirtualDriveConfig>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< StorageR0Drive>][-RaidAttachedNvmeSlots< string>][-SecureJbods< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightStorageStoragePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ControllerAttachedNvmeSlots< string>][-DefaultDriveMode< StorageStoragePolicy.DefaultDriveModeEnum>][-Description< string>][-DirectAttachedNvmeSlots< string>][-DriveGroup< System.Collections.Generic.List`1[StorageDriveGroupRelationship]>][-GlobalHotSpares< string>][-M2VirtualDrive< StorageM2VirtualDriveConfig>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Raid0Drive< StorageR0Drive>][-RaidAttachedNvmeSlots< string>][-SecureJbods< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UnusedDisksState< StorageStoragePolicy.UnusedDisksStateEnum>][-UseJbodForVdCreation< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,21 @@ Create a &apos;StorageStoragePolicy&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ControllerAttachedNvmeSlots
+Only U.3 NVMe drives need to be specified, entered slots will be moved to controller attached mode. Allowed slots are 1-4, 101-104. Allowed value is a comma or hyphen separated number ranges.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -69,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -DirectAttachedNvmeSlots
-Only U.3 NVMe drives has to be specified, entered slots will be moved to Direct attached mode. Allowed slots are 1-4, 101-104. Allowed value is a comma or hyphen separated number range.
+Only U.3 NVMe drives need to be specified, entered slots will be moved to Direct attached mode. Allowed slots are 1-4, 101-104. Allowed value is a comma or hyphen separated number ranges.
 
 ```yaml
 Type: string
@@ -217,7 +232,7 @@ Accept wildcard characters: False
 ```
 
 ### -RaidAttachedNvmeSlots
-Only U.3 NVMe drives has to be specified, entered slots will be moved to RAID attached mode. Allowed slots are 1-4, 101-104. Allowed value is a comma or hyphen separated number range.
+Only U.3 NVMe drives need to be specified, entered slots will be moved to RAID attached mode. Allowed slots are 1-4, 101-104. Allowed value is a comma or hyphen separated number ranges. Deprecated in favor of controllerAttachedNvmeSlots.
 
 ```yaml
 Type: string

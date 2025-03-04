@@ -1271,6 +1271,78 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize TamFnSeverity.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightTamFnSeverity")]
+    public class InitializeIntersightTamFnSeverity : PSCmdlet
+    {
+        public InitializeIntersightTamFnSeverity()
+        {
+            ClassId = TamFnSeverity.ClassIdEnum.TamFnSeverity;
+            Level = TamFnSeverity.LevelEnum.Na;
+            ObjectType = TamFnSeverity.ObjectTypeEnum.TamFnSeverity;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TamFnSeverity.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Severity level associated with a field notice.\n* `na` - < For field notices, where Severity or Impact rating is not applicable.\n* `critical` - < If applicable, customers may experience downtime or might be at risk of affecting services. Urgent attention and response action are desirable.\n* `high` - < If applicable, it may degrade or might have a potential degradation, Attention and response based on deployment scenarios.\n* `medium` - < If applicable, it may affect system performance or functionality but are less like to pose an immediate risk to the network. Actions to be taken in due course of time based on deployment scenarios.\n* `low` - < If applicable, Unlikely to expect disrupted functionality. Minor in nature and can be addressed as per convenience."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TamFnSeverity.LevelEnum Level
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public TamFnSeverity.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.TamFnSeverity initObject = new Intersight.Model.TamFnSeverity();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Level"))
+            {
+                initObject.Level = this.Level;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize TamIdentifiers.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightTamIdentifiers")]
