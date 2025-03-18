@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowServiceItemInstance [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowServiceItemInstance.ClassIdEnum>][-Description< string>][-Idp< Model.IamIdpRelationship>][-IdpReference< Model.IamIdpReferenceRelationship>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowServiceItemInstance.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-ServiceItemDefinition< Model.WorkflowServiceItemDefinitionRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-User< Model.IamUserRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowServiceItemInstance [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowServiceItemInstance.ClassIdEnum>][-Description< string>][-Idp< Model.IamIdpRelationship>][-IdpReference< Model.IamIdpReferenceRelationship>][-Label< string>][-MigrationHistory< System.Collections.Generic.List`1[Model.WorkflowMigrationHistory]>][-Moid< string>][-Name< string>][-ObjectType< WorkflowServiceItemInstance.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-ServiceItemDefinition< Model.WorkflowServiceItemDefinitionRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-User< Model.IamUserRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -110,6 +110,23 @@ A user friendly short name to identify the resource. Name can only contain lette
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MigrationHistory
+
+
+Note :- Use Initialize-IntersightWorkflowMigrationHistory to create the object of complex type WorkflowMigrationHistory
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.WorkflowMigrationHistory]
 Parameter Sets: (All)
 Aliases:
 
@@ -294,3 +311,5 @@ PS C:\> Initialize-IntersightWorkflowServiceItemInstance
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-IntersightWorkflowMigrationHistory](./Initialize-IntersightWorkflowMigrationHistory.md)

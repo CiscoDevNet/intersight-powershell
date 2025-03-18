@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWorkflowServiceItemInstance [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Idp< IamIdpRelationship>][-IdpReference< IamIdpReferenceRelationship>][-Label< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-ServiceItemDefinition< WorkflowServiceItemDefinitionRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-User< IamUserRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightWorkflowServiceItemInstance [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Idp< IamIdpRelationship>][-IdpReference< IamIdpReferenceRelationship>][-Label< string>][-MigrationHistory< System.Collections.Generic.List`1[WorkflowMigrationHistory]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-ServiceItemDefinition< WorkflowServiceItemDefinitionRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-User< IamUserRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -94,6 +94,23 @@ A user friendly short name to identify the resource. Name can only contain lette
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MigrationHistory
+
+
+Note :- Use Initialize-IntersightWorkflowMigrationHistory to create the object of complex type WorkflowMigrationHistory
+
+```yaml
+Type: System.Collections.Generic.List`1[WorkflowMigrationHistory]
 Parameter Sets: (All)
 Aliases:
 
@@ -265,6 +282,8 @@ PS C:\> Set-IntersightWorkflowServiceItemInstance
 [Get-IntersightWorkflowServiceItemInstance](./Get-IntersightWorkflowServiceItemInstance.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightWorkflowMigrationHistory](./Initialize-IntersightWorkflowMigrationHistory.md)
 
 [New-IntersightWorkflowServiceItemInstance](./New-IntersightWorkflowServiceItemInstance.md)
 

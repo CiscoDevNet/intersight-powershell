@@ -600,6 +600,119 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetConnectionFlapStatus.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetConnectionFlapStatus")]
+    public class InitializeIntersightAssetConnectionFlapStatus : PSCmdlet
+    {
+        public InitializeIntersightAssetConnectionFlapStatus()
+        {
+            ClassId = AssetConnectionFlapStatus.ClassIdEnum.AssetConnectionFlapStatus;
+            ObjectType = AssetConnectionFlapStatus.ObjectTypeEnum.AssetConnectionFlapStatus;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AssetConnectionFlapStatus.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Time when flapping was reported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime FlapAlertTime
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of times a device disconnected within a specified time window."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long FlapCount
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if the device is flapping."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool FlapDetected
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AssetConnectionFlapStatus.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The time window during which device disconnects are counted. E.g. values are PT30M or PT1H."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string WindowSize
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.AssetConnectionFlapStatus initObject = new Intersight.Model.AssetConnectionFlapStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlapAlertTime"))
+            {
+                initObject.FlapAlertTime = this.FlapAlertTime;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlapCount"))
+            {
+                initObject.FlapCount = this.FlapCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlapDetected"))
+            {
+                initObject.FlapDetected = this.FlapDetected;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("WindowSize"))
+            {
+                initObject.WindowSize = this.WindowSize;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize AssetContractInformation.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightAssetContractInformation")]
