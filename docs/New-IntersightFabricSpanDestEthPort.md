@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fec
-Forward error correction setting of the SPAN Destination Port.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.\n* `rs-cons16` - Forward Error Correction option \&quot;rs-cons16\&quot;.\n* `rs-ieee` - Forward Error Correction option \&quot;rs-ieee\&quot;.\n* `Off` - Turn off Forward Error Correction.
+Forward error correction setting of the SPAN Destination Port.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
 
 ```yaml
 Type: FabricSpanDestEthPort.FecEnum

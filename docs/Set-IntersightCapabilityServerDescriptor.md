@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightCapabilityServerDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-Description< string>][-IsNcsiEnabled< bool>][-MlomAdapterPcieSlotNumber< long>][-Model< string>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightCapabilityServerDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-Description< string>][-IsNcsiEnabled< bool>][-IsPplEnabled< bool>][-MlomAdapterPcieSlotNumber< long>][-Model< string>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -73,6 +73,21 @@ Accept wildcard characters: False
 
 ### -IsNcsiEnabled
 Indicates whether the CIMC to VIC side-band interface is enabled on the server.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsPplEnabled
+Indicates Processor Package Power Limit for the server.
 
 ```yaml
 Type: bool
