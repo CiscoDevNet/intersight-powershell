@@ -1551,13 +1551,13 @@
     "/var/lib/jenkins/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.11.2025021903",
+    "version": "1.0.11.2025030309",
     "restore": {
-      "projectUniqueName": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2025021903/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
+      "projectUniqueName": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2025030309/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
       "projectName": "PSIntersight",
-      "projectPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2025021903/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
+      "projectPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2025030309/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
       "packagesPath": "/var/lib/jenkins/.nuget/packages/",
-      "outputPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2025021903/src/Intersight.PowerShell/obj/",
+      "outputPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2025030309/src/Intersight.PowerShell/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/var/lib/jenkins/.nuget/NuGet/NuGet.Config"
