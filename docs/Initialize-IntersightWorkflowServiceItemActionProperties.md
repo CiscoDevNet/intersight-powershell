@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowServiceItemActionProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowServiceItemActionProperties.ClassIdEnum>][-ObjectType< WorkflowServiceItemActionProperties.ObjectTypeEnum>][-OperationType< WorkflowServiceItemActionProperties.OperationTypeEnum>][-Properties< object>][-StopOnFailure< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowServiceItemActionProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowServiceItemActionProperties.ClassIdEnum>][-ObjectType< WorkflowServiceItemActionProperties.ObjectTypeEnum>][-OperationType< WorkflowServiceItemActionProperties.OperationTypeEnum>][-Properties< Model.WorkflowBaseServiceItemActionProperty>][-StopOnFailure< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -87,10 +87,10 @@ Accept wildcard characters: False
 ### -Properties
 The properties of the action. The actual structure of properties can vary based on the operationType.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
+Note :- Use Initialize-IntersightWorkflowBaseServiceItemActionProperty to create the object of complex type WorkflowBaseServiceItemActionProperty
 
 ```yaml
-Type: object
+Type: Model.WorkflowBaseServiceItemActionProperty
 Parameter Sets: (All)
 Aliases:
 
@@ -173,4 +173,4 @@ PS C:\> Initialize-IntersightWorkflowServiceItemActionProperties
 
 ## RELATED LINKS
 
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)
+[Initialize-IntersightWorkflowBaseServiceItemActionProperty](./Initialize-IntersightWorkflowBaseServiceItemActionProperty.md)

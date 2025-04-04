@@ -1052,6 +1052,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1190,6 +1200,10 @@ namespace Intersight.PowerShell
             {
                 initObject.TargetPlatform = this.TargetPlatform;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
@@ -1286,6 +1300,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"When enabled, the configuration of the derived instances may override the template configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableOverride
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1376,6 +1400,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1431,6 +1465,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Description = this.Description;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableOverride"))
+            {
+                initObject.EnableOverride = this.EnableOverride;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -1463,6 +1501,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
             {
                 initObject.TargetPlatform = this.TargetPlatform;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
