@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFcpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< FcpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< FcpoolLease.ClassIdEnum>][-HasDuplicate< bool>][-Moid< string>][-ObjectType< FcpoolLease.ObjectTypeEnum>][-Pool< Model.FcpoolPoolRelationship>][-PoolPurpose< string>][-Reservation< Model.FcpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WwnId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFcpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< FcpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< FcpoolLease.ClassIdEnum>][-HasDuplicate< bool>][-Migrate< bool>][-Moid< string>][-ObjectType< FcpoolLease.ObjectTypeEnum>][-Pool< Model.FcpoolPoolRelationship>][-PoolPurpose< string>][-PreferredWwnId< string>][-Reservation< Model.FcpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WwnId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -102,6 +102,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Migrate
+The migration capability is applicable only for dynamic lease requests and it works in conjunction with  preferred ID. If there is an existing dynamic or static lease that matches the preferred ID, that existing  lease will be migrated to the current pool. That means the existing lease will be deleted and a new lease  will be created in the pool. If there is a reservation exists that matches with preferred ID, that  reservation will be kept as is and next available ID from the pool will be leased.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -152,6 +167,21 @@ Accept wildcard characters: False
 
 ### -PoolPurpose
 Purpose of this WWN pool.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PreferredWwnId
+The preferred WWN ID address can be specified only for dynamic lease requests. Intersight will make its best  effort to allocate that WWN ID address if it is available in the pool. If the specified preferred WWN ID address  is not in the range of the pool or if it is already leased or reserved, then the next available WWN ID address  from the pool will be leased. Since this feature is specific to dynamic lease requests only, static lease  request will fail if it specifies the preferred WWN ID address property. When the preferred WWN ID address  property is specified in conjunction with &apos;migrate&apos; property, existing static or dynamic lease will be  replaced by the new lease. Migration also supported only for dynamic lease requests.
 
 ```yaml
 Type: string

@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllocatedBudget
-Sets the allocated power budget of the chassis (in Watts).
+Sets the limit for the maximum input power consumption by the chassis (in Watts). Set to 0 for no limit.
 
 ```yaml
 Type: long

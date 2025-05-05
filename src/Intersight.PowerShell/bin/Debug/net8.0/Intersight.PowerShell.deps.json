@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "Intersight.PowerShell/1.0.11.2025030309": {
+      "Intersight.PowerShell/1.0.11.2025041004": {
         "dependencies": {
           "CompareNETObjects": "4.61.0",
           "JsonSubTypes": "2.0.1",
@@ -173,7 +173,7 @@
     }
   },
   "libraries": {
-    "Intersight.PowerShell/1.0.11.2025030309": {
+    "Intersight.PowerShell/1.0.11.2025041004": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

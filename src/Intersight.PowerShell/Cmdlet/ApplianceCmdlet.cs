@@ -7711,6 +7711,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"The number of previous failed install attempts of the same upgrade version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long PreviousInstallAttempts
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a applianceUpgrade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -11759,6 +11770,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

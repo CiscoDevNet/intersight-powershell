@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricUplinkRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkRole.AdminSpeedEnum>][-AggregatePortId< long>][-EthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-Fec< FabricUplinkRole.FecEnum>][-FlowControlPolicy< FabricFlowControlPolicyRelationship>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][-Moid< string>][-PortId< long>][-PortPolicy< FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricUplinkRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkRole.AdminSpeedEnum>][-AggregatePortId< long>][-EthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-Fec< FabricUplinkRole.FecEnum>][-FlowControlPolicy< FabricFlowControlPolicyRelationship>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][-MacSecPolicy< FabricMacSecPolicyRelationship>][-Moid< string>][-PortId< long>][-PortPolicy< FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fec
-Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &apos;Auto&apos;. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option &apos;cl91&apos;. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option &apos;cl74&apos;. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \&quot;rs-cons16\&quot;. Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \&quot;rs-ieee\&quot;. Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps.
 
 ```yaml
 Type: FabricUplinkRole.FecEnum
@@ -127,6 +127,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: FabricLinkControlPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MacSecPolicy
+A reference to a fabricMacSecPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: FabricMacSecPolicyRelationship
 Parameter Sets: (All)
 Aliases:
 

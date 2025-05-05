@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPolicyConfigResultContext [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyConfigResultContext.ClassIdEnum>][-EntityMoid< string>][-EntityName< string>][-EntityType< string>][-ObjectType< PolicyConfigResultContext.ObjectTypeEnum>][-ParentMoid< string>][-ParentType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPolicyConfigResultContext [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyConfigResultContext.ClassIdEnum>][-EntityMoid< string>][-EntityName< string>][-EntityType< string>][-ObjectType< PolicyConfigResultContext.ObjectTypeEnum>][-ParentMoid< string>][-ParentPolicyObjectType< string>][-ParentType< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -116,6 +116,21 @@ Accept wildcard characters: False
 
 ### -ParentMoid
 The Moid of the parent object present in config result context.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ParentPolicyObjectType
+The type of the policy object associated with the profile.
 
 ```yaml
 Type: string

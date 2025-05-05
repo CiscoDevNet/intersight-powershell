@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPolicyScheduledAction [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyScheduledAction.ClassIdEnum>][-ObjectType< PolicyScheduledAction.ObjectTypeEnum>][-ProceedOnReboot< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPolicyScheduledAction [-Action< string>][-ActionQualifier< Model.PolicyActionQualifier>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyScheduledAction.ClassIdEnum>][-ObjectType< PolicyScheduledAction.ObjectTypeEnum>][-ProceedOnReboot< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,23 @@ Name of the action to be performed on the profile.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ActionQualifier
+Qualifiers to control the action being triggered. Action qualifiers are to be specified based on the type of disruptions that an action is to be restricted to. For example, trigger the &apos;Deploy&apos; action to only perform network and management plane configurations.
+
+Note :- Use Initialize-IntersightPolicyActionQualifier to create the object of complex type PolicyActionQualifier
+
+```yaml
+Type: Model.PolicyActionQualifier
 Parameter Sets: (All)
 Aliases:
 
@@ -155,3 +172,5 @@ PS C:\> Initialize-IntersightPolicyScheduledAction
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightPolicyActionQualifier](./Initialize-IntersightPolicyActionQualifier.md)

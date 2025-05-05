@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightUuidpoolUuidLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< UuidpoolUuidLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< UuidpoolUuidLease.ClassIdEnum>][-HasDuplicate< bool>][-Moid< string>][-ObjectType< UuidpoolUuidLease.ObjectTypeEnum>][-Pool< Model.UuidpoolPoolRelationship>][-Reservation< Model.UuidpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightUuidpoolUuidLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< UuidpoolUuidLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< UuidpoolUuidLease.ClassIdEnum>][-HasDuplicate< bool>][-Migrate< bool>][-Moid< string>][-ObjectType< UuidpoolUuidLease.ObjectTypeEnum>][-Pool< Model.UuidpoolPoolRelationship>][-Reservation< Model.UuidpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -89,6 +89,21 @@ Accept wildcard characters: False
 
 ### -HasDuplicate
 HasDuplicate represents if there are other pools in which this id exists.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Migrate
+The migration capability is applicable only for dynamic lease requests and it works in conjunction with  preferred ID. If there is an existing dynamic or static lease that matches the preferred ID, that existing  lease will be migrated to the current pool. That means the existing lease will be deleted and a new lease  will be created in the pool. If there is a reservation exists that matches with preferred ID, that  reservation will be kept as is and next available ID from the pool will be leased.
 
 ```yaml
 Type: bool

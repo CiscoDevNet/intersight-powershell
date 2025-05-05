@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIppoolIpLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IppoolIpLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-BlockLease< Model.IppoolBlockLeaseRelationship>][-ClassId< IppoolIpLease.ClassIdEnum>][-HasDuplicate< bool>][-IpType< IppoolIpLease.IpTypeEnum>][-IpV4Address< string>][-IpV4Config< Model.IppoolIpV4Config>][-IpV6Address< string>][-IpV6Config< Model.IppoolIpV6Config>][-Moid< string>][-ObjectType< IppoolIpLease.ObjectTypeEnum>][-Pool< Model.IppoolPoolRelationship>][-Reservation< Model.IppoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vrf< Model.VrfVrfRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIppoolIpLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IppoolIpLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-BlockLease< Model.IppoolBlockLeaseRelationship>][-ClassId< IppoolIpLease.ClassIdEnum>][-HasDuplicate< bool>][-IpType< IppoolIpLease.IpTypeEnum>][-IpV4Address< string>][-IpV4Config< Model.IppoolIpV4Config>][-IpV6Address< string>][-IpV6Config< Model.IppoolIpV6Config>][-Migrate< bool>][-Moid< string>][-ObjectType< IppoolIpLease.ObjectTypeEnum>][-Pool< Model.IppoolPoolRelationship>][-Reservation< Model.IppoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vrf< Model.VrfVrfRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -189,6 +189,21 @@ Note :- Use Initialize-IntersightIppoolIpV6Config to create the object of comple
 
 ```yaml
 Type: Model.IppoolIpV6Config
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Migrate
+The migration capability is applicable only for dynamic lease requests and it works in conjunction with  preferred ID. If there is an existing dynamic or static lease that matches the preferred ID, that existing  lease will be migrated to the current pool. That means the existing lease will be deleted and a new lease  will be created in the pool. If there is a reservation exists that matches with preferred ID, that  reservation will be kept as is and next available ID from the pool will be leased.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

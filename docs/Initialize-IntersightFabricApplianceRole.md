@@ -121,7 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -Fec
-Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &apos;Auto&apos;.\n* `Cl91` - Forward error correction option &apos;cl91&apos;.\n* `Cl74` - Forward error correction option &apos;cl74&apos;.
+Forward error correction configuration for the port.\n* `Auto` - Forward error correction option &apos;Auto&apos;. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option &apos;cl91&apos;. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option &apos;cl74&apos;. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \&quot;rs-cons16\&quot;. Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \&quot;rs-ieee\&quot;. Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps.
 
 ```yaml
 Type: FabricApplianceRole.FecEnum

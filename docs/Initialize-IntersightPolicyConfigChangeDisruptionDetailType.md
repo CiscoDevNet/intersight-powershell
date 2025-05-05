@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPolicyConfigChangeDisruptionDetailType [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyConfigChangeDisruptionDetailType.ClassIdEnum>][-Disruptions< System.Collections.Generic.List`1[string]>][-ObjectType< PolicyConfigChangeDisruptionDetailType.ObjectTypeEnum>][-PolicyName< string>][-PolicyPendingAction< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPolicyConfigChangeDisruptionDetailType [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyConfigChangeDisruptionDetailType.ClassIdEnum>][-Disruptions< System.Collections.Generic.List`1[string]>][-IsOnlyRequiredByOtherPolicies< bool>][-ObjectType< PolicyConfigChangeDisruptionDetailType.ObjectTypeEnum>][-PolicyName< string>][-PolicyPendingAction< string>][-RequiredByPolicies< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,6 +69,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -IsOnlyRequiredByOtherPolicies
+The current policy has to be redeployed only because there are other policy changes that require this.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
@@ -104,6 +119,21 @@ Name of the action which is pending on this policy. Example, if policy is not ye
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RequiredByPolicies
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 
