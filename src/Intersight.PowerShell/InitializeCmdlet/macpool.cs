@@ -279,6 +279,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The migration capability is applicable only for dynamic lease requests and it works in conjunction with  preferred ID. If there is an existing dynamic or static lease that matches the preferred ID, that existing  lease will be migrated to the current pool. That means the existing lease will be deleted and a new lease  will be created in the pool. If there is a reservation exists that matches with preferred ID, that  reservation will be kept as is and next available ID from the pool will be leased."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Migrate
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -304,6 +314,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.MacpoolPoolRelationship Pool
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The preferred MAC address can be specified only for dynamic lease requests. Intersight will make its best  effort to allocate that MAC address if it is available in the pool. If the specified preferred MAC address  is not in the range of the pool or if it is already leased or reserved, then the next available MAC address  from the pool will be leased. Since this feature is specific to dynamic lease requests only, static lease  request will fail if it specifies the preferred MAC address property. When the preferred MAC address  property is specified in conjunction with 'migrate' property, existing static or dynamic lease will be  replaced by the new lease. Migration also supported only for dynamic lease requests."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PreferredMacAddress
         {
             get;
             set;
@@ -354,6 +374,10 @@ namespace Intersight.PowerShell
             {
                 initObject.MacAddress = this.MacAddress;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Migrate"))
+            {
+                initObject.Migrate = this.Migrate;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -362,6 +386,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Pool"))
             {
                 initObject.Pool = this.Pool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreferredMacAddress"))
+            {
+                initObject.PreferredMacAddress = this.PreferredMacAddress;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Reservation"))
             {

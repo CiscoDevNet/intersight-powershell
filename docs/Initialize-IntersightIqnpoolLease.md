@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIqnpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IqnpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< IqnpoolLease.ClassIdEnum>][-HasDuplicate< bool>][-IqnAddress< string>][-Moid< string>][-ObjectType< IqnpoolLease.ObjectTypeEnum>][-Pool< Model.IqnpoolPoolRelationship>][-Reservation< Model.IqnpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIqnpoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IqnpoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< IqnpoolLease.ClassIdEnum>][-HasDuplicate< bool>][-IqnAddress< string>][-Migrate< bool>][-Moid< string>][-ObjectType< IqnpoolLease.ObjectTypeEnum>][-Pool< Model.IqnpoolPoolRelationship>][-Reservation< Model.IqnpoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -107,6 +107,21 @@ IQN address allocated for pool-based allocation. It is constructed as &lt;prefix
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Migrate
+The migration capability is applicable only for dynamic lease requests and it works in conjunction with  preferred ID. If there is an existing dynamic or static lease that matches the preferred ID, that existing  lease will be migrated to the current pool. That means the existing lease will be deleted and a new lease  will be created in the pool. If there is a reservation exists that matches with preferred ID, that  reservation will be kept as is and next available ID from the pool will be leased.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

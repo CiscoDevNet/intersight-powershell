@@ -409,3 +409,5 @@ PS C:\> Set-IntersightStorageController
 [Get-IntersightStorageController](./Get-IntersightStorageController.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightStorageController.OperReasonEnum](./Initialize-IntersightStorageController.OperReasonEnum.md)

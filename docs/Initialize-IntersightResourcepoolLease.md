@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourcepoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< ResourcepoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< ResourcepoolLease.ClassIdEnum>][-Condition< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Feature< string>][-HasDuplicate< bool>][-IsExclusiveAtAssignedEntity< bool>][-LeaseParameters< Model.ResourcepoolLeaseParameters>][-Moid< string>][-ObjectType< ResourcepoolLease.ObjectTypeEnum>][-Pool< Model.ResourcepoolPoolRelationship>][-Resource< Model.MoBaseMo>][-ResourceType< ResourcepoolLease.ResourceTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightResourcepoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< ResourcepoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< ResourcepoolLease.ClassIdEnum>][-Condition< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Feature< string>][-HasDuplicate< bool>][-IsExclusiveAtAssignedEntity< bool>][-LeaseParameters< Model.ResourcepoolLeaseParameters>][-Migrate< bool>][-Moid< string>][-ObjectType< ResourcepoolLease.ObjectTypeEnum>][-Pool< Model.ResourcepoolPoolRelationship>][-Resource< Model.MoBaseMo>][-ResourceType< ResourcepoolLease.ResourceTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -156,6 +156,21 @@ Note :- Use Initialize-IntersightResourcepoolLeaseParameters to create the objec
 
 ```yaml
 Type: Model.ResourcepoolLeaseParameters
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Migrate
+The migration capability is applicable only for dynamic lease requests and it works in conjunction with  preferred ID. If there is an existing dynamic or static lease that matches the preferred ID, that existing  lease will be migrated to the current pool. That means the existing lease will be deleted and a new lease  will be created in the pool. If there is a reservation exists that matches with preferred ID, that  reservation will be kept as is and next available ID from the pool will be leased.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

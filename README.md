@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2025030309
-- C# SDK version: 1.0.11.2025030309
+- Intersight.PowerShell version: 1.0.11.2025041004
+- C# SDK version: 1.0.11.2025041004
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025030309"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025041004"}
 ```
 or
 
@@ -1154,6 +1154,7 @@ EquipmentChassisIdPool | [**Get-IntersightEquipmentChassisIdPool**](docs/Get-Int
 EquipmentChassisIdentity | [**Get-IntersightEquipmentChassisIdentity**](docs/Get-IntersightEquipmentChassisIdentity.md) | Read a 'EquipmentChassisIdentity' resource.
 EquipmentChassisOperation | [**Get-IntersightEquipmentChassisOperation**](docs/Get-IntersightEquipmentChassisOperation.md) | Read a 'EquipmentChassisOperation' resource.
 EquipmentDeviceSummary | [**Get-IntersightEquipmentDeviceSummary**](docs/Get-IntersightEquipmentDeviceSummary.md) | Read a 'EquipmentDeviceSummary' resource.
+EquipmentEnclosureElement | [**Get-IntersightEquipmentEnclosureElement**](docs/Get-IntersightEquipmentEnclosureElement.md) | Read a 'EquipmentEnclosureElement' resource.
 EquipmentEndPointLog | [**Get-IntersightEquipmentEndPointLog**](docs/Get-IntersightEquipmentEndPointLog.md) | Read a 'EquipmentEndPointLog' resource.
 EquipmentExpanderModule | [**Get-IntersightEquipmentExpanderModule**](docs/Get-IntersightEquipmentExpanderModule.md) | Read a 'EquipmentExpanderModule' resource.
 EquipmentFan | [**Get-IntersightEquipmentFan**](docs/Get-IntersightEquipmentFan.md) | Read a 'EquipmentFan' resource.
@@ -1183,6 +1184,7 @@ EquipmentTransceiver | [**Get-IntersightEquipmentTransceiver**](docs/Get-Intersi
 EquipmentChassis | [**Set-IntersightEquipmentChassis**](docs/Set-IntersightEquipmentChassis.md) | Update a 'EquipmentChassis' resource.
 EquipmentChassisIdentity | [**Set-IntersightEquipmentChassisIdentity**](docs/Set-IntersightEquipmentChassisIdentity.md) | Update a 'EquipmentChassisIdentity' resource.
 EquipmentChassisOperation | [**Set-IntersightEquipmentChassisOperation**](docs/Set-IntersightEquipmentChassisOperation.md) | Update a 'EquipmentChassisOperation' resource.
+EquipmentEnclosureElement | [**Set-IntersightEquipmentEnclosureElement**](docs/Set-IntersightEquipmentEnclosureElement.md) | Update a 'EquipmentEnclosureElement' resource.
 EquipmentExpanderModule | [**Set-IntersightEquipmentExpanderModule**](docs/Set-IntersightEquipmentExpanderModule.md) | Update a 'EquipmentExpanderModule' resource.
 EquipmentFan | [**Set-IntersightEquipmentFan**](docs/Set-IntersightEquipmentFan.md) | Update a 'EquipmentFan' resource.
 EquipmentFanControl | [**Set-IntersightEquipmentFanControl**](docs/Set-IntersightEquipmentFanControl.md) | Update a 'EquipmentFanControl' resource.
@@ -1237,6 +1239,7 @@ FabricFlowControlPolicy | [**Get-IntersightFabricFlowControlPolicy**](docs/Get-I
 FabricLanPinGroup | [**Get-IntersightFabricLanPinGroup**](docs/Get-IntersightFabricLanPinGroup.md) | Read a 'FabricLanPinGroup' resource.
 FabricLinkAggregationPolicy | [**Get-IntersightFabricLinkAggregationPolicy**](docs/Get-IntersightFabricLinkAggregationPolicy.md) | Read a 'FabricLinkAggregationPolicy' resource.
 FabricLinkControlPolicy | [**Get-IntersightFabricLinkControlPolicy**](docs/Get-IntersightFabricLinkControlPolicy.md) | Read a 'FabricLinkControlPolicy' resource.
+FabricMacSecPolicy | [**Get-IntersightFabricMacSecPolicy**](docs/Get-IntersightFabricMacSecPolicy.md) | Read a 'FabricMacSecPolicy' resource.
 FabricMulticastPolicy | [**Get-IntersightFabricMulticastPolicy**](docs/Get-IntersightFabricMulticastPolicy.md) | Read a 'FabricMulticastPolicy' resource.
 FabricPcMember | [**Get-IntersightFabricPcMember**](docs/Get-IntersightFabricPcMember.md) | Read a 'FabricPcMember' resource.
 FabricPcOperation | [**Get-IntersightFabricPcOperation**](docs/Get-IntersightFabricPcOperation.md) | Read a 'FabricPcOperation' resource.
@@ -1281,6 +1284,7 @@ FabricFlowControlPolicy | [**New-IntersightFabricFlowControlPolicy**](docs/New-I
 FabricLanPinGroup | [**New-IntersightFabricLanPinGroup**](docs/New-IntersightFabricLanPinGroup.md) | Create a 'FabricLanPinGroup' resource.
 FabricLinkAggregationPolicy | [**New-IntersightFabricLinkAggregationPolicy**](docs/New-IntersightFabricLinkAggregationPolicy.md) | Create a 'FabricLinkAggregationPolicy' resource.
 FabricLinkControlPolicy | [**New-IntersightFabricLinkControlPolicy**](docs/New-IntersightFabricLinkControlPolicy.md) | Create a 'FabricLinkControlPolicy' resource.
+FabricMacSecPolicy | [**New-IntersightFabricMacSecPolicy**](docs/New-IntersightFabricMacSecPolicy.md) | Create a 'FabricMacSecPolicy' resource.
 FabricMulticastPolicy | [**New-IntersightFabricMulticastPolicy**](docs/New-IntersightFabricMulticastPolicy.md) | Create a 'FabricMulticastPolicy' resource.
 FabricPcOperation | [**New-IntersightFabricPcOperation**](docs/New-IntersightFabricPcOperation.md) | Create a 'FabricPcOperation' resource.
 FabricPortMode | [**New-IntersightFabricPortMode**](docs/New-IntersightFabricPortMode.md) | Create a 'FabricPortMode' resource.
@@ -1320,6 +1324,7 @@ FabricFlowControlPolicy | [**Remove-IntersightFabricFlowControlPolicy**](docs/Re
 FabricLanPinGroup | [**Remove-IntersightFabricLanPinGroup**](docs/Remove-IntersightFabricLanPinGroup.md) | Delete a 'FabricLanPinGroup' resource.
 FabricLinkAggregationPolicy | [**Remove-IntersightFabricLinkAggregationPolicy**](docs/Remove-IntersightFabricLinkAggregationPolicy.md) | Delete a 'FabricLinkAggregationPolicy' resource.
 FabricLinkControlPolicy | [**Remove-IntersightFabricLinkControlPolicy**](docs/Remove-IntersightFabricLinkControlPolicy.md) | Delete a 'FabricLinkControlPolicy' resource.
+FabricMacSecPolicy | [**Remove-IntersightFabricMacSecPolicy**](docs/Remove-IntersightFabricMacSecPolicy.md) | Delete a 'FabricMacSecPolicy' resource.
 FabricMulticastPolicy | [**Remove-IntersightFabricMulticastPolicy**](docs/Remove-IntersightFabricMulticastPolicy.md) | Delete a 'FabricMulticastPolicy' resource.
 FabricPcOperation | [**Remove-IntersightFabricPcOperation**](docs/Remove-IntersightFabricPcOperation.md) | Delete a 'FabricPcOperation' resource.
 FabricPortMode | [**Remove-IntersightFabricPortMode**](docs/Remove-IntersightFabricPortMode.md) | Delete a 'FabricPortMode' resource.
@@ -1360,6 +1365,7 @@ FabricFlowControlPolicy | [**Set-IntersightFabricFlowControlPolicy**](docs/Set-I
 FabricLanPinGroup | [**Set-IntersightFabricLanPinGroup**](docs/Set-IntersightFabricLanPinGroup.md) | Update a 'FabricLanPinGroup' resource.
 FabricLinkAggregationPolicy | [**Set-IntersightFabricLinkAggregationPolicy**](docs/Set-IntersightFabricLinkAggregationPolicy.md) | Update a 'FabricLinkAggregationPolicy' resource.
 FabricLinkControlPolicy | [**Set-IntersightFabricLinkControlPolicy**](docs/Set-IntersightFabricLinkControlPolicy.md) | Update a 'FabricLinkControlPolicy' resource.
+FabricMacSecPolicy | [**Set-IntersightFabricMacSecPolicy**](docs/Set-IntersightFabricMacSecPolicy.md) | Update a 'FabricMacSecPolicy' resource.
 FabricMulticastPolicy | [**Set-IntersightFabricMulticastPolicy**](docs/Set-IntersightFabricMulticastPolicy.md) | Update a 'FabricMulticastPolicy' resource.
 FabricPcOperation | [**Set-IntersightFabricPcOperation**](docs/Set-IntersightFabricPcOperation.md) | Update a 'FabricPcOperation' resource.
 FabricPortMode | [**Set-IntersightFabricPortMode**](docs/Set-IntersightFabricPortMode.md) | Update a 'FabricPortMode' resource.
@@ -1791,6 +1797,7 @@ IamSession | [**Get-IntersightIamSession**](docs/Get-IntersightIamSession.md) | 
 IamSessionLimits | [**Get-IntersightIamSessionLimits**](docs/Get-IntersightIamSessionLimits.md) | Read a 'IamSessionLimits' resource.
 IamSharingRule | [**Get-IntersightIamSharingRule**](docs/Get-IntersightIamSharingRule.md) | Read a 'IamSharingRule' resource.
 IamSystem | [**Get-IntersightIamSystem**](docs/Get-IntersightIamSystem.md) | Read a 'IamSystem' resource.
+IamTestIdpConfiguration | [**Get-IntersightIamTestIdpConfiguration**](docs/Get-IntersightIamTestIdpConfiguration.md) | Read a 'IamTestIdpConfiguration' resource.
 IamTrustPoint | [**Get-IntersightIamTrustPoint**](docs/Get-IntersightIamTrustPoint.md) | Read a 'IamTrustPoint' resource.
 IamUser | [**Get-IntersightIamUser**](docs/Get-IntersightIamUser.md) | Read a 'IamUser' resource.
 IamUserGroup | [**Get-IntersightIamUserGroup**](docs/Get-IntersightIamUserGroup.md) | Read a 'IamUserGroup' resource.
@@ -1874,6 +1881,7 @@ IamQualifier | [**Set-IntersightIamQualifier**](docs/Set-IntersightIamQualifier.
 IamResourceLimits | [**Set-IntersightIamResourceLimits**](docs/Set-IntersightIamResourceLimits.md) | Update a 'IamResourceLimits' resource.
 IamResourceRoles | [**Set-IntersightIamResourceRoles**](docs/Set-IntersightIamResourceRoles.md) | Update a 'IamResourceRoles' resource.
 IamSessionLimits | [**Set-IntersightIamSessionLimits**](docs/Set-IntersightIamSessionLimits.md) | Update a 'IamSessionLimits' resource.
+IamTestIdpConfiguration | [**Set-IntersightIamTestIdpConfiguration**](docs/Set-IntersightIamTestIdpConfiguration.md) | Update a 'IamTestIdpConfiguration' resource.
 IamUser | [**Set-IntersightIamUser**](docs/Set-IntersightIamUser.md) | Update a 'IamUser' resource.
 IamUserGroup | [**Set-IntersightIamUserGroup**](docs/Set-IntersightIamUserGroup.md) | Update a 'IamUserGroup' resource.
 IamUserPreference | [**Set-IntersightIamUserPreference**](docs/Set-IntersightIamUserPreference.md) | Update a 'IamUserPreference' resource.
@@ -2929,9 +2937,11 @@ VnicIscsiStaticTargetPolicy | [**Get-IntersightVnicIscsiStaticTargetPolicy**](do
 VnicIscsiStaticTargetPolicyInventory | [**Get-IntersightVnicIscsiStaticTargetPolicyInventory**](docs/Get-IntersightVnicIscsiStaticTargetPolicyInventory.md) | Read a 'VnicIscsiStaticTargetPolicyInventory' resource.
 VnicLanConnectivityPolicy | [**Get-IntersightVnicLanConnectivityPolicy**](docs/Get-IntersightVnicLanConnectivityPolicy.md) | Read a 'VnicLanConnectivityPolicy' resource.
 VnicLanConnectivityPolicyInventory | [**Get-IntersightVnicLanConnectivityPolicyInventory**](docs/Get-IntersightVnicLanConnectivityPolicyInventory.md) | Read a 'VnicLanConnectivityPolicyInventory' resource.
+VnicLanSettings | [**Get-IntersightVnicLanSettings**](docs/Get-IntersightVnicLanSettings.md) | Read a 'VnicLanSettings' resource.
 VnicLcpStatus | [**Get-IntersightVnicLcpStatus**](docs/Get-IntersightVnicLcpStatus.md) | Read a 'VnicLcpStatus' resource.
 VnicSanConnectivityPolicy | [**Get-IntersightVnicSanConnectivityPolicy**](docs/Get-IntersightVnicSanConnectivityPolicy.md) | Read a 'VnicSanConnectivityPolicy' resource.
 VnicSanConnectivityPolicyInventory | [**Get-IntersightVnicSanConnectivityPolicyInventory**](docs/Get-IntersightVnicSanConnectivityPolicyInventory.md) | Read a 'VnicSanConnectivityPolicyInventory' resource.
+VnicSanSettings | [**Get-IntersightVnicSanSettings**](docs/Get-IntersightVnicSanSettings.md) | Read a 'VnicSanSettings' resource.
 VnicScpStatus | [**Get-IntersightVnicScpStatus**](docs/Get-IntersightVnicScpStatus.md) | Read a 'VnicScpStatus' resource.
 VnicVhbaTemplate | [**Get-IntersightVnicVhbaTemplate**](docs/Get-IntersightVnicVhbaTemplate.md) | Read a 'VnicVhbaTemplate' resource.
 VnicVnicTemplate | [**Get-IntersightVnicVnicTemplate**](docs/Get-IntersightVnicVnicTemplate.md) | Read a 'VnicVnicTemplate' resource.

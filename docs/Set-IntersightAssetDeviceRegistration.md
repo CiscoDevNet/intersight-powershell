@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightAssetDeviceRegistration [-AccessKeyId< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ExecutionMode< AssetDeviceRegistration.ExecutionModeEnum>][[-Moid]< string>][-ParentSignature< AssetClaimSignature>][-PlatformType< AssetDeviceRegistration.PlatformTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightAssetDeviceRegistration [-AccessKeyId< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ExecutionMode< AssetDeviceRegistration.ExecutionModeEnum>][[-Moid]< string>][-ParentSignature< AssetClaimSignature>][-PlatformType< AssetDeviceRegistration.PlatformTypeEnum>][-RotateAccessKey< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -105,6 +105,21 @@ The platform type on which device connector is executing.\n* `` - An unrecognize
 
 ```yaml
 Type: AssetDeviceRegistration.PlatformTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RotateAccessKey
+Request the device to rotate its key pair. SRE team may set this field to trigger the device to rotate its key pair in conditions where it has been identified that the device&apos;s key has been compromised. When RotateAccessKey is set to true the device will be forced to re-connect and rotate its key.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

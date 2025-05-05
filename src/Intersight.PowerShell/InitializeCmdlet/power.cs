@@ -123,7 +123,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Sets the allocated power budget of the chassis (in Watts)."</para>
+        /// <para type="description">"Sets the limit for the maximum input power consumption by the chassis (in Watts). Set to 0 for no limit."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

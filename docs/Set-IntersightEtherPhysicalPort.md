@@ -165,4 +165,6 @@ PS C:\> Set-IntersightEtherPhysicalPort
 
 [Get-IntersightEtherPhysicalPort](./Get-IntersightEtherPhysicalPort.md)
 
+[Initialize-IntersightEtherMacsecOperData](./Initialize-IntersightEtherMacsecOperData.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

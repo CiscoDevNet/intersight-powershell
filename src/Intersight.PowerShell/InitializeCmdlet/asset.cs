@@ -2306,6 +2306,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Request the device to rotate its key pair. SRE team may set this field to trigger the device to rotate its key pair in conditions where it has been identified that the device's key has been compromised. When RotateAccessKey is set to true the device will be forced to re-connect and rotate its key."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool RotateAccessKey
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2345,6 +2355,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PlatformType"))
             {
                 initObject.PlatformType = this.PlatformType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RotateAccessKey"))
+            {
+                initObject.RotateAccessKey = this.RotateAccessKey;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

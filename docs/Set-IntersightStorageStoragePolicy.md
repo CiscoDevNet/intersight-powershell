@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -ControllerAttachedNvmeSlots
-Only U.3 NVMe drives need to be specified, entered slots will be moved to controller attached mode. Allowed slots are 1-4, 101-104. Allowed value is a comma or hyphen separated number ranges.
+Only U.3 NVMe drives need to be specified, entered slots will be moved to controller attached mode. Allowed slots are 1-9, 21-24, 101-104. Allowed value is a comma or hyphen separated number ranges.
 
 ```yaml
 Type: string
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -DirectAttachedNvmeSlots
-Only U.3 NVMe drives need to be specified, entered slots will be moved to Direct attached mode. Allowed slots are 1-4, 101-104. Allowed value is a comma or hyphen separated number ranges.
+Only U.3 NVMe drives need to be specified, entered slots will be moved to Direct attached mode. Allowed slots are 1-9, 21-24, 101-104. Allowed value is a comma or hyphen separated number ranges.
 
 ```yaml
 Type: string

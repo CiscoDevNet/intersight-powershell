@@ -515,6 +515,119 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationApplianceUpgradeMoCondition.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationApplianceUpgradeMoCondition")]
+    public class InitializeIntersightNotificationApplianceUpgradeMoCondition : PSCmdlet
+    {
+        public InitializeIntersightNotificationApplianceUpgradeMoCondition()
+        {
+            ClassId = NotificationApplianceUpgradeMoCondition.ClassIdEnum.NotificationApplianceUpgradeMoCondition;
+            ObjectType = NotificationApplianceUpgradeMoCondition.ObjectTypeEnum.NotificationApplianceUpgradeMoCondition;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationApplianceUpgradeMoCondition.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The condition can be switched on/off with out necessity to change the subscription\nsettings: actions, conditions, etc.\nEx.: Subscription MO can be configured, but switched off."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"MoType for which the condition is created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MoType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationApplianceUpgradeMoCondition.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<NotificationApplianceUpgradeMoCondition.OperationsEnum> Operations
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<NotificationApplianceUpgradeMoCondition.StatusesEnum> Statuses
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NotificationApplianceUpgradeMoCondition initObject = new Intersight.Model.NotificationApplianceUpgradeMoCondition();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MoType"))
+            {
+                initObject.MoType = this.MoType;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Operations"))
+            {
+                initObject.Operations = this.Operations;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Statuses"))
+            {
+                initObject.Statuses = this.Statuses;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NotificationDistributableMoCondition.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNotificationDistributableMoCondition")]

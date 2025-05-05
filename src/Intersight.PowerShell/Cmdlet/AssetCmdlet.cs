@@ -1629,6 +1629,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The device connectors rotated public key. The device connector may rotate its key pair in conditions where it has been determined the key may have been compromised or if the key type is changing (e.g. moving from RSA to elliptical curve). The device connector will rotate its key in a two step process in order to ensure Intersight has received and committed the new key before invalidating the previous. Device connectors will first send the new public key on PublicAccessKeyRotated, the public key string will also be signed by the current private key. On receipt of a 200 response from Intersight the device connector commits the new key to its local database and will use it for all future authentication requests. Intersight will then allow both the previous and rotated key periods until the device connects with the rotated key, at which point the previous key is invalidated and removed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PublicAccessKeyRotated
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The device connector public key used by Intersight for encryption. The public key is used to encrypt ephemeral aes keys to be used for decrypting sensitive data from Intersight. Must be a PEM encoded RSA public key string."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1645,6 +1656,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool ReadOnly
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Request the device to rotate its key pair. SRE team may set this field to trigger the device to rotate its key pair in conditions where it has been identified that the device's key has been compromised. When RotateAccessKey is set to true the device will be forced to re-connect and rotate its key."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool RotateAccessKey
         {
             get;
             set;
@@ -3337,6 +3359,18 @@ namespace Intersight.PowerShell
 
 
 
+
+
+        // <summary>
+        /// <para type="description">"Request the device to rotate its key pair. SRE team may set this field to trigger the device to rotate its key pair in conditions where it has been identified that the device's key has been compromised. When RotateAccessKey is set to true the device will be forced to re-connect and rotate its key."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool RotateAccessKey
+        {
+            get;
+            set;
+        }
 
 
 

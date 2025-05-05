@@ -348,6 +348,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The current policy has to be redeployed only because there are other policy changes that require this."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsOnlyRequiredByOtherPolicies
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -377,6 +387,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> RequiredByPolicies
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -391,6 +411,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Disruptions = this.Disruptions;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsOnlyRequiredByOtherPolicies"))
+            {
+                initObject.IsOnlyRequiredByOtherPolicies = this.IsOnlyRequiredByOtherPolicies;
+            }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("PolicyName"))
             {
@@ -399,6 +423,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PolicyPendingAction"))
             {
                 initObject.PolicyPendingAction = this.PolicyPendingAction;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RequiredByPolicies"))
+            {
+                initObject.RequiredByPolicies = this.RequiredByPolicies;
             }
             WriteObject(initObject);
         }
@@ -572,6 +600,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The type of the policy object associated with the profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ParentPolicyObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The type of the parent object present in config result context."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -607,6 +645,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ParentMoid"))
             {
                 initObject.ParentMoid = this.ParentMoid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ParentPolicyObjectType"))
+            {
+                initObject.ParentPolicyObjectType = this.ParentPolicyObjectType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ParentType"))
             {
@@ -810,6 +852,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Qualifiers to control the action being triggered. Action qualifiers are to be specified based on the type of disruptions that an action is to be restricted to. For example, trigger the 'Deploy' action to only perform network and management plane configurations."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.PolicyActionQualifier ActionQualifier
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -857,6 +909,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
                 initObject.Action = this.Action;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ActionQualifier"))
+            {
+                initObject.ActionQualifier = this.ActionQualifier;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {

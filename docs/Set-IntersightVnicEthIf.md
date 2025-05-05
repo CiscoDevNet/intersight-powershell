@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< VnicCdn>][-EthAdapterPolicy< VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< VnicEthNetworkPolicyRelationship>][-EthQosPolicy< VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IpLease< IppoolIpLeaseRelationship>][-IscsiBootPolicy< VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< MacpoolLeaseRelationship>][-MacPool< MacpoolPoolRelationship>][[-Moid]< string>][-Name< string>][-Order< long>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SrcTemplate< VnicVnicTemplateRelationship>][-SriovSettings< VnicSriovSettings>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-UsnicSettings< VnicUsnicSettings>][-VmqSettings< VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< VnicCdn>][-EthAdapterPolicy< VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< VnicEthNetworkPolicyRelationship>][-EthQosPolicy< VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IscsiBootPolicy< VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< MacpoolLeaseRelationship>][-MacPool< MacpoolPoolRelationship>][[-Moid]< string>][-Name< string>][-Order< long>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SrcTemplate< VnicVnicTemplateRelationship>][-SriovSettings< VnicSriovSettings>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-UsnicSettings< VnicUsnicSettings>][-VmqSettings< VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -150,24 +150,6 @@ Enabling failover ensures that traffic from the vNIC automatically fails over to
 
 ```yaml
 Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -IpLease
-A reference to a ippoolIpLease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: IppoolIpLeaseRelationship
 Parameter Sets: (All)
 Aliases:
 
