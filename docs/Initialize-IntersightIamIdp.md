@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamIdp.ClassIdEnum>][-DomainName< string>][-DomainNames< System.Collections.Generic.List`1[string]>][-EnableSingleLogout< bool>][-Metadata< string>][-Moid< string>][-Name< string>][-ObjectType< IamIdp.ObjectTypeEnum>][-SkipWarning< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< IamIdp.TypeEnum>][-Usergroups< System.Collections.Generic.List`1[Model.IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[Model.IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamIdp.ClassIdEnum>][-DomainName< string>][-DomainNames< System.Collections.Generic.List`1[string]>][-EnableSingleLogout< bool>][-LdapMeta< Model.IamLdapMetaRelationship>][-Metadata< string>][-Moid< string>][-Name< string>][-ObjectType< IamIdp.ObjectTypeEnum>][-SkipWarning< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< IamIdp.TypeEnum>][-Usergroups< System.Collections.Generic.List`1[Model.IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[Model.IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -89,6 +89,24 @@ Setting that indicates whether &apos;Single Logout (SLO)&apos; has been enabled 
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LdapMeta
+A reference to a iamLdapMeta resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.IamLdapMetaRelationship
 Parameter Sets: (All)
 Aliases:
 

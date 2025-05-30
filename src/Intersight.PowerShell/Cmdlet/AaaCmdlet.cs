@@ -110,6 +110,18 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The response code of the operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long HttpResponseCode
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
         /// <para type="description">"The instance id of AuditRecordLocal, which is used to identify if the comming AuditRecordLocal was already processed before."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]

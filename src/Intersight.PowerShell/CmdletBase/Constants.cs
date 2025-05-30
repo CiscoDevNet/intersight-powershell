@@ -4,7 +4,7 @@ namespace Intersight.PowerShell
     {
         public const int MaxTop = 1000;
 
-        public const int MaxGetObject = 0;
+        public const int MaxGetObject = 10000;
 
         public const int NUMBER_OF_PAGE = MaxGetObject / MaxTop;
 
