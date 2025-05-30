@@ -1479,6 +1479,120 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamDefaultAuthentication.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamDefaultAuthentication")]
+    public class InitializeIntersightIamDefaultAuthentication : PSCmdlet
+    {
+        public InitializeIntersightIamDefaultAuthentication()
+        {
+            ClassId = IamDefaultAuthentication.ClassIdEnum.IamDefaultAuthentication;
+            DefaultAuthenticationMethod = IamDefaultAuthentication.DefaultAuthenticationMethodEnum.Local;
+            ObjectType = IamDefaultAuthentication.ObjectTypeEnum.IamDefaultAuthentication;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamDefaultAuthentication.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The default authentication method used to login into Intersight.\n* `Local` - Local authentication uses credentials stored within the Intersight platform for user access.\n* `SSO` - SSO authentication uses an external identity provider for user access.\n* `LDAP` - LDAP authentication uses external LDAP servers for user access."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamDefaultAuthentication.DefaultAuthenticationMethodEnum DefaultAuthenticationMethod
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a iamIdp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamIdpRelationship LdapDomain
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamDefaultAuthentication.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamDefaultAuthentication initObject = new Intersight.Model.IamDefaultAuthentication();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultAuthenticationMethod"))
+            {
+                initObject.DefaultAuthenticationMethod = this.DefaultAuthenticationMethod;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LdapDomain"))
+            {
+                initObject.LdapDomain = this.LdapDomain;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize IamDomainGroup.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightIamDomainGroup")]
@@ -2972,6 +3086,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a iamLdapMeta resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamLdapMetaRelationship LdapMeta
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"SAML metadata of the IdP."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -3082,6 +3206,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("EnableSingleLogout"))
             {
                 initObject.EnableSingleLogout = this.EnableSingleLogout;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LdapMeta"))
+            {
+                initObject.LdapMeta = this.LdapMeta;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Metadata"))
             {
@@ -4043,6 +4171,105 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
                 initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamLdapMeta.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamLdapMeta")]
+    public class InitializeIntersightIamLdapMeta : PSCmdlet
+    {
+        public InitializeIntersightIamLdapMeta()
+        {
+            ClassId = IamLdapMeta.ClassIdEnum.IamLdapMeta;
+            ObjectType = IamLdapMeta.ObjectTypeEnum.IamLdapMeta;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapMeta.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a iamIdp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamIdpRelationship Idp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapMeta.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamLdapMeta initObject = new Intersight.Model.IamLdapMeta();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Idp"))
+            {
+                initObject.Idp = this.Idp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))

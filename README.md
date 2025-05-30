@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2025041004
-- C# SDK version: 1.0.11.2025041004
+- Intersight.PowerShell version: 1.0.11.2025051220
+- C# SDK version: 1.0.11.2025051220
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025041004"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025051220"}
 ```
 or
 
@@ -1130,6 +1130,10 @@ ConvergedinfraServerComplianceDetails | [**Get-IntersightConvergedinfraServerCom
 ConvergedinfraStorageComplianceDetails | [**Get-IntersightConvergedinfraStorageComplianceDetails**](docs/Get-IntersightConvergedinfraStorageComplianceDetails.md) | Read a 'ConvergedinfraStorageComplianceDetails' resource.
 ConvergedinfraSwitchComplianceDetails | [**Get-IntersightConvergedinfraSwitchComplianceDetails**](docs/Get-IntersightConvergedinfraSwitchComplianceDetails.md) | Read a 'ConvergedinfraSwitchComplianceDetails' resource.
 ConvergedinfraPod | [**Set-IntersightConvergedinfraPod**](docs/Set-IntersightConvergedinfraPod.md) | Update a 'ConvergedinfraPod' resource.
+CoremanagementCoreFile | [**Get-IntersightCoremanagementCoreFile**](docs/Get-IntersightCoremanagementCoreFile.md) | Read a 'CoremanagementCoreFile' resource.
+CoremanagementDownload | [**Get-IntersightCoremanagementDownload**](docs/Get-IntersightCoremanagementDownload.md) | Read a 'CoremanagementDownload' resource.
+CoremanagementCoreFile | [**Remove-IntersightCoremanagementCoreFile**](docs/Remove-IntersightCoremanagementCoreFile.md) | Delete a 'CoremanagementCoreFile' resource.
+CoremanagementCoreFile | [**Set-IntersightCoremanagementCoreFile**](docs/Set-IntersightCoremanagementCoreFile.md) | Update a 'CoremanagementCoreFile' resource.
 CrdCustomResource | [**Get-IntersightCrdCustomResource**](docs/Get-IntersightCrdCustomResource.md) | Read a 'CrdCustomResource' resource.
 CrdCustomResource | [**New-IntersightCrdCustomResource**](docs/New-IntersightCrdCustomResource.md) | Create a 'CrdCustomResource' resource.
 CrdCustomResource | [**Remove-IntersightCrdCustomResource**](docs/Remove-IntersightCrdCustomResource.md) | Delete a 'CrdCustomResource' resource.
@@ -1148,6 +1152,7 @@ DnacSiteIpPool | [**Get-IntersightDnacSiteIpPool**](docs/Get-IntersightDnacSiteI
 DnacTemplate | [**Get-IntersightDnacTemplate**](docs/Get-IntersightDnacTemplate.md) | Read a 'DnacTemplate' resource.
 DnacTransit | [**Get-IntersightDnacTransit**](docs/Get-IntersightDnacTransit.md) | Read a 'DnacTransit' resource.
 DnacVirtualNetworkFabricSite | [**Get-IntersightDnacVirtualNetworkFabricSite**](docs/Get-IntersightDnacVirtualNetworkFabricSite.md) | Read a 'DnacVirtualNetworkFabricSite' resource.
+EnergyDailyMetrics | [**New-IntersightEnergyDailyMetrics**](docs/New-IntersightEnergyDailyMetrics.md) | Create a 'EnergyDailyMetrics' resource.
 EnergyMetrics | [**New-IntersightEnergyMetrics**](docs/New-IntersightEnergyMetrics.md) | Create a 'EnergyMetrics' resource.
 EquipmentChassis | [**Get-IntersightEquipmentChassis**](docs/Get-IntersightEquipmentChassis.md) | Read a 'EquipmentChassis' resource.
 EquipmentChassisIdPool | [**Get-IntersightEquipmentChassisIdPool**](docs/Get-IntersightEquipmentChassisIdPool.md) | Read a 'EquipmentChassisIdPool' resource.
@@ -1761,6 +1766,7 @@ IamAppRegistration | [**Get-IntersightIamAppRegistration**](docs/Get-IntersightI
 IamBannerMessage | [**Get-IntersightIamBannerMessage**](docs/Get-IntersightIamBannerMessage.md) | Read a 'IamBannerMessage' resource.
 IamCertificate | [**Get-IntersightIamCertificate**](docs/Get-IntersightIamCertificate.md) | Read a 'IamCertificate' resource.
 IamCertificateRequest | [**Get-IntersightIamCertificateRequest**](docs/Get-IntersightIamCertificateRequest.md) | Read a 'IamCertificateRequest' resource.
+IamDefaultAuthentication | [**Get-IntersightIamDefaultAuthentication**](docs/Get-IntersightIamDefaultAuthentication.md) | Read a 'IamDefaultAuthentication' resource.
 IamDomainGroup | [**Get-IntersightIamDomainGroup**](docs/Get-IntersightIamDomainGroup.md) | Read a 'IamDomainGroup' resource.
 IamDomainNameInfo | [**Get-IntersightIamDomainNameInfo**](docs/Get-IntersightIamDomainNameInfo.md) | Read a 'IamDomainNameInfo' resource.
 IamEndPointPrivilege | [**Get-IntersightIamEndPointPrivilege**](docs/Get-IntersightIamEndPointPrivilege.md) | Read a 'IamEndPointPrivilege' resource.
@@ -1777,6 +1783,7 @@ IamIpAccessManagement | [**Get-IntersightIamIpAccessManagement**](docs/Get-Inter
 IamIpAddress | [**Get-IntersightIamIpAddress**](docs/Get-IntersightIamIpAddress.md) | Read a 'IamIpAddress' resource.
 IamLdapConfigParams | [**Get-IntersightIamLdapConfigParams**](docs/Get-IntersightIamLdapConfigParams.md) | Read a 'IamLdapConfigParams' resource.
 IamLdapGroup | [**Get-IntersightIamLdapGroup**](docs/Get-IntersightIamLdapGroup.md) | Read a 'IamLdapGroup' resource.
+IamLdapMeta | [**Get-IntersightIamLdapMeta**](docs/Get-IntersightIamLdapMeta.md) | Read a 'IamLdapMeta' resource.
 IamLdapPolicy | [**Get-IntersightIamLdapPolicy**](docs/Get-IntersightIamLdapPolicy.md) | Read a 'IamLdapPolicy' resource.
 IamLdapProvider | [**Get-IntersightIamLdapProvider**](docs/Get-IntersightIamLdapProvider.md) | Read a 'IamLdapProvider' resource.
 IamLocalUserPassword | [**Get-IntersightIamLocalUserPassword**](docs/Get-IntersightIamLocalUserPassword.md) | Read a 'IamLocalUserPassword' resource.
@@ -1862,6 +1869,7 @@ IamAppRegistration | [**Set-IntersightIamAppRegistration**](docs/Set-IntersightI
 IamBannerMessage | [**Set-IntersightIamBannerMessage**](docs/Set-IntersightIamBannerMessage.md) | Update a 'IamBannerMessage' resource.
 IamCertificate | [**Set-IntersightIamCertificate**](docs/Set-IntersightIamCertificate.md) | Update a 'IamCertificate' resource.
 IamCertificateRequest | [**Set-IntersightIamCertificateRequest**](docs/Set-IntersightIamCertificateRequest.md) | Update a 'IamCertificateRequest' resource.
+IamDefaultAuthentication | [**Set-IntersightIamDefaultAuthentication**](docs/Set-IntersightIamDefaultAuthentication.md) | Update a 'IamDefaultAuthentication' resource.
 IamDomainNameInfo | [**Set-IntersightIamDomainNameInfo**](docs/Set-IntersightIamDomainNameInfo.md) | Update a 'IamDomainNameInfo' resource.
 IamEndPointUser | [**Set-IntersightIamEndPointUser**](docs/Set-IntersightIamEndPointUser.md) | Update a 'IamEndPointUser' resource.
 IamEndPointUserPolicy | [**Set-IntersightIamEndPointUserPolicy**](docs/Set-IntersightIamEndPointUserPolicy.md) | Update a 'IamEndPointUserPolicy' resource.
