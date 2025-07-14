@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightCondAlarmSuppression [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Classifications< System.Collections.Generic.List`1[CondAlarmClassificationRelationship]>][-Description< string>][-Entity< MoBaseMoRelationship>][-Moid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightCondAlarmSuppression [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Classifications< System.Collections.Generic.List`1[CondAlarmClassificationRelationship]>][-Description< string>][-Entity< MoBaseMoRelationship>][-Moid< string>][[-Name]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -101,6 +101,21 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+The name that identifies the alarm suppression.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: true
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

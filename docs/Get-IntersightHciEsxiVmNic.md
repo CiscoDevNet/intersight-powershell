@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightFunctionsFunction
+# Get-IntersightHciEsxiVmNic
 
 ## SYNOPSIS
-Get the FunctionsFunction
+Get the HciEsxiVmNic
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightFunctionsFunction [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightHciEsxiVmNic [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightFunctionsFunction [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightHciEsxiVmNic [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FunctionsFunction&apos; resource.
+Read a &apos;HciEsxiVmNic&apos; resource.
 A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -35,27 +35,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsFunction
+PS C:\> $result = Get-IntersightHciEsxiVmNic
 ```
-Above example returns the list of FunctionsFunction.
+Above example returns the list of HciEsxiVmNic.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsFunction -Name "MoName"
+PS C:\> $result = Get-IntersightHciEsxiVmNic -Name "MoName"
 ```
-Above example returns the FunctionsFunction matched with name.
+Above example returns the HciEsxiVmNic matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsFunction -Organization $organization
+PS C:\> $result = Get-IntersightHciEsxiVmNic -Organization $organization
 ```
-Above example returns the list of FunctionsFunction available under the $organization .
+Above example returns the list of HciEsxiVmNic available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsFunction -InlineCount allpages
+PS C:\> $result = Get-IntersightHciEsxiVmNic -InlineCount allpages
 ```
-Above example returns the list of FunctionsFunction along with count.
+Above example returns the list of HciEsxiVmNic along with count.
 
 ## PARAMETERS
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the FunctionsFunction.
+Specifies the name of the HciEsxiVmNic.
 
 ```yaml
 Type: String
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the FunctionsFunction under it.
+Specifies the organization, to fetch the HciEsxiVmNic under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -284,10 +284,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[New-IntersightFunctionsFunction](./New-IntersightFunctionsFunction.md)
-
-[Remove-IntersightFunctionsFunction](./Remove-IntersightFunctionsFunction.md)
-
-[Set-IntersightFunctionsFunction](./Set-IntersightFunctionsFunction.md)
 

@@ -180,6 +180,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Cooling mode representation of the server.\n* `Air` - Cooling mode of the device is set to Air.\n* `Immersion` - Cooling mode of the device is set to Immersion."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeBlade.CoolingModeEnum CoolingMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Total processing capacity of the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2267,6 +2278,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Cooling mode representation of the server, supported modes include Air and Immersion.\n* `Air` - Cooling mode of the device is set to Air.\n* `Immersion` - Cooling mode of the device is set to Immersion."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputePhysicalSummary.CoolingModeEnum CoolingMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Total processing capacity of the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3053,6 +3075,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Cooling mode representation of the server.\n* `Air` - Cooling mode of the device is set to Air.\n* `Immersion` - Cooling mode of the device is set to Immersion."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeRackUnit.CoolingModeEnum CoolingMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Total processing capacity of the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3117,6 +3150,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -5352,6 +5386,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The fault summary for the server."</para>
         /// </summary>
@@ -6162,6 +6197,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
 

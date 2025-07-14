@@ -50,7 +50,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of a pod extracted from Dn within the Cisco Application Policy Infrastructure Controller (APIC)."</para>
+        /// <para type="description">"Pod name extracted from DN in Cisco Application Policy Infrastructure Controller (APIC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -70,7 +70,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Pod type of an object within the Cisco Application Policy Infrastructure Controller (APIC)."</para>
+        /// <para type="description">"Object pod type in Cisco Application Policy Infrastructure Controller (APIC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -153,7 +153,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -173,7 +173,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Application name of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Application name of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -290,7 +290,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -310,7 +310,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Object name in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -407,7 +407,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -427,7 +427,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Object name in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -534,7 +534,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -554,7 +554,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Object name in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -637,7 +637,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Address of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Object address in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -657,7 +657,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -677,7 +677,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Object name in the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -697,7 +697,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Pod of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Object pod in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -788,7 +788,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Id of an leaf node within the Cisco Application Policy Infrastructure Controller (APIC)."</para>
+        /// <para type="description">"Leaf node ID in Cisco Application Policy Infrastructure Controller (APIC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -798,7 +798,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of an leaf node within the Cisco Application Policy Infrastructure Controller (APIC)."</para>
+        /// <para type="description">"Leaf node name in Cisco Application Policy Infrastructure Controller (APIC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -873,7 +873,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -893,7 +893,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Fabric Leaf Node Distinguished Name."</para>
+        /// <para type="description">"Fabric leaf node Distinguished Name (DN)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -903,7 +903,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Fabric Leaf Node Identification Number."</para>
+        /// <para type="description">"Fabric leaf node identification number."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -923,7 +923,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of an object within the Cisco Application Policy Infrastructure Controller."</para>
+        /// <para type="description">"Object name in Cisco Application Policy Infrastructure Controller (APIC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1028,7 +1028,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1048,7 +1048,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"L3Out Name of an object within the Cisco Application Policy Infrastructure Controller."</para>
+        /// <para type="description">"Object L3Out name in Cisco Application Policy Infrastructure Controller (APIC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1165,7 +1165,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1175,7 +1175,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"IP of an object within the Cisco Application Policy Infrastructure Controller."</para>
+        /// <para type="description">"IP of an object in Cisco Application Policy Infrastructure Controller (APIC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1195,7 +1195,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of an object within the Cisco Application Policy Infrastructure Controller."</para>
+        /// <para type="description">"Object name in Cisco Application Policy Infrastructure Controller (APIC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1296,7 +1296,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Description for Tenant in Cisco Application Policy Infrastructure Controller."</para>
+        /// <para type="description">"Tenant description in Cisco Application Policy Infrastructure Controller (APIC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1306,7 +1306,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1326,7 +1326,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Tenant Name in Cisco Application Policy Infrastructure Controller."</para>
+        /// <para type="description">"Tenant name in Cisco Application Policy Infrastructure Controller (APIC)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1423,7 +1423,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1443,7 +1443,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Name of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
+        /// <para type="description">"Object name in Cisco Application Policy Infrastructure Controller (APIC) GUI."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1536,7 +1536,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name generated from URL Parameters."</para>
+        /// <para type="description">"Distinguished name generated from URL parameters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1556,7 +1556,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"VRF Namegenerated from URL Parameters."</para>
+        /// <para type="description">"VRF name generated from URL parameters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

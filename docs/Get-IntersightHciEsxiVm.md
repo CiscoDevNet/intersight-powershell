@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightFunctionsRuntime
+# Get-IntersightHciEsxiVm
 
 ## SYNOPSIS
-Get the FunctionsRuntime
+Get the HciEsxiVm
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightFunctionsRuntime [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightHciEsxiVm [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightFunctionsRuntime [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightHciEsxiVm [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FunctionsRuntime&apos; resource.
+Read a &apos;HciEsxiVm&apos; resource.
 A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -35,27 +35,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsRuntime
+PS C:\> $result = Get-IntersightHciEsxiVm
 ```
-Above example returns the list of FunctionsRuntime.
+Above example returns the list of HciEsxiVm.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsRuntime -Name "MoName"
+PS C:\> $result = Get-IntersightHciEsxiVm -Name "MoName"
 ```
-Above example returns the FunctionsRuntime matched with name.
+Above example returns the HciEsxiVm matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsRuntime -Organization $organization
+PS C:\> $result = Get-IntersightHciEsxiVm -Organization $organization
 ```
-Above example returns the list of FunctionsRuntime available under the $organization .
+Above example returns the list of HciEsxiVm available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsRuntime -InlineCount allpages
+PS C:\> $result = Get-IntersightHciEsxiVm -InlineCount allpages
 ```
-Above example returns the list of FunctionsRuntime along with count.
+Above example returns the list of HciEsxiVm along with count.
 
 ## PARAMETERS
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the FunctionsRuntime.
+Specifies the name of the HciEsxiVm.
 
 ```yaml
 Type: String
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the FunctionsRuntime under it.
+Specifies the organization, to fetch the HciEsxiVm under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -285,9 +285,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFunctionsRuntime](./New-IntersightFunctionsRuntime.md)
-
-[Remove-IntersightFunctionsRuntime](./Remove-IntersightFunctionsRuntime.md)
-
-[Set-IntersightFunctionsRuntime](./Set-IntersightFunctionsRuntime.md)
+[Set-IntersightHciEsxiVm](./Set-IntersightHciEsxiVm.md)
 

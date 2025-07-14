@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicIscsiBootPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoTargetvendorName< string>][-Chap< Model.VnicIscsiAuthProfile>][-ClassId< VnicIscsiBootPolicy.ClassIdEnum>][-Description< string>][-InitiatorIpPool< Model.IppoolPoolRelationship>][-InitiatorIpSource< VnicIscsiBootPolicy.InitiatorIpSourceEnum>][-InitiatorStaticIpV4Address< string>][-InitiatorStaticIpV4Config< Model.IppoolIpV4Config>][-IscsiAdapterPolicy< Model.VnicIscsiAdapterPolicyRelationship>][-Moid< string>][-MutualChap< Model.VnicIscsiAuthProfile>][-Name< string>][-ObjectType< VnicIscsiBootPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PrimaryTargetPolicy< Model.VnicIscsiStaticTargetPolicyRelationship>][-SecondaryTargetPolicy< Model.VnicIscsiStaticTargetPolicyRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetSourceType< VnicIscsiBootPolicy.TargetSourceTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicIscsiBootPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoTargetvendorName< string>][-Chap< Model.VnicIscsiAuthProfile>][-ClassId< VnicIscsiBootPolicy.ClassIdEnum>][-Description< string>][-InitiatorIpPool< Model.IppoolPoolRelationship>][-InitiatorIpSource< VnicIscsiBootPolicy.InitiatorIpSourceEnum>][-InitiatorStaticIpV4Address< string>][-InitiatorStaticIpV4Config< Model.IppoolIpV4Config>][-InitiatorStaticIpV6Address< string>][-InitiatorStaticIpV6Config< Model.IppoolIpV6Config>][-IscsiAdapterPolicy< Model.VnicIscsiAdapterPolicyRelationship>][-IscsiIpType< VnicIscsiBootPolicy.IscsiIpTypeEnum>][-Moid< string>][-MutualChap< Model.VnicIscsiAuthProfile>][-Name< string>][-ObjectType< VnicIscsiBootPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PrimaryTargetPolicy< Model.VnicIscsiStaticTargetPolicyRelationship>][-SecondaryTargetPolicy< Model.VnicIscsiStaticTargetPolicyRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetSourceType< VnicIscsiBootPolicy.TargetSourceTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoTargetvendorName
-Auto target interface that is represented via the Initiator name or the DHCP vendor ID. The vendor ID can be up to 32 alphanumeric characters.
+Auto target interface that is represented via the Initiator name or the DHCP vendor ID. The vendor ID can be up to 64 characters.
 
 ```yaml
 Type: string
@@ -135,7 +135,7 @@ Accept wildcard characters: False
 ```
 
 ### -InitiatorStaticIpV4Address
-Static IP address provided for iSCSI Initiator.
+Static IPv4 address provided for iSCSI Initiator.
 
 ```yaml
 Type: string
@@ -166,6 +166,38 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -InitiatorStaticIpV6Address
+Static IPv6 address provided for iSCSI Initiator.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InitiatorStaticIpV6Config
+IPv6 configurations such as Prefix, Gateway and DNS for iSCSI Initiator.
+
+Note :- Use Initialize-IntersightIppoolIpV6Config to create the object of complex type IppoolIpV6Config
+
+```yaml
+Type: Model.IppoolIpV6Config
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -IscsiAdapterPolicy
 A reference to a vnicIscsiAdapterPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -174,6 +206,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.VnicIscsiAdapterPolicyRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IscsiIpType
+Type of the IP address requested for iSCSI vNIC - IPv4/IPv6.\n* `IPv4` - IP V4 address type requested.\n* `IPv6` - IP V6 address type requested.
+
+```yaml
+Type: VnicIscsiBootPolicy.IscsiIpTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -390,6 +437,8 @@ PS C:\> Initialize-IntersightVnicIscsiBootPolicy
 ## RELATED LINKS
 
 [Initialize-IntersightIppoolIpV4Config](./Initialize-IntersightIppoolIpV4Config.md)
+
+[Initialize-IntersightIppoolIpV6Config](./Initialize-IntersightIppoolIpV6Config.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
 

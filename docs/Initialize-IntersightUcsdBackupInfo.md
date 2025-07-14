@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-The key used for encrypting the backup file.
+Encryption key for backup file.
 
 ```yaml
 Type: string
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductVersion
-The end device product version when the backup image was taken.
+End device product version at the backup time.
 
 ```yaml
 Type: string

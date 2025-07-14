@@ -39,7 +39,7 @@ namespace Intersight.PowerShell
                 var propertyInfos = this.ModelObject.GetType().GetProperties();
                 foreach (var propertyInfo in propertyInfos)
                 {
-                    if (changedProperties.ContainsKey(propertyInfo.Name))
+                    if (changedProperties.ContainsKey(propertyInfo.Name) && propertyInfo.SetMethod != null)
                     {
                         propertyInfo.SetValue(this.ModelObject, this.MyInvocation.BoundParameters[propertyInfo.Name]);
                     }

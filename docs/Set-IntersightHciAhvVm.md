@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightFunctionsFunctionLastAction
+# Set-IntersightHciAhvVm
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,13 +14,12 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFunctionsFunctionLastAction [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FunctionsFunctionLastAction.ClassIdEnum>][-ObjectType< FunctionsFunctionLastAction.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightHciAhvVm [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-
-Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
+Update a &apos;HciAhvVm&apos; resource.
 
 ## PARAMETERS
 
@@ -39,26 +38,28 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
+### -Moid
+The unique identifier of this Managed Object instance.
 
 ```yaml
-Type: FunctionsFunctionLastAction.ClassIdEnum
+Type: string
 Parameter Sets: (All)
 Aliases:
 
-Required: false
+Required: true
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
 
 ```yaml
-Type: FunctionsFunctionLastAction.ObjectTypeEnum
+Type: System.Collections.Generic.List`1[MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -107,7 +108,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightFunctionsFunctionLastAction
+PS C:\> Set-IntersightHciAhvVm
 ```
 
 { Add example description here }
@@ -125,3 +126,9 @@ PS C:\> Initialize-IntersightFunctionsFunctionLastAction
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-IntersightHciAhvVm](./Get-IntersightHciAhvVm.md)
+
+[Initialize-IntersightHciAhvGuestTools](./Initialize-IntersightHciAhvGuestTools.md)
+
+[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

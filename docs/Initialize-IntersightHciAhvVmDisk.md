@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# New-IntersightFunctionsFunctionVersion
+# Initialize-IntersightHciAhvVmDisk
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,32 +14,15 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFunctionsFunctionVersion [-ActionExecution< WorkflowWorkflowInfoRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Code< string>][-Function< FunctionsFunctionRelationship>][-Moid< string>][-Runtime< FunctionsRuntimeRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightHciAhvVmDisk [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< HciAhvVmDisk.ClassIdEnum>][-Moid< string>][-ObjectType< HciAhvVmDisk.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
 ## DESCRIPTION
-Create a &apos;FunctionsFunctionVersion&apos; resource.
+
+Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
-
-### -ActionExecution
-A reference to a workflowWorkflowInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: WorkflowWorkflowInfoRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AdditionalProperties
 
@@ -56,29 +39,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Code
-Custom function code for Function MO.
+### -ClassId
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Function
-A reference to a functionsFunction resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: FunctionsFunctionRelationship
+Type: HciAhvVmDisk.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -104,14 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Runtime
-A reference to a functionsRuntime resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
+### -ObjectType
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: FunctionsRuntimeRelationship
+Type: HciAhvVmDisk.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -128,7 +90,7 @@ Accept wildcard characters: False
 Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
 
 ```yaml
-Type: System.Collections.Generic.List`1[MoTag]
+Type: System.Collections.Generic.List`1[Model.MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -177,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> New-IntersightFunctionsFunctionVersion
+PS C:\> Initialize-IntersightHciAhvVmDisk
 ```
 
 { Add example description here }
@@ -196,10 +158,4 @@ PS C:\> New-IntersightFunctionsFunctionVersion
 
 ## RELATED LINKS
 
-[Get-IntersightFunctionsFunctionVersion](./Get-IntersightFunctionsFunctionVersion.md)
-
-[Initialize-IntersightFunctionsFunctionLastAction](./Initialize-IntersightFunctionsFunctionLastAction.md)
-
-[Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
-[Set-IntersightFunctionsFunctionVersion](./Set-IntersightFunctionsFunctionVersion.md)
+[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

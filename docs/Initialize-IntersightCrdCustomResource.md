@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -DcLauncher
-Type of custom resource or &apos;kind&apos; in K8s.
+The type of custom resource in Kubernetes.
 
 ```yaml
 Type: string
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -Image
-Docker image URL for public cloud DC.
+The docker image URL for the cloud DC.
 
 ```yaml
 Type: string
@@ -118,7 +118,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-A string property called name which is used as part of a uniqueness constraint. See &apos;identity&apos; specification in this MO definition.
+A string property called &apos;name&apos;, used as part of a uniqueness constraint. Refer to the &apos;identity&apos; specification in this MO definition.
 
 ```yaml
 Type: string
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Namespace
-Namespace to launch the deployment associated with the custom resource.
+Namespace for launching the deployment associated with the custom resource.
 
 ```yaml
 Type: string
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-Port used for public cloud DC.
+Port used for the cloud DC.
 
 ```yaml
 Type: long
@@ -212,7 +212,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetId
-Target ID for public cloud DC.
+Target Id for the cloud DC.
 
 ```yaml
 Type: string
@@ -227,7 +227,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetMoid
-Target Moid for public cloud DC.
+Target MOID for the cloud DC.
 
 ```yaml
 Type: string
@@ -242,7 +242,7 @@ Accept wildcard characters: False
 ```
 
 ### -TargetType
-Target type for public cloud DC.
+Target type for the cloud DC.
 
 ```yaml
 Type: string

@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-User specified description of this MetricsExploration.
+User specified description of the MetricsExploration.
 
 ```yaml
 Type: string
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -Granularity
-The time unit in which the metrics will be aggregated into.
+Time unit for aggregating the metrics.
 
 ```yaml
 Type: string
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsWidget
-True when this MetricsExploration is exposed as a Dashlet widget.
+Set to true when the MetricsExploration is presented as a Dashlet widget.
 
 ```yaml
 Type: bool
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-User specified name of this MetricsExploration.
+User specified name of the MetricsExploration.
 
 ```yaml
 Type: string

@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -Address
-Address of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI.
+Object address in Cisco Application Policy Infrastructure Controller (APIC) GUI.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Dn
-Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI.
+Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI.
 
 ```yaml
 Type: string
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI.
+Object name in the Cisco Application Policy Infrastructure Controller (APIC) GUI.
 
 ```yaml
 Type: string
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Pod
-Pod of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI.
+Object pod in Cisco Application Policy Infrastructure Controller (APIC) GUI.
 
 ```yaml
 Type: string

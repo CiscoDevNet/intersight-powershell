@@ -7735,7 +7735,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"This defines whether we need to operate in an account recovery scenario or not. If yes, then most of the parameters will be populated from an internal MO. So, some of the input parameters MAY be ignored, if this value is set to true."</para>
+        /// <para type="description">"Account recovery scenario flag determining parameter population from internal MO, with possibility of ignoring of input parameters when this value is true."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7745,7 +7745,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Number of iterations we want the hash to be run."</para>
+        /// <para type="description">"Number of hash iterations to run."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7755,7 +7755,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Key encryption key used to encrypt the DEK's on the HyperFlex cluster."</para>
+        /// <para type="description">"Key Encryption Key used to encrypt the DEK's on the HyperFlex cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7765,7 +7765,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Resource id + time of creation used for retrieving the KEK."</para>
+        /// <para type="description">"Resource ID and time for Kek retrieval."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7775,7 +7775,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Last known Key encryption key state for this Key.\n* `NEW` - Key Encryption key is newly created.\n* `ACTIVE` - Key Encryption key is deployed on active resource.\n* `INACTIVE` - Key Encryption key is inactive and not used.\n* `INPROGRESS` - Key Encryption key is in a state where it was used on Intersight but did not receive confirmation from platform of success/failure."</para>
+        /// <para type="description">"Last known state of the Key Encryption Key.\n* `NEW` - Newly created Key Encryption Key (KEK).\n* `ACTIVE` - Deployed Key Encryption Key on active resources.\n* `INACTIVE` - Inactive and unused Key Encryption Key.\n* `INPROGRESS` - Unconfirmed Key Encryption Key usage on Intersight platform."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7805,7 +7805,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Initial passphrase for the encryption policy, password must contain a minimum of 12 characters, with at least 1 lowercase, 1 uppercase, 1 numeric."</para>
+        /// <para type="description">"Initial passphrase for encryption policy, requiring a minimum of 12 characters, including 1 lowercase, 1 uppercase, and 1 numeric character."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7825,7 +7825,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Resource type on which this key will be applied.\n* `CLUSTER` - Encryption is per HyperFlex cluster.\n* `DATASTORE` - Encryption is per dataStore on the HyperFlex cluster.\n* `DRIVE` - Encryption is per drive on the HyperFlex cluster."</para>
+        /// <para type="description">"Resource type for key application.\n* `CLUSTER` - Cluster specific encryption per HyperFlex cluster.\n* `DATASTORE` - Data store encryption on the HyperFlex cluster.\n* `DRIVE` - Drive specific encryption on the HyperFlex cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7845,7 +7845,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Copy of Key encryption key, which is used for sending the key over to the remote device endpoint. It is not persisited anywhere."</para>
+        /// <para type="description">"Temporary copy of KEK used for transfer to remote device endpoint, not persisted anywhere."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

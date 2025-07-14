@@ -796,6 +796,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"CPU over commitment associated with this cluster."</para>
         /// </summary>
@@ -1025,6 +1026,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -2642,6 +2644,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -4908,6 +4911,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"Time when this VM booted up."</para>
@@ -7255,6 +7259,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"CPU over commitment associated with this cluster."</para>
         /// </summary>
@@ -7434,6 +7439,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -8735,6 +8741,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -10046,6 +10053,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"Time when this VM booted up."</para>

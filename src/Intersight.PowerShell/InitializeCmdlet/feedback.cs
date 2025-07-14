@@ -22,7 +22,7 @@ namespace Intersight.PowerShell
 
         }
         // <summary>
-        /// <para type="description">"Account name of the feedback sender. Copied in order to be persisted in case of account removal."</para>
+        /// <para type="description">"Account name of the feedback sender, copied for persistence in case of account removal."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -62,7 +62,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Text of the feedback as provided by the user, if it is a bug or a comment."</para>
+        /// <para type="description">"User feedback text (a bug or a suggestion)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -82,7 +82,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Evalation rating as provided by the user to capture user sentiment regarding the issue.\n* `Excellent` - Option that specifies user's excelent evaluation.\n* `Poor` - Option that specifies user's poor evaluation.\n* `Fair` - Option that specifies user's fair evaluation.\n* `Good` - Option that specifies user's good evaluation."</para>
+        /// <para type="description">"Evaluation rating provided by the user to capture user sentiment regarding the issue.\n* `Excellent` - Option indicating user's excellent evaluation.\n* `Poor` - Option indicating user's poor evaluation.\n* `Fair` - Option indicating user's fair evaluation.\n* `Good` - Option indicating user's good evaluation."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -92,7 +92,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"If a user is open for follow-up or not."</para>
+        /// <para type="description">"User's consent for follow-up communication."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -122,7 +122,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"User's overall satisfaction with the product on a 0-10 scale."</para>
+        /// <para type="description">"User's satisfaction with the product on a 0-10 scale."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -132,7 +132,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Indicates if the user completed the survey. True if completed, false otherwise."</para>
+        /// <para type="description">"Survey completion status (True if completed, False otherwise)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -142,7 +142,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Bunch of last traceId for reproducing user last activity."</para>
+        /// <para type="description">"Collection of last traceId for replicating the user's last activity."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

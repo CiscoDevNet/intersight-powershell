@@ -55,7 +55,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The date version for the API contract changelog item in the format rfc3339 with no fraction seconds set.  Note that there can be more than one item per DateVersion. Example: 2023-12-19T00:00:00Z ."</para>
+        /// <para type="description">"Date version for the API contract changelog item in rfc3339 format, without fractional seconds. Note, multiple items can exist for a single DateVersion. Example: 2023-12-19T00:00:00Z ."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -77,7 +77,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The operationId of the endpoint for which changelog item is being generated."</para>
+        /// <para type="description">"Operation Id of the endpoint for which the changelog item is generated."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -123,7 +123,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The semantic version for the API contract changelog item. Note that there can be more than one item per SemanticVersion."</para>
+        /// <para type="description">"Semantic version for the API contract changelog item. Note, multiple items can exist for a single SemanticVersion."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$")]
@@ -146,7 +146,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The value of the API contract changelog item."</para>
+        /// <para type="description">"The value associated with the API contract changelog item."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -198,7 +198,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The date version for the API contract changelog item in the format rfc3339 with no fraction seconds set.  Note that there can be more than one item per DateVersion. Example: 2023-12-19T00:00:00Z ."</para>
+        /// <para type="description">"Date version for the API contract changelog item in rfc3339 format, without fractional seconds. Note, multiple items can exist for a single DateVersion. Example: 2023-12-19T00:00:00Z ."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -210,7 +210,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The operationId of the endpoint for which changelog item is being generated."</para>
+        /// <para type="description">"Operation Id of the endpoint for which the changelog item is generated."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -236,7 +236,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The semantic version for the API contract changelog item. Note that there can be more than one item per SemanticVersion."</para>
+        /// <para type="description">"Semantic version for the API contract changelog item. Note, multiple items can exist for a single SemanticVersion."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$")]
@@ -259,7 +259,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The value of the API contract changelog item."</para>
+        /// <para type="description">"The value associated with the API contract changelog item."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -321,7 +321,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The date version for the API contract changelog item in the format rfc3339 with no fraction seconds set.  Note that there can be more than one item per DateVersion. Example: 2023-12-19T00:00:00Z ."</para>
+        /// <para type="description">"Date version for the API contract changelog item in rfc3339 format, without fractional seconds. Note, multiple items can exist for a single DateVersion. Example: 2023-12-19T00:00:00Z ."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -333,7 +333,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The operationId of the endpoint for which changelog item is being generated."</para>
+        /// <para type="description">"Operation Id of the endpoint for which the changelog item is generated."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -359,7 +359,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The semantic version for the API contract changelog item. Note that there can be more than one item per SemanticVersion."</para>
+        /// <para type="description">"Semantic version for the API contract changelog item. Note, multiple items can exist for a single SemanticVersion."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$")]
@@ -382,7 +382,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The value of the API contract changelog item."</para>
+        /// <para type="description">"The value associated with the API contract changelog item."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
