@@ -33,7 +33,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Auto generated backup File Name with combination of file prefix given an user input and the timestamp."</para>
+        /// <para type="description">"Auto generated backup file name with user defined prefix and timestamp."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -44,7 +44,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Backup location that contains the backup images for end device which can be used for restore operation."</para>
+        /// <para type="description">"Backup location for restore operation."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -55,7 +55,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Backup server where backup images are maintained."</para>
+        /// <para type="description">"Backup server for storing backup images."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -66,7 +66,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Size of the backup image in bytes."</para>
+        /// <para type="description">"Backup image size in bytes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -100,7 +100,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Time taken for the backup to be completed."</para>
+        /// <para type="description">"Time taken to complete the backup."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -111,7 +111,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The key used for encrypting the backup file."</para>
+        /// <para type="description">"Encryption key for backup file."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -122,7 +122,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Reason for backup failure."</para>
+        /// <para type="description">"The cause of the backup failure."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -133,7 +133,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Backup image got purged or not. The backup images get purged based on the retention count set by the user in the backup config policy."</para>
+        /// <para type="description">"Backup image purge status based on retention policy."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -144,7 +144,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Last modified time when this backup record got updated."</para>
+        /// <para type="description">"Backup record last modified time."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -189,7 +189,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Backup current precentage completion status information."</para>
+        /// <para type="description">"Backup completion percentage status."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -201,7 +201,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The end device product version when the backup image was taken."</para>
+        /// <para type="description">"End device product version at the backup time."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -212,7 +212,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Protocol used for the remote backup. possible values are FTP, SCP and SFTP. Not applicable for the localhost (127.0.0.1)."</para>
+        /// <para type="description">"Supported remote backup protocol (FTP, SCP and SFTP); not applicable for localhost (127.0.0.1)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -245,7 +245,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Backup current status stage information."</para>
+        /// <para type="description">"Backup status stage information."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -256,7 +256,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Start time of backup when it got initiated."</para>
+        /// <para type="description">"Backup initiation start time."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -267,7 +267,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Current status of Backup current."</para>
+        /// <para type="description">"The current backup status."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

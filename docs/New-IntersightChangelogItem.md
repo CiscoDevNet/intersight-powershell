@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -DateVersion
-The date version for the API contract changelog item in the format rfc3339 with no fraction seconds set.  Note that there can be more than one item per DateVersion. Example: 2023-12-19T00:00:00Z .
+Date version for the API contract changelog item in rfc3339 format, without fractional seconds. Note, multiple items can exist for a single DateVersion. Example: 2023-12-19T00:00:00Z .
 
 ```yaml
 Type: DateTime
@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -Entity
-The operationId of the endpoint for which changelog item is being generated.
+Operation Id of the endpoint for which the changelog item is generated.
 
 ```yaml
 Type: string
@@ -102,7 +102,7 @@ Accept wildcard characters: False
 ```
 
 ### -SemanticVersion
-The semantic version for the API contract changelog item. Note that there can be more than one item per SemanticVersion.
+Semantic version for the API contract changelog item. Note, multiple items can exist for a single SemanticVersion.
 
 ```yaml
 Type: string
@@ -134,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Value
-The value of the API contract changelog item.
+The value associated with the API contract changelog item.
 
 ```yaml
 Type: string

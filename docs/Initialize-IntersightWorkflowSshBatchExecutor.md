@@ -89,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Constraints
-Enter the constraints on when this task should match against the task definition.
+Constraints for matching this task against the task definition.
 
 Note :- Use Initialize-IntersightWorkflowTaskConstraints to create the object of complex type WorkflowTaskConstraints
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-A detailed description about the batch APIs.
+Detailed description of the batch APIs.
 
 ```yaml
 Type: string
@@ -136,7 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name for the batch API task.
+Name of the batch API task.
 
 ```yaml
 Type: string
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Outcomes
-All the possible outcomes of this task are captured here. Outcomes property\nis a collection property of type workflow.Outcome objects.\nThe outcomes can be mapped to the message to be shown. The outcomes are\nevaluated in the order they are given. At the end of the outcomes list,\nan catchall success/fail outcome can be added with condition as &apos;true&apos;.\nThis is an optional\nproperty and if not specified the task will be marked as success.
+Collection of possible task outcomes, represented as workflow.Outcome objects. Outcomes can be mapped to messages and are evaluated in the given order. \nA catch-all success or failure outcome with condition &apos;true&apos; can be included at the end. Optional property; if not specified, the task defaults to success.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -183,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -Output
-Intersight Orchestrator allows the extraction of required values from API\nresponses using the API response grammar. These extracted values can be mapped\nto task output parameters defined in task definition.\nThe mapping of API output parameters to the task output parameters is provided\nas JSON in this property.
+JSON mapping of extracted API response values to task output parameters, using API response grammar defined in Intersight Orchestrator.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
@@ -200,7 +200,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetryFromFailedApi
-When an execution of a nth API in the Batch fails,\nRetry from failed API flag indicates if the execution should start from the nth API or the first API during task retry.\nBy default the value is set to false.
+Flag indicating if the retry task should from the failed API or the first API in the batch execution; default value is false.
 
 ```yaml
 Type: bool
@@ -215,7 +215,7 @@ Accept wildcard characters: False
 ```
 
 ### -SkipOnCondition
-The skip expression, if provided, allows the batch API executor to skip the\ntask execution when the given expression evaluates to true.\nThe expression is given as such a golang template that has to be\nevaluated to a final content true/false. The expression is an optional and in\ncase not provided, the API will always be executed.
+Optional skip expression allowing the batch API executor to skip task execution when the provided Go template expression evaluates to true. \nIf not specified, the API will always be executed.
 
 ```yaml
 Type: string
@@ -265,7 +265,7 @@ Accept wildcard characters: False
 ```
 
 ### -UiRenderingData
-This will hold the data needed for task to be rendered in the user interface.
+Data required for rendering the task in the user interface.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 

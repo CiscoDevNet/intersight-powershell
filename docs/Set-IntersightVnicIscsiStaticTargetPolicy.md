@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicIscsiStaticTargetPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-IpAddress< string>][-Lun< VnicLun>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Port< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetName< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVnicIscsiStaticTargetPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-IpAddress< string>][-IscsiIpType< VnicIscsiStaticTargetPolicy.IscsiIpTypeEnum>][-Lun< VnicLun>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Port< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetName< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,10 +54,25 @@ Accept wildcard characters: False
 ```
 
 ### -IpAddress
-The IPv4 address assigned to the iSCSI target.
+The IP address assigned to the iSCSI target.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IscsiIpType
+Type of the IP address requested for iSCSI vNIC - IPv4/IPv6.\n* `IPv4` - IP V4 address type requested.\n* `IPv6` - IP V6 address type requested.
+
+```yaml
+Type: VnicIscsiStaticTargetPolicy.IscsiIpTypeEnum
 Parameter Sets: (All)
 Aliases:
 

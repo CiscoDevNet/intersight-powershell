@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Schedule
-Schedule to create a backup on the target device. Minimum is 4 hours and Max is 1440 hours (30 Days).
+Backup schedule for target device (4 to 1440 hours).
 
 Note :- Use Initialize-IntersightRecoveryBackupSchedule to create the object of complex type RecoveryBackupSchedule
 

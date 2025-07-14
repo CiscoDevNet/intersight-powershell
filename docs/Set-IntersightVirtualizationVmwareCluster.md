@@ -311,3 +311,5 @@ PS C:\> Set-IntersightVirtualizationVmwareCluster
 [Initialize-IntersightVirtualizationComputeCapacity](./Initialize-IntersightVirtualizationComputeCapacity.md)
 
 [Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
+
+[Initialize-IntersightVirtualizationVmwareAttachedResourceTag](./Initialize-IntersightVirtualizationVmwareAttachedResourceTag.md)

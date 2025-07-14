@@ -62,7 +62,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The file name for the backup image. This name is added as a prefix in the name for the backup image. A unique file name for the backup image is created along with a timestamp. For example: prefix-1572431305418."</para>
+        /// <para type="description">"Backup image file name prefix with timestamp (e.g., prefix-1572431305418)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -72,7 +72,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Specifies whether the backup will be stored locally or remotely.\n* `Network Share` - The backup is stored remotely on a separate server.\n* `Local Storage` - The backup is stored locally on the endpoint."</para>
+        /// <para type="description">"Backup storage location (local or remote).\n* `Network Share` - Backup is stored remotely on a separate server.\n* `Local Storage` - Backup is stored locally on endpoint."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -122,7 +122,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Password of Backup server."</para>
+        /// <para type="description">"The backup server password."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -132,7 +132,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The file system path where the backup images must be stored. Include the IP address/hostname of the network share location and the complete file system path. For example: 172.29.109.234/var/backups/."</para>
+        /// <para type="description">"File system path for storing backup images, including IP address/hostname (e.g., 172.29.109.234/var/backups/)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -142,7 +142,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Protocol for transferring the backup image to the network share location.\n* `SCP` - Secure Copy Protocol (SCP) to access the file server.\n* `SFTP` - SSH File Transfer Protocol (SFTP) to access file server.\n* `FTP` - File Transfer Protocol (FTP) to access file server."</para>
+        /// <para type="description">"Protocol for backup transfer to network share.\n* `SCP` - Secure Copy Protocol (SCP) to access file server.\n* `SFTP` - SSH File Transfer Protocol (SFTP) to access file server.\n* `FTP` - File Transfer Protocol (FTP) to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -152,7 +152,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Number of backup copies maintained on the local or remote server. When the created backup files exceed this number, the initial backup files are overwritten in a sequential manner."</para>
+        /// <para type="description">"Number of backup copies maintained on local or remote server (older backups overwritten)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(1, 365)]
@@ -172,7 +172,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Username for the backup server."</para>
+        /// <para type="description">"The backup server username."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -565,7 +565,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The time at which the backup is to be run on a given day. Applicable when the frequency unit is daily."</para>
+        /// <para type="description">"The daily backup run time."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -575,7 +575,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The frequency at which the backup schedule must run.\n* `Daily` - Allows the user to run the backup daily at a given time.\n* `Periodic` - Allows the user to run the backup after a certain number of hours."</para>
+        /// <para type="description">"Backup schedule frequency.\n* `Daily` - Daily backup scheduling option.\n* `Periodic` - Hourly backup scheduling option."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -585,7 +585,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The frequency, in hours, at which the backup schedule runs.\n* `8` - The backup interval is 8 hours.\n* `4` - The backup interval is 4 hours.\n* `12` - The backup interval is 12 hours.\n* `16` - The backup interval is 16 hours.\n* `20` - The backup interval is 20 hours."</para>
+        /// <para type="description">"Back schedule frequency (in hours).\n* `8` - The backup interval is 8 hours.\n* `4` - The backup interval is 4 hours.\n* `12` - The backup interval is 12 hours.\n* `16` - The backup interval is 16 hours.\n* `20` - The backup interval is 20 hours."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1023,7 +1023,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The file name for the backup image. This name is added as a prefix in the name for the backup image. A unique file name for the backup image is created along with a timestamp. For example: prefix-1572431305418."</para>
+        /// <para type="description">"Backup image file name prefix with timestamp (e.g., prefix-1572431305418)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1033,7 +1033,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Specifies whether the backup will be stored locally or remotely.\n* `Network Share` - The backup is stored remotely on a separate server.\n* `Local Storage` - The backup is stored locally on the endpoint."</para>
+        /// <para type="description">"Backup storage location (local or remote).\n* `Network Share` - Backup is stored remotely on a separate server.\n* `Local Storage` - Backup is stored locally on endpoint."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1083,7 +1083,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Password of Backup server."</para>
+        /// <para type="description">"The backup server password."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1093,7 +1093,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The file system path where the backup images must be stored. Include the IP address/hostname of the network share location and the complete file system path. For example: 172.29.109.234/var/backups/."</para>
+        /// <para type="description">"File system path for storing backup images, including IP address/hostname (e.g., 172.29.109.234/var/backups/)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1103,7 +1103,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Protocol for transferring the backup image to the network share location.\n* `SCP` - Secure Copy Protocol (SCP) to access the file server.\n* `SFTP` - SSH File Transfer Protocol (SFTP) to access file server.\n* `FTP` - File Transfer Protocol (FTP) to access file server."</para>
+        /// <para type="description">"Protocol for backup transfer to network share.\n* `SCP` - Secure Copy Protocol (SCP) to access file server.\n* `SFTP` - SSH File Transfer Protocol (SFTP) to access file server.\n* `FTP` - File Transfer Protocol (FTP) to access file server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1113,7 +1113,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Number of backup copies maintained on the local or remote server. When the created backup files exceed this number, the initial backup files are overwritten in a sequential manner."</para>
+        /// <para type="description">"Number of backup copies maintained on local or remote server (older backups overwritten)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(1, 365)]
@@ -1133,7 +1133,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Username for the backup server."</para>
+        /// <para type="description">"The backup server username."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1252,7 +1252,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Configuration parameters to be passed into the restore workflow."</para>
+        /// <para type="description">"Resource workflow configuration parameters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1443,7 +1443,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Schedule to create a backup on the target device. Minimum is 4 hours and Max is 1440 hours (30 Days)."</para>
+        /// <para type="description">"Backup schedule for target device (4 to 1440 hours)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

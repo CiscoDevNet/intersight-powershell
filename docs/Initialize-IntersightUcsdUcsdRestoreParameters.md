@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Location
-The complete location of the path on the server. The location should be specified in the following format- hostname-or-ipv4address&lt;:port&gt;/absolute-file-path.
+Full server path location in format - hostname-or-ipv4address&lt;:port&gt;/absolute-file-path.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The password of the target backup server. Only required if the target server is accessed using SFTP or SCP protocol.
+Target backup server password for SFTP or SCP access.
 
 ```yaml
 Type: string
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-The protocol used to backup the UCS Director.
+Backup protocol for UCS Director.
 
 ```yaml
 Type: string
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestoreConfigurationFiles
-Decides whether UCS Director property files should also be restored.
+Decision on UCS Director property files restoration.
 
 ```yaml
 Type: bool
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -RestoreLicense
-Decides whether license should also be restored.
+Decision on license restoration.
 
 ```yaml
 Type: bool
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -Username
-The username of the target backup server. Only required if the target server is accessed using SFTP or SCP protocol.
+Target backup server user name for SFTP or SCP access.
 
 ```yaml
 Type: string

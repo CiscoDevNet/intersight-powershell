@@ -57,7 +57,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigParams
-Configuration parameters to be passed into the restore workflow.
+Resource workflow configuration parameters.
 
 Note :- Use Initialize-IntersightRecoveryConfigParams to create the object of complex type RecoveryConfigParams
 

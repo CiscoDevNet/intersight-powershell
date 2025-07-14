@@ -55,7 +55,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Type of custom resource or 'kind' in K8s."</para>
+        /// <para type="description">"The type of custom resource in Kubernetes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -77,7 +77,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Docker image URL for public cloud DC."</para>
+        /// <para type="description">"The docker image URL for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -110,7 +110,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"A string property called name which is used as part of a uniqueness constraint. See 'identity' specification in this MO definition."</para>
+        /// <para type="description">"A string property called 'name', used as part of a uniqueness constraint. Refer to the 'identity' specification in this MO definition."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -121,7 +121,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Namespace to launch the deployment associated with the custom resource."</para>
+        /// <para type="description">"Namespace for launching the deployment associated with the custom resource."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -145,7 +145,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Port used for public cloud DC."</para>
+        /// <para type="description">"Port used for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -169,7 +169,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Target ID for public cloud DC."</para>
+        /// <para type="description">"Target Id for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -180,7 +180,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Target Moid for public cloud DC."</para>
+        /// <para type="description">"Target MOID for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -191,7 +191,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Target type for public cloud DC."</para>
+        /// <para type="description">"Target type for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -243,7 +243,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Type of custom resource or 'kind' in K8s."</para>
+        /// <para type="description">"The type of custom resource in Kubernetes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -255,7 +255,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Docker image URL for public cloud DC."</para>
+        /// <para type="description">"The docker image URL for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -278,7 +278,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"A string property called name which is used as part of a uniqueness constraint. See 'identity' specification in this MO definition."</para>
+        /// <para type="description">"A string property called 'name', used as part of a uniqueness constraint. Refer to the 'identity' specification in this MO definition."</para>
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
@@ -289,7 +289,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Namespace to launch the deployment associated with the custom resource."</para>
+        /// <para type="description">"Namespace for launching the deployment associated with the custom resource."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -303,7 +303,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Port used for public cloud DC."</para>
+        /// <para type="description">"Port used for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -337,7 +337,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Target ID for public cloud DC."</para>
+        /// <para type="description">"Target Id for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -348,7 +348,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Target Moid for public cloud DC."</para>
+        /// <para type="description">"Target MOID for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -359,7 +359,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Target type for public cloud DC."</para>
+        /// <para type="description">"Target type for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -421,7 +421,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Type of custom resource or 'kind' in K8s."</para>
+        /// <para type="description">"The type of custom resource in Kubernetes."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -433,7 +433,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Docker image URL for public cloud DC."</para>
+        /// <para type="description">"The docker image URL for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -456,7 +456,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"A string property called name which is used as part of a uniqueness constraint. See 'identity' specification in this MO definition."</para>
+        /// <para type="description">"A string property called 'name', used as part of a uniqueness constraint. Refer to the 'identity' specification in this MO definition."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -467,7 +467,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Namespace to launch the deployment associated with the custom resource."</para>
+        /// <para type="description">"Namespace for launching the deployment associated with the custom resource."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -481,7 +481,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Port used for public cloud DC."</para>
+        /// <para type="description">"Port used for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -515,7 +515,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Target ID for public cloud DC."</para>
+        /// <para type="description">"Target Id for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -526,7 +526,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Target Moid for public cloud DC."</para>
+        /// <para type="description">"Target MOID for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -537,7 +537,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Target type for public cloud DC."</para>
+        /// <para type="description">"Target type for the cloud DC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

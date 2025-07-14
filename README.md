@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2025051220
-- C# SDK version: 1.0.11.2025051220
+- Intersight.PowerShell version: 1.0.11.2025062323
+- C# SDK version: 1.0.11.2025062323
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025051220"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025062323"}
 ```
 or
 
@@ -1072,9 +1072,13 @@ CloudTfcOrganization | [**Get-IntersightCloudTfcOrganization**](docs/Get-Intersi
 CloudTfcWorkspace | [**Get-IntersightCloudTfcWorkspace**](docs/Get-IntersightCloudTfcWorkspace.md) | Read a 'CloudTfcWorkspace' resource.
 CloudCollectInventory | [**New-IntersightCloudCollectInventory**](docs/New-IntersightCloudCollectInventory.md) | Create a 'CloudCollectInventory' resource.
 CommHttpProxyPolicy | [**Get-IntersightCommHttpProxyPolicy**](docs/Get-IntersightCommHttpProxyPolicy.md) | Read a 'CommHttpProxyPolicy' resource.
+CommTagDefinition | [**Get-IntersightCommTagDefinition**](docs/Get-IntersightCommTagDefinition.md) | Read a 'CommTagDefinition' resource.
 CommHttpProxyPolicy | [**New-IntersightCommHttpProxyPolicy**](docs/New-IntersightCommHttpProxyPolicy.md) | Create a 'CommHttpProxyPolicy' resource.
+CommTagDefinition | [**New-IntersightCommTagDefinition**](docs/New-IntersightCommTagDefinition.md) | Create a 'CommTagDefinition' resource.
 CommHttpProxyPolicy | [**Remove-IntersightCommHttpProxyPolicy**](docs/Remove-IntersightCommHttpProxyPolicy.md) | Delete a 'CommHttpProxyPolicy' resource.
+CommTagDefinition | [**Remove-IntersightCommTagDefinition**](docs/Remove-IntersightCommTagDefinition.md) | Delete a 'CommTagDefinition' resource.
 CommHttpProxyPolicy | [**Set-IntersightCommHttpProxyPolicy**](docs/Set-IntersightCommHttpProxyPolicy.md) | Update a 'CommHttpProxyPolicy' resource.
+CommTagDefinition | [**Set-IntersightCommTagDefinition**](docs/Set-IntersightCommTagDefinition.md) | Update a 'CommTagDefinition' resource.
 ComputeBlade | [**Get-IntersightComputeBlade**](docs/Get-IntersightComputeBlade.md) | Read a 'ComputeBlade' resource.
 ComputeBladeIdentity | [**Get-IntersightComputeBladeIdentity**](docs/Get-IntersightComputeBladeIdentity.md) | Read a 'ComputeBladeIdentity' resource.
 ComputeBoard | [**Get-IntersightComputeBoard**](docs/Get-IntersightComputeBoard.md) | Read a 'ComputeBoard' resource.
@@ -1179,6 +1183,7 @@ EquipmentPsu | [**Get-IntersightEquipmentPsu**](docs/Get-IntersightEquipmentPsu.
 EquipmentPsuControl | [**Get-IntersightEquipmentPsuControl**](docs/Get-IntersightEquipmentPsuControl.md) | Read a 'EquipmentPsuControl' resource.
 EquipmentRackEnclosure | [**Get-IntersightEquipmentRackEnclosure**](docs/Get-IntersightEquipmentRackEnclosure.md) | Read a 'EquipmentRackEnclosure' resource.
 EquipmentRackEnclosureSlot | [**Get-IntersightEquipmentRackEnclosureSlot**](docs/Get-IntersightEquipmentRackEnclosureSlot.md) | Read a 'EquipmentRackEnclosureSlot' resource.
+EquipmentRiser | [**Get-IntersightEquipmentRiser**](docs/Get-IntersightEquipmentRiser.md) | Read a 'EquipmentRiser' resource.
 EquipmentSensor | [**Get-IntersightEquipmentSensor**](docs/Get-IntersightEquipmentSensor.md) | Read a 'EquipmentSensor' resource.
 EquipmentSharedIoModule | [**Get-IntersightEquipmentSharedIoModule**](docs/Get-IntersightEquipmentSharedIoModule.md) | Read a 'EquipmentSharedIoModule' resource.
 EquipmentSwitchCard | [**Get-IntersightEquipmentSwitchCard**](docs/Get-IntersightEquipmentSwitchCard.md) | Read a 'EquipmentSwitchCard' resource.
@@ -1514,36 +1519,32 @@ ForecastCatalog | [**Get-IntersightForecastCatalog**](docs/Get-IntersightForecas
 ForecastDefinition | [**Get-IntersightForecastDefinition**](docs/Get-IntersightForecastDefinition.md) | Read a 'ForecastDefinition' resource.
 ForecastInstance | [**Get-IntersightForecastInstance**](docs/Get-IntersightForecastInstance.md) | Read a 'ForecastInstance' resource.
 ForecastInstance | [**Set-IntersightForecastInstance**](docs/Set-IntersightForecastInstance.md) | Update a 'ForecastInstance' resource.
-FunctionsFunction | [**Get-IntersightFunctionsFunction**](docs/Get-IntersightFunctionsFunction.md) | Read a 'FunctionsFunction' resource.
-FunctionsFunctionVersion | [**Get-IntersightFunctionsFunctionVersion**](docs/Get-IntersightFunctionsFunctionVersion.md) | Read a 'FunctionsFunctionVersion' resource.
-FunctionsRuntime | [**Get-IntersightFunctionsRuntime**](docs/Get-IntersightFunctionsRuntime.md) | Read a 'FunctionsRuntime' resource.
-FunctionsUpload | [**Get-IntersightFunctionsUpload**](docs/Get-IntersightFunctionsUpload.md) | Read a 'FunctionsUpload' resource.
-FunctionsFunction | [**New-IntersightFunctionsFunction**](docs/New-IntersightFunctionsFunction.md) | Create a 'FunctionsFunction' resource.
-FunctionsFunctionVersion | [**New-IntersightFunctionsFunctionVersion**](docs/New-IntersightFunctionsFunctionVersion.md) | Create a 'FunctionsFunctionVersion' resource.
-FunctionsRuntime | [**New-IntersightFunctionsRuntime**](docs/New-IntersightFunctionsRuntime.md) | Create a 'FunctionsRuntime' resource.
-FunctionsUpload | [**New-IntersightFunctionsUpload**](docs/New-IntersightFunctionsUpload.md) | Create a 'FunctionsUpload' resource.
-FunctionsFunction | [**Remove-IntersightFunctionsFunction**](docs/Remove-IntersightFunctionsFunction.md) | Delete a 'FunctionsFunction' resource.
-FunctionsRuntime | [**Remove-IntersightFunctionsRuntime**](docs/Remove-IntersightFunctionsRuntime.md) | Delete a 'FunctionsRuntime' resource.
-FunctionsUpload | [**Remove-IntersightFunctionsUpload**](docs/Remove-IntersightFunctionsUpload.md) | Delete a 'FunctionsUpload' resource.
-FunctionsFunction | [**Set-IntersightFunctionsFunction**](docs/Set-IntersightFunctionsFunction.md) | Update a 'FunctionsFunction' resource.
-FunctionsFunctionVersion | [**Set-IntersightFunctionsFunctionVersion**](docs/Set-IntersightFunctionsFunctionVersion.md) | Update a 'FunctionsFunctionVersion' resource.
-FunctionsRuntime | [**Set-IntersightFunctionsRuntime**](docs/Set-IntersightFunctionsRuntime.md) | Update a 'FunctionsRuntime' resource.
-FunctionsUpload | [**Set-IntersightFunctionsUpload**](docs/Set-IntersightFunctionsUpload.md) | Update a 'FunctionsUpload' resource.
 GraphicsCard | [**Get-IntersightGraphicsCard**](docs/Get-IntersightGraphicsCard.md) | Read a 'GraphicsCard' resource.
 GraphicsController | [**Get-IntersightGraphicsController**](docs/Get-IntersightGraphicsController.md) | Read a 'GraphicsController' resource.
 GraphicsCard | [**Set-IntersightGraphicsCard**](docs/Set-IntersightGraphicsCard.md) | Update a 'GraphicsCard' resource.
 GraphicsController | [**Set-IntersightGraphicsController**](docs/Set-IntersightGraphicsController.md) | Update a 'GraphicsController' resource.
+HciAhvVm | [**Get-IntersightHciAhvVm**](docs/Get-IntersightHciAhvVm.md) | Read a 'HciAhvVm' resource.
+HciAhvVmDisk | [**Get-IntersightHciAhvVmDisk**](docs/Get-IntersightHciAhvVmDisk.md) | Read a 'HciAhvVmDisk' resource.
+HciAhvVmGpu | [**Get-IntersightHciAhvVmGpu**](docs/Get-IntersightHciAhvVmGpu.md) | Read a 'HciAhvVmGpu' resource.
+HciAhvVmNic | [**Get-IntersightHciAhvVmNic**](docs/Get-IntersightHciAhvVmNic.md) | Read a 'HciAhvVmNic' resource.
 HciAlarm | [**Get-IntersightHciAlarm**](docs/Get-IntersightHciAlarm.md) | Read a 'HciAlarm' resource.
 HciCluster | [**Get-IntersightHciCluster**](docs/Get-IntersightHciCluster.md) | Read a 'HciCluster' resource.
 HciCompliance | [**Get-IntersightHciCompliance**](docs/Get-IntersightHciCompliance.md) | Read a 'HciCompliance' resource.
 HciDisk | [**Get-IntersightHciDisk**](docs/Get-IntersightHciDisk.md) | Read a 'HciDisk' resource.
 HciDomainManager | [**Get-IntersightHciDomainManager**](docs/Get-IntersightHciDomainManager.md) | Read a 'HciDomainManager' resource.
 HciEntitlement | [**Get-IntersightHciEntitlement**](docs/Get-IntersightHciEntitlement.md) | Read a 'HciEntitlement' resource.
+HciEsxiVm | [**Get-IntersightHciEsxiVm**](docs/Get-IntersightHciEsxiVm.md) | Read a 'HciEsxiVm' resource.
+HciEsxiVmDisk | [**Get-IntersightHciEsxiVmDisk**](docs/Get-IntersightHciEsxiVmDisk.md) | Read a 'HciEsxiVmDisk' resource.
+HciEsxiVmNic | [**Get-IntersightHciEsxiVmNic**](docs/Get-IntersightHciEsxiVmNic.md) | Read a 'HciEsxiVmNic' resource.
 HciGpu | [**Get-IntersightHciGpu**](docs/Get-IntersightHciGpu.md) | Read a 'HciGpu' resource.
 HciLicense | [**Get-IntersightHciLicense**](docs/Get-IntersightHciLicense.md) | Read a 'HciLicense' resource.
 HciNode | [**Get-IntersightHciNode**](docs/Get-IntersightHciNode.md) | Read a 'HciNode' resource.
+HciPhysicalGpu | [**Get-IntersightHciPhysicalGpu**](docs/Get-IntersightHciPhysicalGpu.md) | Read a 'HciPhysicalGpu' resource.
 HciViolation | [**Get-IntersightHciViolation**](docs/Get-IntersightHciViolation.md) | Read a 'HciViolation' resource.
+HciVirtualGpu | [**Get-IntersightHciVirtualGpu**](docs/Get-IntersightHciVirtualGpu.md) | Read a 'HciVirtualGpu' resource.
+HciAhvVm | [**Set-IntersightHciAhvVm**](docs/Set-IntersightHciAhvVm.md) | Update a 'HciAhvVm' resource.
 HciCluster | [**Set-IntersightHciCluster**](docs/Set-IntersightHciCluster.md) | Update a 'HciCluster' resource.
+HciEsxiVm | [**Set-IntersightHciEsxiVm**](docs/Set-IntersightHciEsxiVm.md) | Update a 'HciEsxiVm' resource.
 HciNode | [**Set-IntersightHciNode**](docs/Set-IntersightHciNode.md) | Update a 'HciNode' resource.
 HclDriverImage | [**Get-IntersightHclDriverImage**](docs/Get-IntersightHclDriverImage.md) | Read a 'HclDriverImage' resource.
 HclExemptedCatalog | [**Get-IntersightHclExemptedCatalog**](docs/Get-IntersightHclExemptedCatalog.md) | Read a 'HclExemptedCatalog' resource.

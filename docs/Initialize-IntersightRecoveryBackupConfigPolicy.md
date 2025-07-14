@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -FileNamePrefix
-The file name for the backup image. This name is added as a prefix in the name for the backup image. A unique file name for the backup image is created along with a timestamp. For example: prefix-1572431305418.
+Backup image file name prefix with timestamp (e.g., prefix-1572431305418).
 
 ```yaml
 Type: string
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocationType
-Specifies whether the backup will be stored locally or remotely.\n* `Network Share` - The backup is stored remotely on a separate server.\n* `Local Storage` - The backup is stored locally on the endpoint.
+Backup storage location (local or remote).\n* `Network Share` - Backup is stored remotely on a separate server.\n* `Local Storage` - Backup is stored locally on endpoint.
 
 ```yaml
 Type: RecoveryBackupConfigPolicy.LocationTypeEnum
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-Password of Backup server.
+The backup server password.
 
 ```yaml
 Type: string
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
-The file system path where the backup images must be stored. Include the IP address/hostname of the network share location and the complete file system path. For example: 172.29.109.234/var/backups/.
+File system path for storing backup images, including IP address/hostname (e.g., 172.29.109.234/var/backups/).
 
 ```yaml
 Type: string
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Protocol for transferring the backup image to the network share location.\n* `SCP` - Secure Copy Protocol (SCP) to access the file server.\n* `SFTP` - SSH File Transfer Protocol (SFTP) to access file server.\n* `FTP` - File Transfer Protocol (FTP) to access file server.
+Protocol for backup transfer to network share.\n* `SCP` - Secure Copy Protocol (SCP) to access file server.\n* `SFTP` - SSH File Transfer Protocol (SFTP) to access file server.\n* `FTP` - File Transfer Protocol (FTP) to access file server.
 
 ```yaml
 Type: RecoveryBackupConfigPolicy.ProtocolEnum
@@ -226,7 +226,7 @@ Accept wildcard characters: False
 ```
 
 ### -RetentionCount
-Number of backup copies maintained on the local or remote server. When the created backup files exceed this number, the initial backup files are overwritten in a sequential manner.
+Number of backup copies maintained on local or remote server (older backups overwritten).
 
 ```yaml
 Type: long
@@ -258,7 +258,7 @@ Accept wildcard characters: False
 ```
 
 ### -UserName
-Username for the backup server.
+The backup server username.
 
 ```yaml
 Type: string

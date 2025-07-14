@@ -130,7 +130,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Function name which used to combine the group buckets into a single timeseries."</para>
+        /// <para type="description">"Function name for combining group buckets into a single timeseries."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -170,7 +170,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Instrument name used to collect measurements for the query."</para>
+        /// <para type="description">"Instrument name for measurement collection in the query."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -180,7 +180,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Indicates if this criterion should be used for the query."</para>
+        /// <para type="description">"Flag indicating if this criterion should be used for the query."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -190,7 +190,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Measurement name that is collected by the instrument for the query."</para>
+        /// <para type="description">"Measurement name for instrument collection in the query."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -200,7 +200,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Function name which used to combine the metrics into granularity buckets."</para>
+        /// <para type="description">"Function name for combining metrics into granularity buckets."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -220,7 +220,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The maximum number of result rows."</para>
+        /// <para type="description">"Maximum number of rows in the result."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -230,7 +230,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Method on how to sort the result rows."</para>
+        /// <para type="description">"Method for sorting the result rows."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -323,7 +323,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"User specified description of this MetricsExploration."</para>
+        /// <para type="description">"User specified description of the MetricsExploration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -333,7 +333,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The time unit in which the metrics will be aggregated into."</para>
+        /// <para type="description">"Time unit for aggregating the metrics."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -353,7 +353,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"True when this MetricsExploration is exposed as a Dashlet widget."</para>
+        /// <para type="description">"Set to true when the MetricsExploration is presented as a Dashlet widget."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -383,7 +383,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"User specified name of this MetricsExploration."</para>
+        /// <para type="description">"User specified name of the MetricsExploration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightFunctionsUpload
+# Get-IntersightHciAhvVmGpu
 
 ## SYNOPSIS
-Get the FunctionsUpload
+Get the HciAhvVmGpu
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightFunctionsUpload [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightHciAhvVmGpu [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightFunctionsUpload [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightHciAhvVmGpu [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;FunctionsUpload&apos; resource.
+Read a &apos;HciAhvVmGpu&apos; resource.
 A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -35,27 +35,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsUpload
+PS C:\> $result = Get-IntersightHciAhvVmGpu
 ```
-Above example returns the list of FunctionsUpload.
+Above example returns the list of HciAhvVmGpu.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsUpload -Name "MoName"
+PS C:\> $result = Get-IntersightHciAhvVmGpu -Name "MoName"
 ```
-Above example returns the FunctionsUpload matched with name.
+Above example returns the HciAhvVmGpu matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsUpload -Organization $organization
+PS C:\> $result = Get-IntersightHciAhvVmGpu -Organization $organization
 ```
-Above example returns the list of FunctionsUpload available under the $organization .
+Above example returns the list of HciAhvVmGpu available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightFunctionsUpload -InlineCount allpages
+PS C:\> $result = Get-IntersightHciAhvVmGpu -InlineCount allpages
 ```
-Above example returns the list of FunctionsUpload along with count.
+Above example returns the list of HciAhvVmGpu along with count.
 
 ## PARAMETERS
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the FunctionsUpload.
+Specifies the name of the HciAhvVmGpu.
 
 ```yaml
 Type: String
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the FunctionsUpload under it.
+Specifies the organization, to fetch the HciAhvVmGpu under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -284,10 +284,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[New-IntersightFunctionsUpload](./New-IntersightFunctionsUpload.md)
-
-[Remove-IntersightFunctionsUpload](./Remove-IntersightFunctionsUpload.md)
-
-[Set-IntersightFunctionsUpload](./Set-IntersightFunctionsUpload.md)
 

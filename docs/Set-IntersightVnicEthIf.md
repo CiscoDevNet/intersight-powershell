@@ -521,6 +521,8 @@ PS C:\> Set-IntersightVnicEthIf
 
 [Initialize-IntersightIppoolIpV4Config](./Initialize-IntersightIppoolIpV4Config.md)
 
+[Initialize-IntersightIppoolIpV6Config](./Initialize-IntersightIppoolIpV6Config.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)

@@ -609,4 +609,6 @@ PS C:\> Set-IntersightVirtualizationVmwareHost
 
 [Initialize-IntersightVirtualizationProductInfo](./Initialize-IntersightVirtualizationProductInfo.md)
 
+[Initialize-IntersightVirtualizationVmwareAttachedResourceTag](./Initialize-IntersightVirtualizationVmwareAttachedResourceTag.md)
+
 [Initialize-IntersightVirtualizationVmwareResourceConsumption](./Initialize-IntersightVirtualizationVmwareResourceConsumption.md)

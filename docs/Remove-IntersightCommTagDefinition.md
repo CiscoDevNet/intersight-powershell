@@ -5,38 +5,38 @@ online version:
 schema: 2.0.0
 ---
 
-# Remove-IntersightFunctionsFunction
+# Remove-IntersightCommTagDefinition
 
 ## SYNOPSIS
-Remove the FunctionsFunction
+Remove the CommTagDefinition
 
 ## SYNTAX
 
 ```
-Remove-IntersightFunctionsFunction -Moid <String> [<CommonParameters>]
+Remove-IntersightCommTagDefinition -Moid <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Delete a &apos;FunctionsFunction&apos; resource.
+Delete a &apos;CommTagDefinition&apos; resource.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Remove-IntersightFunctionsFunction -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+PS C:\> Remove-IntersightCommTagDefinition -Moid "xxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
-Above cmdlet removes the specified FunctionsFunction 
+Above cmdlet removes the specified CommTagDefinition 
 
 ### Example 2
 ```powershell
-PS C:\>Get-IntersightFunctionsFunction -Name "MoName"|  Remove-IntersightFunctionsFunction
+PS C:\>Get-IntersightCommTagDefinition -Name "MoName"|  Remove-IntersightCommTagDefinition
 ```
 Above cmdlet pipes the output of Get cmdlet to Remove cmdlet
 
 ## PARAMETERS
 
 ### -Moid
-Specifyies the Moid of FunctionsFunction.
+Specifyies the Moid of CommTagDefinition.
 
 ```yaml
 Type: String
@@ -64,9 +64,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Get-IntersightFunctionsFunction](./Get-IntersightFunctionsFunction.md)
+[Get-IntersightCommTagDefinition](./Get-IntersightCommTagDefinition.md)
 
-[New-IntersightFunctionsFunction](./New-IntersightFunctionsFunction.md)
+[New-IntersightCommTagDefinition](./New-IntersightCommTagDefinition.md)
 
-[Set-IntersightFunctionsFunction](./Set-IntersightFunctionsFunction.md)
+[Set-IntersightCommTagDefinition](./Set-IntersightCommTagDefinition.md)
 

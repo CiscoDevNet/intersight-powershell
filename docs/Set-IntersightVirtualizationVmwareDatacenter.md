@@ -208,3 +208,5 @@ PS C:\> Set-IntersightVirtualizationVmwareDatacenter
 [Get-IntersightVirtualizationVmwareDatacenter](./Get-IntersightVirtualizationVmwareDatacenter.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightVirtualizationVmwareAttachedResourceTag](./Initialize-IntersightVirtualizationVmwareAttachedResourceTag.md)

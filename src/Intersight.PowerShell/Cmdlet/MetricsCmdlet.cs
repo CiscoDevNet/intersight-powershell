@@ -196,7 +196,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"User specified description of this MetricsExploration."</para>
+        /// <para type="description">"User specified description of the MetricsExploration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -218,7 +218,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The time unit in which the metrics will be aggregated into."</para>
+        /// <para type="description">"Time unit for aggregating the metrics."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -230,7 +230,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"True when this MetricsExploration is exposed as a Dashlet widget."</para>
+        /// <para type="description">"Set to true when the MetricsExploration is presented as a Dashlet widget."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -264,7 +264,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"User specified name of this MetricsExploration."</para>
+        /// <para type="description">"User specified name of the MetricsExploration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -473,7 +473,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"User specified description of this MetricsExploration."</para>
+        /// <para type="description">"User specified description of the MetricsExploration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -485,7 +485,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The time unit in which the metrics will be aggregated into."</para>
+        /// <para type="description">"Time unit for aggregating the metrics."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -507,7 +507,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"True when this MetricsExploration is exposed as a Dashlet widget."</para>
+        /// <para type="description">"Set to true when the MetricsExploration is presented as a Dashlet widget."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -541,7 +541,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"User specified name of this MetricsExploration."</para>
+        /// <para type="description">"User specified name of the MetricsExploration."</para>
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
@@ -780,7 +780,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"User specified description of this MetricsExploration."</para>
+        /// <para type="description">"User specified description of the MetricsExploration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -792,7 +792,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The time unit in which the metrics will be aggregated into."</para>
+        /// <para type="description">"Time unit for aggregating the metrics."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -814,7 +814,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"True when this MetricsExploration is exposed as a Dashlet widget."</para>
+        /// <para type="description">"Set to true when the MetricsExploration is presented as a Dashlet widget."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -848,7 +848,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"User specified name of this MetricsExploration."</para>
+        /// <para type="description">"User specified name of the MetricsExploration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

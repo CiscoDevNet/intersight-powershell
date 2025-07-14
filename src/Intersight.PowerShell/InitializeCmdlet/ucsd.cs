@@ -40,7 +40,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The key used for encrypting the backup file."</para>
+        /// <para type="description">"Encryption key for backup file."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -70,7 +70,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The end device product version when the backup image was taken."</para>
+        /// <para type="description">"End device product version at the backup time."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -210,7 +210,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The complete location of the path on the server. The location should be specified in the following format- hostname-or-ipv4address<:port>/absolute-file-path."</para>
+        /// <para type="description">"Full server path location in format - hostname-or-ipv4address<:port>/absolute-file-path."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -230,7 +230,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The password of the target backup server. Only required if the target server is accessed using SFTP or SCP protocol."</para>
+        /// <para type="description">"Target backup server password for SFTP or SCP access."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -240,7 +240,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The protocol used to backup the UCS Director."</para>
+        /// <para type="description">"Backup protocol for UCS Director."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -250,7 +250,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Decides whether UCS Director property files should also be restored."</para>
+        /// <para type="description">"Decision on UCS Director property files restoration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -260,7 +260,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Decides whether license should also be restored."</para>
+        /// <para type="description">"Decision on license restoration."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -270,7 +270,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The username of the target backup server. Only required if the target server is accessed using SFTP or SCP protocol."</para>
+        /// <para type="description">"Target backup server user name for SFTP or SCP access."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

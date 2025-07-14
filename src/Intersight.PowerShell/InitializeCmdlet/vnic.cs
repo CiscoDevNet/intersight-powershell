@@ -4469,6 +4469,7 @@ namespace Intersight.PowerShell
         {
             ClassId = VnicIscsiBootPolicy.ClassIdEnum.VnicIscsiBootPolicy;
             InitiatorIpSource = VnicIscsiBootPolicy.InitiatorIpSourceEnum.DHCP;
+            IscsiIpType = VnicIscsiBootPolicy.IscsiIpTypeEnum.IPv4;
             ObjectType = VnicIscsiBootPolicy.ObjectTypeEnum.VnicIscsiBootPolicy;
             TargetSourceType = VnicIscsiBootPolicy.TargetSourceTypeEnum.Static;
 
@@ -4484,7 +4485,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Auto target interface that is represented via the Initiator name or the DHCP vendor ID. The vendor ID can be up to 32 alphanumeric characters."</para>
+        /// <para type="description">"Auto target interface that is represented via the Initiator name or the DHCP vendor ID. The vendor ID can be up to 64 characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -4544,7 +4545,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Static IP address provided for iSCSI Initiator."</para>
+        /// <para type="description">"Static IPv4 address provided for iSCSI Initiator."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
@@ -4564,11 +4565,41 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Static IPv6 address provided for iSCSI Initiator."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^(([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{0,4}|:[0-9A-Fa-f]{1,4})?|(:[0-9A-Fa-f]{1,4}){0,2})|(:[0-9A-Fa-f]{1,4}){0,3})|(:[0-9A-Fa-f]{1,4}){0,4})|:(:[0-9A-Fa-f]{1,4}){0,5})((:[0-9A-Fa-f]{1,4}){2}|:(25[0-5]|(2[0-4]|1[0-9]|[1-9])?[0-9])(\\.(25[0-5]|(2[0-4]|1[0-9]|[1-9])?[0-9])){3})|(([0-9A-Fa-f]{1,4}:){1,6}|:):[0-9A-Fa-f]{0,4}|([0-9A-Fa-f]{1,4}:){7}:)$")]
+        public string InitiatorStaticIpV6Address
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv6 configurations such as Prefix, Gateway and DNS for iSCSI Initiator."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IppoolIpV6Config InitiatorStaticIpV6Config
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a vnicIscsiAdapterPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.VnicIscsiAdapterPolicyRelationship IscsiAdapterPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the IP address requested for iSCSI vNIC - IPv4/IPv6.\n* `IPv4` - IP V4 address type requested.\n* `IPv6` - IP V6 address type requested."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicIscsiBootPolicy.IscsiIpTypeEnum IscsiIpType
         {
             get;
             set;
@@ -4701,9 +4732,21 @@ namespace Intersight.PowerShell
             {
                 initObject.InitiatorStaticIpV4Config = this.InitiatorStaticIpV4Config;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorStaticIpV6Address"))
+            {
+                initObject.InitiatorStaticIpV6Address = this.InitiatorStaticIpV6Address;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InitiatorStaticIpV6Config"))
+            {
+                initObject.InitiatorStaticIpV6Config = this.InitiatorStaticIpV6Config;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("IscsiAdapterPolicy"))
             {
                 initObject.IscsiAdapterPolicy = this.IscsiAdapterPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IscsiIpType"))
+            {
+                initObject.IscsiIpType = this.IscsiIpType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
@@ -4836,6 +4879,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightVnicIscsiStaticTargetPolicy()
         {
             ClassId = VnicIscsiStaticTargetPolicy.ClassIdEnum.VnicIscsiStaticTargetPolicy;
+            IscsiIpType = VnicIscsiStaticTargetPolicy.IscsiIpTypeEnum.IPv4;
             ObjectType = VnicIscsiStaticTargetPolicy.ObjectTypeEnum.VnicIscsiStaticTargetPolicy;
 
         }
@@ -4870,11 +4914,21 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The IPv4 address assigned to the iSCSI target."</para>
+        /// <para type="description">"The IP address assigned to the iSCSI target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$")]
+
         public string IpAddress
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the IP address requested for iSCSI vNIC - IPv4/IPv6.\n* `IPv4` - IP V4 address type requested.\n* `IPv6` - IP V6 address type requested."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicIscsiStaticTargetPolicy.IscsiIpTypeEnum IscsiIpType
         {
             get;
             set;
@@ -4976,6 +5030,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("IpAddress"))
             {
                 initObject.IpAddress = this.IpAddress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IscsiIpType"))
+            {
+                initObject.IscsiIpType = this.IscsiIpType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Lun"))
             {

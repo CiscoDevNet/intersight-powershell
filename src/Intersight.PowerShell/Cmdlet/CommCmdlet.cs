@@ -194,6 +194,158 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CommTagDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCommTagDefinition", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCommTagDefinition : GetCmdletBase
+    {
+        public GetIntersightCommTagDefinition()
+        {
+            ApiInstance = new CommApi(Config);
+            MethodName = "GetCommTagDefinitionListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"If this flag is enabled, the tag will be propagated to related managed objects.\nThis is currently set to true by default for hierarchical tags. Propagation is managed by the system and cannot be configured by users."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EnablePropagation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The string representation of the tag key. If the tag is of hierarchical type, then \"/\" will be interpreted as hierarchy delimiters.\nIt can contain alphabets, numbers, \"_\", \"-\". Key cannot start with \"_\", \"-\" or \"/\".\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?(\\/[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?)*$")]
+        public string Key
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a commTagDefinition resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public CommTagDefinitionRelationship ParentTag
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"An enum type that defines the type of tag. Only hierarchical tags are supported for now, and the type is set to hierarchical by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The hierarchy is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public CommTagDefinition.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CommHttpProxyPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightCommHttpProxyPolicy")]
@@ -339,6 +491,87 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New CommTagDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightCommTagDefinition")]
+    public class NewIntersightCommTagDefinition : NewCmdletBase
+    {
+        public NewIntersightCommTagDefinition()
+        {
+            ApiInstance = new CommApi(Config);
+            ModelObject = new CommTagDefinition();
+            MethodName = "CreateCommTagDefinitionWithHttpInfo";
+        }
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The string representation of the tag key. If the tag is of hierarchical type, then \"/\" will be interpreted as hierarchy delimiters.\nIt can contain alphabets, numbers, \"_\", \"-\". Key cannot start with \"_\", \"-\" or \"/\".\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?(\\/[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?)*$")]
+        public string Key
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An enum type that defines the type of tag. Only hierarchical tags are supported for now, and the type is set to hierarchical by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The hierarchy is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CommTagDefinition.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CommHttpProxyPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightCommHttpProxyPolicy")]
@@ -348,6 +581,18 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new CommApi(Config);
             MethodName = "DeleteCommHttpProxyPolicyWithHttpInfo";
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CommTagDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCommTagDefinition")]
+    public class RemoveIntersightCommTagDefinition : RemoveCmdletBase
+    {
+        public RemoveIntersightCommTagDefinition()
+        {
+            ApiInstance = new CommApi(Config);
+            MethodName = "DeleteCommTagDefinitionWithHttpInfo";
         }
     }
     /// <summary>
@@ -489,6 +734,87 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Username
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set CommTagDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightCommTagDefinition")]
+    public class SetIntersightCommTagDefinition : SetCmdletBase
+    {
+        public SetIntersightCommTagDefinition()
+        {
+            ApiInstance = new CommApi(Config);
+            ModelObject = new CommTagDefinition();
+            MethodName = "UpdateCommTagDefinitionWithHttpInfo";
+        }
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The string representation of the tag key. If the tag is of hierarchical type, then \"/\" will be interpreted as hierarchy delimiters.\nIt can contain alphabets, numbers, \"_\", \"-\". Key cannot start with \"_\", \"-\" or \"/\".\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?(\\/[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?)*$")]
+        public string Key
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An enum type that defines the type of tag. Only hierarchical tags are supported for now, and the type is set to hierarchical by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The hierarchy is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CommTagDefinition.TypeEnum Type
         {
             get;
             set;

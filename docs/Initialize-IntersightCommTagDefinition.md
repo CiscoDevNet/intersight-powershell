@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightFunctionsUpload
+# Initialize-IntersightCommTagDefinition
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFunctionsUpload [-Action< FunctionsUpload.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FunctionsUpload.ClassIdEnum>][-Description< string>][-FileName< string>][-FileSize< long>][-Moid< string>][-Name< string>][-ObjectType< FunctionsUpload.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PartSize< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCommTagDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CommTagDefinition.ClassIdEnum>][-Key< string>][-Moid< string>][-ObjectType< CommTagDefinition.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< CommTagDefinition.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,21 +23,6 @@ Initialize-IntersightFunctionsUpload [-Action< FunctionsUpload.ActionEnum>][-Add
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
-
-### -Action
-Action against the Upload.\n* `None` - No action is set, this is the default value for action field.\n* `CompleteUploading` - Mark the instance of a Upload as uploaded.
-
-```yaml
-Type: FunctionsUpload.ActionEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
 
 ### -AdditionalProperties
 
@@ -58,7 +43,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: FunctionsUpload.ClassIdEnum
+Type: CommTagDefinition.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -69,41 +54,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Description
-Description of the Upload.
+### -Key
+The string representation of the tag key. If the tag is of hierarchical type, then \&quot;/\&quot; will be interpreted as hierarchy delimiters.\nIt can contain alphabets, numbers, \&quot;_\&quot;, \&quot;-\&quot;. Key cannot start with \&quot;_\&quot;, \&quot;-\&quot; or \&quot;/\&quot;.\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FileName
-The file name of the Upload. File name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.) or an underscore (_).
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -FileSize
-The size (in bytes) of the file.
-
-```yaml
-Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -129,59 +84,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-The name of the Upload. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.) or an underscore (_).
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: FunctionsUpload.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Organization
-A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.OrganizationOrganizationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PartSize
-The chunk size (in bytes) for each part of the file to be uploaded.
-
-```yaml
-Type: long
+Type: CommTagDefinition.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -199,6 +106,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Type
+An enum type that defines the type of tag. Only hierarchical tags are supported for now, and the type is set to hierarchical by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The hierarchy is created by using the &apos;/&apos; character as a delimiter.For example, if the tag is \&quot;A/B/C\&quot;, then \&quot;A\&quot; is the parent tag, \&quot;B\&quot; is the child tag of \&quot;A\&quot; and \&quot;C\&quot; is the child tag of \&quot;B\&quot;.
+
+```yaml
+Type: CommTagDefinition.TypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -247,7 +169,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightFunctionsUpload
+PS C:\> Initialize-IntersightCommTagDefinition
 ```
 
 { Add example description here }

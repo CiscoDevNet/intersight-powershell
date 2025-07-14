@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExecutionTime
-The time at which the backup is to be run on a given day. Applicable when the frequency unit is daily.
+The daily backup run time.
 
 ```yaml
 Type: DateTime
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrequencyUnit
-The frequency at which the backup schedule must run.\n* `Daily` - Allows the user to run the backup daily at a given time.\n* `Periodic` - Allows the user to run the backup after a certain number of hours.
+Backup schedule frequency.\n* `Daily` - Daily backup scheduling option.\n* `Periodic` - Hourly backup scheduling option.
 
 ```yaml
 Type: RecoveryBackupSchedule.FrequencyUnitEnum
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Hours
-The frequency, in hours, at which the backup schedule runs.\n* `8` - The backup interval is 8 hours.\n* `4` - The backup interval is 4 hours.\n* `12` - The backup interval is 12 hours.\n* `16` - The backup interval is 16 hours.\n* `20` - The backup interval is 20 hours.
+Back schedule frequency (in hours).\n* `8` - The backup interval is 8 hours.\n* `4` - The backup interval is 4 hours.\n* `12` - The backup interval is 12 hours.\n* `16` - The backup interval is 16 hours.\n* `20` - The backup interval is 20 hours.
 
 ```yaml
 Type: RecoveryBackupSchedule.HoursEnum

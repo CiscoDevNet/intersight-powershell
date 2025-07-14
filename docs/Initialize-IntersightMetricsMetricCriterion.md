@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -Aggregation
-Function name which used to combine the group buckets into a single timeseries.
+Function name for combining group buckets into a single timeseries.
 
 ```yaml
 Type: string
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Instrument
-Instrument name used to collect measurements for the query.
+Instrument name for measurement collection in the query.
 
 ```yaml
 Type: string
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsEnabled
-Indicates if this criterion should be used for the query.
+Flag indicating if this criterion should be used for the query.
 
 ```yaml
 Type: bool
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Metric
-Measurement name that is collected by the instrument for the query.
+Measurement name for instrument collection in the query.
 
 ```yaml
 Type: string
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -MetricAggregation
-Function name which used to combine the metrics into granularity buckets.
+Function name for combining metrics into granularity buckets.
 
 ```yaml
 Type: string
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopLimit
-The maximum number of result rows.
+Maximum number of rows in the result.
 
 ```yaml
 Type: long
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -TopSort
-Method on how to sort the result rows.
+Method for sorting the result rows.
 
 ```yaml
 Type: string

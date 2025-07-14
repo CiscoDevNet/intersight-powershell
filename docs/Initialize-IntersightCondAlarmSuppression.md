@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCondAlarmSuppression [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CondAlarmSuppression.ClassIdEnum>][-Classifications< System.Collections.Generic.List`1[Model.CondAlarmClassificationRelationship]>][-Description< string>][-Entity< Model.MoBaseMoRelationship>][-Moid< string>][-ObjectType< CondAlarmSuppression.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCondAlarmSuppression [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CondAlarmSuppression.ClassIdEnum>][-Classifications< System.Collections.Generic.List`1[Model.CondAlarmClassificationRelationship]>][-Description< string>][-Entity< Model.MoBaseMoRelationship>][-Moid< string>][-Name< string>][-ObjectType< CondAlarmSuppression.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -107,6 +107,21 @@ Accept wildcard characters: False
 
 ### -Moid
 The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+The name that identifies the alarm suppression.
 
 ```yaml
 Type: string

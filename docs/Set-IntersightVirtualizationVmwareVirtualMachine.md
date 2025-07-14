@@ -973,6 +973,8 @@ PS C:\> Set-IntersightVirtualizationVmwareVirtualMachine
 
 [Initialize-IntersightVirtualizationMemoryCapacity](./Initialize-IntersightVirtualizationMemoryCapacity.md)
 
+[Initialize-IntersightVirtualizationVmwareAttachedResourceTag](./Initialize-IntersightVirtualizationVmwareAttachedResourceTag.md)
+
 [Initialize-IntersightVirtualizationVmwareRemoteDisplayInfo](./Initialize-IntersightVirtualizationVmwareRemoteDisplayInfo.md)
 
 [Initialize-IntersightVirtualizationVmwareVmCpuShareInfo](./Initialize-IntersightVirtualizationVmwareVmCpuShareInfo.md)

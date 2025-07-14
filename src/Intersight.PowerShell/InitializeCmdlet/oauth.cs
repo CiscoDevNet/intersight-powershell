@@ -31,7 +31,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Type of OAuth Api. For example, Smart-licensing-API.\n* `Unknown` - Unknown is the default API type.\n* `SmartLicensing-API` - Smart licensing API type.\n* `CommerceEstimate-API` - Commerce Estimate API type."</para>
+        /// <para type="description">"OAuth API type (e.g., Smart licensing API).\n* `Unknown` - Unknown serves as the default API type.\n* `SmartLicensing-API` - Smart licensing API type.\n* `CommerceEstimate-API` - Commerce Estimate API type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -131,7 +131,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Type of OAuth Api. For example, Smart-licensing-API.\n* `Unknown` - Unknown is the default API type.\n* `SmartLicensing-API` - Smart licensing API type.\n* `CommerceEstimate-API` - Commerce Estimate API type."</para>
+        /// <para type="description">"OAuth API type (e.g., Smart licensing API).\n* `Unknown` - Unknown serves as the default API type.\n* `SmartLicensing-API` - Smart licensing API type.\n* `CommerceEstimate-API` - Commerce Estimate API type."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -171,7 +171,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The password that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account's behalf."</para>
+        /// <para type="description">"Password used by Intersight to create OAuth2 tokens for interacting with the external repository on behalf of the user account."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -191,7 +191,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The username that will be used by Intersight to create OAuth2 tokens for interacting with the external repository, on the user account's behalf."</para>
+        /// <para type="description">"Username used by Intersight to create OAuth2 tokens for interacting with the external repository on behalf of the user account."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

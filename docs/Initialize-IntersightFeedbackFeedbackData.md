@@ -25,7 +25,7 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 ## PARAMETERS
 
 ### -AccountName
-Account name of the feedback sender. Copied in order to be persisted in case of account removal.
+Account name of the feedback sender, copied for persistence in case of account removal.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Comment
-Text of the feedback as provided by the user, if it is a bug or a comment.
+User feedback text (a bug or a suggestion).
 
 ```yaml
 Type: string
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -Evaluation
-Evalation rating as provided by the user to capture user sentiment regarding the issue.\n* `Excellent` - Option that specifies user&apos;s excelent evaluation.\n* `Poor` - Option that specifies user&apos;s poor evaluation.\n* `Fair` - Option that specifies user&apos;s fair evaluation.\n* `Good` - Option that specifies user&apos;s good evaluation.
+Evaluation rating provided by the user to capture user sentiment regarding the issue.\n* `Excellent` - Option indicating user&apos;s excellent evaluation.\n* `Poor` - Option indicating user&apos;s poor evaluation.\n* `Fair` - Option indicating user&apos;s fair evaluation.\n* `Good` - Option indicating user&apos;s good evaluation.
 
 ```yaml
 Type: FeedbackFeedbackData.EvaluationEnum
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -FollowUp
-If a user is open for follow-up or not.
+User&apos;s consent for follow-up communication.
 
 ```yaml
 Type: bool
@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProductSatisfactionScale
-User&apos;s overall satisfaction with the product on a 0-10 scale.
+User&apos;s satisfaction with the product on a 0-10 scale.
 
 ```yaml
 Type: long
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 ```
 
 ### -SurveyCompleted
-Indicates if the user completed the survey. True if completed, false otherwise.
+Survey completion status (True if completed, False otherwise).
 
 ```yaml
 Type: bool
@@ -205,7 +205,7 @@ Accept wildcard characters: False
 ```
 
 ### -TraceIds
-Bunch of last traceId for reproducing user last activity.
+Collection of last traceId for replicating the user&apos;s last activity.
 
 Note :- Use Initialize-Intersightobject to create the object of complex type object
 
