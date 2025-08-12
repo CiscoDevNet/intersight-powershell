@@ -71,6 +71,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightNotificationAccountSubscription()
         {
             ClassId = NotificationAccountSubscription.ClassIdEnum.NotificationAccountSubscription;
+            ConditionOperator = NotificationAccountSubscription.ConditionOperatorEnum.All;
             ObjectType = NotificationAccountSubscription.ObjectTypeEnum.NotificationAccountSubscription;
             Type = NotificationAccountSubscription.TypeEnum.Email;
             Verify = NotificationAccountSubscription.VerifyEnum.None;
@@ -107,11 +108,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Operation that binds all the different conditions together.\n* `All` - All is an AND condition applied against the individual conditions.\n* `Any` - Any is an OR condition applied against the individual conditions."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationAccountSubscription.ConditionOperatorEnum ConditionOperator
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.NotificationAbstractCondition> Conditions
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The description for the subscription."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9_.\\- ]{1,128}$")]
+        public string Description
         {
             get;
             set;
@@ -200,9 +221,17 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConditionOperator"))
+            {
+                initObject.ConditionOperator = this.ConditionOperator;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Conditions"))
             {
                 initObject.Conditions = this.Conditions;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
             {
@@ -921,6 +950,218 @@ namespace Intersight.PowerShell
                 initObject.Email = this.Email;
             }
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationSimpleFilter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationSimpleFilter")]
+    public class InitializeIntersightNotificationSimpleFilter : PSCmdlet
+    {
+        public InitializeIntersightNotificationSimpleFilter()
+        {
+            ClassId = NotificationSimpleFilter.ClassIdEnum.NotificationSimpleFilter;
+            ObjectType = NotificationSimpleFilter.ObjectTypeEnum.NotificationSimpleFilter;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationSimpleFilter.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationSimpleFilter.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The operator to apply (eq, ne, contains, in)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Operator
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The property name to filter on (e.g., HostName, Domain, \nServerProfile, Organization)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Property
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NotificationSimpleFilter initObject = new Intersight.Model.NotificationSimpleFilter();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Operator"))
+            {
+                initObject.Operator = this.Operator;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Property"))
+            {
+                initObject.Property = this.Property;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationSimpleMoCondition.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationSimpleMoCondition")]
+    public class InitializeIntersightNotificationSimpleMoCondition : PSCmdlet
+    {
+        public InitializeIntersightNotificationSimpleMoCondition()
+        {
+            ClassId = NotificationSimpleMoCondition.ClassIdEnum.NotificationSimpleMoCondition;
+            ObjectType = NotificationSimpleMoCondition.ObjectTypeEnum.NotificationSimpleMoCondition;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationSimpleMoCondition.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The condition can be switched on/off with out necessity to change the subscription\nsettings: actions, conditions, etc.\nEx.: Subscription MO can be configured, but switched off."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Criteria that preserves the UI entered filter query."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NotificationSimpleFilter Filter
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"MoType for which the condition is created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MoType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationSimpleMoCondition.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<NotificationSimpleMoCondition.OperationsEnum> Operations
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NotificationSimpleMoCondition initObject = new Intersight.Model.NotificationSimpleMoCondition();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Filter"))
+            {
+                initObject.Filter = this.Filter;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MoType"))
+            {
+                initObject.MoType = this.MoType;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Operations"))
+            {
+                initObject.Operations = this.Operations;
+            }
             WriteObject(initObject);
         }
 

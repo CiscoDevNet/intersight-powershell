@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightNotificationAccountSubscription [-Actions< System.Collections.Generic.List`1[NotificationAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Conditions< System.Collections.Generic.List`1[NotificationAbstractCondition]>][-Enabled< bool>][[-Moid]< string>][-Name< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< NotificationAccountSubscription.TypeEnum>][-Verify< NotificationAccountSubscription.VerifyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightNotificationAccountSubscription [-Actions< System.Collections.Generic.List`1[NotificationAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConditionOperator< NotificationAccountSubscription.ConditionOperatorEnum>][-Conditions< System.Collections.Generic.List`1[NotificationAbstractCondition]>][-Description< string>][-Enabled< bool>][[-Moid]< string>][-Name< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< NotificationAccountSubscription.TypeEnum>][-Verify< NotificationAccountSubscription.VerifyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,6 +55,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ConditionOperator
+Operation that binds all the different conditions together.\n* `All` - All is an AND condition applied against the individual conditions.\n* `Any` - Any is an OR condition applied against the individual conditions.
+
+```yaml
+Type: NotificationAccountSubscription.ConditionOperatorEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Conditions
 
 
@@ -62,6 +77,21 @@ Note :- Use Initialize-IntersightNotificationAbstractCondition to create the obj
 
 ```yaml
 Type: System.Collections.Generic.List`1[NotificationAbstractCondition]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Description
+The description for the subscription.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

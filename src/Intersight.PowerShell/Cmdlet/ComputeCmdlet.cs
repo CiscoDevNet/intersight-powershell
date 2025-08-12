@@ -124,6 +124,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The BMC inventory readiness status of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool BmcInventoryReady
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a computeBoard resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -178,6 +189,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"A reference to a computeServerPowerParameters resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ComputeServerPowerParametersRelationship ComputeServerPowerParameters
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Cooling mode representation of the server.\n* `Air` - Cooling mode of the device is set to Air.\n* `Immersion` - Cooling mode of the device is set to Immersion."</para>
@@ -344,6 +366,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string KvmVendor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Last host power state changed time of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LastPowerStateChangedTime
         {
             get;
             set;
@@ -2467,6 +2500,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The Last host power state changed time of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LastPowerStateChangedTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The lifecycle of the blade server.\n* `None` - Default state of an equipment. This should be an initial state when no state is defined for an equipment.\n* `Active` - Default Lifecycle State for a physical entity.\n* `Decommissioned` - Decommission Lifecycle state.\n* `DiscoveryInProgress` - DiscoveryInProgress Lifecycle state.\n* `DiscoveryFailed` - DiscoveryFailed Lifecycle state.\n* `FirmwareUpgradeInProgress` - Firmware upgrade is in progress on given physical entity.\n* `SecureEraseInProgress` - Secure Erase is in progress on given physical entity.\n* `ScrubInProgress` - Scrub is in progress on given physical entity.\n* `BladeMigrationInProgress` - Server slot migration is in progress on given physical entity.\n* `SlotMismatch` - The blade server is detected in a different chassis/slot than it was previously.\n* `Removed` - The blade server has been removed from its discovered slot, and not detected anywhere else. Blade inventory can be cleaned up by performing a software remove operation on the physically removed blade.\n* `Moved` - The blade server has been moved from its discovered location to a new location. Blade inventory can be updated by performing a rediscover operation on the moved blade.\n* `Replaced` - The blade server has been removed from its discovered location and another blade has been inserted in that location. Blade inventory can be cleaned up and updated by doing a software remove operation on the physically removed blade.\n* `MovedAndReplaced` - The blade server has been moved from its discovered location to a new location and another blade has been inserted into the old discovered location. Blade inventory can be updated by performing a rediscover operation on the moved blade."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3019,6 +3063,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The BMC inventory readiness status of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool BmcInventoryReady
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a computeBoard resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -3062,6 +3117,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"A reference to a computeServerPowerParameters resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ComputeServerPowerParametersRelationship ComputeServerPowerParameters
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Connectivity Status of RackUnit to Switch - A or B or AB."</para>
@@ -3230,6 +3296,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string KvmVendor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Last host power state changed time of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LastPowerStateChangedTime
         {
             get;
             set;
@@ -3468,6 +3545,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -4179,6 +4257,224 @@ namespace Intersight.PowerShell
         }
 
 
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputeServerPowerParameters.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerPowerParameters", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputeServerPowerParameters : GetCmdletBase
+    {
+        public GetIntersightComputeServerPowerParameters()
+        {
+            ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputeServerPowerParametersListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a computeBlade resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ComputeBladeRelationship ComputeBlade
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ComputeRackUnitRelationship ComputeRackUnit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceMoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"This field identifies the maximum power that has been allocated to the blade by CMC in Watts. Power budget for the chassis is configured by the power policy. That budget is then divided among the blades in the chassis by CMC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long PowerAllocation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Power Priority level of the Server. This priority is used to determine the initial power allocation for servers. This field is only supported for Cisco UCS B series and X series servers.\n* `Unknown` - Power allocation priority of server is either unknown or not supported on CMC firmware version.\n* `Low` - Power allocation priority of server is low.\n* `Medium` - Power allocation priority of server is medium.\n* `High` - Power allocation priority of server is high."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeServerPowerParameters.PowerPriorityEnum PowerPriority
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Status of Power Profiling setting of the Server. If Enabled, this field allows the power manager to run power profiling utility to determine the power needs of the server. This field is only supported for Cisco UCS X series servers.\n* `Unknown` - Power Profiling state is either unknown for the server or not supported on BMC firmware version.\n* `Enabled` - Power Profiling is enabled for the server.\n* `Disabled` - Power Profiling is either disabled for the server or not supported on BMC firmware version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeServerPowerParameters.PowerProfilingEnum PowerProfiling
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Value of the power restore policy for the server. In the absence of Intersight connectivity, the server will use this state to recover the host power after a power loss event.\n* `Unknown` - Power restore state for the server is either Unknown or not supported on BMC firmware version.\n* `Always On` - Power restore state for server is set to Always On.\n* `Always Off` - Power restore state for server is set to Always Off.\n* `Last State` - Power restore state for server is set to Last State."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeServerPowerParameters.PowerRestoreEnum PowerRestore
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Processor Package Power Limit (PPL) of a server. PPL refers to the amount of power that a CPU can draw from the power supply. The Processor Package Power Limit (PPL) feature is currently available exclusively on Cisco UCS C225/C245 M8 servers.\n* `Unknown` - Processor package power limit is either unknown for the server or not supported on BMC firmware version.\n* `Default` - Processor package power limit is default for the server.\n* `Maximum` - Processor package power limit is maximum for the server.\n* `Minimum` - Processor package power limit is minimum for the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeServerPowerParameters.ProcessorPackagePowerLimitEnum ProcessorPackagePowerLimit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Rn
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
@@ -5242,6 +5538,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"The BMC inventory readiness status of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool BmcInventoryReady
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"An array of relationships to bootCddDevice resources."</para>
@@ -5387,6 +5694,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The fault summary for the server."</para>
         /// </summary>
@@ -5445,6 +5753,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -6064,6 +6373,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"The BMC inventory readiness status of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool BmcInventoryReady
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"An array of relationships to bootCddDevice resources."</para>
@@ -6210,6 +6530,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The fault summary for the server."</para>
         /// </summary>
@@ -6268,6 +6589,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -6360,6 +6682,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

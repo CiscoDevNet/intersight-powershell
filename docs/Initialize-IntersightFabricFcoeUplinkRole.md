@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricFcoeUplinkRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcoeUplinkRole.AdminSpeedEnum>][-AggregatePortId< long>][-ClassId< FabricFcoeUplinkRole.ClassIdEnum>][-Fec< FabricFcoeUplinkRole.FecEnum>][-LinkControlPolicy< Model.FabricLinkControlPolicyRelationship>][-Moid< string>][-ObjectType< FabricFcoeUplinkRole.ObjectTypeEnum>][-PortId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricFcoeUplinkRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcoeUplinkRole.AdminSpeedEnum>][-AggregatePortId< long>][-ClassId< FabricFcoeUplinkRole.ClassIdEnum>][-Fec< FabricFcoeUplinkRole.FecEnum>][-LinkControlPolicy< Model.FabricLinkControlPolicyRelationship>][-Moid< string>][-ObjectType< FabricFcoeUplinkRole.ObjectTypeEnum>][-PortId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -202,6 +202,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+The user defined label assigned to a Port.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

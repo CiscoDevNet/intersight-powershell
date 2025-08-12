@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricUplinkRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkRole.AdminSpeedEnum>][-AggregatePortId< long>][-ClassId< FabricUplinkRole.ClassIdEnum>][-EthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-Fec< FabricUplinkRole.FecEnum>][-FlowControlPolicy< Model.FabricFlowControlPolicyRelationship>][-LinkControlPolicy< Model.FabricLinkControlPolicyRelationship>][-MacSecPolicy< Model.FabricMacSecPolicyRelationship>][-Moid< string>][-ObjectType< FabricUplinkRole.ObjectTypeEnum>][-PortId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricUplinkRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkRole.AdminSpeedEnum>][-AggregatePortId< long>][-ClassId< FabricUplinkRole.ClassIdEnum>][-EthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-Fec< FabricUplinkRole.FecEnum>][-FlowControlPolicy< Model.FabricFlowControlPolicyRelationship>][-LinkControlPolicy< Model.FabricLinkControlPolicyRelationship>][-MacSecPolicy< Model.FabricMacSecPolicyRelationship>][-Moid< string>][-ObjectType< FabricUplinkRole.ObjectTypeEnum>][-PortId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -256,6 +256,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+The user defined label assigned to a Port.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

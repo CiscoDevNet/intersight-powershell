@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricFcStorageRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcStorageRole.AdminSpeedEnum>][-AggregatePortId< long>][[-Moid]< string>][-PortId< long>][-PortPolicy< FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VsanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricFcStorageRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcStorageRole.AdminSpeedEnum>][-AggregatePortId< long>][[-Moid]< string>][-PortId< long>][-PortPolicy< FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserLabel< string>][-VsanId< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -138,6 +138,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+The user defined label assigned to a Port.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

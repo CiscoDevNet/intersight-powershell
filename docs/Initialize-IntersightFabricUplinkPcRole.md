@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkPcRole.AdminSpeedEnum>][-ClassId< FabricUplinkPcRole.ClassIdEnum>][-EthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-Fec< FabricUplinkPcRole.FecEnum>][-FlowControlPolicy< Model.FabricFlowControlPolicyRelationship>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< Model.FabricLinkControlPolicyRelationship>][-MacSecPolicy< Model.FabricMacSecPolicyRelationship>][-Moid< string>][-ObjectType< FabricUplinkPcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricUplinkPcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricUplinkPcRole.AdminSpeedEnum>][-ClassId< FabricUplinkPcRole.ClassIdEnum>][-EthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-Fec< FabricUplinkPcRole.FecEnum>][-FlowControlPolicy< Model.FabricFlowControlPolicyRelationship>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-LinkControlPolicy< Model.FabricLinkControlPolicyRelationship>][-MacSecPolicy< Model.FabricMacSecPolicyRelationship>][-Moid< string>][-ObjectType< FabricUplinkPcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -261,6 +261,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+The user defined label assigned to the a Port.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

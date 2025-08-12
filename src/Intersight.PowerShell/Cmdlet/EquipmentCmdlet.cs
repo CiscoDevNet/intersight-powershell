@@ -5929,6 +5929,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"This field identifies whether the power supply unit is spare or not.\n* `` - Spare status for power supply unit is not applicable or not available.\n* `Spare` - Power supply unit is spare.\n* `Not Spare` - Power supply unit is not spare."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public EquipmentPsu.SpareStatusEnum SpareStatus
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
@@ -10929,6 +10940,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

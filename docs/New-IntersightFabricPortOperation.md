@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricPortOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< FabricPortOperation.AdminActionEnum>][-AdminState< FabricPortOperation.AdminStateEnum>][-AggregatePortId< long>][-ConfigState< FabricPortOperation.ConfigStateEnum>][-FexId< long>][-Moid< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricPortOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< FabricPortOperation.AdminActionEnum>][-AdminState< FabricPortOperation.AdminStateEnum>][-AggregatePortId< long>][-ConfigState< FabricPortOperation.ConfigStateEnum>][-FexId< long>][-Moid< string>][-NetworkElement< NetworkElementRelationship>][-PortId< long>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminAction
-An operation that has to be perfomed on the switch or IOM port. Default value is None which means there will be no implicit port operation triggered.\n* `None` - No admin triggered action.\n* `ResetServerPortConfiguration` - Admin triggered operation to reset the server port to its original configuration.
+An operation that has to be perfomed on the switch or IOM port. Default value is None which means there will be no implicit port operation triggered.\n* `None` - No admin triggered action.\n* `ResetServerPortConfiguration` - Admin triggered operation to reset the server port to its original configuration.\n* `SetUserLabel` - Admin triggered operation to set the user label on the port.
 
 ```yaml
 Type: FabricPortOperation.AdminActionEnum
@@ -183,6 +183,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+The user defined label assigned to the a Port.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

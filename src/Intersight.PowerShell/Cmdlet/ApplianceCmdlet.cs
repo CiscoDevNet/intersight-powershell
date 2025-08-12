@@ -7919,6 +7919,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Updates requiring a reboot will start automatically once the grace period ends."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidateRange(1, 6)]
+        public long DisruptiveGracePeriodWeek
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The DomainGroup ID for this managed object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7935,6 +7946,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool EnableMetaDataSync
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Custom grace period for subsequent reboot and non-reboot updates."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsCustomGracePeriodEnabled
         {
             get;
             set;
@@ -7979,6 +8001,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Updates not requiring a reboot will start automatically once the grace period ends."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidateRange(1, 6)]
+        public long NondisruptiveGracePeriodWeek
         {
             get;
             set;
@@ -11902,6 +11935,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Updates requiring a reboot will start automatically once the grace period ends."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 6)]
+        public long DisruptiveGracePeriodWeek
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Indicates if the updated metadata files should be synced immediately or at the next upgrade."</para>
@@ -11909,6 +11953,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public bool EnableMetaDataSync
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Custom grace period for subsequent reboot and non-reboot updates."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsCustomGracePeriodEnabled
         {
             get;
             set;
@@ -11933,6 +11988,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Updates not requiring a reboot will start automatically once the grace period ends."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 6)]
+        public long NondisruptiveGracePeriodWeek
         {
             get;
             set;

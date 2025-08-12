@@ -5865,11 +5865,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Updates requiring a reboot will start automatically once the grace period ends."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 6)]
+        public long DisruptiveGracePeriodWeek
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Indicates if the updated metadata files should be synced immediately or at the next upgrade."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public bool EnableMetaDataSync
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Custom grace period for subsequent reboot and non-reboot updates."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsCustomGracePeriodEnabled
         {
             get;
             set;
@@ -5890,6 +5910,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Updates not requiring a reboot will start automatically once the grace period ends."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 6)]
+        public long NondisruptiveGracePeriodWeek
         {
             get;
             set;
@@ -5964,9 +5994,17 @@ namespace Intersight.PowerShell
                 initObject.BlackoutStartDate = this.BlackoutStartDate;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DisruptiveGracePeriodWeek"))
+            {
+                initObject.DisruptiveGracePeriodWeek = this.DisruptiveGracePeriodWeek;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("EnableMetaDataSync"))
             {
                 initObject.EnableMetaDataSync = this.EnableMetaDataSync;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsCustomGracePeriodEnabled"))
+            {
+                initObject.IsCustomGracePeriodEnabled = this.IsCustomGracePeriodEnabled;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ManualInstallationStartTime"))
             {
@@ -5975,6 +6013,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NondisruptiveGracePeriodWeek"))
+            {
+                initObject.NondisruptiveGracePeriodWeek = this.NondisruptiveGracePeriodWeek;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Schedule"))

@@ -318,6 +318,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Type of network connection or configuration that adapter is using."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NetworkType
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Operational state of an Interface."</para>
