@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-ClassId< FabricAppliancePcRole.ClassIdEnum>][-EthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< Model.FabricEthNetworkGroupPolicyRelationship>][-Fec< FabricAppliancePcRole.FecEnum>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][-Moid< string>][-ObjectType< FabricAppliancePcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricAppliancePcRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricAppliancePcRole.AdminSpeedEnum>][-ClassId< FabricAppliancePcRole.ClassIdEnum>][-EthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-EthNetworkGroupPolicy< Model.FabricEthNetworkGroupPolicyRelationship>][-Fec< FabricAppliancePcRole.FecEnum>][-LinkAggregationPolicy< Model.FabricLinkAggregationPolicyRelationship>][-Mode< FabricAppliancePcRole.ModeEnum>][-Moid< string>][-ObjectType< FabricAppliancePcRole.ObjectTypeEnum>][-PcId< long>][-PortPolicy< Model.FabricPortPolicyRelationship>][-Ports< System.Collections.Generic.List`1[Model.FabricPortIdentifier]>][-Priority< FabricAppliancePcRole.PriorityEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -255,6 +255,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+The user defined label assigned to the a Port.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

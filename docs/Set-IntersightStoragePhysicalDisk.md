@@ -508,3 +508,5 @@ PS C:\> Set-IntersightStoragePhysicalDisk
 [Get-IntersightStoragePhysicalDisk](./Get-IntersightStoragePhysicalDisk.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightStoragePhysicalDisk.OperReasonEnum](./Initialize-IntersightStoragePhysicalDisk.OperReasonEnum.md)

@@ -189,7 +189,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The status of power rebalancing mode of the chassis. If enabled, this mode allows the system to dynamically reallocate the power between servers depending on their power usage. \n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// <para type="description">"The status of power rebalancing mode of the chassis. If enabled, this mode allows the system to dynamically reallocate the power between servers depending on their power usage.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -200,7 +200,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The status of power save mode of the chassis. If Enabled and the requested power budget is less than available power\u00a0capacity,  the additional PSUs not required to comply with redundancy policy are placed in Power Save mode. \n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
+        /// <para type="description">"The status of power save mode of the chassis. If Enabled and the requested power budget is less than available power\u00a0capacity, the additional PSUs not required to comply with redundancy policy are placed in Power Save mode.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

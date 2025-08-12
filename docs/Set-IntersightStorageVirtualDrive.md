@@ -184,3 +184,5 @@ PS C:\> Set-IntersightStorageVirtualDrive
 [Get-IntersightStorageVirtualDrive](./Get-IntersightStorageVirtualDrive.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightStorageVirtualDrive.OperReasonEnum](./Initialize-IntersightStorageVirtualDrive.OperReasonEnum.md)

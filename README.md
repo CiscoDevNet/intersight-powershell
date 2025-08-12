@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2025062323
-- C# SDK version: 1.0.11.2025062323
+- Intersight.PowerShell version: 1.0.11.2025071017
+- C# SDK version: 1.0.11.2025071017
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025062323"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025071017"}
 ```
 or
 
@@ -1091,6 +1091,7 @@ ComputeRackUnit | [**Get-IntersightComputeRackUnit**](docs/Get-IntersightCompute
 ComputeRackUnitIdentity | [**Get-IntersightComputeRackUnitIdentity**](docs/Get-IntersightComputeRackUnitIdentity.md) | Read a 'ComputeRackUnitIdentity' resource.
 ComputeScrubPolicy | [**Get-IntersightComputeScrubPolicy**](docs/Get-IntersightComputeScrubPolicy.md) | Read a 'ComputeScrubPolicy' resource.
 ComputeServerIdPool | [**Get-IntersightComputeServerIdPool**](docs/Get-IntersightComputeServerIdPool.md) | Read a 'ComputeServerIdPool' resource.
+ComputeServerPowerParameters | [**Get-IntersightComputeServerPowerParameters**](docs/Get-IntersightComputeServerPowerParameters.md) | Read a 'ComputeServerPowerParameters' resource.
 ComputeServerPowerPolicy | [**Get-IntersightComputeServerPowerPolicy**](docs/Get-IntersightComputeServerPowerPolicy.md) | Read a 'ComputeServerPowerPolicy' resource.
 ComputeServerSetting | [**Get-IntersightComputeServerSetting**](docs/Get-IntersightComputeServerSetting.md) | Read a 'ComputeServerSetting' resource.
 ComputeVmedia | [**Get-IntersightComputeVmedia**](docs/Get-IntersightComputeVmedia.md) | Read a 'ComputeVmedia' resource.
@@ -2396,6 +2397,7 @@ PciCoprocessorCard | [**Get-IntersightPciCoprocessorCard**](docs/Get-IntersightP
 PciDevice | [**Get-IntersightPciDevice**](docs/Get-IntersightPciDevice.md) | Read a 'PciDevice' resource.
 PciLink | [**Get-IntersightPciLink**](docs/Get-IntersightPciLink.md) | Read a 'PciLink' resource.
 PciNode | [**Get-IntersightPciNode**](docs/Get-IntersightPciNode.md) | Read a 'PciNode' resource.
+PciSlot | [**Get-IntersightPciSlot**](docs/Get-IntersightPciSlot.md) | Read a 'PciSlot' resource.
 PciSwitch | [**Get-IntersightPciSwitch**](docs/Get-IntersightPciSwitch.md) | Read a 'PciSwitch' resource.
 PciDevice | [**Set-IntersightPciDevice**](docs/Set-IntersightPciDevice.md) | Update a 'PciDevice' resource.
 PciLink | [**Set-IntersightPciLink**](docs/Set-IntersightPciLink.md) | Update a 'PciLink' resource.
@@ -2727,14 +2729,23 @@ StoragePhysicalDiskUsage | [**Get-IntersightStoragePhysicalDiskUsage**](docs/Get
 StoragePureArray | [**Get-IntersightStoragePureArray**](docs/Get-IntersightStoragePureArray.md) | Read a 'StoragePureArray' resource.
 StoragePureArrayAlerts | [**Get-IntersightStoragePureArrayAlerts**](docs/Get-IntersightStoragePureArrayAlerts.md) | Read a 'StoragePureArrayAlerts' resource.
 StoragePureController | [**Get-IntersightStoragePureController**](docs/Get-IntersightStoragePureController.md) | Read a 'StoragePureController' resource.
+StoragePureDirectory | [**Get-IntersightStoragePureDirectory**](docs/Get-IntersightStoragePureDirectory.md) | Read a 'StoragePureDirectory' resource.
+StoragePureDirectoryExport | [**Get-IntersightStoragePureDirectoryExport**](docs/Get-IntersightStoragePureDirectoryExport.md) | Read a 'StoragePureDirectoryExport' resource.
+StoragePureDirectoryPolicy | [**Get-IntersightStoragePureDirectoryPolicy**](docs/Get-IntersightStoragePureDirectoryPolicy.md) | Read a 'StoragePureDirectoryPolicy' resource.
+StoragePureDirectoryQuota | [**Get-IntersightStoragePureDirectoryQuota**](docs/Get-IntersightStoragePureDirectoryQuota.md) | Read a 'StoragePureDirectoryQuota' resource.
+StoragePureDirectorySnapshot | [**Get-IntersightStoragePureDirectorySnapshot**](docs/Get-IntersightStoragePureDirectorySnapshot.md) | Read a 'StoragePureDirectorySnapshot' resource.
 StoragePureDisk | [**Get-IntersightStoragePureDisk**](docs/Get-IntersightStoragePureDisk.md) | Read a 'StoragePureDisk' resource.
+StoragePureFileSystems | [**Get-IntersightStoragePureFileSystems**](docs/Get-IntersightStoragePureFileSystems.md) | Read a 'StoragePureFileSystems' resource.
 StoragePureHost | [**Get-IntersightStoragePureHost**](docs/Get-IntersightStoragePureHost.md) | Read a 'StoragePureHost' resource.
 StoragePureHostGroup | [**Get-IntersightStoragePureHostGroup**](docs/Get-IntersightStoragePureHostGroup.md) | Read a 'StoragePureHostGroup' resource.
 StoragePureHostLun | [**Get-IntersightStoragePureHostLun**](docs/Get-IntersightStoragePureHostLun.md) | Read a 'StoragePureHostLun' resource.
+StoragePureNfsPolicyRule | [**Get-IntersightStoragePureNfsPolicyRule**](docs/Get-IntersightStoragePureNfsPolicyRule.md) | Read a 'StoragePureNfsPolicyRule' resource.
 StoragePurePort | [**Get-IntersightStoragePurePort**](docs/Get-IntersightStoragePurePort.md) | Read a 'StoragePurePort' resource.
 StoragePureProtectionGroup | [**Get-IntersightStoragePureProtectionGroup**](docs/Get-IntersightStoragePureProtectionGroup.md) | Read a 'StoragePureProtectionGroup' resource.
 StoragePureProtectionGroupSnapshot | [**Get-IntersightStoragePureProtectionGroupSnapshot**](docs/Get-IntersightStoragePureProtectionGroupSnapshot.md) | Read a 'StoragePureProtectionGroupSnapshot' resource.
+StoragePureQuotaPolicyRule | [**Get-IntersightStoragePureQuotaPolicyRule**](docs/Get-IntersightStoragePureQuotaPolicyRule.md) | Read a 'StoragePureQuotaPolicyRule' resource.
 StoragePureReplicationSchedule | [**Get-IntersightStoragePureReplicationSchedule**](docs/Get-IntersightStoragePureReplicationSchedule.md) | Read a 'StoragePureReplicationSchedule' resource.
+StoragePureSmbPolicyRule | [**Get-IntersightStoragePureSmbPolicyRule**](docs/Get-IntersightStoragePureSmbPolicyRule.md) | Read a 'StoragePureSmbPolicyRule' resource.
 StoragePureSnapshotSchedule | [**Get-IntersightStoragePureSnapshotSchedule**](docs/Get-IntersightStoragePureSnapshotSchedule.md) | Read a 'StoragePureSnapshotSchedule' resource.
 StoragePureTargetArray | [**Get-IntersightStoragePureTargetArray**](docs/Get-IntersightStoragePureTargetArray.md) | Read a 'StoragePureTargetArray' resource.
 StoragePureVolume | [**Get-IntersightStoragePureVolume**](docs/Get-IntersightStoragePureVolume.md) | Read a 'StoragePureVolume' resource.

@@ -7304,6 +7304,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The Slider rule for Unified ports on this switch."</para>
         /// </summary>
@@ -11789,6 +11790,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -16319,6 +16321,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

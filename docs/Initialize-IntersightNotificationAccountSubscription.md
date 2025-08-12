@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNotificationAccountSubscription [-Actions< System.Collections.Generic.List`1[Model.NotificationAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NotificationAccountSubscription.ClassIdEnum>][-Conditions< System.Collections.Generic.List`1[Model.NotificationAbstractCondition]>][-Enabled< bool>][-Moid< string>][-Name< string>][-ObjectType< NotificationAccountSubscription.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< NotificationAccountSubscription.TypeEnum>][-Verify< NotificationAccountSubscription.VerifyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNotificationAccountSubscription [-Actions< System.Collections.Generic.List`1[Model.NotificationAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NotificationAccountSubscription.ClassIdEnum>][-ConditionOperator< NotificationAccountSubscription.ConditionOperatorEnum>][-Conditions< System.Collections.Generic.List`1[Model.NotificationAbstractCondition]>][-Description< string>][-Enabled< bool>][-Moid< string>][-Name< string>][-ObjectType< NotificationAccountSubscription.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< NotificationAccountSubscription.TypeEnum>][-Verify< NotificationAccountSubscription.VerifyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -71,6 +71,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ConditionOperator
+Operation that binds all the different conditions together.\n* `All` - All is an AND condition applied against the individual conditions.\n* `Any` - Any is an OR condition applied against the individual conditions.
+
+```yaml
+Type: NotificationAccountSubscription.ConditionOperatorEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Conditions
 
 
@@ -78,6 +93,21 @@ Note :- Use Initialize-IntersightNotificationAbstractCondition to create the obj
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.NotificationAbstractCondition]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Description
+The description for the subscription.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

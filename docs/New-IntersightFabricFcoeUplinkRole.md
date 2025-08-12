@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricFcoeUplinkRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcoeUplinkRole.AdminSpeedEnum>][-AggregatePortId< long>][-Fec< FabricFcoeUplinkRole.FecEnum>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][-Moid< string>][-PortId< long>][-PortPolicy< FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricFcoeUplinkRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminSpeed< FabricFcoeUplinkRole.AdminSpeedEnum>][-AggregatePortId< long>][-Fec< FabricFcoeUplinkRole.FecEnum>][-LinkControlPolicy< FabricLinkControlPolicyRelationship>][-Moid< string>][-PortId< long>][-PortPolicy< FabricPortPolicyRelationship>][-SlotId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -171,6 +171,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserLabel
+The user defined label assigned to a Port.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
