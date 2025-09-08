@@ -480,7 +480,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"OAuth API type (e.g., Smart licensing API).\n* `Unknown` - Unknown serves as the default API type.\n* `SmartLicensing-API` - Smart licensing API type.\n* `CommerceEstimate-API` - Commerce Estimate API type."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public OauthAuthorization.ApiTypeEnum ApiType
         {
@@ -509,7 +509,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Password used by Intersight to create OAuth2 tokens for interacting with the external repository on behalf of the user account."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Password
         {
@@ -533,7 +533,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Username used by Intersight to create OAuth2 tokens for interacting with the external repository on behalf of the user account."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string UserId
         {

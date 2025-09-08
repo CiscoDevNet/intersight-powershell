@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSoftwarerepositoryOperatingSystemFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.SoftwarerepositoryCatalogRelationship>][-ClassId< SoftwarerepositoryOperatingSystemFile.ClassIdEnum>][-Description< string>][-ImportAction< SoftwarerepositoryOperatingSystemFile.ImportActionEnum>][-Md5eTag< string>][-Md5sum< string>][-Moid< string>][-Name< string>][-ObjectType< SoftwarerepositoryOperatingSystemFile.ObjectTypeEnum>][-ReleaseDate< DateTime>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< Model.SoftwarerepositoryFileServer>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSoftwarerepositoryOperatingSystemFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.SoftwarerepositoryCatalogRelationship>][-ClassId< SoftwarerepositoryOperatingSystemFile.ClassIdEnum>][-Description< string>][-ImageType< string>][-ImportAction< SoftwarerepositoryOperatingSystemFile.ImportActionEnum>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][-Moid< string>][-Name< string>][-ObjectType< SoftwarerepositoryOperatingSystemFile.ObjectTypeEnum>][-RecommendedBuild< string>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< Model.SoftwarerepositoryFileServer>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -87,6 +87,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ImageType
+The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, Unified Edge server. The field is used in private appliance mode, where image does not have description populated from CCO.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ImportAction
 The action to be performed on the imported file. If &apos;PreCache&apos; is set, the image will be cached in Appliance. Applicable in Intersight appliance deployment. If &apos;Evict&apos; is set, the cached file will be removed. Applicable in Intersight appliance deployment. If &apos;GeneratePreSignedUploadUrl&apos; is set, generates pre signed URL (s) for the file to be imported into the repository. Applicable for local machine source. The URL (s) will be populated under LocalMachine file server. If &apos;CompleteImportProcess&apos; is set, the ImportState is marked as &apos;Imported&apos;. Applicable for local machine source. If &apos;Cancel&apos; is set, the ImportState is marked as &apos;Failed&apos;. Applicable for local machine source.\n* `None` - No action should be taken on the imported file.\n* `GeneratePreSignedUploadUrl` - Generate pre signed URL of file for importing into the repository.\n* `GeneratePreSignedDownloadUrl` - Generate pre signed URL of file in the repository to download.\n* `CompleteImportProcess` - Mark that the import process of the file into the repository is complete.\n* `MarkImportFailed` - Mark to indicate that the import process of the file into the repository failed.\n* `PreCache` - Cache the file into the Intersight Appliance.\n* `Cancel` - The cancel import process for the file into the repository.\n* `Extract` - The action to extract the file in the external repository.\n* `Evict` - Evict the cached file from the Intersight Appliance.
 
@@ -119,6 +134,36 @@ Accept wildcard characters: False
 
 ### -Md5sum
 The md5sum checksum of the file. This information is available for all Cisco distributed images and files imported to the local repository.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Mdfid
+The mdfid of the image provided by cisco.com.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Model
+The endpoint model for which this firmware image is applicable.
 
 ```yaml
 Type: string
@@ -177,11 +222,59 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -RecommendedBuild
+The build which is recommended by Cisco.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Release
+A reference to a softwarerepositoryRelease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.SoftwarerepositoryReleaseRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ReleaseDate
 The date on which the file was released or distributed by its vendor.
 
 ```yaml
 Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReleaseNotesUrl
+The url for the release notes of this image.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

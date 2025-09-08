@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricVlanSet [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricVlanSet.ClassIdEnum>][-Moid< string>][-ObjectType< FabricVlanSet.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricVlanSet [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoAllowOnClusterLinks< bool>][-ClassId< FabricVlanSet.ClassIdEnum>][-Moid< string>][-ObjectType< FabricVlanSet.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,21 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AutoAllowOnClusterLinks
+This setting determines whether the VLAN is automatically allowed on inter-cluster links within this domain.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

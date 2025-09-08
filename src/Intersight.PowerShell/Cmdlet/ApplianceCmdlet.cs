@@ -3628,6 +3628,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Updates requiring a reboot will start automatically once the grace period ends."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DisruptiveGracePeriodWeek
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The DomainGroup ID for this managed object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3650,6 +3661,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Custom grace period for subsequent reboot and non-reboot updates."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsCustomGracePeriodEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3666,6 +3688,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Updates not requiring a reboot will start automatically once the grace period ends."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long NondisruptiveGracePeriodWeek
         {
             get;
             set;
@@ -7864,7 +7897,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Indicates if the upgrade service is set to automatically start the software upgrade or not. If autoUpgrade is true, then the value of the schedule field is ignored."</para>
+        /// <para type="description">"Updates are installed automatically 2 weeks after detection, or 4 weeks if an appliance reboot is required."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7875,7 +7908,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"If enabled, allows the user to define a blackout period during which the appliance will not be upgraded."</para>
+        /// <para type="description">"Appliance will not be updated during the blocked dates."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7919,7 +7952,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Updates requiring a reboot will start automatically once the grace period ends."</para>
+        /// <para type="description">"Updates that require an appliance reboot start automatically after the grace period ends."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidateRange(1, 6)]
@@ -7952,7 +7985,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Custom grace period for subsequent reboot and non-reboot updates."</para>
+        /// <para type="description">"Waiting period before major and patch updates are triggered automatically."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -8007,7 +8040,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Updates not requiring a reboot will start automatically once the grace period ends."</para>
+        /// <para type="description">"Updates that do not require an appliance reboot start automatically after the grace period ends."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidateRange(1, 6)]
@@ -10204,7 +10237,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Password to authenticate the file server."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[^`]+$")]
         public string Password
         {
@@ -11107,7 +11140,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Password to be used to login to the endpoint device."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Password
         {
@@ -11246,6 +11279,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Updates requiring a reboot will start automatically once the grace period ends."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DisruptiveGracePeriodWeek
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Indicates if the updated metadata files should be synced immediately or at the next upgrade."</para>
@@ -11258,6 +11302,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Custom grace period for subsequent reboot and non-reboot updates."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsCustomGracePeriodEnabled
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -11265,6 +11320,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Updates not requiring a reboot will start automatically once the grace period ends."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long NondisruptiveGracePeriodWeek
         {
             get;
             set;
@@ -11378,7 +11444,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Password of the Intersight Appliance's OS diagnostic user account."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Password
         {
@@ -11891,7 +11957,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Indicates if the upgrade service is set to automatically start the software upgrade or not. If autoUpgrade is true, then the value of the schedule field is ignored."</para>
+        /// <para type="description">"Updates are installed automatically 2 weeks after detection, or 4 weeks if an appliance reboot is required."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11902,7 +11968,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"If enabled, allows the user to define a blackout period during which the appliance will not be upgraded."</para>
+        /// <para type="description">"Appliance will not be updated during the blocked dates."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11936,7 +12002,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Updates requiring a reboot will start automatically once the grace period ends."</para>
+        /// <para type="description">"Updates that require an appliance reboot start automatically after the grace period ends."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(1, 6)]
@@ -11959,7 +12025,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Custom grace period for subsequent reboot and non-reboot updates."</para>
+        /// <para type="description">"Waiting period before major and patch updates are triggered automatically."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11994,7 +12060,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Updates not requiring a reboot will start automatically once the grace period ends."</para>
+        /// <para type="description">"Updates that do not require an appliance reboot start automatically after the grace period ends."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(1, 6)]

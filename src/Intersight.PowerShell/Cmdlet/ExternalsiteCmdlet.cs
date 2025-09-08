@@ -310,7 +310,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The password of the given username to download the image from external repository like cisco.com."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Password
         {
@@ -345,7 +345,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The username that has permission to download the image from external repository like cisco.com."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string UserId
         {

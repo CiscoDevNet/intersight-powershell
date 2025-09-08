@@ -58,7 +58,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoUpgrade
-Indicates if the upgrade service is set to automatically start the software upgrade or not. If autoUpgrade is true, then the value of the schedule field is ignored.
+Updates are installed automatically 2 weeks after detection, or 4 weeks if an appliance reboot is required.
 
 ```yaml
 Type: bool
@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlackoutDatesEnabled
-If enabled, allows the user to define a blackout period during which the appliance will not be upgraded.
+Appliance will not be updated during the blocked dates.
 
 ```yaml
 Type: bool
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -DisruptiveGracePeriodWeek
-Updates requiring a reboot will start automatically once the grace period ends.
+Updates that require an appliance reboot start automatically after the grace period ends.
 
 ```yaml
 Type: long
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsCustomGracePeriodEnabled
-Custom grace period for subsequent reboot and non-reboot updates.
+Waiting period before major and patch updates are triggered automatically.
 
 ```yaml
 Type: bool
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -NondisruptiveGracePeriodWeek
-Updates not requiring a reboot will start automatically once the grace period ends.
+Updates that do not require an appliance reboot start automatically after the grace period ends.
 
 ```yaml
 Type: long

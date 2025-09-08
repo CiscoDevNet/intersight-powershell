@@ -177,7 +177,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to the a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -440,7 +440,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -1836,6 +1836,7 @@ namespace Intersight.PowerShell
         {
             ClassId = FabricEthNetworkPolicy.ClassIdEnum.FabricEthNetworkPolicy;
             ObjectType = FabricEthNetworkPolicy.ObjectTypeEnum.FabricEthNetworkPolicy;
+            TargetPlatform = FabricEthNetworkPolicy.TargetPlatformEnum.UCSDomain;
 
         }
         // <summary>
@@ -1928,6 +1929,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The target platform type of the Ethernet Network policy.\n* `UCS Domain` - Profile/policy type for network and management configuration on UCS Fabric Interconnect.\n* `Unified Edge` - Profile/policy type for network, management and chassis configuration on Unified Edge."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricEthNetworkPolicy.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -1962,6 +1973,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
             }
             WriteObject(initObject);
         }
@@ -2239,7 +2254,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -2424,7 +2439,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to the a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -2619,7 +2634,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -3098,7 +3113,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to the a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -3297,7 +3312,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -4086,7 +4101,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Define the MAC address aging time in seconds. This field is valid when the \"Custom\" MAC address aging option is selected."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(120, 918000)]
+        [ValidateRange(10, 918000)]
         public int MacAgingTime
         {
             get;
@@ -4940,7 +4955,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to the a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -5397,7 +5412,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to the a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -5506,7 +5521,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `UCSX-S9108-100G` - Cisco UCS Fabric Interconnect 9108 100G with 8 ports.\n* `UCS-FI-6664` - The standard 6th generation UCS Fabric Interconnect with 64 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
+        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `UCSX-S9108-100G` - Cisco UCS Fabric Interconnect 9108 100G with 8 ports.\n* `UCS-FI-6664` - The standard 6th generation UCS Fabric Interconnect with 64 ports.\n* `UCS-FI-6652` - The standard 6th generation UCS Fabric Interconnect.\n* `UCSXE-ECMC-10G` - Cisco UCS XE ECMC 10G with 2 ports.\n* `UCSXE-ECMC-G1` - Cisco UCS XE ECMC G1 with 2 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -6349,7 +6364,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -7348,8 +7363,19 @@ namespace Intersight.PowerShell
         {
             ClassId = FabricSwitchClusterProfile.ClassIdEnum.FabricSwitchClusterProfile;
             ObjectType = FabricSwitchClusterProfile.ObjectTypeEnum.FabricSwitchClusterProfile;
+            TargetPlatform = FabricSwitchClusterProfile.TargetPlatformEnum.UCSDomain;
             Type = FabricSwitchClusterProfile.TypeEnum.Instance;
 
+        }
+        // <summary>
+        /// <para type="description">"The support actions are -- Deploy, Unassign."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Action
+        {
+            get;
+            set;
         }
         // <summary>
         /// <para type="description"></para>
@@ -7357,6 +7383,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.MoBaseMoRelationship AssignedEntity
         {
             get;
             set;
@@ -7462,6 +7498,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Type of the profile. 'UcsDomain' profile for network and management configuration on UCS Fabric Interconnect. 'UnifiedEdge' profile for network, management and chassis configuration on Unified Edge.\n* `UCS Domain` - Profile/policy type for network and management configuration on UCS Fabric Interconnect.\n* `Unified Edge` - Profile/policy type for network, management and chassis configuration on Unified Edge."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchClusterProfile.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -7486,9 +7532,17 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.FabricSwitchClusterProfile initObject = new Intersight.Model.FabricSwitchClusterProfile();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
+            {
+                initObject.Action = this.Action;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AssignedEntity"))
+            {
+                initObject.AssignedEntity = this.AssignedEntity;
             }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("ClusterAssignments"))
@@ -7524,6 +7578,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
@@ -7546,6 +7604,7 @@ namespace Intersight.PowerShell
         {
             ClassId = FabricSwitchClusterProfileTemplate.ClassIdEnum.FabricSwitchClusterProfileTemplate;
             ObjectType = FabricSwitchClusterProfileTemplate.ObjectTypeEnum.FabricSwitchClusterProfileTemplate;
+            TargetPlatform = FabricSwitchClusterProfileTemplate.TargetPlatformEnum.UCSDomain;
             Type = FabricSwitchClusterProfileTemplate.TypeEnum.Instance;
 
         }
@@ -7650,6 +7709,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Type of the profile. 'UcsDomain' profile for network and management configuration on UCS Fabric Interconnect. 'UnifiedEdge' profile for network, management and chassis configuration on Unified Edge.\n* `UCS Domain` - Profile/policy type for network and management configuration on UCS Fabric Interconnect.\n* `Unified Edge` - Profile/policy type for network, management and chassis configuration on Unified Edge."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchClusterProfileTemplate.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -7698,6 +7767,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
@@ -7719,6 +7792,7 @@ namespace Intersight.PowerShell
             FabricPcVhbaReset = FabricSwitchControlPolicy.FabricPcVhbaResetEnum.Disabled;
             FcSwitchingMode = FabricSwitchControlPolicy.FcSwitchingModeEnum.EndHost;
             ObjectType = FabricSwitchControlPolicy.ObjectTypeEnum.FabricSwitchControlPolicy;
+            TargetPlatform = FabricSwitchControlPolicy.TargetPlatformEnum.UCSDomain;
 
         }
         // <summary>
@@ -7757,6 +7831,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
         public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"To enable or disable Jumbo Frames on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableJumboFrame
         {
             get;
             set;
@@ -7872,6 +7956,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The target platform type of the Switch Control policy.\n* `UCS Domain` - Profile/policy type for network and management configuration on UCS Fabric Interconnect.\n* `Unified Edge` - Profile/policy type for network, management and chassis configuration on Unified Edge."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchControlPolicy.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"This specifies the UDLD Global configurations for this switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -7908,6 +8002,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableJumboFrame"))
+            {
+                initObject.EnableJumboFrame = this.EnableJumboFrame;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("EthernetSwitchingMode"))
             {
@@ -7950,6 +8048,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("UdldSettings"))
             {
                 initObject.UdldSettings = this.UdldSettings;
@@ -7973,6 +8075,7 @@ namespace Intersight.PowerShell
             ClassId = FabricSwitchProfile.ClassIdEnum.FabricSwitchProfile;
             ObjectType = FabricSwitchProfile.ObjectTypeEnum.FabricSwitchProfile;
             SwitchId = FabricSwitchProfile.SwitchIdEnum.None;
+            TargetPlatform = FabricSwitchProfile.TargetPlatformEnum.UCSDomain;
             Type = FabricSwitchProfile.TypeEnum.Instance;
 
         }
@@ -8137,6 +8240,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Type of the profile. 'UcsDomain' profile for network and management configuration on UCS Fabric Interconnect. 'UnifiedEdge' profile for network, management and chassis configuration on Unified Edge.\n* `UCS Domain` - Profile/policy type for network and management configuration on UCS Fabric Interconnect.\n* `Unified Edge` - Profile/policy type for network, management and chassis configuration on Unified Edge."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfile.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8209,6 +8322,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
@@ -8228,6 +8345,7 @@ namespace Intersight.PowerShell
             ClassId = FabricSwitchProfileTemplate.ClassIdEnum.FabricSwitchProfileTemplate;
             ObjectType = FabricSwitchProfileTemplate.ObjectTypeEnum.FabricSwitchProfileTemplate;
             SwitchId = FabricSwitchProfileTemplate.SwitchIdEnum.None;
+            TargetPlatform = FabricSwitchProfileTemplate.TargetPlatformEnum.UCSDomain;
             Type = FabricSwitchProfileTemplate.TypeEnum.Instance;
 
         }
@@ -8382,6 +8500,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Type of the profile. 'UcsDomain' profile for network and management configuration on UCS Fabric Interconnect. 'UnifiedEdge' profile for network, management and chassis configuration on Unified Edge.\n* `UCS Domain` - Profile/policy type for network and management configuration on UCS Fabric Interconnect.\n* `Unified Edge` - Profile/policy type for network, management and chassis configuration on Unified Edge."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfileTemplate.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8450,6 +8578,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
@@ -8468,6 +8600,7 @@ namespace Intersight.PowerShell
         {
             ClassId = FabricSystemQosPolicy.ClassIdEnum.FabricSystemQosPolicy;
             ObjectType = FabricSystemQosPolicy.ObjectTypeEnum.FabricSystemQosPolicy;
+            TargetPlatform = FabricSystemQosPolicy.TargetPlatformEnum.UCSDomain;
 
         }
         // <summary>
@@ -8570,6 +8703,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The target platform type of the system QoS policy.\n* `UCS Domain` - Profile/policy type for network and management configuration on UCS Fabric Interconnect.\n* `Unified Edge` - Profile/policy type for network, management and chassis configuration on Unified Edge."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSystemQosPolicy.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -8609,6 +8752,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
+            }
             WriteObject(initObject);
         }
 
@@ -8647,10 +8794,10 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Configures the time between UDLD probe messages on ports that are in advertisement mode and are\ncurrently determined to be bidirectional.\nValid values are from 7 to 90 seconds."</para>
+        /// <para type="description">"Configures the time between UDLD probe messages on ports that are in advertisement mode and are\ncurrently determined to be bidirectional.\nValid values are from 1 to 90 seconds."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(7, 90)]
+        [ValidateRange(1, 90)]
         public long MessageInterval
         {
             get;
@@ -8954,7 +9101,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to the a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -9195,7 +9342,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to a Port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[!#%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;
@@ -9292,7 +9439,17 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified for Disjoint Layer 2 VLAN configuration. Default VLAN-1 cannot be configured as Disjoint Layer 2 VLAN."</para>
+        /// <para type="description">"Enable this option to automatically allow the VLAN on inter-cluster links. To configure disjoint Layer 2 VLANs, 'Disable' must be specified together with 'AutoAllowOnUplinks.' Note that 'AutoAllowOnClusterLinks' cannot be enabled for the default VLAN 1 or the native VLAN."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AutoAllowOnClusterLinks
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified alongside AutoAllowOnClusterLinks for disjoint layer 2 VLAN configuration. Default VLAN 1 cannot be configured as disjoint layer 2 VLAN."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -9429,6 +9586,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AutoAllowOnClusterLinks"))
+            {
+                initObject.AutoAllowOnClusterLinks = this.AutoAllowOnClusterLinks;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("AutoAllowOnUplinks"))
             {
@@ -9588,6 +9749,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"This setting determines whether the VLAN is automatically allowed on inter-cluster links within this domain."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AutoAllowOnClusterLinks
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9635,6 +9806,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AutoAllowOnClusterLinks"))
+            {
+                initObject.AutoAllowOnClusterLinks = this.AutoAllowOnClusterLinks;
             }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))

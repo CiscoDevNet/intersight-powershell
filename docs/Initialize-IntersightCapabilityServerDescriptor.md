@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCapabilityServerDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[Model.CapabilityCapabilityRelationship]>][-ClassId< CapabilityServerDescriptor.ClassIdEnum>][-Description< string>][-IsNcsiEnabled< bool>][-IsPplEnabled< bool>][-MlomAdapterPcieSlotNumber< long>][-Model< string>][-Moid< string>][-ObjectType< CapabilityServerDescriptor.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCapabilityServerDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[Model.CapabilityCapabilityRelationship]>][-ClassId< CapabilityServerDescriptor.ClassIdEnum>][-Description< string>][-IsNcsiEnabled< bool>][-IsPplEnabled< bool>][-MlomAdapterPcieSlotNumber< long>][-Model< string>][-Moid< string>][-ObjectType< CapabilityServerDescriptor.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnsupportedPolicies< System.Collections.Generic.List`1[string]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -184,6 +184,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UnsupportedPolicies
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

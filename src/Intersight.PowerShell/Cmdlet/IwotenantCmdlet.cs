@@ -1088,7 +1088,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Password that satisfies Cisco's Password Complexity security requirement.\nMinimum password length, which MUST be nonzero and up to the current maximum length\nContain both upper-case and lower-case letters\nContain at least one number (for example, 0-9)\nContain at least one special character."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Password
         {
@@ -1226,7 +1226,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"AWS access key Id to write data to redshift.  Refer to AWS cloud formation stack 'Output' of the tenant."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string WriteUserAccessKeyId
         {
@@ -1237,7 +1237,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"AWS secret access key to write data to redshift.  Refer to AWS cloud formation stack 'Output' of the tenant."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string WriteUserSecretAccessKey
         {

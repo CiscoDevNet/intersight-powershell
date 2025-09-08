@@ -12683,7 +12683,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The password must have a minimum of 8 and a maximum of 127 characters. For servers with IPMI user role enabled, the maximum length is limited to 20 characters. When strong password is enabled, must satisfy below requirements: A. The password must not contain the User's Name. B. The password must contain characters from three of the following four categories. 1) English uppercase characters (A through Z). 2) English lowercase characters (a through z). 3) Base 10 digits (0 through 9). 4) Non-alphabetic characters (! , @, #, $, %, ^, &, *, -, _, +, =)."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9!@#$%^&\\*+-_=]+$")]
         public string Password
         {
@@ -13552,7 +13552,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"User-entered password to be compared to password for change password function."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string CurrentPassword
         {
@@ -13564,7 +13564,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Initial password set for the local user for the first time when the local user gets created or when the password gets reset by the Account Administrator."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string InitialPassword
         {
@@ -13591,7 +13591,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"New password that the user's password should be changed to."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string NewPassword
         {
@@ -13604,7 +13604,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"User's current valid password."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public byte Password
         {
@@ -14464,7 +14464,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The password of the test user for testing the IdP configuration settings. It can be any string that adheres to the following constraints. It can have character except spaces, tabs, line breaks. It cannot be more than 256 characters."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
         [ValidatePattern("^$|^\\S{3,256}$")]
         public string Password
         {

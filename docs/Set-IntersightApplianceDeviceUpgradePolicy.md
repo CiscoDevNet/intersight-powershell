@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightApplianceDeviceUpgradePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoUpgrade< bool>][-BlackoutDatesEnabled< bool>][-BlackoutEndDate< DateTime>][-BlackoutStartDate< DateTime>][-EnableMetaDataSync< bool>][[-Moid]< string>][-Schedule< OnpremSchedule>][-SoftwareDownloadType< ApplianceDeviceUpgradePolicy.SoftwareDownloadTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightApplianceDeviceUpgradePolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoUpgrade< bool>][-BlackoutDatesEnabled< bool>][-BlackoutEndDate< DateTime>][-BlackoutStartDate< DateTime>][-DisruptiveGracePeriodWeek< long>][-EnableMetaDataSync< bool>][-IsCustomGracePeriodEnabled< bool>][[-Moid]< string>][-NondisruptiveGracePeriodWeek< long>][-Schedule< OnpremSchedule>][-SoftwareDownloadType< ApplianceDeviceUpgradePolicy.SoftwareDownloadTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -98,8 +98,38 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DisruptiveGracePeriodWeek
+Updates requiring a reboot will start automatically once the grace period ends.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -EnableMetaDataSync
 Indicates if the updated metadata files should be synced immediately or at the next upgrade.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsCustomGracePeriodEnabled
+Custom grace period for subsequent reboot and non-reboot updates.
 
 ```yaml
 Type: bool
@@ -122,6 +152,21 @@ Parameter Sets: (All)
 Aliases:
 
 Required: true
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NondisruptiveGracePeriodWeek
+Updates not requiring a reboot will start automatically once the grace period ends.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)

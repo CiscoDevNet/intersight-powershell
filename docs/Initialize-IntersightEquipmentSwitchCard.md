@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BaseMac< string>][-ClassId< EquipmentSwitchCard.ClassIdEnum>][-EndMac< string>][-FcPortChannels< System.Collections.Generic.List`1[Model.FcPortChannelRelationship]>][-FcPorts< System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]>][-HwVersion< string>][-Moid< string>][-Name< string>][-ObjectType< EquipmentSwitchCard.ObjectTypeEnum>][-OutOfBandIpMask< string>][-PartNumber< string>][-PortChannels< System.Collections.Generic.List`1[Model.EtherPortChannelRelationship]>][-PowerState< EquipmentSwitchCard.PowerStateEnum>][-Status< EquipmentSwitchCard.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BaseMac< string>][-ClassId< EquipmentSwitchCard.ClassIdEnum>][-EndMac< string>][-FcPortChannels< System.Collections.Generic.List`1[Model.FcPortChannelRelationship]>][-FcPorts< System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]>][-HostPorts< System.Collections.Generic.List`1[Model.EtherHostPortRelationship]>][-HwVersion< string>][-Moid< string>][-Name< string>][-ObjectType< EquipmentSwitchCard.ObjectTypeEnum>][-OutOfBandIpMask< string>][-PartNumber< string>][-PortChannels< System.Collections.Generic.List`1[Model.EtherPortChannelRelationship]>][-PowerState< EquipmentSwitchCard.PowerStateEnum>][-Status< EquipmentSwitchCard.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -110,6 +110,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HostPorts
+An array of relationships to etherHostPort resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.EtherHostPortRelationship]
 Parameter Sets: (All)
 Aliases:
 

@@ -170,6 +170,28 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"The boot progress state of a rack or blade server.\n* `None` - The server is powered off.\n* `OSBootStarted` - The operating system boot process has started.\n* `OSRunning` - The operating system boot process has started and running.\n* `OEM` - The server is in an OEM-defined startup state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeBlade.BootLastStateEnum BootLastState
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The last known OEM-defined startup state of a rack or blade server.\n* `None` - The server has not yet completed OEM initialization.\n* `PlatformInitializing` - The server is initializing after being powered on."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeBlade.BootOemLastStateEnum BootOemLastState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -3109,6 +3131,28 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"The boot progress state of a rack or blade server.\n* `None` - The server is powered off.\n* `OSBootStarted` - The operating system boot process has started.\n* `OSRunning` - The operating system boot process has started and running.\n* `OEM` - The server is in an OEM-defined startup state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeRackUnit.BootLastStateEnum BootLastState
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The last known OEM-defined startup state of a rack or blade server.\n* `None` - The server has not yet completed OEM initialization.\n* `PlatformInitializing` - The server is initializing after being powered on."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ComputeRackUnit.BootOemLastStateEnum BootOemLastState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -5595,6 +5639,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"An array of relationships to bootNvmeDevice resources."</para>
         /// </summary>
@@ -5605,6 +5650,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"An array of relationships to bootPchStorageDevice resources."</para>
@@ -6430,6 +6476,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"An array of relationships to bootNvmeDevice resources."</para>
         /// </summary>
@@ -6440,6 +6487,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"An array of relationships to bootPchStorageDevice resources."</para>
@@ -7234,7 +7282,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The JSON formatted host initialization configuration containing the basic information for doing an initial boot. The information will be sent to CIMC and stored in host-init.json file on the server. The stored file can only be access using IPMI tool on the host OS."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string HostInitConfiguration
         {
@@ -7295,7 +7343,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The personality value to be set on the server. Any additional information like the hypervisor type, last update time can also be set through this server setting."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public ComputePersonalitySetting PersonalitySetting
         {
