@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2025071017
-- C# SDK version: 1.0.11.2025071017
+- Intersight.PowerShell version: 1.0.11.2025081401
+- C# SDK version: 1.0.11.2025081401
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025071017"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025081401"}
 ```
 or
 
@@ -939,6 +939,7 @@ CapabilityServerUpgradeSupportMeta | [**Get-IntersightCapabilityServerUpgradeSup
 CapabilitySiocModuleCapabilityDef | [**Get-IntersightCapabilitySiocModuleCapabilityDef**](docs/Get-IntersightCapabilitySiocModuleCapabilityDef.md) | Read a 'CapabilitySiocModuleCapabilityDef' resource.
 CapabilitySiocModuleDescriptor | [**Get-IntersightCapabilitySiocModuleDescriptor**](docs/Get-IntersightCapabilitySiocModuleDescriptor.md) | Read a 'CapabilitySiocModuleDescriptor' resource.
 CapabilitySiocModuleManufacturingDef | [**Get-IntersightCapabilitySiocModuleManufacturingDef**](docs/Get-IntersightCapabilitySiocModuleManufacturingDef.md) | Read a 'CapabilitySiocModuleManufacturingDef' resource.
+CapabilityStandardRedfishSupportMeta | [**Get-IntersightCapabilityStandardRedfishSupportMeta**](docs/Get-IntersightCapabilityStandardRedfishSupportMeta.md) | Read a 'CapabilityStandardRedfishSupportMeta' resource.
 CapabilityStorageControllerUpdateConstraintMeta | [**Get-IntersightCapabilityStorageControllerUpdateConstraintMeta**](docs/Get-IntersightCapabilityStorageControllerUpdateConstraintMeta.md) | Read a 'CapabilityStorageControllerUpdateConstraintMeta' resource.
 CapabilityStorageControllersMetaData | [**Get-IntersightCapabilityStorageControllersMetaData**](docs/Get-IntersightCapabilityStorageControllersMetaData.md) | Read a 'CapabilityStorageControllersMetaData' resource.
 CapabilitySwitchCapability | [**Get-IntersightCapabilitySwitchCapability**](docs/Get-IntersightCapabilitySwitchCapability.md) | Read a 'CapabilitySwitchCapability' resource.
@@ -1160,6 +1161,7 @@ DnacVirtualNetworkFabricSite | [**Get-IntersightDnacVirtualNetworkFabricSite**](
 EnergyDailyMetrics | [**New-IntersightEnergyDailyMetrics**](docs/New-IntersightEnergyDailyMetrics.md) | Create a 'EnergyDailyMetrics' resource.
 EnergyMetrics | [**New-IntersightEnergyMetrics**](docs/New-IntersightEnergyMetrics.md) | Create a 'EnergyMetrics' resource.
 EquipmentChassis | [**Get-IntersightEquipmentChassis**](docs/Get-IntersightEquipmentChassis.md) | Read a 'EquipmentChassis' resource.
+EquipmentChassisController | [**Get-IntersightEquipmentChassisController**](docs/Get-IntersightEquipmentChassisController.md) | Read a 'EquipmentChassisController' resource.
 EquipmentChassisIdPool | [**Get-IntersightEquipmentChassisIdPool**](docs/Get-IntersightEquipmentChassisIdPool.md) | Read a 'EquipmentChassisIdPool' resource.
 EquipmentChassisIdentity | [**Get-IntersightEquipmentChassisIdentity**](docs/Get-IntersightEquipmentChassisIdentity.md) | Read a 'EquipmentChassisIdentity' resource.
 EquipmentChassisOperation | [**Get-IntersightEquipmentChassisOperation**](docs/Get-IntersightEquipmentChassisOperation.md) | Read a 'EquipmentChassisOperation' resource.
@@ -1193,6 +1195,7 @@ EquipmentSystemIoController | [**Get-IntersightEquipmentSystemIoController**](do
 EquipmentTpm | [**Get-IntersightEquipmentTpm**](docs/Get-IntersightEquipmentTpm.md) | Read a 'EquipmentTpm' resource.
 EquipmentTransceiver | [**Get-IntersightEquipmentTransceiver**](docs/Get-IntersightEquipmentTransceiver.md) | Read a 'EquipmentTransceiver' resource.
 EquipmentChassis | [**Set-IntersightEquipmentChassis**](docs/Set-IntersightEquipmentChassis.md) | Update a 'EquipmentChassis' resource.
+EquipmentChassisController | [**Set-IntersightEquipmentChassisController**](docs/Set-IntersightEquipmentChassisController.md) | Update a 'EquipmentChassisController' resource.
 EquipmentChassisIdentity | [**Set-IntersightEquipmentChassisIdentity**](docs/Set-IntersightEquipmentChassisIdentity.md) | Update a 'EquipmentChassisIdentity' resource.
 EquipmentChassisOperation | [**Set-IntersightEquipmentChassisOperation**](docs/Set-IntersightEquipmentChassisOperation.md) | Update a 'EquipmentChassisOperation' resource.
 EquipmentEnclosureElement | [**Set-IntersightEquipmentEnclosureElement**](docs/Set-IntersightEquipmentEnclosureElement.md) | Update a 'EquipmentEnclosureElement' resource.
@@ -1553,6 +1556,7 @@ HclHwCatalogInfo | [**Get-IntersightHclHwCatalogInfo**](docs/Get-IntersightHclHw
 HclHyperflexSoftwareCompatibilityInfo | [**Get-IntersightHclHyperflexSoftwareCompatibilityInfo**](docs/Get-IntersightHclHyperflexSoftwareCompatibilityInfo.md) | Read a 'HclHyperflexSoftwareCompatibilityInfo' resource.
 HclOperatingSystem | [**Get-IntersightHclOperatingSystem**](docs/Get-IntersightHclOperatingSystem.md) | Read a 'HclOperatingSystem' resource.
 HclOperatingSystemVendor | [**Get-IntersightHclOperatingSystemVendor**](docs/Get-IntersightHclOperatingSystemVendor.md) | Read a 'HclOperatingSystemVendor' resource.
+HclServerCatalog | [**Get-IntersightHclServerCatalog**](docs/Get-IntersightHclServerCatalog.md) | Read a 'HclServerCatalog' resource.
 HclServerHwCatalogInfo | [**Get-IntersightHclServerHwCatalogInfo**](docs/Get-IntersightHclServerHwCatalogInfo.md) | Read a 'HclServerHwCatalogInfo' resource.
 HclCompatibilityStatus | [**New-IntersightHclCompatibilityStatus**](docs/New-IntersightHclCompatibilityStatus.md) | Create a 'HclCompatibilityStatus' resource.
 HclHyperflexSoftwareCompatibilityInfo | [**New-IntersightHclHyperflexSoftwareCompatibilityInfo**](docs/New-IntersightHclHyperflexSoftwareCompatibilityInfo.md) | Create a 'HclHyperflexSoftwareCompatibilityInfo' resource.

@@ -22747,7 +22747,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Key Encryption Key used to encrypt the DEK's on the HyperFlex cluster."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Kek
         {
@@ -22794,7 +22794,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Initial passphrase for encryption policy, requiring a minimum of 12 characters, including 1 lowercase, 1 uppercase, and 1 numeric character."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Passphrase
         {
@@ -22913,7 +22913,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"HyperFlex storage controller VM password must contain a minimum of 10 characters, with at least 1 lowercase, 1 uppercase, 1 numeric, and 1 of these -._@#$%^&*! special characters."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9!@#$%^&*_.-]{10,}$")]
         public string HxdpRootPwd
         {
@@ -22935,7 +22935,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The Hypervisor root password. For HyperFlex Data Platform 3.0 or later, if the factory default password was not manually changed, you must set a new custom password. If the password was manually changed, you must not enable the factory default password property and provide the current hypervisor password. Note - All HyperFlex nodes require the same hypervisor password for installation. For HyperFlex Data Platform prior to 3.0, use the default password \"Cisco123\" for newly manufactured HyperFlex servers. A custom password should only be entered if hypervisor credentials were manually changed prior to deployment."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
         [ValidatePattern("^.{7,40}$")]
         public string HypervisorAdminPwd
         {
@@ -23583,7 +23583,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The password for the HTTP Proxy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Password
         {
@@ -25069,7 +25069,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The password for authenticating with vCenter. Follow the corresponding password policy governed by vCenter."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Password
         {

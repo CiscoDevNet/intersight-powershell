@@ -837,7 +837,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Authorization password for the process."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
         [ValidatePattern("^[\\S+]{0,254}$")]
         public string AuthPassword
         {

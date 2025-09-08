@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricSystemQosPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricSystemQosPolicy.ClassIdEnum>][-Classes< System.Collections.Generic.List`1[Model.FabricQosClass]>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSystemQosPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricSystemQosPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricSystemQosPolicy.ClassIdEnum>][-Classes< System.Collections.Generic.List`1[Model.FabricQosClass]>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSystemQosPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< FabricSystemQosPolicy.TargetPlatformEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -174,6 +174,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetPlatform
+The target platform type of the system QoS policy.\n* `UCS Domain` - Profile/policy type for network and management configuration on UCS Fabric Interconnect.\n* `Unified Edge` - Profile/policy type for network, management and chassis configuration on Unified Edge.
+
+```yaml
+Type: FabricSystemQosPolicy.TargetPlatformEnum
 Parameter Sets: (All)
 Aliases:
 

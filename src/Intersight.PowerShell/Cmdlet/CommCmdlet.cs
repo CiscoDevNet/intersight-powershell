@@ -696,7 +696,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The password for the HTTP Proxy."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Password
         {

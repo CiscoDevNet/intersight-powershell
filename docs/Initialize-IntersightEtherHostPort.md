@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEtherHostPort [-AcknowledgedPeerInterface< Model.PortInterfaceBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EtherHostPort.ClassIdEnum>][-EquipmentIoCardBase< Model.EquipmentIoCardBaseRelationship>][-Moid< string>][-ObjectType< EtherHostPort.ObjectTypeEnum>][-PeerInterface< Model.PortInterfaceBaseRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEtherHostPort [-AcknowledgedPeerInterface< Model.PortInterfaceBaseRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EtherHostPort.ClassIdEnum>][-EquipmentIoCardBase< Model.EquipmentIoCardBaseRelationship>][-EquipmentSwitchCard< Model.EquipmentSwitchCardRelationship>][-Moid< string>][-ObjectType< EtherHostPort.ObjectTypeEnum>][-PeerInterface< Model.PortInterfaceBaseRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -80,6 +80,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.EquipmentIoCardBaseRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EquipmentSwitchCard
+A reference to a equipmentSwitchCard resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.EquipmentSwitchCardRelationship
 Parameter Sets: (All)
 Aliases:
 

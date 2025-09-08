@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCapabilitySwitchDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[Model.CapabilityCapabilityRelationship]>][-ClassId< CapabilitySwitchDescriptor.ClassIdEnum>][-Description< string>][-ExpectedMemory< long>][-IsUcsxDirectSwitch< bool>][-Model< string>][-Moid< string>][-ObjectType< CapabilitySwitchDescriptor.ObjectTypeEnum>][-Revision< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCapabilitySwitchDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[Model.CapabilityCapabilityRelationship]>][-ClassId< CapabilitySwitchDescriptor.ClassIdEnum>][-Description< string>][-ExpectedMemory< long>][-IsAvatarEcmc< bool>][-IsUcsxDirectSwitch< bool>][-Model< string>][-Moid< string>][-ObjectType< CapabilitySwitchDescriptor.ObjectTypeEnum>][-Revision< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -92,6 +92,21 @@ The total expected memory for this hardware.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsAvatarEcmc
+Identifies whether Switch is part of Avatar series.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

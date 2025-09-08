@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareSwitchUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareSwitchUpgrade.ClassIdEnum>][-DirectDownload< Model.FirmwareDirectDownload>][-Distributable< Model.FirmwareDistributableRelationship>][-EnableFabricEvacuation< bool>][-FileServer< Model.SoftwarerepositoryFileServer>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[Model.NetworkElementRelationship]>][-NetworkShare< Model.FirmwareNetworkShare>][-ObjectType< FirmwareSwitchUpgrade.ObjectTypeEnum>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-SkipEstimateImpact< bool>][-SkipWaitForIoPathConnectivity< bool>][-Status< FirmwareSwitchUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UpgradeType< FirmwareSwitchUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareSwitchUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareSwitchUpgrade.ClassIdEnum>][-DirectDownload< Model.FirmwareDirectDownload>][-Distributable< Model.FirmwareDistributableRelationship>][-EnableFabricEvacuation< bool>][-EnablePdbFpgaUpgrade< bool>][-EnablePsuUpgrade< bool>][-FileServer< Model.SoftwarerepositoryFileServer>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[Model.NetworkElementRelationship]>][-NetworkShare< Model.FirmwareNetworkShare>][-ObjectType< FirmwareSwitchUpgrade.ObjectTypeEnum>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-SkipEstimateImpact< bool>][-SkipWaitForIoPathConnectivity< bool>][-Status< FirmwareSwitchUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UpgradeType< FirmwareSwitchUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -91,6 +91,36 @@ Accept wildcard characters: False
 
 ### -EnableFabricEvacuation
 The flag to enable or disable fabric evacuation during the switch firmware upgrade. In case of IMM, it is mandatory to have the Fabric Interconnects associated with domain profile for fabric evacuation to happen.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnablePdbFpgaUpgrade
+The flag to enable or disable firmware upgrade functionality for the PDB FPGA.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnablePsuUpgrade
+The flag to enable or disable firmware upgrade functionality for the Power Supply Unit (PSU).
 
 ```yaml
 Type: bool

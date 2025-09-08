@@ -1497,7 +1497,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The slot id of the local disk device. Supported values for Standalone Rack servers are (1-205, \"M\", \"HBA\", \"SAS\", \"RAID\", \"MRAID\", \"MRAID1\", \"MRAID2\", \"MSTOR-RAID\"). Supported values for FI-attached servers are (1-205, \"RAID\", \"MRAID\", \"FMEZZ1-SAS\", \"MRAID1\", \"MRAID2\", \"MSTOR-RAID\", \"MSTOR-RAID-1\", \"MSTOR-RAID-2\")."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|20[0-5]|M|HBA|SAS|MRAID|RAID|MRAID1|MRAID2|MSTOR-RAID|FMEZZ1-SAS|MSTOR-RAID-1|MSTOR-RAID-2)$")]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|20[0-5]|M|HBA|SAS|MRAID|RAID|MRAID1|MRAID2|MSTOR-RAID|FMEZZ1-SAS|MSTOR-RAID-1|MSTOR-RAID-2|LOM-NIC-1)$")]
         public string Slot
         {
             get;

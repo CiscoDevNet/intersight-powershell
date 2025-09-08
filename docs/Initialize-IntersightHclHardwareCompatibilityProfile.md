@@ -222,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -VersionType
-Type of the UCS version indicating whether it is a UCSM release vesion or a IMC release.\n* `UCSM` - The server is managed by UCS Manager.\n* `IMC` - The server is standalone managed by CIMC.
+Type of the UCS version indicating whether it is a UCSM release vesion or a IMC release.\n* `UCSM` - The server is managed by UCS Manager.\n* `IMC` - The server is standalone managed by CIMC.\n* `IMM` - The server is standalone managed by Intersight.
 
 ```yaml
 Type: HclHardwareCompatibilityProfile.VersionTypeEnum

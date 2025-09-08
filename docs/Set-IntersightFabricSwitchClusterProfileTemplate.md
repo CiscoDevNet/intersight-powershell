@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricSwitchClusterProfileTemplate [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchProfileTemplates< System.Collections.Generic.List`1[FabricSwitchProfileTemplateRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< FabricSwitchClusterProfileTemplate.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricSwitchClusterProfileTemplate [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchProfileTemplates< System.Collections.Generic.List`1[FabricSwitchProfileTemplateRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchClusterProfileTemplate.TargetPlatformEnum>][-Type< FabricSwitchClusterProfileTemplate.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -144,6 +144,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetPlatform
+Type of the profile. &apos;UcsDomain&apos; profile for network and management configuration on UCS Fabric Interconnect. &apos;UnifiedEdge&apos; profile for network, management and chassis configuration on Unified Edge.\n* `UCS Domain` - Profile/policy type for network and management configuration on UCS Fabric Interconnect.\n* `Unified Edge` - Profile/policy type for network, management and chassis configuration on Unified Edge.
+
+```yaml
+Type: FabricSwitchClusterProfileTemplate.TargetPlatformEnum
 Parameter Sets: (All)
 Aliases:
 

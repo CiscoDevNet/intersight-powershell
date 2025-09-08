@@ -475,6 +475,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a equipmentChassisController resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentChassisControllerRelationship ChassisController
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Configuration modified timestamp of the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -559,6 +570,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentChassisRelationship EquipmentChassis
         {
             get;
             set;
@@ -707,6 +729,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Jumbo Frame configuration for the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool JumboFrameEnabled
         {
             get;
             set;
@@ -1074,6 +1107,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The Slot Id of the network Element when embedded inside a chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long SlotId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The status of the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1109,7 +1153,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Switch type that the network element is a part of.\n* `FabricInterconnect` - The default Switch type of UCSM and IMM mode devices.\n* `NexusDevice` - Switch type of Nexus devices.\n* `MDSDevice` - Switch type of Nexus MDS devices."</para>
+        /// <para type="description">"The Switch type that the network element is a part of.\n* `FabricInterconnect` - The default Switch type of UCSM and IMM mode devices.\n* `NexusDevice` - Switch type of Nexus devices.\n* `MDSDevice` - Switch type of Nexus MDS devices.\n* `EdgeChassisManagementController` - Switch type of Edge Chassis Management Controller."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1397,6 +1441,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentChassisRelationship EquipmentChassis
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The user configured Ethernet operational mode for this switch (End-Host or Switching)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1567,6 +1622,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Jumbo Frame configuration for the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool JumboFrameEnabled
         {
             get;
             set;
@@ -1938,6 +2004,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The Slot Id of the network Element when embedded inside a chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long SlotId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Stores the source object type used to fill the properties of this object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1982,7 +2059,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Switch type that the network element is a part of.\n* `FabricInterconnect` - The default Switch type of UCSM and IMM mode devices.\n* `NexusDevice` - Switch type of Nexus devices.\n* `MDSDevice` - Switch type of Nexus MDS devices."</para>
+        /// <para type="description">"The Switch type that the network element is a part of.\n* `FabricInterconnect` - The default Switch type of UCSM and IMM mode devices.\n* `NexusDevice` - Switch type of Nexus devices.\n* `MDSDevice` - Switch type of Nexus MDS devices.\n* `EdgeChassisManagementController` - Switch type of Edge Chassis Management Controller."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5258,6 +5335,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Configuration modified timestamp of the switch."</para>
         /// </summary>
@@ -5312,6 +5390,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The fault summary of the network Element out-of-band management interface."</para>
         /// </summary>
@@ -5322,6 +5401,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -5438,6 +5518,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

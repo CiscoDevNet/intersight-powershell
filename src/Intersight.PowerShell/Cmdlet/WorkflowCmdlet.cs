@@ -12122,7 +12122,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"Used to update a TaskInfo instance in the WorkflowInfo, it is used as a way to update status and provide user inputs for a WaitTask."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public WorkflowTaskInfoUpdate TaskInfoUpdate
         {

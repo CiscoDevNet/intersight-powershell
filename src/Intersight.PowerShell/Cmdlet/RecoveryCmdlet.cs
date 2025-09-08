@@ -2225,7 +2225,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The backup server password."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Password
         {
@@ -2617,7 +2617,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The backup server password."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
 
         public string Password
         {

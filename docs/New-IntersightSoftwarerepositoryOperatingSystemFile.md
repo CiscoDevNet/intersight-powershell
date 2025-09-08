@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightSoftwarerepositoryOperatingSystemFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< SoftwarerepositoryCatalogRelationship>][-Description< string>][-ImportAction< SoftwarerepositoryOperatingSystemFile.ImportActionEnum>][-Md5eTag< string>][-Md5sum< string>][-Moid< string>][[-Name]< string>][-ReleaseDate< DateTime>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< SoftwarerepositoryFileServer>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightSoftwarerepositoryOperatingSystemFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< SoftwarerepositoryCatalogRelationship>][-Description< string>][-ImageType< string>][-ImportAction< SoftwarerepositoryOperatingSystemFile.ImportActionEnum>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][-Moid< string>][[-Name]< string>][-RecommendedBuild< string>][-Release< SoftwarerepositoryReleaseRelationship>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< SoftwarerepositoryFileServer>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -58,6 +58,21 @@ Accept wildcard characters: False
 
 ### -Description
 User provided description about the file. Cisco provided description for image inventoried from a Cisco repository.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ImageType
+The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, Unified Edge server. The field is used in private appliance mode, where image does not have description populated from CCO.
 
 ```yaml
 Type: string
@@ -116,6 +131,36 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Mdfid
+The mdfid of the image provided by cisco.com.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Model
+The endpoint model for which this firmware image is applicable.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -146,11 +191,59 @@ Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
+### -RecommendedBuild
+The build which is recommended by Cisco.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Release
+A reference to a softwarerepositoryRelease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: SoftwarerepositoryReleaseRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ReleaseDate
 The date on which the file was released or distributed by its vendor.
 
 ```yaml
 Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReleaseNotesUrl
+The url for the release notes of this image.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -MessageInterval
-Configures the time between UDLD probe messages on ports that are in advertisement mode and are\ncurrently determined to be bidirectional.\nValid values are from 7 to 90 seconds.
+Configures the time between UDLD probe messages on ports that are in advertisement mode and are\ncurrently determined to be bidirectional.\nValid values are from 1 to 90 seconds.
 
 ```yaml
 Type: long
