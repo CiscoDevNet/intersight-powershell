@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -WidgetType
-Specify the widget type for data display.\n* `None` - Display none of the widget types.\n* `Radio` - Display the widget as a radio button.\n* `Dropdown` - Display the widget as a dropdown.\n* `GridSelector` - Display the widget as a selector.\n* `DrawerSelector` - Display the widget as a selector.
+Specify the widget type for data display.\n* `None` - Display none of the widget types.\n* `Radio` - Display the widget as a radio button.\n* `Dropdown` - Display the widget as a dropdown.\n* `GridSelector` - Display the widget as a selector.\n* `DrawerSelector` - Display the widget as a selector.\n* `MultiSelect` - Display the widget as a multi-select.
 
 ```yaml
 Type: WorkflowDisplayMeta.WidgetTypeEnum

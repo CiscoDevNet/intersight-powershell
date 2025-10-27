@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSchedulerRecurringScheduleParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cadence< SchedulerRecurringScheduleParams.CadenceEnum>][-ClassId< SchedulerRecurringScheduleParams.ClassIdEnum>][-EndAfterOccurrences< long>][-EndTime< DateTime>][-FailureThreshold< long>][-ObjectType< SchedulerRecurringScheduleParams.ObjectTypeEnum>][-Params< Model.SchedulerBaseCadenceParams>][-StartTime< DateTime>][-TimeZone< SchedulerRecurringScheduleParams.VarTimeZoneEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSchedulerRecurringScheduleParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cadence< SchedulerRecurringScheduleParams.CadenceEnum>][-ClassId< SchedulerRecurringScheduleParams.ClassIdEnum>][-Duration< string>][-EndAfterOccurrences< long>][-EndTime< DateTime>][-FailureThreshold< long>][-Name< string>][-ObjectType< SchedulerRecurringScheduleParams.ObjectTypeEnum>][-Params< Model.SchedulerBaseCadenceParams>][-StartTime< DateTime>][-TimeZone< SchedulerRecurringScheduleParams.VarTimeZoneEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,6 +69,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Duration
+The duration of the schedule. Its syntax is specified at https://www.w3.org/TR/xmlschema11-2/#nt-durationRep For example, P20DT10H5M2.3S is for 20 days, 10 hours, 5 minutes and 2.3 seconds. It is a mandatory input property for Policy based schedules.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -EndAfterOccurrences
 Specify the number of occurrences (instead of an end-time) for a recurring schedule.
 
@@ -104,6 +119,21 @@ The maximum number of consecutive failures until the recurring scheduled task is
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+The name of the schedule. It is a mandatory input property for Policy based schedules.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

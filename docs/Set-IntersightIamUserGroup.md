@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamUserGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Idp< IamIdpRelationship>][-Idpreference< IamIdpReferenceRelationship>][[-Moid]< string>][-Name< string>][-Permissions< System.Collections.Generic.List`1[IamPermissionRelationship]>][-Qualifier< IamQualifierRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightIamUserGroup [-AccessActivationTime< DateTime>][-AccessExpiryTime< DateTime>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-GroupType< IamUserGroup.GroupTypeEnum>][-Idp< IamIdpRelationship>][-Idpreference< IamIdpReferenceRelationship>][-Instruction< string>][[-Moid]< string>][-Name< string>][-Permissions< System.Collections.Generic.List`1[IamPermissionRelationship]>][-Qualifier< IamAbstractQualifierRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,11 +23,56 @@ Update a &apos;IamUserGroup&apos; resource.
 
 ## PARAMETERS
 
+### -AccessActivationTime
+AccessActivationTime indicates the activation time for the guest user&apos;s access to the Account.  Before this time, if guest user tries to login to the account, access the account will be denied.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AccessExpiryTime
+AccessExpiryTime indicates the expiration time for the guest user&apos;s access to the Account. Its value can only be  assigned a date that falls within the range determined by the maximum expiration time configured for the  API entries. The AccessExpiry date can be edited to be earlier or later.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -AdditionalProperties
 
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GroupType
+Group type determines the type of groups that is being associated with users. By default, Default User group will be used for associating dynamic user login. If the value of the User Group is set to guest, then this type of user group will be used for guest user login.\n* `Default` - Default User Group Type used for dynamic users login.\n* `Guest` - Guest User Group type used for guest users login.
+
+```yaml
+Type: IamUserGroup.GroupTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -74,6 +119,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Instruction
+Instruction property holds detailed guidance and information intended for individuals  accessing the system as guest users. It holds the information to assist guests in navigating the platform,  understanding policies, and performing necessary actions to ensure a seamless and secure user experience.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -90,7 +150,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the user group which the dynamic user belongs to.
+The name of the user group which the dynamic/or guest user belongs to.
 
 ```yaml
 Type: string
@@ -123,13 +183,13 @@ Accept wildcard characters: False
 ```
 
 ### -Qualifier
-A reference to a iamQualifier resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+A reference to a iamAbstractQualifier resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: IamQualifierRelationship
+Type: IamAbstractQualifierRelationship
 Parameter Sets: (All)
 Aliases:
 

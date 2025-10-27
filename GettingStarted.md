@@ -40,11 +40,10 @@ PS C:\> Get-Module
 
 ModuleType Version    PreRelease Name                                ExportedCommands
 ---------- -------    ---------- ----                                ----------------
-Binary     1.0.9.3978            Intersight.PowerShell               {Get-IntersightAaaAuditRecord, Get-IntersightAccessPolicy, Get…
-Manifest   7.0.0.0               Microsoft.PowerShell.Management     {Add-Content, Clear-Content, Clear-Item, Clear-ItemProperty…}
+Binary     1.0.11.2025081401     Intersight.PowerShell               {Get-IntersightAaaAuditRecord, Get...}
+Manifest   7.0.0.0               Microsoft.PowerShell.Management     {Add-Content, Clear-Content, Clear-Item}
 Manifest   7.0.0.0               Microsoft.PowerShell.Utility        {Add-Member, Add-Type, Clear-Variable, Compare-Object…}
-Script     2.1.0                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadLineOption, Remove-PSRead…
-
+Script     2.1.0                 PSReadLine                          {Get-PSReadLineKeyHandler, Get-PSReadLineOption}
 ```
 User can place the module in the directory listed in ```$env:PSModulePath``` or the path of Intersight.PowerShell can be added in ```$env:PSModulePath``` to import the module by name.
 
@@ -62,10 +61,12 @@ To expore the other supported cmdlet parameter like ```KeyPassPhrase```, ```Prox
 
 ### Authenticate the user
 Intersight.PowerShell supports only HttpSigning Auth. The API key can be supplied through either a file path or as a string.
+
+**Note** : If your account is provisioned on the **EMEA cluster**, you must use the URL  `eu-central-1.intersight.com` instead of `intersight.com`
 #### Provide API Key file path.
 ```powershell
 $onprem = @{
-    BasePath = "https://intersight.com"
+    BasePath = "https://intersight.com" # or 'eu-central-1.intersight.com' if your account is in EMEA cluster
     ApiKeyId = "xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx"
     ApiKeyFilePath = "C:\\secrectKey.txt" 
     HttpSigningHeader =  @("(request-target)", "Host", "Date", "Digest")
@@ -89,7 +90,7 @@ SignatureValidityPeriod : 0
 
 ```powershell
 $onprem = @{
-    BasePath = "https://intersight.com"
+    BasePath = "https://intersight.com" # or 'eu-central-1.intersight.com' if your account is in EMEA cluster
     ApiKeyId = "xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx"
     ApiKeyString = "-----BEGIN RSA PRIVATE KEY-----XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----END RSA PRIVATE KEY-----" 
     HttpSigningHeader =  @("(request-target)", "Host", "Date", "Digest")
@@ -170,7 +171,7 @@ DisplayNames                      :
 ```
 
 ## Create the Policy Under PSOrg organization
-### Create Ntp Policy
+### Create NTP Policy
 The cmdlet ```New-IntersightNtpPolicy``` is used to create the Ntp Policy. To refer Organization we are using  ```$newOrg``` variable where we have
 created the organization in previous example.
 ``` powershell
@@ -231,11 +232,11 @@ DisplayNames                      :
 ```
 
 ### create KVM policy under PSOrg organization
-The cmdlet ```New-IntersightKvmPolicy``` is used to create the Kvm Policy. To refer Organization we are using  ```$newOrg``` variable where we have
+The cmdlet ```New-IntersightKvmPolicy``` is used to create the KVM Policy. To refer Organization we are using  ```$newOrg``` variable where we have
 created the organization in previous example.
 
 ```powershell
-PS C:\> $kvmPolicy = New-IntersightKvmPolicy -Name PSKvm -Description "Kvm policy for PSOrg" -EnableVideoEncryption $true -EnableLocalServerVideo $true -Enabled $true -MaximumSessions 2 -Organization $newOrg
+PS C:\> $kvmPolicy = New-IntersightKvmPolicy -Name PSKvm -Description "KVM policy for PSOrg" -EnableVideoEncryption $true -EnableLocalServerVideo $true -Enabled $true -MaximumSessions 2 -Organization $newOrg
 PS C:\> $kvmPolicy
 
 ClassId                           : KvmPolicy
@@ -295,17 +296,17 @@ DisplayNames                      :
 
 ### Get-IntersightNtpPolicy
 ---
-It returns the list of availabe ntp policy in the intersight cloud.
+It returns the list of available NTP policy in the intersight cloud.
 ```powershell
 PS C:\> $ntpPolicyList = Get-IntersightNtpPolicy
 PS C:\> $ntpPolicyList.Count
 15
 ```
- ```$ntpPolicyList ``` contains the list of ntp policy, showing only the count of ntp policy to avoid the huge list. 
+ ```$ntpPolicyList ``` contains the list of ntp policy, showing only the count of NTP policy to avoid the huge list. 
 
  ### Get-intersightNtpPolicy -Name <Name of the policy>
  ---
- It returns the ntp policy named "PSNtp"
+ It returns the NTP policy named "PSNtp"
 
 **_NOTE_** A maximum of 10,000 objects can be retrieved by Get cmdlets in a single invocation
 
@@ -366,14 +367,14 @@ DisplayNames                      :
 
  ```
 
- ### Get ntp Policies under the Organization named PSOrg
+ ### Get NTP Policies under the Organization named PSOrg
 ---
  ```powershell
 PS C:\> $ntpPolicyList  = Get-IntersightOrganizationOrganization -Name PSOrg | Get-IntersightNtpPolicy
 
  ```
 
- ### Get ntp policy based on query parameter inlineCount
+ ### Get NTP policy based on query parameter inlineCount
  Get cmdlets support all the query parameter specified in Intersight OpenAPI document.
 
  ```powershell
@@ -387,8 +388,8 @@ Count Results
  
  ```
 ---
- ## update the existing MO
- ### Update the ntp policy -NtpServers with "33.33.33.33" and "10.10.10.10"
+ ## update the existing NTP Policy
+ ### Update the NTP policy -NtpServers with "33.33.33.33" and "10.10.10.10"
  Here we refer the PSNtp policy what we have already created in previous example.
  ```powershell
  
@@ -449,7 +450,7 @@ DisplayNames                      :
  ```
 ---
 
-## Delete the Mo
+## Delete the NTP policy
 We have already created one Ntp policy and Kvm policy, now we delete it. 
 
 ```powershell

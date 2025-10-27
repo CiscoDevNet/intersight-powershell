@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightResourcepoolPool [-Action< ResourcepoolPool.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< ResourcepoolPool.AssignmentOrderEnum>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PoolType< ResourcepoolPool.PoolTypeEnum>][-QualificationPolicies< System.Collections.Generic.List`1[ResourcepoolQualificationPolicyRelationship]>][-ResourcePoolParameters< ResourcepoolResourcePoolParameters>][-ResourceType< ResourcepoolPool.ResourceTypeEnum>][-Selectors< System.Collections.Generic.List`1[ResourceSelector]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightResourcepoolPool [-Action< ResourcepoolPool.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< ResourcepoolPool.AssignmentOrderEnum>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PoolType< ResourcepoolPool.PoolTypeEnum>][-QualificationPolicies< System.Collections.Generic.List`1[ResourceAbstractResourceQualificationPolicyRelationship]>][-ResourcePoolParameters< ResourcepoolResourcePoolParameters>][-ResourceType< ResourcepoolPool.ResourceTypeEnum>][-Selectors< System.Collections.Generic.List`1[ResourceSelector]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -147,13 +147,13 @@ Accept wildcard characters: False
 ```
 
 ### -QualificationPolicies
-An array of relationships to resourcepoolQualificationPolicy resources.
+An array of relationships to resourceAbstractResourceQualificationPolicy resources.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: System.Collections.Generic.List`1[ResourcepoolQualificationPolicyRelationship]
+Type: System.Collections.Generic.List`1[ResourceAbstractResourceQualificationPolicyRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -182,7 +182,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-The type of the resource present in the pool, example &apos;server&apos; its combination of RackUnit and Blade.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.\n* `None` - The resource cannot consider for Resource Pool.
+The type of the resource present in the pool, example &apos;server&apos; its combination of RackUnit and Blade.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.\n* `Mixed` - Resource Pool holds the resources like Rack Server, Blade or Chassis.\n* `None` - The resource cannot consider for Resource Pool.
 
 ```yaml
 Type: ResourcepoolPool.ResourceTypeEnum

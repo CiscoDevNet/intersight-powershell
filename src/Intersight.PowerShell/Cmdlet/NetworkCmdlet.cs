@@ -142,6 +142,28 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"System capabilities of the neighboring device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NeighborCapability
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The software description of the neighboring device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NeighborDescription
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Device identifier of the neighboring device."</para>
@@ -166,11 +188,77 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Model of the neighbor device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NeighborModel
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Native VLAN of the neighbor device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NeighborNativeVlan
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"PortID of the neighbor device configured."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string NeighborPortId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Serial number of the neighbor device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NeighborSerial
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Type of the neighbor device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NeighborType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Vendor of the neighbor device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NeighborVendor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Version of the neighbor device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NeighborVersion
         {
             get;
             set;
@@ -188,6 +276,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"A reference to a etherPhysicalPort resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EtherPhysicalPortRelationship PhysicalPort
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
@@ -744,6 +843,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -1637,6 +1737,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"The management mode of the fabric interconnect.\n* `IntersightStandalone` - Intersight Standalone mode of operation.\n* `UCSM` - Unified Computing System Manager mode of operation.\n* `Intersight` - Intersight managed mode of operation."</para>
@@ -5401,6 +5502,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

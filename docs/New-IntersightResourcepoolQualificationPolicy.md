@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightResourcepoolQualificationPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Qualifiers< System.Collections.Generic.List`1[ResourceResourceQualifier]>][-ResourcePools< System.Collections.Generic.List`1[ResourcepoolPoolRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightResourcepoolQualificationPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Qualifiers< System.Collections.Generic.List`1[ResourceResourceQualifier]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -108,24 +108,6 @@ Note :- Use Initialize-IntersightResourceResourceQualifier to create the object 
 
 ```yaml
 Type: System.Collections.Generic.List`1[ResourceResourceQualifier]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ResourcePools
-An array of relationships to resourcepoolPool resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[ResourcepoolPoolRelationship]
 Parameter Sets: (All)
 Aliases:
 

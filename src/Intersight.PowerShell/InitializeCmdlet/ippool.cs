@@ -512,7 +512,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Number of identifiers this block can hold."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 1024)]
+
         public long Size
         {
             get;
@@ -738,7 +738,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Number of identifiers this block can hold."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 1024)]
+
         public long Size
         {
             get;

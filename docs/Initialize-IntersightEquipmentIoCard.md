@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentIoCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EquipmentIoCard.ClassIdEnum>][-ConnectionStatus< string>][-FanModules< System.Collections.Generic.List`1[Model.EquipmentFanModuleRelationship]>][-HostPorts< System.Collections.Generic.List`1[Model.EtherHostPortRelationship]>][-InbandIpAddresses< System.Collections.Generic.List`1[Model.ComputeIpAddress]>][-Moid< string>][-NetworkPorts< System.Collections.Generic.List`1[Model.EtherNetworkPortRelationship]>][-ObjectType< EquipmentIoCard.ObjectTypeEnum>][-PhysicalDeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentIoCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EquipmentIoCard.ClassIdEnum>][-ConnectionStatus< string>][-FanModules< System.Collections.Generic.List`1[Model.EquipmentFanModuleRelationship]>][-HostPorts< System.Collections.Generic.List`1[Model.EtherHostPortRelationship]>][-Moid< string>][-NetworkPorts< System.Collections.Generic.List`1[Model.EtherNetworkPortRelationship]>][-ObjectType< EquipmentIoCard.ObjectTypeEnum>][-PhysicalDeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -95,23 +95,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.EtherHostPortRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InbandIpAddresses
-
-
-Note :- Use Initialize-IntersightComputeIpAddress to create the object of complex type ComputeIpAddress
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.ComputeIpAddress]
 Parameter Sets: (All)
 Aliases:
 
@@ -261,7 +244,5 @@ PS C:\> Initialize-IntersightEquipmentIoCard
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightComputeIpAddress](./Initialize-IntersightComputeIpAddress.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

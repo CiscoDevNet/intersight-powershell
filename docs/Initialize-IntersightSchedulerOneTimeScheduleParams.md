@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSchedulerOneTimeScheduleParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerOneTimeScheduleParams.ClassIdEnum>][-ObjectType< SchedulerOneTimeScheduleParams.ObjectTypeEnum>][-StartTime< DateTime>][-TimeZone< SchedulerOneTimeScheduleParams.VarTimeZoneEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSchedulerOneTimeScheduleParams [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< SchedulerOneTimeScheduleParams.ClassIdEnum>][-Duration< string>][-Name< string>][-ObjectType< SchedulerOneTimeScheduleParams.ObjectTypeEnum>][-StartTime< DateTime>][-TimeZone< SchedulerOneTimeScheduleParams.VarTimeZoneEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,36 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: SchedulerOneTimeScheduleParams.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Duration
+The duration of the schedule. Its syntax is specified at https://www.w3.org/TR/xmlschema11-2/#nt-durationRep For example, P20DT10H5M2.3S is for 20 days, 10 hours, 5 minutes and 2.3 seconds. It is a mandatory input property for Policy based schedules.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+The name of the schedule. It is a mandatory input property for Policy based schedules.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

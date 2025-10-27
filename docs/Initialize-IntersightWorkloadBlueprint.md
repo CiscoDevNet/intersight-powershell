@@ -1,0 +1,398 @@
+---
+external help file: Intersight.PowerShell.dll-Help.xml
+Module Name: Intersight.PowerShell
+online version:
+schema: 2.0.0
+---
+
+# Initialize-IntersightWorkloadBlueprint
+
+## SYNOPSIS
+Fill in the Synopsis
+
+## SYNTAX
+
+```
+
+Initialize-IntersightWorkloadBlueprint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BlueprintDependencies< System.Collections.Generic.List`1[Model.BlueprintBlueprintDefinitionDependency]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkloadBlueprint.ClassIdEnum>][-DefaultVersion< bool>][-Description< string>][-ExternalMeta< bool>][-GeneratedObjectDefinition< System.Collections.Generic.List`1[Model.BlueprintGeneratedObjectMetadata]>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-InputOperationMetadata< System.Collections.Generic.List`1[Model.BlueprintInputOperationType]>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkloadBlueprint.ObjectTypeEnum>][-PlatformType< WorkloadBlueprint.PlatformTypeEnum>][-ResourceDefinition< Model.BlueprintResourceConstraints>][-ServiceItems< System.Collections.Generic.List`1[Model.BlueprintServiceItemDefinition]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+
+```
+
+## DESCRIPTION
+
+Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
+
+## PARAMETERS
+
+### -AdditionalProperties
+
+
+```yaml
+Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -BlueprintDependencies
+
+
+Note :- Use Initialize-IntersightBlueprintBlueprintDefinitionDependency to create the object of complex type BlueprintBlueprintDefinitionDependency
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.BlueprintBlueprintDefinitionDependency]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Catalog
+A reference to a workflowCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.WorkflowCatalogRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ClassId
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
+
+```yaml
+Type: WorkloadBlueprint.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultVersion
+The flag to indicate that this is the default version of the blueprint.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Description
+The description for this blueprint which provides information on what are the pre-requisites to deploy the blueprint and what features are supported on the blueprint.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExternalMeta
+When set to false the blueprint is created for use within internal services.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GeneratedObjectDefinition
+
+
+Note :- Use Initialize-IntersightBlueprintGeneratedObjectMetadata to create the object of complex type BlueprintGeneratedObjectMetadata
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.BlueprintGeneratedObjectMetadata]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InputDefinition
+
+
+Note :- Use Initialize-IntersightWorkflowBaseDataType to create the object of complex type WorkflowBaseDataType
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.WorkflowBaseDataType]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InputOperationMetadata
+
+
+Note :- Use Initialize-IntersightBlueprintInputOperationType to create the object of complex type BlueprintInputOperationType
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.BlueprintInputOperationType]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Label
+A user friendly short name to identify the blueprint. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ) or an underscore (_).
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Moid
+The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Name
+The name for this blueprint. You can have multiple versions of the blueprint with the same name. Name can only contain letters (a-z, A-Z), numbers (0-9), or an underscore (_).
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ObjectType
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
+
+```yaml
+Type: WorkloadBlueprint.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PlatformType
+The Intersight platforms supported by this blueprint.\n* `None` - Default value is none, platform is not mentioned.\n* `UnifiedEdge` - The blueprint is created for Unified Edge platform.
+
+```yaml
+Type: WorkloadBlueprint.PlatformTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ResourceDefinition
+The resource constraint definition for the blueprint.
+
+Note :- Use Initialize-IntersightBlueprintResourceConstraints to create the object of complex type BlueprintResourceConstraints
+
+```yaml
+Type: Model.BlueprintResourceConstraints
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServiceItems
+
+
+Note :- Use Initialize-IntersightBlueprintServiceItemDefinition to create the object of complex type BlueprintServiceItemDefinition
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.BlueprintServiceItemDefinition]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Version
+The version of the blueprint to support multiple versions.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Json
+Returns the json payload received in response.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -WithHttpInfo
+Returns the HTTP response with headers and content.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+
+## EXAMPLES
+
+### Example 1
+```powershell
+PS C:\> Initialize-IntersightWorkloadBlueprint
+```
+
+{ Add example description here }
+
+## INPUTS
+
+### System.Int32
+
+### System.String
+
+## OUTPUTS
+
+### TestModule.FavoriteStuff
+
+## NOTES
+
+## RELATED LINKS
+
+[Initialize-IntersightBlueprintBlueprintDefinitionDependency](./Initialize-IntersightBlueprintBlueprintDefinitionDependency.md)
+
+[Initialize-IntersightBlueprintGeneratedObjectMetadata](./Initialize-IntersightBlueprintGeneratedObjectMetadata.md)
+
+[Initialize-IntersightBlueprintInputOperationType](./Initialize-IntersightBlueprintInputOperationType.md)
+
+[Initialize-IntersightBlueprintResourceConstraints](./Initialize-IntersightBlueprintResourceConstraints.md)
+
+[Initialize-IntersightBlueprintServiceItemDefinition](./Initialize-IntersightBlueprintServiceItemDefinition.md)
+
+[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)

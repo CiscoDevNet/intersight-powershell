@@ -531,6 +531,8 @@ PS C:\> Set-IntersightVnicEthIf
 
 [Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
 
+[Initialize-IntersightVnicEthIfOldInfo](./Initialize-IntersightVnicEthIfOldInfo.md)
+
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
 
 [Initialize-IntersightVnicSriovSettings](./Initialize-IntersightVnicSriovSettings.md)

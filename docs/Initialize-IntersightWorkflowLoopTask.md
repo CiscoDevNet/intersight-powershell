@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowLoopTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowLoopTask.ClassIdEnum>][-Count< string>][-Description< string>][-FailurePolicy< WorkflowLoopTask.FailurePolicyEnum>][-Label< string>][-LoopStartTask< string>][-Name< string>][-NumberOfBatches< long>][-ObjectType< WorkflowLoopTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-Parallel< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowLoopTask [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowLoopTask.ClassIdEnum>][-Count< string>][-Description< string>][-FailurePolicy< WorkflowLoopTask.FailurePolicyEnum>][-FailureThreshold< long>][-Label< string>][-LoopStartTask< string>][-Name< string>][-NumberOfBatches< long>][-ObjectType< WorkflowLoopTask.ObjectTypeEnum>][-OnFailure< string>][-OnSuccess< string>][-Parallel< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -89,6 +89,21 @@ The policy to handle the failure of an iteration within a parallel loop.\n* `Fai
 
 ```yaml
 Type: WorkflowLoopTask.FailurePolicyEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FailureThreshold
+The percentage of iterations that can fail before the entire loop is considered failed. The default is 0 which means all iterations must succeed.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

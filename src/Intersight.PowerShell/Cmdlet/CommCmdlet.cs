@@ -229,6 +229,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
@@ -252,7 +253,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"If this flag is enabled, the tag will be propagated to related managed objects.\nThis is currently set to true by default for hierarchical tags. Propagation is managed by the system and cannot be configured by users."</para>
+        /// <para type="description">"If this flag is enabled, the tag will be propagated to related managed objects.\nPropagation is supported in a limited manner for path tags and it is not supported for key value. Rules for propagation are\nconfigured by Intersight and cannot be configured by user."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -263,10 +264,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The string representation of the tag key. If the tag is of hierarchical type, then \"/\" will be interpreted as hierarchy delimiters.\nIt can contain alphabets, numbers, \"_\", \"-\". Key cannot start with \"_\", \"-\" or \"/\".\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// <para type="description">"The string representation of the tag key. If the tag is of path type, then \"/\" will be interpreted as path delimiters.\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?(\\/[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?)*$")]
+
         public string Key
         {
             get;
@@ -320,6 +321,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag is restricted to values present in the allowedValues list. RestrictValues is not applicable to path tags."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool RestrictValues
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -330,9 +342,20 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Specifies whether the tag is user-defined or owned by the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool SysTag
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
-        /// <para type="description">"An enum type that defines the type of tag. Only hierarchical tags are supported for now, and the type is set to hierarchical by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The hierarchy is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
+        /// <para type="description">"An enum type that defines the type of tag. Only path tags are supported for now, and the type is set to path by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -341,6 +364,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -516,15 +540,36 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> AllowedValues
+        {
+            get;
+            set;
+        }
 
 
 
 
         // <summary>
-        /// <para type="description">"The string representation of the tag key. If the tag is of hierarchical type, then \"/\" will be interpreted as hierarchy delimiters.\nIt can contain alphabets, numbers, \"_\", \"-\". Key cannot start with \"_\", \"-\" or \"/\".\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// <para type="description">"If this flag is enabled, the tag will be propagated to related managed objects.\nPropagation is supported in a limited manner for path tags and it is not supported for key value. Rules for propagation are\nconfigured by Intersight and cannot be configured by user."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?(\\/[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?)*$")]
+
+        public bool EnablePropagation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The string representation of the tag key. If the tag is of path type, then \"/\" will be interpreted as path delimiters.\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
         public string Key
         {
             get;
@@ -547,6 +592,18 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag is restricted to values present in the allowedValues list. RestrictValues is not applicable to path tags."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool RestrictValues
+        {
+            get;
+            set;
+        }
+
+
 
         // <summary>
         /// <para type="description"></para>
@@ -560,7 +617,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"An enum type that defines the type of tag. Only hierarchical tags are supported for now, and the type is set to hierarchical by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The hierarchy is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
+        /// <para type="description">"An enum type that defines the type of tag. Only path tags are supported for now, and the type is set to path by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -569,6 +626,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
     }
     /// <summary>
@@ -766,15 +824,36 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> AllowedValues
+        {
+            get;
+            set;
+        }
 
 
 
 
         // <summary>
-        /// <para type="description">"The string representation of the tag key. If the tag is of hierarchical type, then \"/\" will be interpreted as hierarchy delimiters.\nIt can contain alphabets, numbers, \"_\", \"-\". Key cannot start with \"_\", \"-\" or \"/\".\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// <para type="description">"If this flag is enabled, the tag will be propagated to related managed objects.\nPropagation is supported in a limited manner for path tags and it is not supported for key value. Rules for propagation are\nconfigured by Intersight and cannot be configured by user."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?(\\/[A-Za-z0-9]([A-Za-z0-9_.-]{0,48}[A-Za-z0-9])?)*$")]
+
+        public bool EnablePropagation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The string representation of the tag key. If the tag is of path type, then \"/\" will be interpreted as path delimiters.\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
         public string Key
         {
             get;
@@ -797,6 +876,18 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag is restricted to values present in the allowedValues list. RestrictValues is not applicable to path tags."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool RestrictValues
+        {
+            get;
+            set;
+        }
+
+
 
         // <summary>
         /// <para type="description"></para>
@@ -810,7 +901,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"An enum type that defines the type of tag. Only hierarchical tags are supported for now, and the type is set to hierarchical by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The hierarchy is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
+        /// <para type="description">"An enum type that defines the type of tag. Only path tags are supported for now, and the type is set to path by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -819,6 +910,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
     }
 }

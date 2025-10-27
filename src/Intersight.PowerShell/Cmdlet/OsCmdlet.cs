@@ -938,6 +938,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The OsInstall Supported Operating System Version Filter Option.\n* `None` - No filtering is applied, allowing all available OS versions.\n* `SupportedInBlueprint` - Restricts the OS version specific to blueprint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public OsSupportedVersion.FilterOptionsEnum FilterOptions
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1795,6 +1806,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

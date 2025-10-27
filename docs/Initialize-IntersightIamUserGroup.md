@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamUserGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamUserGroup.ClassIdEnum>][-Idp< Model.IamIdpRelationship>][-Idpreference< Model.IamIdpReferenceRelationship>][-Moid< string>][-Name< string>][-ObjectType< IamUserGroup.ObjectTypeEnum>][-Permissions< System.Collections.Generic.List`1[Model.IamPermissionRelationship]>][-Qualifier< Model.IamQualifierRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamUserGroup [-AccessActivationTime< DateTime>][-AccessExpiryTime< DateTime>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamUserGroup.ClassIdEnum>][-GroupType< IamUserGroup.GroupTypeEnum>][-Idp< Model.IamIdpRelationship>][-Idpreference< Model.IamIdpReferenceRelationship>][-Instruction< string>][-Moid< string>][-Name< string>][-ObjectType< IamUserGroup.ObjectTypeEnum>][-Permissions< System.Collections.Generic.List`1[Model.IamPermissionRelationship]>][-Qualifier< Model.IamAbstractQualifierRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,6 +23,36 @@ Initialize-IntersightIamUserGroup [-AdditionalProperties< System.Collections.Gen
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
+
+### -AccessActivationTime
+AccessActivationTime indicates the activation time for the guest user&apos;s access to the Account.  Before this time, if guest user tries to login to the account, access the account will be denied.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AccessExpiryTime
+AccessExpiryTime indicates the expiration time for the guest user&apos;s access to the Account. Its value can only be  assigned a date that falls within the range determined by the maximum expiration time configured for the  API entries. The AccessExpiry date can be edited to be earlier or later.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 
@@ -44,6 +74,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: IamUserGroup.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -GroupType
+Group type determines the type of groups that is being associated with users. By default, Default User group will be used for associating dynamic user login. If the value of the User Group is set to guest, then this type of user group will be used for guest user login.\n* `Default` - Default User Group Type used for dynamic users login.\n* `Guest` - Guest User Group type used for guest users login.
+
+```yaml
+Type: IamUserGroup.GroupTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -90,6 +135,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Instruction
+Instruction property holds detailed guidance and information intended for individuals  accessing the system as guest users. It holds the information to assist guests in navigating the platform,  understanding policies, and performing necessary actions to ensure a seamless and secure user experience.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -106,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The name of the user group which the dynamic user belongs to.
+The name of the user group which the dynamic/or guest user belongs to.
 
 ```yaml
 Type: string
@@ -154,13 +214,13 @@ Accept wildcard characters: False
 ```
 
 ### -Qualifier
-A reference to a iamQualifier resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+A reference to a iamAbstractQualifier resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
  Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
 or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
-Type: Model.IamQualifierRelationship
+Type: Model.IamAbstractQualifierRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -244,5 +304,7 @@ PS C:\> Initialize-IntersightIamUserGroup
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

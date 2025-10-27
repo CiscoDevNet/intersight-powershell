@@ -310,6 +310,18 @@ namespace Intersight.PowerShell
                         }
                         isEqual = true;
                     }
+                    else if (getDictVal.GetType().Name == "JArray")
+                    {
+                        var xJArray = (Newtonsoft.Json.Linq.JArray)getDictVal;
+                        var yJArray = (Newtonsoft.Json.Linq.JArray)dictItem.Value;
+                        var xJArrayStr = xJArray.ToString();
+                        var yJArrayStr = yJArray.ToString();
+                        if (xJArrayStr != yJArrayStr)
+                        {
+                            return false;
+                        }
+                        isEqual = true;
+                    }
                     else
                     {
                         var xJobject = Newtonsoft.Json.Linq.JObject.FromObject(getDictVal).ToString();
