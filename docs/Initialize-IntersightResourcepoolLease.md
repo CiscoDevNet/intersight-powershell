@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourcepoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< ResourcepoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ClassId< ResourcepoolLease.ClassIdEnum>][-Condition< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Feature< string>][-HasDuplicate< bool>][-IsExclusiveAtAssignedEntity< bool>][-LeaseParameters< Model.ResourcepoolLeaseParameters>][-Migrate< bool>][-Moid< string>][-ObjectType< ResourcepoolLease.ObjectTypeEnum>][-Pool< Model.ResourcepoolPoolRelationship>][-Resource< Model.MoBaseMo>][-ResourceType< ResourcepoolLease.ResourceTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightResourcepoolLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< ResourcepoolLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-ChildLeaseCondition< System.Collections.Generic.List`1[Model.ResourcepoolChildLeaseCondition]>][-ClassId< ResourcepoolLease.ClassIdEnum>][-Condition< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Feature< string>][-HasDuplicate< bool>][-IsExclusiveAtAssignedEntity< bool>][-LeaseParameters< Model.ResourcepoolLeaseParameters>][-Migrate< bool>][-Moid< string>][-ObjectType< ResourcepoolLease.ObjectTypeEnum>][-Pool< Model.ResourcepoolPoolRelationship>][-Resource< Model.MoBaseMo>][-ResourceType< ResourcepoolLease.ResourceTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -62,6 +62,23 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.MoBaseMoRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChildLeaseCondition
+
+
+Note :- Use Initialize-IntersightResourcepoolChildLeaseCondition to create the object of complex type ResourcepoolChildLeaseCondition
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.ResourcepoolChildLeaseCondition]
 Parameter Sets: (All)
 Aliases:
 
@@ -247,7 +264,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceType
-The type of resource present in the pool, such as &apos;server&apos; can be a RackUnit or Blade.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.\n* `None` - The resource cannot consider for Resource Pool.
+The type of resource present in the pool, such as &apos;server&apos; can be a RackUnit or Blade.\n* `Server` - Resource Pool holds the server kind of resources, example - RackServer, Blade.\n* `Mixed` - Resource Pool holds the resources like Rack Server, Blade or Chassis.\n* `None` - The resource cannot consider for Resource Pool.
 
 ```yaml
 Type: ResourcepoolLease.ResourceTypeEnum
@@ -340,5 +357,7 @@ PS C:\> Initialize-IntersightResourcepoolLease
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
 
 [Initialize-IntersightResourceSelector](./Initialize-IntersightResourceSelector.md)
+
+[Initialize-IntersightResourcepoolChildLeaseCondition](./Initialize-IntersightResourcepoolChildLeaseCondition.md)
 
 [Initialize-IntersightResourcepoolLeaseParameters](./Initialize-IntersightResourcepoolLeaseParameters.md)

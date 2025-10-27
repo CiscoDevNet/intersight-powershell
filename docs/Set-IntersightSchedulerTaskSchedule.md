@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightSchedulerTaskSchedule [-Action< SchedulerTaskSchedule.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-ScheduleParams< SchedulerBaseScheduleParams>][-SuspendEndTime< DateTime>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskRequest< SchedulerRestStimTaskRequest>][-Type< SchedulerTaskSchedule.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightSchedulerTaskSchedule [-Action< SchedulerTaskSchedule.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-Policy< SchedulerSchedulePolicyRelationship>][-ScheduleParams< SchedulerBaseScheduleParams>][-SuspendEndTime< DateTime>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TaskRequest< SchedulerRestStimTaskRequest>][-Type< SchedulerTaskSchedule.TypeEnum>][-UsePolicy< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -88,6 +88,24 @@ A schedule name for easier identification (not required to be unique).
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Policy
+A reference to a schedulerSchedulePolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: SchedulerSchedulePolicyRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -179,6 +197,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -UsePolicy
+Indicates if the schedule is policy based or not.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -243,6 +276,8 @@ PS C:\> Set-IntersightSchedulerTaskSchedule
 [Initialize-IntersightSchedulerBaseScheduleParams](./Initialize-IntersightSchedulerBaseScheduleParams.md)
 
 [Initialize-IntersightSchedulerRestStimTaskRequest](./Initialize-IntersightSchedulerRestStimTaskRequest.md)
+
+[Initialize-IntersightSchedulerTaskSchedulePolicyExecutionStatus](./Initialize-IntersightSchedulerTaskSchedulePolicyExecutionStatus.md)
 
 [Initialize-IntersightSchedulerTaskScheduleStatus](./Initialize-IntersightSchedulerTaskScheduleStatus.md)
 

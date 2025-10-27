@@ -724,6 +724,8 @@ PS C:\> Set-IntersightComputeBlade
 
 [Get-IntersightComputeBlade](./Get-IntersightComputeBlade.md)
 
+[Initialize-IntersightCommGeoLocationDetails](./Initialize-IntersightCommGeoLocationDetails.md)
+
 [Initialize-IntersightComputeAlarmSummary](./Initialize-IntersightComputeAlarmSummary.md)
 
 [Initialize-IntersightComputeBlade.OperReasonEnum](./Initialize-IntersightComputeBlade.OperReasonEnum.md)

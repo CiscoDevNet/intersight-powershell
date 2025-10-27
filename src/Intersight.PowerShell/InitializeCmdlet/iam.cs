@@ -3023,6 +3023,133 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamGuestAccessSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamGuestAccessSettings")]
+    public class InitializeIntersightIamGuestAccessSettings : PSCmdlet
+    {
+        public InitializeIntersightIamGuestAccessSettings()
+        {
+            ClassId = IamGuestAccessSettings.ClassIdEnum.IamGuestAccessSettings;
+            ObjectType = IamGuestAccessSettings.ObjectTypeEnum.IamGuestAccessSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> AllowedDomainNames
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamGuestAccessSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Stores the maximum duration (in seconds) during which guest access link remains valid and accessible. It is the maximum value that is set  at the account level which account admin can configure. Any guest access link that is set with expiration time beyond this property will be disallowed. The default value is set to 604800 seconds (7 days)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(86400, 3.1104e+07)]
+        public long MaxGuestAccessLinkShelfLife
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamGuestAccessSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Stores an option for Account Admin to override IP Access Restriction if it is enabled in the Account. This option is used to disable IP Access restrictions for guest users logging in to the account, while restriction is enforced for other normal users (who are authenticated via SAML or LDAP)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool OverrideIpAccessRestriction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamGuestAccessSettings initObject = new Intersight.Model.IamGuestAccessSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AllowedDomainNames"))
+            {
+                initObject.AllowedDomainNames = this.AllowedDomainNames;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaxGuestAccessLinkShelfLife"))
+            {
+                initObject.MaxGuestAccessLinkShelfLife = this.MaxGuestAccessLinkShelfLife;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OverrideIpAccessRestriction"))
+            {
+                initObject.OverrideIpAccessRestriction = this.OverrideIpAccessRestriction;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize IamIdp.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightIamIdp")]
@@ -3156,7 +3283,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Authentication protocol used by the IdP.\n* `saml` - Use SAML as the authentication protocol for sign-on.\n* `oidc` - Open ID connect to be used as an authentication protocol for sign-on.\n* `local` - The local authentication method to be used for sign-on. Local type is set to default for the Intersight Appliance IdP."</para>
+        /// <para type="description">"Authentication protocol used by the IdP.\n* `saml` - Use SAML as the authentication protocol for sign-on.\n* `oidc` - Open ID connect to be used as an authentication protocol for sign-on.\n* `local` - The local authentication method to be used for sign-on. Local type is set to default for the Intersight Appliance IdP.\n* `guest` - Guest users accessing Intersight are assigned to a guest Identity Provider (IdP). They do not have single sign-on options available and must log in  using their email address and a one-time password (OTP). Upon successful authentication, all guest users associated with the account are grouped under  the guest IdP. Guest IdP is primarily used in cloud environment."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7957,15 +8084,15 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Initialize IamUserGroup.</para>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamUserDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsData.Initialize, "IntersightIamUserGroup")]
-    public class InitializeIntersightIamUserGroup : PSCmdlet
+    [Cmdlet(VerbsData.Initialize, "IntersightIamUserDetails")]
+    public class InitializeIntersightIamUserDetails : PSCmdlet
     {
-        public InitializeIntersightIamUserGroup()
+        public InitializeIntersightIamUserDetails()
         {
-            ClassId = IamUserGroup.ClassIdEnum.IamUserGroup;
-            ObjectType = IamUserGroup.ObjectTypeEnum.IamUserGroup;
+            ClassId = IamUserDetails.ClassIdEnum.IamUserDetails;
+            ObjectType = IamUserDetails.ObjectTypeEnum.IamUserDetails;
 
         }
         // <summary>
@@ -7983,7 +8110,123 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
+        public IamUserDetails.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamUserDetails.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Stores the user email ID of the guest user."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
+        public string UserEmail
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Stores the user name of the guest user."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string UserName
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamUserDetails initObject = new Intersight.Model.IamUserDetails();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserEmail"))
+            {
+                initObject.UserEmail = this.UserEmail;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserName"))
+            {
+                initObject.UserName = this.UserName;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamUserGroup.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamUserGroup")]
+    public class InitializeIntersightIamUserGroup : PSCmdlet
+    {
+        public InitializeIntersightIamUserGroup()
+        {
+            ClassId = IamUserGroup.ClassIdEnum.IamUserGroup;
+            GroupType = IamUserGroup.GroupTypeEnum.Default;
+            ObjectType = IamUserGroup.ObjectTypeEnum.IamUserGroup;
+
+        }
+        // <summary>
+        /// <para type="description">"AccessActivationTime indicates the activation time for the guest user's access to the Account.  Before this time, if guest user tries to login to the account, access the account will be denied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime AccessActivationTime
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"AccessExpiryTime indicates the expiration time for the guest user's access to the Account. Its value can only be  assigned a date that falls within the range determined by the maximum expiration time configured for the  API entries. The AccessExpiry date can be edited to be earlier or later."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime AccessExpiryTime
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
         public IamUserGroup.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Group type determines the type of groups that is being associated with users. By default, Default User group will be used for associating dynamic user login. If the value of the User Group is set to guest, then this type of user group will be used for guest user login.\n* `Default` - Default User Group Type used for dynamic users login.\n* `Guest` - Guest User Group type used for guest users login."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamUserGroup.GroupTypeEnum GroupType
         {
             get;
             set;
@@ -8009,6 +8252,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Instruction property holds detailed guidance and information intended for individuals  accessing the system as guest users. It holds the information to assist guests in navigating the platform,  understanding policies, and performing necessary actions to ensure a seamless and secure user experience."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Instruction
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8019,7 +8272,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The name of the user group which the dynamic user belongs to."</para>
+        /// <para type="description">"The name of the user group which the dynamic/or guest user belongs to."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -8049,11 +8302,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a iamQualifier resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// <para type="description">"A reference to a iamAbstractQualifier resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.IamQualifierRelationship Qualifier
+        public Model.IamAbstractQualifierRelationship Qualifier
         {
             get;
             set;
@@ -8073,11 +8326,23 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.IamUserGroup initObject = new Intersight.Model.IamUserGroup();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccessActivationTime"))
+            {
+                initObject.AccessActivationTime = this.AccessActivationTime;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccessExpiryTime"))
+            {
+                initObject.AccessExpiryTime = this.AccessExpiryTime;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("GroupType"))
+            {
+                initObject.GroupType = this.GroupType;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Idp"))
             {
                 initObject.Idp = this.Idp;
@@ -8085,6 +8350,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Idpreference"))
             {
                 initObject.Idpreference = this.Idpreference;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Instruction"))
+            {
+                initObject.Instruction = this.Instruction;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
@@ -8205,6 +8474,148 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamUserQualifier.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamUserQualifier")]
+    public class InitializeIntersightIamUserQualifier : PSCmdlet
+    {
+        public InitializeIntersightIamUserQualifier()
+        {
+            ClassId = IamUserQualifier.ClassIdEnum.IamUserQualifier;
+            NotificationScope = IamUserQualifier.NotificationScopeEnum.All;
+            ObjectType = IamUserQualifier.ObjectTypeEnum.IamUserQualifier;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamUserQualifier.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Defines the scope of email notifications for guest users. It determines which guest users  should receive email notifications about account access details. Options include notifying all users or only  newly added users.\n* `All` - Email Notification is sent to all users.\n* `New` - Email Notification is sent to newly added users."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamUserQualifier.NotificationScopeEnum NotificationScope
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"NotifyGuestUsers holds information on whether guest users have been notified about the guest access information. If set to true, all guest users will receive a email notification about the details of guest access link and instructions."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool NotifyGuestUsers
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamUserQualifier.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.IamUserDetails> UserDetails
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a iamUserGroup resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamUserGroupRelationship Usergroup
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamUserQualifier initObject = new Intersight.Model.IamUserQualifier();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NotificationScope"))
+            {
+                initObject.NotificationScope = this.NotificationScope;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NotifyGuestUsers"))
+            {
+                initObject.NotifyGuestUsers = this.NotifyGuestUsers;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserDetails"))
+            {
+                initObject.UserDetails = this.UserDetails;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Usergroup"))
+            {
+                initObject.Usergroup = this.Usergroup;
             }
             WriteObject(initObject);
         }

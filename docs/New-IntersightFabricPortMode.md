@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomMode
-Custom Port Mode specified for the port range.\n* `FibreChannel` - Fibre Channel Port Types.\n* `BreakoutEthernet10G` - Breakout Ethernet 10G Port Type.\n* `BreakoutEthernet25G` - Breakout Ethernet 25G Port Type.\n* `BreakoutFibreChannel8G` - Breakout FibreChannel 8G Port Type.\n* `BreakoutFibreChannel16G` - Breakout FibreChannel 16G Port Type.\n* `BreakoutFibreChannel32G` - Breakout FibreChannel 32G Port Type.
+Custom Port Mode specified for the port range.\n* `FibreChannel` - Fibre Channel Port Types.\n* `BreakoutEthernet10G` - Breakout Ethernet 10G Port Type.\n* `BreakoutEthernet25G` - Breakout Ethernet 25G Port Type.\n* `BreakoutEthernet4x100G` - Breakout Ethernet 4x100G Port Type.\n* `BreakoutEthernet2x100G` - Breakout Ethernet 2x100G Port Type.\n* `BreakoutFibreChannel8G` - Breakout FibreChannel 8G Port Type.\n* `BreakoutFibreChannel16G` - Breakout FibreChannel 16G Port Type.\n* `BreakoutFibreChannel32G` - Breakout FibreChannel 32G Port Type.
 
 ```yaml
 Type: FabricPortMode.CustomModeEnum

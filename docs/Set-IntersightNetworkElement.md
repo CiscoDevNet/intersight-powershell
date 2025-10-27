@@ -458,6 +458,8 @@ PS C:\> Set-IntersightNetworkElement
 
 [Get-IntersightNetworkElement](./Get-IntersightNetworkElement.md)
 
+[Initialize-IntersightCommGeoLocationDetails](./Initialize-IntersightCommGeoLocationDetails.md)
+
 [Initialize-IntersightComputeAlarmSummary](./Initialize-IntersightComputeAlarmSummary.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

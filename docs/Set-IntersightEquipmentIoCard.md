@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentIoCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConnectionStatus< string>][-FanModules< System.Collections.Generic.List`1[EquipmentFanModuleRelationship]>][-HostPorts< System.Collections.Generic.List`1[EtherHostPortRelationship]>][-InbandIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][[-Moid]< string>][-NetworkPorts< System.Collections.Generic.List`1[EtherNetworkPortRelationship]>][-PhysicalDeviceRegistration< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentIoCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ConnectionStatus< string>][-FanModules< System.Collections.Generic.List`1[EquipmentFanModuleRelationship]>][-HostPorts< System.Collections.Generic.List`1[EtherHostPortRelationship]>][[-Moid]< string>][-NetworkPorts< System.Collections.Generic.List`1[EtherNetworkPortRelationship]>][-PhysicalDeviceRegistration< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -79,23 +79,6 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[EtherHostPortRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -InbandIpAddresses
-
-
-Note :- Use Initialize-IntersightComputeIpAddress to create the object of complex type ComputeIpAddress
-
-```yaml
-Type: System.Collections.Generic.List`1[ComputeIpAddress]
 Parameter Sets: (All)
 Aliases:
 

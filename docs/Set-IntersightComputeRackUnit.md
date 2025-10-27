@@ -739,6 +739,8 @@ PS C:\> Set-IntersightComputeRackUnit
 
 [Get-IntersightComputeRackUnit](./Get-IntersightComputeRackUnit.md)
 
+[Initialize-IntersightCommGeoLocationDetails](./Initialize-IntersightCommGeoLocationDetails.md)
+
 [Initialize-IntersightComputeAlarmSummary](./Initialize-IntersightComputeAlarmSummary.md)
 
 [Initialize-IntersightComputeIpAddress](./Initialize-IntersightComputeIpAddress.md)

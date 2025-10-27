@@ -609,7 +609,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to the port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^[<>!#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+
         public string UserLabel
         {
             get;
@@ -916,7 +916,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The user defined label assigned to the port."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^[<>!#$%\\s+&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+
         public string UserLabel
         {
             get;

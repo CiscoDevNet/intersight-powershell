@@ -163,7 +163,18 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Key of the Tag from all the resources in Intersight."</para>
+        /// <para type="description">"The unique identifier of the tag definition managed object. Refer to the comm.TagDefinition API."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Ext_Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Key of the tag from all the resources in Intersight."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -219,6 +230,18 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+
+        // <summary>
+        /// <para type="description">"Type of the tag definition. Refer to comm.TagDefinitionType API."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Type
+        {
+            get;
+            set;
+        }
 
 
 

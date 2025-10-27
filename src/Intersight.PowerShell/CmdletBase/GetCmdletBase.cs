@@ -258,6 +258,12 @@ namespace Intersight.PowerShell
             var tempResult = WriteResponseData(responseObject, false);
             var actualInstancePropInfo = tempResult.GetType().GetProperty(Constants.ActualInstance);
             var actualInstanceVal = actualInstancePropInfo.GetValue(tempResult);
+            var objectTypeValue = actualInstanceVal.GetType().GetProperty("ObjectType").GetValue(actualInstanceVal)?.ToString();
+            if (objectTypeValue == "mo.DocumentCount")
+            {
+                ActualInstanceResult = actualInstanceVal;
+                return;
+            }
             var actualResult = actualInstanceVal.GetType().GetProperty(Constants.Results).GetValue(actualInstanceVal);
 
             if (ActualInstanceResult != null)
@@ -295,6 +301,11 @@ namespace Intersight.PowerShell
             if (actualInstancePropInfo != null)
             {
                 var actualInstanceVal = actualInstancePropInfo.GetValue(tempResult);
+                var objectTypeValue = actualInstanceVal.GetType().GetProperty("ObjectType").GetValue(actualInstanceVal)?.ToString();
+                if (objectTypeValue == "mo.DocumentCount")
+                {
+                    return -1;
+                }
                 var innerResult = actualInstanceVal.GetType().GetProperty(Constants.Results).GetValue(actualInstanceVal, null);
                 var collection = new List<Object>((IEnumerable<Object>)innerResult);
                 return collection.Count;

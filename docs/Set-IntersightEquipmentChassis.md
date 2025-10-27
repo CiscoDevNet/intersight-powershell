@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentChassis [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-AssignedLocation< AssetGeoLocationRelationship>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -45,6 +45,24 @@ Note :- Use Initialize-IntersightComputeAlarmSummary to create the object of com
 
 ```yaml
 Type: ComputeAlarmSummary
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssignedLocation
+A reference to a assetGeoLocation resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: AssetGeoLocationRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -160,6 +178,8 @@ PS C:\> Set-IntersightEquipmentChassis
 ## RELATED LINKS
 
 [Get-IntersightEquipmentChassis](./Get-IntersightEquipmentChassis.md)
+
+[Initialize-IntersightCommGeoLocationDetails](./Initialize-IntersightCommGeoLocationDetails.md)
 
 [Initialize-IntersightComputeAlarmSummary](./Initialize-IntersightComputeAlarmSummary.md)
 

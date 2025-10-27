@@ -436,6 +436,8 @@ PS C:\> New-IntersightVnicFcIf
 
 [Initialize-IntersightMotemplateSyncError](./Initialize-IntersightMotemplateSyncError.md)
 
+[Initialize-IntersightVnicFcIfOldInfo](./Initialize-IntersightVnicFcIfOldInfo.md)
+
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
 
 [Remove-IntersightVnicFcIf](./Remove-IntersightVnicFcIf.md)
