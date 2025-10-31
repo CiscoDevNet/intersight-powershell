@@ -1831,6 +1831,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"A reference to a equipmentSharedAdapterUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentSharedAdapterUnitRelationship EquipmentSharedAdapterUnit
+        {
+            get;
+            set;
+        }
+
 
 
 

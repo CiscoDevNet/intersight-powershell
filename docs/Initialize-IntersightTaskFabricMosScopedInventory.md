@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightTaskFabricMosScopedInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TaskFabricMosScopedInventory.ClassIdEnum>][-Moid< string>][-NamingProperty< string>][-ObjectType< TaskFabricMosScopedInventory.ObjectTypeEnum>][-Queries< object>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< string>][-Values< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightTaskFabricMosScopedInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TaskFabricMosScopedInventory.ClassIdEnum>][-Immediate< bool>][-Moid< string>][-NamingProperty< string>][-ObjectType< TaskFabricMosScopedInventory.ObjectTypeEnum>][-Queries< object>][-RegisteredDevice< Model.AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< string>][-Values< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: TaskFabricMosScopedInventory.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Immediate
+Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

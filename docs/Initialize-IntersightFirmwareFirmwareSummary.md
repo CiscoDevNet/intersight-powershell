@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareFirmwareSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BundleVersion< string>][-ClassId< FirmwareFirmwareSummary.ClassIdEnum>][-ComponentsFwInventory< System.Collections.Generic.List`1[Model.FirmwareFirmwareInventory]>][-Moid< string>][-ObjectType< FirmwareFirmwareSummary.ObjectTypeEnum>][-Server< Model.ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetMo< Model.MoBaseMoRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareFirmwareSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareFirmwareSummary.ClassIdEnum>][-Moid< string>][-ObjectType< FirmwareFirmwareSummary.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,43 +39,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -BundleVersion
-Version details at the bundle level for the each of server.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ClassId
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
 Type: FirmwareFirmwareSummary.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ComponentsFwInventory
-
-
-Note :- Use Initialize-IntersightFirmwareFirmwareInventory to create the object of complex type FirmwareFirmwareInventory
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.FirmwareFirmwareInventory]
 Parameter Sets: (All)
 Aliases:
 
@@ -116,24 +84,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Server
-A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.ComputePhysicalRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -141,24 +91,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -TargetMo
-A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.MoBaseMoRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -225,7 +157,5 @@ PS C:\> Initialize-IntersightFirmwareFirmwareSummary
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightFirmwareFirmwareInventory](./Initialize-IntersightFirmwareFirmwareInventory.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

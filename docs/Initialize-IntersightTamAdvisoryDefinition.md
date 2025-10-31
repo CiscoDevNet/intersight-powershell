@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExecuteOnPod
-Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster.
+Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care by batch processing.\n* `tier2` - Advisory processing will be taken care by stream processing.
 
 ```yaml
 Type: TamAdvisoryDefinition.ExecuteOnPodEnum

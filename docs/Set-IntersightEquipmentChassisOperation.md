@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentChassisOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedAction< EquipmentChassisOperation.AdminLocatorLedActionEnum>][-AdminPowerCycleSlotId< long>][-DeviceRegistration< AssetDeviceRegistrationRelationship>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentChassisOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedAction< EquipmentChassisOperation.AdminLocatorLedActionEnum>][-AdminPowerCycleExpanderModuleSlotId< long>][-AdminPowerCycleSlotId< long>][-DeviceRegistration< AssetDeviceRegistrationRelationship>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,21 @@ User configured state of the locator LED for the Chassis.\n* `None` - No operati
 
 ```yaml
 Type: EquipmentChassisOperation.AdminLocatorLedActionEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AdminPowerCycleExpanderModuleSlotId
+Slot id of the expander module slot within chassis that needs to be power cycled.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

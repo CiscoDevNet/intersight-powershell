@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareChassisUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Chassis< Model.EquipmentChassisRelationship>][-ClassId< FirmwareChassisUpgrade.ClassIdEnum>][-DirectDownload< Model.FirmwareDirectDownload>][-Distributable< Model.FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[FirmwareChassisUpgrade.ExcludeComponentListEnum]>][-FileServer< Model.SoftwarerepositoryFileServer>][-Moid< string>][-NetworkShare< Model.FirmwareNetworkShare>][-ObjectType< FirmwareChassisUpgrade.ObjectTypeEnum>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareChassisUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UpgradeType< FirmwareChassisUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareChassisUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Chassis< Model.EquipmentChassisRelationship>][-ClassId< FirmwareChassisUpgrade.ClassIdEnum>][-DirectDownload< Model.FirmwareDirectDownload>][-Distributable< Model.FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[FirmwareChassisUpgrade.ExcludeComponentListEnum]>][-FileServer< Model.SoftwarerepositoryFileServer>][-Moid< string>][-NetworkShare< Model.FirmwareNetworkShare>][-ObjectType< FirmwareChassisUpgrade.ObjectTypeEnum>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-SkipEstimateImpact< bool>][-Status< FirmwareChassisUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UpgradeType< FirmwareChassisUpgrade.UpgradeTypeEnum>][-XfmUpgradeOption< FirmwareChassisUpgrade.XfmUpgradeOptionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -256,6 +256,21 @@ Desired upgrade mode to choose either direct download based upgrade or network s
 
 ```yaml
 Type: FirmwareChassisUpgrade.UpgradeTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -XfmUpgradeOption
+XFM upgrade option Full or Partial Disruption.\n* `none` - If no option is selected for exclusion.\n* `full-shutdown` - PSX Switch in XFM will be upgraded in single action.\n* `partial-shutdown` - PSX Switch in XFM will be upgraded one after other.
+
+```yaml
+Type: FirmwareChassisUpgrade.XfmUpgradeOptionEnum
 Parameter Sets: (All)
 Aliases:
 

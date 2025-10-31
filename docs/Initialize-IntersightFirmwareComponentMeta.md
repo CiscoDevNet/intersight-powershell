@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareComponentMeta [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareComponentMeta.ClassIdEnum>][-ComponentLabel< string>][-ComponentType< FirmwareComponentMeta.ComponentTypeEnum>][-Description< string>][-Disruption< FirmwareComponentMeta.DisruptionEnum>][-ImagePath< string>][-IsOobSupported< bool>][-Model< string>][-ObjectType< FirmwareComponentMeta.ObjectTypeEnum>][-OobManageability< System.Collections.Generic.List`1[FirmwareComponentMeta.OobManageabilityEnum]>][-PackedVersion< string>][-RedfishUrl< string>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareComponentMeta [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlternatePackedVersion< string>][-ClassId< FirmwareComponentMeta.ClassIdEnum>][-ComponentLabel< string>][-ComponentType< FirmwareComponentMeta.ComponentTypeEnum>][-Description< string>][-Disruption< FirmwareComponentMeta.DisruptionEnum>][-ImagePath< string>][-IsOobSupported< bool>][-Model< string>][-ObjectType< FirmwareComponentMeta.ObjectTypeEnum>][-OobManageability< System.Collections.Generic.List`1[FirmwareComponentMeta.OobManageabilityEnum]>][-PackedVersion< string>][-RedfishUrl< string>][-Vendor< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,21 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AlternatePackedVersion
+Certain components have multiple versions packaged in the distributable. For example, the GPU component has multiple versions of the image packaged in the distributable due to a different onboard chip.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -70,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComponentType
-The type of component image within the distributable.\n* `ALL` - This represents all the components.\n* `ALL,HDD` - This represents all the components plus the HDDs.\n* `Drive-U.2` - This represents the U.2 drives that are SFF/LFF drives (mostly all the drives will fall under this category).\n* `Storage` - This represents the storage controller components.\n* `None` - This represents none of the components.\n* `NXOS` - This represents NXOS components.\n* `ESU` - This represents ESU components.\n* `IOM` - This represents IOM components.\n* `PSU` - This represents PSU components.\n* `CIMC` - This represents CIMC components.\n* `BIOS` - This represents BIOS components.\n* `PCIE` - This represents PCIE components.\n* `Drive` - This represents Drive components.\n* `DIMM` - This represents DIMM components.\n* `BoardController` - This represents Board Controller components.\n* `StorageController` - This represents Storage Controller components.\n* `Storage-Sasexpander` - This represents Storage Sas-Expander components.\n* `Storage-U.2` - This represents U2 Storage Controller components.\n* `HBA` - This represents HBA components.\n* `GPU` - This represents GPU components.\n* `SasExpander` - This represents SasExpander components.\n* `MSwitch` - This represents mSwitch components.\n* `CMC` - This represents CMC components.
+The type of component image within the distributable.\n* `ALL` - This represents all the components.\n* `ALL,HDD` - This represents all the components plus the HDDs.\n* `Drive-U.2` - This represents the U.2 drives that are SFF/LFF drives (mostly all the drives will fall under this category).\n* `Storage` - This represents the storage controller components.\n* `None` - This represents none of the components.\n* `NXOS` - This represents NXOS components.\n* `ESU` - This represents ESU components.\n* `IOM` - This represents IOM components.\n* `PSU` - This represents PSU components.\n* `CIMC` - This represents CIMC components.\n* `BIOS` - This represents BIOS components.\n* `PCIE` - This represents PCIE components.\n* `Drive` - This represents Drive components.\n* `DIMM` - This represents DIMM components.\n* `BoardController` - This represents Board Controller components.\n* `StorageController` - This represents Storage Controller components.\n* `Storage-Sasexpander` - This represents Storage Sas-Expander components.\n* `Storage-U.2` - This represents U2 Storage Controller components.\n* `HBA` - This represents HBA components.\n* `GPU` - This represents GPU components.\n* `SasExpander` - This represents SasExpander components.\n* `MSwitch` - This represents mSwitch components.\n* `CMC` - This represents CMC components.\n* `PSX` - This represents PSX components.
 
 ```yaml
 Type: FirmwareComponentMeta.ComponentTypeEnum

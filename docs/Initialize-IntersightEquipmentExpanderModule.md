@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentExpanderModule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EquipmentExpanderModule.ClassIdEnum>][-FanModules< System.Collections.Generic.List`1[Model.EquipmentFanModuleRelationship]>][-Moid< string>][-ObjectType< EquipmentExpanderModule.ObjectTypeEnum>][-PartNumber< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentExpanderModule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< EquipmentExpanderModule.ClassIdEnum>][-Moid< string>][-ObjectType< EquipmentExpanderModule.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,24 +54,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -FanModules
-An array of relationships to equipmentFanModule resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.EquipmentFanModuleRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -92,21 +74,6 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: EquipmentExpanderModule.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PartNumber
-Part number identifier for the expander module.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 
