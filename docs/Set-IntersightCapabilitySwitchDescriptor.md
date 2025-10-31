@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightCapabilitySwitchDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-Description< string>][-ExpectedMemory< long>][-IsAvatarEcmc< bool>][-IsUcsxDirectSwitch< bool>][-Model< string>][[-Moid]< string>][-Revision< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightCapabilitySwitchDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[CapabilityCapabilityRelationship]>][-Description< string>][-ExpectedMemory< long>][-IsAvatarEcmc< bool>][-IsUcsxDirectSwitch< bool>][-Model< string>][[-Moid]< string>][-Revision< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UnsupportedPolicies< System.Collections.Generic.List`1[string]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -168,6 +168,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UnsupportedPolicies
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

@@ -8,6 +8,178 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeAdapterUnitConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeAdapterUnitConfig")]
+    public class InitializeIntersightComputeAdapterUnitConfig : PSCmdlet
+    {
+        public InitializeIntersightComputeAdapterUnitConfig()
+        {
+            ClassId = ComputeAdapterUnitConfig.ClassIdEnum.ComputeAdapterUnitConfig;
+            ObjectType = ComputeAdapterUnitConfig.ObjectTypeEnum.ComputeAdapterUnitConfig;
+            PcieEndpointType = ComputeAdapterUnitConfig.PcieEndpointTypeEnum.GPU;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ComputeAdapterUnitPropFilter> AdapterUnitPropFilters
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeAdapterUnitConfig.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeAdapterUnitConfig.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of PCIe endpoint device.\n* `GPU` - The PCIe endpoint type is GPU.\n* `Adapter` - The PCIe endpoint type is Adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeAdapterUnitConfig.PcieEndpointTypeEnum PcieEndpointType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputeAdapterUnitConfig initObject = new Intersight.Model.ComputeAdapterUnitConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdapterUnitPropFilters"))
+            {
+                initObject.AdapterUnitPropFilters = this.AdapterUnitPropFilters;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcieEndpointType"))
+            {
+                initObject.PcieEndpointType = this.PcieEndpointType;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeAdapterUnitPropFilter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeAdapterUnitPropFilter")]
+    public class InitializeIntersightComputeAdapterUnitPropFilter : PSCmdlet
+    {
+        public InitializeIntersightComputeAdapterUnitPropFilter()
+        {
+            ClassId = ComputeAdapterUnitPropFilter.ClassIdEnum.ComputeAdapterUnitPropFilter;
+            Model = ComputeAdapterUnitPropFilter.ModelEnum.Any;
+            ObjectType = ComputeAdapterUnitPropFilter.ObjectTypeEnum.ComputeAdapterUnitPropFilter;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeAdapterUnitPropFilter.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of Adapters to be selected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Count
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specific Adapter model to select.\n* `Any` - To select any Adapter model available in XFM.\n* `UCSC-P-N7S400GF` - Cisco UCS X-Series Adapter with 400G capability and dual port configuration.\n* `UCSC-P-N7D200GF` - Cisco UCS X-Series Adapter with 200G capability and dual port configuration.\n* `UCSC-P-N3140H` - Cisco UCS X-Series Adapter with 200G capability and single port configuration.\n* `UCSC-P-N7S400GFO` - Cisco UCS X-Series SmartNIC with 400G QSFP112 PCIe Gen5 NIC.\n* `UCSC-P-N7D200GFO` - Cisco UCS X-Series SmartNIC with 200G QSFP112 PCIe Gen5 NIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeAdapterUnitPropFilter.ModelEnum Model
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeAdapterUnitPropFilter.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputeAdapterUnitPropFilter initObject = new Intersight.Model.ComputeAdapterUnitPropFilter();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
+            {
+                initObject.Count = this.Count;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ComputeAlarmSummary.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightComputeAlarmSummary")]
@@ -855,6 +1027,93 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeCpuConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeCpuConfig")]
+    public class InitializeIntersightComputeCpuConfig : PSCmdlet
+    {
+        public InitializeIntersightComputeCpuConfig()
+        {
+            ClassId = ComputeCpuConfig.ClassIdEnum.ComputeCpuConfig;
+            CpuId = ComputeCpuConfig.CpuIdEnum.Any;
+            ObjectType = ComputeCpuConfig.ObjectTypeEnum.ComputeCpuConfig;
+            RootPcieEndpointType = ComputeCpuConfig.RootPcieEndpointTypeEnum.CPU;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeCpuConfig.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Unique identifier for a CPU in the server.\n* `Any` - To map PCIe devices to any CPU.\n* `1` - Identifier used to map PCIe device to CPU-1.\n* `2` - Identifier used to map PCIe device to CPU-2."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeCpuConfig.CpuIdEnum CpuId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeCpuConfig.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of root PCIe endpoint device.\n* `CPU` - The root PCIe endpoint type is CPU."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeCpuConfig.RootPcieEndpointTypeEnum RootPcieEndpointType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputeCpuConfig initObject = new Intersight.Model.ComputeCpuConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CpuId"))
+            {
+                initObject.CpuId = this.CpuId;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RootPcieEndpointType"))
+            {
+                initObject.RootPcieEndpointType = this.RootPcieEndpointType;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ComputeDownloadStatus.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightComputeDownloadStatus")]
@@ -1005,6 +1264,178 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeGpuConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeGpuConfig")]
+    public class InitializeIntersightComputeGpuConfig : PSCmdlet
+    {
+        public InitializeIntersightComputeGpuConfig()
+        {
+            ClassId = ComputeGpuConfig.ClassIdEnum.ComputeGpuConfig;
+            ObjectType = ComputeGpuConfig.ObjectTypeEnum.ComputeGpuConfig;
+            PcieEndpointType = ComputeGpuConfig.PcieEndpointTypeEnum.GPU;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeGpuConfig.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ComputeGpuPropFilter> GpuPropFilters
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeGpuConfig.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of PCIe endpoint device.\n* `GPU` - The PCIe endpoint type is GPU.\n* `Adapter` - The PCIe endpoint type is Adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeGpuConfig.PcieEndpointTypeEnum PcieEndpointType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputeGpuConfig initObject = new Intersight.Model.ComputeGpuConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("GpuPropFilters"))
+            {
+                initObject.GpuPropFilters = this.GpuPropFilters;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcieEndpointType"))
+            {
+                initObject.PcieEndpointType = this.PcieEndpointType;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeGpuPropFilter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeGpuPropFilter")]
+    public class InitializeIntersightComputeGpuPropFilter : PSCmdlet
+    {
+        public InitializeIntersightComputeGpuPropFilter()
+        {
+            ClassId = ComputeGpuPropFilter.ClassIdEnum.ComputeGpuPropFilter;
+            Model = ComputeGpuPropFilter.ModelEnum.Any;
+            ObjectType = ComputeGpuPropFilter.ObjectTypeEnum.ComputeGpuPropFilter;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeGpuPropFilter.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Number of GPUs to be selected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 2)]
+        public long Count
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specific GPU model to select.\n* `Any` - To select any GPU model available in GPU Node.\n* `UCSC-GPU-H100-NVL` - NVIDIA H100 GPU with NVL interface.\n* `UCSC-GPU-H200-NVL` - NVIDIA H200 GPU with NVLink interface.\n* `UCSC-GPU-L40S` - NVIDIA L40S GPU with PCIe interface.\n* `UCSC-GPU-RTXP6000` - NVIDIA RTXP6000 GPU with PCIe interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeGpuPropFilter.ModelEnum Model
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeGpuPropFilter.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputeGpuPropFilter initObject = new Intersight.Model.ComputeGpuPropFilter();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Count"))
+            {
+                initObject.Count = this.Count;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -1343,6 +1774,401 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputePcieConnectivityPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputePcieConnectivityPolicy")]
+    public class InitializeIntersightComputePcieConnectivityPolicy : PSCmdlet
+    {
+        public InitializeIntersightComputePcieConnectivityPolicy()
+        {
+            ClassId = ComputePcieConnectivityPolicy.ClassIdEnum.ComputePcieConnectivityPolicy;
+            ObjectType = ComputePcieConnectivityPolicy.ObjectTypeEnum.ComputePcieConnectivityPolicy;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePcieConnectivityPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePcieConnectivityPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ComputePcieZone> PcieZones
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.PolicyAbstractConfigProfileRelationship> Profiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputePcieConnectivityPolicy initObject = new Intersight.Model.ComputePcieConnectivityPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcieZones"))
+            {
+                initObject.PcieZones = this.PcieZones;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputePcieConnectivityPolicyInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputePcieConnectivityPolicyInventory")]
+    public class InitializeIntersightComputePcieConnectivityPolicyInventory : PSCmdlet
+    {
+        public InitializeIntersightComputePcieConnectivityPolicyInventory()
+        {
+            ClassId = ComputePcieConnectivityPolicyInventory.ClassIdEnum.ComputePcieConnectivityPolicyInventory;
+            ObjectType = ComputePcieConnectivityPolicyInventory.ObjectTypeEnum.ComputePcieConnectivityPolicyInventory;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePcieConnectivityPolicyInventory.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePcieConnectivityPolicyInventory.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputePcieConnectivityPolicyInventory initObject = new Intersight.Model.ComputePcieConnectivityPolicyInventory();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputePcieEndpointConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputePcieEndpointConfig")]
+    public class InitializeIntersightComputePcieEndpointConfig : PSCmdlet
+    {
+        public InitializeIntersightComputePcieEndpointConfig()
+        {
+            PcieEndpointType = ComputePcieEndpointConfig.PcieEndpointTypeEnum.GPU;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePcieEndpointConfig.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePcieEndpointConfig.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of PCIe endpoint device.\n* `GPU` - The PCIe endpoint type is GPU.\n* `Adapter` - The PCIe endpoint type is Adapter."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePcieEndpointConfig.PcieEndpointTypeEnum PcieEndpointType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputePcieEndpointConfig initObject = new Intersight.Model.ComputePcieEndpointConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcieEndpointType"))
+            {
+                initObject.PcieEndpointType = this.PcieEndpointType;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputePcieZone.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputePcieZone")]
+    public class InitializeIntersightComputePcieZone : PSCmdlet
+    {
+        public InitializeIntersightComputePcieZone()
+        {
+            ClassId = ComputePcieZone.ClassIdEnum.ComputePcieZone;
+            ObjectType = ComputePcieZone.ObjectTypeEnum.ComputePcieZone;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePcieZone.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputePcieZone.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ComputePcieEndpointConfig> PcieEndpoints
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Root PCIe endpoint device in a zone."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ComputeRootPcieEndpointConfig RootPcieEndpoint
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputePcieZone initObject = new Intersight.Model.ComputePcieZone();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PcieEndpoints"))
+            {
+                initObject.PcieEndpoints = this.PcieEndpoints;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RootPcieEndpoint"))
+            {
+                initObject.RootPcieEndpoint = this.RootPcieEndpoint;
             }
             WriteObject(initObject);
         }
@@ -2574,6 +3400,78 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeRootPcieEndpointConfig.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeRootPcieEndpointConfig")]
+    public class InitializeIntersightComputeRootPcieEndpointConfig : PSCmdlet
+    {
+        public InitializeIntersightComputeRootPcieEndpointConfig()
+        {
+            ClassId = ComputeRootPcieEndpointConfig.ClassIdEnum.ComputeCpuConfig;
+            ObjectType = ComputeRootPcieEndpointConfig.ObjectTypeEnum.ComputeCpuConfig;
+            RootPcieEndpointType = ComputeRootPcieEndpointConfig.RootPcieEndpointTypeEnum.CPU;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeRootPcieEndpointConfig.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeRootPcieEndpointConfig.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of root PCIe endpoint device.\n* `CPU` - The root PCIe endpoint type is CPU."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeRootPcieEndpointConfig.RootPcieEndpointTypeEnum RootPcieEndpointType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputeRootPcieEndpointConfig initObject = new Intersight.Model.ComputeRootPcieEndpointConfig();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RootPcieEndpointType"))
+            {
+                initObject.RootPcieEndpointType = this.RootPcieEndpointType;
             }
             WriteObject(initObject);
         }

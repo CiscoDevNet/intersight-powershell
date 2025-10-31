@@ -3004,6 +3004,274 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiNdMetadata.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiNdMetadata")]
+    public class InitializeIntersightNiaapiNdMetadata : PSCmdlet
+    {
+        public InitializeIntersightNiaapiNdMetadata()
+        {
+            ClassId = NiaapiNdMetadata.ClassIdEnum.NiaapiNdMetadata;
+            ObjectType = NiaapiNdMetadata.ObjectTypeEnum.NiaapiNdMetadata;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiaapiNdMetadata.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NiaapiDetail> Content
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The date when this package is generated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime Date
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Chksum used to check the integrity of the Metadata file downloaded."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MetadataChksum
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Filename of this Metadata package."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MetadataFilename
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiaapiNdMetadata.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The version number of the Metadata package."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiaapiNdMetadata initObject = new Intersight.Model.NiaapiNdMetadata();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Content"))
+            {
+                initObject.Content = this.Content;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Date"))
+            {
+                initObject.Date = this.Date;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MetadataChksum"))
+            {
+                initObject.MetadataChksum = this.MetadataChksum;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MetadataFilename"))
+            {
+                initObject.MetadataFilename = this.MetadataFilename;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject.VarVersion = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiaapiNdMetadataFileDownloader.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiaapiNdMetadataFileDownloader")]
+    public class InitializeIntersightNiaapiNdMetadataFileDownloader : PSCmdlet
+    {
+        public InitializeIntersightNiaapiNdMetadataFileDownloader()
+        {
+            ClassId = NiaapiNdMetadataFileDownloader.ClassIdEnum.NiaapiNdMetadataFileDownloader;
+            ObjectType = NiaapiNdMetadataFileDownloader.ObjectTypeEnum.NiaapiNdMetadataFileDownloader;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiaapiNdMetadataFileDownloader.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Filename of this Metadata package file, folder will be handled by api."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FileName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiaapiNdMetadataFileDownloader.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The presigned URL from server to download this file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PresignedUrl
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiaapiNdMetadataFileDownloader initObject = new Intersight.Model.NiaapiNdMetadataFileDownloader();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FileName"))
+            {
+                initObject.FileName = this.FileName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PresignedUrl"))
+            {
+                initObject.PresignedUrl = this.PresignedUrl;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiaapiNewReleaseDetail.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiaapiNewReleaseDetail")]

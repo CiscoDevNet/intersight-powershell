@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareChassisUpgradeImpact [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareChassisUpgradeImpact.ClassIdEnum>][-ComputationError< string>][-ComputationStatusDetail< FirmwareChassisUpgradeImpact.ComputationStatusDetailEnum>][-DomainName< string>][-EndPoint< string>][-FirmwareVersion< string>][-ImpactDetail< System.Collections.Generic.List`1[Model.FirmwareComponentImpact]>][-ImpactType< FirmwareChassisUpgradeImpact.ImpactTypeEnum>][-Model< string>][-Name< string>][-ObjectType< FirmwareChassisUpgradeImpact.ObjectTypeEnum>][-TargetFirmwareVersion< string>][-UserLabel< string>][-VersionImpact< FirmwareChassisUpgradeImpact.VersionImpactEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareChassisUpgradeImpact [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareChassisUpgradeImpact.ClassIdEnum>][-ComputationError< string>][-ComputationStatusDetail< FirmwareChassisUpgradeImpact.ComputationStatusDetailEnum>][-DomainName< string>][-EndPoint< string>][-FirmwareVersion< string>][-ImpactDetail< System.Collections.Generic.List`1[Model.FirmwareComponentImpact]>][-ImpactServersDetail< System.Collections.Generic.List`1[Model.FirmwareServerImpact]>][-ImpactType< FirmwareChassisUpgradeImpact.ImpactTypeEnum>][-Model< string>][-Name< string>][-ObjectType< FirmwareChassisUpgradeImpact.ObjectTypeEnum>][-TargetFirmwareVersion< string>][-UserLabel< string>][-VersionImpact< FirmwareChassisUpgradeImpact.VersionImpactEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -136,6 +136,23 @@ Note :- Use Initialize-IntersightFirmwareComponentImpact to create the object of
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.FirmwareComponentImpact]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ImpactServersDetail
+
+
+Note :- Use Initialize-IntersightFirmwareServerImpact to create the object of complex type FirmwareServerImpact
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.FirmwareServerImpact]
 Parameter Sets: (All)
 Aliases:
 
@@ -309,3 +326,5 @@ PS C:\> Initialize-IntersightFirmwareChassisUpgradeImpact
 ## RELATED LINKS
 
 [Initialize-IntersightFirmwareComponentImpact](./Initialize-IntersightFirmwareComponentImpact.md)
+
+[Initialize-IntersightFirmwareServerImpact](./Initialize-IntersightFirmwareServerImpact.md)

@@ -232,6 +232,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -342,6 +353,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -454,6 +476,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -564,6 +597,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -676,6 +720,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -786,6 +841,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -898,6 +964,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -1008,6 +1085,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -1120,6 +1208,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -1230,6 +1329,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -1342,6 +1452,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -1452,6 +1573,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -1564,6 +1696,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -1675,6 +1818,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -1785,6 +1939,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Immediate
+        {
+            get;
+            set;
+        }
 
 
         // <summary>

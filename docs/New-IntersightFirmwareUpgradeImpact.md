@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFirmwareUpgradeImpact [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Chassis< System.Collections.Generic.List`1[EquipmentChassisRelationship]>][-Components< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ComponentsEnum]>][-ComputationState< FirmwareUpgradeImpact.ComputationStateEnum>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponents< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ExcludeComponentsEnum]>][-Impacts< System.Collections.Generic.List`1[FirmwareBaseImpact]>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[NetworkElementRelationship]>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< System.Collections.Generic.List`1[ComputePhysicalRelationship]>][-Summary< FirmwareUpgradeImpact.SummaryEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFirmwareUpgradeImpact [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Chassis< System.Collections.Generic.List`1[EquipmentChassisRelationship]>][-Components< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ComponentsEnum]>][-ComputationState< FirmwareUpgradeImpact.ComputationStateEnum>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ExcludeComponentListEnum]>][-ExcludeComponents< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ExcludeComponentsEnum]>][-Impacts< System.Collections.Generic.List`1[FirmwareBaseImpact]>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[NetworkElementRelationship]>][-PciNode< System.Collections.Generic.List`1[PciNodeRelationship]>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< System.Collections.Generic.List`1[ComputePhysicalRelationship]>][-Summary< FirmwareUpgradeImpact.SummaryEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-XfmUpgradeOption< FirmwareUpgradeImpact.XfmUpgradeOptionEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -104,6 +104,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ExcludeComponentList
+
+
+```yaml
+Type: System.Collections.Generic.List`1[FirmwareUpgradeImpact.ExcludeComponentListEnum]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ExcludeComponents
 
 
@@ -159,6 +174,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[NetworkElementRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PciNode
+An array of relationships to pciNode resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[PciNodeRelationship]
 Parameter Sets: (All)
 Aliases:
 
@@ -237,6 +270,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -XfmUpgradeOption
+XFM upgrade option Full or Partial Disruption.\n* `none` - If no option is selected for exclusion.\n* `full-shutdown` - PSX Switch in XFM will be upgraded in single action.\n* `partial-shutdown` - PSX Switch in XFM will be upgraded one after other.
+
+```yaml
+Type: FirmwareUpgradeImpact.XfmUpgradeOptionEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -297,6 +345,8 @@ PS C:\> New-IntersightFirmwareUpgradeImpact
 [Initialize-IntersightFirmwareBaseImpact](./Initialize-IntersightFirmwareBaseImpact.md)
 
 [Initialize-IntersightFirmwareUpgradeImpact.ComponentsEnum](./Initialize-IntersightFirmwareUpgradeImpact.ComponentsEnum.md)
+
+[Initialize-IntersightFirmwareUpgradeImpact.ExcludeComponentListEnum](./Initialize-IntersightFirmwareUpgradeImpact.ExcludeComponentListEnum.md)
 
 [Initialize-IntersightFirmwareUpgradeImpact.ExcludeComponentsEnum](./Initialize-IntersightFirmwareUpgradeImpact.ExcludeComponentsEnum.md)
 

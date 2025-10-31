@@ -1943,6 +1943,50 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU1 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.GpuDirectCpu1Enum GpuDirectCpu1
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.GpuDirectCpu2Enum GpuDirectCpu2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.GpuDirectCpu3Enum GpuDirectCpu3
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU4 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.GpuDirectCpu4Enum GpuDirectCpu4
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting Hardware Prefetcher configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -8099,6 +8143,50 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU1 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu1Enum GpuDirectCpu1
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu2Enum GpuDirectCpu2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu3Enum GpuDirectCpu3
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU4 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu4Enum GpuDirectCpu4
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting Hardware Prefetcher configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -13403,6 +13491,50 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.Frb2enableEnum Frb2enable
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU1 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu1Enum GpuDirectCpu1
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu2Enum GpuDirectCpu2
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu3Enum GpuDirectCpu3
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU4 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu4Enum GpuDirectCpu4
         {
             get;
             set;

@@ -555,6 +555,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"XFM upgrade option Full or Partial Disruption.\n* `none` - If no option is selected for exclusion.\n* `full-shutdown` - PSX Switch in XFM will be upgraded in single action.\n* `partial-shutdown` - PSX Switch in XFM will be upgraded one after other."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FirmwareChassisUpgrade.XfmUpgradeOptionEnum XfmUpgradeOption
+        {
+            get;
+            set;
+        }
+
 
     }
     /// <summary>
@@ -2386,6 +2397,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a equipmentExpanderModule resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentExpanderModuleRelationship ExpanderModule
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2425,6 +2447,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a pciNode resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public PciNodeRelationship PciNode
         {
             get;
             set;
@@ -3344,6 +3377,205 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get FirmwarePciNodeUpgrade.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePciNodeUpgrade", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightFirmwarePciNodeUpgrade : GetCmdletBase
+    {
+        public GetIntersightFirmwarePciNodeUpgrade()
+        {
+            ApiInstance = new FirmwareApi(Config);
+            MethodName = "GetFirmwarePciNodeUpgradeListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship Device
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a firmwareDistributable resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public FirmwareDistributableRelationship Distributable
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a pciNode resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public PciNodeRelationship PciNode
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a softwarerepositoryRelease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public SoftwarerepositoryReleaseRelationship Release
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User has the option to skip the estimate impact calculation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool SkipEstimateImpact
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Status of the upgrade operation.\n* `NONE` - Upgrade status is not populated.\n* `IN_PROGRESS` - The upgrade is in progress.\n* `SUCCESSFUL` - The upgrade successfully completed.\n* `FAILED` - The upgrade shows failed status.\n* `TERMINATED` - The upgrade has been terminated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FirmwarePciNodeUpgrade.StatusEnum Status
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a firmwareUpgradeImpactStatus resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public FirmwareUpgradeImpactStatusRelationship UpgradeImpact
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a firmwareUpgradeStatus resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public FirmwareUpgradeStatusRelationship UpgradeStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Desired upgrade mode to choose either direct download based upgrade or network share upgrade.\n* `direct_upgrade` - Upgrade mode is direct download.\n* `network_upgrade` - Upgrade mode is network upgrade."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FirmwarePciNodeUpgrade.UpgradeTypeEnum UpgradeType
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwarePcieDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePcieDescriptor", DefaultParameterSetName = "CmdletParam")]
@@ -3838,6 +4070,181 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get FirmwarePsxDescriptor.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePsxDescriptor", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightFirmwarePsxDescriptor : GetCmdletBase
+    {
+        public GetIntersightFirmwarePsxDescriptor()
+        {
+            ApiInstance = new FirmwareApi(Config);
+            MethodName = "GetFirmwarePsxDescriptorListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The brand string of the endpoint for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string BrandString
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Detailed information about the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The label type for the component."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Label
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The revision for the component."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Revision
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareRunningFirmware.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightFirmwareRunningFirmware", DefaultParameterSetName = "CmdletParam")]
@@ -3934,6 +4341,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public EquipmentEnclosureElementRelationship EquipmentEnclosureElement
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a equipmentPsu resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentPsuRelationship EquipmentPsu
         {
             get;
             set;
@@ -6397,6 +6815,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"XFM upgrade option Full or Partial Disruption.\n* `none` - If no option is selected for exclusion.\n* `full-shutdown` - PSX Switch in XFM will be upgraded in single action.\n* `partial-shutdown` - PSX Switch in XFM will be upgraded one after other."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareChassisUpgrade.XfmUpgradeOptionEnum XfmUpgradeOption
+        {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareCimcDescriptor.</para>
@@ -8305,6 +8734,164 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New FirmwarePciNodeUpgrade.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePciNodeUpgrade")]
+    public class NewIntersightFirmwarePciNodeUpgrade : NewCmdletBase
+    {
+        public NewIntersightFirmwarePciNodeUpgrade()
+        {
+            ApiInstance = new FirmwareApi(Config);
+            ModelObject = new FirmwarePciNodeUpgrade();
+            MethodName = "CreateFirmwarePciNodeUpgradeWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Direct download options in case the upgradeType is direct download based upgrade."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareDirectDownload DirectDownload
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a firmwareDistributable resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareDistributableRelationship Distributable
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Location of the image in user software repository."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwarerepositoryFileServer FileServer
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Deprecated (Use 'fileServer' property). Network share options in case of the upgradeType is network share based upgrade."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareNetworkShare NetworkShare
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a pciNode resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciNodeRelationship PciNode
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a softwarerepositoryRelease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwarerepositoryReleaseRelationship Release
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"User has the option to skip the estimate impact calculation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SkipEstimateImpact
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Status of the upgrade operation.\n* `NONE` - Upgrade status is not populated.\n* `IN_PROGRESS` - The upgrade is in progress.\n* `SUCCESSFUL` - The upgrade successfully completed.\n* `FAILED` - The upgrade shows failed status.\n* `TERMINATED` - The upgrade has been terminated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwarePciNodeUpgrade.StatusEnum Status
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Desired upgrade mode to choose either direct download based upgrade or network share upgrade.\n* `direct_upgrade` - Upgrade mode is direct download.\n* `network_upgrade` - Upgrade mode is network upgrade."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwarePciNodeUpgrade.UpgradeTypeEnum UpgradeType
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwarePcieDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightFirmwarePcieDescriptor")]
@@ -8592,6 +9179,150 @@ namespace Intersight.PowerShell
             ApiInstance = new FirmwareApi(Config);
             ModelObject = new FirmwarePsuDescriptor();
             MethodName = "CreateFirmwarePsuDescriptorWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The brand string of the endpoint for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string BrandString
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CapabilityCapabilityRelationship> Capabilities
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Detailed information about the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The label type for the component."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Label
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"The revision for the component."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Revision
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New FirmwarePsxDescriptor.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePsxDescriptor")]
+    public class NewIntersightFirmwarePsxDescriptor : NewCmdletBase
+    {
+        public NewIntersightFirmwarePsxDescriptor()
+        {
+            ApiInstance = new FirmwareApi(Config);
+            ModelObject = new FirmwarePsxDescriptor();
+            MethodName = "CreateFirmwarePsxDescriptorWithHttpInfo";
         }
 
 
@@ -9936,6 +10667,17 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
+        public List<FirmwareUpgradeImpact.ExcludeComponentListEnum> ExcludeComponentList
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
         public List<FirmwareUpgradeImpact.ExcludeComponentsEnum> ExcludeComponents
         {
             get;
@@ -9977,6 +10719,17 @@ namespace Intersight.PowerShell
         }
 
 
+
+        // <summary>
+        /// <para type="description">"An array of relationships to pciNode resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<PciNodeRelationship> PciNode
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -10024,6 +10777,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"XFM upgrade option Full or Partial Disruption.\n* `none` - If no option is selected for exclusion.\n* `full-shutdown` - PSX Switch in XFM will be upgraded in single action.\n* `partial-shutdown` - PSX Switch in XFM will be upgraded one after other."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareUpgradeImpact.XfmUpgradeOptionEnum XfmUpgradeOption
+        {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareUpgradeValidity.</para>
@@ -10251,6 +11015,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove FirmwarePciNodeUpgrade.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePciNodeUpgrade")]
+    public class RemoveIntersightFirmwarePciNodeUpgrade : RemoveCmdletBase
+    {
+        public RemoveIntersightFirmwarePciNodeUpgrade()
+        {
+            ApiInstance = new FirmwareApi(Config);
+            MethodName = "DeleteFirmwarePciNodeUpgradeWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwarePcieDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePcieDescriptor")]
@@ -10284,6 +11060,18 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new FirmwareApi(Config);
             MethodName = "DeleteFirmwarePsuDescriptorWithHttpInfo";
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove FirmwarePsxDescriptor.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePsxDescriptor")]
+    public class RemoveIntersightFirmwarePsxDescriptor : RemoveCmdletBase
+    {
+        public RemoveIntersightFirmwarePsxDescriptor()
+        {
+            ApiInstance = new FirmwareApi(Config);
+            MethodName = "DeleteFirmwarePsxDescriptorWithHttpInfo";
         }
     }
     /// <summary>
@@ -12911,6 +13699,150 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set FirmwarePsxDescriptor.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwarePsxDescriptor")]
+    public class SetIntersightFirmwarePsxDescriptor : SetCmdletBase
+    {
+        public SetIntersightFirmwarePsxDescriptor()
+        {
+            ApiInstance = new FirmwareApi(Config);
+            ModelObject = new FirmwarePsxDescriptor();
+            MethodName = "UpdateFirmwarePsxDescriptorWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The brand string of the endpoint for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string BrandString
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An array of relationships to capabilityCapability resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CapabilityCapabilityRelationship> Capabilities
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Detailed information about the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The label type for the component."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Label
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The model of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"The revision for the component."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Revision
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The firmware or software version of the endpoint, for which this capability information is applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Version
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareRunningFirmware.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightFirmwareRunningFirmware")]
@@ -12934,6 +13866,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

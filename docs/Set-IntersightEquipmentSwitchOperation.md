@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -AdminLocatorLedActionState
-Defines status of action performed on AdminLocatorLedState.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.
+Defines status of action performed on AdminLocatorLedState.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.\n* `Scheduled` - User configured settings are scheduled to be applied.
 
 ```yaml
 Type: EquipmentSwitchOperation.AdminLocatorLedActionStateEnum
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ConfigEvacState
-Captures the status of evacuation on this switch.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.
+Captures the status of evacuation on this switch.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.\n* `Scheduled` - User configured settings are scheduled to be applied.
 
 ```yaml
 Type: EquipmentSwitchOperation.ConfigEvacStateEnum
@@ -164,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResetActionState
-Current status of the reset operation executed on the Fabric Interconnect.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.
+Current status of the reset operation executed on the Fabric Interconnect.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.\n* `Scheduled` - User configured settings are scheduled to be applied.
 
 ```yaml
 Type: EquipmentSwitchOperation.ResetActionStateEnum

@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentOrder
-Assignment order decides the order in which the next identifier is allocated.\n* `sequential` - Identifiers are assigned in a sequential order.\n* `default` - Assignment order is decided by the system.
+Property is deprecated. Sequential is the only assignment order supported.\n* `sequential` - Identifiers are assigned in a sequential order.\n* `default` - Assignment order is decided by the system.
 
 ```yaml
 Type: IqnpoolPool.AssignmentOrderEnum

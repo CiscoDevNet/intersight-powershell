@@ -1699,6 +1699,8 @@ namespace Intersight.PowerShell
 
 
 
+
+
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityCimcFirmwareDescriptor.</para>
@@ -5980,6 +5982,116 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CapabilityServerPcieConnectivityCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerPcieConnectivityCatalog", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCapabilityServerPcieConnectivityCatalog : GetCmdletBase
+    {
+        public GetIntersightCapabilityServerPcieConnectivityCatalog()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            MethodName = "GetCapabilityServerPcieConnectivityCatalogListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityServerSchemaDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerSchemaDescriptor", DefaultParameterSetName = "CmdletParam")]
@@ -6139,6 +6251,139 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CapabilityServerTopologyMap.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerTopologyMap", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightCapabilityServerTopologyMap : GetCmdletBase
+    {
+        public GetIntersightCapabilityServerTopologyMap()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            MethodName = "GetCapabilityServerTopologyMapListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Handler identifier for managing this topology configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Handler
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Server model information for which this topology configuration is defined."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SupportedTopologyName
+        {
+            get;
+            set;
+        }
+
+
 
 
 
@@ -7658,6 +7903,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -11401,6 +11647,95 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New CapabilityServerPcieConnectivityCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerPcieConnectivityCatalog")]
+    public class NewIntersightCapabilityServerPcieConnectivityCatalog : NewCmdletBase
+    {
+        public NewIntersightCapabilityServerPcieConnectivityCatalog()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            ModelObject = new CapabilityServerPcieConnectivityCatalog();
+            MethodName = "CreateCapabilityServerPcieConnectivityCatalogWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CapabilityServerPcieConnectivityLayout> SupportedLayouts
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<long> SupportedNumberOfGpus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityServerSchemaDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerSchemaDescriptor")]
@@ -11532,6 +11867,128 @@ namespace Intersight.PowerShell
             set;
         }
 
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New CapabilityServerTopologyMap.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerTopologyMap")]
+    public class NewIntersightCapabilityServerTopologyMap : NewCmdletBase
+    {
+        public NewIntersightCapabilityServerTopologyMap()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            ModelObject = new CapabilityServerTopologyMap();
+            MethodName = "CreateCapabilityServerTopologyMapWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Handler identifier for managing this topology configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Handler
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"PCIe node model information for this topology configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityDeviceInventory PcieNodeDetail
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Server model information for which this topology configuration is defined."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityDeviceInventory ServerDetail
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Server model information for which this topology configuration is defined."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SupportedTopologyName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"XFM (Switch Fabric Module) model information for this topology configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityDeviceInventory XfmDetail
+        {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilitySiocModuleCapabilityDef.</para>
@@ -12136,6 +12593,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> UnsupportedPolicies
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The vendor of the endpoint, for which this capability information is applicable."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -12728,6 +13196,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CapabilityServerPcieConnectivityCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerPcieConnectivityCatalog")]
+    public class RemoveIntersightCapabilityServerPcieConnectivityCatalog : RemoveCmdletBase
+    {
+        public RemoveIntersightCapabilityServerPcieConnectivityCatalog()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            MethodName = "DeleteCapabilityServerPcieConnectivityCatalogWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityServerSchemaDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerSchemaDescriptor")]
@@ -12737,6 +13217,18 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new CapabilityApi(Config);
             MethodName = "DeleteCapabilityServerSchemaDescriptorWithHttpInfo";
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CapabilityServerTopologyMap.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerTopologyMap")]
+    public class RemoveIntersightCapabilityServerTopologyMap : RemoveCmdletBase
+    {
+        public RemoveIntersightCapabilityServerTopologyMap()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            MethodName = "DeleteCapabilityServerTopologyMapWithHttpInfo";
         }
     }
     /// <summary>
@@ -15970,6 +16462,95 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set CapabilityServerPcieConnectivityCatalog.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerPcieConnectivityCatalog")]
+    public class SetIntersightCapabilityServerPcieConnectivityCatalog : SetCmdletBase
+    {
+        public SetIntersightCapabilityServerPcieConnectivityCatalog()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            ModelObject = new CapabilityServerPcieConnectivityCatalog();
+            MethodName = "UpdateCapabilityServerPcieConnectivityCatalogWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CapabilityServerPcieConnectivityLayout> SupportedLayouts
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<long> SupportedNumberOfGpus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityServerSchemaDescriptor.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerSchemaDescriptor")]
@@ -16101,6 +16682,128 @@ namespace Intersight.PowerShell
             set;
         }
 
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set CapabilityServerTopologyMap.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerTopologyMap")]
+    public class SetIntersightCapabilityServerTopologyMap : SetCmdletBase
+    {
+        public SetIntersightCapabilityServerTopologyMap()
+        {
+            ApiInstance = new CapabilityApi(Config);
+            ModelObject = new CapabilityServerTopologyMap();
+            MethodName = "UpdateCapabilityServerTopologyMapWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Handler identifier for managing this topology configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Handler
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An unique identifer for a capability descriptor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"PCIe node model information for this topology configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityDeviceInventory PcieNodeDetail
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Server model information for which this topology configuration is defined."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityDeviceInventory ServerDetail
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Server model information for which this topology configuration is defined."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SupportedTopologyName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"XFM (Switch Fabric Module) model information for this topology configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CapabilityDeviceInventory XfmDetail
+        {
+            get;
+            set;
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilitySiocModuleCapabilityDef.</para>
@@ -16699,6 +17402,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> UnsupportedPolicies
         {
             get;
             set;

@@ -370,7 +370,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster."</para>
+        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care by batch processing.\n* `tier2` - Advisory processing will be taken care by stream processing."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1995,7 +1995,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care in first advisory driver of multinode cluster.\n* `tier2` - Advisory processing will be taken care in second advisory driver of multinode cluster."</para>
+        /// <para type="description">"Orion pod on which this advisory should process.\n* `tier1` - Advisory processing will be taken care by batch processing.\n* `tier2` - Advisory processing will be taken care by stream processing."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

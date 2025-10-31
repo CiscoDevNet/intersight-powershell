@@ -234,6 +234,105 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PciEndpoint.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPciEndpoint")]
+    public class InitializeIntersightPciEndpoint : PSCmdlet
+    {
+        public InitializeIntersightPciEndpoint()
+        {
+            ClassId = PciEndpoint.ClassIdEnum.PciEndpoint;
+            ObjectType = PciEndpoint.ObjectTypeEnum.PciEndpoint;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciEndpoint.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciEndpoint.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of the PCIe endpoint as reported by the chassis expander management controller."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Uri
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.PciEndpoint initObject = new Intersight.Model.PciEndpoint();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
+            {
+                initObject.Uri = this.Uri;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize PciLink.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightPciLink")]
@@ -398,6 +497,220 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PciNodeSetting.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPciNodeSetting")]
+    public class InitializeIntersightPciNodeSetting : PSCmdlet
+    {
+        public InitializeIntersightPciNodeSetting()
+        {
+            AdminAction = PciNodeSetting.AdminActionEnum.None;
+            AdminLocatorLedState = PciNodeSetting.AdminLocatorLedStateEnum.None;
+            ClassId = PciNodeSetting.ClassIdEnum.PciNodeSetting;
+            ObjectType = PciNodeSetting.ObjectTypeEnum.PciNodeSetting;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User configured action on the PCIe Node.\n* `None` - Placeholder default value for PCIe Node admin state property.\n* `Reboot` - PCIe node reboot state property value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciNodeSetting.AdminActionEnum AdminAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User configured state of the locator LED for the PCIe Node.\n* `None` - No operation property for locator led.\n* `On` - The Locator Led is turned on.\n* `Off` - The Locator Led is turned off."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciNodeSetting.AdminLocatorLedStateEnum AdminLocatorLedState
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciNodeSetting.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciNodeSetting.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.PciNodeSetting initObject = new Intersight.Model.PciNodeSetting();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminAction"))
+            {
+                initObject.AdminAction = this.AdminAction;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminLocatorLedState"))
+            {
+                initObject.AdminLocatorLedState = this.AdminLocatorLedState;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PciPort.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPciPort")]
+    public class InitializeIntersightPciPort : PSCmdlet
+    {
+        public InitializeIntersightPciPort()
+        {
+            ClassId = PciPort.ClassIdEnum.PciPort;
+            ObjectType = PciPort.ObjectTypeEnum.PciPort;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciPort.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciPort.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of the PCIe switch port as reported by chassis expander module management controller."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Uri
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.PciPort initObject = new Intersight.Model.PciPort();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
+            {
+                initObject.Uri = this.Uri;
             }
             WriteObject(initObject);
         }
@@ -582,6 +895,105 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PciZone.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPciZone")]
+    public class InitializeIntersightPciZone : PSCmdlet
+    {
+        public InitializeIntersightPciZone()
+        {
+            ClassId = PciZone.ClassIdEnum.PciZone;
+            ObjectType = PciZone.ObjectTypeEnum.PciZone;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciZone.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PciZone.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The identifier of the PCIe endpoint zone as reported by the chassis expander module management controller."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Uri
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.PciZone initObject = new Intersight.Model.PciZone();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
+            {
+                initObject.Uri = this.Uri;
             }
             WriteObject(initObject);
         }

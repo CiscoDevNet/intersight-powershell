@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightTaskNexusSystemScopedInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-NamingProperty< string>][-Queries< object>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< string>][-Values< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightTaskNexusSystemScopedInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Immediate< bool>][-Moid< string>][-NamingProperty< string>][-Queries< object>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< string>][-Values< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,21 @@ Create a &apos;TaskNexusSystemScopedInventory&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Immediate
+Device will immediately collect the objects from the platform. If false, the device will wait for any in flight scheduled collections to complete first. Used to ensure that any long running collections do not delay the scoped collection result.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

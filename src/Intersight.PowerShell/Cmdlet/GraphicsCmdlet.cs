@@ -154,6 +154,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a equipmentInterconnect resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentInterconnectRelationship EquipmentInterconnect
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a equipmentSharedGraphicsCard resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentSharedGraphicsCardRelationship EquipmentSharedGraphicsCard
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The expander slot information of the card."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -825,6 +847,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
 

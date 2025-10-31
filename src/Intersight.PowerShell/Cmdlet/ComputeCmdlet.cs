@@ -347,6 +347,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The flag to indicate server has the support for E3.S drives."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool HasE3SSupport
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -883,7 +894,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The state of Maintenance Action performed. This will have three states. Applying - Action is in progress. Applied - Action is completed and applied. Failed - Action has failed.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
+        /// <para type="description">"The state of Maintenance Action performed. This will have three states. Applying - Action is in progress. Applied - Action is completed and applied. Failed - Action has failed.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.\n* `Scheduled` - User configured settings are scheduled to be applied."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1280,6 +1291,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -2046,6 +2058,280 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputePcieConnectivityPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputePcieConnectivityPolicy", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputePcieConnectivityPolicy : GetCmdletBase
+    {
+        public GetIntersightComputePcieConnectivityPolicy()
+        {
+            ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputePcieConnectivityPolicyListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get ComputePcieConnectivityPolicyInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightComputePcieConnectivityPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    public class GetIntersightComputePcieConnectivityPolicyInventory : GetCmdletBase
+    {
+        public GetIntersightComputePcieConnectivityPolicyInventory()
+        {
+            ApiInstance = new ComputeApi(Config);
+            MethodName = "GetComputePcieConnectivityPolicyInventoryListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\sa-zA-Z0-9_'.:-]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Device ID of the entity from where inventory is reported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceMoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the inventoried policy object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,512}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship TargetMo
+        {
+            get;
+            set;
+        }
+
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputePersonality.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightComputePersonality", DefaultParameterSetName = "CmdletParam")]
@@ -2450,6 +2736,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string HardwareUuid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The flag to indicate server has the support for E3.S drives."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool HasE3SSupport
         {
             get;
             set;
@@ -3301,6 +3598,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The flag to indicate server has the support for E3.S drives."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool HasE3SSupport
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a inventoryDeviceInfo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -3862,7 +4170,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The state of Maintenance Action performed. This will have three states. Applying - Action is in progress. Applied - Action is completed and applied. Failed - Action has failed.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied."</para>
+        /// <para type="description">"The state of Maintenance Action performed. This will have three states. Applying - Action is in progress. Applied - Action is completed and applied. Failed - Action has failed.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.\n* `Scheduled` - User configured settings are scheduled to be applied."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5340,6 +5648,117 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New ComputePcieConnectivityPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightComputePcieConnectivityPolicy")]
+    public class NewIntersightComputePcieConnectivityPolicy : NewCmdletBase
+    {
+        public NewIntersightComputePcieConnectivityPolicy()
+        {
+            ApiInstance = new ComputeApi(Config);
+            ModelObject = new ComputePcieConnectivityPolicy();
+            MethodName = "CreateComputePcieConnectivityPolicyWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<ComputePcieZone> PcieZones
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<PolicyAbstractConfigProfileRelationship> Profiles
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ComputeScrubPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightComputeScrubPolicy")]
@@ -5449,6 +5868,18 @@ namespace Intersight.PowerShell
             set;
         }
 
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove ComputePcieConnectivityPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightComputePcieConnectivityPolicy")]
+    public class RemoveIntersightComputePcieConnectivityPolicy : RemoveCmdletBase
+    {
+        public RemoveIntersightComputePcieConnectivityPolicy()
+        {
+            ApiInstance = new ComputeApi(Config);
+            MethodName = "DeleteComputePcieConnectivityPolicyWithHttpInfo";
+        }
     }
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ComputeRackUnit.</para>
@@ -5788,6 +6219,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -6149,6 +6581,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -6269,6 +6702,117 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set ComputePcieConnectivityPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightComputePcieConnectivityPolicy")]
+    public class SetIntersightComputePcieConnectivityPolicy : SetCmdletBase
+    {
+        public SetIntersightComputePcieConnectivityPolicy()
+        {
+            ApiInstance = new ComputeApi(Config);
+            ModelObject = new ComputePcieConnectivityPolicy();
+            MethodName = "UpdateComputePcieConnectivityPolicyWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<ComputePcieZone> PcieZones
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"An array of relationships to policyAbstractConfigProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<PolicyAbstractConfigProfileRelationship> Profiles
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
 
     }
     /// <summary>
@@ -6627,6 +7171,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

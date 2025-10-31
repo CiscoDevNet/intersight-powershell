@@ -356,6 +356,10 @@ namespace Intersight.PowerShell
             ExtendedApic = BiosPolicy.ExtendedApicEnum.PlatformDefault;
             FlowControl = BiosPolicy.FlowControlEnum.PlatformDefault;
             Frb2enable = BiosPolicy.Frb2enableEnum.PlatformDefault;
+            GpuDirectCpu1 = BiosPolicy.GpuDirectCpu1Enum.PlatformDefault;
+            GpuDirectCpu2 = BiosPolicy.GpuDirectCpu2Enum.PlatformDefault;
+            GpuDirectCpu3 = BiosPolicy.GpuDirectCpu3Enum.PlatformDefault;
+            GpuDirectCpu4 = BiosPolicy.GpuDirectCpu4Enum.PlatformDefault;
             HardwarePrefetch = BiosPolicy.HardwarePrefetchEnum.PlatformDefault;
             HwpmEnable = BiosPolicy.HwpmEnableEnum.PlatformDefault;
             ImcInterleave = BiosPolicy.ImcInterleaveEnum.PlatformDefault;
@@ -2014,6 +2018,46 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.Frb2enableEnum Frb2enable
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU1 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu1Enum GpuDirectCpu1
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU2 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu2Enum GpuDirectCpu2
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU3 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu3Enum GpuDirectCpu3
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"BIOS Token for setting GPU Direct CPU4 configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.GpuDirectCpu4Enum GpuDirectCpu4
         {
             get;
             set;
@@ -5945,6 +5989,22 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Frb2enable"))
             {
                 initObject.Frb2enable = this.Frb2enable;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GpuDirectCpu1"))
+            {
+                initObject.GpuDirectCpu1 = this.GpuDirectCpu1;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GpuDirectCpu2"))
+            {
+                initObject.GpuDirectCpu2 = this.GpuDirectCpu2;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GpuDirectCpu3"))
+            {
+                initObject.GpuDirectCpu3 = this.GpuDirectCpu3;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GpuDirectCpu4"))
+            {
+                initObject.GpuDirectCpu4 = this.GpuDirectCpu4;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("HardwarePrefetch"))
             {

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentExpanderModule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-FanModules< System.Collections.Generic.List`1[EquipmentFanModuleRelationship]>][[-Moid]< string>][-PartNumber< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentExpanderModule [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -38,24 +38,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -FanModules
-An array of relationships to equipmentFanModule resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[EquipmentFanModuleRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -65,21 +47,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: true
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PartNumber
-Part number identifier for the expander module.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
