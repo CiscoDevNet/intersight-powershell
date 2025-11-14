@@ -66,11 +66,24 @@ namespace Intersight.PowerShell
                 List<object> argList = new List<object>();
                 argList.Add(moidVal);
                 argList.Add(ModelObject);
+                // since Moid and Model object is already processed so looping over method parameter from index 2
                 for (int i = 2; i < parameterInfo.Length; i++)
                 {
-                    if (parameterInfo[i].HasDefaultValue)
+                    // convert the parameter of method in pascal case to match the powershell input parameter.
+                    var parameterName = parameterInfo[i].Name;
+                    var parameNameInPascalCase = char.ToUpper(parameterName[0]) + parameterName.Substring(1);
+
+                    if (this.MyInvocation.BoundParameters.ContainsKey(parameNameInPascalCase))
+                    {
+                        argList.Add(this.MyInvocation.BoundParameters[parameNameInPascalCase]);
+                    }
+                    else if (parameterInfo[i].HasDefaultValue)
                     {
                         argList.Add(parameterInfo[i].DefaultValue);
+                    }
+                    else
+                    {
+                        argList.Add(null);
                     }
                 }
                 var result = methodInfo.Invoke(ApiInstance, argList.ToArray());

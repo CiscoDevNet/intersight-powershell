@@ -69,27 +69,52 @@ namespace Intersight.PowerShell
             try
             {
                 var methodInfo = GetMethodInfo(MethodName);
-                Object[] argList = null;
-                if (this.ParameterSetName.Equals("CmdletParam", StringComparison.OrdinalIgnoreCase))
-                {
-                    var queryString = CreateFilterQuery();
-                    argList = new object[] { queryString, null, Top, null, null, null, null, null, null, null, null, 0 };
+                var parameterInfo = methodInfo.GetParameters();
+                var argList = new List<object>();
 
-                }
-                else if (this.ParameterSetName.Equals("QueryParam", StringComparison.OrdinalIgnoreCase))
+                for (int i = 0; i < parameterInfo.Length; i++)
                 {
-                    argList = new object[] { Filter, Orderby, Top, Skip, Select, Expand, Apply, Count, InlineCount, At, Tag, 0 };
+                    // convert the parameter of method in pascalcase to match the powershell input parameter.
+                    var parameterName = parameterInfo[i].Name;
+                    var parameNameInPascalCase = char.ToUpper(parameterName[0]) + parameterName.Substring(1);
+                    if (this.MyInvocation.BoundParameters.ContainsKey(parameNameInPascalCase))
+                    {
+                        argList.Add(this.MyInvocation.BoundParameters[parameNameInPascalCase]);
+                    }
+                    else if (parameterInfo[i].HasDefaultValue)
+                    {
+                        if (this.ParameterSetName == Constants.CmdletParam)
+                        {
+                            if (parameNameInPascalCase == Constants.Top)
+                            {
+                                argList.Add(Constants.MaxTop);
+                            }
+                            else if (parameNameInPascalCase == Constants.Filter)
+                            {
+                                argList.Add(CreateFilterQuery());
+                            }
+                            else if (parameNameInPascalCase == Constants.InlineCount)
+                            {
+                                argList.Add("allpages");
+                            }
+                            else
+                            {
+                                argList.Add(parameterInfo[i].DefaultValue);
+                            }
+                        }
+                        else
+                        {
+                            argList.Add(parameterInfo[i].DefaultValue);
+                        }
+                    }
+                    else
+                    {
+                        argList.Add(null);
+                    }
                 }
 
-                //set inlinecount to allpages
-                argList[8] = "allpages";
                 WriteVerbose(String.Format("Invoking {0}", ApiInstance.GetType().Name));
-                var getResult = methodInfo.Invoke(ApiInstance, argList);
-
-                var TotalObjectCount = GetObjectCount(getResult);
-                WriteVerbose(String.Format("Total Count {0}", TotalObjectCount));
-                var fetchedObjectCount = GetFetchedObjectCount(getResult);
-                WriteVerbose(string.Format("{0} objects fetched", fetchedObjectCount));
+                var getResult = methodInfo.Invoke(ApiInstance, argList.ToArray());
 
                 // check if either of the switch parameter is specified then return only first 1000 objects.
                 if (Json.IsPresent || WithHttpInfo.IsPresent)
@@ -97,18 +122,19 @@ namespace Intersight.PowerShell
                     WithHttpInfoResponse = getResult;
                     return;
                 }
-
                 StoreResult(getResult);
 
-                if (TotalObjectCount > fetchedObjectCount && !(this.ParameterSetName == "QueryParam" && (this.MyInvocation.BoundParameters.ContainsKey("Skip") ||
-                this.MyInvocation.BoundParameters.ContainsKey("Top")) ||
-                this.MyInvocation.BoundParameters.ContainsKey("Apply")))
+                if (this.ParameterSetName != Constants.QueryParam)
                 {
-                    if (!this.MyInvocation.BoundParameters.ContainsKey("InlineCount"))
+                    var TotalObjectCount = GetObjectCount(getResult);
+                    WriteVerbose(String.Format("Total Count {0}", TotalObjectCount));
+                    var fetchedObjectCount = GetFetchedObjectCount(getResult);
+                    WriteVerbose(string.Format("{0} objects fetched", fetchedObjectCount));
+
+                    if (TotalObjectCount > fetchedObjectCount)
                     {
-                        argList[8] = null;
+                        getPaginatedResult(methodInfo, argList.ToArray(), TotalObjectCount, fetchedObjectCount);
                     }
-                    getPaginatedResult(methodInfo, argList, TotalObjectCount, fetchedObjectCount);
                 }
             }
             catch (Exception ex)
@@ -132,11 +158,16 @@ namespace Intersight.PowerShell
                 return;
             }
 
-            if (this.ParameterSetName == "QueryParam")
+            if (ActualInstanceResult == null)
+            {
+                return;
+            }
+
+            if (this.ParameterSetName == Constants.QueryParam)
             {
                 WriteObject(ActualInstanceResult);
             }
-            else if (this.ParameterSetName == "CmdletParam")
+            else if (this.ParameterSetName == Constants.CmdletParam)
             {
                 var actualResult = ActualInstanceResult.GetType().GetProperty(Constants.Results).GetValue(ActualInstanceResult);
                 var collection = new List<Object>((IEnumerable<Object>)actualResult);

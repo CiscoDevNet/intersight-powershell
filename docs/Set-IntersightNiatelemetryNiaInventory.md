@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightNiatelemetryNiaInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ControllerIpAddress< string>][-Cpu< float>][-CrashResetLogs< string>][-CustomerDeviceConnector< string>][-DcnmFanDetails< System.Collections.Generic.List`1[NiatelemetryFanDetails]>][-DcnmLicenseState< string>][-DeviceDiscovery< string>][-DeviceHealth< long>][-DeviceId< string>][-DeviceName< string>][-DeviceType< string>][-DeviceUpTime< long>][-Disk< NiatelemetryDiskinfo>][-Dn< string>][-FabricName< string>][-FexCount< long>][-InfraWiNodeCount< long>][-Interface< System.Collections.Generic.List`1[NiatelemetryInterfaceElement]>][-IpAddress< string>][-IsVirtualNode< string>][-LastRebootTime< string>][-LastResetReason< string>][-LicenseState< NiatelemetryNiaLicenseStateRelationship>][-LicenseType< string>][-LogInTime< string>][-LogOutTime< string>][-MacSecCount< long>][-MacSecFabCount< long>][-MacsecTotalCount< long>][-Memory< long>][[-Moid]< string>][-NexusCloudMembershipStatus< bool>][-NodeId< string>][-NxosBgpEvpn< NiatelemetryNxosBgpEvpn>][-NxosBgpMvpn< NiatelemetryNxosBgpMvpn>][-NxosBootflashDetails< NiatelemetryBootflashDetails>][-NxosDciInterfaceStatus< string>][-NxosInterfaceBrief< NiatelemetryInterface>][-NxosNveInterfaceStatus< string>][-NxosNvePacketCounters< NiatelemetryNvePacketCounters>][-NxosNveVni< NiatelemetryNveVni>][-NxosOspfNeighbors< long>][-NxosPimNeighbors< string>][-NxosTelnet< string>][-NxosTotalRoutes< long>][-NxosVtp< NiatelemetryNxosVtp>][-RecordType< string>][-RecordVersion< string>][-RoutePrefixCount< long>][-RoutePrefixV4Count< long>][-RoutePrefixV6Count< long>][-Serial< string>][-SiteName< string>][-Siteuuid< string>][-SmartAccountId< long>][-SoftwareDownload< string>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< string>][-VniStatus< System.Collections.Generic.List`1[NiatelemetryVniStatus]>][-VpcPeerIpAddress< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightNiatelemetryNiaInventory [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ControllerIpAddress< string>][-Cpu< float>][-CrashResetLogs< string>][-CustomerDeviceConnector< string>][-DcnmFanDetails< System.Collections.Generic.List`1[NiatelemetryFanDetails]>][-DcnmLicenseState< string>][-DeviceDiscovery< string>][-DeviceHealth< long>][-DeviceId< string>][-DeviceName< string>][-DeviceType< string>][-DeviceUpTime< long>][-Disk< NiatelemetryDiskinfo>][-Dn< string>][-FabricName< string>][-FexCount< long>][-InfraWiNodeCount< long>][-Interface< System.Collections.Generic.List`1[NiatelemetryInterfaceElement]>][-IpAddress< string>][-IsVirtualNode< string>][-LastRebootTime< string>][-LastResetReason< string>][-LicenseState< NiatelemetryNiaLicenseStateRelationship>][-LicenseType< string>][-LogInTime< string>][-LogOutTime< string>][-MacSecCount< long>][-MacSecFabCount< long>][-MacsecTotalCount< long>][-Memory< long>][[-Moid]< string>][-NexusCloudMembershipStatus< bool>][-NodeId< string>][-NxosBgpEvpn< NiatelemetryNxosBgpEvpn>][-NxosBgpMvpn< NiatelemetryNxosBgpMvpn>][-NxosBootflashDetails< NiatelemetryBootflashDetails>][-NxosDciInterfaceStatus< string>][-NxosInterfaceBrief< NiatelemetryInterface>][-NxosNveInterfaceStatus< string>][-NxosNvePacketCounters< NiatelemetryNvePacketCounters>][-NxosNveVni< NiatelemetryNveVni>][-NxosOspfNeighbors< long>][-NxosPimNeighbors< string>][-NxosTelnet< string>][-NxosTotalRoutes< long>][-NxosVtp< NiatelemetryNxosVtp>][-RecordType< string>][-RecordVersion< string>][-RoutePrefixCount< long>][-RoutePrefixV4Count< long>][-RoutePrefixV6Count< long>][-Serial< string>][-SiteName< string>][-Siteuuid< string>][-SmartAccountId< long>][-SoftwareDownload< string>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< string>][-VniStatus< System.Collections.Generic.List`1[NiatelemetryVniStatus]>][-VpcPeerIpAddress< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -977,6 +977,21 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IfMatch
+For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

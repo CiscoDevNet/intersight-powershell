@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVmwareVirtualMachine [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Annotation< string>][-BootTime< DateTime>][-Capacity< InfraHardwareInfo>][-ConfigName< string>][-ConnectionState< string>][-CpuHotAddEnabled< bool>][-CpuShares< VirtualizationVmwareVmCpuShareInfo>][-CpuSocketInfo< VirtualizationVmwareVmCpuSocketInfo>][-CpuUtilization< float>][-CustomAttributes< System.Collections.Generic.List`1[string]>][-DefaultPowerOffType< string>][-DhcpEnabled< bool>][-DiskCommitInfo< VirtualizationVmwareVmDiskCommitInfo>][-DnsServerList< System.Collections.Generic.List`1[string]>][-DnsSuffixList< System.Collections.Generic.List`1[string]>][-Folder< string>][-GuestInfo< VirtualizationGuestInfo>][-GuestState< VirtualizationVmwareVirtualMachine.GuestStateEnum>][-HypervisorType< VirtualizationVmwareVirtualMachine.HypervisorTypeEnum>][-Identity< string>][-InstanceUuid< string>][-InventoryPath< string>][-IpAddress< System.Collections.Generic.List`1[string]>][-IsTemplate< bool>][-MacAddress< System.Collections.Generic.List`1[string]>][-MemShares< VirtualizationVmwareVmMemoryShareInfo>][-MemoryCapacity< VirtualizationMemoryCapacity>][-MemoryHotAddEnabled< bool>][-MemoryUtilization< float>][[-Moid]< string>][-Name< string>][-NetworkCount< long>][-ParentFolder< VirtualizationVmwareFolderRelationship>][-PortGroups< System.Collections.Generic.List`1[string]>][-PowerState< VirtualizationVmwareVirtualMachine.PowerStateEnum>][-ProcessorCapacity< VirtualizationComputeCapacity>][-ProtectedVm< bool>][-Provider< VirtualizationVmwareVirtualMachine.ProviderEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-RemoteDisplayInfo< VirtualizationVmwareRemoteDisplayInfo>][-RemoteDisplayVncEnabled< bool>][-ResourcePool< string>][-ResourcePoolOwner< string>][-ResourcePoolParent< string>][-State< VirtualizationVmwareVirtualMachine.StateEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ToolRunningStatus< string>][-ToolsVersion< string>][-Uuid< string>][-VmCreationTime< DateTime>][-VmDiskCount< long>][-VmOverallStatus< string>][-VmPath< string>][-VmVersion< string>][-VmVnicCount< long>][-VnicDeviceConfigId< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVmwareVirtualMachine [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Annotation< string>][-BootTime< DateTime>][-Capacity< InfraHardwareInfo>][-ConfigName< string>][-ConnectionState< string>][-CpuHotAddEnabled< bool>][-CpuShares< VirtualizationVmwareVmCpuShareInfo>][-CpuSocketInfo< VirtualizationVmwareVmCpuSocketInfo>][-CpuUtilization< float>][-CustomAttributes< System.Collections.Generic.List`1[string]>][-DefaultPowerOffType< string>][-DhcpEnabled< bool>][-DiskCommitInfo< VirtualizationVmwareVmDiskCommitInfo>][-DnsServerList< System.Collections.Generic.List`1[string]>][-DnsSuffixList< System.Collections.Generic.List`1[string]>][-Folder< string>][-GuestInfo< VirtualizationGuestInfo>][-GuestState< VirtualizationVmwareVirtualMachine.GuestStateEnum>][-HypervisorType< VirtualizationVmwareVirtualMachine.HypervisorTypeEnum>][-Identity< string>][-InstanceUuid< string>][-InventoryPath< string>][-IpAddress< System.Collections.Generic.List`1[string]>][-IsTemplate< bool>][-MacAddress< System.Collections.Generic.List`1[string]>][-MemShares< VirtualizationVmwareVmMemoryShareInfo>][-MemoryCapacity< VirtualizationMemoryCapacity>][-MemoryHotAddEnabled< bool>][-MemoryUtilization< float>][[-Moid]< string>][-Name< string>][-NetworkCount< long>][-ParentFolder< VirtualizationVmwareFolderRelationship>][-PortGroups< System.Collections.Generic.List`1[string]>][-PowerState< VirtualizationVmwareVirtualMachine.PowerStateEnum>][-ProcessorCapacity< VirtualizationComputeCapacity>][-ProtectedVm< bool>][-Provider< VirtualizationVmwareVirtualMachine.ProviderEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-RemoteDisplayInfo< VirtualizationVmwareRemoteDisplayInfo>][-RemoteDisplayVncEnabled< bool>][-ResourcePool< string>][-ResourcePoolOwner< string>][-ResourcePoolParent< string>][-State< VirtualizationVmwareVirtualMachine.StateEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ToolRunningStatus< string>][-ToolsVersion< string>][-Uuid< string>][-VmCreationTime< DateTime>][-VmDiskCount< long>][-VmOverallStatus< string>][-VmPath< string>][-VmVersion< string>][-VmVnicCount< long>][-VnicDeviceConfigId< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -901,6 +901,21 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IfMatch
+For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
