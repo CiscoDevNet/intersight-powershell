@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2025101412
-- C# SDK version: 1.0.11.2025101412
+- Intersight.PowerShell version: 1.0.11.2025102807
+- C# SDK version: 1.0.11.2025102807
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025101412"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025102807"}
 ```
 or
 
@@ -761,6 +761,7 @@ ApplianceExternalSyslogSetting | [**Get-IntersightApplianceExternalSyslogSetting
 ApplianceFileGateway | [**Get-IntersightApplianceFileGateway**](docs/Get-IntersightApplianceFileGateway.md) | Read a 'ApplianceFileGateway' resource.
 ApplianceFileSystemOpStatus | [**Get-IntersightApplianceFileSystemOpStatus**](docs/Get-IntersightApplianceFileSystemOpStatus.md) | Read a 'ApplianceFileSystemOpStatus' resource.
 ApplianceFileSystemStatus | [**Get-IntersightApplianceFileSystemStatus**](docs/Get-IntersightApplianceFileSystemStatus.md) | Read a 'ApplianceFileSystemStatus' resource.
+ApplianceFqdnUpdate | [**Get-IntersightApplianceFqdnUpdate**](docs/Get-IntersightApplianceFqdnUpdate.md) | Read a 'ApplianceFqdnUpdate' resource.
 ApplianceGroupOpStatus | [**Get-IntersightApplianceGroupOpStatus**](docs/Get-IntersightApplianceGroupOpStatus.md) | Read a 'ApplianceGroupOpStatus' resource.
 ApplianceGroupStatus | [**Get-IntersightApplianceGroupStatus**](docs/Get-IntersightApplianceGroupStatus.md) | Read a 'ApplianceGroupStatus' resource.
 ApplianceImageBundle | [**Get-IntersightApplianceImageBundle**](docs/Get-IntersightApplianceImageBundle.md) | Read a 'ApplianceImageBundle' resource.
@@ -792,6 +793,7 @@ ApplianceDataExportPolicy | [**New-IntersightApplianceDataExportPolicy**](docs/N
 ApplianceDeviceClaim | [**New-IntersightApplianceDeviceClaim**](docs/New-IntersightApplianceDeviceClaim.md) | Create a 'ApplianceDeviceClaim' resource.
 ApplianceDiagSetting | [**New-IntersightApplianceDiagSetting**](docs/New-IntersightApplianceDiagSetting.md) | Create a 'ApplianceDiagSetting' resource.
 ApplianceExternalSyslogSetting | [**New-IntersightApplianceExternalSyslogSetting**](docs/New-IntersightApplianceExternalSyslogSetting.md) | Create a 'ApplianceExternalSyslogSetting' resource.
+ApplianceFqdnUpdate | [**New-IntersightApplianceFqdnUpdate**](docs/New-IntersightApplianceFqdnUpdate.md) | Create a 'ApplianceFqdnUpdate' resource.
 ApplianceRemoteFileImport | [**New-IntersightApplianceRemoteFileImport**](docs/New-IntersightApplianceRemoteFileImport.md) | Create a 'ApplianceRemoteFileImport' resource.
 ApplianceRestore | [**New-IntersightApplianceRestore**](docs/New-IntersightApplianceRestore.md) | Create a 'ApplianceRestore' resource.
 ApplianceBackup | [**Remove-IntersightApplianceBackup**](docs/Remove-IntersightApplianceBackup.md) | Delete a 'ApplianceBackup' resource.
@@ -811,6 +813,7 @@ ApplianceDeviceClaim | [**Set-IntersightApplianceDeviceClaim**](docs/Set-Intersi
 ApplianceDeviceUpgradePolicy | [**Set-IntersightApplianceDeviceUpgradePolicy**](docs/Set-IntersightApplianceDeviceUpgradePolicy.md) | Update a 'ApplianceDeviceUpgradePolicy' resource.
 ApplianceDiagSetting | [**Set-IntersightApplianceDiagSetting**](docs/Set-IntersightApplianceDiagSetting.md) | Update a 'ApplianceDiagSetting' resource.
 ApplianceExternalSyslogSetting | [**Set-IntersightApplianceExternalSyslogSetting**](docs/Set-IntersightApplianceExternalSyslogSetting.md) | Update a 'ApplianceExternalSyslogSetting' resource.
+ApplianceFqdnUpdate | [**Set-IntersightApplianceFqdnUpdate**](docs/Set-IntersightApplianceFqdnUpdate.md) | Update a 'ApplianceFqdnUpdate' resource.
 ApplianceMetricsConfig | [**Set-IntersightApplianceMetricsConfig**](docs/Set-IntersightApplianceMetricsConfig.md) | Update a 'ApplianceMetricsConfig' resource.
 ApplianceSetupInfo | [**Set-IntersightApplianceSetupInfo**](docs/Set-IntersightApplianceSetupInfo.md) | Update a 'ApplianceSetupInfo' resource.
 ApplianceUpgrade | [**Set-IntersightApplianceUpgrade**](docs/Set-IntersightApplianceUpgrade.md) | Update a 'ApplianceUpgrade' resource.

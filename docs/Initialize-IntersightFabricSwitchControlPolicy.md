@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AesPrimaryKey
-Encrypts MACsec keys in type-6 format. If a MACsec key is already provided in a type-6 format, the primary key decrypts it.
+Encrypts MACsec keys in type-6 format. If a MACsec key is already provided in a type-6 format, the primary key decrypts it. MACSec is not supported on Unified Edge, so the primary key cannot be configured.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableJumboFrame
-To enable or disable Jumbo Frames on the switch.
+To enable or disable Jumbo Frames on the switch. On Fabric Interconnects, Jumbo Frames are controlled by the System QoS policy, so this setting is ignored.
 
 ```yaml
 Type: bool
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -EthernetSwitchingMode
-Enable or Disable Ethernet End Host Switching Mode.\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode.
+Enable or Disable Ethernet End Host Switching Mode. Ethernet End Host Switching Mode is not applicable for Unified Edge; the value defaults to Ethernet Switch Mode.\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode.
 
 ```yaml
 Type: FabricSwitchControlPolicy.EthernetSwitchingModeEnum
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -FabricPcVhbaReset
-When enabled, a Registered State Change Notification (RSCN) is sent to the VIC adapter when any member port within the fabric port-channel goes down and vHBA would reset to restore the connection immediately. When disabled (default), vHBA reset is done only when all the members of a fabric port-channel are down.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State.
+When enabled, a Registered State Change Notification (RSCN) is sent to the VIC adapter when any member port within the fabric port-channel goes down and vHBA would reset to restore the connection immediately. When disabled (default), vHBA reset is done only when all the members of a fabric port-channel are down. Fabric port-channel vHBA reset is not supported on Unified Edge and cannot be enabled.\n* `Disabled` - Admin configured Disabled State.\n* `Enabled` - Admin configured Enabled State.
 
 ```yaml
 Type: FabricSwitchControlPolicy.FabricPcVhbaResetEnum
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -FcSwitchingMode
-Enable or Disable FC End Host Switching Mode.\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode.
+Enable or Disable FC End Host Switching Mode. FC is not supported on Unified Edge, so this setting cannot be configured and is ignored.\n* `end-host` - In end-host mode, the fabric interconnects appear to the upstream devices as end hosts with multiple links.In this mode, the switch does not run Spanning Tree Protocol and avoids loops by following a set of rules for traffic forwarding.In case of ethernet switching mode - Ethernet end-host mode is also known as Ethernet host virtualizer.\n* `switch` - In switch mode, the switch runs Spanning Tree Protocol to avoid loops, and broadcast and multicast packets are handled in the traditional way.This is the traditional switch mode.
 
 ```yaml
 Type: FabricSwitchControlPolicy.FcSwitchingModeEnum
@@ -243,7 +243,7 @@ Accept wildcard characters: False
 ```
 
 ### -ReservedVlanStartId
-The starting ID for VLANs reserved for internal use within the Fabric Interconnect. This VLAN ID is the starting ID of\na contiguous block of 128 VLANs that cannot be configured for user data.  This range of VLANs cannot be configured in\nVLAN policy.\nIf this property is not configured, VLAN range 3915 - 4042 is reserved for internal use by default.
+The starting ID for VLANs reserved for internal use within the Fabric Interconnect. This VLAN ID is the starting ID of\na contiguous block of 128 VLANs that cannot be configured for user data.  This range of VLANs cannot be configured in\nVLAN policy.\nIf this property is not configured, VLAN range 3915 - 4042 is reserved for internal use by default.\nThe reserved VLAN range is fixed for Unified Edge, so this setting cannot be configured and is ignored.
 
 ```yaml
 Type: long
@@ -290,7 +290,7 @@ Accept wildcard characters: False
 ```
 
 ### -UdldSettings
-This specifies the UDLD Global configurations for this switch.
+This specifies the UDLD Global configurations for this switch. UDLD is not supported on Unified Edge, so these settings cannot be configured.
 
 Note :- Use Initialize-IntersightFabricUdldGlobalSettings to create the object of complex type FabricUdldGlobalSettings
 
@@ -307,7 +307,7 @@ Accept wildcard characters: False
 ```
 
 ### -VlanPortOptimizationEnabled
-To enable or disable the VLAN port count optimization. This feature will always be enabled for\nCisco UCS Fabric Interconnect 9108 100G and also enabled on the IMM 6.x Bundle version and onwards.
+To enable or disable the VLAN port count optimization. This feature will always be enabled for\nCisco UCS Fabric Interconnect 9108 100G and also enabled on the IMM 6.x Bundle version and onwards.\nVLAN Port Count Optimization is not applicable for Unified Edge, so this setting cannot be configured.
 
 ```yaml
 Type: bool

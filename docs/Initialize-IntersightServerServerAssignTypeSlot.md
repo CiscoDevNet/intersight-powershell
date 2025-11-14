@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -DomainName
-Domain name of the Fabric Interconnect to which the chassis is or to be connected. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt can have underscores and hyphens.\nIt cannot be more than 30 characters.
+The domain name of the Fabric Interconnect or the chassis name prefix.\nThe name must start and end with an alphanumeric character, can include underscores and hyphens, and has a maximum length of 30 characters.
 
 ```yaml
 Type: string

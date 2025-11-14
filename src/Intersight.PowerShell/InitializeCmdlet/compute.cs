@@ -2694,6 +2694,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightComputeRackUnit()
         {
+            AdminAction = ComputeRackUnit.AdminActionEnum.None;
             ClassId = ComputeRackUnit.ClassIdEnum.ComputeRackUnit;
             FrontPanelLockState = ComputeRackUnit.FrontPanelLockStateEnum.None;
             ManagementMode = ComputeRackUnit.ManagementModeEnum.IntersightStandalone;
@@ -2706,6 +2707,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Reack` - Reacknowledge the equipment and discover it again."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeRackUnit.AdminActionEnum AdminAction
         {
             get;
             set;
@@ -3118,6 +3129,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminAction"))
+            {
+                initObject.AdminAction = this.AdminAction;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("AlarmSummary"))
             {
@@ -3729,7 +3744,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"User defined asset tag of the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ #$%\\(\\)\\*\\+,\\-\\.\\/:\\?@\\[\\]_\\{\\}\\^\\`\\>\\<~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[ #$%\\(\\)\\*\\+,\\-\\.\\/:;\\|\\?@\\[\\]_\\{\\}\\^\\`\\>\\<~a-zA-Z0-9]*$")]
         public string AssetTag
         {
             get;

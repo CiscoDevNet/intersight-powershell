@@ -13,5 +13,15 @@ namespace Intersight.PowerShell
         public const string Count = "Count";
 
         public const string ActualInstance = "ActualInstance";
+
+        public const string CmdletParam = "CmdletParam";
+
+        public const string QueryParam = "QueryParam";
+
+        public const string Top = "Top";
+
+        public const string Filter = "Filter";
+
+        public const string InlineCount = "Inlinecount";
     }
 }

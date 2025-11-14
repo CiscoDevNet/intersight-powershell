@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< KubernetesClusterCertificateConfiguration>][-ClusterIpPools< System.Collections.Generic.List`1[IppoolPoolRelationship]>][-ConfigContext< PolicyConfigContext>][-ContainerRuntimeConfig< KubernetesContainerRuntimePolicyRelationship>][-ContainerRuntimeProxyPolicy< KubernetesHttpProxyPolicyRelationship>][-Description< string>][-DeviceConnectorProxyPolicy< KubernetesHttpProxyPolicyRelationship>][-EssentialAddons< System.Collections.Generic.List`1[KubernetesEssentialAddon]>][-KubeConfig< KubernetesConfiguration>][-LoadbalancerBlockIpLeases< System.Collections.Generic.List`1[IppoolBlockLeaseRelationship]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< KubernetesClusterManagementConfig>][-MasterVipLease< IppoolIpLeaseRelationship>][[-Moid]< string>][-Name< string>][-NetConfig< KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[KubernetesNodeGroupProfileRelationship]>][-Organization< OrganizationOrganizationRelationship>][-ParentSolutionProfile< MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TrustedRegistries< KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightKubernetesClusterProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CertConfig< KubernetesClusterCertificateConfiguration>][-ClusterIpPools< System.Collections.Generic.List`1[IppoolPoolRelationship]>][-ConfigContext< PolicyConfigContext>][-ContainerRuntimeConfig< KubernetesContainerRuntimePolicyRelationship>][-ContainerRuntimeProxyPolicy< KubernetesHttpProxyPolicyRelationship>][-Description< string>][-DeviceConnectorProxyPolicy< KubernetesHttpProxyPolicyRelationship>][-EssentialAddons< System.Collections.Generic.List`1[KubernetesEssentialAddon]>][-KubeConfig< KubernetesConfiguration>][-LoadbalancerBlockIpLeases< System.Collections.Generic.List`1[IppoolBlockLeaseRelationship]>][-LoadbalancerIpLeases< System.Collections.Generic.List`1[IppoolIpLeaseRelationship]>][-ManagedMode< KubernetesClusterProfile.ManagedModeEnum>][-ManagementConfig< KubernetesClusterManagementConfig>][-MasterVipLease< IppoolIpLeaseRelationship>][[-Moid]< string>][-Name< string>][-NetConfig< KubernetesNetworkPolicyRelationship>][-NodeGroups< System.Collections.Generic.List`1[KubernetesNodeGroupProfileRelationship]>][-Organization< OrganizationOrganizationRelationship>][-ParentSolutionProfile< MoBaseMoRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Status< KubernetesClusterProfile.StatusEnum>][-SysConfig< KubernetesSysConfigPolicyRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TrustedRegistries< KubernetesTrustedRegistriesPolicyRelationship>][-Type< KubernetesClusterProfile.TypeEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -546,6 +546,21 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IfMatch
+For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

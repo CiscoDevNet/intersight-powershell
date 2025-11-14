@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachine.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-AntiAffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-CloudInitConfig< VirtualizationCloudInitConfig>][-Cluster< VirtualizationBaseClusterRelationship>][-ClusterEsxi< string>][-Cpu< long>][-Disk< System.Collections.Generic.List`1[VirtualizationVirtualMachineDisk]>][-ForceDelete< bool>][-GpuConfigs< System.Collections.Generic.List`1[InfraBaseGpuConfiguration]>][-GuestOs< VirtualizationVirtualMachine.GuestOsEnum>][-Host< VirtualizationBaseHostRelationship>][-HostEsxi< string>][-Interfaces< System.Collections.Generic.List`1[VirtualizationNetworkInterface]>][-Labels< System.Collections.Generic.List`1[InfraMetaData]>][-Memory< long>][[-Moid]< string>][-Name< string>][-PowerState< VirtualizationVirtualMachine.PowerStateEnum>][-ProvisionType< VirtualizationVirtualMachine.ProvisionTypeEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VmConfig< VirtualizationBaseVmConfiguration>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVirtualizationVirtualMachine [-Action< VirtualizationVirtualMachine.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-AntiAffinitySelectors< System.Collections.Generic.List`1[InfraMetaData]>][-CloudInitConfig< VirtualizationCloudInitConfig>][-Cluster< VirtualizationBaseClusterRelationship>][-ClusterEsxi< string>][-Cpu< long>][-Disk< System.Collections.Generic.List`1[VirtualizationVirtualMachineDisk]>][-ForceDelete< bool>][-GpuConfigs< System.Collections.Generic.List`1[InfraBaseGpuConfiguration]>][-GuestOs< VirtualizationVirtualMachine.GuestOsEnum>][-Host< VirtualizationBaseHostRelationship>][-HostEsxi< string>][-Interfaces< System.Collections.Generic.List`1[VirtualizationNetworkInterface]>][-Labels< System.Collections.Generic.List`1[InfraMetaData]>][-Memory< long>][[-Moid]< string>][-Name< string>][-PowerState< VirtualizationVirtualMachine.PowerStateEnum>][-ProvisionType< VirtualizationVirtualMachine.ProvisionTypeEnum>][-RegisteredDevice< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VmConfig< VirtualizationBaseVmConfiguration>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -407,6 +407,21 @@ Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IfMatch
+For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 

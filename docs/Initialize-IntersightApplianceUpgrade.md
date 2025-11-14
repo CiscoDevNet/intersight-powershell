@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightApplianceUpgrade [-Account< Model.IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceUpgrade.ClassIdEnum>][-Moid< string>][-ObjectType< ApplianceUpgrade.ObjectTypeEnum>][-RollbackNeeded< bool>][-StartTime< DateTime>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceUpgrade [-Account< Model.IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceUpgrade.ClassIdEnum>][-Moid< string>][-ObjectType< ApplianceUpgrade.ObjectTypeEnum>][-RollbackNeeded< bool>][-StartTime< DateTime>][-Status< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -122,6 +122,21 @@ Start date of the software upgrade. UI can modify startTime to re-schedule an up
 
 ```yaml
 Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Status
+Status of the Intersight Appliance&apos;s software upgrade.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
