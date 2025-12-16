@@ -289,3 +289,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-IntersightIppoolReservation](./Remove-IntersightIppoolReservation.md)
 
+[Set-IntersightIppoolReservation](./Set-IntersightIppoolReservation.md)
+

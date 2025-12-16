@@ -243,3 +243,5 @@ PS C:\> New-IntersightFcpoolReservation
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightFcpoolReservation](./Remove-IntersightFcpoolReservation.md)
+
+[Set-IntersightFcpoolReservation](./Set-IntersightFcpoolReservation.md)

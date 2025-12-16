@@ -31,7 +31,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"User input for ACI L3Out name."</para>
+        /// <para type="description">"ACI L3Out Name User Input."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -42,7 +42,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Match rule name in Cisco APIC."</para>
+        /// <para type="description">"Name of the Match Rule in Cisco APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -53,7 +53,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"ACI tenant name for the selected APIC target."</para>
+        /// <para type="description">"ACI tenant Name for Selected APIC Target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -77,7 +77,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Campus fabric site Id where the border node is configured."</para>
+        /// <para type="description">"Campus fabric site id in which the border node has configured."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -121,7 +121,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Application EPG name for this connection."</para>
+        /// <para type="description">"Application EPG Name of this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -132,7 +132,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"EPG Subnet Ipv4Cidr configured on APIC."</para>
+        /// <para type="description">"EPG Subnet Ipv4Cidr which is configured on APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\/([0-9]|[1-2][0-9]|3[0-2])$")]
@@ -143,7 +143,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Device within the selected domain used for firewall configuration."</para>
+        /// <para type="description">"Device within the selected domain used to configure Firewall."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -154,7 +154,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Domain used for firewall configuration."</para>
+        /// <para type="description">"Domain used to configure Firewall."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -198,7 +198,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"L3Out node profile in Cisco APIC."</para>
+        /// <para type="description">"L3Out Node Profile in Cisco APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -244,7 +244,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Connection status between SDA and ACI.\n* `NotConnected` - Status of the connection:Not connected.\n* `Connected` - Status of the connection:Connected."</para>
+        /// <para type="description">"Connection status between SDA and ACI.\n* `NotConnected` - Connection Status NotConnected.\n* `Connected` - Connection Status Connected."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -256,7 +256,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Transit Id for the given border node."</para>
+        /// <para type="description">"Transit id for given border node."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -268,7 +268,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Virtual Network for this connection."</para>
+        /// <para type="description">"Virtual Network of this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -279,7 +279,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"VN and EPG information for this connection."</para>
+        /// <para type="description">"Contains both VN and EPG of this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -290,7 +290,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Tenant VRF in Cisco APIC."</para>
+        /// <para type="description">"APIC Tenant VRF from APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -372,7 +372,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Description of the connection between the two peers."</para>
+        /// <para type="description">"Description of this connection between two peers."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -394,7 +394,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Ip pool Id configured for this connection."</para>
+        /// <para type="description">"Id of the ip pool configured for this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -405,7 +405,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Layer 3 handoff Id configured between a border node and a border leaf."</para>
+        /// <para type="description">"Id of layer 3 handoff configured between a border node and a border leaf."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -450,7 +450,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Interface Id configured on Peer A."</para>
+        /// <para type="description">"Interface id configured on Peer A."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -461,7 +461,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"IP address of the device used as the local peer."</para>
+        /// <para type="description">"The IP Address of the device used as the local peer."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
         [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\/([0-9]|[1-2][0-9]|3[0-2])$")]
@@ -472,7 +472,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Type of device used as Peer A in this peer connection."</para>
+        /// <para type="description">"Type of device used as Peer A for this peer connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -483,7 +483,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Interface Id configured on Peer B."</para>
+        /// <para type="description">"Interface id configured on Peer B."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -494,7 +494,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"IP address of the device used as the remote peer."</para>
+        /// <para type="description">"The IP Address of the device used as the remote peer."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -505,7 +505,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Type of device used as Peer B in this peer connection."</para>
+        /// <para type="description">"Type of device used as Peer B for this peer connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -516,7 +516,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"First peer in the connection."</para>
+        /// <para type="description">"First peer of the connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -527,7 +527,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Second peer in the connection."</para>
+        /// <para type="description">"Second Peer of the connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -539,7 +539,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Router Id defined for this peer connection."</para>
+        /// <para type="description">"Router id defined for this peer connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -561,7 +561,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Connection status between the peers.\n* `NotConnected` - Status of the connection:Not connected.\n* `Connected` - Status of the connection:Connected."</para>
+        /// <para type="description">"Connection status between the peers.\n* `NotConnected` - Connection Status NotConnected.\n* `Connected` - Connection Status Connected."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -612,7 +612,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"User input for ACI L3Out name."</para>
+        /// <para type="description">"ACI L3Out Name User Input."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -623,7 +623,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Match rule name in Cisco APIC."</para>
+        /// <para type="description">"Name of the Match Rule in Cisco APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -634,7 +634,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"ACI tenant name for the selected APIC target."</para>
+        /// <para type="description">"ACI tenant Name for Selected APIC Target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -668,7 +668,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Campus fabric site Id where the border node is configured."</para>
+        /// <para type="description">"Campus fabric site id in which the border node has configured."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -692,7 +692,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Application EPG name for this connection."</para>
+        /// <para type="description">"Application EPG Name of this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -703,7 +703,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"EPG Subnet Ipv4Cidr configured on APIC."</para>
+        /// <para type="description">"EPG Subnet Ipv4Cidr which is configured on APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\/([0-9]|[1-2][0-9]|3[0-2])$")]
@@ -714,7 +714,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Device within the selected domain used for firewall configuration."</para>
+        /// <para type="description">"Device within the selected domain used to configure Firewall."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -725,7 +725,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Domain used for firewall configuration."</para>
+        /// <para type="description">"Domain used to configure Firewall."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -759,7 +759,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"L3Out node profile in Cisco APIC."</para>
+        /// <para type="description">"L3Out Node Profile in Cisco APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -785,7 +785,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Connection status between SDA and ACI.\n* `NotConnected` - Status of the connection:Not connected.\n* `Connected` - Status of the connection:Connected."</para>
+        /// <para type="description">"Connection status between SDA and ACI.\n* `NotConnected` - Connection Status NotConnected.\n* `Connected` - Connection Status Connected."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -807,7 +807,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Transit Id for the given border node."</para>
+        /// <para type="description">"Transit id for given border node."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -819,7 +819,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Virtual Network for this connection."</para>
+        /// <para type="description">"Virtual Network of this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -830,7 +830,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"VN and EPG information for this connection."</para>
+        /// <para type="description">"Contains both VN and EPG of this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -841,7 +841,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Tenant VRF in Cisco APIC."</para>
+        /// <para type="description">"APIC Tenant VRF from APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -912,7 +912,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Description of the connection between the two peers."</para>
+        /// <para type="description">"Description of this connection between two peers."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -924,7 +924,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Ip pool Id configured for this connection."</para>
+        /// <para type="description">"Id of the ip pool configured for this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -935,7 +935,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Layer 3 handoff Id configured between a border node and a border leaf."</para>
+        /// <para type="description">"Id of layer 3 handoff configured between a border node and a border leaf."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -960,7 +960,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Interface Id configured on Peer A."</para>
+        /// <para type="description">"Interface id configured on Peer A."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -971,7 +971,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"IP address of the device used as the local peer."</para>
+        /// <para type="description">"The IP Address of the device used as the local peer."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\/([0-9]|[1-2][0-9]|3[0-2])$")]
@@ -982,7 +982,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Type of device used as Peer A in this peer connection."</para>
+        /// <para type="description">"Type of device used as Peer A for this peer connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -993,7 +993,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Interface Id configured on Peer B."</para>
+        /// <para type="description">"Interface id configured on Peer B."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1004,7 +1004,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"IP address of the device used as the remote peer."</para>
+        /// <para type="description">"The IP Address of the device used as the remote peer."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1015,7 +1015,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Type of device used as Peer B in this peer connection."</para>
+        /// <para type="description">"Type of device used as Peer B for this peer connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1026,7 +1026,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"First peer in the connection."</para>
+        /// <para type="description">"First peer of the connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1037,7 +1037,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Second peer in the connection."</para>
+        /// <para type="description">"Second Peer of the connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1049,7 +1049,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Router Id defined for this peer connection."</para>
+        /// <para type="description">"Router id defined for this peer connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1061,7 +1061,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Connection status between the peers.\n* `NotConnected` - Status of the connection:Not connected.\n* `Connected` - Status of the connection:Connected."</para>
+        /// <para type="description">"Connection status between the peers.\n* `NotConnected` - Connection Status NotConnected.\n* `Connected` - Connection Status Connected."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1144,7 +1144,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"User input for ACI L3Out name."</para>
+        /// <para type="description">"ACI L3Out Name User Input."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1155,7 +1155,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Match rule name in Cisco APIC."</para>
+        /// <para type="description">"Name of the Match Rule in Cisco APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1166,7 +1166,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"ACI tenant name for the selected APIC target."</para>
+        /// <para type="description">"ACI tenant Name for Selected APIC Target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1200,7 +1200,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Campus fabric site Id where the border node is configured."</para>
+        /// <para type="description">"Campus fabric site id in which the border node has configured."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1224,7 +1224,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Application EPG name for this connection."</para>
+        /// <para type="description">"Application EPG Name of this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1235,7 +1235,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"EPG Subnet Ipv4Cidr configured on APIC."</para>
+        /// <para type="description">"EPG Subnet Ipv4Cidr which is configured on APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\/([0-9]|[1-2][0-9]|3[0-2])$")]
@@ -1246,7 +1246,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Device within the selected domain used for firewall configuration."</para>
+        /// <para type="description">"Device within the selected domain used to configure Firewall."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1257,7 +1257,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Domain used for firewall configuration."</para>
+        /// <para type="description">"Domain used to configure Firewall."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1291,7 +1291,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"L3Out node profile in Cisco APIC."</para>
+        /// <para type="description">"L3Out Node Profile in Cisco APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1317,7 +1317,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Connection status between SDA and ACI.\n* `NotConnected` - Status of the connection:Not connected.\n* `Connected` - Status of the connection:Connected."</para>
+        /// <para type="description">"Connection status between SDA and ACI.\n* `NotConnected` - Connection Status NotConnected.\n* `Connected` - Connection Status Connected."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1339,7 +1339,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Transit Id for the given border node."</para>
+        /// <para type="description">"Transit id for given border node."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1351,7 +1351,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Virtual Network for this connection."</para>
+        /// <para type="description">"Virtual Network of this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1362,7 +1362,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"VN and EPG information for this connection."</para>
+        /// <para type="description">"Contains both VN and EPG of this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1373,7 +1373,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Tenant VRF in Cisco APIC."</para>
+        /// <para type="description">"APIC Tenant VRF from APIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1433,7 +1433,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Description of the connection between the two peers."</para>
+        /// <para type="description">"Description of this connection between two peers."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1445,7 +1445,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Ip pool Id configured for this connection."</para>
+        /// <para type="description">"Id of the ip pool configured for this connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1456,7 +1456,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Layer 3 handoff Id configured between a border node and a border leaf."</para>
+        /// <para type="description">"Id of layer 3 handoff configured between a border node and a border leaf."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1481,7 +1481,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Interface Id configured on Peer A."</para>
+        /// <para type="description">"Interface id configured on Peer A."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1492,7 +1492,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"IP address of the device used as the local peer."</para>
+        /// <para type="description">"The IP Address of the device used as the local peer."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]).([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\/([0-9]|[1-2][0-9]|3[0-2])$")]
@@ -1503,7 +1503,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Type of device used as Peer A in this peer connection."</para>
+        /// <para type="description">"Type of device used as Peer A for this peer connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1514,7 +1514,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Interface Id configured on Peer B."</para>
+        /// <para type="description">"Interface id configured on Peer B."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1525,7 +1525,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"IP address of the device used as the remote peer."</para>
+        /// <para type="description">"The IP Address of the device used as the remote peer."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1536,7 +1536,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Type of device used as Peer B in this peer connection."</para>
+        /// <para type="description">"Type of device used as Peer B for this peer connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1547,7 +1547,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"First peer in the connection."</para>
+        /// <para type="description">"First peer of the connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1558,7 +1558,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Second peer in the connection."</para>
+        /// <para type="description">"Second Peer of the connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1570,7 +1570,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Router Id defined for this peer connection."</para>
+        /// <para type="description">"Router id defined for this peer connection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1582,7 +1582,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Connection status between the peers.\n* `NotConnected` - Status of the connection:Not connected.\n* `Connected` - Status of the connection:Connected."</para>
+        /// <para type="description">"Connection status between the peers.\n* `NotConnected` - Connection Status NotConnected.\n* `Connected` - Connection Status Connected."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

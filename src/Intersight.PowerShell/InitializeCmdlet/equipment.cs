@@ -472,6 +472,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Slot id of the chassis slot that needs to have its configuration reset."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long AdminResetConfigSlotId
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -542,6 +552,10 @@ namespace Intersight.PowerShell
             {
                 initObject.AdminPowerCycleSlotId = this.AdminPowerCycleSlotId;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminResetConfigSlotId"))
+            {
+                initObject.AdminResetConfigSlotId = this.AdminResetConfigSlotId;
+            }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("DeviceRegistration"))
             {
@@ -607,6 +621,63 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.EquipmentChassisOperationStatus initObject = new Intersight.Model.EquipmentChassisOperationStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize EquipmentChassisOperationsDetails.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightEquipmentChassisOperationsDetails")]
+    public class InitializeIntersightEquipmentChassisOperationsDetails : PSCmdlet
+    {
+        public InitializeIntersightEquipmentChassisOperationsDetails()
+        {
+            ClassId = EquipmentChassisOperationsDetails.ClassIdEnum.EquipmentChassisOperationsDetails;
+            ObjectType = EquipmentChassisOperationsDetails.ObjectTypeEnum.EquipmentChassisOperationsDetails;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentChassisOperationsDetails.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EquipmentChassisOperationsDetails.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.EquipmentChassisOperationsDetails initObject = new Intersight.Model.EquipmentChassisOperationsDetails();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -1116,16 +1187,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AssetDeviceRegistrationRelationship PhysicalDeviceRegistration
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1158,10 +1219,6 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PhysicalDeviceRegistration"))
-            {
-                initObject.PhysicalDeviceRegistration = this.PhysicalDeviceRegistration;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
@@ -1778,16 +1835,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AssetDeviceRegistrationRelationship PhysicalDeviceRegistration
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1824,10 +1871,6 @@ namespace Intersight.PowerShell
                 initObject.NetworkElement = this.NetworkElement;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PhysicalDeviceRegistration"))
-            {
-                initObject.PhysicalDeviceRegistration = this.PhysicalDeviceRegistration;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;

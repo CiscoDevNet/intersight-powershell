@@ -295,16 +295,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"The unique identifier of the PCIe endpoint as reported by the chassis expander management controller."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Uri
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -323,10 +313,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
-            {
-                initObject.Uri = this.Uri;
             }
             WriteObject(initObject);
         }
@@ -679,16 +665,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"The unique identifier of the PCIe switch port as reported by chassis expander module management controller."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Uri
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -707,10 +683,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
-            {
-                initObject.Uri = this.Uri;
             }
             WriteObject(initObject);
         }
@@ -962,16 +934,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-        // <summary>
-        /// <para type="description">"The identifier of the PCIe endpoint zone as reported by the chassis expander module management controller."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Uri
-        {
-            get;
-            set;
-        }
 
         protected override void ProcessRecord()
         {
@@ -990,10 +952,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Uri"))
-            {
-                initObject.Uri = this.Uri;
             }
             WriteObject(initObject);
         }

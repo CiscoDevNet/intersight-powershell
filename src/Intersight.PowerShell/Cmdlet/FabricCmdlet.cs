@@ -1109,7 +1109,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The equipment's lifecycle status.\n* `None` - Default state of an equipment. This should be an initial state when no state is defined for an equipment.\n* `Active` - Default Lifecycle State for a physical entity.\n* `Decommissioned` - Decommission Lifecycle state.\n* `DecommissionInProgress` - Decommission Inprogress Lifecycle state.\n* `RecommissionInProgress` - Recommission Inprogress Lifecycle state.\n* `OperationFailed` - Failed Operation Lifecycle state.\n* `ReackInProgress` - ReackInProgress Lifecycle state.\n* `RemoveInProgress` - RemoveInProgress Lifecycle state.\n* `Discovered` - Discovered Lifecycle state.\n* `DiscoveryInProgress` - DiscoveryInProgress Lifecycle state.\n* `DiscoveryFailed` - DiscoveryFailed Lifecycle state.\n* `FirmwareUpgradeInProgress` - Firmware upgrade is in progress on given physical entity.\n* `SecureEraseInProgress` - Secure Erase is in progress on given physical entity.\n* `ScrubInProgress` - Scrub is in progress on given physical entity.\n* `BladeMigrationInProgress` - Server slot migration is in progress on given physical entity.\n* `Inactive` - Inactive Lifecycle state.\n* `ReplaceInProgress` - ReplaceInProgress Lifecycle state.\n* `SlotMismatch` - The blade server is detected in a different chassis/slot than it was previously.\n* `ReplacementPendingUserAction` - A new blade server is detected, and discovery is pending cleanup of old blade originally discovered in the new blade's location.\n* `Removed` - The blade server has been removed from its discovered slot, and not detected anywhere else within the domain.\n* `Moved` - The blade server has been moved from its discovered location to a new location within the domain.\n* `Replaced` - The blade server has been removed from its discovered location and another blade has been inserted. in that location.\n* `MovedAndReplaced` - The blade server has been moved from its discovered location to a new location within the domain and another blade has been inserted into the previously discovered location.\n* `DomainRmaPendingUserAction` - Domain RMA detected due to the presence of an old pair of FIs with mismatched serial numbers within the same account. User to either initiate the 'Replace Domain workflow' or unclaim the old domain.\n* `IdentityUnknown` - The endpoint cannot be identified because of incomplete vendor, model, or serial information.\n* `RestoreConfigInProgress` - Restore configuration is in progress on given physical entity."</para>
+        /// <para type="description">"The equipment's lifecycle status.\n* `None` - Default state of an equipment. This should be an initial state when no state is defined for an equipment.\n* `Active` - Default Lifecycle State for a physical entity.\n* `Decommissioned` - Decommission Lifecycle state.\n* `DecommissionInProgress` - Decommission Inprogress Lifecycle state.\n* `RecommissionInProgress` - Recommission Inprogress Lifecycle state.\n* `OperationFailed` - Failed Operation Lifecycle state.\n* `ReackInProgress` - ReackInProgress Lifecycle state.\n* `RemoveInProgress` - RemoveInProgress Lifecycle state.\n* `Discovered` - Discovered Lifecycle state.\n* `DiscoveryInProgress` - DiscoveryInProgress Lifecycle state.\n* `DiscoveryFailed` - DiscoveryFailed Lifecycle state.\n* `FirmwareUpgradeInProgress` - Firmware upgrade is in progress on given physical entity.\n* `DiagnosticsInProgress` - Diagnostics is in progress on given physical entity.\n* `SecureEraseInProgress` - Secure Erase is in progress on given physical entity.\n* `ScrubInProgress` - Scrub is in progress on given physical entity.\n* `BladeMigrationInProgress` - Server slot migration is in progress on given physical entity.\n* `Inactive` - Inactive Lifecycle state.\n* `ReplaceInProgress` - ReplaceInProgress Lifecycle state.\n* `SlotMismatch` - The blade server is detected in a different chassis/slot than it was previously.\n* `ReplacementPendingUserAction` - A new blade server is detected, and discovery is pending cleanup of old blade originally discovered in the new blade's location.\n* `Removed` - The blade server has been removed from its discovered slot, and not detected anywhere else within the domain.\n* `Moved` - The blade server has been moved from its discovered location to a new location within the domain.\n* `Replaced` - The blade server has been removed from its discovered location and another blade has been inserted. in that location.\n* `MovedAndReplaced` - The blade server has been moved from its discovered location to a new location within the domain and another blade has been inserted into the previously discovered location.\n* `DomainRmaPendingUserAction` - Domain RMA detected due to the presence of an old pair of FIs with mismatched serial numbers within the same account. User to either initiate the 'Replace Domain workflow' or unclaim the old domain.\n* `IdentityUnknown` - The endpoint cannot be identified because of incomplete vendor, model, or serial information.\n* `RestoreConfigInProgress` - Restore configuration is in progress on given physical entity."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5435,7 +5435,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `UCSX-S9108-100G` - Cisco UCS Fabric Interconnect 9108 100G with 8 ports.\n* `UCS-FI-6664` - The standard 6th generation UCS Fabric Interconnect with 64 ports.\n* `UCS-FI-6652` - The standard 6th generation UCS Fabric Interconnect.\n* `UCSXE-ECMC-10G` - Cisco UCS XE ECMC 10G with 2 ports.\n* `UCSXE-ECMC-G1` - Cisco UCS XE ECMC G1 with 2 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
+        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `UCSX-S9108-100G` - Cisco UCS Fabric Interconnect 9108 100G with 8 ports.\n* `UCS-FI-6664` - The standard 6th generation UCS Fabric Interconnect with 64 ports.\n* `UCS-FI-6652` - The standard 6th generation UCS Fabric Interconnect with 52 ports.\n* `UCSXE-ECMC-10G` - Cisco UCS XE ECMC 10G with 2 ports.\n* `UCSXE-ECMC-G1` - Cisco UCS XE ECMC G1 with 2 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -5773,7 +5773,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108/UCS-FI-6652 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7905,6 +7905,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -7915,6 +7916,9 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
 
 
 
@@ -7972,6 +7976,19 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public FabricSwitchProfile.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The sync status of the current MO wrt the attached Template MO.\n* `None` - The Enum value represents that the object is not attached to any template.\n* `OK` - The Enum value represents that the object values are in sync with attached template.\n* `Scheduled` - The Enum value represents that the object sync from attached template is scheduled from template.\n* `InProgress` - The Enum value represents that the object sync with the attached template is in progress.\n* `OutOfSync` - The Enum value represents that the object values are not in sync with attached template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricSwitchProfile.TemplateSyncStatusEnum TemplateSyncStatus
         {
             get;
             set;
@@ -8097,6 +8114,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"When enabled, the configuration of the derived instances may override the template configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EnableOverride
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -8140,6 +8168,9 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
 
 
 
@@ -8201,12 +8232,35 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public FabricSwitchProfileTemplate.TypeEnum Type
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The template sync status with all derived objects.\n* `None` - The Enum value represents that the object is not attached to any template.\n* `OK` - The Enum value represents that the object values are in sync with attached template.\n* `Scheduled` - The Enum value represents that the object sync from attached template is scheduled from template.\n* `InProgress` - The Enum value represents that the object sync with the attached template is in progress.\n* `OutOfSync` - The Enum value represents that the object values are not in sync with attached template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricSwitchProfileTemplate.UpdateStatusEnum UpdateStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of objects derived from a Template MO instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long UsageCount
         {
             get;
             set;
@@ -13315,7 +13369,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `UCSX-S9108-100G` - Cisco UCS Fabric Interconnect 9108 100G with 8 ports.\n* `UCS-FI-6664` - The standard 6th generation UCS Fabric Interconnect with 64 ports.\n* `UCS-FI-6652` - The standard 6th generation UCS Fabric Interconnect.\n* `UCSXE-ECMC-10G` - Cisco UCS XE ECMC 10G with 2 ports.\n* `UCSXE-ECMC-G1` - Cisco UCS XE ECMC G1 with 2 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
+        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `UCSX-S9108-100G` - Cisco UCS Fabric Interconnect 9108 100G with 8 ports.\n* `UCS-FI-6664` - The standard 6th generation UCS Fabric Interconnect with 64 ports.\n* `UCS-FI-6652` - The standard 6th generation UCS Fabric Interconnect with 52 ports.\n* `UCSXE-ECMC-10G` - Cisco UCS XE ECMC 10G with 2 ports.\n* `UCSXE-ECMC-G1` - Cisco UCS XE ECMC G1 with 2 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -13571,7 +13625,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108/UCS-FI-6652 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -15205,6 +15259,8 @@ namespace Intersight.PowerShell
 
 
 
+
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -15215,6 +15271,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
 
@@ -15284,6 +15342,19 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+
+
 
         // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
@@ -15393,6 +15464,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"When enabled, the configuration of the derived instances may override the template configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableOverride
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -15419,6 +15501,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -15429,6 +15512,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -15499,6 +15584,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -15508,6 +15604,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -20108,7 +20206,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `UCSX-S9108-100G` - Cisco UCS Fabric Interconnect 9108 100G with 8 ports.\n* `UCS-FI-6664` - The standard 6th generation UCS Fabric Interconnect with 64 ports.\n* `UCS-FI-6652` - The standard 6th generation UCS Fabric Interconnect.\n* `UCSXE-ECMC-10G` - Cisco UCS XE ECMC 10G with 2 ports.\n* `UCSXE-ECMC-G1` - Cisco UCS XE ECMC G1 with 2 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
+        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `UCSX-S9108-100G` - Cisco UCS Fabric Interconnect 9108 100G with 8 ports.\n* `UCS-FI-6664` - The standard 6th generation UCS Fabric Interconnect with 64 ports.\n* `UCS-FI-6652` - The standard 6th generation UCS Fabric Interconnect with 52 ports.\n* `UCSXE-ECMC-10G` - Cisco UCS XE ECMC 10G with 2 ports.\n* `UCSXE-ECMC-G1` - Cisco UCS XE ECMC G1 with 2 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -20342,7 +20440,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108/UCS-FI-6652 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -21438,6 +21536,8 @@ namespace Intersight.PowerShell
 
 
 
+
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -21448,6 +21548,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
 
@@ -21517,6 +21619,19 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+
+
 
         // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
@@ -21615,6 +21730,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"When enabled, the configuration of the derived instances may override the template configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableOverride
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -21641,6 +21767,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -21651,6 +21778,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -21721,6 +21850,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -21730,6 +21870,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>

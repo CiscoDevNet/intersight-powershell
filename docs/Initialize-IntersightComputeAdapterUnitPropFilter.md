@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Model
-Specific Adapter model to select.\n* `Any` - To select any Adapter model available in XFM.\n* `UCSC-P-N7S400GF` - Cisco UCS X-Series Adapter with 400G capability and dual port configuration.\n* `UCSC-P-N7D200GF` - Cisco UCS X-Series Adapter with 200G capability and dual port configuration.\n* `UCSC-P-N3140H` - Cisco UCS X-Series Adapter with 200G capability and single port configuration.\n* `UCSC-P-N7S400GFO` - Cisco UCS X-Series SmartNIC with 400G QSFP112 PCIe Gen5 NIC.\n* `UCSC-P-N7D200GFO` - Cisco UCS X-Series SmartNIC with 200G QSFP112 PCIe Gen5 NIC.
+Specific Adapter model to select.\n* `Any` - To select any Adapter model available in XFM.\n* `UCSC-P-N7S400GF` - Cisco UCS X-Series Adapter with 400G capability and dual port configuration.\n* `UCSC-P-N7D200GF` - Cisco UCS X-Series Adapter with 200G capability and dual port configuration.\n* `UCSC-P-N7S400GFO` - Cisco UCS X-Series SmartNIC with 400G QSFP112 PCIe Gen5 NIC.\n* `UCSC-P-N7D200GFO` - Cisco UCS X-Series SmartNIC with 200G QSFP112 PCIe Gen5 NIC.
 
 ```yaml
 Type: ComputeAdapterUnitPropFilter.ModelEnum

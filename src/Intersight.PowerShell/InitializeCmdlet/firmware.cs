@@ -7865,6 +7865,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"Specifies a timeout period, in minutes, before the firmware upgrade begins. The valid range is -1 to 1000. A value of -1 requires manual user acknowledgment to proceed, 0 starts the upgrade immediately, and values from 1 to 1000 wait the specified number of minutes before starting. The upgrade will automatically begin once the timeout expires, but it can also be initiated manually at any time before the timeout ends. If no value is specified, manual user acknowledgment is required, equivalent to -1."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(-1, 1000)]
+        public long WaitTimeOut
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -7935,6 +7945,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("UpgradeType"))
             {
                 initObject.UpgradeType = this.UpgradeType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WaitTimeOut"))
+            {
+                initObject.WaitTimeOut = this.WaitTimeOut;
             }
             WriteObject(initObject);
         }

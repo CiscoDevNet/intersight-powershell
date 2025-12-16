@@ -68,3 +68,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightIamSharingRule](./New-IntersightIamSharingRule.md)
 
+[Set-IntersightIamSharingRule](./Set-IntersightIamSharingRule.md)
+

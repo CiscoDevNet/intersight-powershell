@@ -9509,6 +9509,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to iamPrivilegeSet resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.IamPrivilegeSetRelationship> AssociatedPrivilegeSets
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"An array of relationships to iamRole resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9708,6 +9718,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AllowedInstanceStates"))
             {
                 initObject.AllowedInstanceStates = this.AllowedInstanceStates;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AssociatedPrivilegeSets"))
+            {
+                initObject.AssociatedPrivilegeSets = this.AssociatedPrivilegeSets;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("AssociatedRoles"))
             {
@@ -13882,6 +13896,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to iamPrivilegeSet resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.IamPrivilegeSetRelationship> AssociatedPrivilegeSets
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"An array of relationships to iamRole resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -13979,6 +14003,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AssociatedPrivilegeSets"))
+            {
+                initObject.AssociatedPrivilegeSets = this.AssociatedPrivilegeSets;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("AssociatedRoles"))
             {
@@ -16707,6 +16735,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to iamPrivilegeSet resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.IamPrivilegeSetRelationship> AssociatedPrivilegeSets
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"An array of relationships to iamRole resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -16805,6 +16843,10 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AssociatedPrivilegeSets"))
+            {
+                initObject.AssociatedPrivilegeSets = this.AssociatedPrivilegeSets;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AssociatedRoles"))
             {
                 initObject.AssociatedRoles = this.AssociatedRoles;
@@ -16851,6 +16893,7 @@ namespace Intersight.PowerShell
             ObjectType = WorkflowWorkflowProperties.ObjectTypeEnum.WorkflowWorkflowProperties;
             PublishStatus = WorkflowWorkflowProperties.PublishStatusEnum.Draft;
             SupportStatus = WorkflowWorkflowProperties.SupportStatusEnum.Supported;
+            TargetCtxPolicy = WorkflowWorkflowProperties.TargetCtxPolicyEnum.InheritFromParent;
 
         }
         // <summary>
@@ -16953,6 +16996,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The target context policy that controls how target context is set for this workflow when it is run as a subworkflow.\n* `InheritFromParent` - The target context is inherited from the parent workflow and additional targets from this current workflow are also added. Use this setting when the parent workflow is operating on a target set which is still applicable for this current subworkflow.\n* `OnlyThisWorkflowTargets` - The target context is set only from the targets defined in the current workflow and nothing is inherited from parent workflow. Use this setting if the parent workflow is operating on a superset of targets and this current workflow is operating on a subset of those targets or a completely different set of targets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkflowWorkflowProperties.TargetCtxPolicyEnum TargetCtxPolicy
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -16991,6 +17044,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SupportStatus"))
             {
                 initObject.SupportStatus = this.SupportStatus;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetCtxPolicy"))
+            {
+                initObject.TargetCtxPolicy = this.TargetCtxPolicy;
             }
             WriteObject(initObject);
         }

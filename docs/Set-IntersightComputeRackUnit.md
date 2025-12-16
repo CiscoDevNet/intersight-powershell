@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightComputeRackUnit [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< ComputeRackUnit.AdminActionEnum>][-AlarmSummary< ComputeAlarmSummary>][-BiosBootmode< BiosBootModeRelationship>][-BiosPostComplete< bool>][-BiosTokenSettings< BiosTokenSettingsRelationship>][-BiosVfSelectMemoryRasConfiguration< BiosVfSelectMemoryRasConfigurationRelationship>][-BmcInventoryReady< bool>][-BootCddDevices< System.Collections.Generic.List`1[BootCddDeviceRelationship]>][-BootDeviceBootSecurity< BootDeviceBootSecurityRelationship>][-BootHddDevices< System.Collections.Generic.List`1[BootHddDeviceRelationship]>][-BootIscsiDevices< System.Collections.Generic.List`1[BootIscsiDeviceRelationship]>][-BootNvmeDevices< System.Collections.Generic.List`1[BootNvmeDeviceRelationship]>][-BootPchStorageDevices< System.Collections.Generic.List`1[BootPchStorageDeviceRelationship]>][-BootPxeDevices< System.Collections.Generic.List`1[BootPxeDeviceRelationship]>][-BootSanDevices< System.Collections.Generic.List`1[BootSanDeviceRelationship]>][-BootSdDevices< System.Collections.Generic.List`1[BootSdDeviceRelationship]>][-BootUefiShellDevices< System.Collections.Generic.List`1[BootUefiShellDeviceRelationship]>][-BootUsbDevices< System.Collections.Generic.List`1[BootUsbDeviceRelationship]>][-BootVmediaDevices< System.Collections.Generic.List`1[BootVmediaDeviceRelationship]>][-FaultSummary< long>][-FrontPanelLockState< ComputeRackUnit.FrontPanelLockStateEnum>][-GraphicsCards< System.Collections.Generic.List`1[GraphicsCardRelationship]>][-HardwareUuid< string>][-KvmIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][-ManagementMode< ComputeRackUnit.ManagementModeEnum>][-MemoryArrays< System.Collections.Generic.List`1[MemoryArrayRelationship]>][-MgmtIdentity< EquipmentPhysicalIdentityRelationship>][-MgmtIpAddress< string>][[-Moid]< string>][-Name< string>][-OperReason< System.Collections.Generic.List`1[ComputeRackUnit.OperReasonEnum]>][-PlatformType< string>][-Processors< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-SasExpanders< System.Collections.Generic.List`1[StorageSasExpanderRelationship]>][-StorageControllers< System.Collections.Generic.List`1[StorageControllerRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TopologyScanStatus< string>][-TunneledKvm< bool>][-Vmedia< ComputeVmediaRelationship>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightComputeRackUnit [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< ComputeRackUnit.AdminActionEnum>][-AlarmSummary< ComputeAlarmSummary>][-AssignedLocation< AssetGeoLocationRelationship>][-BiosBootmode< BiosBootModeRelationship>][-BiosPostComplete< bool>][-BiosTokenSettings< BiosTokenSettingsRelationship>][-BiosVfSelectMemoryRasConfiguration< BiosVfSelectMemoryRasConfigurationRelationship>][-BmcInventoryReady< bool>][-BootCddDevices< System.Collections.Generic.List`1[BootCddDeviceRelationship]>][-BootDeviceBootSecurity< BootDeviceBootSecurityRelationship>][-BootHddDevices< System.Collections.Generic.List`1[BootHddDeviceRelationship]>][-BootIscsiDevices< System.Collections.Generic.List`1[BootIscsiDeviceRelationship]>][-BootNvmeDevices< System.Collections.Generic.List`1[BootNvmeDeviceRelationship]>][-BootPchStorageDevices< System.Collections.Generic.List`1[BootPchStorageDeviceRelationship]>][-BootPxeDevices< System.Collections.Generic.List`1[BootPxeDeviceRelationship]>][-BootSanDevices< System.Collections.Generic.List`1[BootSanDeviceRelationship]>][-BootSdDevices< System.Collections.Generic.List`1[BootSdDeviceRelationship]>][-BootUefiShellDevices< System.Collections.Generic.List`1[BootUefiShellDeviceRelationship]>][-BootUsbDevices< System.Collections.Generic.List`1[BootUsbDeviceRelationship]>][-BootVmediaDevices< System.Collections.Generic.List`1[BootVmediaDeviceRelationship]>][-FaultSummary< long>][-FrontPanelLockState< ComputeRackUnit.FrontPanelLockStateEnum>][-GraphicsCards< System.Collections.Generic.List`1[GraphicsCardRelationship]>][-HardwareUuid< string>][-KvmIpAddresses< System.Collections.Generic.List`1[ComputeIpAddress]>][-ManagementMode< ComputeRackUnit.ManagementModeEnum>][-MemoryArrays< System.Collections.Generic.List`1[MemoryArrayRelationship]>][-MgmtIdentity< EquipmentPhysicalIdentityRelationship>][-MgmtIpAddress< string>][[-Moid]< string>][-Name< string>][-OperReason< System.Collections.Generic.List`1[ComputeRackUnit.OperReasonEnum]>][-PlatformType< string>][-Processors< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-SasExpanders< System.Collections.Generic.List`1[StorageSasExpanderRelationship]>][-StorageControllers< System.Collections.Generic.List`1[StorageControllerRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TopologyScanStatus< string>][-TunneledKvm< bool>][-Vmedia< ComputeVmediaRelationship>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -60,6 +60,24 @@ Note :- Use Initialize-IntersightComputeAlarmSummary to create the object of com
 
 ```yaml
 Type: ComputeAlarmSummary
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssignedLocation
+A reference to a assetGeoLocation resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: AssetGeoLocationRelationship
 Parameter Sets: (All)
 Aliases:
 

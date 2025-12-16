@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightWorkloadBlueprint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BlueprintDependencies< System.Collections.Generic.List`1[BlueprintBlueprintDefinitionDependency]>][-Catalog< WorkflowCatalogRelationship>][-DefaultVersion< bool>][-Description< string>][-ExternalMeta< bool>][-GeneratedObjectDefinition< System.Collections.Generic.List`1[BlueprintGeneratedObjectMetadata]>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-InputOperationMetadata< System.Collections.Generic.List`1[BlueprintInputOperationType]>][-Label< string>][[-Moid]< string>][-Name< string>][-PlatformType< WorkloadBlueprint.PlatformTypeEnum>][-ResourceDefinition< BlueprintResourceConstraints>][-ServiceItems< System.Collections.Generic.List`1[BlueprintServiceItemDefinition]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< long>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightWorkloadBlueprint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedRoles< System.Collections.Generic.List`1[IamRoleRelationship]>][-BlueprintDependencies< System.Collections.Generic.List`1[BlueprintBlueprintDefinitionDependency]>][-Catalog< WorkflowCatalogRelationship>][-DefaultVersion< bool>][-Description< string>][-ExternalMeta< bool>][-GeneratedObjectDefinition< System.Collections.Generic.List`1[BlueprintGeneratedObjectMetadata]>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-InputOperationMetadata< System.Collections.Generic.List`1[BlueprintInputOperationType]>][-Label< string>][[-Moid]< string>][-Name< string>][-PlatformType< WorkloadBlueprint.PlatformTypeEnum>][-ResourceDefinition< BlueprintResourceConstraints>][-ServiceItems< System.Collections.Generic.List`1[BlueprintServiceItemDefinition]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< long>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,24 @@ Update a &apos;WorkloadBlueprint&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssociatedRoles
+An array of relationships to iamRole resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[IamRoleRelationship]
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPciZone [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PciZone.ClassIdEnum>][-Moid< string>][-ObjectType< PciZone.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uri< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPciZone [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PciZone.ClassIdEnum>][-Moid< string>][-ObjectType< PciZone.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -91,21 +91,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Uri
-The identifier of the PCIe endpoint zone as reported by the chassis expander module management controller.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkflowServiceItemActionDefinition [-ActionProperties< WorkflowServiceItemActionProperties>][-ActionType< WorkflowServiceItemActionDefinition.ActionTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedInstanceStates< System.Collections.Generic.List`1[WorkflowServiceItemActionDefinition.AllowedInstanceStatesEnum]>][-AssociatedRoles< System.Collections.Generic.List`1[IamRoleRelationship]>][-AttributeParameters< object>][-CoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Label< string>][-Moid< string>][[-Name]< string>][-Periodicity< long>][-PostCoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-PreCoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-RestrictOnPrivateAppliance< bool>][-ServiceItemDefinition< WorkflowServiceItemDefinitionRelationship>][-StopWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ValidationWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightWorkflowServiceItemActionDefinition [-ActionProperties< WorkflowServiceItemActionProperties>][-ActionType< WorkflowServiceItemActionDefinition.ActionTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedInstanceStates< System.Collections.Generic.List`1[WorkflowServiceItemActionDefinition.AllowedInstanceStatesEnum]>][-AssociatedPrivilegeSets< System.Collections.Generic.List`1[IamPrivilegeSetRelationship]>][-AssociatedRoles< System.Collections.Generic.List`1[IamRoleRelationship]>][-AttributeParameters< object>][-CoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Label< string>][-Moid< string>][[-Name]< string>][-Periodicity< long>][-PostCoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-PreCoreWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-RestrictOnPrivateAppliance< bool>][-ServiceItemDefinition< WorkflowServiceItemDefinitionRelationship>][-StopWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-ValidationWorkflows< System.Collections.Generic.List`1[WorkflowServiceItemActionWorkflowDefinition]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -75,6 +75,24 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.List`1[WorkflowServiceItemActionDefinition.AllowedInstanceStatesEnum]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssociatedPrivilegeSets
+An array of relationships to iamPrivilegeSet resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[IamPrivilegeSetRelationship]
 Parameter Sets: (All)
 Aliases:
 

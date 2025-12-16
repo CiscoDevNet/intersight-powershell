@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightMetricsConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< MetricsConfiguration.ClassIdEnum>][-CollectNewDevices< MetricsConfiguration.CollectNewDevicesEnum>][-Moid< string>][-ObjectType< MetricsConfiguration.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightMetricsConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< MetricsConfiguration.ClassIdEnum>][-CollectNewDevices< MetricsConfiguration.CollectNewDevicesEnum>][-Moid< string>][-ObjectType< MetricsConfiguration.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UserMaxIngestionBytes< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -106,6 +106,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserMaxIngestionBytes
+User override of the max ingestion rate for metrics. Provided as an advanced option to override the default limits. Option should only be used in coordination with TAC engineers.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

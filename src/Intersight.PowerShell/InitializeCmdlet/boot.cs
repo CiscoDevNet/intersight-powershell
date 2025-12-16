@@ -844,7 +844,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The name of the underlying virtual ethernet interface used by the HTTP boot device."</para>
+        /// <para type="description">"For integrated NICs, specify the underlying network interface card name (such as 1 or 2). For virtual NICs, specify the vNIC name (customized name like eth0)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9-._:]*$")]
@@ -2285,7 +2285,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The name of the underlying virtual ethernet interface used by the PXE boot device."</para>
+        /// <para type="description">"For integrated NICs, specify the underlying network interface card name (such as 1 or 2). For virtual NICs, specify the vNIC name (customized name like eth0)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9-._:]*$")]

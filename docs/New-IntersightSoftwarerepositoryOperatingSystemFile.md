@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightSoftwarerepositoryOperatingSystemFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< SoftwarerepositoryCatalogRelationship>][-Description< string>][-ImageType< string>][-ImportAction< SoftwarerepositoryOperatingSystemFile.ImportActionEnum>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][-Moid< string>][[-Name]< string>][-RecommendedBuild< string>][-Release< SoftwarerepositoryReleaseRelationship>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< SoftwarerepositoryFileServer>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightSoftwarerepositoryOperatingSystemFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< SoftwarerepositoryCatalogRelationship>][-Description< string>][-ImageType< string>][-ImportAction< SoftwarerepositoryOperatingSystemFile.ImportActionEnum>][-ImportProgress< long>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][-Moid< string>][[-Name]< string>][-RecommendedBuild< string>][-Release< SoftwarerepositoryReleaseRelationship>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-SampleHashes< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< SoftwarerepositoryFileServer>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Vendor< string>][-Version< string>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -91,6 +91,21 @@ The action to be performed on the imported file. If &apos;PreCache&apos; is set,
 
 ```yaml
 Type: SoftwarerepositoryOperatingSystemFile.ImportActionEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ImportProgress
+The progress percentage for the import operation.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -241,6 +256,21 @@ Accept wildcard characters: False
 
 ### -ReleaseNotesUrl
 The url for the release notes of this image.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SampleHashes
+File sample hashes at deterministic positions for efficient duplicate detection of large files.
 
 ```yaml
 Type: string

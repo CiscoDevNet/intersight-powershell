@@ -80,6 +80,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"User override of the max ingestion rate for metrics. Provided as an advanced option to override the default limits. Option should only be used in coordination with TAC engineers."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long UserMaxIngestionBytes
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -102,6 +112,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserMaxIngestionBytes"))
+            {
+                initObject.UserMaxIngestionBytes = this.UserMaxIngestionBytes;
             }
             WriteObject(initObject);
         }

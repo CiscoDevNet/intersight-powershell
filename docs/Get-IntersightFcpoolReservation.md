@@ -289,3 +289,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-IntersightFcpoolReservation](./Remove-IntersightFcpoolReservation.md)
 
+[Set-IntersightFcpoolReservation](./Set-IntersightFcpoolReservation.md)
+

@@ -230,3 +230,5 @@ PS C:\> New-IntersightMacpoolReservation
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightMacpoolReservation](./Remove-IntersightMacpoolReservation.md)
+
+[Set-IntersightMacpoolReservation](./Set-IntersightMacpoolReservation.md)

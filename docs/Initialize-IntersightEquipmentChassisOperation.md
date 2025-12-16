@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentChassisOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedAction< EquipmentChassisOperation.AdminLocatorLedActionEnum>][-AdminPowerCycleExpanderModuleSlotId< long>][-AdminPowerCycleSlotId< long>][-ClassId< EquipmentChassisOperation.ClassIdEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Moid< string>][-ObjectType< EquipmentChassisOperation.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentChassisOperation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminLocatorLedAction< EquipmentChassisOperation.AdminLocatorLedActionEnum>][-AdminPowerCycleExpanderModuleSlotId< long>][-AdminPowerCycleSlotId< long>][-AdminResetConfigSlotId< long>][-ClassId< EquipmentChassisOperation.ClassIdEnum>][-DeviceRegistration< Model.AssetDeviceRegistrationRelationship>][-Moid< string>][-ObjectType< EquipmentChassisOperation.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -71,6 +71,21 @@ Accept wildcard characters: False
 
 ### -AdminPowerCycleSlotId
 Slot id of the chassis slot that needs to be power cycled.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AdminResetConfigSlotId
+Slot id of the chassis slot that needs to have its configuration reset.
 
 ```yaml
 Type: long

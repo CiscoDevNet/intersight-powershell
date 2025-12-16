@@ -212,6 +212,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a assetGeoLocation resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AssetGeoLocationRelationship AssignedLocation
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Chassis IP of the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -463,6 +473,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AlarmSummary"))
             {
                 initObject.AlarmSummary = this.AlarmSummary;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AssignedLocation"))
+            {
+                initObject.AssignedLocation = this.AssignedLocation;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Chassis"))
             {

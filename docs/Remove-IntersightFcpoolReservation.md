@@ -68,3 +68,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightFcpoolReservation](./New-IntersightFcpoolReservation.md)
 
+[Set-IntersightFcpoolReservation](./Set-IntersightFcpoolReservation.md)
+

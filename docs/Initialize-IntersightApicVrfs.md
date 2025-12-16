@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Dn
-Distinguished name generated from URL parameters.
+Distinguished Name generated from URL Parameters.
 
 ```yaml
 Type: string
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-VRF name generated from URL parameters.
+VRF Namegenerated from URL Parameters.
 
 ```yaml
 Type: string

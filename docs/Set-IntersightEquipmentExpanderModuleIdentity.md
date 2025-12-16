@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentExpanderModuleIdentity [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< EquipmentExpanderModuleIdentity.AdminActionEnum>][-Identifier< long>][[-Moid]< string>][-PhysicalDeviceRegistration< AssetDeviceRegistrationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentExpanderModuleIdentity [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminAction< EquipmentExpanderModuleIdentity.AdminActionEnum>][-Identifier< long>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,24 +77,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: true
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -PhysicalDeviceRegistration
-A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: AssetDeviceRegistrationRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
 Position: Named
 Default value: None
 Accept pipeline input: True True (ByPropertyName)

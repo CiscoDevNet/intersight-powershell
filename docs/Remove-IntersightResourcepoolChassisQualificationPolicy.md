@@ -66,7 +66,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Get-IntersightResourcepoolChassisQualificationPolicy](./Get-IntersightResourcepoolChassisQualificationPolicy.md)
 
-[New-IntersightResourcepoolChassisQualificationPolicy](./New-IntersightResourcepoolChassisQualificationPolicy.md)
-
-[Set-IntersightResourcepoolChassisQualificationPolicy](./Set-IntersightResourcepoolChassisQualificationPolicy.md)
-

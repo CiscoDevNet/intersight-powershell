@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareSwitchUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareSwitchUpgrade.ClassIdEnum>][-DirectDownload< Model.FirmwareDirectDownload>][-Distributable< Model.FirmwareDistributableRelationship>][-EnableFabricEvacuation< bool>][-EnablePdbFpgaUpgrade< bool>][-EnablePsuUpgrade< bool>][-FileServer< Model.SoftwarerepositoryFileServer>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[Model.NetworkElementRelationship]>][-NetworkShare< Model.FirmwareNetworkShare>][-ObjectType< FirmwareSwitchUpgrade.ObjectTypeEnum>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-SkipEstimateImpact< bool>][-SkipWaitForIoPathConnectivity< bool>][-Status< FirmwareSwitchUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UpgradeType< FirmwareSwitchUpgrade.UpgradeTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareSwitchUpgrade [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FirmwareSwitchUpgrade.ClassIdEnum>][-DirectDownload< Model.FirmwareDirectDownload>][-Distributable< Model.FirmwareDistributableRelationship>][-EnableFabricEvacuation< bool>][-EnablePdbFpgaUpgrade< bool>][-EnablePsuUpgrade< bool>][-FileServer< Model.SoftwarerepositoryFileServer>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[Model.NetworkElementRelationship]>][-NetworkShare< Model.FirmwareNetworkShare>][-ObjectType< FirmwareSwitchUpgrade.ObjectTypeEnum>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-SkipEstimateImpact< bool>][-SkipWaitForIoPathConnectivity< bool>][-Status< FirmwareSwitchUpgrade.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UpgradeType< FirmwareSwitchUpgrade.UpgradeTypeEnum>][-WaitTimeOut< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -301,6 +301,21 @@ Desired upgrade mode to choose either direct download based upgrade or network s
 
 ```yaml
 Type: FirmwareSwitchUpgrade.UpgradeTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -WaitTimeOut
+Specifies a timeout period, in minutes, before the firmware upgrade begins. The valid range is -1 to 1000. A value of -1 requires manual user acknowledgment to proceed, 0 starts the upgrade immediately, and values from 1 to 1000 wait the specified number of minutes before starting. The upgrade will automatically begin once the timeout expires, but it can also be initiated manually at any time before the timeout ends. If no value is specified, manual user acknowledgment is required, equivalent to -1.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

@@ -1531,6 +1531,7 @@ namespace Intersight.PowerShell
             ClassId = ResourcepoolServerPoolParameters.ClassIdEnum.ResourcepoolServerPoolParameters;
             ManagementMode = ResourcepoolServerPoolParameters.ManagementModeEnum.IntersightStandalone;
             ObjectType = ResourcepoolServerPoolParameters.ObjectTypeEnum.ResourcepoolServerPoolParameters;
+            TargetPlatform = ResourcepoolServerPoolParameters.TargetPlatformEnum.None;
 
         }
         // <summary>
@@ -1573,6 +1574,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"The platform for which the servers in resource pool are applicable. It can either be a server that is operating in standalone mode or or one that is attached to a Fabric Interconnect or Unified Edge Chassis managed by Intersight.\n* `None` - Server which are not belongs to any platform.\n* `Standalone` - Servers which are operating in standalone mode i.e. not connected to a Fabric Interconnected.\n* `FIAttached` - Servers which are connected to a Fabric Interconnect that is managed by Intersight.\n* `UnifiedEdgeServer` - Unified Edge sleds that is managed by Intersight."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolServerPoolParameters.TargetPlatformEnum TargetPlatform
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -1588,6 +1599,10 @@ namespace Intersight.PowerShell
                 initObject.ManagementMode = this.ManagementMode;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
+            {
+                initObject.TargetPlatform = this.TargetPlatform;
+            }
             WriteObject(initObject);
         }
 

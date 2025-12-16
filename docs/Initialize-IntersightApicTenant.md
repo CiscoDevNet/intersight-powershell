@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Tenant description in Cisco Application Policy Infrastructure Controller (APIC).
+Description for Tenant in Cisco Application Policy Infrastructure Controller.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Dn
-Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI.
+Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI.
 
 ```yaml
 Type: string
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Tenant name in Cisco Application Policy Infrastructure Controller (APIC).
+Tenant Name in Cisco Application Policy Infrastructure Controller.
 
 ```yaml
 Type: string

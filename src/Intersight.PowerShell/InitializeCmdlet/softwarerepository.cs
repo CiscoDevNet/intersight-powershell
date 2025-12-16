@@ -2087,6 +2087,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The progress percentage for the import operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long ImportProgress
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The MD5 ETag for a file that is stored in Intersight repository or in the appliance cache. Warning - MD5 is currently broken and this will be migrated to SHA shortly."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2197,6 +2207,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"File sample hashes at deterministic positions for efficient duplicate detection of large files."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SampleHashes
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The sha512sum of the file. This information is available for all Cisco distributed images and files imported to the local repository."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2292,6 +2312,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ImportAction = this.ImportAction;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportProgress"))
+            {
+                initObject.ImportProgress = this.ImportProgress;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
                 initObject.Md5eTag = this.Md5eTag;
@@ -2332,6 +2356,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ReleaseNotesUrl"))
             {
                 initObject.ReleaseNotesUrl = this.ReleaseNotesUrl;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SampleHashes"))
+            {
+                initObject.SampleHashes = this.SampleHashes;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Sha512sum"))
             {

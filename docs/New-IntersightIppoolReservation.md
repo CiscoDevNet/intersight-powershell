@@ -258,3 +258,5 @@ PS C:\> New-IntersightIppoolReservation
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightIppoolReservation](./Remove-IntersightIppoolReservation.md)
+
+[Set-IntersightIppoolReservation](./Set-IntersightIppoolReservation.md)

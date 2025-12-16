@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamResourceRoles [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamResourceRoles.ClassIdEnum>][-Moid< string>][-ObjectType< IamResourceRoles.ObjectTypeEnum>][-Permission< Model.IamPermissionRelationship>][-Resource< Model.MoBaseMoRelationship>][-Roles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamResourceRoles [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamResourceRoles.ClassIdEnum>][-Moid< string>][-ObjectType< IamResourceRoles.ObjectTypeEnum>][-Permission< Model.IamPermissionRelationship>][-PrivilegeSets< System.Collections.Generic.List`1[Model.IamPrivilegeSetRelationship]>][-Resource< Model.MoBaseMoRelationship>][-Roles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -92,6 +92,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.IamPermissionRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PrivilegeSets
+An array of relationships to iamPrivilegeSet resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.IamPrivilegeSetRelationship]
 Parameter Sets: (All)
 Aliases:
 

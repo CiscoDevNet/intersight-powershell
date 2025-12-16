@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Dn
-Distinguished Name (DN) of an object in Cisco Application Policy Infrastructure Controller (APIC) GUI.
+Distinguished Name (DN) of an object within the Cisco Application Policy Infrastructure Controller (APIC) GUI.
 
 ```yaml
 Type: string
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -FabricLeafNodeDn
-Fabric leaf node Distinguished Name (DN).
+Fabric Leaf Node Distinguished Name.
 
 ```yaml
 Type: string
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -FabricLeafNodeId
-Fabric leaf node identification number.
+Fabric Leaf Node Identification Number.
 
 ```yaml
 Type: string
@@ -133,7 +133,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Object name in Cisco Application Policy Infrastructure Controller (APIC).
+Name of an object within the Cisco Application Policy Infrastructure Controller.
 
 ```yaml
 Type: string

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightMetricsConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CollectNewDevices< MetricsConfiguration.CollectNewDevicesEnum>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightMetricsConfiguration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CollectNewDevices< MetricsConfiguration.CollectNewDevicesEnum>][[-Moid]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserMaxIngestionBytes< long>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -75,6 +75,21 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserMaxIngestionBytes
+User override of the max ingestion rate for metrics. Provided as an advanced option to override the default limits. Option should only be used in coordination with TAC engineers.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

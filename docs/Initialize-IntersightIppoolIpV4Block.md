@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIppoolIpV4Block [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IppoolIpV4Block.ClassIdEnum>][-From< string>][-IpV4Config< Model.IppoolIpV4Config>][-ObjectType< IppoolIpV4Block.ObjectTypeEnum>][-Size< long>][-To< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIppoolIpV4Block [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IppoolIpV4Block.ClassIdEnum>][-From< string>][-IdMappingPolicyMoid< string>][-IpV4Config< Model.IppoolIpV4Config>][-ObjectType< IppoolIpV4Block.ObjectTypeEnum>][-Size< long>][-To< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -56,6 +56,21 @@ Accept wildcard characters: False
 
 ### -From
 First IPv4 address of the block.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IdMappingPolicyMoid
+The managed object ID of the ID mapping policy.
 
 ```yaml
 Type: string

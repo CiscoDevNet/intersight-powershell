@@ -68,3 +68,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightMacpoolReservation](./New-IntersightMacpoolReservation.md)
 
+[Set-IntersightMacpoolReservation](./Set-IntersightMacpoolReservation.md)
+

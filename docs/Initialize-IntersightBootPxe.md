@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -InterfaceName
-The name of the underlying virtual ethernet interface used by the PXE boot device.
+For integrated NICs, specify the underlying network interface card name (such as 1 or 2). For virtual NICs, specify the vNIC name (customized name like eth0).
 
 ```yaml
 Type: string

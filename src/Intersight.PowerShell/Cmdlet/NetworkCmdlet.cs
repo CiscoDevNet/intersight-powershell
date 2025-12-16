@@ -594,6 +594,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"A reference to a assetGeoLocation resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetGeoLocationRelationship AssignedLocation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Available memory (un-used) on this switch platform."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -5806,6 +5817,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"A reference to a assetGeoLocation resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AssetGeoLocationRelationship AssignedLocation
+        {
+            get;
+            set;
+        }
 
 
 

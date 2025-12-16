@@ -137,7 +137,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Specific Adapter model to select.\n* `Any` - To select any Adapter model available in XFM.\n* `UCSC-P-N7S400GF` - Cisco UCS X-Series Adapter with 400G capability and dual port configuration.\n* `UCSC-P-N7D200GF` - Cisco UCS X-Series Adapter with 200G capability and dual port configuration.\n* `UCSC-P-N3140H` - Cisco UCS X-Series Adapter with 200G capability and single port configuration.\n* `UCSC-P-N7S400GFO` - Cisco UCS X-Series SmartNIC with 400G QSFP112 PCIe Gen5 NIC.\n* `UCSC-P-N7D200GFO` - Cisco UCS X-Series SmartNIC with 200G QSFP112 PCIe Gen5 NIC."</para>
+        /// <para type="description">"Specific Adapter model to select.\n* `Any` - To select any Adapter model available in XFM.\n* `UCSC-P-N7S400GF` - Cisco UCS X-Series Adapter with 400G capability and dual port configuration.\n* `UCSC-P-N7D200GF` - Cisco UCS X-Series Adapter with 200G capability and dual port configuration.\n* `UCSC-P-N7S400GFO` - Cisco UCS X-Series SmartNIC with 400G QSFP112 PCIe Gen5 NIC.\n* `UCSC-P-N7D200GFO` - Cisco UCS X-Series SmartNIC with 200G QSFP112 PCIe Gen5 NIC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -887,16 +887,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AssetDeviceRegistrationRelationship PhysicalDeviceRegistration
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -929,10 +919,6 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PhysicalDeviceRegistration"))
-            {
-                initObject.PhysicalDeviceRegistration = this.PhysicalDeviceRegistration;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
@@ -2732,6 +2718,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a assetGeoLocation resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AssetGeoLocationRelationship AssignedLocation
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a biosBootMode resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -3138,6 +3134,10 @@ namespace Intersight.PowerShell
             {
                 initObject.AlarmSummary = this.AlarmSummary;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AssignedLocation"))
+            {
+                initObject.AssignedLocation = this.AssignedLocation;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("BiosBootmode"))
             {
                 initObject.BiosBootmode = this.BiosBootmode;
@@ -3366,16 +3366,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Model.AssetDeviceRegistrationRelationship PhysicalDeviceRegistration
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -3408,10 +3398,6 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("PhysicalDeviceRegistration"))
-            {
-                initObject.PhysicalDeviceRegistration = this.PhysicalDeviceRegistration;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;

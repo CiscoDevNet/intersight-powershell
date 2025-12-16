@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPciPort [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PciPort.ClassIdEnum>][-Moid< string>][-ObjectType< PciPort.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uri< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPciPort [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PciPort.ClassIdEnum>][-Moid< string>][-ObjectType< PciPort.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -91,21 +91,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Uri
-The unique identifier of the PCIe switch port as reported by chassis expander module management controller.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

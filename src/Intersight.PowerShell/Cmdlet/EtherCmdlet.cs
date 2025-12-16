@@ -277,6 +277,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Switch physical port name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PortName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Defines the transport type for this port (ethernet OR fc)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -979,6 +990,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Switch physical port name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PortName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a portSubGroup resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -1638,6 +1660,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description"></para>
         /// </summary>
@@ -1863,6 +1886,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

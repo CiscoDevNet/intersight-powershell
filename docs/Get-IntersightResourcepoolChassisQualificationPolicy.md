@@ -285,9 +285,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightResourcepoolChassisQualificationPolicy](./New-IntersightResourcepoolChassisQualificationPolicy.md)
-
 [Remove-IntersightResourcepoolChassisQualificationPolicy](./Remove-IntersightResourcepoolChassisQualificationPolicy.md)
-
-[Set-IntersightResourcepoolChassisQualificationPolicy](./Set-IntersightResourcepoolChassisQualificationPolicy.md)
 

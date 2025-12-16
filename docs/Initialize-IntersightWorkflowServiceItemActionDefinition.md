@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowServiceItemActionDefinition [-ActionProperties< Model.WorkflowServiceItemActionProperties>][-ActionType< WorkflowServiceItemActionDefinition.ActionTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedInstanceStates< System.Collections.Generic.List`1[WorkflowServiceItemActionDefinition.AllowedInstanceStatesEnum]>][-AssociatedRoles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-AttributeParameters< object>][-ClassId< WorkflowServiceItemActionDefinition.ClassIdEnum>][-CoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowServiceItemActionDefinition.ObjectTypeEnum>][-Periodicity< long>][-PostCoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-PreCoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-RestrictOnPrivateAppliance< bool>][-ServiceItemDefinition< Model.WorkflowServiceItemDefinitionRelationship>][-StopWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ValidationWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowServiceItemActionDefinition [-ActionProperties< Model.WorkflowServiceItemActionProperties>][-ActionType< WorkflowServiceItemActionDefinition.ActionTypeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedInstanceStates< System.Collections.Generic.List`1[WorkflowServiceItemActionDefinition.AllowedInstanceStatesEnum]>][-AssociatedPrivilegeSets< System.Collections.Generic.List`1[Model.IamPrivilegeSetRelationship]>][-AssociatedRoles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-AttributeParameters< object>][-ClassId< WorkflowServiceItemActionDefinition.ClassIdEnum>][-CoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Description< string>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowServiceItemActionDefinition.ObjectTypeEnum>][-Periodicity< long>][-PostCoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-PreCoreWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-RestrictOnPrivateAppliance< bool>][-ServiceItemDefinition< Model.WorkflowServiceItemDefinitionRelationship>][-StopWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ValidationWorkflows< System.Collections.Generic.List`1[Model.WorkflowServiceItemActionWorkflowDefinition]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -76,6 +76,24 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.List`1[WorkflowServiceItemActionDefinition.AllowedInstanceStatesEnum]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssociatedPrivilegeSets
+An array of relationships to iamPrivilegeSet resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.IamPrivilegeSetRelationship]
 Parameter Sets: (All)
 Aliases:
 

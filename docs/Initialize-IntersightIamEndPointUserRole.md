@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamEndPointUserRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamEndPointUserRole.ClassIdEnum>][-Enabled< bool>][-EndPointRole< System.Collections.Generic.List`1[Model.IamEndPointRoleRelationship]>][-EndPointUser< Model.IamEndPointUserRelationship>][-EndPointUserPolicy< Model.IamEndPointUserPolicyRelationship>][-Moid< string>][-ObjectType< IamEndPointUserRole.ObjectTypeEnum>][-Password< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamEndPointUserRole [-AccountTypeUserDefined< bool>][-AccountTypes< System.Collections.Generic.List`1[Model.IamAccountTypeBase]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamEndPointUserRole.ClassIdEnum>][-Enabled< bool>][-EndPointRole< System.Collections.Generic.List`1[Model.IamEndPointRoleRelationship]>][-EndPointUser< Model.IamEndPointUserRelationship>][-EndPointUserPolicy< Model.IamEndPointUserPolicyRelationship>][-Moid< string>][-ObjectType< IamEndPointUserRole.ObjectTypeEnum>][-Password< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,6 +23,38 @@ Initialize-IntersightIamEndPointUserRole [-AdditionalProperties< System.Collecti
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
+
+### -AccountTypeUserDefined
+Allows to choose custom account types for the endpoint user.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AccountTypes
+
+
+Note :- Use Initialize-IntersightIamAccountTypeBase to create the object of complex type IamAccountTypeBase
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.IamAccountTypeBase]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 
@@ -241,5 +273,7 @@ PS C:\> Initialize-IntersightIamEndPointUserRole
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightIamAccountTypeBase](./Initialize-IntersightIamAccountTypeBase.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

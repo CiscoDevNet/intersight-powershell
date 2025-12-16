@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamPermission [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamPermission.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< IamPermission.ObjectTypeEnum>][-ResourceRoles< System.Collections.Generic.List`1[Model.IamResourceRolesRelationship]>][-Roles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-SessionLimits< Model.IamSessionLimitsRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UserGroups< System.Collections.Generic.List`1[Model.IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[Model.IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamPermission [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamPermission.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< IamPermission.ObjectTypeEnum>][-PrivilegeSets< System.Collections.Generic.List`1[Model.IamPrivilegeSetRelationship]>][-ResourceRoles< System.Collections.Generic.List`1[Model.IamResourceRolesRelationship]>][-Roles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-SessionLimits< Model.IamSessionLimitsRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UserGroups< System.Collections.Generic.List`1[Model.IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[Model.IamUserRelationship]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -104,6 +104,24 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: IamPermission.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PrivilegeSets
+An array of relationships to iamPrivilegeSet resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.IamPrivilegeSetRelationship]
 Parameter Sets: (All)
 Aliases:
 

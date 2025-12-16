@@ -652,7 +652,13 @@ PS C:\> New-IntersightKubernetesClusterProfile
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
+[Initialize-IntersightPolicyConfigChangeDetailType](./Initialize-IntersightPolicyConfigChangeDetailType.md)
+
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyPolicyContextHolder](./Initialize-IntersightPolicyPolicyContextHolder.md)
+
+[Initialize-IntersightPolicyReportedPolicyChange](./Initialize-IntersightPolicyReportedPolicyChange.md)
 
 [Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)
 

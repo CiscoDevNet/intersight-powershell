@@ -154,7 +154,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Detailed message of the fault."</para>
+        /// <para type="description">"Short summary of the fault found."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

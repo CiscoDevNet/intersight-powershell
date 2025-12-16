@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamEndPointUserRole [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Enabled< bool>][-EndPointRole< System.Collections.Generic.List`1[IamEndPointRoleRelationship]>][-EndPointUser< IamEndPointUserRelationship>][-EndPointUserPolicy< IamEndPointUserPolicyRelationship>][[-Moid]< string>][-Password< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightIamEndPointUserRole [-AccountTypeUserDefined< bool>][-AccountTypes< System.Collections.Generic.List`1[IamAccountTypeBase]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Enabled< bool>][-EndPointRole< System.Collections.Generic.List`1[IamEndPointRoleRelationship]>][-EndPointUser< IamEndPointUserRelationship>][-EndPointUserPolicy< IamEndPointUserPolicyRelationship>][[-Moid]< string>][-Password< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -22,6 +22,42 @@ Set-IntersightIamEndPointUserRole [-AdditionalProperties< System.Collections.Gen
 Update a &apos;IamEndPointUserRole&apos; resource.
 
 ## PARAMETERS
+
+### -AccountTypeUserDefined
+Allows to choose custom account types for the endpoint user.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AccountTypes
+
+
+Note :- Use Initialize-IntersightIamAccountTypeBase to create the object of complex type IamAccountTypeBase
+It also accepts the of object(s) of type IamAccountTypeIpmi, IamAccountTypeLocal, use the respective Initialize cmdlet to create the object.
+Cmdlet(s) :
+Initialize-IntersightIamAccountTypeIpmi
+Initialize-IntersightIamAccountTypeLocal
+
+```yaml
+Type: System.Collections.Generic.List`1[IamAccountTypeBase]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 
@@ -227,6 +263,8 @@ PS C:\> Set-IntersightIamEndPointUserRole
 ## RELATED LINKS
 
 [Get-IntersightIamEndPointUserRole](./Get-IntersightIamEndPointUserRole.md)
+
+[Initialize-IntersightIamAccountTypeBase](./Initialize-IntersightIamAccountTypeBase.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPciEndpoint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PciEndpoint.ClassIdEnum>][-Moid< string>][-ObjectType< PciEndpoint.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uri< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPciEndpoint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PciEndpoint.ClassIdEnum>][-Moid< string>][-ObjectType< PciEndpoint.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -91,21 +91,6 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Uri
-The unique identifier of the PCIe endpoint as reported by the chassis expander management controller.
-
-```yaml
-Type: string
 Parameter Sets: (All)
 Aliases:
 

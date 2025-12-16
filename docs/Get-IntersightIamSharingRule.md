@@ -289,3 +289,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Remove-IntersightIamSharingRule](./Remove-IntersightIamSharingRule.md)
 
+[Set-IntersightIamSharingRule](./Set-IntersightIamSharingRule.md)
+

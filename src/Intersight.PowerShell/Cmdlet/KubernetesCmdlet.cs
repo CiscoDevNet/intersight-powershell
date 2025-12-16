@@ -1499,6 +1499,9 @@ namespace Intersight.PowerShell
 
 
 
+
+
+
         // <summary>
         /// <para type="description">"A reference to a computeRackUnit resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -2318,6 +2321,9 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
 
 
 
@@ -4116,6 +4122,9 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
 
 
 
@@ -6259,6 +6268,9 @@ namespace Intersight.PowerShell
 
 
 
+
+
+
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
@@ -7535,6 +7547,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -7545,6 +7558,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -8184,6 +8199,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -8194,6 +8210,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -8995,6 +9013,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -9005,6 +9024,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -10482,6 +10503,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -10492,6 +10514,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -12051,6 +12075,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -12061,6 +12086,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -12667,6 +12694,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -12677,6 +12705,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -13434,6 +13464,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -13444,6 +13475,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>
@@ -14822,6 +14855,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -14832,6 +14866,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
         // <summary>

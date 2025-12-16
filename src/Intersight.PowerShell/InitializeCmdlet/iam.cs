@@ -362,6 +362,245 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamAccountTypeBase.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamAccountTypeBase")]
+    public class InitializeIntersightIamAccountTypeBase : PSCmdlet
+    {
+        public InitializeIntersightIamAccountTypeBase()
+        {
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountTypeBase.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the Account type such as Local or IPMI, that identifies the kind of user account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountTypeBase.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamAccountTypeBase initObject = new Intersight.Model.IamAccountTypeBase();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamAccountTypeIpmi.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamAccountTypeIpmi")]
+    public class InitializeIntersightIamAccountTypeIpmi : PSCmdlet
+    {
+        public InitializeIntersightIamAccountTypeIpmi()
+        {
+            ClassId = IamAccountTypeIpmi.ClassIdEnum.IamAccountTypeIpmi;
+            ObjectType = IamAccountTypeIpmi.ObjectTypeEnum.IamAccountTypeIpmi;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountTypeIpmi.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the Account type such as Local or IPMI, that identifies the kind of user account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountTypeIpmi.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The password must have a minimum of 8 and a maximum of 127 characters. For servers with IPMI user role enabled, the maximum length is limited to 20 characters. When strong password is enabled, must satisfy below requirements: A. The password must not contain the User's Name. B. The password must contain characters from three of the following four categories. 1) English uppercase characters (A through Z). 2) English lowercase characters (a through z). 3) Base 10 digits (0 through 9). 4) Non-alphabetic characters (! , @, #, $, %, ^, &, *, -, _, +, =)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9!@#$%^&\\*+-_=]+$")]
+        public string Password
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Use Different IPMI Password. If false then same Local User Password will be used for IPMI."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool UseDiffIpmiPassword
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamAccountTypeIpmi initObject = new Intersight.Model.IamAccountTypeIpmi();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
+            {
+                initObject.Password = this.Password;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UseDiffIpmiPassword"))
+            {
+                initObject.UseDiffIpmiPassword = this.UseDiffIpmiPassword;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamAccountTypeLocal.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamAccountTypeLocal")]
+    public class InitializeIntersightIamAccountTypeLocal : PSCmdlet
+    {
+        public InitializeIntersightIamAccountTypeLocal()
+        {
+            ClassId = IamAccountTypeLocal.ClassIdEnum.IamAccountTypeLocal;
+            ObjectType = IamAccountTypeLocal.ObjectTypeEnum.IamAccountTypeLocal;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountTypeLocal.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the Account type such as Local or IPMI, that identifies the kind of user account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountTypeLocal.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamAccountTypeLocal initObject = new Intersight.Model.IamAccountTypeLocal();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize IamApiKey.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightIamApiKey")]
@@ -2595,6 +2834,26 @@ namespace Intersight.PowerShell
 
         }
         // <summary>
+        /// <para type="description">"Allows to choose custom account types for the endpoint user."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AccountTypeUserDefined
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.IamAccountTypeBase> AccountTypes
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2678,7 +2937,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The password must have a minimum of 8 and a maximum of 127 characters. For servers with IPMI user role enabled, the maximum length is limited to 20 characters. When strong password is enabled, must satisfy below requirements: A. The password must not contain the User's Name. B. The password must contain characters from three of the following four categories. 1) English uppercase characters (A through Z). 2) English lowercase characters (a through z). 3) Base 10 digits (0 through 9). 4) Non-alphabetic characters (! , @, #, $, %, ^, &, *, -, _, +, =)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9!@#$%^&\\*+-_=]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9!@#$%^&\\*+-_=]+$")]
         public string Password
         {
             get;
@@ -2699,6 +2958,14 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.IamEndPointUserRole initObject = new Intersight.Model.IamEndPointUserRole();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountTypeUserDefined"))
+            {
+                initObject.AccountTypeUserDefined = this.AccountTypeUserDefined;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountTypes"))
+            {
+                initObject.AccountTypes = this.AccountTypes;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -2793,7 +3060,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The password must have a minimum of 8 and a maximum of 127 characters. For servers with IPMI user role enabled, the maximum length is limited to 20 characters. When strong password is enabled, must satisfy below requirements: A. The password must not contain the User's Name. B. The password must contain characters from three of the following four categories. 1) English uppercase characters (A through Z). 2) English lowercase characters (a through z). 3) Base 10 digits (0 through 9). 4) Non-alphabetic characters (! , @, #, $, %, ^, &, *, -, _, +, =)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9!@#$%^&\\*+-_=]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9!@#$%^&\\*+-_=]+$")]
         public string Password
         {
             get;
@@ -2927,7 +3194,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The beta feature that will be enabled for specific account.\n* `IWO` - Intersight Workflow Optimizer.\n* `Hitachi` - Support to claim Hitachi Storage arrays using the Intersight Orchestrator framework.\n* `KubernetesExtension` - Extension to the IKS and Adopted Clusters.\n* `NetAppIO` - Support to claim NetApp Storage arrays as IO targets.\n* `IvsPublicCloud` - Enables virtualization service for public clouds.\n* `TerraformCloud` - Enables an ability to create Terraform Cloud.\n* `WashingtonEFT` - Support for EFT customers to use Washington firmware images for upgrades.\n* `Solutions` - Support for managing solutions.\n* `IksBm` - Enables Intersight Kubernetes Service on Baremetal server.\n* `NexusCloud` - Enables Nexus Cloud services functionality.\n* `NexusCloudTrial` - Enables Nexus Cloud trial period.\n* `NexusCloudUpgradeAssist` - Enables Nexus Cloud upgrade assist.\n* `NexusCloudSustainability` - Enables Nexus Cloud sustainability.\n* `PlatformUIRefresh` - Enables platform refreshed UI with new service launcher.\n* `IksGpu` - Enables GPU support for Intersight Kubernetes Service.\n* `IwoAppServiceVerticalScaling` - Enables vertical Scaling of App Service Plans.\n* `IwoDataExporter` - Enables IWO Data Exporter component.\n* `IwoMigrate` - Enables IWO data Migration.\n* `NexusCloudTechPreviewGold` - Enable Nexus Cloud Preview of stable features, available for public consumption.\n* `NexusCloudTechPreviewSilver` - Enable Nexus Cloud Preview of beta features. This feature set is intended for consumption by internal audiences.\n* `NexusCloudTechPreviewBronze` - Enable Nexus Cloud Preview of features still in development. This feature set is intended for consumption by internal audiences.\n* `DisconnectedTargetAlarm` - Raise an alarm when a Target is disconnected from Intersight. Intersight is unable to manage disconnected Targets.\n* `AsAService` - Enable AsAService Preview of beta features. This feature set is intended for consumption by selective audiences.\n* `EMEA` - Enable all avaialble features on Intersight EMEA region.\n* `CrossPlatformNavigation` - Enable Cross-Platform Navigation on UI.\n* `WorkflowsPreview` - Enable Workflows preview for this account.\n* `WorkflowsIntersightAssets` - Enable workflow Intersight assets for this account.\n* `ManualKEKSupport` - Enable support for Manual key to enhance storage controller security for this account.\n* `FirmwareConsolidationEFT` - Enable usage of firmware images transitioned from CCO to Intersight. This feature set is intended for consumption by internal audiences.\n* `FunctionAsAService` - Enable the usage of the function as a service (faas) for Workflows. This feature set is intended for consumption by selective audiences.\n* `FI6664EFT` - Support for EFT customers to use FI-6664 in Port Policy.\n* `UnifiedEdge` - Enable Unified Edge related features for Avatar Platform.\n* `Goldeneye` - Enable Goldeneye related features."</para>
+        /// <para type="description">"The beta feature that will be enabled for specific account.\n* `IWO` - Intersight Workflow Optimizer.\n* `Hitachi` - Support to claim Hitachi Storage arrays using the Intersight Orchestrator framework.\n* `KubernetesExtension` - Extension to the IKS and Adopted Clusters.\n* `NetAppIO` - Support to claim NetApp Storage arrays as IO targets.\n* `IvsPublicCloud` - Enables virtualization service for public clouds.\n* `TerraformCloud` - Enables an ability to create Terraform Cloud.\n* `WashingtonEFT` - Support for EFT customers to use Washington firmware images for upgrades.\n* `Solutions` - Support for managing solutions.\n* `IksBm` - Enables Intersight Kubernetes Service on Baremetal server.\n* `NexusCloud` - Enables Nexus Cloud services functionality.\n* `NexusCloudTrial` - Enables Nexus Cloud trial period.\n* `NexusCloudUpgradeAssist` - Enables Nexus Cloud upgrade assist.\n* `NexusCloudSustainability` - Enables Nexus Cloud sustainability.\n* `PlatformUIRefresh` - Enables platform refreshed UI with new service launcher.\n* `IksGpu` - Enables GPU support for Intersight Kubernetes Service.\n* `IwoAppServiceVerticalScaling` - Enables vertical Scaling of App Service Plans.\n* `IwoDataExporter` - Enables IWO Data Exporter component.\n* `IwoMigrate` - Enables IWO data Migration.\n* `NexusCloudTechPreviewGold` - Enable Nexus Cloud Preview of stable features, available for public consumption.\n* `NexusCloudTechPreviewSilver` - Enable Nexus Cloud Preview of beta features. This feature set is intended for consumption by internal audiences.\n* `NexusCloudTechPreviewBronze` - Enable Nexus Cloud Preview of features still in development. This feature set is intended for consumption by internal audiences.\n* `DisconnectedTargetAlarm` - Raise an alarm when a Target is disconnected from Intersight. Intersight is unable to manage disconnected Targets.\n* `AsAService` - Enable AsAService Preview of beta features. This feature set is intended for consumption by selective audiences.\n* `EMEA` - Enable all avaialble features on Intersight EMEA region.\n* `CrossPlatformNavigation` - Enable Cross-Platform Navigation on UI.\n* `WorkflowsPreview` - Enable Workflows preview for this account.\n* `WorkflowsIntersightAssets` - Enable workflow Intersight assets for this account.\n* `ManualKEKSupport` - Enable support for Manual key to enhance storage controller security for this account.\n* `FirmwareConsolidationEFT` - Enable usage of firmware images transitioned from CCO to Intersight. This feature set is intended for consumption by internal audiences.\n* `FunctionAsAService` - Enable the usage of the function as a service (faas) for Workflows. This feature set is intended for consumption by selective audiences.\n* `FI6664EFT` - Support for EFT customers to use FI-6664 in Port Policy.\n* `GranularPrivilegeSets` - Enable granular privilege sets for this account.\n* `UnifiedEdge` - Enable Unified Edge related features for Avatar Platform.\n* `Goldeneye` - Enable Goldeneye related features.\n* `FI6652EFT` - Support for EFT customers to use FI-6652 in Port Policy."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -5325,6 +5592,148 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamPasswordHistorySetting.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamPasswordHistorySetting")]
+    public class InitializeIntersightIamPasswordHistorySetting : PSCmdlet
+    {
+        public InitializeIntersightIamPasswordHistorySetting()
+        {
+            ClassId = IamPasswordHistorySetting.ClassIdEnum.IamPasswordHistorySetting;
+            ObjectType = IamPasswordHistorySetting.ObjectTypeEnum.IamPasswordHistorySetting;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamPasswordHistorySetting.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamPasswordHistorySetting.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamPasswordHistorySetting initObject = new Intersight.Model.IamPasswordHistorySetting();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamPasswordHistorySettingCollection.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamPasswordHistorySettingCollection")]
+    public class InitializeIntersightIamPasswordHistorySettingCollection : PSCmdlet
+    {
+        public InitializeIntersightIamPasswordHistorySettingCollection()
+        {
+            ClassId = IamPasswordHistorySettingCollection.ClassIdEnum.IamPasswordHistorySettingCollection;
+            ObjectType = IamPasswordHistorySettingCollection.ObjectTypeEnum.IamPasswordHistorySettingCollection;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamPasswordHistorySettingCollection.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamPasswordHistorySettingCollection.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamPasswordHistorySettingCollection initObject = new Intersight.Model.IamPasswordHistorySettingCollection();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize IamPermission.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightIamPermission")]
@@ -5380,7 +5789,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The name of the permission which has to be granted to user."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_ .:-]{1,64}$")]
+        [ValidatePattern("^[a-zA-Z0-9_ .:-]{1,128}$")]
         public string Name
         {
             get;
@@ -5392,6 +5801,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public IamPermission.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to iamPrivilegeSet resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.IamPrivilegeSetRelationship> PrivilegeSets
         {
             get;
             set;
@@ -5479,6 +5898,10 @@ namespace Intersight.PowerShell
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PrivilegeSets"))
+            {
+                initObject.PrivilegeSets = this.PrivilegeSets;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ResourceRoles"))
             {
                 initObject.ResourceRoles = this.ResourceRoles;
@@ -5842,11 +6265,51 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Flag used by UI to keep track of the user selection option for future updates of privilege sets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AllowFutureUpdates
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to iamPrivilegeSet resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.IamPrivilegeSetRelationship> AssociatedPrivilegeSets
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public IamPrivilegeSet.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the privilege set."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Flag to indicate if the privilege names are updated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsPrivilegeNamesUpdated
         {
             get;
             set;
@@ -5865,7 +6328,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Name of the privilege set."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9_ .:-]{1,64}$")]
+        [ValidatePattern("^[a-zA-Z0-9_ .:,()&/-]{1,128}$")]
         public string Name
         {
             get;
@@ -5900,7 +6363,23 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AllowFutureUpdates"))
+            {
+                initObject.AllowFutureUpdates = this.AllowFutureUpdates;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AssociatedPrivilegeSets"))
+            {
+                initObject.AssociatedPrivilegeSets = this.AssociatedPrivilegeSets;
+            }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsPrivilegeNamesUpdated"))
+            {
+                initObject.IsPrivilegeNamesUpdated = this.IsPrivilegeNamesUpdated;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -5908,6 +6387,105 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
                 initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamPrivilegeSetMetaInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamPrivilegeSetMetaInfo")]
+    public class InitializeIntersightIamPrivilegeSetMetaInfo : PSCmdlet
+    {
+        public InitializeIntersightIamPrivilegeSetMetaInfo()
+        {
+            ClassId = IamPrivilegeSetMetaInfo.ClassIdEnum.IamPrivilegeSetMetaInfo;
+            ObjectType = IamPrivilegeSetMetaInfo.ObjectTypeEnum.IamPrivilegeSetMetaInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to iamPrivilegeSet resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.IamPrivilegeSetRelationship> AssociatedPrivilegeSets
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamPrivilegeSetMetaInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamPrivilegeSetMetaInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamPrivilegeSetMetaInfo initObject = new Intersight.Model.IamPrivilegeSetMetaInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AssociatedPrivilegeSets"))
+            {
+                initObject.AssociatedPrivilegeSets = this.AssociatedPrivilegeSets;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
@@ -6377,6 +6955,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to iamPrivilegeSet resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.IamPrivilegeSetRelationship> PrivilegeSets
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -6424,6 +7012,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Permission"))
             {
                 initObject.Permission = this.Permission;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PrivilegeSets"))
+            {
+                initObject.PrivilegeSets = this.PrivilegeSets;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Resource"))
             {

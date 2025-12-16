@@ -306,6 +306,149 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigChangeDetailType.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigChangeDetailType")]
+    public class InitializeIntersightPolicyConfigChangeDetailType : PSCmdlet
+    {
+        public InitializeIntersightPolicyConfigChangeDetailType()
+        {
+            ClassId = PolicyConfigChangeDetailType.ClassIdEnum.PolicyConfigChangeDetailType;
+            ConfigChangeFlag = PolicyConfigChangeDetailType.ConfigChangeFlagEnum.PendingChanges;
+            ModStatus = PolicyConfigChangeDetailType.ModStatusEnum.None;
+            ObjectType = PolicyConfigChangeDetailType.ObjectTypeEnum.PolicyConfigChangeDetailType;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> Changes
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyConfigChangeDetailType.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Context information on the change."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.PolicyConfigResultContext ConfigChangeContext
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Config change flag to differentiate Pending-changes and Config-drift.\n* `Pending-changes` - Config change flag represents changes are due to not deployed changes from Intersight.\n* `Drift-changes` - Config change flag represents changes are due to endpoint configuration changes."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyConfigChangeDetailType.ConfigChangeFlagEnum ConfigChangeFlag
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> Disruptions
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Detailed description of the config change."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Message
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Modification status of the mo in this config change.\n* `None` - The 'none' operation/state.Indicates a configuration profile has been deployed, and the desired configuration matches the actual device configuration.\n* `Created` - The 'create' operation/state.Indicates a configuration profile has been created and associated with a device, but the configuration specified in the profilehas not been applied yet. For example, this could happen when the user creates a server profile and has not deployed the profile yet.\n* `Modified` - The 'update' operation/state.Indicates some of the desired configuration changes specified in a profile have not been been applied to the associated device.This happens when the user has made changes to a profile and has not deployed the changes yet, or when the workflow to applythe configuration changes has not completed successfully.\n* `Deleted` - The 'delete' operation/state.Indicates a configuration profile has been been disassociated from a device and the user has not undeployed these changes yet."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyConfigChangeDetailType.ModStatusEnum ModStatus
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyConfigChangeDetailType.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.PolicyConfigChangeDetailType initObject = new Intersight.Model.PolicyConfigChangeDetailType();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Changes"))
+            {
+                initObject.Changes = this.Changes;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigChangeContext"))
+            {
+                initObject.ConfigChangeContext = this.ConfigChangeContext;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ConfigChangeFlag"))
+            {
+                initObject.ConfigChangeFlag = this.ConfigChangeFlag;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Disruptions"))
+            {
+                initObject.Disruptions = this.Disruptions;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Message"))
+            {
+                initObject.Message = this.Message;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ModStatus"))
+            {
+                initObject.ModStatus = this.ModStatus;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize PolicyConfigChangeDisruptionDetailType.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightPolicyConfigChangeDisruptionDetailType")]
@@ -659,6 +802,63 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyPolicyContextHolder.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyPolicyContextHolder")]
+    public class InitializeIntersightPolicyPolicyContextHolder : PSCmdlet
+    {
+        public InitializeIntersightPolicyPolicyContextHolder()
+        {
+            ClassId = PolicyPolicyContextHolder.ClassIdEnum.PolicyPolicyContextHolder;
+            ObjectType = PolicyPolicyContextHolder.ObjectTypeEnum.PolicyPolicyContextHolder;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyPolicyContextHolder.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyPolicyContextHolder.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.PolicyPolicyContextHolder initObject = new Intersight.Model.PolicyPolicyContextHolder();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize PolicyPolicyError.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightPolicyPolicyError")]
@@ -819,6 +1019,63 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyQualifier initObject = new Intersight.Model.PolicyQualifier();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize PolicyReportedPolicyChange.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightPolicyReportedPolicyChange")]
+    public class InitializeIntersightPolicyReportedPolicyChange : PSCmdlet
+    {
+        public InitializeIntersightPolicyReportedPolicyChange()
+        {
+            ClassId = PolicyReportedPolicyChange.ClassIdEnum.PolicyReportedPolicyChange;
+            ObjectType = PolicyReportedPolicyChange.ObjectTypeEnum.PolicyReportedPolicyChange;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyReportedPolicyChange.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyReportedPolicyChange.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.PolicyReportedPolicyChange initObject = new Intersight.Model.PolicyReportedPolicyChange();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

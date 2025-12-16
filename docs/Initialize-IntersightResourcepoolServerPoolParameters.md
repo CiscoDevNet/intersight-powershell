@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourcepoolServerPoolParameters [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ResourcepoolServerPoolParameters.ClassIdEnum>][-ManagementMode< ResourcepoolServerPoolParameters.ManagementModeEnum>][-ObjectType< ResourcepoolServerPoolParameters.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightResourcepoolServerPoolParameters [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ResourcepoolServerPoolParameters.ClassIdEnum>][-ManagementMode< ResourcepoolServerPoolParameters.ManagementModeEnum>][-ObjectType< ResourcepoolServerPoolParameters.ObjectTypeEnum>][-TargetPlatform< ResourcepoolServerPoolParameters.TargetPlatformEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,6 +74,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: ResourcepoolServerPoolParameters.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetPlatform
+The platform for which the servers in resource pool are applicable. It can either be a server that is operating in standalone mode or or one that is attached to a Fabric Interconnect or Unified Edge Chassis managed by Intersight.\n* `None` - Server which are not belongs to any platform.\n* `Standalone` - Servers which are operating in standalone mode i.e. not connected to a Fabric Interconnected.\n* `FIAttached` - Servers which are connected to a Fabric Interconnect that is managed by Intersight.\n* `UnifiedEdgeServer` - Unified Edge sleds that is managed by Intersight.
+
+```yaml
+Type: ResourcepoolServerPoolParameters.TargetPlatformEnum
 Parameter Sets: (All)
 Aliases:
 

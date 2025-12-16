@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamPrivilegeSet [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamPrivilegeSet.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< IamPrivilegeSet.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamPrivilegeSet [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowFutureUpdates< bool>][-AssociatedPrivilegeSets< System.Collections.Generic.List`1[Model.IamPrivilegeSetRelationship]>][-ClassId< IamPrivilegeSet.ClassIdEnum>][-Description< string>][-IsPrivilegeNamesUpdated< bool>][-Moid< string>][-Name< string>][-ObjectType< IamPrivilegeSet.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,11 +39,74 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -AllowFutureUpdates
+Flag used by UI to keep track of the user selection option for future updates of privilege sets.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssociatedPrivilegeSets
+An array of relationships to iamPrivilegeSet resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.IamPrivilegeSetRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ClassId
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
 Type: IamPrivilegeSet.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Description
+Description of the privilege set.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsPrivilegeNamesUpdated
+Flag to indicate if the privilege names are updated.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

@@ -198,3 +198,5 @@ PS C:\> New-IntersightIamSharingRule
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightIamSharingRule](./Remove-IntersightIamSharingRule.md)
+
+[Set-IntersightIamSharingRule](./Set-IntersightIamSharingRule.md)

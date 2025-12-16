@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowWorkflowProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWorkflowProperties.ClassIdEnum>][-EnableDebug< bool>][-EnablePublishStatus< bool>][-ObjectType< WorkflowWorkflowProperties.ObjectTypeEnum>][-PublishStatus< WorkflowWorkflowProperties.PublishStatusEnum>][-Retryable< bool>][-RollbackOnCancel< bool>][-RollbackOnFailure< bool>][-SupportStatus< WorkflowWorkflowProperties.SupportStatusEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowWorkflowProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowWorkflowProperties.ClassIdEnum>][-EnableDebug< bool>][-EnablePublishStatus< bool>][-ObjectType< WorkflowWorkflowProperties.ObjectTypeEnum>][-PublishStatus< WorkflowWorkflowProperties.PublishStatusEnum>][-Retryable< bool>][-RollbackOnCancel< bool>][-RollbackOnFailure< bool>][-SupportStatus< WorkflowWorkflowProperties.SupportStatusEnum>][-TargetCtxPolicy< WorkflowWorkflowProperties.TargetCtxPolicyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -164,6 +164,21 @@ Supported status of the definition.\n* `Supported` - The definition is a support
 
 ```yaml
 Type: WorkflowWorkflowProperties.SupportStatusEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TargetCtxPolicy
+The target context policy that controls how target context is set for this workflow when it is run as a subworkflow.\n* `InheritFromParent` - The target context is inherited from the parent workflow and additional targets from this current workflow are also added. Use this setting when the parent workflow is operating on a target set which is still applicable for this current subworkflow.\n* `OnlyThisWorkflowTargets` - The target context is set only from the targets defined in the current workflow and nothing is inherited from parent workflow. Use this setting if the parent workflow is operating on a superset of targets and this current workflow is operating on a subset of those targets or a completely different set of targets.
+
+```yaml
+Type: WorkflowWorkflowProperties.TargetCtxPolicyEnum
 Parameter Sets: (All)
 Aliases:
 

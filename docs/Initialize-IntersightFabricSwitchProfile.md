@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< Model.NetworkElementRelationship>][-ClassId< FabricSwitchProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchClusterProfile< Model.FabricSwitchClusterProfileRelationship>][-SwitchId< FabricSwitchProfile.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< FabricSwitchProfile.TargetPlatformEnum>][-Type< FabricSwitchProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< Model.NetworkElementRelationship>][-ClassId< FabricSwitchProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchProfile.ObjectTypeEnum>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchClusterProfile< Model.FabricSwitchClusterProfileRelationship>][-SwitchId< FabricSwitchProfile.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< FabricSwitchProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-Type< FabricSwitchProfile.TypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -299,6 +299,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -TemplateActions
+
+
+Note :- Use Initialize-IntersightMotemplateActionEntry to create the object of complex type MotemplateActionEntry
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.MotemplateActionEntry]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Type
 Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target.
 
@@ -372,6 +389,8 @@ PS C:\> Initialize-IntersightFabricSwitchProfile
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 

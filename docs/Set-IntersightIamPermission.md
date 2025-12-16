@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamPermission [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-ResourceRoles< System.Collections.Generic.List`1[IamResourceRolesRelationship]>][-Roles< System.Collections.Generic.List`1[IamRoleRelationship]>][-SessionLimits< IamSessionLimitsRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserGroups< System.Collections.Generic.List`1[IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[IamUserRelationship]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightIamPermission [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-PrivilegeSets< System.Collections.Generic.List`1[IamPrivilegeSetRelationship]>][-ResourceRoles< System.Collections.Generic.List`1[IamResourceRolesRelationship]>][-Roles< System.Collections.Generic.List`1[IamRoleRelationship]>][-SessionLimits< IamSessionLimitsRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserGroups< System.Collections.Generic.List`1[IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[IamUserRelationship]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -73,6 +73,24 @@ The name of the permission which has to be granted to user.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PrivilegeSets
+An array of relationships to iamPrivilegeSet resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[IamPrivilegeSetRelationship]
 Parameter Sets: (All)
 Aliases:
 

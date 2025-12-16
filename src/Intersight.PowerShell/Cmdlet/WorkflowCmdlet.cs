@@ -1725,6 +1725,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
@@ -4412,6 +4413,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a workflowCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -5720,6 +5722,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -7328,6 +7331,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"An array of relationships to iamPrivilegeSet resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<IamPrivilegeSetRelationship> AssociatedPrivilegeSets
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"An array of relationships to iamRole resources."</para>
@@ -11337,6 +11351,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"An array of relationships to iamPrivilegeSet resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<IamPrivilegeSetRelationship> AssociatedPrivilegeSets
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"An array of relationships to iamRole resources."</para>

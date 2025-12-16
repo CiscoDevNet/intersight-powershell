@@ -228,4 +228,6 @@ PS C:\> Set-IntersightCondAlarm
 
 [Get-IntersightCondAlarm](./Get-IntersightCondAlarm.md)
 
+[Initialize-IntersightCommGeoLocationDetails](./Initialize-IntersightCommGeoLocationDetails.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

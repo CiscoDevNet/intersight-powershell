@@ -200,4 +200,6 @@ PS C:\> Set-IntersightEquipmentChassis
 
 [Initialize-IntersightEquipmentChassis.OperReasonEnum](./Initialize-IntersightEquipmentChassis.OperReasonEnum.md)
 
+[Initialize-IntersightEquipmentChassisOperationsDetails](./Initialize-IntersightEquipmentChassisOperationsDetails.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

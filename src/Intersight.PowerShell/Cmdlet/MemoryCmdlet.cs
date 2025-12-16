@@ -33,7 +33,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The instance number of the memory array."</para>
+        /// <para type="description">"ID of the memory array on a server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

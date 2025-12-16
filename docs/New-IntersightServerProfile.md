@@ -584,11 +584,19 @@ PS C:\> New-IntersightServerProfile
 
 [Initialize-IntersightPolicyConfigChangeContext](./Initialize-IntersightPolicyConfigChangeContext.md)
 
+[Initialize-IntersightPolicyConfigChangeDetailType](./Initialize-IntersightPolicyConfigChangeDetailType.md)
+
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyPolicyContextHolder](./Initialize-IntersightPolicyPolicyContextHolder.md)
+
+[Initialize-IntersightPolicyReportedPolicyChange](./Initialize-IntersightPolicyReportedPolicyChange.md)
 
 [Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)
 
 [Initialize-IntersightPoolReservationReference](./Initialize-IntersightPoolReservationReference.md)
+
+[Initialize-IntersightServerProfile.PostDeployActionEnum](./Initialize-IntersightServerProfile.PostDeployActionEnum.md)
 
 [Initialize-IntersightServerServerAssignTypeSlot](./Initialize-IntersightServerServerAssignTypeSlot.md)
 

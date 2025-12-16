@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-Chassis< string>][-ConfModTs< string>][-ConfModTsBackup< string>][-ConnectionStatus< string>][-DefaultDomain< string>][-FaultSummary< long>][-ManagementMode< NetworkElement.ManagementModeEnum>][[-Moid]< string>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-ProcessorUnit< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[NetworkSupervisorCardRelationship]>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< TopSystemRelationship>][-UcsmRunningFirmware< FirmwareRunningFirmwareRelationship>][-UserLabel< string>][-Version< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< ComputeAlarmSummary>][-AssignedLocation< AssetGeoLocationRelationship>][-Chassis< string>][-ConfModTs< string>][-ConfModTsBackup< string>][-ConnectionStatus< string>][-DefaultDomain< string>][-FaultSummary< long>][-ManagementMode< NetworkElement.ManagementModeEnum>][[-Moid]< string>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-ProcessorUnit< System.Collections.Generic.List`1[ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[NetworkSupervisorCardRelationship]>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< TopSystemRelationship>][-UcsmRunningFirmware< FirmwareRunningFirmwareRelationship>][-UserLabel< string>][-Version< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -45,6 +45,24 @@ Note :- Use Initialize-IntersightComputeAlarmSummary to create the object of com
 
 ```yaml
 Type: ComputeAlarmSummary
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssignedLocation
+A reference to a assetGeoLocation resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: AssetGeoLocationRelationship
 Parameter Sets: (All)
 Aliases:
 

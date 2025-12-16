@@ -285,3 +285,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-IntersightIamPrivilegeSet](./New-IntersightIamPrivilegeSet.md)
+
+[Remove-IntersightIamPrivilegeSet](./Remove-IntersightIamPrivilegeSet.md)
+
+[Set-IntersightIamPrivilegeSet](./Set-IntersightIamPrivilegeSet.md)
+

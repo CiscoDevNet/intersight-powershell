@@ -5521,7 +5521,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `UCSX-S9108-100G` - Cisco UCS Fabric Interconnect 9108 100G with 8 ports.\n* `UCS-FI-6664` - The standard 6th generation UCS Fabric Interconnect with 64 ports.\n* `UCS-FI-6652` - The standard 6th generation UCS Fabric Interconnect.\n* `UCSXE-ECMC-10G` - Cisco UCS XE ECMC 10G with 2 ports.\n* `UCSXE-ECMC-G1` - Cisco UCS XE ECMC G1 with 2 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
+        /// <para type="description">"This field specifies the device model that this Port Policy is being configured for.\n* `UCS-FI-6454` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `UCS-FI-64108` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `UCS-FI-6536` - The standard 5th generation UCS Fabric Interconnect with 36 ports.\n* `UCSX-S9108-100G` - Cisco UCS Fabric Interconnect 9108 100G with 8 ports.\n* `UCS-FI-6664` - The standard 6th generation UCS Fabric Interconnect with 64 ports.\n* `UCS-FI-6652` - The standard 6th generation UCS Fabric Interconnect with 52 ports.\n* `UCSXE-ECMC-10G` - Cisco UCS XE ECMC 10G with 2 ports.\n* `UCSXE-ECMC-G1` - Cisco UCS XE ECMC G1 with 2 ports.\n* `unknown` - Unknown device type, usage is TBD."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -6271,7 +6271,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108/UCS-FI-6652 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -8250,6 +8250,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8325,6 +8335,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
             {
                 initObject.TargetPlatform = this.TargetPlatform;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
@@ -8405,6 +8419,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
         public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, the configuration of the derived instances may override the template configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableOverride
         {
             get;
             set;
@@ -8510,6 +8534,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8544,6 +8578,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableOverride"))
+            {
+                initObject.EnableOverride = this.EnableOverride;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
@@ -8581,6 +8619,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
             {
                 initObject.TargetPlatform = this.TargetPlatform;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {

@@ -489,6 +489,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The managed object ID of the ID mapping policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string IdMappingPolicyMoid
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Netmask, Gateway and DNS settings for IPv4 addresses."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -541,6 +551,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("From"))
             {
                 initObject.From = this.From;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IdMappingPolicyMoid"))
+            {
+                initObject.IdMappingPolicyMoid = this.IdMappingPolicyMoid;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("IpV4Config"))
             {
@@ -715,6 +729,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The managed object ID of the ID mapping policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string IdMappingPolicyMoid
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Netmask, Gateway and DNS settings for IPv6 addresses."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -767,6 +791,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("From"))
             {
                 initObject.From = this.From;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IdMappingPolicyMoid"))
+            {
+                initObject.IdMappingPolicyMoid = this.IdMappingPolicyMoid;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("IpV6Config"))
             {

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-Chassis< string>][-ClassId< NetworkElement.ClassIdEnum>][-ConfModTs< string>][-ConfModTsBackup< string>][-ConnectionStatus< string>][-DefaultDomain< string>][-FaultSummary< long>][-ManagementMode< NetworkElement.ManagementModeEnum>][-Moid< string>][-ObjectType< NetworkElement.ObjectTypeEnum>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-ProcessorUnit< System.Collections.Generic.List`1[Model.ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[Model.NetworkSupervisorCardRelationship]>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< Model.TopSystemRelationship>][-UcsmRunningFirmware< Model.FirmwareRunningFirmwareRelationship>][-UserLabel< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-AssignedLocation< Model.AssetGeoLocationRelationship>][-Chassis< string>][-ClassId< NetworkElement.ClassIdEnum>][-ConfModTs< string>][-ConfModTsBackup< string>][-ConnectionStatus< string>][-DefaultDomain< string>][-FaultSummary< long>][-ManagementMode< NetworkElement.ManagementModeEnum>][-Moid< string>][-ObjectType< NetworkElement.ObjectTypeEnum>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-ProcessorUnit< System.Collections.Generic.List`1[Model.ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[Model.NetworkSupervisorCardRelationship]>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< Model.TopSystemRelationship>][-UcsmRunningFirmware< Model.FirmwareRunningFirmwareRelationship>][-UserLabel< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -46,6 +46,24 @@ Note :- Use Initialize-IntersightComputeAlarmSummary to create the object of com
 
 ```yaml
 Type: Model.ComputeAlarmSummary
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssignedLocation
+A reference to a assetGeoLocation resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.AssetGeoLocationRelationship
 Parameter Sets: (All)
 Aliases:
 

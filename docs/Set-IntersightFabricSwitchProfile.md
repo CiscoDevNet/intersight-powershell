@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< NetworkElementRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchClusterProfile< FabricSwitchClusterProfileRelationship>][-SwitchId< FabricSwitchProfile.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchProfile.TargetPlatformEnum>][-Type< FabricSwitchProfile.TypeEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< NetworkElementRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchClusterProfile< FabricSwitchClusterProfileRelationship>][-SwitchId< FabricSwitchProfile.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-Type< FabricSwitchProfile.TypeEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -268,6 +268,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -TemplateActions
+
+
+Note :- Use Initialize-IntersightMotemplateActionEntry to create the object of complex type MotemplateActionEntry
+
+```yaml
+Type: System.Collections.Generic.List`1[MotemplateActionEntry]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Type
 Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target.
 
@@ -359,13 +376,23 @@ PS C:\> Set-IntersightFabricSwitchProfile
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
+[Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)
+
+[Initialize-IntersightMotemplateSyncError](./Initialize-IntersightMotemplateSyncError.md)
+
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
 
 [Initialize-IntersightPolicyConfigChange](./Initialize-IntersightPolicyConfigChange.md)
 
 [Initialize-IntersightPolicyConfigChangeContext](./Initialize-IntersightPolicyConfigChangeContext.md)
 
+[Initialize-IntersightPolicyConfigChangeDetailType](./Initialize-IntersightPolicyConfigChangeDetailType.md)
+
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
+
+[Initialize-IntersightPolicyPolicyContextHolder](./Initialize-IntersightPolicyPolicyContextHolder.md)
+
+[Initialize-IntersightPolicyReportedPolicyChange](./Initialize-IntersightPolicyReportedPolicyChange.md)
 
 [Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)
 

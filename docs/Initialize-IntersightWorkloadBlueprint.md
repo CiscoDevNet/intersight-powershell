@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkloadBlueprint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BlueprintDependencies< System.Collections.Generic.List`1[Model.BlueprintBlueprintDefinitionDependency]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkloadBlueprint.ClassIdEnum>][-DefaultVersion< bool>][-Description< string>][-ExternalMeta< bool>][-GeneratedObjectDefinition< System.Collections.Generic.List`1[Model.BlueprintGeneratedObjectMetadata]>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-InputOperationMetadata< System.Collections.Generic.List`1[Model.BlueprintInputOperationType]>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkloadBlueprint.ObjectTypeEnum>][-PlatformType< WorkloadBlueprint.PlatformTypeEnum>][-ResourceDefinition< Model.BlueprintResourceConstraints>][-ServiceItems< System.Collections.Generic.List`1[Model.BlueprintServiceItemDefinition]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkloadBlueprint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedRoles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-BlueprintDependencies< System.Collections.Generic.List`1[Model.BlueprintBlueprintDefinitionDependency]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkloadBlueprint.ClassIdEnum>][-DefaultVersion< bool>][-Description< string>][-ExternalMeta< bool>][-GeneratedObjectDefinition< System.Collections.Generic.List`1[Model.BlueprintGeneratedObjectMetadata]>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-InputOperationMetadata< System.Collections.Generic.List`1[Model.BlueprintInputOperationType]>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkloadBlueprint.ObjectTypeEnum>][-PlatformType< WorkloadBlueprint.PlatformTypeEnum>][-ResourceDefinition< Model.BlueprintResourceConstraints>][-ServiceItems< System.Collections.Generic.List`1[Model.BlueprintServiceItemDefinition]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,24 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssociatedRoles
+An array of relationships to iamRole resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.IamRoleRelationship]
 Parameter Sets: (All)
 Aliases:
 
