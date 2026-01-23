@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NotificationAccountSubscription.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNotificationAccountSubscription", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNotificationAccountSubscription", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNotificationAccountSubscription : GetCmdletBase
     {
         public GetIntersightNotificationAccountSubscription()
@@ -208,7 +208,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New NotificationAccountSubscription.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightNotificationAccountSubscription")]
+    [Cmdlet(VerbsCommon.New, "IntersightNotificationAccountSubscription", SupportsShouldProcess = true)]
     public class NewIntersightNotificationAccountSubscription : NewCmdletBase
     {
         public NewIntersightNotificationAccountSubscription()
@@ -375,7 +375,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove NotificationAccountSubscription.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightNotificationAccountSubscription")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightNotificationAccountSubscription", SupportsShouldProcess = true)]
     public class RemoveIntersightNotificationAccountSubscription : RemoveCmdletBase
     {
         public RemoveIntersightNotificationAccountSubscription()
@@ -387,7 +387,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NotificationAccountSubscription.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNotificationAccountSubscription")]
+    [Cmdlet(VerbsCommon.Set, "IntersightNotificationAccountSubscription", SupportsShouldProcess = true)]
     public class SetIntersightNotificationAccountSubscription : SetCmdletBase
     {
         public SetIntersightNotificationAccountSubscription()

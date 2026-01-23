@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SnmpPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSnmpPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSnmpPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSnmpPolicy : GetCmdletBase
     {
         public GetIntersightSnmpPolicy()
@@ -275,7 +275,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SnmpPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSnmpPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSnmpPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSnmpPolicyInventory : GetCmdletBase
     {
         public GetIntersightSnmpPolicyInventory()
@@ -550,7 +550,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SnmpPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSnmpPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightSnmpPolicy", SupportsShouldProcess = true)]
     public class NewIntersightSnmpPolicy : NewCmdletBase
     {
         public NewIntersightSnmpPolicy()
@@ -804,7 +804,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SnmpPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSnmpPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSnmpPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightSnmpPolicy : RemoveCmdletBase
     {
         public RemoveIntersightSnmpPolicy()
@@ -816,7 +816,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SnmpPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSnmpPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSnmpPolicy", SupportsShouldProcess = true)]
     public class SetIntersightSnmpPolicy : SetCmdletBase
     {
         public SetIntersightSnmpPolicy()

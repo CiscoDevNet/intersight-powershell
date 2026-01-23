@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightWorkspaceFolder
+# Get-IntersightStoragePurePod
 
 ## SYNOPSIS
-Get the WorkspaceFolder
+Get the StoragePurePod
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightWorkspaceFolder [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightStoragePurePod [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightWorkspaceFolder [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightStoragePurePod [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;WorkspaceFolder&apos; resource.
+Read a &apos;StoragePurePod&apos; resource.
 A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -35,27 +35,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightWorkspaceFolder
+PS C:\> $result = Get-IntersightStoragePurePod
 ```
-Above example returns the list of WorkspaceFolder.
+Above example returns the list of StoragePurePod.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightWorkspaceFolder -Name "MoName"
+PS C:\> $result = Get-IntersightStoragePurePod -Name "MoName"
 ```
-Above example returns the WorkspaceFolder matched with name.
+Above example returns the StoragePurePod matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightWorkspaceFolder -Organization $organization
+PS C:\> $result = Get-IntersightStoragePurePod -Organization $organization
 ```
-Above example returns the list of WorkspaceFolder available under the $organization .
+Above example returns the list of StoragePurePod available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightWorkspaceFolder -InlineCount allpages
+PS C:\> $result = Get-IntersightStoragePurePod -InlineCount allpages
 ```
-Above example returns the list of WorkspaceFolder along with count.
+Above example returns the list of StoragePurePod along with count.
 
 ## PARAMETERS
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the WorkspaceFolder.
+Specifies the name of the StoragePurePod.
 
 ```yaml
 Type: String
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the WorkspaceFolder under it.
+Specifies the organization, to fetch the StoragePurePod under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -284,10 +284,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
-
-[New-IntersightWorkspaceFolder](./New-IntersightWorkspaceFolder.md)
-
-[Remove-IntersightWorkspaceFolder](./Remove-IntersightWorkspaceFolder.md)
-
-[Set-IntersightWorkspaceFolder](./Set-IntersightWorkspaceFolder.md)
 

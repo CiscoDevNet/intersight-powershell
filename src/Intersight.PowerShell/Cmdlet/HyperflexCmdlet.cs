@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexAlarm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAlarm", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAlarm", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexAlarm : GetCmdletBase
     {
         public GetIntersightHyperflexAlarm()
@@ -306,7 +306,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexAppCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAppCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAppCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexAppCatalog : GetCmdletBase
     {
         public GetIntersightHyperflexAppCatalog()
@@ -484,7 +484,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexAutoSupportPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAutoSupportPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexAutoSupportPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexAutoSupportPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexAutoSupportPolicy()
@@ -659,7 +659,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexBackupCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexBackupCluster", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexBackupCluster", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexBackupCluster : GetCmdletBase
     {
         public GetIntersightHyperflexBackupCluster()
@@ -822,7 +822,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexCapabilityInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexCapabilityInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexCapabilityInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexCapabilityInfo : GetCmdletBase
     {
         public GetIntersightHyperflexCapabilityInfo()
@@ -975,7 +975,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexCluster", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexCluster", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexCluster : GetCmdletBase
     {
         public GetIntersightHyperflexCluster()
@@ -1492,7 +1492,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterBackupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterBackupPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterBackupPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexClusterBackupPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexClusterBackupPolicy()
@@ -1734,7 +1734,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterBackupPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterBackupPolicyDeployment", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterBackupPolicyDeployment", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexClusterBackupPolicyDeployment : GetCmdletBase
     {
         public GetIntersightHyperflexClusterBackupPolicyDeployment()
@@ -2085,7 +2085,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterBackupPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterBackupPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterBackupPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexClusterBackupPolicyInventory : GetCmdletBase
     {
         public GetIntersightHyperflexClusterBackupPolicyInventory()
@@ -2359,7 +2359,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterHealthCheckExecutionSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterHealthCheckExecutionSnapshot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterHealthCheckExecutionSnapshot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexClusterHealthCheckExecutionSnapshot : GetCmdletBase
     {
         public GetIntersightHyperflexClusterHealthCheckExecutionSnapshot()
@@ -2533,7 +2533,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterNetworkPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexClusterNetworkPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexClusterNetworkPolicy()
@@ -2724,7 +2724,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexClusterProfile : GetCmdletBase
     {
         public GetIntersightHyperflexClusterProfile()
@@ -3242,7 +3242,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterReplicationNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterReplicationNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterReplicationNetworkPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexClusterReplicationNetworkPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexClusterReplicationNetworkPolicy()
@@ -3419,7 +3419,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterReplicationNetworkPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexClusterReplicationNetworkPolicyDeployment : GetCmdletBase
     {
         public GetIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
@@ -3661,7 +3661,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexClusterStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterStoragePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexClusterStoragePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexClusterStoragePolicy : GetCmdletBase
     {
         public GetIntersightHyperflexClusterStoragePolicy()
@@ -3837,7 +3837,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexConfigResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexConfigResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexConfigResult : GetCmdletBase
     {
         public GetIntersightHyperflexConfigResult()
@@ -4035,7 +4035,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexConfigResultEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexConfigResultEntry", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexConfigResultEntry", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexConfigResultEntry : GetCmdletBase
     {
         public GetIntersightHyperflexConfigResultEntry()
@@ -4221,7 +4221,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexDataProtectionPeer.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDataProtectionPeer", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDataProtectionPeer", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexDataProtectionPeer : GetCmdletBase
     {
         public GetIntersightHyperflexDataProtectionPeer()
@@ -4364,7 +4364,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexDatastoreStatistic.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDatastoreStatistic", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDatastoreStatistic", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexDatastoreStatistic : GetCmdletBase
     {
         public GetIntersightHyperflexDatastoreStatistic()
@@ -4673,7 +4673,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexDevicePackageDownloadState.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDevicePackageDownloadState", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDevicePackageDownloadState", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexDevicePackageDownloadState : GetCmdletBase
     {
         public GetIntersightHyperflexDevicePackageDownloadState()
@@ -4837,7 +4837,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDrive", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexDrive", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexDrive : GetCmdletBase
     {
         public GetIntersightHyperflexDrive()
@@ -5154,7 +5154,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexEncryption.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexEncryption", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexEncryption", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexEncryption : GetCmdletBase
     {
         public GetIntersightHyperflexEncryption()
@@ -5306,7 +5306,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexExtFcStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexExtFcStoragePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexExtFcStoragePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexExtFcStoragePolicy : GetCmdletBase
     {
         public GetIntersightHyperflexExtFcStoragePolicy()
@@ -5473,7 +5473,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexExtIscsiStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexExtIscsiStoragePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexExtIscsiStoragePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexExtIscsiStoragePolicy : GetCmdletBase
     {
         public GetIntersightHyperflexExtIscsiStoragePolicy()
@@ -5639,7 +5639,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexFeatureLimitExternal.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexFeatureLimitExternal", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexFeatureLimitExternal", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexFeatureLimitExternal : GetCmdletBase
     {
         public GetIntersightHyperflexFeatureLimitExternal()
@@ -5770,7 +5770,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexFeatureLimitInternal.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexFeatureLimitInternal", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexFeatureLimitInternal", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexFeatureLimitInternal : GetCmdletBase
     {
         public GetIntersightHyperflexFeatureLimitInternal()
@@ -5901,7 +5901,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHealth.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealth", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealth", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexHealth : GetCmdletBase
     {
         public GetIntersightHyperflexHealth()
@@ -6088,7 +6088,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexHealthCheckDefinition : GetCmdletBase
     {
         public GetIntersightHyperflexHealthCheckDefinition()
@@ -6375,7 +6375,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckExecution.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckExecution", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckExecution", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexHealthCheckExecution : GetCmdletBase
     {
         public GetIntersightHyperflexHealthCheckExecution()
@@ -6671,7 +6671,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckExecutionSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckExecutionSnapshot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckExecutionSnapshot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexHealthCheckExecutionSnapshot : GetCmdletBase
     {
         public GetIntersightHyperflexHealthCheckExecutionSnapshot()
@@ -6967,7 +6967,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckPackageChecksum.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckPackageChecksum", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckPackageChecksum", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexHealthCheckPackageChecksum : GetCmdletBase
     {
         public GetIntersightHyperflexHealthCheckPackageChecksum()
@@ -7141,7 +7141,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHealthCheckSchedulePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckSchedulePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHealthCheckSchedulePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexHealthCheckSchedulePolicy : GetCmdletBase
     {
         public GetIntersightHyperflexHealthCheckSchedulePolicy()
@@ -7337,7 +7337,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHwCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHwCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHwCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexHwCatalog : GetCmdletBase
     {
         public GetIntersightHyperflexHwCatalog()
@@ -7468,7 +7468,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHxdpVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxdpVersion", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHxdpVersion", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexHxdpVersion : GetCmdletBase
     {
         public GetIntersightHyperflexHxdpVersion()
@@ -7609,7 +7609,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHypervisorHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHypervisorHost", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHypervisorHost", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexHypervisorHost : GetCmdletBase
     {
         public GetIntersightHyperflexHypervisorHost()
@@ -8022,7 +8022,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexHypervisorVirtualMachine.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHypervisorVirtualMachine", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexHypervisorVirtualMachine", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexHypervisorVirtualMachine : GetCmdletBase
     {
         public GetIntersightHyperflexHypervisorVirtualMachine()
@@ -8400,7 +8400,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexInitiatorGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexInitiatorGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexInitiatorGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexInitiatorGroup : GetCmdletBase
     {
         public GetIntersightHyperflexInitiatorGroup()
@@ -8600,7 +8600,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexIscsiNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexIscsiNetwork", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexIscsiNetwork", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexIscsiNetwork : GetCmdletBase
     {
         public GetIntersightHyperflexIscsiNetwork()
@@ -8852,7 +8852,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexKeyEncryptionKey.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexKeyEncryptionKey", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexKeyEncryptionKey", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexKeyEncryptionKey : GetCmdletBase
     {
         public GetIntersightHyperflexKeyEncryptionKey()
@@ -9103,7 +9103,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexLicense.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexLicense", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexLicense", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexLicense : GetCmdletBase
     {
         public GetIntersightHyperflexLicense()
@@ -9312,7 +9312,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexLocalCredentialPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexLocalCredentialPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexLocalCredentialPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexLocalCredentialPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexLocalCredentialPolicy()
@@ -9542,7 +9542,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexLun.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexLun", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexLun", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexLun : GetCmdletBase
     {
         public GetIntersightHyperflexLun()
@@ -9859,7 +9859,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexNode : GetCmdletBase
     {
         public GetIntersightHyperflexNode()
@@ -10162,7 +10162,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexNodeConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNodeConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNodeConfigPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexNodeConfigPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexNodeConfigPolicy()
@@ -10330,7 +10330,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNodeProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexNodeProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexNodeProfile : GetCmdletBase
     {
         public GetIntersightHyperflexNodeProfile()
@@ -10623,7 +10623,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexProtectedCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexProtectedCluster", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexProtectedCluster", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexProtectedCluster : GetCmdletBase
     {
         public GetIntersightHyperflexProtectedCluster()
@@ -10874,7 +10874,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexProxySettingPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexProxySettingPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexProxySettingPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexProxySettingPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexProxySettingPolicy()
@@ -11082,7 +11082,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexReduceReSync.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexReduceReSync", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexReduceReSync", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexReduceReSync : GetCmdletBase
     {
         public GetIntersightHyperflexReduceReSync()
@@ -11234,7 +11234,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexServerFirmwareVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerFirmwareVersion", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerFirmwareVersion", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexServerFirmwareVersion : GetCmdletBase
     {
         public GetIntersightHyperflexServerFirmwareVersion()
@@ -11365,7 +11365,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexServerFirmwareVersionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerFirmwareVersionEntry", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerFirmwareVersionEntry", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexServerFirmwareVersionEntry : GetCmdletBase
     {
         public GetIntersightHyperflexServerFirmwareVersionEntry()
@@ -11518,7 +11518,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexServerModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerModel", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServerModel", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexServerModel : GetCmdletBase
     {
         public GetIntersightHyperflexServerModel()
@@ -11649,7 +11649,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexServiceAuthToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServiceAuthToken", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexServiceAuthToken", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexServiceAuthToken : GetCmdletBase
     {
         public GetIntersightHyperflexServiceAuthToken()
@@ -11845,7 +11845,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareDistributionComponent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionComponent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionComponent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexSoftwareDistributionComponent : GetCmdletBase
     {
         public GetIntersightHyperflexSoftwareDistributionComponent()
@@ -12031,7 +12031,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareDistributionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionEntry", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionEntry", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexSoftwareDistributionEntry : GetCmdletBase
     {
         public GetIntersightHyperflexSoftwareDistributionEntry()
@@ -12173,7 +12173,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareDistributionVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionVersion", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareDistributionVersion", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexSoftwareDistributionVersion : GetCmdletBase
     {
         public GetIntersightHyperflexSoftwareDistributionVersion()
@@ -12315,7 +12315,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexSoftwareVersionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareVersionPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSoftwareVersionPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexSoftwareVersionPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexSoftwareVersionPolicy()
@@ -12536,7 +12536,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexStartReduceReSync.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexStartReduceReSync", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexStartReduceReSync", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexStartReduceReSync : GetCmdletBase
     {
         public GetIntersightHyperflexStartReduceReSync()
@@ -12668,7 +12668,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexStorageContainer.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexStorageContainer", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexStorageContainer", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexStorageContainer : GetCmdletBase
     {
         public GetIntersightHyperflexStorageContainer()
@@ -12988,7 +12988,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexSysConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSysConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexSysConfigPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexSysConfigPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexSysConfigPolicy()
@@ -13165,7 +13165,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexTarget.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexTarget", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexTarget", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexTarget : GetCmdletBase
     {
         public GetIntersightHyperflexTarget()
@@ -13387,7 +13387,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexUcsmConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexUcsmConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexUcsmConfigPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexUcsmConfigPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexUcsmConfigPolicy()
@@ -13553,7 +13553,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexVcenterConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVcenterConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVcenterConfigPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexVcenterConfigPolicy : GetCmdletBase
     {
         public GetIntersightHyperflexVcenterConfigPolicy()
@@ -13772,7 +13772,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexVmBackupInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmBackupInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmBackupInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexVmBackupInfo : GetCmdletBase
     {
         public GetIntersightHyperflexVmBackupInfo()
@@ -14007,7 +14007,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexVmImportOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmImportOperation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmImportOperation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexVmImportOperation : GetCmdletBase
     {
         public GetIntersightHyperflexVmImportOperation()
@@ -14148,7 +14148,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexVmRestoreOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmRestoreOperation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmRestoreOperation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexVmRestoreOperation : GetCmdletBase
     {
         public GetIntersightHyperflexVmRestoreOperation()
@@ -14344,7 +14344,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexVmSnapshotInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmSnapshotInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVmSnapshotInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexVmSnapshotInfo : GetCmdletBase
     {
         public GetIntersightHyperflexVmSnapshotInfo()
@@ -14611,7 +14611,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexVolume.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVolume", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexVolume", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexVolume : GetCmdletBase
     {
         public GetIntersightHyperflexVolume()
@@ -14907,7 +14907,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HyperflexWitnessConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexWitnessConfiguration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHyperflexWitnessConfiguration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHyperflexWitnessConfiguration : GetCmdletBase
     {
         public GetIntersightHyperflexWitnessConfiguration()
@@ -15103,7 +15103,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexAppCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexAppCatalog")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexAppCatalog", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexAppCatalog : NewCmdletBase
     {
         public NewIntersightHyperflexAppCatalog()
@@ -15280,7 +15280,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexAutoSupportPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexAutoSupportPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexAutoSupportPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexAutoSupportPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexAutoSupportPolicy()
@@ -15424,7 +15424,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexCapabilityInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexCapabilityInfo")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexCapabilityInfo", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexCapabilityInfo : NewCmdletBase
     {
         public NewIntersightHyperflexCapabilityInfo()
@@ -15536,7 +15536,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexClusterBackupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterBackupPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterBackupPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexClusterBackupPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexClusterBackupPolicy()
@@ -15757,7 +15757,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexClusterBackupPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterBackupPolicyDeployment")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterBackupPolicyDeployment", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexClusterBackupPolicyDeployment : NewCmdletBase
     {
         public NewIntersightHyperflexClusterBackupPolicyDeployment()
@@ -15917,7 +15917,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexClusterNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterNetworkPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterNetworkPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexClusterNetworkPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexClusterNetworkPolicy()
@@ -16117,7 +16117,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterProfile", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexClusterProfile : NewCmdletBase
     {
         public NewIntersightHyperflexClusterProfile()
@@ -16654,7 +16654,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexClusterReplicationNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterReplicationNetworkPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterReplicationNetworkPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexClusterReplicationNetworkPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexClusterReplicationNetworkPolicy()
@@ -16820,7 +16820,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexClusterReplicationNetworkPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexClusterReplicationNetworkPolicyDeployment : NewCmdletBase
     {
         public NewIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
@@ -16941,7 +16941,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexClusterStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterStoragePolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexClusterStoragePolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexClusterStoragePolicy : NewCmdletBase
     {
         public NewIntersightHyperflexClusterStoragePolicy()
@@ -17096,7 +17096,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexExtFcStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexExtFcStoragePolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexExtFcStoragePolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexExtFcStoragePolicy : NewCmdletBase
     {
         public NewIntersightHyperflexExtFcStoragePolicy()
@@ -17262,7 +17262,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexExtIscsiStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexExtIscsiStoragePolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexExtIscsiStoragePolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexExtIscsiStoragePolicy : NewCmdletBase
     {
         public NewIntersightHyperflexExtIscsiStoragePolicy()
@@ -17417,7 +17417,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexFeatureLimitExternal.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexFeatureLimitExternal")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexFeatureLimitExternal", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexFeatureLimitExternal : NewCmdletBase
     {
         public NewIntersightHyperflexFeatureLimitExternal()
@@ -17517,7 +17517,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexFeatureLimitInternal.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexFeatureLimitInternal")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexFeatureLimitInternal", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexFeatureLimitInternal : NewCmdletBase
     {
         public NewIntersightHyperflexFeatureLimitInternal()
@@ -17617,7 +17617,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexHealthCheckDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHealthCheckDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHealthCheckDefinition", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexHealthCheckDefinition : NewCmdletBase
     {
         public NewIntersightHyperflexHealthCheckDefinition()
@@ -17853,7 +17853,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexHealthCheckPackageChecksum.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHealthCheckPackageChecksum")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHealthCheckPackageChecksum", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexHealthCheckPackageChecksum : NewCmdletBase
     {
         public NewIntersightHyperflexHealthCheckPackageChecksum()
@@ -17986,7 +17986,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexHxdpVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHxdpVersion")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexHxdpVersion", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexHxdpVersion : NewCmdletBase
     {
         public NewIntersightHyperflexHxdpVersion()
@@ -18086,7 +18086,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexKeyEncryptionKey.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexKeyEncryptionKey")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexKeyEncryptionKey", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexKeyEncryptionKey : NewCmdletBase
     {
         public NewIntersightHyperflexKeyEncryptionKey()
@@ -18276,7 +18276,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexLocalCredentialPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexLocalCredentialPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexLocalCredentialPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexLocalCredentialPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexLocalCredentialPolicy()
@@ -18445,7 +18445,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexNodeConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexNodeConfigPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexNodeConfigPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexNodeConfigPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexNodeConfigPolicy()
@@ -18622,7 +18622,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexNodeProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexNodeProfile", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexNodeProfile : NewCmdletBase
     {
         public NewIntersightHyperflexNodeProfile()
@@ -18904,7 +18904,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexProxySettingPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexProxySettingPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexProxySettingPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexProxySettingPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexProxySettingPolicy()
@@ -19071,7 +19071,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexReduceReSync.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexReduceReSync")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexReduceReSync", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexReduceReSync : NewCmdletBase
     {
         public NewIntersightHyperflexReduceReSync()
@@ -19162,7 +19162,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexServerFirmwareVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerFirmwareVersion")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerFirmwareVersion", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexServerFirmwareVersion : NewCmdletBase
     {
         public NewIntersightHyperflexServerFirmwareVersion()
@@ -19262,7 +19262,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexServerFirmwareVersionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerFirmwareVersionEntry")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerFirmwareVersionEntry", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexServerFirmwareVersionEntry : NewCmdletBase
     {
         public NewIntersightHyperflexServerFirmwareVersionEntry()
@@ -19384,7 +19384,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexServerModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerModel")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServerModel", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexServerModel : NewCmdletBase
     {
         public NewIntersightHyperflexServerModel()
@@ -19484,7 +19484,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexServiceAuthToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServiceAuthToken")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexServiceAuthToken", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexServiceAuthToken : NewCmdletBase
     {
         public NewIntersightHyperflexServiceAuthToken()
@@ -19619,7 +19619,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareDistributionComponent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionComponent")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionComponent", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexSoftwareDistributionComponent : NewCmdletBase
     {
         public NewIntersightHyperflexSoftwareDistributionComponent()
@@ -19774,7 +19774,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareDistributionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionEntry")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionEntry", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexSoftwareDistributionEntry : NewCmdletBase
     {
         public NewIntersightHyperflexSoftwareDistributionEntry()
@@ -19885,7 +19885,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareDistributionVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionVersion")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareDistributionVersion", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexSoftwareDistributionVersion : NewCmdletBase
     {
         public NewIntersightHyperflexSoftwareDistributionVersion()
@@ -19996,7 +19996,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexSoftwareVersionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareVersionPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSoftwareVersionPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexSoftwareVersionPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexSoftwareVersionPolicy()
@@ -20176,7 +20176,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexStartReduceReSync.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexStartReduceReSync")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexStartReduceReSync", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexStartReduceReSync : NewCmdletBase
     {
         public NewIntersightHyperflexStartReduceReSync()
@@ -20287,7 +20287,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexSysConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSysConfigPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexSysConfigPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexSysConfigPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexSysConfigPolicy()
@@ -20453,7 +20453,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexUcsmConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexUcsmConfigPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexUcsmConfigPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexUcsmConfigPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexUcsmConfigPolicy()
@@ -20608,7 +20608,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexVcenterConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexVcenterConfigPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexVcenterConfigPolicy", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexVcenterConfigPolicy : NewCmdletBase
     {
         public NewIntersightHyperflexVcenterConfigPolicy()
@@ -20786,7 +20786,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexVmImportOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexVmImportOperation")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexVmImportOperation", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexVmImportOperation : NewCmdletBase
     {
         public NewIntersightHyperflexVmImportOperation()
@@ -20886,7 +20886,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HyperflexVmRestoreOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHyperflexVmRestoreOperation")]
+    [Cmdlet(VerbsCommon.New, "IntersightHyperflexVmRestoreOperation", SupportsShouldProcess = true)]
     public class NewIntersightHyperflexVmRestoreOperation : NewCmdletBase
     {
         public NewIntersightHyperflexVmRestoreOperation()
@@ -21041,7 +21041,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexAppCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexAppCatalog")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexAppCatalog", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexAppCatalog : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexAppCatalog()
@@ -21053,7 +21053,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexAutoSupportPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexAutoSupportPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexAutoSupportPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexAutoSupportPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexAutoSupportPolicy()
@@ -21065,7 +21065,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexBackupCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexBackupCluster")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexBackupCluster", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexBackupCluster : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexBackupCluster()
@@ -21077,7 +21077,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexCapabilityInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexCapabilityInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexCapabilityInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexCapabilityInfo : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexCapabilityInfo()
@@ -21089,7 +21089,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterBackupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterBackupPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterBackupPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexClusterBackupPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexClusterBackupPolicy()
@@ -21101,7 +21101,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterBackupPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterBackupPolicyDeployment")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterBackupPolicyDeployment", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexClusterBackupPolicyDeployment : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexClusterBackupPolicyDeployment()
@@ -21113,7 +21113,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterBackupPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterBackupPolicyInventory")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterBackupPolicyInventory", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexClusterBackupPolicyInventory : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexClusterBackupPolicyInventory()
@@ -21125,7 +21125,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterNetworkPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexClusterNetworkPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexClusterNetworkPolicy()
@@ -21137,7 +21137,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexClusterProfile : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexClusterProfile()
@@ -21149,7 +21149,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterReplicationNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterReplicationNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterReplicationNetworkPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexClusterReplicationNetworkPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexClusterReplicationNetworkPolicy()
@@ -21161,7 +21161,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterReplicationNetworkPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexClusterReplicationNetworkPolicyDeployment : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
@@ -21173,7 +21173,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexClusterStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterStoragePolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexClusterStoragePolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexClusterStoragePolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexClusterStoragePolicy()
@@ -21185,7 +21185,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexExtFcStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexExtFcStoragePolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexExtFcStoragePolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexExtFcStoragePolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexExtFcStoragePolicy()
@@ -21197,7 +21197,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexExtIscsiStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexExtIscsiStoragePolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexExtIscsiStoragePolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexExtIscsiStoragePolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexExtIscsiStoragePolicy()
@@ -21209,7 +21209,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexFeatureLimitExternal.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexFeatureLimitExternal")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexFeatureLimitExternal", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexFeatureLimitExternal : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexFeatureLimitExternal()
@@ -21221,7 +21221,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexFeatureLimitInternal.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexFeatureLimitInternal")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexFeatureLimitInternal", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexFeatureLimitInternal : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexFeatureLimitInternal()
@@ -21233,7 +21233,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexHealthCheckDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHealthCheckDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHealthCheckDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexHealthCheckDefinition : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexHealthCheckDefinition()
@@ -21245,7 +21245,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexHealthCheckPackageChecksum.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHealthCheckPackageChecksum")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHealthCheckPackageChecksum", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexHealthCheckPackageChecksum : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexHealthCheckPackageChecksum()
@@ -21257,7 +21257,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexHxdpVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHxdpVersion")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexHxdpVersion", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexHxdpVersion : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexHxdpVersion()
@@ -21269,7 +21269,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexKeyEncryptionKey.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexKeyEncryptionKey")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexKeyEncryptionKey", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexKeyEncryptionKey : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexKeyEncryptionKey()
@@ -21281,7 +21281,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexLocalCredentialPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexLocalCredentialPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexLocalCredentialPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexLocalCredentialPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexLocalCredentialPolicy()
@@ -21293,7 +21293,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexNodeConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexNodeConfigPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexNodeConfigPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexNodeConfigPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexNodeConfigPolicy()
@@ -21305,7 +21305,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexNodeProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexNodeProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexNodeProfile : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexNodeProfile()
@@ -21317,7 +21317,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexProxySettingPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexProxySettingPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexProxySettingPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexProxySettingPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexProxySettingPolicy()
@@ -21329,7 +21329,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexReduceReSync.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexReduceReSync")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexReduceReSync", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexReduceReSync : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexReduceReSync()
@@ -21341,7 +21341,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexServerFirmwareVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServerFirmwareVersion")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServerFirmwareVersion", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexServerFirmwareVersion : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexServerFirmwareVersion()
@@ -21353,7 +21353,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexServerFirmwareVersionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServerFirmwareVersionEntry")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServerFirmwareVersionEntry", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexServerFirmwareVersionEntry : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexServerFirmwareVersionEntry()
@@ -21365,7 +21365,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexServerModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServerModel")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServerModel", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexServerModel : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexServerModel()
@@ -21377,7 +21377,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexServiceAuthToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServiceAuthToken")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexServiceAuthToken", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexServiceAuthToken : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexServiceAuthToken()
@@ -21389,7 +21389,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareDistributionComponent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionComponent")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionComponent", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexSoftwareDistributionComponent : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexSoftwareDistributionComponent()
@@ -21401,7 +21401,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareDistributionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionEntry")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionEntry", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexSoftwareDistributionEntry : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexSoftwareDistributionEntry()
@@ -21413,7 +21413,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareDistributionVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionVersion")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareDistributionVersion", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexSoftwareDistributionVersion : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexSoftwareDistributionVersion()
@@ -21425,7 +21425,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexSoftwareVersionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareVersionPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSoftwareVersionPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexSoftwareVersionPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexSoftwareVersionPolicy()
@@ -21437,7 +21437,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexSysConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSysConfigPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexSysConfigPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexSysConfigPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexSysConfigPolicy()
@@ -21449,7 +21449,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexUcsmConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexUcsmConfigPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexUcsmConfigPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexUcsmConfigPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexUcsmConfigPolicy()
@@ -21461,7 +21461,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexVcenterConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVcenterConfigPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVcenterConfigPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexVcenterConfigPolicy : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexVcenterConfigPolicy()
@@ -21473,7 +21473,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexVmBackupInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmBackupInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmBackupInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexVmBackupInfo : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexVmBackupInfo()
@@ -21485,7 +21485,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexVmImportOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmImportOperation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmImportOperation", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexVmImportOperation : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexVmImportOperation()
@@ -21497,7 +21497,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexVmRestoreOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmRestoreOperation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmRestoreOperation", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexVmRestoreOperation : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexVmRestoreOperation()
@@ -21509,7 +21509,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HyperflexVmSnapshotInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmSnapshotInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHyperflexVmSnapshotInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightHyperflexVmSnapshotInfo : RemoveCmdletBase
     {
         public RemoveIntersightHyperflexVmSnapshotInfo()
@@ -21521,7 +21521,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexAppCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexAppCatalog")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexAppCatalog", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexAppCatalog : SetCmdletBase
     {
         public SetIntersightHyperflexAppCatalog()
@@ -21687,7 +21687,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexAutoSupportPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexAutoSupportPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexAutoSupportPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexAutoSupportPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexAutoSupportPolicy()
@@ -21820,7 +21820,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexCapabilityInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexCapabilityInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexCapabilityInfo", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexCapabilityInfo : SetCmdletBase
     {
         public SetIntersightHyperflexCapabilityInfo()
@@ -21921,7 +21921,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexCluster")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexCluster", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexCluster : SetCmdletBase
     {
         public SetIntersightHyperflexCluster()
@@ -22096,7 +22096,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterBackupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterBackupPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterBackupPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexClusterBackupPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexClusterBackupPolicy()
@@ -22306,7 +22306,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterBackupPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterBackupPolicyDeployment")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterBackupPolicyDeployment", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexClusterBackupPolicyDeployment : SetCmdletBase
     {
         public SetIntersightHyperflexClusterBackupPolicyDeployment()
@@ -22455,7 +22455,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterNetworkPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexClusterNetworkPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexClusterNetworkPolicy()
@@ -22644,7 +22644,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterProfile", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexClusterProfile : SetCmdletBase
     {
         public SetIntersightHyperflexClusterProfile()
@@ -23170,7 +23170,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterReplicationNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterReplicationNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterReplicationNetworkPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexClusterReplicationNetworkPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexClusterReplicationNetworkPolicy()
@@ -23325,7 +23325,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterReplicationNetworkPolicyDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterReplicationNetworkPolicyDeployment", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexClusterReplicationNetworkPolicyDeployment : SetCmdletBase
     {
         public SetIntersightHyperflexClusterReplicationNetworkPolicyDeployment()
@@ -23435,7 +23435,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexClusterStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterStoragePolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexClusterStoragePolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexClusterStoragePolicy : SetCmdletBase
     {
         public SetIntersightHyperflexClusterStoragePolicy()
@@ -23579,7 +23579,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexDrive")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexDrive", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexDrive : SetCmdletBase
     {
         public SetIntersightHyperflexDrive()
@@ -23664,7 +23664,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexExtFcStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexExtFcStoragePolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexExtFcStoragePolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexExtFcStoragePolicy : SetCmdletBase
     {
         public SetIntersightHyperflexExtFcStoragePolicy()
@@ -23819,7 +23819,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexExtIscsiStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexExtIscsiStoragePolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexExtIscsiStoragePolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexExtIscsiStoragePolicy : SetCmdletBase
     {
         public SetIntersightHyperflexExtIscsiStoragePolicy()
@@ -23963,7 +23963,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexFeatureLimitExternal.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexFeatureLimitExternal")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexFeatureLimitExternal", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexFeatureLimitExternal : SetCmdletBase
     {
         public SetIntersightHyperflexFeatureLimitExternal()
@@ -24052,7 +24052,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexFeatureLimitInternal.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexFeatureLimitInternal")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexFeatureLimitInternal", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexFeatureLimitInternal : SetCmdletBase
     {
         public SetIntersightHyperflexFeatureLimitInternal()
@@ -24141,7 +24141,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexHealthCheckDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHealthCheckDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHealthCheckDefinition", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexHealthCheckDefinition : SetCmdletBase
     {
         public SetIntersightHyperflexHealthCheckDefinition()
@@ -24366,7 +24366,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexHealthCheckPackageChecksum.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHealthCheckPackageChecksum")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHealthCheckPackageChecksum", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexHealthCheckPackageChecksum : SetCmdletBase
     {
         public SetIntersightHyperflexHealthCheckPackageChecksum()
@@ -24488,7 +24488,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexHxdpVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxdpVersion")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHxdpVersion", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexHxdpVersion : SetCmdletBase
     {
         public SetIntersightHyperflexHxdpVersion()
@@ -24577,7 +24577,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexHypervisorHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHypervisorHost")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHypervisorHost", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexHypervisorHost : SetCmdletBase
     {
         public SetIntersightHyperflexHypervisorHost()
@@ -24838,7 +24838,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexHypervisorVirtualMachine.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHypervisorVirtualMachine")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexHypervisorVirtualMachine", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexHypervisorVirtualMachine : SetCmdletBase
     {
         public SetIntersightHyperflexHypervisorVirtualMachine()
@@ -25104,7 +25104,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexInitiatorGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexInitiatorGroup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexInitiatorGroup", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexInitiatorGroup : SetCmdletBase
     {
         public SetIntersightHyperflexInitiatorGroup()
@@ -25182,7 +25182,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexIscsiNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexIscsiNetwork")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexIscsiNetwork", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexIscsiNetwork : SetCmdletBase
     {
         public SetIntersightHyperflexIscsiNetwork()
@@ -25262,7 +25262,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexKeyEncryptionKey.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexKeyEncryptionKey")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexKeyEncryptionKey", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexKeyEncryptionKey : SetCmdletBase
     {
         public SetIntersightHyperflexKeyEncryptionKey()
@@ -25441,7 +25441,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexLocalCredentialPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexLocalCredentialPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexLocalCredentialPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexLocalCredentialPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexLocalCredentialPolicy()
@@ -25599,7 +25599,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexLun.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexLun")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexLun", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexLun : SetCmdletBase
     {
         public SetIntersightHyperflexLun()
@@ -25684,7 +25684,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexNodeConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexNodeConfigPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexNodeConfigPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexNodeConfigPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexNodeConfigPolicy()
@@ -25850,7 +25850,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexNodeProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexNodeProfile", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexNodeProfile : SetCmdletBase
     {
         public SetIntersightHyperflexNodeProfile()
@@ -26121,7 +26121,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexProxySettingPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexProxySettingPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexProxySettingPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexProxySettingPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexProxySettingPolicy()
@@ -26277,7 +26277,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexReduceReSync.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexReduceReSync")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexReduceReSync", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexReduceReSync : SetCmdletBase
     {
         public SetIntersightHyperflexReduceReSync()
@@ -26357,7 +26357,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexServerFirmwareVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerFirmwareVersion")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerFirmwareVersion", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexServerFirmwareVersion : SetCmdletBase
     {
         public SetIntersightHyperflexServerFirmwareVersion()
@@ -26446,7 +26446,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexServerFirmwareVersionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerFirmwareVersionEntry")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerFirmwareVersionEntry", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexServerFirmwareVersionEntry : SetCmdletBase
     {
         public SetIntersightHyperflexServerFirmwareVersionEntry()
@@ -26557,7 +26557,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexServerModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerModel")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServerModel", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexServerModel : SetCmdletBase
     {
         public SetIntersightHyperflexServerModel()
@@ -26646,7 +26646,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexServiceAuthToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServiceAuthToken")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexServiceAuthToken", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexServiceAuthToken : SetCmdletBase
     {
         public SetIntersightHyperflexServiceAuthToken()
@@ -26770,7 +26770,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareDistributionComponent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionComponent")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionComponent", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexSoftwareDistributionComponent : SetCmdletBase
     {
         public SetIntersightHyperflexSoftwareDistributionComponent()
@@ -26914,7 +26914,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareDistributionEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionEntry")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionEntry", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexSoftwareDistributionEntry : SetCmdletBase
     {
         public SetIntersightHyperflexSoftwareDistributionEntry()
@@ -27014,7 +27014,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareDistributionVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionVersion")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareDistributionVersion", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexSoftwareDistributionVersion : SetCmdletBase
     {
         public SetIntersightHyperflexSoftwareDistributionVersion()
@@ -27114,7 +27114,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexSoftwareVersionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareVersionPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSoftwareVersionPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexSoftwareVersionPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexSoftwareVersionPolicy()
@@ -27283,7 +27283,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexStorageContainer.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexStorageContainer")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexStorageContainer", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexStorageContainer : SetCmdletBase
     {
         public SetIntersightHyperflexStorageContainer()
@@ -27371,7 +27371,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexSysConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSysConfigPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexSysConfigPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexSysConfigPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexSysConfigPolicy()
@@ -27526,7 +27526,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexTarget.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexTarget")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexTarget", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexTarget : SetCmdletBase
     {
         public SetIntersightHyperflexTarget()
@@ -27606,7 +27606,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexUcsmConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexUcsmConfigPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexUcsmConfigPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexUcsmConfigPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexUcsmConfigPolicy()
@@ -27750,7 +27750,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexVcenterConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexVcenterConfigPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexVcenterConfigPolicy", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexVcenterConfigPolicy : SetCmdletBase
     {
         public SetIntersightHyperflexVcenterConfigPolicy()
@@ -27917,7 +27917,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HyperflexVolume.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexVolume")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHyperflexVolume", SupportsShouldProcess = true)]
     public class SetIntersightHyperflexVolume : SetCmdletBase
     {
         public SetIntersightHyperflexVolume()

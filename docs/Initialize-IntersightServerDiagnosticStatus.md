@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightServerDiagnosticStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ServerDiagnosticStatus.ClassIdEnum>][-DiagnosticsType< ServerDiagnosticStatus.DiagnosticsTypeEnum>][-Moid< string>][-ObjectType< ServerDiagnosticStatus.ObjectTypeEnum>][-Server< Model.ComputePhysicalRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightServerDiagnosticStatus [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Checksum< Model.ConnectorFileChecksum>][-ClassId< ServerDiagnosticStatus.ClassIdEnum>][-DiagnosticsType< ServerDiagnosticStatus.DiagnosticsTypeEnum>][-DownloadError< string>][-DownloadProgress< long>][-DownloadRetries< long>][-Moid< string>][-ObjectType< ServerDiagnosticStatus.ObjectTypeEnum>][-Server< Model.ComputePhysicalRelationship>][-Sha256checksum< byte[]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,23 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Checksum
+The checksum of the downloaded file as calculated by the download plugin after successfully downloading a file.
+
+Note :- Use Initialize-IntersightConnectorFileChecksum to create the object of complex type ConnectorFileChecksum
+
+```yaml
+Type: Model.ConnectorFileChecksum
 Parameter Sets: (All)
 Aliases:
 
@@ -59,6 +76,51 @@ Type of diagnostics to be performed on the server hardware components.\n* `Quick
 
 ```yaml
 Type: ServerDiagnosticStatus.DiagnosticsTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DownloadError
+Any error encountered. Set to empty when download is in progress or completed.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DownloadProgress
+The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DownloadRetries
+The number of retries the plugin attempted before succeeding or failing the download.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -107,6 +169,23 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.ComputePhysicalRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Sha256checksum
+The sha256checksum of the downloaded file as calculated by the download plugin after successfully downloading a file.
+
+Note :- Use Initialize-Intersightbyte[] to create the object of complex type byte[]
+
+```yaml
+Type: byte[]
 Parameter Sets: (All)
 Aliases:
 
@@ -191,4 +270,8 @@ PS C:\> Initialize-IntersightServerDiagnosticStatus
 
 ## RELATED LINKS
 
+[Initialize-IntersightConnectorFileChecksum](./Initialize-IntersightConnectorFileChecksum.md)
+
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)

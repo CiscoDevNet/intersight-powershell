@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicEthAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthAdapterPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthAdapterPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicEthAdapterPolicy : GetCmdletBase
     {
         public GetIntersightVnicEthAdapterPolicy()
@@ -239,7 +239,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicEthAdapterPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthAdapterPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthAdapterPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicEthAdapterPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicEthAdapterPolicyInventory()
@@ -479,7 +479,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicEthIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthIf", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthIf", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicEthIf : GetCmdletBase
     {
         public GetIntersightVnicEthIf()
@@ -908,7 +908,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicEthIfInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthIfInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthIfInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicEthIfInventory : GetCmdletBase
     {
         public GetIntersightVnicEthIfInventory()
@@ -1337,7 +1337,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicEthNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthNetworkPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicEthNetworkPolicy : GetCmdletBase
     {
         public GetIntersightVnicEthNetworkPolicy()
@@ -1501,7 +1501,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicEthNetworkPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthNetworkPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthNetworkPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicEthNetworkPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicEthNetworkPolicyInventory()
@@ -1676,7 +1676,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicEthQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthQosPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthQosPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicEthQosPolicy : GetCmdletBase
     {
         public GetIntersightVnicEthQosPolicy()
@@ -1894,7 +1894,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicEthQosPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthQosPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthQosPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicEthQosPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicEthQosPolicyInventory()
@@ -2123,7 +2123,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicEthVethInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthVethInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthVethInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicEthVethInventory : GetCmdletBase
     {
         public GetIntersightVnicEthVethInventory()
@@ -2319,7 +2319,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicEthVnicInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthVnicInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicEthVnicInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicEthVnicInventory : GetCmdletBase
     {
         public GetIntersightVnicEthVnicInventory()
@@ -2504,7 +2504,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicFcAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcAdapterPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcAdapterPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicFcAdapterPolicy : GetCmdletBase
     {
         public GetIntersightVnicFcAdapterPolicy()
@@ -2718,7 +2718,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicFcAdapterPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcAdapterPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcAdapterPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicFcAdapterPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicFcAdapterPolicyInventory()
@@ -2943,7 +2943,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicFcIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcIf", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcIf", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicFcIf : GetCmdletBase
     {
         public GetIntersightVnicFcIf()
@@ -3289,7 +3289,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicFcIfInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcIfInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcIfInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicFcIfInventory : GetCmdletBase
     {
         public GetIntersightVnicFcIfInventory()
@@ -3635,7 +3635,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicFcNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcNetworkPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicFcNetworkPolicy : GetCmdletBase
     {
         public GetIntersightVnicFcNetworkPolicy()
@@ -3788,7 +3788,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicFcNetworkPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcNetworkPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcNetworkPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicFcNetworkPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicFcNetworkPolicyInventory()
@@ -3952,7 +3952,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicFcQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcQosPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcQosPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicFcQosPolicy : GetCmdletBase
     {
         public GetIntersightVnicFcQosPolicy()
@@ -4159,7 +4159,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicFcQosPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcQosPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcQosPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicFcQosPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicFcQosPolicyInventory()
@@ -4377,7 +4377,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicFcVethInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcVethInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcVethInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicFcVethInventory : GetCmdletBase
     {
         public GetIntersightVnicFcVethInventory()
@@ -4562,7 +4562,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicFcVhbaPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcVhbaPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicFcVhbaPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicFcVhbaPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicFcVhbaPolicyInventory()
@@ -4747,7 +4747,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicIscsiAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiAdapterPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiAdapterPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicIscsiAdapterPolicy : GetCmdletBase
     {
         public GetIntersightVnicIscsiAdapterPolicy()
@@ -4932,7 +4932,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicIscsiAdapterPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiAdapterPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiAdapterPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicIscsiAdapterPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicIscsiAdapterPolicyInventory()
@@ -5128,7 +5128,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicIscsiBootPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiBootPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiBootPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicIscsiBootPolicy : GetCmdletBase
     {
         public GetIntersightVnicIscsiBootPolicy()
@@ -5394,7 +5394,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicIscsiBootPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiBootPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiBootPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicIscsiBootPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicIscsiBootPolicyInventory()
@@ -5671,7 +5671,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicIscsiStaticTargetPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiStaticTargetPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiStaticTargetPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicIscsiStaticTargetPolicy : GetCmdletBase
     {
         public GetIntersightVnicIscsiStaticTargetPolicy()
@@ -5868,7 +5868,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicIscsiStaticTargetPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiStaticTargetPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicIscsiStaticTargetPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicIscsiStaticTargetPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicIscsiStaticTargetPolicyInventory()
@@ -6076,7 +6076,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicLanConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicLanConnectivityPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicLanConnectivityPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicLanConnectivityPolicy : GetCmdletBase
     {
         public GetIntersightVnicLanConnectivityPolicy()
@@ -6296,7 +6296,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicLanConnectivityPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicLanConnectivityPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicLanConnectivityPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicLanConnectivityPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicLanConnectivityPolicyInventory()
@@ -6526,7 +6526,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicLanSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicLanSettings", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicLanSettings", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicLanSettings : GetCmdletBase
     {
         public GetIntersightVnicLanSettings()
@@ -6700,7 +6700,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicLcpStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicLcpStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicLcpStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicLcpStatus : GetCmdletBase
     {
         public GetIntersightVnicLcpStatus()
@@ -6853,7 +6853,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicSanConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicSanConnectivityPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicSanConnectivityPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicSanConnectivityPolicy : GetCmdletBase
     {
         public GetIntersightVnicSanConnectivityPolicy()
@@ -7062,7 +7062,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicSanConnectivityPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicSanConnectivityPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicSanConnectivityPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicSanConnectivityPolicyInventory : GetCmdletBase
     {
         public GetIntersightVnicSanConnectivityPolicyInventory()
@@ -7281,7 +7281,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicSanSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicSanSettings", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicSanSettings", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicSanSettings : GetCmdletBase
     {
         public GetIntersightVnicSanSettings()
@@ -7456,7 +7456,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicScpStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicScpStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicScpStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicScpStatus : GetCmdletBase
     {
         public GetIntersightVnicScpStatus()
@@ -7609,7 +7609,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicVhbaTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicVhbaTemplate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicVhbaTemplate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicVhbaTemplate : GetCmdletBase
     {
         public GetIntersightVnicVhbaTemplate()
@@ -7906,7 +7906,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicVifIdPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicVifIdPool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicVifIdPool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicVifIdPool : GetCmdletBase
     {
         public GetIntersightVnicVifIdPool()
@@ -8048,7 +8048,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicVnicTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVnicVnicTemplate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicVnicTemplate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVnicVnicTemplate : GetCmdletBase
     {
         public GetIntersightVnicVnicTemplate()
@@ -8360,7 +8360,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicEthAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicEthAdapterPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicEthAdapterPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicEthAdapterPolicy : NewCmdletBase
     {
         public NewIntersightVnicEthAdapterPolicy()
@@ -8658,7 +8658,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicEthIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicEthIf")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicEthIf", SupportsShouldProcess = true)]
     public class NewIntersightVnicEthIf : NewCmdletBase
     {
         public NewIntersightVnicEthIf()
@@ -9006,7 +9006,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicEthNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicEthNetworkPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicEthNetworkPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicEthNetworkPolicy : NewCmdletBase
     {
         public NewIntersightVnicEthNetworkPolicy()
@@ -9139,7 +9139,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicEthQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicEthQosPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicEthQosPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicEthQosPolicy : NewCmdletBase
     {
         public NewIntersightVnicEthQosPolicy()
@@ -9316,7 +9316,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicFcAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicFcAdapterPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicFcAdapterPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicFcAdapterPolicy : NewCmdletBase
     {
         public NewIntersightVnicFcAdapterPolicy()
@@ -9559,7 +9559,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicFcIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicFcIf")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicFcIf", SupportsShouldProcess = true)]
     public class NewIntersightVnicFcIf : NewCmdletBase
     {
         public NewIntersightVnicFcIf()
@@ -9844,7 +9844,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicFcNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicFcNetworkPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicFcNetworkPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicFcNetworkPolicy : NewCmdletBase
     {
         public NewIntersightVnicFcNetworkPolicy()
@@ -9966,7 +9966,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicFcQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicFcQosPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicFcQosPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicFcQosPolicy : NewCmdletBase
     {
         public NewIntersightVnicFcQosPolicy()
@@ -10122,7 +10122,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicIscsiAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicIscsiAdapterPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicIscsiAdapterPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicIscsiAdapterPolicy : NewCmdletBase
     {
         public NewIntersightVnicIscsiAdapterPolicy()
@@ -10266,7 +10266,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicIscsiBootPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicIscsiBootPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicIscsiBootPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicIscsiBootPolicy : NewCmdletBase
     {
         public NewIntersightVnicIscsiBootPolicy()
@@ -10531,7 +10531,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicIscsiStaticTargetPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicIscsiStaticTargetPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicIscsiStaticTargetPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicIscsiStaticTargetPolicy : NewCmdletBase
     {
         public NewIntersightVnicIscsiStaticTargetPolicy()
@@ -10697,7 +10697,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicLanConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicLanConnectivityPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicLanConnectivityPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicLanConnectivityPolicy : NewCmdletBase
     {
         public NewIntersightVnicLanConnectivityPolicy()
@@ -10896,7 +10896,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicSanConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicSanConnectivityPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicSanConnectivityPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVnicSanConnectivityPolicy : NewCmdletBase
     {
         public NewIntersightVnicSanConnectivityPolicy()
@@ -11084,7 +11084,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicVhbaTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicVhbaTemplate")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicVhbaTemplate", SupportsShouldProcess = true)]
     public class NewIntersightVnicVhbaTemplate : NewCmdletBase
     {
         public NewIntersightVnicVhbaTemplate()
@@ -11330,7 +11330,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VnicVnicTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVnicVnicTemplate")]
+    [Cmdlet(VerbsCommon.New, "IntersightVnicVnicTemplate", SupportsShouldProcess = true)]
     public class NewIntersightVnicVnicTemplate : NewCmdletBase
     {
         public NewIntersightVnicVnicTemplate()
@@ -11631,7 +11631,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicEthAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicEthAdapterPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicEthAdapterPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicEthAdapterPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicEthAdapterPolicy()
@@ -11643,7 +11643,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicEthIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicEthIf")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicEthIf", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicEthIf : RemoveCmdletBase
     {
         public RemoveIntersightVnicEthIf()
@@ -11655,7 +11655,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicEthNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicEthNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicEthNetworkPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicEthNetworkPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicEthNetworkPolicy()
@@ -11667,7 +11667,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicEthQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicEthQosPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicEthQosPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicEthQosPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicEthQosPolicy()
@@ -11679,7 +11679,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicFcAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicFcAdapterPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicFcAdapterPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicFcAdapterPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicFcAdapterPolicy()
@@ -11691,7 +11691,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicFcIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicFcIf")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicFcIf", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicFcIf : RemoveCmdletBase
     {
         public RemoveIntersightVnicFcIf()
@@ -11703,7 +11703,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicFcNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicFcNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicFcNetworkPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicFcNetworkPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicFcNetworkPolicy()
@@ -11715,7 +11715,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicFcQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicFcQosPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicFcQosPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicFcQosPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicFcQosPolicy()
@@ -11727,7 +11727,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicIscsiAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicIscsiAdapterPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicIscsiAdapterPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicIscsiAdapterPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicIscsiAdapterPolicy()
@@ -11739,7 +11739,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicIscsiBootPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicIscsiBootPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicIscsiBootPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicIscsiBootPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicIscsiBootPolicy()
@@ -11751,7 +11751,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicIscsiStaticTargetPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicIscsiStaticTargetPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicIscsiStaticTargetPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicIscsiStaticTargetPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicIscsiStaticTargetPolicy()
@@ -11763,7 +11763,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicLanConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicLanConnectivityPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicLanConnectivityPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicLanConnectivityPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicLanConnectivityPolicy()
@@ -11775,7 +11775,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicSanConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicSanConnectivityPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicSanConnectivityPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicSanConnectivityPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVnicSanConnectivityPolicy()
@@ -11787,7 +11787,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicVhbaTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicVhbaTemplate")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicVhbaTemplate", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicVhbaTemplate : RemoveCmdletBase
     {
         public RemoveIntersightVnicVhbaTemplate()
@@ -11799,7 +11799,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VnicVnicTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVnicVnicTemplate")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVnicVnicTemplate", SupportsShouldProcess = true)]
     public class RemoveIntersightVnicVnicTemplate : RemoveCmdletBase
     {
         public RemoveIntersightVnicVnicTemplate()
@@ -11811,7 +11811,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicEthAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicEthAdapterPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicEthAdapterPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicEthAdapterPolicy : SetCmdletBase
     {
         public SetIntersightVnicEthAdapterPolicy()
@@ -12098,7 +12098,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicEthIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicEthIf")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicEthIf", SupportsShouldProcess = true)]
     public class SetIntersightVnicEthIf : SetCmdletBase
     {
         public SetIntersightVnicEthIf()
@@ -12435,7 +12435,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicEthNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicEthNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicEthNetworkPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicEthNetworkPolicy : SetCmdletBase
     {
         public SetIntersightVnicEthNetworkPolicy()
@@ -12557,7 +12557,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicEthQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicEthQosPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicEthQosPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicEthQosPolicy : SetCmdletBase
     {
         public SetIntersightVnicEthQosPolicy()
@@ -12723,7 +12723,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicFcAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicFcAdapterPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicFcAdapterPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicFcAdapterPolicy : SetCmdletBase
     {
         public SetIntersightVnicFcAdapterPolicy()
@@ -12955,7 +12955,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicFcIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicFcIf")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicFcIf", SupportsShouldProcess = true)]
     public class SetIntersightVnicFcIf : SetCmdletBase
     {
         public SetIntersightVnicFcIf()
@@ -13229,7 +13229,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicFcNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicFcNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicFcNetworkPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicFcNetworkPolicy : SetCmdletBase
     {
         public SetIntersightVnicFcNetworkPolicy()
@@ -13340,7 +13340,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicFcQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicFcQosPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicFcQosPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicFcQosPolicy : SetCmdletBase
     {
         public SetIntersightVnicFcQosPolicy()
@@ -13485,7 +13485,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicIscsiAdapterPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicIscsiAdapterPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicIscsiAdapterPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicIscsiAdapterPolicy : SetCmdletBase
     {
         public SetIntersightVnicIscsiAdapterPolicy()
@@ -13618,7 +13618,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicIscsiBootPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicIscsiBootPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicIscsiBootPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicIscsiBootPolicy : SetCmdletBase
     {
         public SetIntersightVnicIscsiBootPolicy()
@@ -13872,7 +13872,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicIscsiStaticTargetPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicIscsiStaticTargetPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicIscsiStaticTargetPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicIscsiStaticTargetPolicy : SetCmdletBase
     {
         public SetIntersightVnicIscsiStaticTargetPolicy()
@@ -14027,7 +14027,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicLanConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicLanConnectivityPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicLanConnectivityPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicLanConnectivityPolicy : SetCmdletBase
     {
         public SetIntersightVnicLanConnectivityPolicy()
@@ -14215,7 +14215,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicSanConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicSanConnectivityPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicSanConnectivityPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVnicSanConnectivityPolicy : SetCmdletBase
     {
         public SetIntersightVnicSanConnectivityPolicy()
@@ -14392,7 +14392,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicVhbaTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicVhbaTemplate")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicVhbaTemplate", SupportsShouldProcess = true)]
     public class SetIntersightVnicVhbaTemplate : SetCmdletBase
     {
         public SetIntersightVnicVhbaTemplate()
@@ -14627,7 +14627,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicVifIdPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicVifIdPool")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicVifIdPool", SupportsShouldProcess = true)]
     public class SetIntersightVnicVifIdPool : SetCmdletBase
     {
         public SetIntersightVnicVifIdPool()
@@ -14727,7 +14727,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VnicVnicTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicVnicTemplate")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVnicVnicTemplate", SupportsShouldProcess = true)]
     public class SetIntersightVnicVnicTemplate : SetCmdletBase
     {
         public SetIntersightVnicVnicTemplate()

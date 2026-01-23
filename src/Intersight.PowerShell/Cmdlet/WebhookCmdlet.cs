@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WebhookEndpoint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWebhookEndpoint", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWebhookEndpoint", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWebhookEndpoint : GetCmdletBase
     {
         public GetIntersightWebhookEndpoint()
@@ -208,7 +208,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WebhookSchema.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWebhookSchema", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWebhookSchema", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWebhookSchema : GetCmdletBase
     {
         public GetIntersightWebhookSchema()
@@ -382,7 +382,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WebhookEndpoint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWebhookEndpoint")]
+    [Cmdlet(VerbsCommon.New, "IntersightWebhookEndpoint", SupportsShouldProcess = true)]
     public class NewIntersightWebhookEndpoint : NewCmdletBase
     {
         public NewIntersightWebhookEndpoint()
@@ -539,7 +539,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WebhookSchema.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWebhookSchema")]
+    [Cmdlet(VerbsCommon.New, "IntersightWebhookSchema", SupportsShouldProcess = true)]
     public class NewIntersightWebhookSchema : NewCmdletBase
     {
         public NewIntersightWebhookSchema()
@@ -662,7 +662,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WebhookEndpoint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWebhookEndpoint")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWebhookEndpoint", SupportsShouldProcess = true)]
     public class RemoveIntersightWebhookEndpoint : RemoveCmdletBase
     {
         public RemoveIntersightWebhookEndpoint()
@@ -674,7 +674,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WebhookSchema.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWebhookSchema")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWebhookSchema", SupportsShouldProcess = true)]
     public class RemoveIntersightWebhookSchema : RemoveCmdletBase
     {
         public RemoveIntersightWebhookSchema()
@@ -686,7 +686,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WebhookEndpoint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWebhookEndpoint")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWebhookEndpoint", SupportsShouldProcess = true)]
     public class SetIntersightWebhookEndpoint : SetCmdletBase
     {
         public SetIntersightWebhookEndpoint()
@@ -832,7 +832,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WebhookSchema.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWebhookSchema")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWebhookSchema", SupportsShouldProcess = true)]
     public class SetIntersightWebhookSchema : SetCmdletBase
     {
         public SetIntersightWebhookSchema()

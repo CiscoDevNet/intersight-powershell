@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceAppOpStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceAppOpStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceAppOpStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceAppOpStatus : GetCmdletBase
     {
         public GetIntersightApplianceAppOpStatus()
@@ -251,7 +251,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceAppStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceAppStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceAppStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceAppStatus : GetCmdletBase
     {
         public GetIntersightApplianceAppStatus()
@@ -493,7 +493,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceAutoRmaPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceAutoRmaPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceAutoRmaPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceAutoRmaPolicy : GetCmdletBase
     {
         public GetIntersightApplianceAutoRmaPolicy()
@@ -634,7 +634,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceBackup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceBackup : GetCmdletBase
     {
         public GetIntersightApplianceBackup()
@@ -908,7 +908,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceBackupMonitor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackupMonitor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackupMonitor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceBackupMonitor : GetCmdletBase
     {
         public GetIntersightApplianceBackupMonitor()
@@ -1071,7 +1071,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceBackupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackupPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackupPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceBackupPolicy : GetCmdletBase
     {
         public GetIntersightApplianceBackupPolicy()
@@ -1334,7 +1334,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceBackupRotateData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackupRotateData", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceBackupRotateData", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceBackupRotateData : GetCmdletBase
     {
         public GetIntersightApplianceBackupRotateData()
@@ -1541,7 +1541,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceCertificateSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceCertificateSetting", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceCertificateSetting", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceCertificateSetting : GetCmdletBase
     {
         public GetIntersightApplianceCertificateSetting()
@@ -1682,7 +1682,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceClusterInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceClusterInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceClusterInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceClusterInfo : GetCmdletBase
     {
         public GetIntersightApplianceClusterInfo()
@@ -2032,7 +2032,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceClusterInstall.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceClusterInstall", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceClusterInstall", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceClusterInstall : GetCmdletBase
     {
         public GetIntersightApplianceClusterInstall()
@@ -2255,7 +2255,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceClusterReplaceNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceClusterReplaceNode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceClusterReplaceNode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceClusterReplaceNode : GetCmdletBase
     {
         public GetIntersightApplianceClusterReplaceNode()
@@ -2511,7 +2511,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceClusterWorkerNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceClusterWorkerNode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceClusterWorkerNode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceClusterWorkerNode : GetCmdletBase
     {
         public GetIntersightApplianceClusterWorkerNode()
@@ -2767,7 +2767,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceDataExportPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDataExportPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDataExportPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceDataExportPolicy : GetCmdletBase
     {
         public GetIntersightApplianceDataExportPolicy()
@@ -2931,7 +2931,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceDeviceCertificate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDeviceCertificate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDeviceCertificate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceDeviceCertificate : GetCmdletBase
     {
         public GetIntersightApplianceDeviceCertificate()
@@ -3141,7 +3141,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceDeviceClaim.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDeviceClaim", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDeviceClaim", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceDeviceClaim : GetCmdletBase
     {
         public GetIntersightApplianceDeviceClaim()
@@ -3403,7 +3403,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceDeviceClusterInstall.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDeviceClusterInstall", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDeviceClusterInstall", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceDeviceClusterInstall : GetCmdletBase
     {
         public GetIntersightApplianceDeviceClusterInstall()
@@ -3614,7 +3614,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceDeviceState.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDeviceState", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDeviceState", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceDeviceState : GetCmdletBase
     {
         public GetIntersightApplianceDeviceState()
@@ -3924,7 +3924,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceDeviceUpgradePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDeviceUpgradePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDeviceUpgradePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceDeviceUpgradePolicy : GetCmdletBase
     {
         public GetIntersightApplianceDeviceUpgradePolicy()
@@ -4165,7 +4165,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceDiagSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDiagSetting", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceDiagSetting", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceDiagSetting : GetCmdletBase
     {
         public GetIntersightApplianceDiagSetting()
@@ -4328,7 +4328,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceExternalSyslogSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceExternalSyslogSetting", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceExternalSyslogSetting", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceExternalSyslogSetting : GetCmdletBase
     {
         public GetIntersightApplianceExternalSyslogSetting()
@@ -4546,7 +4546,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceFileGateway.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceFileGateway", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceFileGateway", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceFileGateway : GetCmdletBase
     {
         public GetIntersightApplianceFileGateway()
@@ -4786,7 +4786,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceFileSystemOpStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceFileSystemOpStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceFileSystemOpStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceFileSystemOpStatus : GetCmdletBase
     {
         public GetIntersightApplianceFileSystemOpStatus()
@@ -4971,7 +4971,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceFileSystemStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceFileSystemStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceFileSystemStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceFileSystemStatus : GetCmdletBase
     {
         public GetIntersightApplianceFileSystemStatus()
@@ -5146,7 +5146,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceFqdnUpdate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceFqdnUpdate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceFqdnUpdate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceFqdnUpdate : GetCmdletBase
     {
         public GetIntersightApplianceFqdnUpdate()
@@ -5320,7 +5320,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceGroupOpStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceGroupOpStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceGroupOpStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceGroupOpStatus : GetCmdletBase
     {
         public GetIntersightApplianceGroupOpStatus()
@@ -5484,7 +5484,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceGroupStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceGroupStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceGroupStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceGroupStatus : GetCmdletBase
     {
         public GetIntersightApplianceGroupStatus()
@@ -5648,7 +5648,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceImageBundle.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceImageBundle", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceImageBundle", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceImageBundle : GetCmdletBase
     {
         public GetIntersightApplianceImageBundle()
@@ -5952,7 +5952,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceMetaManifest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceMetaManifest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceMetaManifest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceMetaManifest : GetCmdletBase
     {
         public GetIntersightApplianceMetaManifest()
@@ -6148,7 +6148,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceMetricsConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceMetricsConfig", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceMetricsConfig", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceMetricsConfig : GetCmdletBase
     {
         public GetIntersightApplianceMetricsConfig()
@@ -6399,7 +6399,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceMetricsIngestionUtilization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceMetricsIngestionUtilization", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceMetricsIngestionUtilization", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceMetricsIngestionUtilization : GetCmdletBase
     {
         public GetIntersightApplianceMetricsIngestionUtilization()
@@ -6563,7 +6563,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceNetworkLinkStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceNetworkLinkStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceNetworkLinkStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceNetworkLinkStatus : GetCmdletBase
     {
         public GetIntersightApplianceNetworkLinkStatus()
@@ -6737,7 +6737,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceNodeInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceNodeInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceNodeInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceNodeInfo : GetCmdletBase
     {
         public GetIntersightApplianceNodeInfo()
@@ -6913,7 +6913,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceNodeOpStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceNodeOpStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceNodeOpStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceNodeOpStatus : GetCmdletBase
     {
         public GetIntersightApplianceNodeOpStatus()
@@ -6964,6 +6964,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Current running deployment size for the Intersight Appliance node. Eg. small, medium, large etc."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeploymentSize
         {
             get;
             set;
@@ -7145,7 +7156,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceNodeStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceNodeStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceNodeStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceNodeStatus : GetCmdletBase
     {
         public GetIntersightApplianceNodeStatus()
@@ -7343,7 +7354,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceReleaseNote.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceReleaseNote", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceReleaseNote", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceReleaseNote : GetCmdletBase
     {
         public GetIntersightApplianceReleaseNote()
@@ -7474,7 +7485,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceRemoteFileImport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceRemoteFileImport", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceRemoteFileImport", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceRemoteFileImport : GetCmdletBase
     {
         public GetIntersightApplianceRemoteFileImport()
@@ -7692,7 +7703,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceRestore.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceRestore", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceRestore", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceRestore : GetCmdletBase
     {
         public GetIntersightApplianceRestore()
@@ -7955,7 +7966,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceSetupInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceSetupInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceSetupInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceSetupInfo : GetCmdletBase
     {
         public GetIntersightApplianceSetupInfo()
@@ -8175,7 +8186,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceSystemInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceSystemInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceSystemInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceSystemInfo : GetCmdletBase
     {
         public GetIntersightApplianceSystemInfo()
@@ -8415,7 +8426,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceSystemOpStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceSystemOpStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceSystemOpStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceSystemOpStatus : GetCmdletBase
     {
         public GetIntersightApplianceSystemOpStatus()
@@ -8580,7 +8591,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceSystemStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceSystemStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceSystemStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceSystemStatus : GetCmdletBase
     {
         public GetIntersightApplianceSystemStatus()
@@ -8735,7 +8746,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceUpgrade", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceUpgrade", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceUpgrade : GetCmdletBase
     {
         public GetIntersightApplianceUpgrade()
@@ -9092,7 +9103,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceUpgradePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceUpgradePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceUpgradePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceUpgradePolicy : GetCmdletBase
     {
         public GetIntersightApplianceUpgradePolicy()
@@ -9344,7 +9355,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApplianceUpgradeTracker.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApplianceUpgradeTracker", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApplianceUpgradeTracker", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApplianceUpgradeTracker : GetCmdletBase
     {
         public GetIntersightApplianceUpgradeTracker()
@@ -9507,7 +9518,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceAutoRmaPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceAutoRmaPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceAutoRmaPolicy", SupportsShouldProcess = true)]
     public class NewIntersightApplianceAutoRmaPolicy : NewCmdletBase
     {
         public NewIntersightApplianceAutoRmaPolicy()
@@ -9607,7 +9618,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceBackup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceBackup")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceBackup", SupportsShouldProcess = true)]
     public class NewIntersightApplianceBackup : NewCmdletBase
     {
         public NewIntersightApplianceBackup()
@@ -9780,7 +9791,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceBackupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceBackupPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceBackupPolicy", SupportsShouldProcess = true)]
     public class NewIntersightApplianceBackupPolicy : NewCmdletBase
     {
         public NewIntersightApplianceBackupPolicy()
@@ -9992,7 +10003,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceClusterInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceClusterInfo")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceClusterInfo", SupportsShouldProcess = true)]
     public class NewIntersightApplianceClusterInfo : NewCmdletBase
     {
         public NewIntersightApplianceClusterInfo()
@@ -10271,7 +10282,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceClusterReplaceNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceClusterReplaceNode")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceClusterReplaceNode", SupportsShouldProcess = true)]
     public class NewIntersightApplianceClusterReplaceNode : NewCmdletBase
     {
         public NewIntersightApplianceClusterReplaceNode()
@@ -10406,7 +10417,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceClusterWorkerNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceClusterWorkerNode")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceClusterWorkerNode", SupportsShouldProcess = true)]
     public class NewIntersightApplianceClusterWorkerNode : NewCmdletBase
     {
         public NewIntersightApplianceClusterWorkerNode()
@@ -10541,7 +10552,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceClusterWorkerNodeReplace.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceClusterWorkerNodeReplace")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceClusterWorkerNodeReplace", SupportsShouldProcess = true)]
     public class NewIntersightApplianceClusterWorkerNodeReplace : NewCmdletBase
     {
         public NewIntersightApplianceClusterWorkerNodeReplace()
@@ -10631,7 +10642,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceClusterWorkerNodeReuse.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceClusterWorkerNodeReuse")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceClusterWorkerNodeReuse", SupportsShouldProcess = true)]
     public class NewIntersightApplianceClusterWorkerNodeReuse : NewCmdletBase
     {
         public NewIntersightApplianceClusterWorkerNodeReuse()
@@ -10721,7 +10732,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceDataExportPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceDataExportPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceDataExportPolicy", SupportsShouldProcess = true)]
     public class NewIntersightApplianceDataExportPolicy : NewCmdletBase
     {
         public NewIntersightApplianceDataExportPolicy()
@@ -10824,7 +10835,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceDeviceClaim.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceDeviceClaim")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceDeviceClaim", SupportsShouldProcess = true)]
     public class NewIntersightApplianceDeviceClaim : NewCmdletBase
     {
         public NewIntersightApplianceDeviceClaim()
@@ -10985,7 +10996,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceDiagSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceDiagSetting")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceDiagSetting", SupportsShouldProcess = true)]
     public class NewIntersightApplianceDiagSetting : NewCmdletBase
     {
         public NewIntersightApplianceDiagSetting()
@@ -11097,7 +11108,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceExternalSyslogSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceExternalSyslogSetting")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceExternalSyslogSetting", SupportsShouldProcess = true)]
     public class NewIntersightApplianceExternalSyslogSetting : NewCmdletBase
     {
         public NewIntersightApplianceExternalSyslogSetting()
@@ -11274,7 +11285,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceFqdnUpdate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceFqdnUpdate")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceFqdnUpdate", SupportsShouldProcess = true)]
     public class NewIntersightApplianceFqdnUpdate : NewCmdletBase
     {
         public NewIntersightApplianceFqdnUpdate()
@@ -11367,7 +11378,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceRemoteFileImport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceRemoteFileImport")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceRemoteFileImport", SupportsShouldProcess = true)]
     public class NewIntersightApplianceRemoteFileImport : NewCmdletBase
     {
         public NewIntersightApplianceRemoteFileImport()
@@ -11524,7 +11535,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ApplianceRestore.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightApplianceRestore")]
+    [Cmdlet(VerbsCommon.New, "IntersightApplianceRestore", SupportsShouldProcess = true)]
     public class NewIntersightApplianceRestore : NewCmdletBase
     {
         public NewIntersightApplianceRestore()
@@ -11696,7 +11707,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ApplianceBackup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceBackup")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceBackup", SupportsShouldProcess = true)]
     public class RemoveIntersightApplianceBackup : RemoveCmdletBase
     {
         public RemoveIntersightApplianceBackup()
@@ -11708,7 +11719,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ApplianceClusterInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceClusterInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceClusterInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightApplianceClusterInfo : RemoveCmdletBase
     {
         public RemoveIntersightApplianceClusterInfo()
@@ -11720,7 +11731,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ApplianceExternalSyslogSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceExternalSyslogSetting")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceExternalSyslogSetting", SupportsShouldProcess = true)]
     public class RemoveIntersightApplianceExternalSyslogSetting : RemoveCmdletBase
     {
         public RemoveIntersightApplianceExternalSyslogSetting()
@@ -11732,7 +11743,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ApplianceRestore.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceRestore")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceRestore", SupportsShouldProcess = true)]
     public class RemoveIntersightApplianceRestore : RemoveCmdletBase
     {
         public RemoveIntersightApplianceRestore()
@@ -11744,7 +11755,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ApplianceUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceUpgrade")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightApplianceUpgrade", SupportsShouldProcess = true)]
     public class RemoveIntersightApplianceUpgrade : RemoveCmdletBase
     {
         public RemoveIntersightApplianceUpgrade()
@@ -11756,7 +11767,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceAutoRmaPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceAutoRmaPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceAutoRmaPolicy", SupportsShouldProcess = true)]
     public class SetIntersightApplianceAutoRmaPolicy : SetCmdletBase
     {
         public SetIntersightApplianceAutoRmaPolicy()
@@ -11845,7 +11856,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceBackupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceBackupPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceBackupPolicy", SupportsShouldProcess = true)]
     public class SetIntersightApplianceBackupPolicy : SetCmdletBase
     {
         public SetIntersightApplianceBackupPolicy()
@@ -12046,7 +12057,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceCertificateSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceCertificateSetting")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceCertificateSetting", SupportsShouldProcess = true)]
     public class SetIntersightApplianceCertificateSetting : SetCmdletBase
     {
         public SetIntersightApplianceCertificateSetting()
@@ -12125,7 +12136,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceClusterInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceClusterInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceClusterInfo", SupportsShouldProcess = true)]
     public class SetIntersightApplianceClusterInfo : SetCmdletBase
     {
         public SetIntersightApplianceClusterInfo()
@@ -12393,7 +12404,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceClusterInstall.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceClusterInstall")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceClusterInstall", SupportsShouldProcess = true)]
     public class SetIntersightApplianceClusterInstall : SetCmdletBase
     {
         public SetIntersightApplianceClusterInstall()
@@ -12494,7 +12505,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceClusterReplaceNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceClusterReplaceNode")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceClusterReplaceNode", SupportsShouldProcess = true)]
     public class SetIntersightApplianceClusterReplaceNode : SetCmdletBase
     {
         public SetIntersightApplianceClusterReplaceNode()
@@ -12618,7 +12629,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceClusterWorkerNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceClusterWorkerNode")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceClusterWorkerNode", SupportsShouldProcess = true)]
     public class SetIntersightApplianceClusterWorkerNode : SetCmdletBase
     {
         public SetIntersightApplianceClusterWorkerNode()
@@ -12742,7 +12753,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceDataExportPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceDataExportPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceDataExportPolicy", SupportsShouldProcess = true)]
     public class SetIntersightApplianceDataExportPolicy : SetCmdletBase
     {
         public SetIntersightApplianceDataExportPolicy()
@@ -12834,7 +12845,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceDeviceClaim.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceDeviceClaim")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceDeviceClaim", SupportsShouldProcess = true)]
     public class SetIntersightApplianceDeviceClaim : SetCmdletBase
     {
         public SetIntersightApplianceDeviceClaim()
@@ -12984,7 +12995,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceDeviceUpgradePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceDeviceUpgradePolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceDeviceUpgradePolicy", SupportsShouldProcess = true)]
     public class SetIntersightApplianceDeviceUpgradePolicy : SetCmdletBase
     {
         public SetIntersightApplianceDeviceUpgradePolicy()
@@ -13163,7 +13174,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceDiagSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceDiagSetting")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceDiagSetting", SupportsShouldProcess = true)]
     public class SetIntersightApplianceDiagSetting : SetCmdletBase
     {
         public SetIntersightApplianceDiagSetting()
@@ -13264,7 +13275,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceExternalSyslogSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceExternalSyslogSetting")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceExternalSyslogSetting", SupportsShouldProcess = true)]
     public class SetIntersightApplianceExternalSyslogSetting : SetCmdletBase
     {
         public SetIntersightApplianceExternalSyslogSetting()
@@ -13430,7 +13441,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceFqdnUpdate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceFqdnUpdate")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceFqdnUpdate", SupportsShouldProcess = true)]
     public class SetIntersightApplianceFqdnUpdate : SetCmdletBase
     {
         public SetIntersightApplianceFqdnUpdate()
@@ -13512,7 +13523,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceMetricsConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceMetricsConfig")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceMetricsConfig", SupportsShouldProcess = true)]
     public class SetIntersightApplianceMetricsConfig : SetCmdletBase
     {
         public SetIntersightApplianceMetricsConfig()
@@ -13601,7 +13612,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceSetupInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceSetupInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceSetupInfo", SupportsShouldProcess = true)]
     public class SetIntersightApplianceSetupInfo : SetCmdletBase
     {
         public SetIntersightApplianceSetupInfo()
@@ -13719,7 +13730,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceUpgrade")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceUpgrade", SupportsShouldProcess = true)]
     public class SetIntersightApplianceUpgrade : SetCmdletBase
     {
         public SetIntersightApplianceUpgrade()
@@ -13854,7 +13865,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ApplianceUpgradePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightApplianceUpgradePolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightApplianceUpgradePolicy", SupportsShouldProcess = true)]
     public class SetIntersightApplianceUpgradePolicy : SetCmdletBase
     {
         public SetIntersightApplianceUpgradePolicy()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BiosBootDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosBootDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosBootDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBiosBootDevice : GetCmdletBase
     {
         public GetIntersightBiosBootDevice()
@@ -283,7 +283,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BiosBootMode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosBootMode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosBootMode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBiosBootMode : GetCmdletBase
     {
         public GetIntersightBiosBootMode()
@@ -490,7 +490,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BiosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBiosPolicy : GetCmdletBase
     {
         public GetIntersightBiosPolicy()
@@ -5802,7 +5802,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BiosSystemBootOrder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosSystemBootOrder", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosSystemBootOrder", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBiosSystemBootOrder : GetCmdletBase
     {
         public GetIntersightBiosSystemBootOrder()
@@ -6076,7 +6076,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BiosTokenSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosTokenSettings", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosTokenSettings", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBiosTokenSettings : GetCmdletBase
     {
         public GetIntersightBiosTokenSettings()
@@ -6305,7 +6305,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BiosUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosUnit", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosUnit", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBiosUnit : GetCmdletBase
     {
         public GetIntersightBiosUnit()
@@ -6612,7 +6612,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BiosVfSelectMemoryRasConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBiosVfSelectMemoryRasConfiguration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBiosVfSelectMemoryRasConfiguration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBiosVfSelectMemoryRasConfiguration : GetCmdletBase
     {
         public GetIntersightBiosVfSelectMemoryRasConfiguration()
@@ -6830,7 +6830,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New BiosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightBiosPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightBiosPolicy", SupportsShouldProcess = true)]
     public class NewIntersightBiosPolicy : NewCmdletBase
     {
         public NewIntersightBiosPolicy()
@@ -12111,7 +12111,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove BiosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightBiosPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightBiosPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightBiosPolicy : RemoveCmdletBase
     {
         public RemoveIntersightBiosPolicy()
@@ -12123,7 +12123,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BiosBootMode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBiosBootMode")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBiosBootMode", SupportsShouldProcess = true)]
     public class SetIntersightBiosBootMode : SetCmdletBase
     {
         public SetIntersightBiosBootMode()
@@ -12228,7 +12228,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BiosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBiosPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBiosPolicy", SupportsShouldProcess = true)]
     public class SetIntersightBiosPolicy : SetCmdletBase
     {
         public SetIntersightBiosPolicy()
@@ -17498,7 +17498,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BiosUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBiosUnit")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBiosUnit", SupportsShouldProcess = true)]
     public class SetIntersightBiosUnit : SetCmdletBase
     {
         public SetIntersightBiosUnit()

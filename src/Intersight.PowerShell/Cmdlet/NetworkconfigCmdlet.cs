@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkconfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkconfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkconfigPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkconfigPolicy : GetCmdletBase
     {
         public GetIntersightNetworkconfigPolicy()
@@ -273,7 +273,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkconfigPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkconfigPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkconfigPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkconfigPolicyInventory : GetCmdletBase
     {
         public GetIntersightNetworkconfigPolicyInventory()
@@ -535,7 +535,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New NetworkconfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightNetworkconfigPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightNetworkconfigPolicy", SupportsShouldProcess = true)]
     public class NewIntersightNetworkconfigPolicy : NewCmdletBase
     {
         public NewIntersightNetworkconfigPolicy()
@@ -767,7 +767,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove NetworkconfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightNetworkconfigPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightNetworkconfigPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightNetworkconfigPolicy : RemoveCmdletBase
     {
         public RemoveIntersightNetworkconfigPolicy()
@@ -779,7 +779,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NetworkconfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkconfigPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkconfigPolicy", SupportsShouldProcess = true)]
     public class SetIntersightNetworkconfigPolicy : SetCmdletBase
     {
         public SetIntersightNetworkconfigPolicy()

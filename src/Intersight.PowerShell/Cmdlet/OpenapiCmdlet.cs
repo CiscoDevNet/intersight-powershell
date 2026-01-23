@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OpenapiApiMethodMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOpenapiApiMethodMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOpenapiApiMethodMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOpenapiApiMethodMeta : GetCmdletBase
     {
         public GetIntersightOpenapiApiMethodMeta()
@@ -195,7 +195,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OpenapiOpenApiSpecification.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOpenapiOpenApiSpecification", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOpenapiOpenApiSpecification", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOpenapiOpenApiSpecification : GetCmdletBase
     {
         public GetIntersightOpenapiOpenApiSpecification()
@@ -513,7 +513,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OpenapiProcessFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOpenapiProcessFile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOpenapiProcessFile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOpenapiProcessFile : GetCmdletBase
     {
         public GetIntersightOpenapiProcessFile()
@@ -709,7 +709,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OpenapiTaskGenerationRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOpenapiTaskGenerationRequest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOpenapiTaskGenerationRequest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOpenapiTaskGenerationRequest : GetCmdletBase
     {
         public GetIntersightOpenapiTaskGenerationRequest()
@@ -932,7 +932,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OpenapiTaskGenerationResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOpenapiTaskGenerationResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOpenapiTaskGenerationResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOpenapiTaskGenerationResult : GetCmdletBase
     {
         public GetIntersightOpenapiTaskGenerationResult()
@@ -1117,7 +1117,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OpenapiOpenApiSpecification.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOpenapiOpenApiSpecification")]
+    [Cmdlet(VerbsCommon.New, "IntersightOpenapiOpenApiSpecification", SupportsShouldProcess = true)]
     public class NewIntersightOpenapiOpenApiSpecification : NewCmdletBase
     {
         public NewIntersightOpenapiOpenApiSpecification()
@@ -1168,6 +1168,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OpenapiOpenApiSpecification.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -1334,7 +1344,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OpenapiProcessFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOpenapiProcessFile")]
+    [Cmdlet(VerbsCommon.New, "IntersightOpenapiProcessFile", SupportsShouldProcess = true)]
     public class NewIntersightOpenapiProcessFile : NewCmdletBase
     {
         public NewIntersightOpenapiProcessFile()
@@ -1449,7 +1459,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OpenapiTaskGenerationRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOpenapiTaskGenerationRequest")]
+    [Cmdlet(VerbsCommon.New, "IntersightOpenapiTaskGenerationRequest", SupportsShouldProcess = true)]
     public class NewIntersightOpenapiTaskGenerationRequest : NewCmdletBase
     {
         public NewIntersightOpenapiTaskGenerationRequest()
@@ -1651,7 +1661,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove OpenapiApiMethodMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOpenapiApiMethodMeta")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightOpenapiApiMethodMeta", SupportsShouldProcess = true)]
     public class RemoveIntersightOpenapiApiMethodMeta : RemoveCmdletBase
     {
         public RemoveIntersightOpenapiApiMethodMeta()
@@ -1663,7 +1673,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove OpenapiOpenApiSpecification.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOpenapiOpenApiSpecification")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightOpenapiOpenApiSpecification", SupportsShouldProcess = true)]
     public class RemoveIntersightOpenapiOpenApiSpecification : RemoveCmdletBase
     {
         public RemoveIntersightOpenapiOpenApiSpecification()
@@ -1675,7 +1685,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove OpenapiProcessFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOpenapiProcessFile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightOpenapiProcessFile", SupportsShouldProcess = true)]
     public class RemoveIntersightOpenapiProcessFile : RemoveCmdletBase
     {
         public RemoveIntersightOpenapiProcessFile()
@@ -1687,7 +1697,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove OpenapiTaskGenerationRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOpenapiTaskGenerationRequest")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightOpenapiTaskGenerationRequest", SupportsShouldProcess = true)]
     public class RemoveIntersightOpenapiTaskGenerationRequest : RemoveCmdletBase
     {
         public RemoveIntersightOpenapiTaskGenerationRequest()
@@ -1699,7 +1709,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove OpenapiTaskGenerationResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOpenapiTaskGenerationResult")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightOpenapiTaskGenerationResult", SupportsShouldProcess = true)]
     public class RemoveIntersightOpenapiTaskGenerationResult : RemoveCmdletBase
     {
         public RemoveIntersightOpenapiTaskGenerationResult()
@@ -1711,7 +1721,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set OpenapiOpenApiSpecification.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightOpenapiOpenApiSpecification")]
+    [Cmdlet(VerbsCommon.Set, "IntersightOpenapiOpenApiSpecification", SupportsShouldProcess = true)]
     public class SetIntersightOpenapiOpenApiSpecification : SetCmdletBase
     {
         public SetIntersightOpenapiOpenApiSpecification()
@@ -1762,6 +1772,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public OpenapiOpenApiSpecification.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -1917,7 +1937,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set OpenapiTaskGenerationRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightOpenapiTaskGenerationRequest")]
+    [Cmdlet(VerbsCommon.Set, "IntersightOpenapiTaskGenerationRequest", SupportsShouldProcess = true)]
     public class SetIntersightOpenapiTaskGenerationRequest : SetCmdletBase
     {
         public SetIntersightOpenapiTaskGenerationRequest()

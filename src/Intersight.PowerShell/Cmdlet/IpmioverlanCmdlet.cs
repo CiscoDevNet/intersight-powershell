@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IpmioverlanPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIpmioverlanPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIpmioverlanPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIpmioverlanPolicy : GetCmdletBase
     {
         public GetIntersightIpmioverlanPolicy()
@@ -207,7 +207,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IpmioverlanPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIpmioverlanPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIpmioverlanPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIpmioverlanPolicyInventory : GetCmdletBase
     {
         public GetIntersightIpmioverlanPolicyInventory()
@@ -414,7 +414,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IpmioverlanPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIpmioverlanPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightIpmioverlanPolicy", SupportsShouldProcess = true)]
     public class NewIntersightIpmioverlanPolicy : NewCmdletBase
     {
         public NewIntersightIpmioverlanPolicy()
@@ -570,7 +570,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IpmioverlanPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIpmioverlanPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIpmioverlanPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightIpmioverlanPolicy : RemoveCmdletBase
     {
         public RemoveIntersightIpmioverlanPolicy()
@@ -582,7 +582,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IpmioverlanPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIpmioverlanPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIpmioverlanPolicy", SupportsShouldProcess = true)]
     public class SetIntersightIpmioverlanPolicy : SetCmdletBase
     {
         public SetIntersightIpmioverlanPolicy()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageBatteryBackupUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageBatteryBackupUnit", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageBatteryBackupUnit", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageBatteryBackupUnit : GetCmdletBase
     {
         public GetIntersightStorageBatteryBackupUnit()
@@ -547,7 +547,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageController", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageController", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageController : GetCmdletBase
     {
         public GetIntersightStorageController()
@@ -1158,7 +1158,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageControllerDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageControllerDrive", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageControllerDrive", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageControllerDrive : GetCmdletBase
     {
         public GetIntersightStorageControllerDrive()
@@ -1399,7 +1399,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageDiskGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageDiskGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageDiskGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageDiskGroup : GetCmdletBase
     {
         public GetIntersightStorageDiskGroup()
@@ -1598,7 +1598,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageDiskSlot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageDiskSlot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageDiskSlot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageDiskSlot : GetCmdletBase
     {
         public GetIntersightStorageDiskSlot()
@@ -1882,7 +1882,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageDriveGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageDriveGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageDriveGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageDriveGroup : GetCmdletBase
     {
         public GetIntersightStorageDriveGroup()
@@ -2059,7 +2059,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageDriveSecurityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageDriveSecurityPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageDriveSecurityPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageDriveSecurityPolicy : GetCmdletBase
     {
         public GetIntersightStorageDriveSecurityPolicy()
@@ -2213,7 +2213,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageEnclosure.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageEnclosure", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageEnclosure", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageEnclosure : GetCmdletBase
     {
         public GetIntersightStorageEnclosure()
@@ -2566,7 +2566,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageEnclosureDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageEnclosureDisk", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageEnclosureDisk", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageEnclosureDisk : GetCmdletBase
     {
         public GetIntersightStorageEnclosureDisk()
@@ -2938,7 +2938,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageEnclosureDiskSlotEp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageEnclosureDiskSlotEp", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageEnclosureDiskSlotEp", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageEnclosureDiskSlotEp : GetCmdletBase
     {
         public GetIntersightStorageEnclosureDiskSlotEp()
@@ -3167,7 +3167,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageFileItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageFileItem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageFileItem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageFileItem : GetCmdletBase
     {
         public GetIntersightStorageFileItem()
@@ -3418,7 +3418,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageFlexFlashController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexFlashController", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexFlashController", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageFlexFlashController : GetCmdletBase
     {
         public GetIntersightStorageFlexFlashController()
@@ -3706,7 +3706,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageFlexFlashControllerProps.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexFlashControllerProps", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexFlashControllerProps", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageFlexFlashControllerProps : GetCmdletBase
     {
         public GetIntersightStorageFlexFlashControllerProps()
@@ -4089,7 +4089,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageFlexFlashPhysicalDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexFlashPhysicalDrive", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexFlashPhysicalDrive", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageFlexFlashPhysicalDrive : GetCmdletBase
     {
         public GetIntersightStorageFlexFlashPhysicalDrive()
@@ -4395,7 +4395,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageFlexFlashVirtualDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexFlashVirtualDrive", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexFlashVirtualDrive", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageFlexFlashVirtualDrive : GetCmdletBase
     {
         public GetIntersightStorageFlexFlashVirtualDrive()
@@ -4723,7 +4723,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageFlexUtilController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexUtilController", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexUtilController", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageFlexUtilController : GetCmdletBase
     {
         public GetIntersightStorageFlexUtilController()
@@ -4954,7 +4954,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageFlexUtilPhysicalDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexUtilPhysicalDrive", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexUtilPhysicalDrive", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageFlexUtilPhysicalDrive : GetCmdletBase
     {
         public GetIntersightStorageFlexUtilPhysicalDrive()
@@ -5414,7 +5414,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageFlexUtilVirtualDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexUtilVirtualDrive", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageFlexUtilVirtualDrive", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageFlexUtilVirtualDrive : GetCmdletBase
     {
         public GetIntersightStorageFlexUtilVirtualDrive()
@@ -5687,7 +5687,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiArray", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiArray", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiArray : GetCmdletBase
     {
         public GetIntersightStorageHitachiArray()
@@ -6072,7 +6072,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiController", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiController", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiController : GetCmdletBase
     {
         public GetIntersightStorageHitachiController()
@@ -6367,7 +6367,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiDisk", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiDisk", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiDisk : GetCmdletBase
     {
         public GetIntersightStorageHitachiDisk()
@@ -6751,7 +6751,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiExternalParityGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiExternalParityGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiExternalParityGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiExternalParityGroup : GetCmdletBase
     {
         public GetIntersightStorageHitachiExternalParityGroup()
@@ -7026,7 +7026,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiExternalPathGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiExternalPathGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiExternalPathGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiExternalPathGroup : GetCmdletBase
     {
         public GetIntersightStorageHitachiExternalPathGroup()
@@ -7202,7 +7202,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiExternalStorageLun.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiExternalStorageLun", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiExternalStorageLun", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiExternalStorageLun : GetCmdletBase
     {
         public GetIntersightStorageHitachiExternalStorageLun()
@@ -7453,7 +7453,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiExternalStoragePort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiExternalStoragePort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiExternalStoragePort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiExternalStoragePort : GetCmdletBase
     {
         public GetIntersightStorageHitachiExternalStoragePort()
@@ -7704,7 +7704,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiHost", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiHost", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiHost : GetCmdletBase
     {
         public GetIntersightStorageHitachiHost()
@@ -7980,7 +7980,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiHostLun.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiHostLun", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiHostLun", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiHostLun : GetCmdletBase
     {
         public GetIntersightStorageHitachiHostLun()
@@ -8187,7 +8187,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiNvmSubsystem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiNvmSubsystem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiNvmSubsystem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiNvmSubsystem : GetCmdletBase
     {
         public GetIntersightStorageHitachiNvmSubsystem()
@@ -8421,7 +8421,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiParityGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiParityGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiParityGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiParityGroup : GetCmdletBase
     {
         public GetIntersightStorageHitachiParityGroup()
@@ -8640,7 +8640,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiPool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiPool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiPool : GetCmdletBase
     {
         public GetIntersightStorageHitachiPool()
@@ -8936,7 +8936,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiPort : GetCmdletBase
     {
         public GetIntersightStorageHitachiPort()
@@ -9297,7 +9297,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiRemoteCopyPairGad.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiRemoteCopyPairGad", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiRemoteCopyPairGad", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiRemoteCopyPairGad : GetCmdletBase
     {
         public GetIntersightStorageHitachiRemoteCopyPairGad()
@@ -9570,7 +9570,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiRemoteCopyPairTc.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiRemoteCopyPairTc", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiRemoteCopyPairTc", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiRemoteCopyPairTc : GetCmdletBase
     {
         public GetIntersightStorageHitachiRemoteCopyPairTc()
@@ -9799,7 +9799,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiRemoteCopyPairUr.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiRemoteCopyPairUr", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiRemoteCopyPairUr", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiRemoteCopyPairUr : GetCmdletBase
     {
         public GetIntersightStorageHitachiRemoteCopyPairUr()
@@ -10028,7 +10028,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiRemoteReplication.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiRemoteReplication", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiRemoteReplication", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiRemoteReplication : GetCmdletBase
     {
         public GetIntersightStorageHitachiRemoteReplication()
@@ -10367,7 +10367,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiSnapshot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiSnapshot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiSnapshot : GetCmdletBase
     {
         public GetIntersightStorageHitachiSnapshot()
@@ -10640,7 +10640,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiVolume.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiVolume", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiVolume", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiVolume : GetCmdletBase
     {
         public GetIntersightStorageHitachiVolume()
@@ -10994,7 +10994,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHitachiVolumeMigrationPair.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiVolumeMigrationPair", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHitachiVolumeMigrationPair", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHitachiVolumeMigrationPair : GetCmdletBase
     {
         public GetIntersightStorageHitachiVolumeMigrationPair()
@@ -11201,7 +11201,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHyperFlexStorageContainer.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHyperFlexStorageContainer", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHyperFlexStorageContainer", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHyperFlexStorageContainer : GetCmdletBase
     {
         public GetIntersightStorageHyperFlexStorageContainer()
@@ -11475,7 +11475,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageHyperFlexVolume.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageHyperFlexVolume", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageHyperFlexVolume", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageHyperFlexVolume : GetCmdletBase
     {
         public GetIntersightStorageHyperFlexVolume()
@@ -11771,7 +11771,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageItem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageItem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageItem : GetCmdletBase
     {
         public GetIntersightStorageItem()
@@ -12023,7 +12023,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageKnoxSecureDriveConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageKnoxSecureDriveConfiguration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageKnoxSecureDriveConfiguration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageKnoxSecureDriveConfiguration : GetCmdletBase
     {
         public GetIntersightStorageKnoxSecureDriveConfiguration()
@@ -12188,7 +12188,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppAggregate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppAggregate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppAggregate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppAggregate : GetCmdletBase
     {
         public GetIntersightStorageNetAppAggregate()
@@ -12454,7 +12454,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppAggregateEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppAggregateEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppAggregateEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppAggregateEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppAggregateEvent()
@@ -12738,7 +12738,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppBaseDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppBaseDisk", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppBaseDisk", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppBaseDisk : GetCmdletBase
     {
         public GetIntersightStorageNetAppBaseDisk()
@@ -13201,7 +13201,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppCifsService.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppCifsService", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppCifsService", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppCifsService : GetCmdletBase
     {
         public GetIntersightStorageNetAppCifsService()
@@ -13408,7 +13408,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppCifsShare.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppCifsShare", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppCifsShare", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppCifsShare : GetCmdletBase
     {
         public GetIntersightStorageNetAppCifsShare()
@@ -13627,7 +13627,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppCloudTarget.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppCloudTarget", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppCloudTarget", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppCloudTarget : GetCmdletBase
     {
         public GetIntersightStorageNetAppCloudTarget()
@@ -13934,7 +13934,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppCluster", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppCluster", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppCluster : GetCmdletBase
     {
         public GetIntersightStorageNetAppCluster()
@@ -14360,7 +14360,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppClusterEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppClusterEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppClusterEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppClusterEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppClusterEvent()
@@ -14644,7 +14644,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppClusterSnapMirrorPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppClusterSnapMirrorPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppClusterSnapMirrorPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppClusterSnapMirrorPolicy : GetCmdletBase
     {
         public GetIntersightStorageNetAppClusterSnapMirrorPolicy()
@@ -14873,7 +14873,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppClusterSnapshotPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppClusterSnapshotPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppClusterSnapshotPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppClusterSnapshotPolicy : GetCmdletBase
     {
         public GetIntersightStorageNetAppClusterSnapshotPolicy()
@@ -15048,7 +15048,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppDataIpInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppDataIpInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppDataIpInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppDataIpInterface : GetCmdletBase
     {
         public GetIntersightStorageNetAppDataIpInterface()
@@ -15411,7 +15411,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppDataIpInterfaceEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppDataIpInterfaceEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppDataIpInterfaceEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppDataIpInterfaceEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppDataIpInterfaceEvent()
@@ -15695,7 +15695,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppDiskEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppDiskEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppDiskEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppDiskEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppDiskEvent()
@@ -15979,7 +15979,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppEthernetPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppEthernetPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppEthernetPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppEthernetPort : GetCmdletBase
     {
         public GetIntersightStorageNetAppEthernetPort()
@@ -16233,7 +16233,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppEthernetPortEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppEthernetPortEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppEthernetPortEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppEthernetPortEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppEthernetPortEvent()
@@ -16517,7 +16517,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppExportPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppExportPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppExportPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppExportPolicy : GetCmdletBase
     {
         public GetIntersightStorageNetAppExportPolicy()
@@ -16714,7 +16714,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppFcInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppFcInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppFcInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppFcInterface : GetCmdletBase
     {
         public GetIntersightStorageNetAppFcInterface()
@@ -17021,7 +17021,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppFcInterfaceEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppFcInterfaceEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppFcInterfaceEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppFcInterfaceEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppFcInterfaceEvent()
@@ -17305,7 +17305,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppFcPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppFcPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppFcPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppFcPort : GetCmdletBase
     {
         public GetIntersightStorageNetAppFcPort()
@@ -17590,7 +17590,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppFcPortEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppFcPortEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppFcPortEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppFcPortEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppFcPortEvent()
@@ -17874,7 +17874,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppInitiatorGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppInitiatorGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppInitiatorGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppInitiatorGroup : GetCmdletBase
     {
         public GetIntersightStorageNetAppInitiatorGroup()
@@ -18072,7 +18072,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppIpInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppIpInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppIpInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppIpInterface : GetCmdletBase
     {
         public GetIntersightStorageNetAppIpInterface()
@@ -18347,7 +18347,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppIpInterfaceEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppIpInterfaceEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppIpInterfaceEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppIpInterfaceEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppIpInterfaceEvent()
@@ -18631,7 +18631,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppIscsiService.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppIscsiService", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppIscsiService", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppIscsiService : GetCmdletBase
     {
         public GetIntersightStorageNetAppIscsiService()
@@ -18794,7 +18794,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppLicense.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppLicense", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppLicense", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppLicense : GetCmdletBase
     {
         public GetIntersightStorageNetAppLicense()
@@ -18957,7 +18957,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppLun.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppLun", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppLun", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppLun : GetCmdletBase
     {
         public GetIntersightStorageNetAppLun()
@@ -19267,7 +19267,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppLunEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppLunEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppLunEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppLunEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppLunEvent()
@@ -19551,7 +19551,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppLunMap.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppLunMap", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppLunMap", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppLunMap : GetCmdletBase
     {
         public GetIntersightStorageNetAppLunMap()
@@ -19748,7 +19748,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppNamespace.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNamespace", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNamespace", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppNamespace : GetCmdletBase
     {
         public GetIntersightStorageNetAppNamespace()
@@ -20000,7 +20000,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppNfsClient.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNfsClient", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNfsClient", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppNfsClient : GetCmdletBase
     {
         public GetIntersightStorageNetAppNfsClient()
@@ -20229,7 +20229,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppNfsService.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNfsService", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNfsService", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppNfsService : GetCmdletBase
     {
         public GetIntersightStorageNetAppNfsService()
@@ -20403,7 +20403,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppNode : GetCmdletBase
     {
         public GetIntersightStorageNetAppNode()
@@ -20756,7 +20756,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppNodeCdpNeighbor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNodeCdpNeighbor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNodeCdpNeighbor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppNodeCdpNeighbor : GetCmdletBase
     {
         public GetIntersightStorageNetAppNodeCdpNeighbor()
@@ -20986,7 +20986,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppNodeEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNodeEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNodeEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppNodeEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppNodeEvent()
@@ -21270,7 +21270,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppNonDataIpInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNonDataIpInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNonDataIpInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppNonDataIpInterface : GetCmdletBase
     {
         public GetIntersightStorageNetAppNonDataIpInterface()
@@ -21633,7 +21633,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppNonDataIpInterfaceEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNonDataIpInterfaceEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNonDataIpInterfaceEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppNonDataIpInterfaceEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppNonDataIpInterfaceEvent()
@@ -21917,7 +21917,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppNtpServer.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNtpServer", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppNtpServer", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppNtpServer : GetCmdletBase
     {
         public GetIntersightStorageNetAppNtpServer()
@@ -22113,7 +22113,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppQtree.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppQtree", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppQtree", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppQtree : GetCmdletBase
     {
         public GetIntersightStorageNetAppQtree()
@@ -22353,7 +22353,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppSchedule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSchedule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSchedule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppSchedule : GetCmdletBase
     {
         public GetIntersightStorageNetAppSchedule()
@@ -22516,7 +22516,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppSensor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSensor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSensor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppSensor : GetCmdletBase
     {
         public GetIntersightStorageNetAppSensor()
@@ -22712,7 +22712,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppSnapMirrorRelationship.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSnapMirrorRelationship", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSnapMirrorRelationship", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppSnapMirrorRelationship : GetCmdletBase
     {
         public GetIntersightStorageNetAppSnapMirrorRelationship()
@@ -22963,7 +22963,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppStorageVm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppStorageVm", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppStorageVm", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppStorageVm : GetCmdletBase
     {
         public GetIntersightStorageNetAppStorageVm()
@@ -23242,7 +23242,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppSvmEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSvmEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSvmEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppSvmEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppSvmEvent()
@@ -23526,7 +23526,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppSvmSnapMirrorPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSvmSnapMirrorPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSvmSnapMirrorPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppSvmSnapMirrorPolicy : GetCmdletBase
     {
         public GetIntersightStorageNetAppSvmSnapMirrorPolicy()
@@ -23766,7 +23766,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppSvmSnapshotPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSvmSnapshotPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppSvmSnapshotPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppSvmSnapshotPolicy : GetCmdletBase
     {
         public GetIntersightStorageNetAppSvmSnapshotPolicy()
@@ -23952,7 +23952,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppVolume.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppVolume", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppVolume", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppVolume : GetCmdletBase
     {
         public GetIntersightStorageNetAppVolume()
@@ -24284,7 +24284,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppVolumeEvent.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppVolumeEvent", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppVolumeEvent", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppVolumeEvent : GetCmdletBase
     {
         public GetIntersightStorageNetAppVolumeEvent()
@@ -24568,7 +24568,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNetAppVolumeSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppVolumeSnapshot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNetAppVolumeSnapshot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNetAppVolumeSnapshot : GetCmdletBase
     {
         public GetIntersightStorageNetAppVolumeSnapshot()
@@ -24775,7 +24775,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageNvmeRaidConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageNvmeRaidConfiguration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageNvmeRaidConfiguration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageNvmeRaidConfiguration : GetCmdletBase
     {
         public GetIntersightStorageNvmeRaidConfiguration()
@@ -24951,7 +24951,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePhysicalDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePhysicalDisk", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePhysicalDisk", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePhysicalDisk : GetCmdletBase
     {
         public GetIntersightStoragePhysicalDisk()
@@ -25855,7 +25855,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePhysicalDiskExtension.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePhysicalDiskExtension", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePhysicalDiskExtension", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePhysicalDiskExtension : GetCmdletBase
     {
         public GetIntersightStoragePhysicalDiskExtension()
@@ -26183,7 +26183,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePhysicalDiskUsage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePhysicalDiskUsage", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePhysicalDiskUsage", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePhysicalDiskUsage : GetCmdletBase
     {
         public GetIntersightStoragePhysicalDiskUsage()
@@ -26434,7 +26434,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureArray", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureArray", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureArray : GetCmdletBase
     {
         public GetIntersightStoragePureArray()
@@ -26742,7 +26742,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureArrayAlerts.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureArrayAlerts", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureArrayAlerts", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureArrayAlerts : GetCmdletBase
     {
         public GetIntersightStoragePureArrayAlerts()
@@ -26927,7 +26927,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureController", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureController", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureController : GetCmdletBase
     {
         public GetIntersightStoragePureController()
@@ -27222,7 +27222,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureDirectory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDirectory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDirectory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureDirectory : GetCmdletBase
     {
         public GetIntersightStoragePureDirectory()
@@ -27554,7 +27554,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureDirectoryExport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDirectoryExport", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDirectoryExport", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureDirectoryExport : GetCmdletBase
     {
         public GetIntersightStoragePureDirectoryExport()
@@ -27805,7 +27805,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureDirectoryPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDirectoryPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDirectoryPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureDirectoryPolicy : GetCmdletBase
     {
         public GetIntersightStoragePureDirectoryPolicy()
@@ -27995,7 +27995,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureDirectoryQuota.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDirectoryQuota", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDirectoryQuota", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureDirectoryQuota : GetCmdletBase
     {
         public GetIntersightStoragePureDirectoryQuota()
@@ -28224,7 +28224,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureDirectorySnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDirectorySnapshot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDirectorySnapshot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureDirectorySnapshot : GetCmdletBase
     {
         public GetIntersightStoragePureDirectorySnapshot()
@@ -28420,7 +28420,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDisk", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureDisk", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureDisk : GetCmdletBase
     {
         public GetIntersightStoragePureDisk()
@@ -28749,7 +28749,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureFileSystems.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureFileSystems", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureFileSystems", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureFileSystems : GetCmdletBase
     {
         public GetIntersightStoragePureFileSystems()
@@ -28934,7 +28934,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureHost", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureHost", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureHost : GetCmdletBase
     {
         public GetIntersightStoragePureHost()
@@ -29092,6 +29092,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a storagePureRealm resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePureRealmRelationship Realm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A realm is the core multi-tenancy component on a Pure Flash Array, providing a self-contained, virtual storage environment with dedicated policies and quotas for secure data isolation and predictable performance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string RealmName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -29143,7 +29165,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureHostGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureHostGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureHostGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureHostGroup : GetCmdletBase
     {
         public GetIntersightStoragePureHostGroup()
@@ -29320,7 +29342,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureHostLun.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureHostLun", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureHostLun", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureHostLun : GetCmdletBase
     {
         public GetIntersightStoragePureHostLun()
@@ -29547,9 +29569,194 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get StoragePureManagementAccessPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureManagementAccessPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightStoragePureManagementAccessPolicy : GetCmdletBase
+    {
+        public GetIntersightStoragePureManagementAccessPolicy()
+        {
+            ApiInstance = new StorageApi(Config);
+            MethodName = "GetStoragePureManagementAccessPolicyListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The strategy used to combine the effects of multiple rules in this policy (e.g., 'deny-override')."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AggregationStrategy
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a storagePureArray resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePureArrayRelationship Array
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Returns a value of true if the management access policy is currently active and enforced."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The name of the management access policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The type of policy, typically 'management-access'."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PolicyType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureNfsPolicyRule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureNfsPolicyRule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureNfsPolicyRule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureNfsPolicyRule : GetCmdletBase
     {
         public GetIntersightStoragePureNfsPolicyRule()
@@ -29789,9 +29996,241 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get StoragePurePod.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePurePod", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightStoragePurePod : GetCmdletBase
+    {
+        public GetIntersightStoragePurePod()
+        {
+            ApiInstance = new StorageApi(Config);
+            MethodName = "GetStoragePurePodListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a storagePureArray resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePureArrayRelationship Array
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of arrays in the pod."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ArrayCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates whether the pod has been destroyed and is pending eradication."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool Destroyed
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of link targets in the pod."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long LinkTargetCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the mediator managing synchronous replication between arrays."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Mediator
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the pod as configured on the Pure array."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Promotion status of the pod. It can be one of the following values Promoting, Promoted, Demoted."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PromotionStatus
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a storagePureRealm resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePureRealmRelationship Realm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A realm is the core multi-tenancy component on a Pure Flash Array, providing a self-contained, virtual storage environment with dedicated policies and quotas for secure data isolation and predictable performance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string RealmName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePurePort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePurePort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePurePort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePurePort : GetCmdletBase
     {
         public GetIntersightStoragePurePort()
@@ -30064,7 +30503,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureProtectionGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureProtectionGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureProtectionGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureProtectionGroup : GetCmdletBase
     {
         public GetIntersightStoragePureProtectionGroup()
@@ -30168,11 +30607,55 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"A reference to a storagePurePod resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePurePodRelationship Pod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A pod representing a collection of protection groups and volumes is created on one array and stretched to another array, resulting in fully synchronized writes between the two arrays."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PodName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Prefix used for all generated snapshots from the protection group."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Prefix
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a storagePureRealm resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePureRealmRelationship Realm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A realm is the core multi-tenancy component on a Pure Flash Array, providing a self-contained, virtual storage environment with dedicated policies and quotas for secure data isolation and predictable performance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string RealmName
         {
             get;
             set;
@@ -30275,7 +30758,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureProtectionGroupSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureProtectionGroupSnapshot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureProtectionGroupSnapshot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureProtectionGroupSnapshot : GetCmdletBase
     {
         public GetIntersightStoragePureProtectionGroupSnapshot()
@@ -30421,6 +30904,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a storagePureRealm resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePureRealmRelationship Realm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A realm is the core multi-tenancy component on a Pure Flash Array, providing a self-contained, virtual storage environment with dedicated policies and quotas for secure data isolation and predictable performance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string RealmName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -30515,7 +31020,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureQuotaPolicyRule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureQuotaPolicyRule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureQuotaPolicyRule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureQuotaPolicyRule : GetCmdletBase
     {
         public GetIntersightStoragePureQuotaPolicyRule()
@@ -30731,9 +31236,212 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get StoragePureRealm.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureRealm", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightStoragePureRealm : GetCmdletBase
+    {
+        public GetIntersightStoragePureRealm()
+        {
+            ApiInstance = new StorageApi(Config);
+            MethodName = "GetStoragePureRealmListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a storagePureArray resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePureArrayRelationship Array
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Maximum allowed data throughput for this object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long BandwidthLimit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Creation time of the realm."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime Created
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Maximum allowed IO operations per second for this object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long IopsLimit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the realm as configured on the Pure Storage array."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Maximum logical space the object is allowed to consume."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long QuotaLimit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureReplicationSchedule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureReplicationSchedule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureReplicationSchedule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureReplicationSchedule : GetCmdletBase
     {
         public GetIntersightStoragePureReplicationSchedule()
@@ -30952,7 +31660,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureSmbPolicyRule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureSmbPolicyRule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureSmbPolicyRule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureSmbPolicyRule : GetCmdletBase
     {
         public GetIntersightStoragePureSmbPolicyRule()
@@ -31170,7 +31878,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureSnapshotSchedule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureSnapshotSchedule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureSnapshotSchedule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureSnapshotSchedule : GetCmdletBase
     {
         public GetIntersightStoragePureSnapshotSchedule()
@@ -31388,7 +32096,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureTargetArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureTargetArray", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureTargetArray", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureTargetArray : GetCmdletBase
     {
         public GetIntersightStoragePureTargetArray()
@@ -31540,7 +32248,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureVolume.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureVolume", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureVolume", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureVolume : GetCmdletBase
     {
         public GetIntersightStoragePureVolume()
@@ -31675,11 +32383,55 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"A reference to a storagePurePod resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePurePodRelationship Pod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A pod representing a collection of protection groups and volumes is created on one array and stretched to another array, resulting in fully synchronized writes between the two arrays."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PodName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a storagePureProtectionGroup resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public StoragePureProtectionGroupRelationship ProtectionGroup
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a storagePureRealm resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePureRealmRelationship Realm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A realm is the core multi-tenancy component on a Pure Flash Array, providing a self-contained, virtual storage environment with dedicated policies and quotas for secure data isolation and predictable performance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string RealmName
         {
             get;
             set;
@@ -31768,9 +32520,161 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get StoragePureVolumeGroup.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureVolumeGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightStoragePureVolumeGroup : GetCmdletBase
+    {
+        public GetIntersightStoragePureVolumeGroup()
+        {
+            ApiInstance = new StorageApi(Config);
+            MethodName = "GetStoragePureVolumeGroupListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a storagePureArray resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePureArrayRelationship Array
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the Volume Group."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StoragePureVolumeSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureVolumeSnapshot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStoragePureVolumeSnapshot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStoragePureVolumeSnapshot : GetCmdletBase
     {
         public GetIntersightStoragePureVolumeSnapshot()
@@ -31916,6 +32820,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a storagePureRealm resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public StoragePureRealmRelationship Realm
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A realm is the core multi-tenancy component on a Pure Flash Array, providing a self-contained, virtual storage environment with dedicated policies and quotas for secure data isolation and predictable performance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string RealmName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -32054,7 +32980,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageSasExpander.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageSasExpander", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageSasExpander", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageSasExpander : GetCmdletBase
     {
         public GetIntersightStorageSasExpander()
@@ -32393,7 +33319,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageSasPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageSasPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageSasPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageSasPort : GetCmdletBase
     {
         public GetIntersightStorageSasPort()
@@ -32633,7 +33559,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageSpan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageSpan", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageSpan", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageSpan : GetCmdletBase
     {
         public GetIntersightStorageSpan()
@@ -32820,7 +33746,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageStoragePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageStoragePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageStoragePolicy : GetCmdletBase
     {
         public GetIntersightStorageStoragePolicy()
@@ -33064,7 +33990,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageVdMemberEp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageVdMemberEp", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageVdMemberEp", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageVdMemberEp : GetCmdletBase
     {
         public GetIntersightStorageVdMemberEp()
@@ -33304,7 +34230,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageVirtualDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageVirtualDrive", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageVirtualDrive", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageVirtualDrive : GetCmdletBase
     {
         public GetIntersightStorageVirtualDrive()
@@ -33877,7 +34803,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageVirtualDriveContainer.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageVirtualDriveContainer", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageVirtualDriveContainer", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageVirtualDriveContainer : GetCmdletBase
     {
         public GetIntersightStorageVirtualDriveContainer()
@@ -34151,7 +35077,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageVirtualDriveExtension.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageVirtualDriveExtension", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageVirtualDriveExtension", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageVirtualDriveExtension : GetCmdletBase
     {
         public GetIntersightStorageVirtualDriveExtension()
@@ -34446,7 +35372,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get StorageVirtualDriveIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightStorageVirtualDriveIdentity", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightStorageVirtualDriveIdentity", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightStorageVirtualDriveIdentity : GetCmdletBase
     {
         public GetIntersightStorageVirtualDriveIdentity()
@@ -34609,7 +35535,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New StorageDriveGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightStorageDriveGroup")]
+    [Cmdlet(VerbsCommon.New, "IntersightStorageDriveGroup", SupportsShouldProcess = true)]
     public class NewIntersightStorageDriveGroup : NewCmdletBase
     {
         public NewIntersightStorageDriveGroup()
@@ -34765,7 +35691,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New StorageDriveSecurityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightStorageDriveSecurityPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightStorageDriveSecurityPolicy", SupportsShouldProcess = true)]
     public class NewIntersightStorageDriveSecurityPolicy : NewCmdletBase
     {
         public NewIntersightStorageDriveSecurityPolicy()
@@ -34898,7 +35824,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New StorageNetAppVolumeSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightStorageNetAppVolumeSnapshot")]
+    [Cmdlet(VerbsCommon.New, "IntersightStorageNetAppVolumeSnapshot", SupportsShouldProcess = true)]
     public class NewIntersightStorageNetAppVolumeSnapshot : NewCmdletBase
     {
         public NewIntersightStorageNetAppVolumeSnapshot()
@@ -34984,7 +35910,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New StorageStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightStorageStoragePolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightStorageStoragePolicy", SupportsShouldProcess = true)]
     public class NewIntersightStorageStoragePolicy : NewCmdletBase
     {
         public NewIntersightStorageStoragePolicy()
@@ -35227,7 +36153,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove StorageDriveGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightStorageDriveGroup")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightStorageDriveGroup", SupportsShouldProcess = true)]
     public class RemoveIntersightStorageDriveGroup : RemoveCmdletBase
     {
         public RemoveIntersightStorageDriveGroup()
@@ -35239,7 +36165,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove StorageDriveSecurityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightStorageDriveSecurityPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightStorageDriveSecurityPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightStorageDriveSecurityPolicy : RemoveCmdletBase
     {
         public RemoveIntersightStorageDriveSecurityPolicy()
@@ -35251,7 +36177,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove StorageNetAppVolumeSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightStorageNetAppVolumeSnapshot")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightStorageNetAppVolumeSnapshot", SupportsShouldProcess = true)]
     public class RemoveIntersightStorageNetAppVolumeSnapshot : RemoveCmdletBase
     {
         public RemoveIntersightStorageNetAppVolumeSnapshot()
@@ -35263,7 +36189,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove StorageStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightStorageStoragePolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightStorageStoragePolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightStorageStoragePolicy : RemoveCmdletBase
     {
         public RemoveIntersightStorageStoragePolicy()
@@ -35275,7 +36201,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageBatteryBackupUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageBatteryBackupUnit")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageBatteryBackupUnit", SupportsShouldProcess = true)]
     public class SetIntersightStorageBatteryBackupUnit : SetCmdletBase
     {
         public SetIntersightStorageBatteryBackupUnit()
@@ -35380,7 +36306,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageController")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageController", SupportsShouldProcess = true)]
     public class SetIntersightStorageController : SetCmdletBase
     {
         public SetIntersightStorageController()
@@ -35679,7 +36605,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageDiskGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageDiskGroup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageDiskGroup", SupportsShouldProcess = true)]
     public class SetIntersightStorageDiskGroup : SetCmdletBase
     {
         public SetIntersightStorageDiskGroup()
@@ -35816,7 +36742,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageDriveGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageDriveGroup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageDriveGroup", SupportsShouldProcess = true)]
     public class SetIntersightStorageDriveGroup : SetCmdletBase
     {
         public SetIntersightStorageDriveGroup()
@@ -35961,7 +36887,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageDriveSecurityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageDriveSecurityPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageDriveSecurityPolicy", SupportsShouldProcess = true)]
     public class SetIntersightStorageDriveSecurityPolicy : SetCmdletBase
     {
         public SetIntersightStorageDriveSecurityPolicy()
@@ -36083,7 +37009,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageEnclosure.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageEnclosure")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageEnclosure", SupportsShouldProcess = true)]
     public class SetIntersightStorageEnclosure : SetCmdletBase
     {
         public SetIntersightStorageEnclosure()
@@ -36174,7 +37100,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageEnclosureDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageEnclosureDisk")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageEnclosureDisk", SupportsShouldProcess = true)]
     public class SetIntersightStorageEnclosureDisk : SetCmdletBase
     {
         public SetIntersightStorageEnclosureDisk()
@@ -36354,7 +37280,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageEnclosureDiskSlotEp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageEnclosureDiskSlotEp")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageEnclosureDiskSlotEp", SupportsShouldProcess = true)]
     public class SetIntersightStorageEnclosureDiskSlotEp : SetCmdletBase
     {
         public SetIntersightStorageEnclosureDiskSlotEp()
@@ -36471,7 +37397,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageFlexFlashController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexFlashController")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexFlashController", SupportsShouldProcess = true)]
     public class SetIntersightStorageFlexFlashController : SetCmdletBase
     {
         public SetIntersightStorageFlexFlashController()
@@ -36557,7 +37483,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageFlexFlashControllerProps.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexFlashControllerProps")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexFlashControllerProps", SupportsShouldProcess = true)]
     public class SetIntersightStorageFlexFlashControllerProps : SetCmdletBase
     {
         public SetIntersightStorageFlexFlashControllerProps()
@@ -36758,7 +37684,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageFlexFlashPhysicalDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexFlashPhysicalDrive")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexFlashPhysicalDrive", SupportsShouldProcess = true)]
     public class SetIntersightStorageFlexFlashPhysicalDrive : SetCmdletBase
     {
         public SetIntersightStorageFlexFlashPhysicalDrive()
@@ -36882,7 +37808,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageFlexFlashVirtualDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexFlashVirtualDrive")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexFlashVirtualDrive", SupportsShouldProcess = true)]
     public class SetIntersightStorageFlexFlashVirtualDrive : SetCmdletBase
     {
         public SetIntersightStorageFlexFlashVirtualDrive()
@@ -37028,7 +37954,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageFlexUtilController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexUtilController")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexUtilController", SupportsShouldProcess = true)]
     public class SetIntersightStorageFlexUtilController : SetCmdletBase
     {
         public SetIntersightStorageFlexUtilController()
@@ -37147,7 +38073,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageFlexUtilPhysicalDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexUtilPhysicalDrive")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexUtilPhysicalDrive", SupportsShouldProcess = true)]
     public class SetIntersightStorageFlexUtilPhysicalDrive : SetCmdletBase
     {
         public SetIntersightStorageFlexUtilPhysicalDrive()
@@ -37425,7 +38351,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageFlexUtilVirtualDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexUtilVirtualDrive")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageFlexUtilVirtualDrive", SupportsShouldProcess = true)]
     public class SetIntersightStorageFlexUtilVirtualDrive : SetCmdletBase
     {
         public SetIntersightStorageFlexUtilVirtualDrive()
@@ -37586,7 +38512,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageHitachiArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageHitachiArray")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageHitachiArray", SupportsShouldProcess = true)]
     public class SetIntersightStorageHitachiArray : SetCmdletBase
     {
         public SetIntersightStorageHitachiArray()
@@ -37679,7 +38605,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageNetAppCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageNetAppCluster")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageNetAppCluster", SupportsShouldProcess = true)]
     public class SetIntersightStorageNetAppCluster : SetCmdletBase
     {
         public SetIntersightStorageNetAppCluster()
@@ -37783,7 +38709,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageNetAppVolumeSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageNetAppVolumeSnapshot")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageNetAppVolumeSnapshot", SupportsShouldProcess = true)]
     public class SetIntersightStorageNetAppVolumeSnapshot : SetCmdletBase
     {
         public SetIntersightStorageNetAppVolumeSnapshot()
@@ -37858,7 +38784,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StoragePhysicalDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStoragePhysicalDisk")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStoragePhysicalDisk", SupportsShouldProcess = true)]
     public class SetIntersightStoragePhysicalDisk : SetCmdletBase
     {
         public SetIntersightStoragePhysicalDisk()
@@ -38250,7 +39176,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StoragePhysicalDiskExtension.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStoragePhysicalDiskExtension")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStoragePhysicalDiskExtension", SupportsShouldProcess = true)]
     public class SetIntersightStoragePhysicalDiskExtension : SetCmdletBase
     {
         public SetIntersightStoragePhysicalDiskExtension()
@@ -38346,7 +39272,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StoragePhysicalDiskUsage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStoragePhysicalDiskUsage")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStoragePhysicalDiskUsage", SupportsShouldProcess = true)]
     public class SetIntersightStoragePhysicalDiskUsage : SetCmdletBase
     {
         public SetIntersightStoragePhysicalDiskUsage()
@@ -38435,7 +39361,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StoragePureArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStoragePureArray")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStoragePureArray", SupportsShouldProcess = true)]
     public class SetIntersightStoragePureArray : SetCmdletBase
     {
         public SetIntersightStoragePureArray()
@@ -38521,7 +39447,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageSasExpander.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageSasExpander")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageSasExpander", SupportsShouldProcess = true)]
     public class SetIntersightStorageSasExpander : SetCmdletBase
     {
         public SetIntersightStorageSasExpander()
@@ -38628,7 +39554,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageSasPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageSasPort")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageSasPort", SupportsShouldProcess = true)]
     public class SetIntersightStorageSasPort : SetCmdletBase
     {
         public SetIntersightStorageSasPort()
@@ -38706,7 +39632,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageSpan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageSpan")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageSpan", SupportsShouldProcess = true)]
     public class SetIntersightStorageSpan : SetCmdletBase
     {
         public SetIntersightStorageSpan()
@@ -38821,7 +39747,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageStoragePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageStoragePolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageStoragePolicy", SupportsShouldProcess = true)]
     public class SetIntersightStorageStoragePolicy : SetCmdletBase
     {
         public SetIntersightStorageStoragePolicy()
@@ -39053,7 +39979,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageVdMemberEp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageVdMemberEp")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageVdMemberEp", SupportsShouldProcess = true)]
     public class SetIntersightStorageVdMemberEp : SetCmdletBase
     {
         public SetIntersightStorageVdMemberEp()
@@ -39131,7 +40057,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageVirtualDrive.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageVirtualDrive")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageVirtualDrive", SupportsShouldProcess = true)]
     public class SetIntersightStorageVirtualDrive : SetCmdletBase
     {
         public SetIntersightStorageVirtualDrive()
@@ -39272,7 +40198,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageVirtualDriveContainer.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageVirtualDriveContainer")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageVirtualDriveContainer", SupportsShouldProcess = true)]
     public class SetIntersightStorageVirtualDriveContainer : SetCmdletBase
     {
         public SetIntersightStorageVirtualDriveContainer()
@@ -39364,7 +40290,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set StorageVirtualDriveExtension.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightStorageVirtualDriveExtension")]
+    [Cmdlet(VerbsCommon.Set, "IntersightStorageVirtualDriveExtension", SupportsShouldProcess = true)]
     public class SetIntersightStorageVirtualDriveExtension : SetCmdletBase
     {
         public SetIntersightStorageVirtualDriveExtension()

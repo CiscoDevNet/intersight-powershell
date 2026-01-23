@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OprsDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOprsDeployment", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOprsDeployment", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOprsDeployment : GetCmdletBase
     {
         public GetIntersightOprsDeployment()
@@ -229,7 +229,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OprsSyncTargetListMessage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOprsSyncTargetListMessage", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOprsSyncTargetListMessage", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOprsSyncTargetListMessage : GetCmdletBase
     {
         public GetIntersightOprsSyncTargetListMessage()
@@ -393,7 +393,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OprsDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOprsDeployment")]
+    [Cmdlet(VerbsCommon.New, "IntersightOprsDeployment", SupportsShouldProcess = true)]
     public class NewIntersightOprsDeployment : NewCmdletBase
     {
         public NewIntersightOprsDeployment()
@@ -581,7 +581,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OprsSyncTargetListMessage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOprsSyncTargetListMessage")]
+    [Cmdlet(VerbsCommon.New, "IntersightOprsSyncTargetListMessage", SupportsShouldProcess = true)]
     public class NewIntersightOprsSyncTargetListMessage : NewCmdletBase
     {
         public NewIntersightOprsSyncTargetListMessage()
@@ -714,7 +714,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove OprsDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOprsDeployment")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightOprsDeployment", SupportsShouldProcess = true)]
     public class RemoveIntersightOprsDeployment : RemoveCmdletBase
     {
         public RemoveIntersightOprsDeployment()
@@ -726,7 +726,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove OprsSyncTargetListMessage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOprsSyncTargetListMessage")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightOprsSyncTargetListMessage", SupportsShouldProcess = true)]
     public class RemoveIntersightOprsSyncTargetListMessage : RemoveCmdletBase
     {
         public RemoveIntersightOprsSyncTargetListMessage()
@@ -738,7 +738,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set OprsDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightOprsDeployment")]
+    [Cmdlet(VerbsCommon.Set, "IntersightOprsDeployment", SupportsShouldProcess = true)]
     public class SetIntersightOprsDeployment : SetCmdletBase
     {
         public SetIntersightOprsDeployment()
@@ -915,7 +915,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set OprsSyncTargetListMessage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightOprsSyncTargetListMessage")]
+    [Cmdlet(VerbsCommon.Set, "IntersightOprsSyncTargetListMessage", SupportsShouldProcess = true)]
     public class SetIntersightOprsSyncTargetListMessage : SetCmdletBase
     {
         public SetIntersightOprsSyncTargetListMessage()

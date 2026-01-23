@@ -6,6 +6,7 @@ using System.Management.Automation;
 using System.Text;
 using System.Reflection;
 using System.Runtime.Serialization;
+using Newtonsoft.Json.Linq;
 
 
 namespace Intersight.PowerShell
@@ -71,6 +72,7 @@ namespace Intersight.PowerShell
                 var methodInfo = GetMethodInfo(MethodName);
                 var parameterInfo = methodInfo.GetParameters();
                 var argList = new List<object>();
+                var whatIfMsg = new List<string>();
 
                 for (int i = 0; i < parameterInfo.Length; i++)
                 {
@@ -80,6 +82,7 @@ namespace Intersight.PowerShell
                     if (this.MyInvocation.BoundParameters.ContainsKey(parameNameInPascalCase))
                     {
                         argList.Add(this.MyInvocation.BoundParameters[parameNameInPascalCase]);
+                        whatIfMsg.Add(string.Format("{0}={1}", parameNameInPascalCase, this.MyInvocation.BoundParameters[parameNameInPascalCase]));
                     }
                     else if (parameterInfo[i].HasDefaultValue)
                     {
@@ -88,14 +91,21 @@ namespace Intersight.PowerShell
                             if (parameNameInPascalCase == Constants.Top)
                             {
                                 argList.Add(Constants.MaxTop);
+                                whatIfMsg.Add(string.Format("{0}={1}", Constants.Top, Constants.MaxTop));
                             }
                             else if (parameNameInPascalCase == Constants.Filter)
                             {
-                                argList.Add(CreateFilterQuery());
+                                var filterQuery = CreateFilterQuery();
+                                argList.Add(filterQuery);
+                                if (!string.IsNullOrEmpty(filterQuery))
+                                {
+                                    whatIfMsg.Add(string.Format("{0}={1}", Constants.Filter, filterQuery));
+                                }
                             }
                             else if (parameNameInPascalCase == Constants.InlineCount)
                             {
                                 argList.Add("allpages");
+                                whatIfMsg.Add(string.Format("{0}={1}", Constants.InlineCount, "allpages"));
                             }
                             else
                             {
@@ -113,6 +123,11 @@ namespace Intersight.PowerShell
                     }
                 }
 
+
+                if (!ShouldProcess(Config.BasePath, string.Format("Get {0} : {1}", this.MyInvocation.InvocationName.TrimStart("Get-Intersight".ToCharArray()), string.Join("&", whatIfMsg))))
+                {
+                    return;
+                }
                 WriteVerbose(String.Format("Invoking {0}", ApiInstance.GetType().Name));
                 var getResult = methodInfo.Invoke(ApiInstance, argList.ToArray());
 
@@ -165,6 +180,19 @@ namespace Intersight.PowerShell
 
             if (this.ParameterSetName == Constants.QueryParam)
             {
+                // Check if Apply parameter is used (aggregation queries return JObject items)
+                if (this.MyInvocation.BoundParameters.ContainsKey("Apply"))
+                {
+                    var resultsProperty = ActualInstanceResult.GetType().GetProperty(Constants.Results);
+                    if (resultsProperty != null)
+                    {
+                        var actualResult = resultsProperty.GetValue(ActualInstanceResult);
+                        var convertedResults = ConvertJObjectToPSObject(actualResult);
+
+                        WriteObject(convertedResults, true);
+                        return;
+                    }
+                }
                 WriteObject(ActualInstanceResult);
             }
             else if (this.ParameterSetName == Constants.CmdletParam)
@@ -343,6 +371,32 @@ namespace Intersight.PowerShell
             }
 
             return -1;
+        }
+
+        // Converts JObject to PSObject for proper PowerShell output
+        private List<PSObject> ConvertJObjectToPSObject(object actualResult)
+        {
+            if (actualResult == null || !(actualResult is System.Collections.IEnumerable enumerableResult))
+            {
+                return null;
+            }
+
+            var convertedResults = new List<PSObject>();
+
+            foreach (var item in enumerableResult)
+            {
+                if (item is JObject jObj)
+                {
+                    var psObj = new PSObject();
+                    foreach (var prop in jObj.Properties())
+                    {
+                        psObj.Properties.Add(new PSNoteProperty(prop.Name, ((JValue)prop.Value)?.Value ?? prop.Value.ToString()));
+                    }
+                    convertedResults.Add(psObj);
+                }
+            }
+
+            return convertedResults;
         }
     }
 }

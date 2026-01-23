@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationEsxiConsole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationEsxiConsole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationEsxiConsole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationEsxiConsole : GetCmdletBase
     {
         public GetIntersightVirtualizationEsxiConsole()
@@ -261,7 +261,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationHost", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationHost", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationHost : GetCmdletBase
     {
         public GetIntersightVirtualizationHost()
@@ -524,7 +524,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVirtualMachine.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVirtualMachine", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVirtualMachine", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVirtualMachine : GetCmdletBase
     {
         public GetIntersightVirtualizationVirtualMachine()
@@ -839,7 +839,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareCluster", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareCluster", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareCluster : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareCluster()
@@ -1095,7 +1095,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDatacenter.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatacenter", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatacenter", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareDatacenter : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareDatacenter()
@@ -1391,7 +1391,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDatastore.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatastore", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatastore", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareDatastore : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareDatastore()
@@ -1711,7 +1711,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDatastoreCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatastoreCluster", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDatastoreCluster", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareDatastoreCluster : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareDatastoreCluster()
@@ -2106,7 +2106,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDistributedNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDistributedNetwork", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDistributedNetwork", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareDistributedNetwork : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareDistributedNetwork()
@@ -2349,7 +2349,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareDistributedSwitch.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDistributedSwitch", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareDistributedSwitch", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareDistributedSwitch : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareDistributedSwitch()
@@ -2627,7 +2627,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareFolder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareFolder", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareFolder", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareFolder : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareFolder()
@@ -2845,7 +2845,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareHost", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareHost", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareHost : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareHost()
@@ -3251,7 +3251,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareHostGpu.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareHostGpu", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareHostGpu", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareHostGpu : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareHostGpu()
@@ -3557,7 +3557,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareKernelNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareKernelNetwork", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareKernelNetwork", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareKernelNetwork : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareKernelNetwork()
@@ -3864,7 +3864,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareNetwork", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareNetwork", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareNetwork : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareNetwork()
@@ -4083,7 +4083,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwarePhysicalNetworkInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwarePhysicalNetworkInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwarePhysicalNetworkInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwarePhysicalNetworkInterface : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwarePhysicalNetworkInterface()
@@ -4301,7 +4301,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareProactiveHa.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareProactiveHa", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareProactiveHa", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareProactiveHa : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareProactiveHa()
@@ -4454,7 +4454,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareUplinkPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareUplinkPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareUplinkPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareUplinkPort : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareUplinkPort()
@@ -4650,7 +4650,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVcenter.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVcenter", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVcenter", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareVcenter : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareVcenter()
@@ -4935,7 +4935,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualDisk", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualDisk", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareVirtualDisk : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareVirtualDisk()
@@ -5297,7 +5297,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualMachine.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualMachine", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualMachine", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareVirtualMachine : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareVirtualMachine()
@@ -5911,7 +5911,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualMachineGpu.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualMachineGpu", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualMachineGpu", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareVirtualMachineGpu : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareVirtualMachineGpu()
@@ -6118,7 +6118,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualMachineSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualMachineSnapshot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualMachineSnapshot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareVirtualMachineSnapshot : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareVirtualMachineSnapshot()
@@ -6380,7 +6380,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualNetworkInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualNetworkInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualNetworkInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareVirtualNetworkInterface : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareVirtualNetworkInterface()
@@ -6631,7 +6631,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VirtualizationVmwareVirtualSwitch.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualSwitch", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVirtualizationVmwareVirtualSwitch", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVirtualizationVmwareVirtualSwitch : GetCmdletBase
     {
         public GetIntersightVirtualizationVmwareVirtualSwitch()
@@ -6861,7 +6861,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VirtualizationEsxiConsole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVirtualizationEsxiConsole")]
+    [Cmdlet(VerbsCommon.New, "IntersightVirtualizationEsxiConsole", SupportsShouldProcess = true)]
     public class NewIntersightVirtualizationEsxiConsole : NewCmdletBase
     {
         public NewIntersightVirtualizationEsxiConsole()
@@ -6981,7 +6981,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VirtualizationVirtualMachine.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVirtualizationVirtualMachine")]
+    [Cmdlet(VerbsCommon.New, "IntersightVirtualizationVirtualMachine", SupportsShouldProcess = true)]
     public class NewIntersightVirtualizationVirtualMachine : NewCmdletBase
     {
         public NewIntersightVirtualizationVirtualMachine()
@@ -7295,7 +7295,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VirtualizationVirtualMachine.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVirtualizationVirtualMachine")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVirtualizationVirtualMachine", SupportsShouldProcess = true)]
     public class RemoveIntersightVirtualizationVirtualMachine : RemoveCmdletBase
     {
         public RemoveIntersightVirtualizationVirtualMachine()
@@ -7307,7 +7307,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationEsxiConsole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationEsxiConsole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationEsxiConsole", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationEsxiConsole : SetCmdletBase
     {
         public SetIntersightVirtualizationEsxiConsole()
@@ -7416,7 +7416,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationHost")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationHost", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationHost : SetCmdletBase
     {
         public SetIntersightVirtualizationHost()
@@ -7537,7 +7537,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVirtualMachine.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVirtualMachine")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVirtualMachine", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVirtualMachine : SetCmdletBase
     {
         public SetIntersightVirtualizationVirtualMachine()
@@ -7840,7 +7840,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareCluster")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareCluster", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareCluster : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareCluster()
@@ -8034,7 +8034,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDatacenter.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatacenter")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatacenter", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareDatacenter : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareDatacenter()
@@ -8168,7 +8168,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDatastore.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatastore")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatastore", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareDatastore : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareDatastore()
@@ -8446,7 +8446,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDatastoreCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatastoreCluster")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDatastoreCluster", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareDatastoreCluster : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareDatastoreCluster()
@@ -8789,7 +8789,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDistributedNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDistributedNetwork")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDistributedNetwork", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareDistributedNetwork : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareDistributedNetwork()
@@ -8990,7 +8990,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareDistributedSwitch.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDistributedSwitch")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareDistributedSwitch", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareDistributedSwitch : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareDistributedSwitch()
@@ -9246,7 +9246,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareFolder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareFolder")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareFolder", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareFolder : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareFolder()
@@ -9402,7 +9402,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareHost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareHost")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareHost", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareHost : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareHost()
@@ -9806,7 +9806,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareKernelNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareKernelNetwork")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareKernelNetwork", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareKernelNetwork : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareKernelNetwork()
@@ -10041,7 +10041,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareNetwork")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareNetwork", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareNetwork : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareNetwork()
@@ -10198,7 +10198,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwarePhysicalNetworkInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwarePhysicalNetworkInterface")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwarePhysicalNetworkInterface", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwarePhysicalNetworkInterface : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwarePhysicalNetworkInterface()
@@ -10354,7 +10354,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareUplinkPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareUplinkPort")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareUplinkPort", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareUplinkPort : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareUplinkPort()
@@ -10468,7 +10468,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualDisk")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualDisk", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareVirtualDisk : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareVirtualDisk()
@@ -10768,7 +10768,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualMachine.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualMachine")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualMachine", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareVirtualMachine : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareVirtualMachine()
@@ -11440,7 +11440,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualMachineSnapshot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualMachineSnapshot")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualMachineSnapshot", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareVirtualMachineSnapshot : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareVirtualMachineSnapshot()
@@ -11640,7 +11640,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualNetworkInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualNetworkInterface")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualNetworkInterface", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareVirtualNetworkInterface : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareVirtualNetworkInterface()
@@ -11819,7 +11819,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VirtualizationVmwareVirtualSwitch.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualSwitch")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVirtualizationVmwareVirtualSwitch", SupportsShouldProcess = true)]
     public class SetIntersightVirtualizationVmwareVirtualSwitch : SetCmdletBase
     {
         public SetIntersightVirtualizationVmwareVirtualSwitch()

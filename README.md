@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2025121206
-- C# SDK version: 1.0.11.2025121206
+- Intersight.PowerShell version: 1.0.11.2026011407
+- C# SDK version: 1.0.11.2026011407
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2025121206"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026011407"}
 ```
 or
 
@@ -2816,16 +2816,20 @@ StoragePureFileSystems | [**Get-IntersightStoragePureFileSystems**](docs/Get-Int
 StoragePureHost | [**Get-IntersightStoragePureHost**](docs/Get-IntersightStoragePureHost.md) | Read a 'StoragePureHost' resource.
 StoragePureHostGroup | [**Get-IntersightStoragePureHostGroup**](docs/Get-IntersightStoragePureHostGroup.md) | Read a 'StoragePureHostGroup' resource.
 StoragePureHostLun | [**Get-IntersightStoragePureHostLun**](docs/Get-IntersightStoragePureHostLun.md) | Read a 'StoragePureHostLun' resource.
+StoragePureManagementAccessPolicy | [**Get-IntersightStoragePureManagementAccessPolicy**](docs/Get-IntersightStoragePureManagementAccessPolicy.md) | Read a 'StoragePureManagementAccessPolicy' resource.
 StoragePureNfsPolicyRule | [**Get-IntersightStoragePureNfsPolicyRule**](docs/Get-IntersightStoragePureNfsPolicyRule.md) | Read a 'StoragePureNfsPolicyRule' resource.
+StoragePurePod | [**Get-IntersightStoragePurePod**](docs/Get-IntersightStoragePurePod.md) | Read a 'StoragePurePod' resource.
 StoragePurePort | [**Get-IntersightStoragePurePort**](docs/Get-IntersightStoragePurePort.md) | Read a 'StoragePurePort' resource.
 StoragePureProtectionGroup | [**Get-IntersightStoragePureProtectionGroup**](docs/Get-IntersightStoragePureProtectionGroup.md) | Read a 'StoragePureProtectionGroup' resource.
 StoragePureProtectionGroupSnapshot | [**Get-IntersightStoragePureProtectionGroupSnapshot**](docs/Get-IntersightStoragePureProtectionGroupSnapshot.md) | Read a 'StoragePureProtectionGroupSnapshot' resource.
 StoragePureQuotaPolicyRule | [**Get-IntersightStoragePureQuotaPolicyRule**](docs/Get-IntersightStoragePureQuotaPolicyRule.md) | Read a 'StoragePureQuotaPolicyRule' resource.
+StoragePureRealm | [**Get-IntersightStoragePureRealm**](docs/Get-IntersightStoragePureRealm.md) | Read a 'StoragePureRealm' resource.
 StoragePureReplicationSchedule | [**Get-IntersightStoragePureReplicationSchedule**](docs/Get-IntersightStoragePureReplicationSchedule.md) | Read a 'StoragePureReplicationSchedule' resource.
 StoragePureSmbPolicyRule | [**Get-IntersightStoragePureSmbPolicyRule**](docs/Get-IntersightStoragePureSmbPolicyRule.md) | Read a 'StoragePureSmbPolicyRule' resource.
 StoragePureSnapshotSchedule | [**Get-IntersightStoragePureSnapshotSchedule**](docs/Get-IntersightStoragePureSnapshotSchedule.md) | Read a 'StoragePureSnapshotSchedule' resource.
 StoragePureTargetArray | [**Get-IntersightStoragePureTargetArray**](docs/Get-IntersightStoragePureTargetArray.md) | Read a 'StoragePureTargetArray' resource.
 StoragePureVolume | [**Get-IntersightStoragePureVolume**](docs/Get-IntersightStoragePureVolume.md) | Read a 'StoragePureVolume' resource.
+StoragePureVolumeGroup | [**Get-IntersightStoragePureVolumeGroup**](docs/Get-IntersightStoragePureVolumeGroup.md) | Read a 'StoragePureVolumeGroup' resource.
 StoragePureVolumeSnapshot | [**Get-IntersightStoragePureVolumeSnapshot**](docs/Get-IntersightStoragePureVolumeSnapshot.md) | Read a 'StoragePureVolumeSnapshot' resource.
 StorageSasExpander | [**Get-IntersightStorageSasExpander**](docs/Get-IntersightStorageSasExpander.md) | Read a 'StorageSasExpander' resource.
 StorageSasPort | [**Get-IntersightStorageSasPort**](docs/Get-IntersightStorageSasPort.md) | Read a 'StorageSasPort' resource.
@@ -3209,7 +3213,3 @@ WorkloadBlueprint | [**Set-IntersightWorkloadBlueprint**](docs/Set-IntersightWor
 WorkloadWorkloadDefinition | [**Set-IntersightWorkloadWorkloadDefinition**](docs/Set-IntersightWorkloadWorkloadDefinition.md) | Update a 'WorkloadWorkloadDefinition' resource.
 WorkloadWorkloadDeployment | [**Set-IntersightWorkloadWorkloadDeployment**](docs/Set-IntersightWorkloadWorkloadDeployment.md) | Update a 'WorkloadWorkloadDeployment' resource.
 WorkloadWorkloadInstance | [**Set-IntersightWorkloadWorkloadInstance**](docs/Set-IntersightWorkloadWorkloadInstance.md) | Update a 'WorkloadWorkloadInstance' resource.
-WorkspaceFolder | [**Get-IntersightWorkspaceFolder**](docs/Get-IntersightWorkspaceFolder.md) | Read a 'WorkspaceFolder' resource.
-WorkspaceFolder | [**New-IntersightWorkspaceFolder**](docs/New-IntersightWorkspaceFolder.md) | Create a 'WorkspaceFolder' resource.
-WorkspaceFolder | [**Remove-IntersightWorkspaceFolder**](docs/Remove-IntersightWorkspaceFolder.md) | Delete a 'WorkspaceFolder' resource.
-WorkspaceFolder | [**Set-IntersightWorkspaceFolder**](docs/Set-IntersightWorkspaceFolder.md) | Update a 'WorkspaceFolder' resource.

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareApplianceDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareApplianceDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareApplianceDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareApplianceDistributable : GetCmdletBase
     {
         public GetIntersightSoftwareApplianceDistributable()
@@ -430,7 +430,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareDownloadHistory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareDownloadHistory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareDownloadHistory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareDownloadHistory : GetCmdletBase
     {
         public GetIntersightSoftwareDownloadHistory()
@@ -626,7 +626,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareHciBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareHciBundleDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareHciBundleDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareHciBundleDistributable : GetCmdletBase
     {
         public GetIntersightSoftwareHciBundleDistributable()
@@ -1047,7 +1047,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareHciDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareHciDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareHciDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareHciDistributable : GetCmdletBase
     {
         public GetIntersightSoftwareHciDistributable()
@@ -1468,7 +1468,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareHclMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareHclMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareHclMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareHclMeta : GetCmdletBase
     {
         public GetIntersightSoftwareHclMeta()
@@ -1899,7 +1899,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareHyperflexBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareHyperflexBundleDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareHyperflexBundleDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareHyperflexBundleDistributable : GetCmdletBase
     {
         public GetIntersightSoftwareHyperflexBundleDistributable()
@@ -2320,7 +2320,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareHyperflexDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareHyperflexDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareHyperflexDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareHyperflexDistributable : GetCmdletBase
     {
         public GetIntersightSoftwareHyperflexDistributable()
@@ -2740,7 +2740,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareIksBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareIksBundleDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareIksBundleDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareIksBundleDistributable : GetCmdletBase
     {
         public GetIntersightSoftwareIksBundleDistributable()
@@ -3161,7 +3161,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareReleaseMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareReleaseMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareReleaseMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareReleaseMeta : GetCmdletBase
     {
         public GetIntersightSoftwareReleaseMeta()
@@ -3346,7 +3346,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareSolutionDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareSolutionDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareSolutionDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareSolutionDistributable : GetCmdletBase
     {
         public GetIntersightSoftwareSolutionDistributable()
@@ -3799,7 +3799,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareUcsdBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareUcsdBundleDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareUcsdBundleDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareUcsdBundleDistributable : GetCmdletBase
     {
         public GetIntersightSoftwareUcsdBundleDistributable()
@@ -4220,7 +4220,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwareUcsdDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareUcsdDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwareUcsdDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwareUcsdDistributable : GetCmdletBase
     {
         public GetIntersightSoftwareUcsdDistributable()
@@ -4640,7 +4640,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareApplianceDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareApplianceDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareApplianceDistributable", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareApplianceDistributable : NewCmdletBase
     {
         public NewIntersightSoftwareApplianceDistributable()
@@ -4735,6 +4735,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareApplianceDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -4969,7 +4979,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareHciBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareHciBundleDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareHciBundleDistributable", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareHciBundleDistributable : NewCmdletBase
     {
         public NewIntersightSoftwareHciBundleDistributable()
@@ -5065,6 +5075,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHciBundleDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -5299,7 +5319,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareHciDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareHciDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareHciDistributable", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareHciDistributable : NewCmdletBase
     {
         public NewIntersightSoftwareHciDistributable()
@@ -5394,6 +5414,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHciDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -5629,7 +5659,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareHclMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareHclMeta")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareHclMeta", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareHclMeta : NewCmdletBase
     {
         public NewIntersightSoftwareHclMeta()
@@ -5735,6 +5765,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHclMeta.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -5969,7 +6009,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareHyperflexBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareHyperflexBundleDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareHyperflexBundleDistributable", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareHyperflexBundleDistributable : NewCmdletBase
     {
         public NewIntersightSoftwareHyperflexBundleDistributable()
@@ -6065,6 +6105,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHyperflexBundleDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -6299,7 +6349,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareHyperflexDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareHyperflexDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareHyperflexDistributable", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareHyperflexDistributable : NewCmdletBase
     {
         public NewIntersightSoftwareHyperflexDistributable()
@@ -6394,6 +6444,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHyperflexDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -6628,7 +6688,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareIksBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareIksBundleDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareIksBundleDistributable", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareIksBundleDistributable : NewCmdletBase
     {
         public NewIntersightSoftwareIksBundleDistributable()
@@ -6724,6 +6784,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareIksBundleDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -6958,7 +7028,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareReleaseMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareReleaseMeta")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareReleaseMeta", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareReleaseMeta : NewCmdletBase
     {
         public NewIntersightSoftwareReleaseMeta()
@@ -7082,7 +7152,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareSolutionDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareSolutionDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareSolutionDistributable", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareSolutionDistributable : NewCmdletBase
     {
         public NewIntersightSoftwareSolutionDistributable()
@@ -7178,6 +7248,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareSolutionDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -7434,7 +7514,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareUcsdBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareUcsdBundleDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareUcsdBundleDistributable", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareUcsdBundleDistributable : NewCmdletBase
     {
         public NewIntersightSoftwareUcsdBundleDistributable()
@@ -7530,6 +7610,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareUcsdBundleDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -7764,7 +7854,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwareUcsdDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwareUcsdDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwareUcsdDistributable", SupportsShouldProcess = true)]
     public class NewIntersightSoftwareUcsdDistributable : NewCmdletBase
     {
         public NewIntersightSoftwareUcsdDistributable()
@@ -7859,6 +7949,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareUcsdDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -8093,7 +8193,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareApplianceDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareApplianceDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareApplianceDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareApplianceDistributable : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareApplianceDistributable()
@@ -8105,7 +8205,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareHciBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareHciBundleDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareHciBundleDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareHciBundleDistributable : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareHciBundleDistributable()
@@ -8117,7 +8217,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareHciDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareHciDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareHciDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareHciDistributable : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareHciDistributable()
@@ -8129,7 +8229,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareHclMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareHclMeta")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareHclMeta", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareHclMeta : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareHclMeta()
@@ -8141,7 +8241,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareHyperflexBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareHyperflexBundleDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareHyperflexBundleDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareHyperflexBundleDistributable : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareHyperflexBundleDistributable()
@@ -8153,7 +8253,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareHyperflexDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareHyperflexDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareHyperflexDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareHyperflexDistributable : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareHyperflexDistributable()
@@ -8165,7 +8265,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareIksBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareIksBundleDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareIksBundleDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareIksBundleDistributable : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareIksBundleDistributable()
@@ -8177,7 +8277,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareReleaseMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareReleaseMeta")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareReleaseMeta", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareReleaseMeta : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareReleaseMeta()
@@ -8189,7 +8289,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareSolutionDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareSolutionDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareSolutionDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareSolutionDistributable : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareSolutionDistributable()
@@ -8201,7 +8301,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareUcsdBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareUcsdBundleDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareUcsdBundleDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareUcsdBundleDistributable : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareUcsdBundleDistributable()
@@ -8213,7 +8313,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwareUcsdDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareUcsdDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwareUcsdDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwareUcsdDistributable : RemoveCmdletBase
     {
         public RemoveIntersightSoftwareUcsdDistributable()
@@ -8225,7 +8325,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareApplianceDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareApplianceDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareApplianceDistributable", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareApplianceDistributable : SetCmdletBase
     {
         public SetIntersightSoftwareApplianceDistributable()
@@ -8320,6 +8420,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareApplianceDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -8543,7 +8653,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareHciBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareHciBundleDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareHciBundleDistributable", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareHciBundleDistributable : SetCmdletBase
     {
         public SetIntersightSoftwareHciBundleDistributable()
@@ -8639,6 +8749,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHciBundleDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -8862,7 +8982,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareHciDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareHciDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareHciDistributable", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareHciDistributable : SetCmdletBase
     {
         public SetIntersightSoftwareHciDistributable()
@@ -8957,6 +9077,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHciDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -9181,7 +9311,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareHclMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareHclMeta")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareHclMeta", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareHclMeta : SetCmdletBase
     {
         public SetIntersightSoftwareHclMeta()
@@ -9287,6 +9417,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHclMeta.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -9510,7 +9650,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareHyperflexBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareHyperflexBundleDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareHyperflexBundleDistributable", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareHyperflexBundleDistributable : SetCmdletBase
     {
         public SetIntersightSoftwareHyperflexBundleDistributable()
@@ -9606,6 +9746,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHyperflexBundleDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -9829,7 +9979,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareHyperflexDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareHyperflexDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareHyperflexDistributable", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareHyperflexDistributable : SetCmdletBase
     {
         public SetIntersightSoftwareHyperflexDistributable()
@@ -9924,6 +10074,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHyperflexDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -10147,7 +10307,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareIksBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareIksBundleDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareIksBundleDistributable", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareIksBundleDistributable : SetCmdletBase
     {
         public SetIntersightSoftwareIksBundleDistributable()
@@ -10243,6 +10403,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareIksBundleDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -10466,7 +10636,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareReleaseMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareReleaseMeta")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareReleaseMeta", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareReleaseMeta : SetCmdletBase
     {
         public SetIntersightSoftwareReleaseMeta()
@@ -10579,7 +10749,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareSolutionDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareSolutionDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareSolutionDistributable", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareSolutionDistributable : SetCmdletBase
     {
         public SetIntersightSoftwareSolutionDistributable()
@@ -10675,6 +10845,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareSolutionDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -10920,7 +11100,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareUcsdBundleDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareUcsdBundleDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareUcsdBundleDistributable", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareUcsdBundleDistributable : SetCmdletBase
     {
         public SetIntersightSoftwareUcsdBundleDistributable()
@@ -11016,6 +11196,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareUcsdBundleDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -11239,7 +11429,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwareUcsdDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareUcsdDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwareUcsdDistributable", SupportsShouldProcess = true)]
     public class SetIntersightSoftwareUcsdDistributable : SetCmdletBase
     {
         public SetIntersightSoftwareUcsdDistributable()
@@ -11334,6 +11524,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareUcsdDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 

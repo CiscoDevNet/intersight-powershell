@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LsServiceProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLsServiceProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLsServiceProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLsServiceProfile : GetCmdletBase
     {
         public GetIntersightLsServiceProfile()
@@ -250,7 +250,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LsServiceProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLsServiceProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLsServiceProfile", SupportsShouldProcess = true)]
     public class SetIntersightLsServiceProfile : SetCmdletBase
     {
         public SetIntersightLsServiceProfile()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FeedbackFeedbackPost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFeedbackFeedbackPost")]
+    [Cmdlet(VerbsCommon.New, "IntersightFeedbackFeedbackPost", SupportsShouldProcess = true)]
     public class NewIntersightFeedbackFeedbackPost : NewCmdletBase
     {
         public NewIntersightFeedbackFeedbackPost()
@@ -100,7 +100,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FeedbackFeedbackPost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFeedbackFeedbackPost")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFeedbackFeedbackPost", SupportsShouldProcess = true)]
     public class SetIntersightFeedbackFeedbackPost : SetCmdletBase
     {
         public SetIntersightFeedbackFeedbackPost()

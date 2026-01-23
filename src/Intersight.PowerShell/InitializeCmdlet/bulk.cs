@@ -1028,6 +1028,105 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkRelatedTypeExportOption.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkRelatedTypeExportOption")]
+    public class InitializeIntersightBulkRelatedTypeExportOption : PSCmdlet
+    {
+        public InitializeIntersightBulkRelatedTypeExportOption()
+        {
+            ClassId = BulkRelatedTypeExportOption.ClassIdEnum.BulkRelatedTypeExportOption;
+            ObjectType = BulkRelatedTypeExportOption.ObjectTypeEnum.BulkRelatedTypeExportOption;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkRelatedTypeExportOption.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Do not export relationships."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ExcludeRelations
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> ExcludedPeers
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkRelatedTypeExportOption.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully qualified related type name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RelatedType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BulkRelatedTypeExportOption initObject = new Intersight.Model.BulkRelatedTypeExportOption();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExcludeRelations"))
+            {
+                initObject.ExcludeRelations = this.ExcludeRelations;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExcludedPeers"))
+            {
+                initObject.ExcludedPeers = this.ExcludedPeers;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RelatedType"))
+            {
+                initObject.RelatedType = this.RelatedType;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BulkRequest.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBulkRequest")]

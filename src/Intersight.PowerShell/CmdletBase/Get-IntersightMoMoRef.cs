@@ -5,7 +5,7 @@ using System.Text;
 using Intersight.Model;
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsCommon.Get, "IntersightMoMoRef")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMoMoRef", SupportsShouldProcess = true)]
     public class Get_IntersightMoMoRef : PSCmdlet
     {
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true)]
@@ -22,6 +22,10 @@ namespace Intersight.PowerShell
                 if (Enum.TryParse(typeof(MoMoRef.ObjectTypeEnum), ManagedObject.GetType().Name, out result))
                 {
                     moRef.ObjectType = (MoMoRef.ObjectTypeEnum)result;
+                }
+                if (!ShouldProcess(result.ToString()))
+                {
+                    return;
                 }
                 WriteObject(moRef);
             }

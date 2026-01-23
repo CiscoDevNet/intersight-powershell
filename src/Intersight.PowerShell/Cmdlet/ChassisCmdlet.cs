@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ChassisConfigChangeDetail.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigChangeDetail", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigChangeDetail", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightChassisConfigChangeDetail : GetCmdletBase
     {
         public GetIntersightChassisConfigChangeDetail()
@@ -187,7 +187,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ChassisConfigImport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigImport", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigImport", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightChassisConfigImport : GetCmdletBase
     {
         public GetIntersightChassisConfigImport()
@@ -373,7 +373,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ChassisConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightChassisConfigResult : GetCmdletBase
     {
         public GetIntersightChassisConfigResult()
@@ -549,7 +549,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ChassisConfigResultEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigResultEntry", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisConfigResultEntry", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightChassisConfigResultEntry : GetCmdletBase
     {
         public GetIntersightChassisConfigResultEntry()
@@ -735,7 +735,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ChassisIomProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisIomProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisIomProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightChassisIomProfile : GetCmdletBase
     {
         public GetIntersightChassisIomProfile()
@@ -964,7 +964,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ChassisProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightChassisProfile : GetCmdletBase
     {
         public GetIntersightChassisProfile()
@@ -1218,7 +1218,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ChassisProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightChassisProfileTemplate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightChassisProfileTemplate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightChassisProfileTemplate : GetCmdletBase
     {
         public GetIntersightChassisProfileTemplate()
@@ -1446,7 +1446,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ChassisConfigImport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightChassisConfigImport")]
+    [Cmdlet(VerbsCommon.New, "IntersightChassisConfigImport", SupportsShouldProcess = true)]
     public class NewIntersightChassisConfigImport : NewCmdletBase
     {
         public NewIntersightChassisConfigImport()
@@ -1591,7 +1591,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ChassisProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightChassisProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightChassisProfile", SupportsShouldProcess = true)]
     public class NewIntersightChassisProfile : NewCmdletBase
     {
         public NewIntersightChassisProfile()
@@ -1824,7 +1824,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ChassisProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightChassisProfileTemplate")]
+    [Cmdlet(VerbsCommon.New, "IntersightChassisProfileTemplate", SupportsShouldProcess = true)]
     public class NewIntersightChassisProfileTemplate : NewCmdletBase
     {
         public NewIntersightChassisProfileTemplate()
@@ -2031,7 +2031,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ChassisProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightChassisProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightChassisProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightChassisProfile : RemoveCmdletBase
     {
         public RemoveIntersightChassisProfile()
@@ -2043,7 +2043,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ChassisProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightChassisProfileTemplate")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightChassisProfileTemplate", SupportsShouldProcess = true)]
     public class RemoveIntersightChassisProfileTemplate : RemoveCmdletBase
     {
         public RemoveIntersightChassisProfileTemplate()
@@ -2055,7 +2055,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ChassisProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightChassisProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightChassisProfile", SupportsShouldProcess = true)]
     public class SetIntersightChassisProfile : SetCmdletBase
     {
         public SetIntersightChassisProfile()
@@ -2277,7 +2277,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ChassisProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightChassisProfileTemplate")]
+    [Cmdlet(VerbsCommon.Set, "IntersightChassisProfileTemplate", SupportsShouldProcess = true)]
     public class SetIntersightChassisProfileTemplate : SetCmdletBase
     {
         public SetIntersightChassisProfileTemplate()

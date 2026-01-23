@@ -7,7 +7,7 @@ using System.Management.Automation;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsCommon.Set, "IntersightManagedObject")]
+    [Cmdlet(VerbsCommon.Set, "IntersightManagedObject", SupportsShouldProcess = true)]
     public class SetManagedObject : CmdletBase
     {
         public SetManagedObject()
@@ -29,6 +29,10 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            if (!ShouldProcess(CmdletBase.Config.BasePath, string.Format("Update {0} : Moid {1}", ObjectType, Moid)))
+            {
+                return;
+            }
             //Check the objectType in MoBaseMo.ObjectTypeEnum if it belongs to that enum
             //fetch the display name.
             //this is done to work with specific Get cmdlets.

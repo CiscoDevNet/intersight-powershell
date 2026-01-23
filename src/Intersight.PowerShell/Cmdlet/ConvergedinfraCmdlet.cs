@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConvergedinfraAdapterComplianceDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraAdapterComplianceDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraAdapterComplianceDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightConvergedinfraAdapterComplianceDetails : GetCmdletBase
     {
         public GetIntersightConvergedinfraAdapterComplianceDetails()
@@ -251,7 +251,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConvergedinfraPod.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraPod", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraPod", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightConvergedinfraPod : GetCmdletBase
     {
         public GetIntersightConvergedinfraPod()
@@ -470,7 +470,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConvergedinfraPodComplianceInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraPodComplianceInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraPodComplianceInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightConvergedinfraPodComplianceInfo : GetCmdletBase
     {
         public GetIntersightConvergedinfraPodComplianceInfo()
@@ -634,7 +634,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConvergedinfraServerComplianceDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraServerComplianceDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraServerComplianceDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightConvergedinfraServerComplianceDetails : GetCmdletBase
     {
         public GetIntersightConvergedinfraServerComplianceDetails()
@@ -896,7 +896,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConvergedinfraStorageComplianceDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraStorageComplianceDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraStorageComplianceDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightConvergedinfraStorageComplianceDetails : GetCmdletBase
     {
         public GetIntersightConvergedinfraStorageComplianceDetails()
@@ -1125,7 +1125,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConvergedinfraSwitchComplianceDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraSwitchComplianceDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightConvergedinfraSwitchComplianceDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightConvergedinfraSwitchComplianceDetails : GetCmdletBase
     {
         public GetIntersightConvergedinfraSwitchComplianceDetails()
@@ -1333,7 +1333,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ConvergedinfraPod.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightConvergedinfraPod")]
+    [Cmdlet(VerbsCommon.Set, "IntersightConvergedinfraPod", SupportsShouldProcess = true)]
     public class SetIntersightConvergedinfraPod : SetCmdletBase
     {
         public SetIntersightConvergedinfraPod()

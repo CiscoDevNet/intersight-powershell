@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DnacDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDnacDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDnacDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDnacDevice : GetCmdletBase
     {
         public GetIntersightDnacDevice()
@@ -173,7 +173,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DnacDeviceInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDnacDeviceInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDnacDeviceInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDnacDeviceInterface : GetCmdletBase
     {
         public GetIntersightDnacDeviceInterface()
@@ -369,7 +369,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DnacExternalBorderNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDnacExternalBorderNode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDnacExternalBorderNode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDnacExternalBorderNode : GetCmdletBase
     {
         public GetIntersightDnacExternalBorderNode()
@@ -544,7 +544,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DnacExternalBorderNodeInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDnacExternalBorderNodeInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDnacExternalBorderNodeInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDnacExternalBorderNodeInterface : GetCmdletBase
     {
         public GetIntersightDnacExternalBorderNodeInterface()
@@ -740,7 +740,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DnacFabricSite.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDnacFabricSite", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDnacFabricSite", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDnacFabricSite : GetCmdletBase
     {
         public GetIntersightDnacFabricSite()
@@ -925,7 +925,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DnacSite.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDnacSite", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDnacSite", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDnacSite : GetCmdletBase
     {
         public GetIntersightDnacSite()
@@ -1077,7 +1077,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DnacSiteIpPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDnacSiteIpPool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDnacSiteIpPool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDnacSiteIpPool : GetCmdletBase
     {
         public GetIntersightDnacSiteIpPool()
@@ -1262,7 +1262,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DnacTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDnacTemplate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDnacTemplate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDnacTemplate : GetCmdletBase
     {
         public GetIntersightDnacTemplate()
@@ -1447,7 +1447,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DnacTransit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDnacTransit", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDnacTransit", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDnacTransit : GetCmdletBase
     {
         public GetIntersightDnacTransit()
@@ -1610,7 +1610,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DnacVirtualNetworkFabricSite.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDnacVirtualNetworkFabricSite", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDnacVirtualNetworkFabricSite", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDnacVirtualNetworkFabricSite : GetCmdletBase
     {
         public GetIntersightDnacVirtualNetworkFabricSite()

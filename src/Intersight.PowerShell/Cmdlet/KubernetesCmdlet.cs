@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesAciCniApic.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAciCniApic", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAciCniApic", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesAciCniApic : GetCmdletBase
     {
         public GetIntersightKubernetesAciCniApic()
@@ -174,7 +174,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesAciCniProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAciCniProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAciCniProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesAciCniProfile : GetCmdletBase
     {
         public GetIntersightKubernetesAciCniProfile()
@@ -537,7 +537,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesAciCniTenantClusterAllocation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAciCniTenantClusterAllocation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAciCniTenantClusterAllocation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesAciCniTenantClusterAllocation : GetCmdletBase
     {
         public GetIntersightKubernetesAciCniTenantClusterAllocation()
@@ -711,7 +711,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesAddonDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAddonDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAddonDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesAddonDefinition : GetCmdletBase
     {
         public GetIntersightKubernetesAddonDefinition()
@@ -964,7 +964,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesAddonPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAddonPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAddonPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesAddonPolicy : GetCmdletBase
     {
         public GetIntersightKubernetesAddonPolicy()
@@ -1128,7 +1128,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesAddonRepository.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAddonRepository", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesAddonRepository", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesAddonRepository : GetCmdletBase
     {
         public GetIntersightKubernetesAddonRepository()
@@ -1336,7 +1336,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesBaremetalNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesBaremetalNodeProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesBaremetalNodeProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesBaremetalNodeProfile : GetCmdletBase
     {
         public GetIntersightKubernetesBaremetalNodeProfile()
@@ -1597,7 +1597,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesCatalog : GetCmdletBase
     {
         public GetIntersightKubernetesCatalog()
@@ -1749,7 +1749,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesCluster", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesCluster", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesCluster : GetCmdletBase
     {
         public GetIntersightKubernetesCluster()
@@ -1936,7 +1936,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesClusterAddonProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesClusterAddonProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesClusterAddonProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesClusterAddonProfile : GetCmdletBase
     {
         public GetIntersightKubernetesClusterAddonProfile()
@@ -2089,7 +2089,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesClusterProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesClusterProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesClusterProfile : GetCmdletBase
     {
         public GetIntersightKubernetesClusterProfile()
@@ -2435,7 +2435,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesConfigResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesConfigResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesConfigResult : GetCmdletBase
     {
         public GetIntersightKubernetesConfigResult()
@@ -2600,7 +2600,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesConfigResultEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesConfigResultEntry", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesConfigResultEntry", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesConfigResultEntry : GetCmdletBase
     {
         public GetIntersightKubernetesConfigResultEntry()
@@ -2786,7 +2786,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesContainerRuntimePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesContainerRuntimePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesContainerRuntimePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesContainerRuntimePolicy : GetCmdletBase
     {
         public GetIntersightKubernetesContainerRuntimePolicy()
@@ -2953,7 +2953,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesDaemonSet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesDaemonSet", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesDaemonSet", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesDaemonSet : GetCmdletBase
     {
         public GetIntersightKubernetesDaemonSet()
@@ -3107,7 +3107,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesDeployment", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesDeployment", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesDeployment : GetCmdletBase
     {
         public GetIntersightKubernetesDeployment()
@@ -3261,7 +3261,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesHttpProxyPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesHttpProxyPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesHttpProxyPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesHttpProxyPolicy : GetCmdletBase
     {
         public GetIntersightKubernetesHttpProxyPolicy()
@@ -3416,7 +3416,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesIngress.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesIngress", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesIngress", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesIngress : GetCmdletBase
     {
         public GetIntersightKubernetesIngress()
@@ -3570,7 +3570,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesNetworkPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesNetworkPolicy : GetCmdletBase
     {
         public GetIntersightKubernetesNetworkPolicy()
@@ -3757,7 +3757,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesNode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesNode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesNode : GetCmdletBase
     {
         public GetIntersightKubernetesNode()
@@ -3917,7 +3917,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesNodeGroupProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesNodeGroupProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesNodeGroupProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesNodeGroupProfile : GetCmdletBase
     {
         public GetIntersightKubernetesNodeGroupProfile()
@@ -4193,7 +4193,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesNvidiaGpuProduct.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesNvidiaGpuProduct", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesNvidiaGpuProduct", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesNvidiaGpuProduct : GetCmdletBase
     {
         public GetIntersightKubernetesNvidiaGpuProduct()
@@ -4390,7 +4390,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesPod.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesPod", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesPod", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesPod : GetCmdletBase
     {
         public GetIntersightKubernetesPod()
@@ -4544,7 +4544,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesService.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesService", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesService", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesService : GetCmdletBase
     {
         public GetIntersightKubernetesService()
@@ -4698,7 +4698,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesStatefulSet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesStatefulSet", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesStatefulSet", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesStatefulSet : GetCmdletBase
     {
         public GetIntersightKubernetesStatefulSet()
@@ -4852,7 +4852,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesSysConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesSysConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesSysConfigPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesSysConfigPolicy : GetCmdletBase
     {
         public GetIntersightKubernetesSysConfigPolicy()
@@ -5029,7 +5029,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesTrustedRegistriesPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesTrustedRegistriesPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesTrustedRegistriesPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesTrustedRegistriesPolicy : GetCmdletBase
     {
         public GetIntersightKubernetesTrustedRegistriesPolicy()
@@ -5184,7 +5184,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVersion", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVersion", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesVersion : GetCmdletBase
     {
         public GetIntersightKubernetesVersion()
@@ -5403,7 +5403,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesVersionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVersionPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVersionPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesVersionPolicy : GetCmdletBase
     {
         public GetIntersightKubernetesVersionPolicy()
@@ -5567,7 +5567,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesVirtualMachineInfraConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVirtualMachineInfraConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVirtualMachineInfraConfigPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesVirtualMachineInfraConfigPolicy : GetCmdletBase
     {
         public GetIntersightKubernetesVirtualMachineInfraConfigPolicy()
@@ -5732,7 +5732,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesVirtualMachineInfrastructureProvider.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVirtualMachineInfrastructureProvider", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVirtualMachineInfrastructureProvider", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesVirtualMachineInfrastructureProvider : GetCmdletBase
     {
         public GetIntersightKubernetesVirtualMachineInfrastructureProvider()
@@ -5918,7 +5918,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesVirtualMachineInstanceType.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVirtualMachineInstanceType", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVirtualMachineInstanceType", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesVirtualMachineInstanceType : GetCmdletBase
     {
         public GetIntersightKubernetesVirtualMachineInstanceType()
@@ -6104,7 +6104,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KubernetesVirtualMachineNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVirtualMachineNodeProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKubernetesVirtualMachineNodeProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKubernetesVirtualMachineNodeProfile : GetCmdletBase
     {
         public GetIntersightKubernetesVirtualMachineNodeProfile()
@@ -6366,7 +6366,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesAciCniApic.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAciCniApic")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAciCniApic", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesAciCniApic : NewCmdletBase
     {
         public NewIntersightKubernetesAciCniApic()
@@ -6499,7 +6499,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesAciCniProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAciCniProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAciCniProfile", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesAciCniProfile : NewCmdletBase
     {
         public NewIntersightKubernetesAciCniProfile()
@@ -6791,7 +6791,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesAciCniTenantClusterAllocation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAciCniTenantClusterAllocation")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAciCniTenantClusterAllocation", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesAciCniTenantClusterAllocation : NewCmdletBase
     {
         public NewIntersightKubernetesAciCniTenantClusterAllocation()
@@ -6884,7 +6884,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesAddonDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAddonDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAddonDefinition", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesAddonDefinition : NewCmdletBase
     {
         public NewIntersightKubernetesAddonDefinition()
@@ -7116,7 +7116,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesAddonPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAddonPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAddonPolicy", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesAddonPolicy : NewCmdletBase
     {
         public NewIntersightKubernetesAddonPolicy()
@@ -7249,7 +7249,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesAddonRepository.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAddonRepository")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesAddonRepository", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesAddonRepository : NewCmdletBase
     {
         public NewIntersightKubernetesAddonRepository()
@@ -7406,7 +7406,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesBaremetalNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesBaremetalNodeProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesBaremetalNodeProfile", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesBaremetalNodeProfile : NewCmdletBase
     {
         public NewIntersightKubernetesBaremetalNodeProfile()
@@ -7656,7 +7656,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesCluster")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesCluster", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesCluster : NewCmdletBase
     {
         public NewIntersightKubernetesCluster()
@@ -7802,7 +7802,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesClusterAddonProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesClusterAddonProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesClusterAddonProfile", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesClusterAddonProfile : NewCmdletBase
     {
         public NewIntersightKubernetesClusterAddonProfile()
@@ -7924,7 +7924,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesClusterProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesClusterProfile", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesClusterProfile : NewCmdletBase
     {
         public NewIntersightKubernetesClusterProfile()
@@ -8319,7 +8319,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesContainerRuntimePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesContainerRuntimePolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesContainerRuntimePolicy", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesContainerRuntimePolicy : NewCmdletBase
     {
         public NewIntersightKubernetesContainerRuntimePolicy()
@@ -8485,7 +8485,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesHttpProxyPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesHttpProxyPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesHttpProxyPolicy", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesHttpProxyPolicy : NewCmdletBase
     {
         public NewIntersightKubernetesHttpProxyPolicy()
@@ -8629,7 +8629,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesNetworkPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesNetworkPolicy", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesNetworkPolicy : NewCmdletBase
     {
         public NewIntersightKubernetesNetworkPolicy()
@@ -8795,7 +8795,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesNodeGroupProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesNodeGroupProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesNodeGroupProfile", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesNodeGroupProfile : NewCmdletBase
     {
         public NewIntersightKubernetesNodeGroupProfile()
@@ -9110,7 +9110,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesNvidiaGpuProduct.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesNvidiaGpuProduct")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesNvidiaGpuProduct", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesNvidiaGpuProduct : NewCmdletBase
     {
         public NewIntersightKubernetesNvidiaGpuProduct()
@@ -9276,7 +9276,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesSysConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesSysConfigPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesSysConfigPolicy", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesSysConfigPolicy : NewCmdletBase
     {
         public NewIntersightKubernetesSysConfigPolicy()
@@ -9442,7 +9442,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesTrustedRegistriesPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesTrustedRegistriesPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesTrustedRegistriesPolicy", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesTrustedRegistriesPolicy : NewCmdletBase
     {
         public NewIntersightKubernetesTrustedRegistriesPolicy()
@@ -9586,7 +9586,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVersion")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVersion", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesVersion : NewCmdletBase
     {
         public NewIntersightKubernetesVersion()
@@ -9774,7 +9774,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesVersionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVersionPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVersionPolicy", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesVersionPolicy : NewCmdletBase
     {
         public NewIntersightKubernetesVersionPolicy()
@@ -9907,7 +9907,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesVirtualMachineInfraConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVirtualMachineInfraConfigPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVirtualMachineInfraConfigPolicy", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesVirtualMachineInfraConfigPolicy : NewCmdletBase
     {
         public NewIntersightKubernetesVirtualMachineInfraConfigPolicy()
@@ -10051,7 +10051,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesVirtualMachineInfrastructureProvider.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVirtualMachineInfrastructureProvider")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVirtualMachineInfrastructureProvider", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesVirtualMachineInfrastructureProvider : NewCmdletBase
     {
         public NewIntersightKubernetesVirtualMachineInfrastructureProvider()
@@ -10206,7 +10206,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesVirtualMachineInstanceType.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVirtualMachineInstanceType")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVirtualMachineInstanceType", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesVirtualMachineInstanceType : NewCmdletBase
     {
         public NewIntersightKubernetesVirtualMachineInstanceType()
@@ -10361,7 +10361,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KubernetesVirtualMachineNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVirtualMachineNodeProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightKubernetesVirtualMachineNodeProfile", SupportsShouldProcess = true)]
     public class NewIntersightKubernetesVirtualMachineNodeProfile : NewCmdletBase
     {
         public NewIntersightKubernetesVirtualMachineNodeProfile()
@@ -10612,7 +10612,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesAciCniApic.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAciCniApic")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAciCniApic", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesAciCniApic : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesAciCniApic()
@@ -10624,7 +10624,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesAciCniProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAciCniProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAciCniProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesAciCniProfile : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesAciCniProfile()
@@ -10636,7 +10636,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesAciCniTenantClusterAllocation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAciCniTenantClusterAllocation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAciCniTenantClusterAllocation", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesAciCniTenantClusterAllocation : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesAciCniTenantClusterAllocation()
@@ -10648,7 +10648,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesAddonDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAddonDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAddonDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesAddonDefinition : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesAddonDefinition()
@@ -10660,7 +10660,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesAddonPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAddonPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAddonPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesAddonPolicy : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesAddonPolicy()
@@ -10672,7 +10672,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesAddonRepository.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAddonRepository")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesAddonRepository", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesAddonRepository : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesAddonRepository()
@@ -10684,7 +10684,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesBaremetalNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesBaremetalNodeProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesBaremetalNodeProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesBaremetalNodeProfile : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesBaremetalNodeProfile()
@@ -10696,7 +10696,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesCluster")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesCluster", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesCluster : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesCluster()
@@ -10708,7 +10708,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesClusterAddonProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesClusterAddonProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesClusterAddonProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesClusterAddonProfile : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesClusterAddonProfile()
@@ -10720,7 +10720,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesClusterProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesClusterProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesClusterProfile : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesClusterProfile()
@@ -10732,7 +10732,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesContainerRuntimePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesContainerRuntimePolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesContainerRuntimePolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesContainerRuntimePolicy : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesContainerRuntimePolicy()
@@ -10744,7 +10744,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesDaemonSet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesDaemonSet")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesDaemonSet", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesDaemonSet : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesDaemonSet()
@@ -10756,7 +10756,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesDeployment")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesDeployment", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesDeployment : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesDeployment()
@@ -10768,7 +10768,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesHttpProxyPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesHttpProxyPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesHttpProxyPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesHttpProxyPolicy : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesHttpProxyPolicy()
@@ -10780,7 +10780,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesIngress.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesIngress")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesIngress", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesIngress : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesIngress()
@@ -10792,7 +10792,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesNetworkPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesNetworkPolicy : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesNetworkPolicy()
@@ -10804,7 +10804,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesNode")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesNode", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesNode : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesNode()
@@ -10816,7 +10816,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesNodeGroupProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesNodeGroupProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesNodeGroupProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesNodeGroupProfile : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesNodeGroupProfile()
@@ -10828,7 +10828,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesNvidiaGpuProduct.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesNvidiaGpuProduct")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesNvidiaGpuProduct", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesNvidiaGpuProduct : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesNvidiaGpuProduct()
@@ -10840,7 +10840,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesPod.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesPod")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesPod", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesPod : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesPod()
@@ -10852,7 +10852,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesService.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesService")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesService", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesService : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesService()
@@ -10864,7 +10864,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesStatefulSet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesStatefulSet")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesStatefulSet", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesStatefulSet : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesStatefulSet()
@@ -10876,7 +10876,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesSysConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesSysConfigPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesSysConfigPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesSysConfigPolicy : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesSysConfigPolicy()
@@ -10888,7 +10888,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesTrustedRegistriesPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesTrustedRegistriesPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesTrustedRegistriesPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesTrustedRegistriesPolicy : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesTrustedRegistriesPolicy()
@@ -10900,7 +10900,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesVersion")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesVersion", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesVersion : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesVersion()
@@ -10912,7 +10912,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesVersionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesVersionPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesVersionPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesVersionPolicy : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesVersionPolicy()
@@ -10924,7 +10924,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesVirtualMachineInfraConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesVirtualMachineInfraConfigPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesVirtualMachineInfraConfigPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesVirtualMachineInfraConfigPolicy : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesVirtualMachineInfraConfigPolicy()
@@ -10936,7 +10936,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesVirtualMachineInstanceType.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesVirtualMachineInstanceType")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesVirtualMachineInstanceType", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesVirtualMachineInstanceType : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesVirtualMachineInstanceType()
@@ -10948,7 +10948,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KubernetesVirtualMachineNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesVirtualMachineNodeProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKubernetesVirtualMachineNodeProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightKubernetesVirtualMachineNodeProfile : RemoveCmdletBase
     {
         public RemoveIntersightKubernetesVirtualMachineNodeProfile()
@@ -10960,7 +10960,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesAciCniApic.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAciCniApic")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAciCniApic", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesAciCniApic : SetCmdletBase
     {
         public SetIntersightKubernetesAciCniApic()
@@ -11082,7 +11082,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesAciCniProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAciCniProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAciCniProfile", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesAciCniProfile : SetCmdletBase
     {
         public SetIntersightKubernetesAciCniProfile()
@@ -11363,7 +11363,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesAciCniTenantClusterAllocation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAciCniTenantClusterAllocation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAciCniTenantClusterAllocation", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesAciCniTenantClusterAllocation : SetCmdletBase
     {
         public SetIntersightKubernetesAciCniTenantClusterAllocation()
@@ -11445,7 +11445,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesAddonDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAddonDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAddonDefinition", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesAddonDefinition : SetCmdletBase
     {
         public SetIntersightKubernetesAddonDefinition()
@@ -11666,7 +11666,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesAddonPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAddonPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAddonPolicy", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesAddonPolicy : SetCmdletBase
     {
         public SetIntersightKubernetesAddonPolicy()
@@ -11788,7 +11788,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesAddonRepository.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAddonRepository")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesAddonRepository", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesAddonRepository : SetCmdletBase
     {
         public SetIntersightKubernetesAddonRepository()
@@ -11934,7 +11934,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesBaremetalNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesBaremetalNodeProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesBaremetalNodeProfile", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesBaremetalNodeProfile : SetCmdletBase
     {
         public SetIntersightKubernetesBaremetalNodeProfile()
@@ -12173,7 +12173,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesCluster")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesCluster", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesCluster : SetCmdletBase
     {
         public SetIntersightKubernetesCluster()
@@ -12308,7 +12308,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesClusterAddonProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesClusterAddonProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesClusterAddonProfile", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesClusterAddonProfile : SetCmdletBase
     {
         public SetIntersightKubernetesClusterAddonProfile()
@@ -12419,7 +12419,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesClusterProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesClusterProfile", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesClusterProfile : SetCmdletBase
     {
         public SetIntersightKubernetesClusterProfile()
@@ -12803,7 +12803,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesContainerRuntimePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesContainerRuntimePolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesContainerRuntimePolicy", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesContainerRuntimePolicy : SetCmdletBase
     {
         public SetIntersightKubernetesContainerRuntimePolicy()
@@ -12958,7 +12958,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesHttpProxyPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesHttpProxyPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesHttpProxyPolicy", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesHttpProxyPolicy : SetCmdletBase
     {
         public SetIntersightKubernetesHttpProxyPolicy()
@@ -13091,7 +13091,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesNetworkPolicy", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesNetworkPolicy : SetCmdletBase
     {
         public SetIntersightKubernetesNetworkPolicy()
@@ -13246,7 +13246,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesNodeGroupProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesNodeGroupProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesNodeGroupProfile", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesNodeGroupProfile : SetCmdletBase
     {
         public SetIntersightKubernetesNodeGroupProfile()
@@ -13550,7 +13550,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesNvidiaGpuProduct.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesNvidiaGpuProduct")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesNvidiaGpuProduct", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesNvidiaGpuProduct : SetCmdletBase
     {
         public SetIntersightKubernetesNvidiaGpuProduct()
@@ -13705,7 +13705,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesSysConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesSysConfigPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesSysConfigPolicy", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesSysConfigPolicy : SetCmdletBase
     {
         public SetIntersightKubernetesSysConfigPolicy()
@@ -13860,7 +13860,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesTrustedRegistriesPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesTrustedRegistriesPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesTrustedRegistriesPolicy", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesTrustedRegistriesPolicy : SetCmdletBase
     {
         public SetIntersightKubernetesTrustedRegistriesPolicy()
@@ -13993,7 +13993,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVersion")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVersion", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesVersion : SetCmdletBase
     {
         public SetIntersightKubernetesVersion()
@@ -14170,7 +14170,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesVersionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVersionPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVersionPolicy", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesVersionPolicy : SetCmdletBase
     {
         public SetIntersightKubernetesVersionPolicy()
@@ -14292,7 +14292,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesVirtualMachineInfraConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVirtualMachineInfraConfigPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVirtualMachineInfraConfigPolicy", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesVirtualMachineInfraConfigPolicy : SetCmdletBase
     {
         public SetIntersightKubernetesVirtualMachineInfraConfigPolicy()
@@ -14425,7 +14425,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesVirtualMachineInfrastructureProvider.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVirtualMachineInfrastructureProvider")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVirtualMachineInfrastructureProvider", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesVirtualMachineInfrastructureProvider : SetCmdletBase
     {
         public SetIntersightKubernetesVirtualMachineInfrastructureProvider()
@@ -14569,7 +14569,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesVirtualMachineInstanceType.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVirtualMachineInstanceType")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVirtualMachineInstanceType", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesVirtualMachineInstanceType : SetCmdletBase
     {
         public SetIntersightKubernetesVirtualMachineInstanceType()
@@ -14713,7 +14713,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KubernetesVirtualMachineNodeProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVirtualMachineNodeProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKubernetesVirtualMachineNodeProfile", SupportsShouldProcess = true)]
     public class SetIntersightKubernetesVirtualMachineNodeProfile : SetCmdletBase
     {
         public SetIntersightKubernetesVirtualMachineNodeProfile()

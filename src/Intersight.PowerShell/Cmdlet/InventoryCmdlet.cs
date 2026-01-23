@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get InventoryDeviceInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDeviceInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDeviceInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightInventoryDeviceInfo : GetCmdletBase
     {
         public GetIntersightInventoryDeviceInfo()
@@ -218,7 +218,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get InventoryDnMoBinding.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDnMoBinding", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightInventoryDnMoBinding", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightInventoryDnMoBinding : GetCmdletBase
     {
         public GetIntersightInventoryDnMoBinding()
@@ -381,7 +381,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get InventoryGenericInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightInventoryGenericInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightInventoryGenericInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightInventoryGenericInventory : GetCmdletBase
     {
         public GetIntersightInventoryGenericInventory()
@@ -599,7 +599,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get InventoryGenericInventoryHolder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightInventoryGenericInventoryHolder", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightInventoryGenericInventoryHolder", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightInventoryGenericInventoryHolder : GetCmdletBase
     {
         public GetIntersightInventoryGenericInventoryHolder()
@@ -807,7 +807,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New InventoryRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightInventoryRequest")]
+    [Cmdlet(VerbsCommon.New, "IntersightInventoryRequest", SupportsShouldProcess = true)]
     public class NewIntersightInventoryRequest : NewCmdletBase
     {
         public NewIntersightInventoryRequest()
@@ -907,7 +907,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventory")]
+    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventory", SupportsShouldProcess = true)]
     public class SetIntersightInventoryGenericInventory : SetCmdletBase
     {
         public SetIntersightInventoryGenericInventory()
@@ -983,7 +983,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set InventoryGenericInventoryHolder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventoryHolder")]
+    [Cmdlet(VerbsCommon.Set, "IntersightInventoryGenericInventoryHolder", SupportsShouldProcess = true)]
     public class SetIntersightInventoryGenericInventoryHolder : SetCmdletBase
     {
         public SetIntersightInventoryGenericInventoryHolder()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ForecastCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightForecastCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightForecastCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightForecastCatalog : GetCmdletBase
     {
         public GetIntersightForecastCatalog()
@@ -152,7 +152,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ForecastDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightForecastDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightForecastDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightForecastDefinition : GetCmdletBase
     {
         public GetIntersightForecastDefinition()
@@ -348,7 +348,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ForecastInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightForecastInstance", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightForecastInstance", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightForecastInstance : GetCmdletBase
     {
         public GetIntersightForecastInstance()
@@ -590,7 +590,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ForecastInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightForecastInstance")]
+    [Cmdlet(VerbsCommon.Set, "IntersightForecastInstance", SupportsShouldProcess = true)]
     public class SetIntersightForecastInstance : SetCmdletBase
     {
         public SetIntersightForecastInstance()

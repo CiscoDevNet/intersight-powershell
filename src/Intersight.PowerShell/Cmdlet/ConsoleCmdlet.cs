@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConsoleConsoleConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConsoleConsoleConfig", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightConsoleConsoleConfig", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightConsoleConsoleConfig : GetCmdletBase
     {
         public GetIntersightConsoleConsoleConfig()

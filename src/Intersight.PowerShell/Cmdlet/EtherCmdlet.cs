@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EtherHostPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEtherHostPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEtherHostPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEtherHostPort : GetCmdletBase
     {
         public GetIntersightEtherHostPort()
@@ -415,7 +415,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EtherNetworkPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEtherNetworkPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEtherNetworkPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEtherNetworkPort : GetCmdletBase
     {
         public GetIntersightEtherNetworkPort()
@@ -689,7 +689,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EtherPhysicalPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEtherPhysicalPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEtherPhysicalPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEtherPhysicalPort : GetCmdletBase
     {
         public GetIntersightEtherPhysicalPort()
@@ -1139,7 +1139,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EtherPortChannel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEtherPortChannel", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEtherPortChannel", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEtherPortChannel : GetCmdletBase
     {
         public GetIntersightEtherPortChannel()
@@ -1555,7 +1555,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EtherHostPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEtherHostPort")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEtherHostPort", SupportsShouldProcess = true)]
     public class SetIntersightEtherHostPort : SetCmdletBase
     {
         public SetIntersightEtherHostPort()
@@ -1688,7 +1688,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EtherNetworkPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEtherNetworkPort")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEtherNetworkPort", SupportsShouldProcess = true)]
     public class SetIntersightEtherNetworkPort : SetCmdletBase
     {
         public SetIntersightEtherNetworkPort()
@@ -1810,7 +1810,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EtherPhysicalPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEtherPhysicalPort")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEtherPhysicalPort", SupportsShouldProcess = true)]
     public class SetIntersightEtherPhysicalPort : SetCmdletBase
     {
         public SetIntersightEtherPhysicalPort()

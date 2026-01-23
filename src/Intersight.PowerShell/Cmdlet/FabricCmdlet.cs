@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricAppliancePcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricAppliancePcRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricAppliancePcRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricAppliancePcRole : GetCmdletBase
     {
         public GetIntersightFabricAppliancePcRole()
@@ -240,7 +240,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricApplianceRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricApplianceRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricApplianceRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricApplianceRole : GetCmdletBase
     {
         public GetIntersightFabricApplianceRole()
@@ -502,7 +502,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricConfigChangeDetail.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricConfigChangeDetail", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricConfigChangeDetail", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricConfigChangeDetail : GetCmdletBase
     {
         public GetIntersightFabricConfigChangeDetail()
@@ -668,7 +668,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricConfigResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricConfigResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricConfigResult : GetCmdletBase
     {
         public GetIntersightFabricConfigResult()
@@ -833,7 +833,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricConfigResultEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricConfigResultEntry", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricConfigResultEntry", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricConfigResultEntry : GetCmdletBase
     {
         public GetIntersightFabricConfigResultEntry()
@@ -1019,7 +1019,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricElementIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricElementIdentity", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricElementIdentity", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricElementIdentity : GetCmdletBase
     {
         public GetIntersightFabricElementIdentity()
@@ -1316,7 +1316,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricEthNetworkControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricEthNetworkControlPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricEthNetworkControlPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricEthNetworkControlPolicy : GetCmdletBase
     {
         public GetIntersightFabricEthNetworkControlPolicy()
@@ -1514,7 +1514,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricEthNetworkControlPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricEthNetworkControlPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricEthNetworkControlPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricEthNetworkControlPolicyInventory : GetCmdletBase
     {
         public GetIntersightFabricEthNetworkControlPolicyInventory()
@@ -1723,7 +1723,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricEthNetworkGroupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricEthNetworkGroupPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricEthNetworkGroupPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricEthNetworkGroupPolicy : GetCmdletBase
     {
         public GetIntersightFabricEthNetworkGroupPolicy()
@@ -1876,7 +1876,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricEthNetworkGroupPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricEthNetworkGroupPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricEthNetworkGroupPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricEthNetworkGroupPolicyInventory : GetCmdletBase
     {
         public GetIntersightFabricEthNetworkGroupPolicyInventory()
@@ -2040,7 +2040,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricEthNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricEthNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricEthNetworkPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricEthNetworkPolicy : GetCmdletBase
     {
         public GetIntersightFabricEthNetworkPolicy()
@@ -2204,7 +2204,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricFcNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcNetworkPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcNetworkPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricFcNetworkPolicy : GetCmdletBase
     {
         public GetIntersightFabricFcNetworkPolicy()
@@ -2368,7 +2368,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricFcStorageRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcStorageRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcStorageRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricFcStorageRole : GetCmdletBase
     {
         public GetIntersightFabricFcStorageRole()
@@ -2564,7 +2564,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricFcUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcUplinkPcRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcUplinkPcRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricFcUplinkPcRole : GetCmdletBase
     {
         public GetIntersightFabricFcUplinkPcRole()
@@ -2750,7 +2750,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricFcUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcUplinkRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcUplinkRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricFcUplinkRole : GetCmdletBase
     {
         public GetIntersightFabricFcUplinkRole()
@@ -2957,7 +2957,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricFcZonePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcZonePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcZonePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricFcZonePolicy : GetCmdletBase
     {
         public GetIntersightFabricFcZonePolicy()
@@ -3121,7 +3121,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricFcoeUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcoeUplinkPcRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcoeUplinkPcRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricFcoeUplinkPcRole : GetCmdletBase
     {
         public GetIntersightFabricFcoeUplinkPcRole()
@@ -3318,7 +3318,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricFcoeUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcoeUplinkRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricFcoeUplinkRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricFcoeUplinkRole : GetCmdletBase
     {
         public GetIntersightFabricFcoeUplinkRole()
@@ -3525,7 +3525,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricFlowControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricFlowControlPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricFlowControlPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricFlowControlPolicy : GetCmdletBase
     {
         public GetIntersightFabricFlowControlPolicy()
@@ -3710,7 +3710,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricLanPinGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricLanPinGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricLanPinGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricLanPinGroup : GetCmdletBase
     {
         public GetIntersightFabricLanPinGroup()
@@ -3862,7 +3862,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricLinkAggregationPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricLinkAggregationPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricLinkAggregationPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricLinkAggregationPolicy : GetCmdletBase
     {
         public GetIntersightFabricLinkAggregationPolicy()
@@ -4036,7 +4036,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricLinkControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricLinkControlPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricLinkControlPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricLinkControlPolicy : GetCmdletBase
     {
         public GetIntersightFabricLinkControlPolicy()
@@ -4189,7 +4189,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricMacSecPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricMacSecPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricMacSecPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricMacSecPolicy : GetCmdletBase
     {
         public GetIntersightFabricMacSecPolicy()
@@ -4421,7 +4421,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricMulticastPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricMulticastPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricMulticastPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricMulticastPolicy : GetCmdletBase
     {
         public GetIntersightFabricMulticastPolicy()
@@ -4628,7 +4628,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricPcMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricPcMember", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricPcMember", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricPcMember : GetCmdletBase
     {
         public GetIntersightFabricPcMember()
@@ -4802,7 +4802,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricPcOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricPcOperation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricPcOperation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricPcOperation : GetCmdletBase
     {
         public GetIntersightFabricPcOperation()
@@ -4987,7 +4987,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricPortMode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricPortMode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricPortMode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricPortMode : GetCmdletBase
     {
         public GetIntersightFabricPortMode()
@@ -5161,7 +5161,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricPortOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricPortOperation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricPortOperation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricPortOperation : GetCmdletBase
     {
         public GetIntersightFabricPortOperation()
@@ -5390,7 +5390,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricPortPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricPortPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricPortPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricPortPolicy : GetCmdletBase
     {
         public GetIntersightFabricPortPolicy()
@@ -5554,7 +5554,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSanPinGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSanPinGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSanPinGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSanPinGroup : GetCmdletBase
     {
         public GetIntersightFabricSanPinGroup()
@@ -5706,7 +5706,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricServerRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricServerRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricServerRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricServerRole : GetCmdletBase
     {
         public GetIntersightFabricServerRole()
@@ -5924,7 +5924,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSpanDestEthPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanDestEthPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanDestEthPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSpanDestEthPort : GetCmdletBase
     {
         public GetIntersightFabricSpanDestEthPort()
@@ -6120,7 +6120,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSpanSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSession", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSession", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSpanSession : GetCmdletBase
     {
         public GetIntersightFabricSpanSession()
@@ -6354,7 +6354,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSpanSourceEthPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSourceEthPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSourceEthPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSpanSourceEthPort : GetCmdletBase
     {
         public GetIntersightFabricSpanSourceEthPort()
@@ -6550,7 +6550,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSpanSourceEthPortChannel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSourceEthPortChannel", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSourceEthPortChannel", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSpanSourceEthPortChannel : GetCmdletBase
     {
         public GetIntersightFabricSpanSourceEthPortChannel()
@@ -6724,7 +6724,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSpanSourceVlan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSourceVlan", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSourceVlan", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSpanSourceVlan : GetCmdletBase
     {
         public GetIntersightFabricSpanSourceVlan()
@@ -6876,7 +6876,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSpanSourceVnicEthIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSourceVnicEthIf", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSourceVnicEthIf", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSpanSourceVnicEthIf : GetCmdletBase
     {
         public GetIntersightFabricSpanSourceVnicEthIf()
@@ -7050,7 +7050,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSwitchClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSwitchClusterProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSwitchClusterProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSwitchClusterProfile : GetCmdletBase
     {
         public GetIntersightFabricSwitchClusterProfile()
@@ -7304,7 +7304,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSwitchClusterProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSwitchClusterProfileTemplate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSwitchClusterProfileTemplate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSwitchClusterProfileTemplate : GetCmdletBase
     {
         public GetIntersightFabricSwitchClusterProfileTemplate()
@@ -7512,7 +7512,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSwitchControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSwitchControlPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSwitchControlPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSwitchControlPolicy : GetCmdletBase
     {
         public GetIntersightFabricSwitchControlPolicy()
@@ -7766,7 +7766,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSwitchProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSwitchProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSwitchProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSwitchProfile : GetCmdletBase
     {
         public GetIntersightFabricSwitchProfile()
@@ -8033,7 +8033,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSwitchProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSwitchProfileTemplate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSwitchProfileTemplate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSwitchProfileTemplate : GetCmdletBase
     {
         public GetIntersightFabricSwitchProfileTemplate()
@@ -8294,7 +8294,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSystemQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricSystemQosPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSystemQosPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricSystemQosPolicy : GetCmdletBase
     {
         public GetIntersightFabricSystemQosPolicy()
@@ -8459,7 +8459,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricUplinkPcRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricUplinkPcRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricUplinkPcRole : GetCmdletBase
     {
         public GetIntersightFabricUplinkPcRole()
@@ -8679,7 +8679,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricUplinkRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricUplinkRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricUplinkRole : GetCmdletBase
     {
         public GetIntersightFabricUplinkRole()
@@ -8909,7 +8909,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricVlan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricVlan", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricVlan", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricVlan : GetCmdletBase
     {
         public GetIntersightFabricVlan()
@@ -9138,7 +9138,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricVlanInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricVlanInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricVlanInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricVlanInventory : GetCmdletBase
     {
         public GetIntersightFabricVlanInventory()
@@ -9334,7 +9334,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricVlanSet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricVlanSet", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricVlanSet", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricVlanSet : GetCmdletBase
     {
         public GetIntersightFabricVlanSet()
@@ -9552,7 +9552,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricVsan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricVsan", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricVsan", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricVsan : GetCmdletBase
     {
         public GetIntersightFabricVsan()
@@ -9748,7 +9748,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricVsanInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFabricVsanInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricVsanInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFabricVsanInventory : GetCmdletBase
     {
         public GetIntersightFabricVsanInventory()
@@ -9966,7 +9966,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricAppliancePcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricAppliancePcRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricAppliancePcRole", SupportsShouldProcess = true)]
     public class NewIntersightFabricAppliancePcRole : NewCmdletBase
     {
         public NewIntersightFabricAppliancePcRole()
@@ -10165,7 +10165,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricApplianceRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricApplianceRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricApplianceRole", SupportsShouldProcess = true)]
     public class NewIntersightFabricApplianceRole : NewCmdletBase
     {
         public NewIntersightFabricApplianceRole()
@@ -10386,7 +10386,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricEstimateImpact.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricEstimateImpact")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricEstimateImpact", SupportsShouldProcess = true)]
     public class NewIntersightFabricEstimateImpact : NewCmdletBase
     {
         public NewIntersightFabricEstimateImpact()
@@ -10475,7 +10475,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricEthNetworkControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricEthNetworkControlPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricEthNetworkControlPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricEthNetworkControlPolicy : NewCmdletBase
     {
         public NewIntersightFabricEthNetworkControlPolicy()
@@ -10652,7 +10652,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricEthNetworkGroupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricEthNetworkGroupPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricEthNetworkGroupPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricEthNetworkGroupPolicy : NewCmdletBase
     {
         public NewIntersightFabricEthNetworkGroupPolicy()
@@ -10774,7 +10774,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricEthNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricEthNetworkPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricEthNetworkPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricEthNetworkPolicy : NewCmdletBase
     {
         public NewIntersightFabricEthNetworkPolicy()
@@ -10907,7 +10907,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricFcNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricFcNetworkPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricFcNetworkPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricFcNetworkPolicy : NewCmdletBase
     {
         public NewIntersightFabricFcNetworkPolicy()
@@ -11040,7 +11040,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricFcStorageRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricFcStorageRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricFcStorageRole", SupportsShouldProcess = true)]
     public class NewIntersightFabricFcStorageRole : NewCmdletBase
     {
         public NewIntersightFabricFcStorageRole()
@@ -11195,7 +11195,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricFcUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricFcUplinkPcRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricFcUplinkPcRole", SupportsShouldProcess = true)]
     public class NewIntersightFabricFcUplinkPcRole : NewCmdletBase
     {
         public NewIntersightFabricFcUplinkPcRole()
@@ -11350,7 +11350,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricFcUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricFcUplinkRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricFcUplinkRole", SupportsShouldProcess = true)]
     public class NewIntersightFabricFcUplinkRole : NewCmdletBase
     {
         public NewIntersightFabricFcUplinkRole()
@@ -11516,7 +11516,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricFcZonePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricFcZonePolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricFcZonePolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricFcZonePolicy : NewCmdletBase
     {
         public NewIntersightFabricFcZonePolicy()
@@ -11649,7 +11649,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricFcoeUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricFcoeUplinkPcRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricFcoeUplinkPcRole", SupportsShouldProcess = true)]
     public class NewIntersightFabricFcoeUplinkPcRole : NewCmdletBase
     {
         public NewIntersightFabricFcoeUplinkPcRole()
@@ -11815,7 +11815,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricFcoeUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricFcoeUplinkRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricFcoeUplinkRole", SupportsShouldProcess = true)]
     public class NewIntersightFabricFcoeUplinkRole : NewCmdletBase
     {
         public NewIntersightFabricFcoeUplinkRole()
@@ -11981,7 +11981,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricFlowControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricFlowControlPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricFlowControlPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricFlowControlPolicy : NewCmdletBase
     {
         public NewIntersightFabricFlowControlPolicy()
@@ -12125,7 +12125,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricLanPinGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricLanPinGroup")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricLanPinGroup", SupportsShouldProcess = true)]
     public class NewIntersightFabricLanPinGroup : NewCmdletBase
     {
         public NewIntersightFabricLanPinGroup()
@@ -12236,7 +12236,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricLinkAggregationPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricLinkAggregationPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricLinkAggregationPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricLinkAggregationPolicy : NewCmdletBase
     {
         public NewIntersightFabricLinkAggregationPolicy()
@@ -12369,7 +12369,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricLinkControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricLinkControlPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricLinkControlPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricLinkControlPolicy : NewCmdletBase
     {
         public NewIntersightFabricLinkControlPolicy()
@@ -12491,7 +12491,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricMacSecPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricMacSecPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricMacSecPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricMacSecPolicy : NewCmdletBase
     {
         public NewIntersightFabricMacSecPolicy()
@@ -12712,7 +12712,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricMulticastPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricMulticastPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricMulticastPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricMulticastPolicy : NewCmdletBase
     {
         public NewIntersightFabricMulticastPolicy()
@@ -12878,7 +12878,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricPcOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricPcOperation")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricPcOperation", SupportsShouldProcess = true)]
     public class NewIntersightFabricPcOperation : NewCmdletBase
     {
         public NewIntersightFabricPcOperation()
@@ -13022,7 +13022,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricPortMode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricPortMode")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricPortMode", SupportsShouldProcess = true)]
     public class NewIntersightFabricPortMode : NewCmdletBase
     {
         public NewIntersightFabricPortMode()
@@ -13155,7 +13155,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricPortOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricPortOperation")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricPortOperation", SupportsShouldProcess = true)]
     public class NewIntersightFabricPortOperation : NewCmdletBase
     {
         public NewIntersightFabricPortOperation()
@@ -13333,7 +13333,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricPortPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricPortPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricPortPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricPortPolicy : NewCmdletBase
     {
         public NewIntersightFabricPortPolicy()
@@ -13466,7 +13466,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSanPinGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSanPinGroup")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSanPinGroup", SupportsShouldProcess = true)]
     public class NewIntersightFabricSanPinGroup : NewCmdletBase
     {
         public NewIntersightFabricSanPinGroup()
@@ -13577,7 +13577,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricServerRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricServerRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricServerRole", SupportsShouldProcess = true)]
     public class NewIntersightFabricServerRole : NewCmdletBase
     {
         public NewIntersightFabricServerRole()
@@ -13754,7 +13754,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSpanDestEthPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanDestEthPort")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanDestEthPort", SupportsShouldProcess = true)]
     public class NewIntersightFabricSpanDestEthPort : NewCmdletBase
     {
         public NewIntersightFabricSpanDestEthPort()
@@ -13899,7 +13899,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSpanSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSession")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSession", SupportsShouldProcess = true)]
     public class NewIntersightFabricSpanSession : NewCmdletBase
     {
         public NewIntersightFabricSpanSession()
@@ -14082,7 +14082,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSpanSourceEthPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSourceEthPort")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSourceEthPort", SupportsShouldProcess = true)]
     public class NewIntersightFabricSpanSourceEthPort : NewCmdletBase
     {
         public NewIntersightFabricSpanSourceEthPort()
@@ -14217,7 +14217,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSpanSourceEthPortChannel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSourceEthPortChannel")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSourceEthPortChannel", SupportsShouldProcess = true)]
     public class NewIntersightFabricSpanSourceEthPortChannel : NewCmdletBase
     {
         public NewIntersightFabricSpanSourceEthPortChannel()
@@ -14330,7 +14330,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSpanSourceVlan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSourceVlan")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSourceVlan", SupportsShouldProcess = true)]
     public class NewIntersightFabricSpanSourceVlan : NewCmdletBase
     {
         public NewIntersightFabricSpanSourceVlan()
@@ -14441,7 +14441,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSpanSourceVnicEthIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSourceVnicEthIf")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSourceVnicEthIf", SupportsShouldProcess = true)]
     public class NewIntersightFabricSpanSourceVnicEthIf : NewCmdletBase
     {
         public NewIntersightFabricSpanSourceVnicEthIf()
@@ -14554,7 +14554,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSwitchClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSwitchClusterProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSwitchClusterProfile", SupportsShouldProcess = true)]
     public class NewIntersightFabricSwitchClusterProfile : NewCmdletBase
     {
         public NewIntersightFabricSwitchClusterProfile()
@@ -14757,7 +14757,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSwitchClusterProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSwitchClusterProfileTemplate")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSwitchClusterProfileTemplate", SupportsShouldProcess = true)]
     public class NewIntersightFabricSwitchClusterProfileTemplate : NewCmdletBase
     {
         public NewIntersightFabricSwitchClusterProfileTemplate()
@@ -14914,7 +14914,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSwitchControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSwitchControlPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSwitchControlPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricSwitchControlPolicy : NewCmdletBase
     {
         public NewIntersightFabricSwitchControlPolicy()
@@ -15147,7 +15147,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSwitchProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSwitchProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSwitchProfile", SupportsShouldProcess = true)]
     public class NewIntersightFabricSwitchProfile : NewCmdletBase
     {
         public NewIntersightFabricSwitchProfile()
@@ -15393,7 +15393,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSwitchProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSwitchProfileTemplate")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSwitchProfileTemplate", SupportsShouldProcess = true)]
     public class NewIntersightFabricSwitchProfileTemplate : NewCmdletBase
     {
         public NewIntersightFabricSwitchProfileTemplate()
@@ -15633,7 +15633,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSystemQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricSystemQosPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSystemQosPolicy", SupportsShouldProcess = true)]
     public class NewIntersightFabricSystemQosPolicy : NewCmdletBase
     {
         public NewIntersightFabricSystemQosPolicy()
@@ -15777,7 +15777,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricUplinkPcRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricUplinkPcRole", SupportsShouldProcess = true)]
     public class NewIntersightFabricUplinkPcRole : NewCmdletBase
     {
         public NewIntersightFabricUplinkPcRole()
@@ -15976,7 +15976,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricUplinkRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricUplinkRole", SupportsShouldProcess = true)]
     public class NewIntersightFabricUplinkRole : NewCmdletBase
     {
         public NewIntersightFabricUplinkRole()
@@ -16175,7 +16175,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricVlan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricVlan")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricVlan", SupportsShouldProcess = true)]
     public class NewIntersightFabricVlan : NewCmdletBase
     {
         public NewIntersightFabricVlan()
@@ -16363,7 +16363,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricVsan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFabricVsan")]
+    [Cmdlet(VerbsCommon.New, "IntersightFabricVsan", SupportsShouldProcess = true)]
     public class NewIntersightFabricVsan : NewCmdletBase
     {
         public NewIntersightFabricVsan()
@@ -16518,7 +16518,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricAppliancePcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricAppliancePcRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricAppliancePcRole", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricAppliancePcRole : RemoveCmdletBase
     {
         public RemoveIntersightFabricAppliancePcRole()
@@ -16530,7 +16530,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricApplianceRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricApplianceRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricApplianceRole", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricApplianceRole : RemoveCmdletBase
     {
         public RemoveIntersightFabricApplianceRole()
@@ -16542,7 +16542,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricEthNetworkControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricEthNetworkControlPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricEthNetworkControlPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricEthNetworkControlPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricEthNetworkControlPolicy()
@@ -16554,7 +16554,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricEthNetworkGroupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricEthNetworkGroupPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricEthNetworkGroupPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricEthNetworkGroupPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricEthNetworkGroupPolicy()
@@ -16566,7 +16566,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricEthNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricEthNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricEthNetworkPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricEthNetworkPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricEthNetworkPolicy()
@@ -16578,7 +16578,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricFcNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcNetworkPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricFcNetworkPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricFcNetworkPolicy()
@@ -16590,7 +16590,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricFcStorageRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcStorageRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcStorageRole", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricFcStorageRole : RemoveCmdletBase
     {
         public RemoveIntersightFabricFcStorageRole()
@@ -16602,7 +16602,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricFcUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcUplinkPcRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcUplinkPcRole", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricFcUplinkPcRole : RemoveCmdletBase
     {
         public RemoveIntersightFabricFcUplinkPcRole()
@@ -16614,7 +16614,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricFcUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcUplinkRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcUplinkRole", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricFcUplinkRole : RemoveCmdletBase
     {
         public RemoveIntersightFabricFcUplinkRole()
@@ -16626,7 +16626,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricFcZonePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcZonePolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcZonePolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricFcZonePolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricFcZonePolicy()
@@ -16638,7 +16638,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricFcoeUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcoeUplinkPcRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcoeUplinkPcRole", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricFcoeUplinkPcRole : RemoveCmdletBase
     {
         public RemoveIntersightFabricFcoeUplinkPcRole()
@@ -16650,7 +16650,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricFcoeUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcoeUplinkRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFcoeUplinkRole", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricFcoeUplinkRole : RemoveCmdletBase
     {
         public RemoveIntersightFabricFcoeUplinkRole()
@@ -16662,7 +16662,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricFlowControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFlowControlPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricFlowControlPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricFlowControlPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricFlowControlPolicy()
@@ -16674,7 +16674,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricLanPinGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricLanPinGroup")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricLanPinGroup", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricLanPinGroup : RemoveCmdletBase
     {
         public RemoveIntersightFabricLanPinGroup()
@@ -16686,7 +16686,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricLinkAggregationPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricLinkAggregationPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricLinkAggregationPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricLinkAggregationPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricLinkAggregationPolicy()
@@ -16698,7 +16698,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricLinkControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricLinkControlPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricLinkControlPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricLinkControlPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricLinkControlPolicy()
@@ -16710,7 +16710,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricMacSecPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricMacSecPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricMacSecPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricMacSecPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricMacSecPolicy()
@@ -16722,7 +16722,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricMulticastPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricMulticastPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricMulticastPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricMulticastPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricMulticastPolicy()
@@ -16734,7 +16734,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricPcOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricPcOperation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricPcOperation", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricPcOperation : RemoveCmdletBase
     {
         public RemoveIntersightFabricPcOperation()
@@ -16746,7 +16746,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricPortMode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricPortMode")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricPortMode", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricPortMode : RemoveCmdletBase
     {
         public RemoveIntersightFabricPortMode()
@@ -16758,7 +16758,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricPortOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricPortOperation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricPortOperation", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricPortOperation : RemoveCmdletBase
     {
         public RemoveIntersightFabricPortOperation()
@@ -16770,7 +16770,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricPortPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricPortPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricPortPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricPortPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricPortPolicy()
@@ -16782,7 +16782,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSanPinGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSanPinGroup")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSanPinGroup", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSanPinGroup : RemoveCmdletBase
     {
         public RemoveIntersightFabricSanPinGroup()
@@ -16794,7 +16794,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricServerRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricServerRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricServerRole", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricServerRole : RemoveCmdletBase
     {
         public RemoveIntersightFabricServerRole()
@@ -16806,7 +16806,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSpanDestEthPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanDestEthPort")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanDestEthPort", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSpanDestEthPort : RemoveCmdletBase
     {
         public RemoveIntersightFabricSpanDestEthPort()
@@ -16818,7 +16818,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSpanSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanSession")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanSession", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSpanSession : RemoveCmdletBase
     {
         public RemoveIntersightFabricSpanSession()
@@ -16830,7 +16830,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSpanSourceEthPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanSourceEthPort")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanSourceEthPort", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSpanSourceEthPort : RemoveCmdletBase
     {
         public RemoveIntersightFabricSpanSourceEthPort()
@@ -16842,7 +16842,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSpanSourceEthPortChannel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanSourceEthPortChannel")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanSourceEthPortChannel", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSpanSourceEthPortChannel : RemoveCmdletBase
     {
         public RemoveIntersightFabricSpanSourceEthPortChannel()
@@ -16854,7 +16854,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSpanSourceVlan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanSourceVlan")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanSourceVlan", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSpanSourceVlan : RemoveCmdletBase
     {
         public RemoveIntersightFabricSpanSourceVlan()
@@ -16866,7 +16866,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSpanSourceVnicEthIf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanSourceVnicEthIf")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanSourceVnicEthIf", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSpanSourceVnicEthIf : RemoveCmdletBase
     {
         public RemoveIntersightFabricSpanSourceVnicEthIf()
@@ -16878,7 +16878,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSwitchClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSwitchClusterProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSwitchClusterProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSwitchClusterProfile : RemoveCmdletBase
     {
         public RemoveIntersightFabricSwitchClusterProfile()
@@ -16890,7 +16890,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSwitchClusterProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSwitchClusterProfileTemplate")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSwitchClusterProfileTemplate", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSwitchClusterProfileTemplate : RemoveCmdletBase
     {
         public RemoveIntersightFabricSwitchClusterProfileTemplate()
@@ -16902,7 +16902,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSwitchControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSwitchControlPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSwitchControlPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSwitchControlPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricSwitchControlPolicy()
@@ -16914,7 +16914,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSwitchProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSwitchProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSwitchProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSwitchProfile : RemoveCmdletBase
     {
         public RemoveIntersightFabricSwitchProfile()
@@ -16926,7 +16926,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSwitchProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSwitchProfileTemplate")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSwitchProfileTemplate", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSwitchProfileTemplate : RemoveCmdletBase
     {
         public RemoveIntersightFabricSwitchProfileTemplate()
@@ -16938,7 +16938,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSystemQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSystemQosPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSystemQosPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricSystemQosPolicy : RemoveCmdletBase
     {
         public RemoveIntersightFabricSystemQosPolicy()
@@ -16950,7 +16950,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricUplinkPcRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricUplinkPcRole", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricUplinkPcRole : RemoveCmdletBase
     {
         public RemoveIntersightFabricUplinkPcRole()
@@ -16962,7 +16962,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricUplinkRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricUplinkRole", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricUplinkRole : RemoveCmdletBase
     {
         public RemoveIntersightFabricUplinkRole()
@@ -16974,7 +16974,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricVlan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricVlan")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricVlan", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricVlan : RemoveCmdletBase
     {
         public RemoveIntersightFabricVlan()
@@ -16986,7 +16986,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricVsan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFabricVsan")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricVsan", SupportsShouldProcess = true)]
     public class RemoveIntersightFabricVsan : RemoveCmdletBase
     {
         public RemoveIntersightFabricVsan()
@@ -16998,7 +16998,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricAppliancePcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricAppliancePcRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricAppliancePcRole", SupportsShouldProcess = true)]
     public class SetIntersightFabricAppliancePcRole : SetCmdletBase
     {
         public SetIntersightFabricAppliancePcRole()
@@ -17186,7 +17186,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricApplianceRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricApplianceRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricApplianceRole", SupportsShouldProcess = true)]
     public class SetIntersightFabricApplianceRole : SetCmdletBase
     {
         public SetIntersightFabricApplianceRole()
@@ -17396,7 +17396,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricElementIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricElementIdentity")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricElementIdentity", SupportsShouldProcess = true)]
     public class SetIntersightFabricElementIdentity : SetCmdletBase
     {
         public SetIntersightFabricElementIdentity()
@@ -17521,7 +17521,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricEthNetworkControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricEthNetworkControlPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricEthNetworkControlPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricEthNetworkControlPolicy : SetCmdletBase
     {
         public SetIntersightFabricEthNetworkControlPolicy()
@@ -17687,7 +17687,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricEthNetworkGroupPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricEthNetworkGroupPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricEthNetworkGroupPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricEthNetworkGroupPolicy : SetCmdletBase
     {
         public SetIntersightFabricEthNetworkGroupPolicy()
@@ -17798,7 +17798,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricEthNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricEthNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricEthNetworkPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricEthNetworkPolicy : SetCmdletBase
     {
         public SetIntersightFabricEthNetworkPolicy()
@@ -17920,7 +17920,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricFcNetworkPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcNetworkPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcNetworkPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricFcNetworkPolicy : SetCmdletBase
     {
         public SetIntersightFabricFcNetworkPolicy()
@@ -18042,7 +18042,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricFcStorageRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcStorageRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcStorageRole", SupportsShouldProcess = true)]
     public class SetIntersightFabricFcStorageRole : SetCmdletBase
     {
         public SetIntersightFabricFcStorageRole()
@@ -18186,7 +18186,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricFcUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcUplinkPcRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcUplinkPcRole", SupportsShouldProcess = true)]
     public class SetIntersightFabricFcUplinkPcRole : SetCmdletBase
     {
         public SetIntersightFabricFcUplinkPcRole()
@@ -18330,7 +18330,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricFcUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcUplinkRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcUplinkRole", SupportsShouldProcess = true)]
     public class SetIntersightFabricFcUplinkRole : SetCmdletBase
     {
         public SetIntersightFabricFcUplinkRole()
@@ -18485,7 +18485,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricFcZonePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcZonePolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcZonePolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricFcZonePolicy : SetCmdletBase
     {
         public SetIntersightFabricFcZonePolicy()
@@ -18607,7 +18607,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricFcoeUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcoeUplinkPcRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcoeUplinkPcRole", SupportsShouldProcess = true)]
     public class SetIntersightFabricFcoeUplinkPcRole : SetCmdletBase
     {
         public SetIntersightFabricFcoeUplinkPcRole()
@@ -18762,7 +18762,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricFcoeUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcoeUplinkRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricFcoeUplinkRole", SupportsShouldProcess = true)]
     public class SetIntersightFabricFcoeUplinkRole : SetCmdletBase
     {
         public SetIntersightFabricFcoeUplinkRole()
@@ -18917,7 +18917,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricFlowControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricFlowControlPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricFlowControlPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricFlowControlPolicy : SetCmdletBase
     {
         public SetIntersightFabricFlowControlPolicy()
@@ -19050,7 +19050,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricLanPinGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricLanPinGroup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricLanPinGroup", SupportsShouldProcess = true)]
     public class SetIntersightFabricLanPinGroup : SetCmdletBase
     {
         public SetIntersightFabricLanPinGroup()
@@ -19150,7 +19150,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricLinkAggregationPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricLinkAggregationPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricLinkAggregationPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricLinkAggregationPolicy : SetCmdletBase
     {
         public SetIntersightFabricLinkAggregationPolicy()
@@ -19272,7 +19272,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricLinkControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricLinkControlPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricLinkControlPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricLinkControlPolicy : SetCmdletBase
     {
         public SetIntersightFabricLinkControlPolicy()
@@ -19383,7 +19383,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricMacSecPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricMacSecPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricMacSecPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricMacSecPolicy : SetCmdletBase
     {
         public SetIntersightFabricMacSecPolicy()
@@ -19593,7 +19593,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricMulticastPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricMulticastPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricMulticastPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricMulticastPolicy : SetCmdletBase
     {
         public SetIntersightFabricMulticastPolicy()
@@ -19748,7 +19748,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricPcOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricPcOperation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricPcOperation", SupportsShouldProcess = true)]
     public class SetIntersightFabricPcOperation : SetCmdletBase
     {
         public SetIntersightFabricPcOperation()
@@ -19881,7 +19881,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricPortMode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricPortMode")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricPortMode", SupportsShouldProcess = true)]
     public class SetIntersightFabricPortMode : SetCmdletBase
     {
         public SetIntersightFabricPortMode()
@@ -20003,7 +20003,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricPortOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricPortOperation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricPortOperation", SupportsShouldProcess = true)]
     public class SetIntersightFabricPortOperation : SetCmdletBase
     {
         public SetIntersightFabricPortOperation()
@@ -20170,7 +20170,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricPortPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricPortPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricPortPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricPortPolicy : SetCmdletBase
     {
         public SetIntersightFabricPortPolicy()
@@ -20292,7 +20292,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSanPinGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricSanPinGroup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricSanPinGroup", SupportsShouldProcess = true)]
     public class SetIntersightFabricSanPinGroup : SetCmdletBase
     {
         public SetIntersightFabricSanPinGroup()
@@ -20392,7 +20392,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricServerRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricServerRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricServerRole", SupportsShouldProcess = true)]
     public class SetIntersightFabricServerRole : SetCmdletBase
     {
         public SetIntersightFabricServerRole()
@@ -20558,7 +20558,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSpanDestEthPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricSpanDestEthPort")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricSpanDestEthPort", SupportsShouldProcess = true)]
     public class SetIntersightFabricSpanDestEthPort : SetCmdletBase
     {
         public SetIntersightFabricSpanDestEthPort()
@@ -20692,7 +20692,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSpanSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricSpanSession")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricSpanSession", SupportsShouldProcess = true)]
     public class SetIntersightFabricSpanSession : SetCmdletBase
     {
         public SetIntersightFabricSpanSession()
@@ -20864,7 +20864,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSwitchClusterProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricSwitchClusterProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricSwitchClusterProfile", SupportsShouldProcess = true)]
     public class SetIntersightFabricSwitchClusterProfile : SetCmdletBase
     {
         public SetIntersightFabricSwitchClusterProfile()
@@ -21056,7 +21056,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSwitchClusterProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricSwitchClusterProfileTemplate")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricSwitchClusterProfileTemplate", SupportsShouldProcess = true)]
     public class SetIntersightFabricSwitchClusterProfileTemplate : SetCmdletBase
     {
         public SetIntersightFabricSwitchClusterProfileTemplate()
@@ -21202,7 +21202,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSwitchControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricSwitchControlPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricSwitchControlPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricSwitchControlPolicy : SetCmdletBase
     {
         public SetIntersightFabricSwitchControlPolicy()
@@ -21424,7 +21424,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSwitchProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricSwitchProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricSwitchProfile", SupportsShouldProcess = true)]
     public class SetIntersightFabricSwitchProfile : SetCmdletBase
     {
         public SetIntersightFabricSwitchProfile()
@@ -21659,7 +21659,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSwitchProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricSwitchProfileTemplate")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricSwitchProfileTemplate", SupportsShouldProcess = true)]
     public class SetIntersightFabricSwitchProfileTemplate : SetCmdletBase
     {
         public SetIntersightFabricSwitchProfileTemplate()
@@ -21888,7 +21888,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSystemQosPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricSystemQosPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricSystemQosPolicy", SupportsShouldProcess = true)]
     public class SetIntersightFabricSystemQosPolicy : SetCmdletBase
     {
         public SetIntersightFabricSystemQosPolicy()
@@ -22021,7 +22021,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricUplinkPcRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricUplinkPcRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricUplinkPcRole", SupportsShouldProcess = true)]
     public class SetIntersightFabricUplinkPcRole : SetCmdletBase
     {
         public SetIntersightFabricUplinkPcRole()
@@ -22209,7 +22209,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricUplinkRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricUplinkRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricUplinkRole", SupportsShouldProcess = true)]
     public class SetIntersightFabricUplinkRole : SetCmdletBase
     {
         public SetIntersightFabricUplinkRole()
@@ -22397,7 +22397,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricVlan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricVlan")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricVlan", SupportsShouldProcess = true)]
     public class SetIntersightFabricVlan : SetCmdletBase
     {
         public SetIntersightFabricVlan()
@@ -22574,7 +22574,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricVsan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFabricVsan")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricVsan", SupportsShouldProcess = true)]
     public class SetIntersightFabricVsan : SetCmdletBase
     {
         public SetIntersightFabricVsan()

@@ -55,7 +55,7 @@ namespace Intersight.PowerShell
             return methodInfo;
         }
 
-        public void WriteRequestJson()
+        public string GetRequestJson()
         {
             var toJsonMethodInfo = ModelObject.GetType().GetMethod("ToJson");
             if (toJsonMethodInfo != null)
@@ -63,8 +63,9 @@ namespace Intersight.PowerShell
                 StringBuilder requestJson = new StringBuilder();
                 var jsonData = toJsonMethodInfo.Invoke(ModelObject, null);
                 requestJson.Append((string)jsonData);
-                WriteObject(requestJson.ToString());
+                return requestJson.ToString();
             }
+            return string.Empty;
         }
 
         public void WriteResponseJson(object result)

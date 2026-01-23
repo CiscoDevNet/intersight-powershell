@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ViewHealthStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightViewHealthStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightViewHealthStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightViewHealthStatus : GetCmdletBase
     {
         public GetIntersightViewHealthStatus()
@@ -129,7 +129,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ViewServer.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightViewServer", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightViewServer", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightViewServer : GetCmdletBase
     {
         public GetIntersightViewServer()

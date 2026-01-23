@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryArray", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryArray", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryArray : GetCmdletBase
     {
         public GetIntersightMemoryArray()
@@ -373,7 +373,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryConfigResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryConfigResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryPersistentMemoryConfigResult : GetCmdletBase
     {
         public GetIntersightMemoryPersistentMemoryConfigResult()
@@ -603,7 +603,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryConfiguration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryConfiguration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryPersistentMemoryConfiguration : GetCmdletBase
     {
         public GetIntersightMemoryPersistentMemoryConfiguration()
@@ -877,7 +877,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryNamespace.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryNamespace", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryNamespace", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryPersistentMemoryNamespace : GetCmdletBase
     {
         public GetIntersightMemoryPersistentMemoryNamespace()
@@ -1128,7 +1128,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryNamespaceConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryNamespaceConfigResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryNamespaceConfigResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryPersistentMemoryNamespaceConfigResult : GetCmdletBase
     {
         public GetIntersightMemoryPersistentMemoryNamespaceConfigResult()
@@ -1357,7 +1357,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryPersistentMemoryPolicy : GetCmdletBase
     {
         public GetIntersightMemoryPersistentMemoryPolicy()
@@ -1535,7 +1535,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryRegion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryRegion", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryRegion", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryPersistentMemoryRegion : GetCmdletBase
     {
         public GetIntersightMemoryPersistentMemoryRegion()
@@ -1820,7 +1820,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryPersistentMemoryUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryUnit", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPersistentMemoryUnit", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryPersistentMemoryUnit : GetCmdletBase
     {
         public GetIntersightMemoryPersistentMemoryUnit()
@@ -2435,7 +2435,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryPolicy : GetCmdletBase
     {
         public GetIntersightMemoryPolicy()
@@ -2599,7 +2599,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryPolicyInventory : GetCmdletBase
     {
         public GetIntersightMemoryPolicyInventory()
@@ -2773,7 +2773,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MemoryUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMemoryUnit", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMemoryUnit", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMemoryUnit : GetCmdletBase
     {
         public GetIntersightMemoryUnit()
@@ -3278,7 +3278,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New MemoryPersistentMemoryPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightMemoryPersistentMemoryPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightMemoryPersistentMemoryPolicy", SupportsShouldProcess = true)]
     public class NewIntersightMemoryPersistentMemoryPolicy : NewCmdletBase
     {
         public NewIntersightMemoryPersistentMemoryPolicy()
@@ -3455,7 +3455,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New MemoryPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightMemoryPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightMemoryPolicy", SupportsShouldProcess = true)]
     public class NewIntersightMemoryPolicy : NewCmdletBase
     {
         public NewIntersightMemoryPolicy()
@@ -3588,7 +3588,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove MemoryPersistentMemoryPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightMemoryPersistentMemoryPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightMemoryPersistentMemoryPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightMemoryPersistentMemoryPolicy : RemoveCmdletBase
     {
         public RemoveIntersightMemoryPersistentMemoryPolicy()
@@ -3600,7 +3600,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove MemoryPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightMemoryPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightMemoryPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightMemoryPolicy : RemoveCmdletBase
     {
         public RemoveIntersightMemoryPolicy()
@@ -3612,7 +3612,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryArray")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryArray", SupportsShouldProcess = true)]
     public class SetIntersightMemoryArray : SetCmdletBase
     {
         public SetIntersightMemoryArray()
@@ -3723,7 +3723,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryConfigResult")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryConfigResult", SupportsShouldProcess = true)]
     public class SetIntersightMemoryPersistentMemoryConfigResult : SetCmdletBase
     {
         public SetIntersightMemoryPersistentMemoryConfigResult()
@@ -3801,7 +3801,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryConfiguration")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryConfiguration", SupportsShouldProcess = true)]
     public class SetIntersightMemoryPersistentMemoryConfiguration : SetCmdletBase
     {
         public SetIntersightMemoryPersistentMemoryConfiguration()
@@ -3883,7 +3883,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryNamespace.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryNamespace")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryNamespace", SupportsShouldProcess = true)]
     public class SetIntersightMemoryPersistentMemoryNamespace : SetCmdletBase
     {
         public SetIntersightMemoryPersistentMemoryNamespace()
@@ -3962,7 +3962,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryNamespaceConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryNamespaceConfigResult")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryNamespaceConfigResult", SupportsShouldProcess = true)]
     public class SetIntersightMemoryPersistentMemoryNamespaceConfigResult : SetCmdletBase
     {
         public SetIntersightMemoryPersistentMemoryNamespaceConfigResult()
@@ -4039,7 +4039,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryPolicy", SupportsShouldProcess = true)]
     public class SetIntersightMemoryPersistentMemoryPolicy : SetCmdletBase
     {
         public SetIntersightMemoryPersistentMemoryPolicy()
@@ -4205,7 +4205,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryRegion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryRegion")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryRegion", SupportsShouldProcess = true)]
     public class SetIntersightMemoryPersistentMemoryRegion : SetCmdletBase
     {
         public SetIntersightMemoryPersistentMemoryRegion()
@@ -4288,7 +4288,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryPersistentMemoryUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryUnit")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPersistentMemoryUnit", SupportsShouldProcess = true)]
     public class SetIntersightMemoryPersistentMemoryUnit : SetCmdletBase
     {
         public SetIntersightMemoryPersistentMemoryUnit()
@@ -4401,7 +4401,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryPolicy", SupportsShouldProcess = true)]
     public class SetIntersightMemoryPolicy : SetCmdletBase
     {
         public SetIntersightMemoryPolicy()
@@ -4523,7 +4523,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MemoryUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMemoryUnit")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMemoryUnit", SupportsShouldProcess = true)]
     public class SetIntersightMemoryUnit : SetCmdletBase
     {
         public SetIntersightMemoryUnit()

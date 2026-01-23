@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CloudTfcAgentpool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcAgentpool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcAgentpool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCloudTfcAgentpool : GetCmdletBase
     {
         public GetIntersightCloudTfcAgentpool()
@@ -184,7 +184,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CloudTfcOrganization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcOrganization", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcOrganization", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCloudTfcOrganization : GetCmdletBase
     {
         public GetIntersightCloudTfcOrganization()
@@ -402,7 +402,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CloudTfcWorkspace.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcWorkspace", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCloudTfcWorkspace", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCloudTfcWorkspace : GetCmdletBase
     {
         public GetIntersightCloudTfcWorkspace()
@@ -599,7 +599,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CloudCollectInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCloudCollectInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightCloudCollectInventory", SupportsShouldProcess = true)]
     public class NewIntersightCloudCollectInventory : NewCmdletBase
     {
         public NewIntersightCloudCollectInventory()

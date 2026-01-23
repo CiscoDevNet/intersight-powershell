@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VmrcConsole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVmrcConsole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVmrcConsole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVmrcConsole : GetCmdletBase
     {
         public GetIntersightVmrcConsole()
@@ -261,7 +261,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VmrcConsole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVmrcConsole")]
+    [Cmdlet(VerbsCommon.New, "IntersightVmrcConsole", SupportsShouldProcess = true)]
     public class NewIntersightVmrcConsole : NewCmdletBase
     {
         public NewIntersightVmrcConsole()
@@ -371,7 +371,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VmrcConsole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVmrcConsole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVmrcConsole", SupportsShouldProcess = true)]
     public class SetIntersightVmrcConsole : SetCmdletBase
     {
         public SetIntersightVmrcConsole()

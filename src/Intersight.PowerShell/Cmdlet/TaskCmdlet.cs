@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskCatalystSdwanScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskCatalystSdwanScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskCatalystSdwanScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskCatalystSdwanScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskCatalystSdwanScopedInventory()
@@ -154,7 +154,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskFabricMosScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskFabricMosScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskFabricMosScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskFabricMosScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskFabricMosScopedInventory()
@@ -298,7 +298,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskHciScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskHciScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskHciScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskHciScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskHciScopedInventory()
@@ -442,7 +442,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskHitachiScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskHitachiScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskHitachiScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskHitachiScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskHitachiScopedInventory()
@@ -586,7 +586,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskHyperFlexManagementScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskHyperFlexManagementScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskHyperFlexManagementScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskHyperFlexManagementScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskHyperFlexManagementScopedInventory()
@@ -730,7 +730,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskHyperflexScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskHyperflexScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskHyperflexScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskHyperflexScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskHyperflexScopedInventory()
@@ -874,7 +874,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskMdsScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskMdsScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskMdsScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskMdsScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskMdsScopedInventory()
@@ -1018,7 +1018,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskMdsSystemScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskMdsSystemScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskMdsSystemScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskMdsSystemScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskMdsSystemScopedInventory()
@@ -1162,7 +1162,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskMerakiScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskMerakiScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskMerakiScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskMerakiScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskMerakiScopedInventory()
@@ -1306,7 +1306,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskNetAppScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskNetAppScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskNetAppScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskNetAppScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskNetAppScopedInventory()
@@ -1450,7 +1450,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskNexusScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskNexusScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskNexusScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskNexusScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskNexusScopedInventory()
@@ -1594,7 +1594,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskNexusSystemScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskNexusSystemScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskNexusSystemScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskNexusSystemScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskNexusSystemScopedInventory()
@@ -1738,7 +1738,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskNexusVlanScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskNexusVlanScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskNexusVlanScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskNexusVlanScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskNexusVlanScopedInventory()
@@ -1882,7 +1882,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskPureScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskPureScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskPureScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskPureScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskPureScopedInventory()
@@ -2026,7 +2026,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TaskServerScopedInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTaskServerScopedInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTaskServerScopedInventory", SupportsShouldProcess = true)]
     public class NewIntersightTaskServerScopedInventory : NewCmdletBase
     {
         public NewIntersightTaskServerScopedInventory()

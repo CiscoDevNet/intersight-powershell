@@ -31,7 +31,6 @@ namespace Intersight.PowerShell
                 }
 
                 PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
-
                 var propertyList = this.ModelObject.GetType().GetProperties();
                 foreach (var item in propertyList)
                 {
@@ -69,7 +68,12 @@ namespace Intersight.PowerShell
 
                 if (Json.IsPresent)
                 {
-                    WriteRequestJson();
+                    WriteObject(GetRequestJson());
+                }
+
+                if (!ShouldProcess(Config.BasePath, string.Format("Create {0} :{1}", ModelObject.GetType().Name, GetRequestJson())))
+                {
+                    return;
                 }
 
                 var methodInfo = GetMethodInfo(MethodName);

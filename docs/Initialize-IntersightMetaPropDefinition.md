@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightMetaPropDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< MetaPropDefinition.ClassIdEnum>][-Default< object>][-ObjectType< MetaPropDefinition.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightMetaPropDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< MetaPropDefinition.ClassIdEnum>][-ObjectType< MetaPropDefinition.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,23 +44,6 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: MetaPropDefinition.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Default
-The default value of the property. Not applicable when IsComplexType is True.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
-```yaml
-Type: object
 Parameter Sets: (All)
 Aliases:
 
@@ -142,5 +125,3 @@ PS C:\> Initialize-IntersightMetaPropDefinition
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-Intersightobject](./Initialize-Intersightobject.md)

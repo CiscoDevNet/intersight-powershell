@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MetricsConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMetricsConfiguration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMetricsConfiguration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMetricsConfiguration : GetCmdletBase
     {
         public GetIntersightMetricsConfiguration()
@@ -195,7 +195,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MetricsMetricsExploration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMetricsMetricsExploration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMetricsMetricsExploration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMetricsMetricsExploration : GetCmdletBase
     {
         public GetIntersightMetricsMetricsExploration()
@@ -373,7 +373,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MetricsResourceConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMetricsResourceConfiguration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMetricsResourceConfiguration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMetricsResourceConfiguration : GetCmdletBase
     {
         public GetIntersightMetricsResourceConfiguration()
@@ -525,7 +525,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New MetricsMetricsExploration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightMetricsMetricsExploration")]
+    [Cmdlet(VerbsCommon.New, "IntersightMetricsMetricsExploration", SupportsShouldProcess = true)]
     public class NewIntersightMetricsMetricsExploration : NewCmdletBase
     {
         public NewIntersightMetricsMetricsExploration()
@@ -702,7 +702,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New MetricsResourceConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightMetricsResourceConfiguration")]
+    [Cmdlet(VerbsCommon.New, "IntersightMetricsResourceConfiguration", SupportsShouldProcess = true)]
     public class NewIntersightMetricsResourceConfiguration : NewCmdletBase
     {
         public NewIntersightMetricsResourceConfiguration()
@@ -793,7 +793,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove MetricsMetricsExploration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightMetricsMetricsExploration")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightMetricsMetricsExploration", SupportsShouldProcess = true)]
     public class RemoveIntersightMetricsMetricsExploration : RemoveCmdletBase
     {
         public RemoveIntersightMetricsMetricsExploration()
@@ -805,7 +805,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MetricsConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMetricsConfiguration")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMetricsConfiguration", SupportsShouldProcess = true)]
     public class SetIntersightMetricsConfiguration : SetCmdletBase
     {
         public SetIntersightMetricsConfiguration()
@@ -898,7 +898,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MetricsMetricsExploration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMetricsMetricsExploration")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMetricsMetricsExploration", SupportsShouldProcess = true)]
     public class SetIntersightMetricsMetricsExploration : SetCmdletBase
     {
         public SetIntersightMetricsMetricsExploration()
@@ -1064,7 +1064,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MetricsResourceConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMetricsResourceConfiguration")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMetricsResourceConfiguration", SupportsShouldProcess = true)]
     public class SetIntersightMetricsResourceConfiguration : SetCmdletBase
     {
         public SetIntersightMetricsResourceConfiguration()

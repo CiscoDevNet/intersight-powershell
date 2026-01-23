@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiApicCcoPost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicCcoPost", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicCcoPost", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiApicCcoPost : GetCmdletBase
     {
         public GetIntersightNiaapiApicCcoPost()
@@ -174,7 +174,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiApicFieldNotice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicFieldNotice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicFieldNotice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiApicFieldNotice : GetCmdletBase
     {
         public GetIntersightNiaapiApicFieldNotice()
@@ -382,7 +382,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiApicHweol.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicHweol", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicHweol", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiApicHweol : GetCmdletBase
     {
         public GetIntersightNiaapiApicHweol()
@@ -765,7 +765,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiApicLatestMaintainedRelease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiApicLatestMaintainedRelease : GetCmdletBase
     {
         public GetIntersightNiaapiApicLatestMaintainedRelease()
@@ -917,7 +917,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiApicReleaseRecommend.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicReleaseRecommend", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicReleaseRecommend", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiApicReleaseRecommend : GetCmdletBase
     {
         public GetIntersightNiaapiApicReleaseRecommend()
@@ -1080,7 +1080,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiApicSweol.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicSweol", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiApicSweol", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiApicSweol : GetCmdletBase
     {
         public GetIntersightNiaapiApicSweol()
@@ -1397,7 +1397,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmCcoPost.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmCcoPost", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmCcoPost", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiDcnmCcoPost : GetCmdletBase
     {
         public GetIntersightNiaapiDcnmCcoPost()
@@ -1561,7 +1561,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmFieldNotice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmFieldNotice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmFieldNotice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiDcnmFieldNotice : GetCmdletBase
     {
         public GetIntersightNiaapiDcnmFieldNotice()
@@ -1769,7 +1769,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmHweol.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmHweol", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmHweol", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiDcnmHweol : GetCmdletBase
     {
         public GetIntersightNiaapiDcnmHweol()
@@ -2152,7 +2152,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmLatestMaintainedRelease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmLatestMaintainedRelease", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiDcnmLatestMaintainedRelease : GetCmdletBase
     {
         public GetIntersightNiaapiDcnmLatestMaintainedRelease()
@@ -2304,7 +2304,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmReleaseRecommend.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmReleaseRecommend", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmReleaseRecommend", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiDcnmReleaseRecommend : GetCmdletBase
     {
         public GetIntersightNiaapiDcnmReleaseRecommend()
@@ -2467,7 +2467,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiDcnmSweol.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmSweol", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiDcnmSweol", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiDcnmSweol : GetCmdletBase
     {
         public GetIntersightNiaapiDcnmSweol()
@@ -2784,7 +2784,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiFileDownloader.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiFileDownloader", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiFileDownloader", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiFileDownloader : GetCmdletBase
     {
         public GetIntersightNiaapiFileDownloader()
@@ -2925,7 +2925,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiNiaMetadata.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNiaMetadata", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNiaMetadata", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiNiaMetadata : GetCmdletBase
     {
         public GetIntersightNiaapiNiaMetadata()
@@ -3089,7 +3089,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiNibFileDownloader.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNibFileDownloader", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNibFileDownloader", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiNibFileDownloader : GetCmdletBase
     {
         public GetIntersightNiaapiNibFileDownloader()
@@ -3230,7 +3230,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiNibMetadata.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNibMetadata", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiNibMetadata", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiNibMetadata : GetCmdletBase
     {
         public GetIntersightNiaapiNibMetadata()
@@ -3394,7 +3394,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiPuvScriptDownloader.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiPuvScriptDownloader", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiPuvScriptDownloader", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiPuvScriptDownloader : GetCmdletBase
     {
         public GetIntersightNiaapiPuvScriptDownloader()
@@ -3535,7 +3535,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiSnValidatorMetadata.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiSnValidatorMetadata", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiSnValidatorMetadata", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiSnValidatorMetadata : GetCmdletBase
     {
         public GetIntersightNiaapiSnValidatorMetadata()
@@ -3687,7 +3687,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiUpgradeAssistFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiUpgradeAssistFile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiUpgradeAssistFile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiUpgradeAssistFile : GetCmdletBase
     {
         public GetIntersightNiaapiUpgradeAssistFile()
@@ -3828,7 +3828,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiaapiVersionRegex.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiVersionRegex", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiaapiVersionRegex", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiaapiVersionRegex : GetCmdletBase
     {
         public GetIntersightNiaapiVersionRegex()

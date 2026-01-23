@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciAhvVm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciAhvVm", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciAhvVm", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciAhvVm : GetCmdletBase
     {
         public GetIntersightHciAhvVm()
@@ -552,7 +552,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciAhvVmDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciAhvVmDisk", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciAhvVmDisk", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciAhvVmDisk : GetCmdletBase
     {
         public GetIntersightHciAhvVmDisk()
@@ -792,7 +792,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciAhvVmGpu.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciAhvVmGpu", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciAhvVmGpu", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciAhvVmGpu : GetCmdletBase
     {
         public GetIntersightHciAhvVmGpu()
@@ -1044,7 +1044,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciAhvVmNic.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciAhvVmNic", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciAhvVmNic", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciAhvVmNic : GetCmdletBase
     {
         public GetIntersightHciAhvVmNic()
@@ -1299,7 +1299,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciAlarm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciAlarm", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciAlarm", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciAlarm : GetCmdletBase
     {
         public GetIntersightHciAlarm()
@@ -1595,7 +1595,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciCluster", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciCluster", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciCluster : GetCmdletBase
     {
         public GetIntersightHciCluster()
@@ -2139,7 +2139,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciCompliance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciCompliance", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciCompliance", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciCompliance : GetCmdletBase
     {
         public GetIntersightHciCompliance()
@@ -2325,7 +2325,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciDisk", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciDisk", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciDisk : GetCmdletBase
     {
         public GetIntersightHciDisk()
@@ -2853,7 +2853,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciDomainManager.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciDomainManager", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciDomainManager", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciDomainManager : GetCmdletBase
     {
         public GetIntersightHciDomainManager()
@@ -3030,7 +3030,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciEntitlement.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciEntitlement", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciEntitlement", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciEntitlement : GetCmdletBase
     {
         public GetIntersightHciEntitlement()
@@ -3194,7 +3194,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciEsxiVm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciEsxiVm", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciEsxiVm", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciEsxiVm : GetCmdletBase
     {
         public GetIntersightHciEsxiVm()
@@ -3481,7 +3481,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciEsxiVmDisk.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciEsxiVmDisk", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciEsxiVmDisk", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciEsxiVmDisk : GetCmdletBase
     {
         public GetIntersightHciEsxiVmDisk()
@@ -3699,7 +3699,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciEsxiVmNic.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciEsxiVmNic", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciEsxiVmNic", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciEsxiVmNic : GetCmdletBase
     {
         public GetIntersightHciEsxiVmNic()
@@ -3907,7 +3907,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciGpu.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciGpu", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciGpu", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciGpu : GetCmdletBase
     {
         public GetIntersightHciGpu()
@@ -4115,7 +4115,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciLicense.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciLicense", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciLicense", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciLicense : GetCmdletBase
     {
         public GetIntersightHciLicense()
@@ -4378,7 +4378,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciNode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciNode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciNode : GetCmdletBase
     {
         public GetIntersightHciNode()
@@ -5068,7 +5068,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciPhysicalGpu.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciPhysicalGpu", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciPhysicalGpu", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciPhysicalGpu : GetCmdletBase
     {
         public GetIntersightHciPhysicalGpu()
@@ -5343,7 +5343,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciViolation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciViolation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciViolation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciViolation : GetCmdletBase
     {
         public GetIntersightHciViolation()
@@ -5509,7 +5509,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HciVirtualGpu.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHciVirtualGpu", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHciVirtualGpu", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHciVirtualGpu : GetCmdletBase
     {
         public GetIntersightHciVirtualGpu()
@@ -5829,7 +5829,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HciAhvVm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHciAhvVm")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHciAhvVm", SupportsShouldProcess = true)]
     public class SetIntersightHciAhvVm : SetCmdletBase
     {
         public SetIntersightHciAhvVm()
@@ -5939,7 +5939,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HciCluster.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHciCluster")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHciCluster", SupportsShouldProcess = true)]
     public class SetIntersightHciCluster : SetCmdletBase
     {
         public SetIntersightHciCluster()
@@ -6061,7 +6061,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HciEsxiVm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHciEsxiVm")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHciEsxiVm", SupportsShouldProcess = true)]
     public class SetIntersightHciEsxiVm : SetCmdletBase
     {
         public SetIntersightHciEsxiVm()
@@ -6146,7 +6146,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HciNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHciNode")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHciNode", SupportsShouldProcess = true)]
     public class SetIntersightHciNode : SetCmdletBase
     {
         public SetIntersightHciNode()

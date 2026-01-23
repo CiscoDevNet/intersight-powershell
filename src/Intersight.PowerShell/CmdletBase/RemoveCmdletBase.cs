@@ -51,6 +51,14 @@ namespace Intersight.PowerShell
                         argList.Add(null);
                     }
                 }
+
+                // Use ShouldProcess to support -WhatIf and -Confirm parameters
+                // Example: Remove-IntersightNtpPolicy -Moid xxxxx -WhatIf
+                if (!ShouldProcess(Config.BasePath, string.Format("Delete {0} Moid :{1}", this.MyInvocation.InvocationName.TrimStart("Remove-Intersight".ToCharArray()), this.Moid)))
+                {
+                    return;
+                }
+
                 var result = methodInfo.Invoke(ApiInstance, argList.ToArray());
                 if (Json.IsPresent)
                 {

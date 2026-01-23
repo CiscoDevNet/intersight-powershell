@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ProcessorUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightProcessorUnit", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightProcessorUnit", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightProcessorUnit : GetCmdletBase
     {
         public GetIntersightProcessorUnit()
@@ -494,7 +494,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ProcessorUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightProcessorUnit")]
+    [Cmdlet(VerbsCommon.Set, "IntersightProcessorUnit", SupportsShouldProcess = true)]
     public class SetIntersightProcessorUnit : SetCmdletBase
     {
         public SetIntersightProcessorUnit()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PoolIdMappingMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPoolIdMappingMember", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPoolIdMappingMember", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPoolIdMappingMember : GetCmdletBase
     {
         public GetIntersightPoolIdMappingMember()
@@ -151,7 +151,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PoolIdMappingPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPoolIdMappingPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPoolIdMappingPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPoolIdMappingPolicy : GetCmdletBase
     {
         public GetIntersightPoolIdMappingPolicy()
@@ -316,7 +316,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New PoolIdMappingPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightPoolIdMappingPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightPoolIdMappingPolicy", SupportsShouldProcess = true)]
     public class NewIntersightPoolIdMappingPolicy : NewCmdletBase
     {
         public NewIntersightPoolIdMappingPolicy()
@@ -440,7 +440,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove PoolIdMappingPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightPoolIdMappingPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightPoolIdMappingPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightPoolIdMappingPolicy : RemoveCmdletBase
     {
         public RemoveIntersightPoolIdMappingPolicy()
@@ -452,7 +452,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PoolIdMappingPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPoolIdMappingPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPoolIdMappingPolicy", SupportsShouldProcess = true)]
     public class SetIntersightPoolIdMappingPolicy : SetCmdletBase
     {
         public SetIntersightPoolIdMappingPolicy()

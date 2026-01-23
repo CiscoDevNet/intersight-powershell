@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkDiscoveredNeighbor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkDiscoveredNeighbor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkDiscoveredNeighbor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkDiscoveredNeighbor : GetCmdletBase
     {
         public GetIntersightNetworkDiscoveredNeighbor()
@@ -350,7 +350,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkDns.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkDns", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkDns", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkDns : GetCmdletBase
     {
         public GetIntersightNetworkDns()
@@ -548,7 +548,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkElement.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkElement", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkElement", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkElement : GetCmdletBase
     {
         public GetIntersightNetworkElement()
@@ -1462,7 +1462,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkElementSummary.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkElementSummary", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkElementSummary", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkElementSummary : GetCmdletBase
     {
         public GetIntersightNetworkElementSummary()
@@ -2353,7 +2353,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkFcZoneInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkFcZoneInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkFcZoneInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkFcZoneInfo : GetCmdletBase
     {
         public GetIntersightNetworkFcZoneInfo()
@@ -2582,7 +2582,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkFeatureControl.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkFeatureControl", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkFeatureControl", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkFeatureControl : GetCmdletBase
     {
         public GetIntersightNetworkFeatureControl()
@@ -2811,7 +2811,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkInterfaceList.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkInterfaceList", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkInterfaceList", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkInterfaceList : GetCmdletBase
     {
         public GetIntersightNetworkInterfaceList()
@@ -3172,7 +3172,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkLicenseFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkLicenseFile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkLicenseFile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkLicenseFile : GetCmdletBase
     {
         public GetIntersightNetworkLicenseFile()
@@ -3401,7 +3401,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkSupervisorCard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkSupervisorCard", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkSupervisorCard", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkSupervisorCard : GetCmdletBase
     {
         public GetIntersightNetworkSupervisorCard()
@@ -3774,7 +3774,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkTelemetryCheck.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkTelemetryCheck", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkTelemetryCheck", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkTelemetryCheck : GetCmdletBase
     {
         public GetIntersightNetworkTelemetryCheck()
@@ -3959,7 +3959,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkVethernet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVethernet", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVethernet", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkVethernet : GetCmdletBase
     {
         public GetIntersightNetworkVethernet()
@@ -4254,7 +4254,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkVfc.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVfc", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVfc", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkVfc : GetCmdletBase
     {
         public GetIntersightNetworkVfc()
@@ -4549,7 +4549,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkVlanPortInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVlanPortInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVlanPortInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkVlanPortInfo : GetCmdletBase
     {
         public GetIntersightNetworkVlanPortInfo()
@@ -4833,7 +4833,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkVpcDomain.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVpcDomain", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVpcDomain", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkVpcDomain : GetCmdletBase
     {
         public GetIntersightNetworkVpcDomain()
@@ -5095,7 +5095,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkVpcMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVpcMember", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVpcMember", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkVpcMember : GetCmdletBase
     {
         public GetIntersightNetworkVpcMember()
@@ -5335,7 +5335,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkVpcPeer.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVpcPeer", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVpcPeer", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkVpcPeer : GetCmdletBase
     {
         public GetIntersightNetworkVpcPeer()
@@ -5575,7 +5575,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NetworkVrf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVrf", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkVrf", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNetworkVrf : GetCmdletBase
     {
         public GetIntersightNetworkVrf()
@@ -5782,7 +5782,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NetworkElement.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkElement")]
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkElement", SupportsShouldProcess = true)]
     public class SetIntersightNetworkElement : SetCmdletBase
     {
         public SetIntersightNetworkElement()
@@ -6164,7 +6164,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NetworkFcZoneInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkFcZoneInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkFcZoneInfo", SupportsShouldProcess = true)]
     public class SetIntersightNetworkFcZoneInfo : SetCmdletBase
     {
         public SetIntersightNetworkFcZoneInfo()
@@ -6241,7 +6241,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NetworkVethernet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkVethernet")]
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkVethernet", SupportsShouldProcess = true)]
     public class SetIntersightNetworkVethernet : SetCmdletBase
     {
         public SetIntersightNetworkVethernet()
@@ -6324,7 +6324,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NetworkVfc.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkVfc")]
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkVfc", SupportsShouldProcess = true)]
     public class SetIntersightNetworkVfc : SetCmdletBase
     {
         public SetIntersightNetworkVfc()
@@ -6407,7 +6407,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NetworkVlanPortInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNetworkVlanPortInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkVlanPortInfo", SupportsShouldProcess = true)]
     public class SetIntersightNetworkVlanPortInfo : SetCmdletBase
     {
         public SetIntersightNetworkVlanPortInfo()

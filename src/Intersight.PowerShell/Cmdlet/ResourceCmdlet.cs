@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourceGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourceGroup : GetCmdletBase
     {
         public GetIntersightResourceGroup()
@@ -198,7 +198,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourceGroupMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceGroupMember", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceGroupMember", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourceGroupMember : GetCmdletBase
     {
         public GetIntersightResourceGroupMember()
@@ -339,7 +339,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourceLicenseResourceCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceLicenseResourceCount", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceLicenseResourceCount", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourceLicenseResourceCount : GetCmdletBase
     {
         public GetIntersightResourceLicenseResourceCount()
@@ -492,7 +492,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourceMembership.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceMembership", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceMembership", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourceMembership : GetCmdletBase
     {
         public GetIntersightResourceMembership()
@@ -657,7 +657,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourceMembershipHolder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceMembershipHolder", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceMembershipHolder", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourceMembershipHolder : GetCmdletBase
     {
         public GetIntersightResourceMembershipHolder()
@@ -798,7 +798,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourceReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceReservation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceReservation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourceReservation : GetCmdletBase
     {
         public GetIntersightResourceReservation()
@@ -1019,7 +1019,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourceSelectionCriteria.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceSelectionCriteria", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceSelectionCriteria", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourceSelectionCriteria : GetCmdletBase
     {
         public GetIntersightResourceSelectionCriteria()
@@ -1173,7 +1173,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourceSharedResourcesInfoHolder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourceSharedResourcesInfoHolder", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourceSharedResourcesInfoHolder", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourceSharedResourcesInfoHolder : GetCmdletBase
     {
         public GetIntersightResourceSharedResourcesInfoHolder()
@@ -1348,7 +1348,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ResourceGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightResourceGroup")]
+    [Cmdlet(VerbsCommon.New, "IntersightResourceGroup", SupportsShouldProcess = true)]
     public class NewIntersightResourceGroup : NewCmdletBase
     {
         public NewIntersightResourceGroup()
@@ -1495,7 +1495,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ResourceMembership.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightResourceMembership")]
+    [Cmdlet(VerbsCommon.New, "IntersightResourceMembership", SupportsShouldProcess = true)]
     public class NewIntersightResourceMembership : NewCmdletBase
     {
         public NewIntersightResourceMembership()
@@ -1609,7 +1609,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ResourceReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightResourceReservation")]
+    [Cmdlet(VerbsCommon.New, "IntersightResourceReservation", SupportsShouldProcess = true)]
     public class NewIntersightResourceReservation : NewCmdletBase
     {
         public NewIntersightResourceReservation()
@@ -1769,7 +1769,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ResourceSelectionCriteria.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightResourceSelectionCriteria")]
+    [Cmdlet(VerbsCommon.New, "IntersightResourceSelectionCriteria", SupportsShouldProcess = true)]
     public class NewIntersightResourceSelectionCriteria : NewCmdletBase
     {
         public NewIntersightResourceSelectionCriteria()
@@ -1892,7 +1892,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourceGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourceGroup")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourceGroup", SupportsShouldProcess = true)]
     public class RemoveIntersightResourceGroup : RemoveCmdletBase
     {
         public RemoveIntersightResourceGroup()
@@ -1904,7 +1904,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourceGroupMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourceGroupMember")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourceGroupMember", SupportsShouldProcess = true)]
     public class RemoveIntersightResourceGroupMember : RemoveCmdletBase
     {
         public RemoveIntersightResourceGroupMember()
@@ -1916,7 +1916,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourceReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourceReservation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourceReservation", SupportsShouldProcess = true)]
     public class RemoveIntersightResourceReservation : RemoveCmdletBase
     {
         public RemoveIntersightResourceReservation()
@@ -1928,7 +1928,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourceSelectionCriteria.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourceSelectionCriteria")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourceSelectionCriteria", SupportsShouldProcess = true)]
     public class RemoveIntersightResourceSelectionCriteria : RemoveCmdletBase
     {
         public RemoveIntersightResourceSelectionCriteria()
@@ -1940,7 +1940,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourceSharedResourcesInfoHolder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourceSharedResourcesInfoHolder")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourceSharedResourcesInfoHolder", SupportsShouldProcess = true)]
     public class RemoveIntersightResourceSharedResourcesInfoHolder : RemoveCmdletBase
     {
         public RemoveIntersightResourceSharedResourcesInfoHolder()
@@ -1952,7 +1952,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ResourceGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightResourceGroup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightResourceGroup", SupportsShouldProcess = true)]
     public class SetIntersightResourceGroup : SetCmdletBase
     {
         public SetIntersightResourceGroup()
@@ -2088,7 +2088,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ResourceMembership.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightResourceMembership")]
+    [Cmdlet(VerbsCommon.Set, "IntersightResourceMembership", SupportsShouldProcess = true)]
     public class SetIntersightResourceMembership : SetCmdletBase
     {
         public SetIntersightResourceMembership()
@@ -2191,7 +2191,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ResourceReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightResourceReservation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightResourceReservation", SupportsShouldProcess = true)]
     public class SetIntersightResourceReservation : SetCmdletBase
     {
         public SetIntersightResourceReservation()
@@ -2340,7 +2340,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ResourceSelectionCriteria.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightResourceSelectionCriteria")]
+    [Cmdlet(VerbsCommon.Set, "IntersightResourceSelectionCriteria", SupportsShouldProcess = true)]
     public class SetIntersightResourceSelectionCriteria : SetCmdletBase
     {
         public SetIntersightResourceSelectionCriteria()

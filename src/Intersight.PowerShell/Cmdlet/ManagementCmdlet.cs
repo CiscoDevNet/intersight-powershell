@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ManagementController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightManagementController", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightManagementController", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightManagementController : GetCmdletBase
     {
         public GetIntersightManagementController()
@@ -310,7 +310,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ManagementEntity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightManagementEntity", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightManagementEntity", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightManagementEntity : GetCmdletBase
     {
         public GetIntersightManagementEntity()
@@ -550,7 +550,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ManagementInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightManagementInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightManagementInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightManagementInterface : GetCmdletBase
     {
         public GetIntersightManagementInterface()
@@ -911,7 +911,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ManagementController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightManagementController")]
+    [Cmdlet(VerbsCommon.Set, "IntersightManagementController", SupportsShouldProcess = true)]
     public class SetIntersightManagementController : SetCmdletBase
     {
         public SetIntersightManagementController()
@@ -1009,7 +1009,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ManagementEntity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightManagementEntity")]
+    [Cmdlet(VerbsCommon.Set, "IntersightManagementEntity", SupportsShouldProcess = true)]
     public class SetIntersightManagementEntity : SetCmdletBase
     {
         public SetIntersightManagementEntity()
@@ -1087,7 +1087,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ManagementInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightManagementInterface")]
+    [Cmdlet(VerbsCommon.Set, "IntersightManagementInterface", SupportsShouldProcess = true)]
     public class SetIntersightManagementInterface : SetCmdletBase
     {
         public SetIntersightManagementInterface()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentChassis.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentChassis", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentChassis", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentChassis : GetCmdletBase
     {
         public GetIntersightEquipmentChassis()
@@ -529,7 +529,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentChassisController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentChassisController", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentChassisController", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentChassisController : GetCmdletBase
     {
         public GetIntersightEquipmentChassisController()
@@ -803,7 +803,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentChassisIdPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentChassisIdPool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentChassisIdPool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentChassisIdPool : GetCmdletBase
     {
         public GetIntersightEquipmentChassisIdPool()
@@ -946,7 +946,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentChassisIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentChassisIdentity", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentChassisIdentity", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentChassisIdentity : GetCmdletBase
     {
         public GetIntersightEquipmentChassisIdentity()
@@ -1199,7 +1199,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentChassisOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentChassisOperation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentChassisOperation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentChassisOperation : GetCmdletBase
     {
         public GetIntersightEquipmentChassisOperation()
@@ -1396,7 +1396,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentDeviceSummary.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentDeviceSummary", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentDeviceSummary", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentDeviceSummary : GetCmdletBase
     {
         public GetIntersightEquipmentDeviceSummary()
@@ -1637,7 +1637,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentEnclosureElement.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentEnclosureElement", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentEnclosureElement", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentEnclosureElement : GetCmdletBase
     {
         public GetIntersightEquipmentEnclosureElement()
@@ -2001,7 +2001,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentEndPointLog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentEndPointLog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentEndPointLog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentEndPointLog : GetCmdletBase
     {
         public GetIntersightEquipmentEndPointLog()
@@ -2197,7 +2197,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentExpanderModule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentExpanderModule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentExpanderModule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentExpanderModule : GetCmdletBase
     {
         public GetIntersightEquipmentExpanderModule()
@@ -2530,7 +2530,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentExpanderModuleIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentExpanderModuleIdentity", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentExpanderModuleIdentity", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentExpanderModuleIdentity : GetCmdletBase
     {
         public GetIntersightEquipmentExpanderModuleIdentity()
@@ -2837,7 +2837,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentExpanderModuleOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentExpanderModuleOperation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentExpanderModuleOperation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentExpanderModuleOperation : GetCmdletBase
     {
         public GetIntersightEquipmentExpanderModuleOperation()
@@ -3023,7 +3023,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentFan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFan", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFan", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentFan : GetCmdletBase
     {
         public GetIntersightEquipmentFan()
@@ -3418,7 +3418,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentFanControl.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFanControl", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFanControl", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentFanControl : GetCmdletBase
     {
         public GetIntersightEquipmentFanControl()
@@ -3529,7 +3529,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field identifies the Fan Control Mode on the endpoint.\n* `Balanced` - Value of Fan Speed is Balanced.\n* `LowPower` - Value of Fan Speed is LowPower.\n* `HighPower` - Value of Fan Speed is HighPower.\n* `MaximumPower` - Value of Fan Speed is MaximumPower.\n* `Acoustic` - Value of Fan Speed is Acoustic."</para>
+        /// <para type="description">"This field identifies the Fan Control Mode on the endpoint.\n* `Balanced` - Value of Fan Speed is Balanced.\n* `LowPower` - Value of Fan Speed is LowPower.\n* `HighPower` - Value of Fan Speed is HighPower.\n* `MaximumPower` - Value of Fan Speed is MaximumPower.\n* `MaximumCooling` - Value of Fan Speed is MaximumCooling.\n* `Acoustic` - Value of Fan Speed is Acoustic."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3691,7 +3691,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentFanModule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFanModule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFanModule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentFanModule : GetCmdletBase
     {
         public GetIntersightEquipmentFanModule()
@@ -4120,7 +4120,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentFex.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFex", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFex", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentFex : GetCmdletBase
     {
         public GetIntersightEquipmentFex()
@@ -4543,7 +4543,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentFexIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFexIdentity", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFexIdentity", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentFexIdentity : GetCmdletBase
     {
         public GetIntersightEquipmentFexIdentity()
@@ -4839,7 +4839,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentFexOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFexOperation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFexOperation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentFexOperation : GetCmdletBase
     {
         public GetIntersightEquipmentFexOperation()
@@ -5002,7 +5002,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentFru.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFru", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentFru", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentFru : GetCmdletBase
     {
         public GetIntersightEquipmentFru()
@@ -5275,7 +5275,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentHybridDriveSlot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentHybridDriveSlot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentHybridDriveSlot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentHybridDriveSlot : GetCmdletBase
     {
         public GetIntersightEquipmentHybridDriveSlot()
@@ -5581,7 +5581,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentInterconnect.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentInterconnect", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentInterconnect", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentInterconnect : GetCmdletBase
     {
         public GetIntersightEquipmentInterconnect()
@@ -5867,7 +5867,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentIoCard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentIoCard", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentIoCard", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentIoCard : GetCmdletBase
     {
         public GetIntersightEquipmentIoCard()
@@ -6312,7 +6312,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentIoCardOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentIoCardOperation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentIoCardOperation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentIoCardOperation : GetCmdletBase
     {
         public GetIntersightEquipmentIoCardOperation()
@@ -6498,7 +6498,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentIoExpander.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentIoExpander", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentIoExpander", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentIoExpander : GetCmdletBase
     {
         public GetIntersightEquipmentIoExpander()
@@ -6771,7 +6771,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentLocatorLed.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentLocatorLed", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentLocatorLed", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentLocatorLed : GetCmdletBase
     {
         public GetIntersightEquipmentLocatorLed()
@@ -7044,7 +7044,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentLogDownload.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentLogDownload", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentLogDownload", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentLogDownload : GetCmdletBase
     {
         public GetIntersightEquipmentLogDownload()
@@ -7174,7 +7174,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentPsu.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentPsu", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentPsu", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentPsu : GetCmdletBase
     {
         public GetIntersightEquipmentPsu()
@@ -7636,7 +7636,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentPsuControl.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentPsuControl", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentPsuControl", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentPsuControl : GetCmdletBase
     {
         public GetIntersightEquipmentPsuControl()
@@ -7976,7 +7976,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentRackEnclosure.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentRackEnclosure", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentRackEnclosure", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentRackEnclosure : GetCmdletBase
     {
         public GetIntersightEquipmentRackEnclosure()
@@ -8241,7 +8241,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentRackEnclosureSlot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentRackEnclosureSlot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentRackEnclosureSlot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentRackEnclosureSlot : GetCmdletBase
     {
         public GetIntersightEquipmentRackEnclosureSlot()
@@ -8536,7 +8536,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentRiser.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentRiser", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentRiser", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentRiser : GetCmdletBase
     {
         public GetIntersightEquipmentRiser()
@@ -8864,7 +8864,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentSensor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSensor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSensor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentSensor : GetCmdletBase
     {
         public GetIntersightEquipmentSensor()
@@ -9060,7 +9060,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentSharedAdapterUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSharedAdapterUnit", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSharedAdapterUnit", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentSharedAdapterUnit : GetCmdletBase
     {
         public GetIntersightEquipmentSharedAdapterUnit()
@@ -9379,7 +9379,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentSharedGraphicsCard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSharedGraphicsCard", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSharedGraphicsCard", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentSharedGraphicsCard : GetCmdletBase
     {
         public GetIntersightEquipmentSharedGraphicsCard()
@@ -9775,7 +9775,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentSharedIoModule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSharedIoModule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSharedIoModule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentSharedIoModule : GetCmdletBase
     {
         public GetIntersightEquipmentSharedIoModule()
@@ -10148,7 +10148,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentSwitchCard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSwitchCard", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSwitchCard", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentSwitchCard : GetCmdletBase
     {
         public GetIntersightEquipmentSwitchCard()
@@ -10646,7 +10646,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentSwitchOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSwitchOperation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSwitchOperation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentSwitchOperation : GetCmdletBase
     {
         public GetIntersightEquipmentSwitchOperation()
@@ -10865,7 +10865,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentSystemIoController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSystemIoController", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentSystemIoController", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentSystemIoController : GetCmdletBase
     {
         public GetIntersightEquipmentSystemIoController()
@@ -11248,7 +11248,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentTpm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentTpm", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentTpm", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentTpm : GetCmdletBase
     {
         public GetIntersightEquipmentTpm()
@@ -11576,7 +11576,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get EquipmentTransceiver.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentTransceiver", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightEquipmentTransceiver", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightEquipmentTransceiver : GetCmdletBase
     {
         public GetIntersightEquipmentTransceiver()
@@ -12003,7 +12003,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentChassis.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentChassis")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentChassis", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentChassis : SetCmdletBase
     {
         public SetIntersightEquipmentChassis()
@@ -12150,7 +12150,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentChassisController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentChassisController")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentChassisController", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentChassisController : SetCmdletBase
     {
         public SetIntersightEquipmentChassisController()
@@ -12232,7 +12232,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentChassisIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentChassisIdentity")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentChassisIdentity", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentChassisIdentity : SetCmdletBase
     {
         public SetIntersightEquipmentChassisIdentity()
@@ -12333,7 +12333,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentChassisOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentChassisOperation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentChassisOperation", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentChassisOperation : SetCmdletBase
     {
         public SetIntersightEquipmentChassisOperation()
@@ -12458,7 +12458,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentEnclosureElement.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentEnclosureElement")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentEnclosureElement", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentEnclosureElement : SetCmdletBase
     {
         public SetIntersightEquipmentEnclosureElement()
@@ -12570,7 +12570,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentExpanderModule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentExpanderModule")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentExpanderModule", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentExpanderModule : SetCmdletBase
     {
         public SetIntersightEquipmentExpanderModule()
@@ -12661,7 +12661,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentExpanderModuleIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentExpanderModuleIdentity")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentExpanderModuleIdentity", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentExpanderModuleIdentity : SetCmdletBase
     {
         public SetIntersightEquipmentExpanderModuleIdentity()
@@ -12766,7 +12766,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentExpanderModuleOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentExpanderModuleOperation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentExpanderModuleOperation", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentExpanderModuleOperation : SetCmdletBase
     {
         public SetIntersightEquipmentExpanderModuleOperation()
@@ -12850,7 +12850,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentFan.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFan")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFan", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentFan : SetCmdletBase
     {
         public SetIntersightEquipmentFan()
@@ -12943,7 +12943,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentFanControl.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFanControl")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFanControl", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentFanControl : SetCmdletBase
     {
         public SetIntersightEquipmentFanControl()
@@ -13024,7 +13024,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentFanModule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFanModule")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFanModule", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentFanModule : SetCmdletBase
     {
         public SetIntersightEquipmentFanModule()
@@ -13131,7 +13131,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentFex.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFex")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFex", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentFex : SetCmdletBase
     {
         public SetIntersightEquipmentFex()
@@ -13282,7 +13282,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentFexIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFexIdentity")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFexIdentity", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentFexIdentity : SetCmdletBase
     {
         public SetIntersightEquipmentFexIdentity()
@@ -13396,7 +13396,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentFexOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFexOperation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFexOperation", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentFexOperation : SetCmdletBase
     {
         public SetIntersightEquipmentFexOperation()
@@ -13487,7 +13487,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentFru.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFru")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentFru", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentFru : SetCmdletBase
     {
         public SetIntersightEquipmentFru()
@@ -13578,7 +13578,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentIoCard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentIoCard")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentIoCard", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentIoCard : SetCmdletBase
     {
         public SetIntersightEquipmentIoCard()
@@ -13731,7 +13731,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentIoCardOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentIoCardOperation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentIoCardOperation", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentIoCardOperation : SetCmdletBase
     {
         public SetIntersightEquipmentIoCardOperation()
@@ -13835,7 +13835,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentIoExpander.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentIoExpander")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentIoExpander", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentIoExpander : SetCmdletBase
     {
         public SetIntersightEquipmentIoExpander()
@@ -13916,7 +13916,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentLocatorLed.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentLocatorLed")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentLocatorLed", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentLocatorLed : SetCmdletBase
     {
         public SetIntersightEquipmentLocatorLed()
@@ -13997,7 +13997,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentPsu.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentPsu")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentPsu", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentPsu : SetCmdletBase
     {
         public SetIntersightEquipmentPsu()
@@ -14097,7 +14097,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentPsuControl.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentPsuControl")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentPsuControl", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentPsuControl : SetCmdletBase
     {
         public SetIntersightEquipmentPsuControl()
@@ -14185,7 +14185,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentRackEnclosure.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentRackEnclosure")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentRackEnclosure", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentRackEnclosure : SetCmdletBase
     {
         public SetIntersightEquipmentRackEnclosure()
@@ -14268,7 +14268,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentRackEnclosureSlot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentRackEnclosureSlot")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentRackEnclosureSlot", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentRackEnclosureSlot : SetCmdletBase
     {
         public SetIntersightEquipmentRackEnclosureSlot()
@@ -14351,7 +14351,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentSharedIoModule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentSharedIoModule")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentSharedIoModule", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentSharedIoModule : SetCmdletBase
     {
         public SetIntersightEquipmentSharedIoModule()
@@ -14452,7 +14452,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentSwitchCard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentSwitchCard")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentSwitchCard", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentSwitchCard : SetCmdletBase
     {
         public SetIntersightEquipmentSwitchCard()
@@ -14698,7 +14698,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentSwitchOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentSwitchOperation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentSwitchOperation", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentSwitchOperation : SetCmdletBase
     {
         public SetIntersightEquipmentSwitchOperation()
@@ -14855,7 +14855,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentSystemIoController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentSystemIoController")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentSystemIoController", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentSystemIoController : SetCmdletBase
     {
         public SetIntersightEquipmentSystemIoController()
@@ -14956,7 +14956,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentTpm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentTpm")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentTpm", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentTpm : SetCmdletBase
     {
         public SetIntersightEquipmentTpm()
@@ -15052,7 +15052,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set EquipmentTransceiver.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentTransceiver")]
+    [Cmdlet(VerbsCommon.Set, "IntersightEquipmentTransceiver", SupportsShouldProcess = true)]
     public class SetIntersightEquipmentTransceiver : SetCmdletBase
     {
         public SetIntersightEquipmentTransceiver()

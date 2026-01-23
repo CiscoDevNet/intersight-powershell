@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OrganizationOrganization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOrganizationOrganization", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOrganizationOrganization", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOrganizationOrganization : GetCmdletBase
     {
         public GetIntersightOrganizationOrganization()
@@ -164,7 +164,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OrganizationOrganization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOrganizationOrganization")]
+    [Cmdlet(VerbsCommon.New, "IntersightOrganizationOrganization", SupportsShouldProcess = true)]
     public class NewIntersightOrganizationOrganization : NewCmdletBase
     {
         public NewIntersightOrganizationOrganization()
@@ -277,7 +277,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove OrganizationOrganization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOrganizationOrganization")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightOrganizationOrganization", SupportsShouldProcess = true)]
     public class RemoveIntersightOrganizationOrganization : RemoveCmdletBase
     {
         public RemoveIntersightOrganizationOrganization()
@@ -289,7 +289,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set OrganizationOrganization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightOrganizationOrganization")]
+    [Cmdlet(VerbsCommon.Set, "IntersightOrganizationOrganization", SupportsShouldProcess = true)]
     public class SetIntersightOrganizationOrganization : SetCmdletBase
     {
         public SetIntersightOrganizationOrganization()

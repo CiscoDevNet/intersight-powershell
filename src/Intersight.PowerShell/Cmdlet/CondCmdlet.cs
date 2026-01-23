@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CondAlarm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarm", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarm", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCondAlarm : GetCmdletBase
     {
         public GetIntersightCondAlarm()
@@ -395,7 +395,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CondAlarmAggregation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmAggregation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmAggregation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCondAlarmAggregation : GetCmdletBase
     {
         public GetIntersightCondAlarmAggregation()
@@ -581,7 +581,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CondAlarmClassification.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmClassification", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmClassification", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCondAlarmClassification : GetCmdletBase
     {
         public GetIntersightCondAlarmClassification()
@@ -724,7 +724,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CondAlarmDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCondAlarmDefinition : GetCmdletBase
     {
         public GetIntersightCondAlarmDefinition()
@@ -890,7 +890,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CondAlarmSuppression.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmSuppression", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmSuppression", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCondAlarmSuppression : GetCmdletBase
     {
         public GetIntersightCondAlarmSuppression()
@@ -1043,7 +1043,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CondHclStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCondHclStatus : GetCmdletBase
     {
         public GetIntersightCondHclStatus()
@@ -1416,7 +1416,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CondHclStatusDetail.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusDetail", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusDetail", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCondHclStatusDetail : GetCmdletBase
     {
         public GetIntersightCondHclStatusDetail()
@@ -1722,7 +1722,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CondHclStatusJob.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusJob", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCondHclStatusJob", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCondHclStatusJob : GetCmdletBase
     {
         public GetIntersightCondHclStatusJob()
@@ -1863,7 +1863,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CondAlarmSuppression.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCondAlarmSuppression")]
+    [Cmdlet(VerbsCommon.New, "IntersightCondAlarmSuppression", SupportsShouldProcess = true)]
     public class NewIntersightCondAlarmSuppression : NewCmdletBase
     {
         public NewIntersightCondAlarmSuppression()
@@ -1985,7 +1985,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CondAlarmSuppression.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCondAlarmSuppression")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCondAlarmSuppression", SupportsShouldProcess = true)]
     public class RemoveIntersightCondAlarmSuppression : RemoveCmdletBase
     {
         public RemoveIntersightCondAlarmSuppression()
@@ -1997,7 +1997,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CondAlarm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCondAlarm")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCondAlarm", SupportsShouldProcess = true)]
     public class SetIntersightCondAlarm : SetCmdletBase
     {
         public SetIntersightCondAlarm()
@@ -2140,7 +2140,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CondAlarmSuppression.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCondAlarmSuppression")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCondAlarmSuppression", SupportsShouldProcess = true)]
     public class SetIntersightCondAlarmSuppression : SetCmdletBase
     {
         public SetIntersightCondAlarmSuppression()

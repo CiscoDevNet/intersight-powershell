@@ -6,7 +6,7 @@ using System.Management.Automation;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsCommon.Get, "IntersightManagedObject", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightManagedObject", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetCmdlet : CmdletBase
     {
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = "CmdletParam")]
@@ -74,6 +74,10 @@ namespace Intersight.PowerShell
         protected override void ProcessRecord()
         {
             // ExecuteRequestAsync(string.Format("/api/v1/{0}",ObjectType));
+            if (!ShouldProcess(CmdletBase.Config.BasePath, string.Format("Get {0}", ObjectType)))
+            {
+                return;
+            }
 
             //Check the objectType in MoBaseMo.ObjectTypeEnum if it belongs to that enum
             //fetch the display name.

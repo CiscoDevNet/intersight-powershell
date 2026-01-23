@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get DeviceconnectorPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightDeviceconnectorPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightDeviceconnectorPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightDeviceconnectorPolicy : GetCmdletBase
     {
         public GetIntersightDeviceconnectorPolicy()
@@ -174,7 +174,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New DeviceconnectorPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightDeviceconnectorPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightDeviceconnectorPolicy", SupportsShouldProcess = true)]
     public class NewIntersightDeviceconnectorPolicy : NewCmdletBase
     {
         public NewIntersightDeviceconnectorPolicy()
@@ -307,7 +307,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove DeviceconnectorPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightDeviceconnectorPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightDeviceconnectorPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightDeviceconnectorPolicy : RemoveCmdletBase
     {
         public RemoveIntersightDeviceconnectorPolicy()
@@ -319,7 +319,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set DeviceconnectorPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightDeviceconnectorPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightDeviceconnectorPolicy", SupportsShouldProcess = true)]
     public class SetIntersightDeviceconnectorPolicy : SetCmdletBase
     {
         public SetIntersightDeviceconnectorPolicy()

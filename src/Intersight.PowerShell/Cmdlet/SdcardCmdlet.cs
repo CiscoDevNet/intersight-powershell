@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SdcardPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSdcardPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSdcardPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSdcardPolicy : GetCmdletBase
     {
         public GetIntersightSdcardPolicy()
@@ -164,7 +164,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SdcardPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSdcardPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSdcardPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSdcardPolicyInventory : GetCmdletBase
     {
         public GetIntersightSdcardPolicyInventory()
@@ -328,7 +328,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SdcardPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSdcardPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightSdcardPolicy", SupportsShouldProcess = true)]
     public class NewIntersightSdcardPolicy : NewCmdletBase
     {
         public NewIntersightSdcardPolicy()
@@ -461,7 +461,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SdcardPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSdcardPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSdcardPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightSdcardPolicy : RemoveCmdletBase
     {
         public RemoveIntersightSdcardPolicy()
@@ -473,7 +473,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SdcardPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSdcardPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSdcardPolicy", SupportsShouldProcess = true)]
     public class SetIntersightSdcardPolicy : SetCmdletBase
     {
         public SetIntersightSdcardPolicy()

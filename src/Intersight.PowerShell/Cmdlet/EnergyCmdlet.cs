@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New EnergyDailyMetrics.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightEnergyDailyMetrics")]
+    [Cmdlet(VerbsCommon.New, "IntersightEnergyDailyMetrics", SupportsShouldProcess = true)]
     public class NewIntersightEnergyDailyMetrics : NewCmdletBase
     {
         public NewIntersightEnergyDailyMetrics()
@@ -88,7 +88,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New EnergyMetrics.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightEnergyMetrics")]
+    [Cmdlet(VerbsCommon.New, "IntersightEnergyMetrics", SupportsShouldProcess = true)]
     public class NewIntersightEnergyMetrics : NewCmdletBase
     {
         public NewIntersightEnergyMetrics()

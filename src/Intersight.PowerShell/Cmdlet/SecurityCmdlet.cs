@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SecurityUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSecurityUnit", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSecurityUnit", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSecurityUnit : GetCmdletBase
     {
         public GetIntersightSecurityUnit()
@@ -371,7 +371,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SecurityUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSecurityUnit")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSecurityUnit", SupportsShouldProcess = true)]
     public class SetIntersightSecurityUnit : SetCmdletBase
     {
         public SetIntersightSecurityUnit()

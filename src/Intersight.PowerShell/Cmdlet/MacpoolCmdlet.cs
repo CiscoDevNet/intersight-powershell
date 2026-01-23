@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MacpoolIdBlock.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolIdBlock", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolIdBlock", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMacpoolIdBlock : GetCmdletBase
     {
         public GetIntersightMacpoolIdBlock()
@@ -175,7 +175,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MacpoolLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolLease", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolLease", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMacpoolLease : GetCmdletBase
     {
         public GetIntersightMacpoolLease()
@@ -394,7 +394,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MacpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolPool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolPool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMacpoolPool : GetCmdletBase
     {
         public GetIntersightMacpoolPool()
@@ -593,7 +593,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MacpoolPoolMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolPoolMember", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolPoolMember", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMacpoolPoolMember : GetCmdletBase
     {
         public GetIntersightMacpoolPoolMember()
@@ -811,7 +811,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MacpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolReservation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolReservation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMacpoolReservation : GetCmdletBase
     {
         public GetIntersightMacpoolReservation()
@@ -1008,7 +1008,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MacpoolUniverse.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolUniverse", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMacpoolUniverse", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMacpoolUniverse : GetCmdletBase
     {
         public GetIntersightMacpoolUniverse()
@@ -1138,7 +1138,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New MacpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightMacpoolPool")]
+    [Cmdlet(VerbsCommon.New, "IntersightMacpoolPool", SupportsShouldProcess = true)]
     public class NewIntersightMacpoolPool : NewCmdletBase
     {
         public NewIntersightMacpoolPool()
@@ -1286,7 +1286,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New MacpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightMacpoolReservation")]
+    [Cmdlet(VerbsCommon.New, "IntersightMacpoolReservation", SupportsShouldProcess = true)]
     public class NewIntersightMacpoolReservation : NewCmdletBase
     {
         public NewIntersightMacpoolReservation()
@@ -1412,7 +1412,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove MacpoolLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightMacpoolLease")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightMacpoolLease", SupportsShouldProcess = true)]
     public class RemoveIntersightMacpoolLease : RemoveCmdletBase
     {
         public RemoveIntersightMacpoolLease()
@@ -1424,7 +1424,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove MacpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightMacpoolPool")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightMacpoolPool", SupportsShouldProcess = true)]
     public class RemoveIntersightMacpoolPool : RemoveCmdletBase
     {
         public RemoveIntersightMacpoolPool()
@@ -1436,7 +1436,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove MacpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightMacpoolReservation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightMacpoolReservation", SupportsShouldProcess = true)]
     public class RemoveIntersightMacpoolReservation : RemoveCmdletBase
     {
         public RemoveIntersightMacpoolReservation()
@@ -1448,7 +1448,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MacpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMacpoolPool")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMacpoolPool", SupportsShouldProcess = true)]
     public class SetIntersightMacpoolPool : SetCmdletBase
     {
         public SetIntersightMacpoolPool()
@@ -1585,7 +1585,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set MacpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightMacpoolReservation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightMacpoolReservation", SupportsShouldProcess = true)]
     public class SetIntersightMacpoolReservation : SetCmdletBase
     {
         public SetIntersightMacpoolReservation()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MerakiDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMerakiDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMerakiDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMerakiDevice : GetCmdletBase
     {
         public GetIntersightMerakiDevice()
@@ -350,7 +350,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MerakiNetwork.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMerakiNetwork", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMerakiNetwork", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMerakiNetwork : GetCmdletBase
     {
         public GetIntersightMerakiNetwork()
@@ -526,7 +526,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MerakiOrganization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMerakiOrganization", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMerakiOrganization", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMerakiOrganization : GetCmdletBase
     {
         public GetIntersightMerakiOrganization()
@@ -678,7 +678,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MerakiPortProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMerakiPortProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMerakiPortProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMerakiPortProfile : GetCmdletBase
     {
         public GetIntersightMerakiPortProfile()
@@ -830,7 +830,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MerakiTag.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMerakiTag", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMerakiTag", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMerakiTag : GetCmdletBase
     {
         public GetIntersightMerakiTag()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PciCoprocessorCard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciCoprocessorCard", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPciCoprocessorCard", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPciCoprocessorCard : GetCmdletBase
     {
         public GetIntersightPciCoprocessorCard()
@@ -294,7 +294,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PciDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPciDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPciDevice : GetCmdletBase
     {
         public GetIntersightPciDevice()
@@ -612,7 +612,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PciEndpoint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciEndpoint", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPciEndpoint", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPciEndpoint : GetCmdletBase
     {
         public GetIntersightPciEndpoint()
@@ -919,7 +919,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PciLink.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciLink", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPciLink", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPciLink : GetCmdletBase
     {
         public GetIntersightPciLink()
@@ -1247,7 +1247,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PciNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciNode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPciNode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPciNode : GetCmdletBase
     {
         public GetIntersightPciNode()
@@ -1624,7 +1624,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PciNodeSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciNodeSetting", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPciNodeSetting", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPciNodeSetting : GetCmdletBase
     {
         public GetIntersightPciNodeSetting()
@@ -1854,7 +1854,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PciPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPciPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPciPort : GetCmdletBase
     {
         public GetIntersightPciPort()
@@ -2106,7 +2106,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PciSlot.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciSlot", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPciSlot", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPciSlot : GetCmdletBase
     {
         public GetIntersightPciSlot()
@@ -2368,7 +2368,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PciSwitch.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciSwitch", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPciSwitch", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPciSwitch : GetCmdletBase
     {
         public GetIntersightPciSwitch()
@@ -2799,7 +2799,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PciZone.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPciZone", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPciZone", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPciZone : GetCmdletBase
     {
         public GetIntersightPciZone()
@@ -3019,7 +3019,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PciDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPciDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPciDevice", SupportsShouldProcess = true)]
     public class SetIntersightPciDevice : SetCmdletBase
     {
         public SetIntersightPciDevice()
@@ -3145,7 +3145,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PciLink.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPciLink")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPciLink", SupportsShouldProcess = true)]
     public class SetIntersightPciLink : SetCmdletBase
     {
         public SetIntersightPciLink()
@@ -3231,7 +3231,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PciNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPciNode")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPciNode", SupportsShouldProcess = true)]
     public class SetIntersightPciNode : SetCmdletBase
     {
         public SetIntersightPciNode()
@@ -3326,7 +3326,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PciNodeSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPciNodeSetting")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPciNodeSetting", SupportsShouldProcess = true)]
     public class SetIntersightPciNodeSetting : SetCmdletBase
     {
         public SetIntersightPciNodeSetting()
@@ -3424,7 +3424,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PciSwitch.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPciSwitch")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPciSwitch", SupportsShouldProcess = true)]
     public class SetIntersightPciSwitch : SetCmdletBase
     {
         public SetIntersightPciSwitch()

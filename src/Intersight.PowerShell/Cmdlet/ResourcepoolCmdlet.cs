@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourcepoolChassisQualificationPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolChassisQualificationPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolChassisQualificationPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourcepoolChassisQualificationPolicy : GetCmdletBase
     {
         public GetIntersightResourcepoolChassisQualificationPolicy()
@@ -175,7 +175,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourcepoolLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolLease", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolLease", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourcepoolLease : GetCmdletBase
     {
         public GetIntersightResourcepoolLease()
@@ -419,7 +419,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourcepoolLeaseResource.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolLeaseResource", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolLeaseResource", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourcepoolLeaseResource : GetCmdletBase
     {
         public GetIntersightResourcepoolLeaseResource()
@@ -560,7 +560,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourcepoolMembershipReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolMembershipReservation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolMembershipReservation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourcepoolMembershipReservation : GetCmdletBase
     {
         public GetIntersightResourcepoolMembershipReservation()
@@ -757,7 +757,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourcepoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolPool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolPool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourcepoolPool : GetCmdletBase
     {
         public GetIntersightResourcepoolPool()
@@ -990,7 +990,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourcepoolPoolMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolPoolMember", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolPoolMember", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourcepoolPoolMember : GetCmdletBase
     {
         public GetIntersightResourcepoolPoolMember()
@@ -1156,7 +1156,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourcepoolQualificationPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolQualificationPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolQualificationPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourcepoolQualificationPolicy : GetCmdletBase
     {
         public GetIntersightResourcepoolQualificationPolicy()
@@ -1310,7 +1310,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ResourcepoolUniverse.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolUniverse", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightResourcepoolUniverse", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightResourcepoolUniverse : GetCmdletBase
     {
         public GetIntersightResourcepoolUniverse()
@@ -1440,7 +1440,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ResourcepoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightResourcepoolPool")]
+    [Cmdlet(VerbsCommon.New, "IntersightResourcepoolPool", SupportsShouldProcess = true)]
     public class NewIntersightResourcepoolPool : NewCmdletBase
     {
         public NewIntersightResourcepoolPool()
@@ -1632,7 +1632,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ResourcepoolQualificationPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightResourcepoolQualificationPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightResourcepoolQualificationPolicy", SupportsShouldProcess = true)]
     public class NewIntersightResourcepoolQualificationPolicy : NewCmdletBase
     {
         public NewIntersightResourcepoolQualificationPolicy()
@@ -1755,7 +1755,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourcepoolChassisQualificationPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourcepoolChassisQualificationPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourcepoolChassisQualificationPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightResourcepoolChassisQualificationPolicy : RemoveCmdletBase
     {
         public RemoveIntersightResourcepoolChassisQualificationPolicy()
@@ -1767,7 +1767,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourcepoolLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourcepoolLease")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourcepoolLease", SupportsShouldProcess = true)]
     public class RemoveIntersightResourcepoolLease : RemoveCmdletBase
     {
         public RemoveIntersightResourcepoolLease()
@@ -1779,7 +1779,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourcepoolMembershipReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourcepoolMembershipReservation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourcepoolMembershipReservation", SupportsShouldProcess = true)]
     public class RemoveIntersightResourcepoolMembershipReservation : RemoveCmdletBase
     {
         public RemoveIntersightResourcepoolMembershipReservation()
@@ -1791,7 +1791,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourcepoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourcepoolPool")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourcepoolPool", SupportsShouldProcess = true)]
     public class RemoveIntersightResourcepoolPool : RemoveCmdletBase
     {
         public RemoveIntersightResourcepoolPool()
@@ -1803,7 +1803,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourcepoolQualificationPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourcepoolQualificationPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightResourcepoolQualificationPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightResourcepoolQualificationPolicy : RemoveCmdletBase
     {
         public RemoveIntersightResourcepoolQualificationPolicy()
@@ -1815,7 +1815,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ResourcepoolMembershipReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightResourcepoolMembershipReservation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightResourcepoolMembershipReservation", SupportsShouldProcess = true)]
     public class SetIntersightResourcepoolMembershipReservation : SetCmdletBase
     {
         public SetIntersightResourcepoolMembershipReservation()
@@ -1960,7 +1960,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ResourcepoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightResourcepoolPool")]
+    [Cmdlet(VerbsCommon.Set, "IntersightResourcepoolPool", SupportsShouldProcess = true)]
     public class SetIntersightResourcepoolPool : SetCmdletBase
     {
         public SetIntersightResourcepoolPool()
@@ -2141,7 +2141,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ResourcepoolQualificationPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightResourcepoolQualificationPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightResourcepoolQualificationPolicy", SupportsShouldProcess = true)]
     public class SetIntersightResourcepoolQualificationPolicy : SetCmdletBase
     {
         public SetIntersightResourcepoolQualificationPolicy()

@@ -8,6 +8,61 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationAbstractAdvisoryFilter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationAbstractAdvisoryFilter")]
+    public class InitializeIntersightNotificationAbstractAdvisoryFilter : PSCmdlet
+    {
+        public InitializeIntersightNotificationAbstractAdvisoryFilter()
+        {
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationAbstractAdvisoryFilter.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationAbstractAdvisoryFilter.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NotificationAbstractAdvisoryFilter initObject = new Intersight.Model.NotificationAbstractAdvisoryFilter();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NotificationAbstractCondition.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNotificationAbstractCondition")]
@@ -313,6 +368,119 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationAdvisoryMoCondition.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationAdvisoryMoCondition")]
+    public class InitializeIntersightNotificationAdvisoryMoCondition : PSCmdlet
+    {
+        public InitializeIntersightNotificationAdvisoryMoCondition()
+        {
+            ClassId = NotificationAdvisoryMoCondition.ClassIdEnum.NotificationAdvisoryMoCondition;
+            ObjectType = NotificationAdvisoryMoCondition.ObjectTypeEnum.NotificationAdvisoryMoCondition;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NotificationAbstractAdvisoryFilter> AdvisoryFilters
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationAdvisoryMoCondition.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The condition can be switched on/off with out necessity to change the subscription\nsettings: actions, conditions, etc.\nEx.: Subscription MO can be configured, but switched off."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"MoType for which the condition is created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string MoType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationAdvisoryMoCondition.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<NotificationAdvisoryMoCondition.OperationsEnum> Operations
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NotificationAdvisoryMoCondition initObject = new Intersight.Model.NotificationAdvisoryMoCondition();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdvisoryFilters"))
+            {
+                initObject.AdvisoryFilters = this.AdvisoryFilters;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MoType"))
+            {
+                initObject.MoType = this.MoType;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Operations"))
+            {
+                initObject.Operations = this.Operations;
+            }
             WriteObject(initObject);
         }
 
@@ -771,6 +939,148 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationEolAdvisoryFilter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationEolAdvisoryFilter")]
+    public class InitializeIntersightNotificationEolAdvisoryFilter : PSCmdlet
+    {
+        public InitializeIntersightNotificationEolAdvisoryFilter()
+        {
+            ClassId = NotificationEolAdvisoryFilter.ClassIdEnum.NotificationEolAdvisoryFilter;
+            ObjectType = NotificationEolAdvisoryFilter.ObjectTypeEnum.NotificationEolAdvisoryFilter;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationEolAdvisoryFilter.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<NotificationEolAdvisoryFilter.MilestoneTypeEnum> MilestoneType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationEolAdvisoryFilter.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NotificationEolAdvisoryFilter initObject = new Intersight.Model.NotificationEolAdvisoryFilter();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("MilestoneType"))
+            {
+                initObject.MilestoneType = this.MilestoneType;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationFieldNoticeAdvisoryFilter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationFieldNoticeAdvisoryFilter")]
+    public class InitializeIntersightNotificationFieldNoticeAdvisoryFilter : PSCmdlet
+    {
+        public InitializeIntersightNotificationFieldNoticeAdvisoryFilter()
+        {
+            ClassId = NotificationFieldNoticeAdvisoryFilter.ClassIdEnum.NotificationFieldNoticeAdvisoryFilter;
+            ObjectType = NotificationFieldNoticeAdvisoryFilter.ObjectTypeEnum.NotificationFieldNoticeAdvisoryFilter;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationFieldNoticeAdvisoryFilter.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationFieldNoticeAdvisoryFilter.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<NotificationFieldNoticeAdvisoryFilter.SeverityEnum> Severity
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NotificationFieldNoticeAdvisoryFilter initObject = new Intersight.Model.NotificationFieldNoticeAdvisoryFilter();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Severity"))
+            {
+                initObject.Severity = this.Severity;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NotificationMoCondition.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNotificationMoCondition")]
@@ -878,6 +1188,77 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Operations"))
             {
                 initObject.Operations = this.Operations;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationSecurityAdvisoryFilter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationSecurityAdvisoryFilter")]
+    public class InitializeIntersightNotificationSecurityAdvisoryFilter : PSCmdlet
+    {
+        public InitializeIntersightNotificationSecurityAdvisoryFilter()
+        {
+            ClassId = NotificationSecurityAdvisoryFilter.ClassIdEnum.NotificationSecurityAdvisoryFilter;
+            ObjectType = NotificationSecurityAdvisoryFilter.ObjectTypeEnum.NotificationSecurityAdvisoryFilter;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationSecurityAdvisoryFilter.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationSecurityAdvisoryFilter.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<NotificationSecurityAdvisoryFilter.SeverityEnum> Severity
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NotificationSecurityAdvisoryFilter initObject = new Intersight.Model.NotificationSecurityAdvisoryFilter();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Severity"))
+            {
+                initObject.Severity = this.Severity;
             }
             WriteObject(initObject);
         }

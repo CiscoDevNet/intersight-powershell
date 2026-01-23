@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TamAdvisoryCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTamAdvisoryCount", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTamAdvisoryCount", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTamAdvisoryCount : GetCmdletBase
     {
         public GetIntersightTamAdvisoryCount()
@@ -151,7 +151,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TamAdvisoryDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTamAdvisoryDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTamAdvisoryDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTamAdvisoryDefinition : GetCmdletBase
     {
         public GetIntersightTamAdvisoryDefinition()
@@ -419,7 +419,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TamAdvisoryInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTamAdvisoryInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTamAdvisoryInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTamAdvisoryInfo : GetCmdletBase
     {
         public GetIntersightTamAdvisoryInfo()
@@ -571,7 +571,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TamAdvisoryInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTamAdvisoryInstance", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTamAdvisoryInstance", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTamAdvisoryInstance : GetCmdletBase
     {
         public GetIntersightTamAdvisoryInstance()
@@ -778,7 +778,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TamSecurityAdvisory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTamSecurityAdvisory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTamSecurityAdvisory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTamSecurityAdvisory : GetCmdletBase
     {
         public GetIntersightTamSecurityAdvisory()
@@ -1078,7 +1078,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TamAdvisoryCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTamAdvisoryCount")]
+    [Cmdlet(VerbsCommon.New, "IntersightTamAdvisoryCount", SupportsShouldProcess = true)]
     public class NewIntersightTamAdvisoryCount : NewCmdletBase
     {
         public NewIntersightTamAdvisoryCount()
@@ -1168,7 +1168,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TamAdvisoryDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTamAdvisoryDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightTamAdvisoryDefinition", SupportsShouldProcess = true)]
     public class NewIntersightTamAdvisoryDefinition : NewCmdletBase
     {
         public NewIntersightTamAdvisoryDefinition()
@@ -1455,7 +1455,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TamAdvisoryInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTamAdvisoryInfo")]
+    [Cmdlet(VerbsCommon.New, "IntersightTamAdvisoryInfo", SupportsShouldProcess = true)]
     public class NewIntersightTamAdvisoryInfo : NewCmdletBase
     {
         public NewIntersightTamAdvisoryInfo()
@@ -1556,7 +1556,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TamAdvisoryInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTamAdvisoryInstance")]
+    [Cmdlet(VerbsCommon.New, "IntersightTamAdvisoryInstance", SupportsShouldProcess = true)]
     public class NewIntersightTamAdvisoryInstance : NewCmdletBase
     {
         public NewIntersightTamAdvisoryInstance()
@@ -1702,7 +1702,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TamSecurityAdvisory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTamSecurityAdvisory")]
+    [Cmdlet(VerbsCommon.New, "IntersightTamSecurityAdvisory", SupportsShouldProcess = true)]
     public class NewIntersightTamSecurityAdvisory : NewCmdletBase
     {
         public NewIntersightTamSecurityAdvisory()
@@ -2011,7 +2011,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove TamAdvisoryCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTamAdvisoryCount")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightTamAdvisoryCount", SupportsShouldProcess = true)]
     public class RemoveIntersightTamAdvisoryCount : RemoveCmdletBase
     {
         public RemoveIntersightTamAdvisoryCount()
@@ -2023,7 +2023,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove TamAdvisoryDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTamAdvisoryDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightTamAdvisoryDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightTamAdvisoryDefinition : RemoveCmdletBase
     {
         public RemoveIntersightTamAdvisoryDefinition()
@@ -2035,7 +2035,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove TamAdvisoryInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTamAdvisoryInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightTamAdvisoryInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightTamAdvisoryInfo : RemoveCmdletBase
     {
         public RemoveIntersightTamAdvisoryInfo()
@@ -2047,7 +2047,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove TamAdvisoryInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTamAdvisoryInstance")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightTamAdvisoryInstance", SupportsShouldProcess = true)]
     public class RemoveIntersightTamAdvisoryInstance : RemoveCmdletBase
     {
         public RemoveIntersightTamAdvisoryInstance()
@@ -2059,7 +2059,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove TamSecurityAdvisory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTamSecurityAdvisory")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightTamSecurityAdvisory", SupportsShouldProcess = true)]
     public class RemoveIntersightTamSecurityAdvisory : RemoveCmdletBase
     {
         public RemoveIntersightTamSecurityAdvisory()
@@ -2071,7 +2071,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set TamAdvisoryCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightTamAdvisoryCount")]
+    [Cmdlet(VerbsCommon.Set, "IntersightTamAdvisoryCount", SupportsShouldProcess = true)]
     public class SetIntersightTamAdvisoryCount : SetCmdletBase
     {
         public SetIntersightTamAdvisoryCount()
@@ -2150,7 +2150,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set TamAdvisoryDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightTamAdvisoryDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightTamAdvisoryDefinition", SupportsShouldProcess = true)]
     public class SetIntersightTamAdvisoryDefinition : SetCmdletBase
     {
         public SetIntersightTamAdvisoryDefinition()
@@ -2426,7 +2426,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set TamAdvisoryInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightTamAdvisoryInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightTamAdvisoryInfo", SupportsShouldProcess = true)]
     public class SetIntersightTamAdvisoryInfo : SetCmdletBase
     {
         public SetIntersightTamAdvisoryInfo()
@@ -2516,7 +2516,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set TamAdvisoryInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightTamAdvisoryInstance")]
+    [Cmdlet(VerbsCommon.Set, "IntersightTamAdvisoryInstance", SupportsShouldProcess = true)]
     public class SetIntersightTamAdvisoryInstance : SetCmdletBase
     {
         public SetIntersightTamAdvisoryInstance()
@@ -2651,7 +2651,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set TamSecurityAdvisory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightTamSecurityAdvisory")]
+    [Cmdlet(VerbsCommon.Set, "IntersightTamSecurityAdvisory", SupportsShouldProcess = true)]
     public class SetIntersightTamSecurityAdvisory : SetCmdletBase
     {
         public SetIntersightTamSecurityAdvisory()

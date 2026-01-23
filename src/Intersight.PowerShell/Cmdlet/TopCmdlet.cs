@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TopSystem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTopSystem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTopSystem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTopSystem : GetCmdletBase
     {
         public GetIntersightTopSystem()
@@ -253,7 +253,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set TopSystem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightTopSystem")]
+    [Cmdlet(VerbsCommon.Set, "IntersightTopSystem", SupportsShouldProcess = true)]
     public class SetIntersightTopSystem : SetCmdletBase
     {
         public SetIntersightTopSystem()

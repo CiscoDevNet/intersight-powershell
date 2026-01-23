@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementCollectionControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementCollectionControlPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementCollectionControlPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTechsupportmanagementCollectionControlPolicy : GetCmdletBase
     {
         public GetIntersightTechsupportmanagementCollectionControlPolicy()
@@ -162,7 +162,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementDownload.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementDownload", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementDownload", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTechsupportmanagementDownload : GetCmdletBase
     {
         public GetIntersightTechsupportmanagementDownload()
@@ -292,7 +292,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementEndPoint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementEndPoint", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementEndPoint", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTechsupportmanagementEndPoint : GetCmdletBase
     {
         public GetIntersightTechsupportmanagementEndPoint()
@@ -510,7 +510,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementTechSupportBundle.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementTechSupportBundle", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementTechSupportBundle", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTechsupportmanagementTechSupportBundle : GetCmdletBase
     {
         public GetIntersightTechsupportmanagementTechSupportBundle()
@@ -718,7 +718,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TechsupportmanagementTechSupportStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementTechSupportStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTechsupportmanagementTechSupportStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTechsupportmanagementTechSupportStatus : GetCmdletBase
     {
         public GetIntersightTechsupportmanagementTechSupportStatus()
@@ -981,7 +981,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TechsupportmanagementCollectionControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTechsupportmanagementCollectionControlPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightTechsupportmanagementCollectionControlPolicy", SupportsShouldProcess = true)]
     public class NewIntersightTechsupportmanagementCollectionControlPolicy : NewCmdletBase
     {
         public NewIntersightTechsupportmanagementCollectionControlPolicy()
@@ -1072,7 +1072,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New TechsupportmanagementTechSupportBundle.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightTechsupportmanagementTechSupportBundle")]
+    [Cmdlet(VerbsCommon.New, "IntersightTechsupportmanagementTechSupportBundle", SupportsShouldProcess = true)]
     public class NewIntersightTechsupportmanagementTechSupportBundle : NewCmdletBase
     {
         public NewIntersightTechsupportmanagementTechSupportBundle()
@@ -1209,7 +1209,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove TechsupportmanagementCollectionControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTechsupportmanagementCollectionControlPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightTechsupportmanagementCollectionControlPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightTechsupportmanagementCollectionControlPolicy : RemoveCmdletBase
     {
         public RemoveIntersightTechsupportmanagementCollectionControlPolicy()
@@ -1221,7 +1221,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove TechsupportmanagementTechSupportBundle.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightTechsupportmanagementTechSupportBundle")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightTechsupportmanagementTechSupportBundle", SupportsShouldProcess = true)]
     public class RemoveIntersightTechsupportmanagementTechSupportBundle : RemoveCmdletBase
     {
         public RemoveIntersightTechsupportmanagementTechSupportBundle()
@@ -1233,7 +1233,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set TechsupportmanagementCollectionControlPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightTechsupportmanagementCollectionControlPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightTechsupportmanagementCollectionControlPolicy", SupportsShouldProcess = true)]
     public class SetIntersightTechsupportmanagementCollectionControlPolicy : SetCmdletBase
     {
         public SetIntersightTechsupportmanagementCollectionControlPolicy()

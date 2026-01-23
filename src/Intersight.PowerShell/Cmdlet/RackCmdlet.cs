@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RackUnitPersonality.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRackUnitPersonality", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRackUnitPersonality", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRackUnitPersonality : GetCmdletBase
     {
         public GetIntersightRackUnitPersonality()
@@ -228,7 +228,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set RackUnitPersonality.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightRackUnitPersonality")]
+    [Cmdlet(VerbsCommon.Set, "IntersightRackUnitPersonality", SupportsShouldProcess = true)]
     public class SetIntersightRackUnitPersonality : SetCmdletBase
     {
         public SetIntersightRackUnitPersonality()

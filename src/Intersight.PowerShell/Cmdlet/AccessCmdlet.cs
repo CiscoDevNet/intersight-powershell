@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AccessIpAddress.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAccessIpAddress", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAccessIpAddress", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAccessIpAddress : GetCmdletBase
     {
         public GetIntersightAccessIpAddress()
@@ -228,7 +228,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AccessPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAccessPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAccessPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAccessPolicy : GetCmdletBase
     {
         public GetIntersightAccessPolicy()
@@ -438,7 +438,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AccessPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAccessPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAccessPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAccessPolicyInventory : GetCmdletBase
     {
         public GetIntersightAccessPolicyInventory()
@@ -658,7 +658,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New AccessPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightAccessPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightAccessPolicy", SupportsShouldProcess = true)]
     public class NewIntersightAccessPolicy : NewCmdletBase
     {
         public NewIntersightAccessPolicy()
@@ -857,7 +857,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AccessPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAccessPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAccessPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightAccessPolicy : RemoveCmdletBase
     {
         public RemoveIntersightAccessPolicy()
@@ -869,7 +869,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AccessPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAccessPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAccessPolicy", SupportsShouldProcess = true)]
     public class SetIntersightAccessPolicy : SetCmdletBase
     {
         public SetIntersightAccessPolicy()

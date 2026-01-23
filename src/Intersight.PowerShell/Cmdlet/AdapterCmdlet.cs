@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AdapterConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterConfigPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAdapterConfigPolicy : GetCmdletBase
     {
         public GetIntersightAdapterConfigPolicy()
@@ -164,7 +164,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AdapterExtEthInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterExtEthInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterExtEthInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAdapterExtEthInterface : GetCmdletBase
     {
         public GetIntersightAdapterExtEthInterface()
@@ -504,7 +504,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AdapterHostEthInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostEthInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostEthInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAdapterHostEthInterface : GetCmdletBase
     {
         public GetIntersightAdapterHostEthInterface()
@@ -998,7 +998,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AdapterHostFcInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostFcInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostFcInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAdapterHostFcInterface : GetCmdletBase
     {
         public GetIntersightAdapterHostFcInterface()
@@ -1437,7 +1437,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AdapterHostIscsiInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostIscsiInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterHostIscsiInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAdapterHostIscsiInterface : GetCmdletBase
     {
         public GetIntersightAdapterHostIscsiInterface()
@@ -1798,7 +1798,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AdapterUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterUnit", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterUnit", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAdapterUnit : GetCmdletBase
     {
         public GetIntersightAdapterUnit()
@@ -2241,7 +2241,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AdapterUnitExpander.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAdapterUnitExpander", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAdapterUnitExpander", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAdapterUnitExpander : GetCmdletBase
     {
         public GetIntersightAdapterUnitExpander()
@@ -2514,7 +2514,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New AdapterConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightAdapterConfigPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightAdapterConfigPolicy", SupportsShouldProcess = true)]
     public class NewIntersightAdapterConfigPolicy : NewCmdletBase
     {
         public NewIntersightAdapterConfigPolicy()
@@ -2647,7 +2647,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AdapterConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAdapterConfigPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAdapterConfigPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightAdapterConfigPolicy : RemoveCmdletBase
     {
         public RemoveIntersightAdapterConfigPolicy()
@@ -2659,7 +2659,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AdapterConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAdapterConfigPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAdapterConfigPolicy", SupportsShouldProcess = true)]
     public class SetIntersightAdapterConfigPolicy : SetCmdletBase
     {
         public SetIntersightAdapterConfigPolicy()
@@ -2781,7 +2781,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AdapterHostEthInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAdapterHostEthInterface")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAdapterHostEthInterface", SupportsShouldProcess = true)]
     public class SetIntersightAdapterHostEthInterface : SetCmdletBase
     {
         public SetIntersightAdapterHostEthInterface()
@@ -2973,7 +2973,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AdapterHostFcInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAdapterHostFcInterface")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAdapterHostFcInterface", SupportsShouldProcess = true)]
     public class SetIntersightAdapterHostFcInterface : SetCmdletBase
     {
         public SetIntersightAdapterHostFcInterface()

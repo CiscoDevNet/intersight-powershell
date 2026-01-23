@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServicenowChangeRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServicenowChangeRequest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServicenowChangeRequest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServicenowChangeRequest : GetCmdletBase
     {
         public GetIntersightServicenowChangeRequest()
@@ -371,7 +371,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServicenowChangeRequestDoc.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServicenowChangeRequestDoc", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServicenowChangeRequestDoc", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServicenowChangeRequestDoc : GetCmdletBase
     {
         public GetIntersightServicenowChangeRequestDoc()
@@ -545,7 +545,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServicenowIncident.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServicenowIncident", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServicenowIncident", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServicenowIncident : GetCmdletBase
     {
         public GetIntersightServicenowIncident()
@@ -906,7 +906,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServicenowIncidentDoc.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServicenowIncidentDoc", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServicenowIncidentDoc", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServicenowIncidentDoc : GetCmdletBase
     {
         public GetIntersightServicenowIncidentDoc()

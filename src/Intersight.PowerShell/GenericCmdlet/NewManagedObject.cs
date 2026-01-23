@@ -6,7 +6,7 @@ using System.Management.Automation;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsCommon.New, "IntersightManagedObject")]
+    [Cmdlet(VerbsCommon.New, "IntersightManagedObject", SupportsShouldProcess = true)]
     public class NewManagedObject : CmdletBase
     {
         public NewManagedObject()
@@ -25,6 +25,10 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            if (!ShouldProcess(CmdletBase.Config.BasePath, string.Format("Create {0}", ObjectType)))
+            {
+                return;
+            }
             //Check the objectType in MoBaseMo.ObjectTypeEnum if it belongs to that enum
             //fetch the display name.
             //this is done to work with specific Get cmdlets.

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CrdCustomResource.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCrdCustomResource", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCrdCustomResource", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCrdCustomResource : GetCmdletBase
     {
         public GetIntersightCrdCustomResource()
@@ -229,7 +229,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CrdCustomResource.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCrdCustomResource")]
+    [Cmdlet(VerbsCommon.New, "IntersightCrdCustomResource", SupportsShouldProcess = true)]
     public class NewIntersightCrdCustomResource : NewCmdletBase
     {
         public NewIntersightCrdCustomResource()
@@ -417,7 +417,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CrdCustomResource.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCrdCustomResource")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCrdCustomResource", SupportsShouldProcess = true)]
     public class RemoveIntersightCrdCustomResource : RemoveCmdletBase
     {
         public RemoveIntersightCrdCustomResource()
@@ -429,7 +429,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CrdCustomResource.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCrdCustomResource")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCrdCustomResource", SupportsShouldProcess = true)]
     public class SetIntersightCrdCustomResource : SetCmdletBase
     {
         public SetIntersightCrdCustomResource()

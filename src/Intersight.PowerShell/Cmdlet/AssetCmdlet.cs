@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetClusterMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetClusterMember", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetClusterMember", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetClusterMember : GetCmdletBase
     {
         public GetIntersightAssetClusterMember()
@@ -296,7 +296,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeployment", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeployment", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetDeployment : GetCmdletBase
     {
         public GetIntersightAssetDeployment()
@@ -497,7 +497,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetDeploymentDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeploymentDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeploymentDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetDeploymentDevice : GetCmdletBase
     {
         public GetIntersightAssetDeploymentDevice()
@@ -752,7 +752,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetDeviceConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceConfiguration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceConfiguration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetDeviceConfiguration : GetCmdletBase
     {
         public GetIntersightAssetDeviceConfiguration()
@@ -915,7 +915,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetDeviceConnectorManager.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceConnectorManager", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceConnectorManager", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetDeviceConnectorManager : GetCmdletBase
     {
         public GetIntersightAssetDeviceConnectorManager()
@@ -1045,7 +1045,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetDeviceContractInformation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceContractInformation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceContractInformation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetDeviceContractInformation : GetCmdletBase
     {
         public GetIntersightAssetDeviceContractInformation()
@@ -1444,7 +1444,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetDeviceRegistration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceRegistration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetDeviceRegistration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetDeviceRegistration : GetCmdletBase
     {
         public GetIntersightAssetDeviceRegistration()
@@ -1867,7 +1867,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetGeoLocation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetGeoLocation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetGeoLocation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetGeoLocation : GetCmdletBase
     {
         public GetIntersightAssetGeoLocation()
@@ -2010,7 +2010,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetSubscription.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetSubscription", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetSubscription", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetSubscription : GetCmdletBase
     {
         public GetIntersightAssetSubscription()
@@ -2163,7 +2163,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetSubscriptionAccount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetSubscriptionAccount", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetSubscriptionAccount", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetSubscriptionAccount : GetCmdletBase
     {
         public GetIntersightAssetSubscriptionAccount()
@@ -2293,7 +2293,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetSubscriptionDeviceContractInformation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetSubscriptionDeviceContractInformation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetSubscriptionDeviceContractInformation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetSubscriptionDeviceContractInformation : GetCmdletBase
     {
         public GetIntersightAssetSubscriptionDeviceContractInformation()
@@ -2468,7 +2468,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AssetTarget.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAssetTarget", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAssetTarget", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAssetTarget : GetCmdletBase
     {
         public GetIntersightAssetTarget()
@@ -2781,7 +2781,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New AssetDeviceClaim.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightAssetDeviceClaim")]
+    [Cmdlet(VerbsCommon.New, "IntersightAssetDeviceClaim", SupportsShouldProcess = true)]
     public class NewIntersightAssetDeviceClaim : NewCmdletBase
     {
         public NewIntersightAssetDeviceClaim()
@@ -2895,7 +2895,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New AssetDeviceContractNotification.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightAssetDeviceContractNotification")]
+    [Cmdlet(VerbsCommon.New, "IntersightAssetDeviceContractNotification", SupportsShouldProcess = true)]
     public class NewIntersightAssetDeviceContractNotification : NewCmdletBase
     {
         public NewIntersightAssetDeviceContractNotification()
@@ -3260,7 +3260,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New AssetGeoLocation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightAssetGeoLocation")]
+    [Cmdlet(VerbsCommon.New, "IntersightAssetGeoLocation", SupportsShouldProcess = true)]
     public class NewIntersightAssetGeoLocation : NewCmdletBase
     {
         public NewIntersightAssetGeoLocation()
@@ -3372,7 +3372,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New AssetTarget.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightAssetTarget")]
+    [Cmdlet(VerbsCommon.New, "IntersightAssetTarget", SupportsShouldProcess = true)]
     public class NewIntersightAssetTarget : NewCmdletBase
     {
         public NewIntersightAssetTarget()
@@ -3574,7 +3574,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetClusterMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetClusterMember")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetClusterMember", SupportsShouldProcess = true)]
     public class RemoveIntersightAssetClusterMember : RemoveCmdletBase
     {
         public RemoveIntersightAssetClusterMember()
@@ -3586,7 +3586,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeployment")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeployment", SupportsShouldProcess = true)]
     public class RemoveIntersightAssetDeployment : RemoveCmdletBase
     {
         public RemoveIntersightAssetDeployment()
@@ -3598,7 +3598,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetDeploymentDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeploymentDevice")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeploymentDevice", SupportsShouldProcess = true)]
     public class RemoveIntersightAssetDeploymentDevice : RemoveCmdletBase
     {
         public RemoveIntersightAssetDeploymentDevice()
@@ -3610,7 +3610,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceClaim.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceClaim")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceClaim", SupportsShouldProcess = true)]
     public class RemoveIntersightAssetDeviceClaim : RemoveCmdletBase
     {
         public RemoveIntersightAssetDeviceClaim()
@@ -3622,7 +3622,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceContractInformation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceContractInformation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceContractInformation", SupportsShouldProcess = true)]
     public class RemoveIntersightAssetDeviceContractInformation : RemoveCmdletBase
     {
         public RemoveIntersightAssetDeviceContractInformation()
@@ -3634,7 +3634,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceRegistration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceRegistration")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceRegistration", SupportsShouldProcess = true)]
     public class RemoveIntersightAssetDeviceRegistration : RemoveCmdletBase
     {
         public RemoveIntersightAssetDeviceRegistration()
@@ -3646,7 +3646,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetGeoLocation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetGeoLocation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetGeoLocation", SupportsShouldProcess = true)]
     public class RemoveIntersightAssetGeoLocation : RemoveCmdletBase
     {
         public RemoveIntersightAssetGeoLocation()
@@ -3658,7 +3658,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetSubscription.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetSubscription")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetSubscription", SupportsShouldProcess = true)]
     public class RemoveIntersightAssetSubscription : RemoveCmdletBase
     {
         public RemoveIntersightAssetSubscription()
@@ -3670,7 +3670,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetSubscriptionAccount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetSubscriptionAccount")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetSubscriptionAccount", SupportsShouldProcess = true)]
     public class RemoveIntersightAssetSubscriptionAccount : RemoveCmdletBase
     {
         public RemoveIntersightAssetSubscriptionAccount()
@@ -3682,7 +3682,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetTarget.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetTarget")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAssetTarget", SupportsShouldProcess = true)]
     public class RemoveIntersightAssetTarget : RemoveCmdletBase
     {
         public RemoveIntersightAssetTarget()
@@ -3694,7 +3694,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AssetDeviceConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAssetDeviceConfiguration")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAssetDeviceConfiguration", SupportsShouldProcess = true)]
     public class SetIntersightAssetDeviceConfiguration : SetCmdletBase
     {
         public SetIntersightAssetDeviceConfiguration()
@@ -3785,7 +3785,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AssetDeviceContractInformation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAssetDeviceContractInformation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAssetDeviceContractInformation", SupportsShouldProcess = true)]
     public class SetIntersightAssetDeviceContractInformation : SetCmdletBase
     {
         public SetIntersightAssetDeviceContractInformation()
@@ -3892,7 +3892,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AssetDeviceRegistration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAssetDeviceRegistration")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAssetDeviceRegistration", SupportsShouldProcess = true)]
     public class SetIntersightAssetDeviceRegistration : SetCmdletBase
     {
         public SetIntersightAssetDeviceRegistration()
@@ -4043,7 +4043,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AssetGeoLocation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAssetGeoLocation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAssetGeoLocation", SupportsShouldProcess = true)]
     public class SetIntersightAssetGeoLocation : SetCmdletBase
     {
         public SetIntersightAssetGeoLocation()
@@ -4144,7 +4144,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AssetTarget.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAssetTarget")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAssetTarget", SupportsShouldProcess = true)]
     public class SetIntersightAssetTarget : SetCmdletBase
     {
         public SetIntersightAssetTarget()

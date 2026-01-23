@@ -6,7 +6,7 @@ using Intersight.Model;
 
 namespace Intersight.PowerShell.GenericCmdlet
 {
-    [Cmdlet(VerbsData.Initialize, "IntersightPatchDocument")]
+    [Cmdlet(VerbsData.Initialize, "IntersightPatchDocument", SupportsShouldProcess = true)]
     public class InitializePatchDocument : PSCmdlet
     {
         public InitializePatchDocument()
@@ -41,6 +41,12 @@ namespace Intersight.PowerShell.GenericCmdlet
 
         protected override void ProcessRecord()
         {
+            // ExecuteRequestAsync(string.Format("/api/v1/{0}",ObjectType));
+            if (!ShouldProcess(Path, string.Format("{0}", Op)))
+            {
+                return;
+            }
+
             var patchDoc = new PatchDocument(Op, Path, Value);
             patchDoc.Op = this.Op;
             patchDoc.Path = this.Path;

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AuditdPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAuditdPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAuditdPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAuditdPolicy : GetCmdletBase
     {
         public GetIntersightAuditdPolicy()
@@ -185,7 +185,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New AuditdPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightAuditdPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightAuditdPolicy", SupportsShouldProcess = true)]
     public class NewIntersightAuditdPolicy : NewCmdletBase
     {
         public NewIntersightAuditdPolicy()
@@ -329,7 +329,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AuditdPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAuditdPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightAuditdPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightAuditdPolicy : RemoveCmdletBase
     {
         public RemoveIntersightAuditdPolicy()
@@ -341,7 +341,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AuditdPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAuditdPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAuditdPolicy", SupportsShouldProcess = true)]
     public class SetIntersightAuditdPolicy : SetCmdletBase
     {
         public SetIntersightAuditdPolicy()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CatalystsdwanConfigGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCatalystsdwanConfigGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCatalystsdwanConfigGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCatalystsdwanConfigGroup : GetCmdletBase
     {
         public GetIntersightCatalystsdwanConfigGroup()
@@ -185,7 +185,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CatalystsdwanPolicyGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCatalystsdwanPolicyGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCatalystsdwanPolicyGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCatalystsdwanPolicyGroup : GetCmdletBase
     {
         public GetIntersightCatalystsdwanPolicyGroup()
@@ -382,7 +382,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CatalystsdwanVedgeDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCatalystsdwanVedgeDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCatalystsdwanVedgeDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCatalystsdwanVedgeDevice : GetCmdletBase
     {
         public GetIntersightCatalystsdwanVedgeDevice()

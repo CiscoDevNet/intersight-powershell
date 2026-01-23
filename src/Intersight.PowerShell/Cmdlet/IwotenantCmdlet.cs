@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IwotenantMaintenanceNotification.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIwotenantMaintenanceNotification", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIwotenantMaintenanceNotification", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIwotenantMaintenanceNotification : GetCmdletBase
     {
         public GetIntersightIwotenantMaintenanceNotification()
@@ -206,7 +206,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IwotenantMigrate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIwotenantMigrate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIwotenantMigrate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIwotenantMigrate : GetCmdletBase
     {
         public GetIntersightIwotenantMigrate()
@@ -369,7 +369,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IwotenantTenantCustomization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIwotenantTenantCustomization", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIwotenantTenantCustomization", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIwotenantTenantCustomization : GetCmdletBase
     {
         public GetIntersightIwotenantTenantCustomization()
@@ -576,7 +576,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IwotenantTenantStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIwotenantTenantStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIwotenantTenantStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIwotenantTenantStatus : GetCmdletBase
     {
         public GetIntersightIwotenantTenantStatus()
@@ -739,7 +739,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IwotenantMaintenanceNotification.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIwotenantMaintenanceNotification")]
+    [Cmdlet(VerbsCommon.New, "IntersightIwotenantMaintenanceNotification", SupportsShouldProcess = true)]
     public class NewIntersightIwotenantMaintenanceNotification : NewCmdletBase
     {
         public NewIntersightIwotenantMaintenanceNotification()
@@ -894,7 +894,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IwotenantMigrate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIwotenantMigrate")]
+    [Cmdlet(VerbsCommon.New, "IntersightIwotenantMigrate", SupportsShouldProcess = true)]
     public class NewIntersightIwotenantMigrate : NewCmdletBase
     {
         public NewIntersightIwotenantMigrate()
@@ -1006,7 +1006,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IwotenantTenantCustomization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIwotenantTenantCustomization")]
+    [Cmdlet(VerbsCommon.New, "IntersightIwotenantTenantCustomization", SupportsShouldProcess = true)]
     public class NewIntersightIwotenantTenantCustomization : NewCmdletBase
     {
         public NewIntersightIwotenantTenantCustomization()
@@ -1152,7 +1152,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IwotenantMaintenanceNotification.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIwotenantMaintenanceNotification")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIwotenantMaintenanceNotification", SupportsShouldProcess = true)]
     public class RemoveIntersightIwotenantMaintenanceNotification : RemoveCmdletBase
     {
         public RemoveIntersightIwotenantMaintenanceNotification()
@@ -1164,7 +1164,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IwotenantMigrate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIwotenantMigrate")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIwotenantMigrate", SupportsShouldProcess = true)]
     public class RemoveIntersightIwotenantMigrate : RemoveCmdletBase
     {
         public RemoveIntersightIwotenantMigrate()
@@ -1176,7 +1176,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IwotenantTenantCustomization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIwotenantTenantCustomization")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIwotenantTenantCustomization", SupportsShouldProcess = true)]
     public class RemoveIntersightIwotenantTenantCustomization : RemoveCmdletBase
     {
         public RemoveIntersightIwotenantTenantCustomization()
@@ -1188,7 +1188,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IwotenantMigrate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIwotenantMigrate")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIwotenantMigrate", SupportsShouldProcess = true)]
     public class SetIntersightIwotenantMigrate : SetCmdletBase
     {
         public SetIntersightIwotenantMigrate()
@@ -1289,7 +1289,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IwotenantTenantCustomization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIwotenantTenantCustomization")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIwotenantTenantCustomization", SupportsShouldProcess = true)]
     public class SetIntersightIwotenantTenantCustomization : SetCmdletBase
     {
         public SetIntersightIwotenantTenantCustomization()

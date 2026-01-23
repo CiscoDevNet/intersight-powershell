@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasConnectorPack.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasConnectorPack", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasConnectorPack", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasConnectorPack : GetCmdletBase
     {
         public GetIntersightIaasConnectorPack()
@@ -196,7 +196,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasCustomTaskInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasCustomTaskInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasCustomTaskInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasCustomTaskInfo : GetCmdletBase
     {
         public GetIntersightIaasCustomTaskInfo()
@@ -370,7 +370,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasDeviceStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasDeviceStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasDeviceStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasDeviceStatus : GetCmdletBase
     {
         public GetIntersightIaasDeviceStatus()
@@ -621,7 +621,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasDiagnosticMessages.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasDiagnosticMessages", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasDiagnosticMessages", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasDiagnosticMessages : GetCmdletBase
     {
         public GetIntersightIaasDiagnosticMessages()
@@ -839,7 +839,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasLicenseInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasLicenseInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasLicenseInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasLicenseInfo : GetCmdletBase
     {
         public GetIntersightIaasLicenseInfo()
@@ -993,7 +993,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasMostRunTasks.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasMostRunTasks", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasMostRunTasks", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasMostRunTasks : GetCmdletBase
     {
         public GetIntersightIaasMostRunTasks()
@@ -1167,7 +1167,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasServiceRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasServiceRequest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasServiceRequest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasServiceRequest : GetCmdletBase
     {
         public GetIntersightIaasServiceRequest()
@@ -1386,7 +1386,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasSystemTaskInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasSystemTaskInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasSystemTaskInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasSystemTaskInfo : GetCmdletBase
     {
         public GetIntersightIaasSystemTaskInfo()
@@ -1549,7 +1549,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasUcsdInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasUcsdInfo : GetCmdletBase
     {
         public GetIntersightIaasUcsdInfo()
@@ -1816,7 +1816,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasUcsdManagedInfra.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdManagedInfra", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdManagedInfra", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasUcsdManagedInfra : GetCmdletBase
     {
         public GetIntersightIaasUcsdManagedInfra()
@@ -2067,7 +2067,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IaasUcsdMessages.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdMessages", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIaasUcsdMessages", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIaasUcsdMessages : GetCmdletBase
     {
         public GetIntersightIaasUcsdMessages()
@@ -2208,7 +2208,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IaasUcsdInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIaasUcsdInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIaasUcsdInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightIaasUcsdInfo : RemoveCmdletBase
     {
         public RemoveIntersightIaasUcsdInfo()
@@ -2220,7 +2220,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IaasUcsdInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIaasUcsdInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIaasUcsdInfo", SupportsShouldProcess = true)]
     public class SetIntersightIaasUcsdInfo : SetCmdletBase
     {
         public SetIntersightIaasUcsdInfo()

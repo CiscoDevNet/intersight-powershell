@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IqnpoolBlock.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolBlock", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolBlock", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIqnpoolBlock : GetCmdletBase
     {
         public GetIntersightIqnpoolBlock()
@@ -186,7 +186,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IqnpoolLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolLease", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolLease", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIqnpoolLease : GetCmdletBase
     {
         public GetIntersightIqnpoolLease()
@@ -427,7 +427,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IqnpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolPool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolPool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIqnpoolPool : GetCmdletBase
     {
         public GetIntersightIqnpoolPool()
@@ -637,7 +637,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IqnpoolPoolMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolPoolMember", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolPoolMember", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIqnpoolPoolMember : GetCmdletBase
     {
         public GetIntersightIqnpoolPoolMember()
@@ -888,7 +888,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IqnpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolReservation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolReservation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIqnpoolReservation : GetCmdletBase
     {
         public GetIntersightIqnpoolReservation()
@@ -1117,7 +1117,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IqnpoolUniverse.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolUniverse", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIqnpoolUniverse", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIqnpoolUniverse : GetCmdletBase
     {
         public GetIntersightIqnpoolUniverse()
@@ -1247,7 +1247,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IqnpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIqnpoolPool")]
+    [Cmdlet(VerbsCommon.New, "IntersightIqnpoolPool", SupportsShouldProcess = true)]
     public class NewIntersightIqnpoolPool : NewCmdletBase
     {
         public NewIntersightIqnpoolPool()
@@ -1406,7 +1406,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IqnpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIqnpoolReservation")]
+    [Cmdlet(VerbsCommon.New, "IntersightIqnpoolReservation", SupportsShouldProcess = true)]
     public class NewIntersightIqnpoolReservation : NewCmdletBase
     {
         public NewIntersightIqnpoolReservation()
@@ -1534,7 +1534,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IqnpoolLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIqnpoolLease")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIqnpoolLease", SupportsShouldProcess = true)]
     public class RemoveIntersightIqnpoolLease : RemoveCmdletBase
     {
         public RemoveIntersightIqnpoolLease()
@@ -1546,7 +1546,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IqnpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIqnpoolPool")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIqnpoolPool", SupportsShouldProcess = true)]
     public class RemoveIntersightIqnpoolPool : RemoveCmdletBase
     {
         public RemoveIntersightIqnpoolPool()
@@ -1558,7 +1558,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IqnpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIqnpoolReservation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIqnpoolReservation", SupportsShouldProcess = true)]
     public class RemoveIntersightIqnpoolReservation : RemoveCmdletBase
     {
         public RemoveIntersightIqnpoolReservation()
@@ -1570,7 +1570,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IqnpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIqnpoolPool")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIqnpoolPool", SupportsShouldProcess = true)]
     public class SetIntersightIqnpoolPool : SetCmdletBase
     {
         public SetIntersightIqnpoolPool()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerConfigChangeDetail.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigChangeDetail", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigChangeDetail", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServerConfigChangeDetail : GetCmdletBase
     {
         public GetIntersightServerConfigChangeDetail()
@@ -176,7 +176,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerConfigImport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigImport", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigImport", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServerConfigImport : GetCmdletBase
     {
         public GetIntersightServerConfigImport()
@@ -362,7 +362,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServerConfigResult : GetCmdletBase
     {
         public GetIntersightServerConfigResult()
@@ -527,7 +527,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerConfigResultEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigResultEntry", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServerConfigResultEntry", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServerConfigResultEntry : GetCmdletBase
     {
         public GetIntersightServerConfigResultEntry()
@@ -713,7 +713,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerDiagnosticStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerDiagnosticStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServerDiagnosticStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServerDiagnosticStatus : GetCmdletBase
     {
         public GetIntersightServerDiagnosticStatus()
@@ -732,6 +732,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -774,6 +775,72 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Any error encountered. Set to empty when download is in progress or completed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DownloadError
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The message from the endpoint during the download."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DownloadMessage
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The percentage of the image downloaded in the endpoint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DownloadPercentage
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DownloadProgress
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of retries the plugin attempted before succeeding or failing the download."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DownloadRetries
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The image download stages. Example:downloading, flashing."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DownloadStage
         {
             get;
             set;
@@ -849,11 +916,33 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"The error message from the endpoint during the SD card download."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SdCardDownloadError
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public ComputePhysicalRelationship Server
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The sha256checksum of the downloaded file as calculated by the download plugin after successfully downloading a file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public byte Sha256checksum
         {
             get;
             set;
@@ -910,7 +999,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerDiagnostics.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerDiagnostics", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServerDiagnostics", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServerDiagnostics : GetCmdletBase
     {
         public GetIntersightServerDiagnostics()
@@ -1085,7 +1174,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerDisruption.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerDisruption", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServerDisruption", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServerDisruption : GetCmdletBase
     {
         public GetIntersightServerDisruption()
@@ -1259,7 +1348,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServerProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServerProfile : GetCmdletBase
     {
         public GetIntersightServerProfile()
@@ -1707,7 +1796,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerProfilePendingChangeEval.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerProfilePendingChangeEval", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServerProfilePendingChangeEval", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServerProfilePendingChangeEval : GetCmdletBase
     {
         public GetIntersightServerProfilePendingChangeEval()
@@ -1848,7 +1937,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ServerProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightServerProfileTemplate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightServerProfileTemplate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightServerProfileTemplate : GetCmdletBase
     {
         public GetIntersightServerProfileTemplate()
@@ -2142,7 +2231,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ServerConfigImport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightServerConfigImport")]
+    [Cmdlet(VerbsCommon.New, "IntersightServerConfigImport", SupportsShouldProcess = true)]
     public class NewIntersightServerConfigImport : NewCmdletBase
     {
         public NewIntersightServerConfigImport()
@@ -2287,7 +2376,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ServerDiagnosticStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightServerDiagnosticStatus")]
+    [Cmdlet(VerbsCommon.New, "IntersightServerDiagnosticStatus", SupportsShouldProcess = true)]
     public class NewIntersightServerDiagnosticStatus : NewCmdletBase
     {
         public NewIntersightServerDiagnosticStatus()
@@ -2310,6 +2399,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"The checksum of the downloaded file as calculated by the download plugin after successfully downloading a file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ConnectorFileChecksum Checksum
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -2318,6 +2418,42 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ServerDiagnosticStatus.DiagnosticsTypeEnum DiagnosticsType
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Any error encountered. Set to empty when download is in progress or completed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DownloadError
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DownloadProgress
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of retries the plugin attempted before succeeding or failing the download."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DownloadRetries
         {
             get;
             set;
@@ -2343,12 +2479,24 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ComputePhysicalRelationship Server
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The sha256checksum of the downloaded file as calculated by the download plugin after successfully downloading a file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public byte Sha256checksum
         {
             get;
             set;
@@ -2393,7 +2541,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ServerDiagnostics.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightServerDiagnostics")]
+    [Cmdlet(VerbsCommon.New, "IntersightServerDiagnostics", SupportsShouldProcess = true)]
     public class NewIntersightServerDiagnostics : NewCmdletBase
     {
         public NewIntersightServerDiagnostics()
@@ -2527,7 +2675,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ServerProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightServerProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightServerProfile", SupportsShouldProcess = true)]
     public class NewIntersightServerProfile : NewCmdletBase
     {
         public NewIntersightServerProfile()
@@ -2904,7 +3052,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ServerProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightServerProfileTemplate")]
+    [Cmdlet(VerbsCommon.New, "IntersightServerProfileTemplate", SupportsShouldProcess = true)]
     public class NewIntersightServerProfileTemplate : NewCmdletBase
     {
         public NewIntersightServerProfileTemplate()
@@ -3157,7 +3305,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ServerDiagnosticStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightServerDiagnosticStatus")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightServerDiagnosticStatus", SupportsShouldProcess = true)]
     public class RemoveIntersightServerDiagnosticStatus : RemoveCmdletBase
     {
         public RemoveIntersightServerDiagnosticStatus()
@@ -3169,7 +3317,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ServerDiagnostics.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightServerDiagnostics")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightServerDiagnostics", SupportsShouldProcess = true)]
     public class RemoveIntersightServerDiagnostics : RemoveCmdletBase
     {
         public RemoveIntersightServerDiagnostics()
@@ -3181,7 +3329,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ServerProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightServerProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightServerProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightServerProfile : RemoveCmdletBase
     {
         public RemoveIntersightServerProfile()
@@ -3193,7 +3341,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ServerProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightServerProfileTemplate")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightServerProfileTemplate", SupportsShouldProcess = true)]
     public class RemoveIntersightServerProfileTemplate : RemoveCmdletBase
     {
         public RemoveIntersightServerProfileTemplate()
@@ -3205,7 +3353,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ServerDiagnosticStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightServerDiagnosticStatus")]
+    [Cmdlet(VerbsCommon.Set, "IntersightServerDiagnosticStatus", SupportsShouldProcess = true)]
     public class SetIntersightServerDiagnosticStatus : SetCmdletBase
     {
         public SetIntersightServerDiagnosticStatus()
@@ -3228,6 +3376,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"The checksum of the downloaded file as calculated by the download plugin after successfully downloading a file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ConnectorFileChecksum Checksum
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -3236,6 +3395,42 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ServerDiagnosticStatus.DiagnosticsTypeEnum DiagnosticsType
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Any error encountered. Set to empty when download is in progress or completed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DownloadError
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DownloadProgress
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of retries the plugin attempted before succeeding or failing the download."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DownloadRetries
         {
             get;
             set;
@@ -3261,12 +3456,24 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ComputePhysicalRelationship Server
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The sha256checksum of the downloaded file as calculated by the download plugin after successfully downloading a file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public byte Sha256checksum
         {
             get;
             set;
@@ -3300,7 +3507,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ServerDiagnostics.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightServerDiagnostics")]
+    [Cmdlet(VerbsCommon.Set, "IntersightServerDiagnostics", SupportsShouldProcess = true)]
     public class SetIntersightServerDiagnostics : SetCmdletBase
     {
         public SetIntersightServerDiagnostics()
@@ -3423,7 +3630,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ServerProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightServerProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightServerProfile", SupportsShouldProcess = true)]
     public class SetIntersightServerProfile : SetCmdletBase
     {
         public SetIntersightServerProfile()
@@ -3789,7 +3996,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ServerProfileTemplate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightServerProfileTemplate")]
+    [Cmdlet(VerbsCommon.Set, "IntersightServerProfileTemplate", SupportsShouldProcess = true)]
     public class SetIntersightServerProfileTemplate : SetCmdletBase
     {
         public SetIntersightServerProfileTemplate()

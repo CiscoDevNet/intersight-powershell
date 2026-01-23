@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MetaDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMetaDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMetaDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMetaDefinition : GetCmdletBase
     {
         public GetIntersightMetaDefinition()
@@ -246,7 +246,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove MetaDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightMetaDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightMetaDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightMetaDefinition : RemoveCmdletBase
     {
         public RemoveIntersightMetaDefinition()

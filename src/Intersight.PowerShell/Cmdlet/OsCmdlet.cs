@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OsBulkInstallInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOsBulkInstallInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOsBulkInstallInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOsBulkInstallInfo : GetCmdletBase
     {
         public GetIntersightOsBulkInstallInfo()
@@ -221,7 +221,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OsCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOsCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOsCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOsCatalog : GetCmdletBase
     {
         public GetIntersightOsCatalog()
@@ -364,7 +364,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OsConfigurationFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOsConfigurationFile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOsConfigurationFile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOsConfigurationFile : GetCmdletBase
     {
         public GetIntersightOsConfigurationFile()
@@ -551,7 +551,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OsDistribution.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOsDistribution", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOsDistribution", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOsDistribution : GetCmdletBase
     {
         public GetIntersightOsDistribution()
@@ -748,7 +748,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OsInstall.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOsInstall", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOsInstall", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOsInstall : GetCmdletBase
     {
         public GetIntersightOsInstall()
@@ -1003,7 +1003,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OsSupportedVersion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOsSupportedVersion", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOsSupportedVersion", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOsSupportedVersion : GetCmdletBase
     {
         public GetIntersightOsSupportedVersion()
@@ -1166,7 +1166,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OsValidRemoteTarget.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOsValidRemoteTarget", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOsValidRemoteTarget", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOsValidRemoteTarget : GetCmdletBase
     {
         public GetIntersightOsValidRemoteTarget()
@@ -1309,7 +1309,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OsBulkInstallInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOsBulkInstallInfo")]
+    [Cmdlet(VerbsCommon.New, "IntersightOsBulkInstallInfo", SupportsShouldProcess = true)]
     public class NewIntersightOsBulkInstallInfo : NewCmdletBase
     {
         public NewIntersightOsBulkInstallInfo()
@@ -1479,7 +1479,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OsConfigurationFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOsConfigurationFile")]
+    [Cmdlet(VerbsCommon.New, "IntersightOsConfigurationFile", SupportsShouldProcess = true)]
     public class NewIntersightOsConfigurationFile : NewCmdletBase
     {
         public NewIntersightOsConfigurationFile()
@@ -1625,7 +1625,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OsInstall.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOsInstall")]
+    [Cmdlet(VerbsCommon.New, "IntersightOsInstall", SupportsShouldProcess = true)]
     public class NewIntersightOsInstall : NewCmdletBase
     {
         public NewIntersightOsInstall()
@@ -1859,7 +1859,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OsOsSupport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOsOsSupport")]
+    [Cmdlet(VerbsCommon.New, "IntersightOsOsSupport", SupportsShouldProcess = true)]
     public class NewIntersightOsOsSupport : NewCmdletBase
     {
         public NewIntersightOsOsSupport()
@@ -1948,7 +1948,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OsTemplateFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOsTemplateFile")]
+    [Cmdlet(VerbsCommon.New, "IntersightOsTemplateFile", SupportsShouldProcess = true)]
     public class NewIntersightOsTemplateFile : NewCmdletBase
     {
         public NewIntersightOsTemplateFile()
@@ -2049,7 +2049,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OsValidInstallTarget.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOsValidInstallTarget")]
+    [Cmdlet(VerbsCommon.New, "IntersightOsValidInstallTarget", SupportsShouldProcess = true)]
     public class NewIntersightOsValidInstallTarget : NewCmdletBase
     {
         public NewIntersightOsValidInstallTarget()
@@ -2161,7 +2161,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove OsConfigurationFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOsConfigurationFile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightOsConfigurationFile", SupportsShouldProcess = true)]
     public class RemoveIntersightOsConfigurationFile : RemoveCmdletBase
     {
         public RemoveIntersightOsConfigurationFile()
@@ -2173,7 +2173,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set OsConfigurationFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightOsConfigurationFile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightOsConfigurationFile", SupportsShouldProcess = true)]
     public class SetIntersightOsConfigurationFile : SetCmdletBase
     {
         public SetIntersightOsConfigurationFile()

@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsLifecycle.Invoke, "IntersightPatchDocument")]
+    [Cmdlet(VerbsLifecycle.Invoke, "IntersightPatchDocument", SupportsShouldProcess = true)]
     public class InvokePatchDocument : CmdletBase
     {
         public InvokePatchDocument()
@@ -47,6 +47,13 @@ namespace Intersight.PowerShell
             //fetch the display name.
             //this is done to work with specific Get cmdlets.
             // Get-IntersightNtpPoicy -Name xxxx | Set-IntersightManagedObject
+
+            // ExecuteRequestAsync(string.Format("/api/v1/{0}",ObjectType));
+            if (!ShouldProcess(CmdletBase.Config.BasePath, string.Format("json-patch+json {0}", ObjectType)))
+            {
+                return;
+            }
+
             var result = PSUtils.GetObjectTypeDisplayName(ObjectType);
             if (!string.IsNullOrEmpty(result))
             {

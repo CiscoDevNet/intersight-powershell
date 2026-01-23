@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SolPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSolPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSolPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSolPolicy : GetCmdletBase
     {
         public GetIntersightSolPolicy()
@@ -207,7 +207,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SolPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSolPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSolPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSolPolicyInventory : GetCmdletBase
     {
         public GetIntersightSolPolicyInventory()
@@ -414,7 +414,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SolPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSolPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightSolPolicy", SupportsShouldProcess = true)]
     public class NewIntersightSolPolicy : NewCmdletBase
     {
         public NewIntersightSolPolicy()
@@ -580,7 +580,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SolPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSolPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSolPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightSolPolicy : RemoveCmdletBase
     {
         public RemoveIntersightSolPolicy()
@@ -592,7 +592,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SolPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSolPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSolPolicy", SupportsShouldProcess = true)]
     public class SetIntersightSolPolicy : SetCmdletBase
     {
         public SetIntersightSolPolicy()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KvmPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKvmPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKvmPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKvmPolicy : GetCmdletBase
     {
         public GetIntersightKvmPolicy()
@@ -229,7 +229,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KvmPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKvmPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKvmPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKvmPolicyInventory : GetCmdletBase
     {
         public GetIntersightKvmPolicyInventory()
@@ -458,7 +458,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KvmSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKvmSession", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKvmSession", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKvmSession : GetCmdletBase
     {
         public GetIntersightKvmSession()
@@ -764,7 +764,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KvmTunnel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKvmTunnel", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKvmTunnel", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKvmTunnel : GetCmdletBase
     {
         public GetIntersightKvmTunnel()
@@ -1026,7 +1026,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get KvmTunneledKvmPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightKvmTunneledKvmPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightKvmTunneledKvmPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightKvmTunneledKvmPolicy : GetCmdletBase
     {
         public GetIntersightKvmTunneledKvmPolicy()
@@ -1178,7 +1178,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KvmPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKvmPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightKvmPolicy", SupportsShouldProcess = true)]
     public class NewIntersightKvmPolicy : NewCmdletBase
     {
         public NewIntersightKvmPolicy()
@@ -1366,7 +1366,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KvmSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKvmSession")]
+    [Cmdlet(VerbsCommon.New, "IntersightKvmSession", SupportsShouldProcess = true)]
     public class NewIntersightKvmSession : NewCmdletBase
     {
         public NewIntersightKvmSession()
@@ -1531,7 +1531,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KvmTunnel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKvmTunnel")]
+    [Cmdlet(VerbsCommon.New, "IntersightKvmTunnel", SupportsShouldProcess = true)]
     public class NewIntersightKvmTunnel : NewCmdletBase
     {
         public NewIntersightKvmTunnel()
@@ -1652,7 +1652,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New KvmTunneledKvmPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightKvmTunneledKvmPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightKvmTunneledKvmPolicy", SupportsShouldProcess = true)]
     public class NewIntersightKvmTunneledKvmPolicy : NewCmdletBase
     {
         public NewIntersightKvmTunneledKvmPolicy()
@@ -1753,7 +1753,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KvmPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKvmPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKvmPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightKvmPolicy : RemoveCmdletBase
     {
         public RemoveIntersightKvmPolicy()
@@ -1765,7 +1765,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove KvmTunneledKvmPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightKvmTunneledKvmPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightKvmTunneledKvmPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightKvmTunneledKvmPolicy : RemoveCmdletBase
     {
         public RemoveIntersightKvmTunneledKvmPolicy()
@@ -1777,7 +1777,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KvmPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKvmPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKvmPolicy", SupportsShouldProcess = true)]
     public class SetIntersightKvmPolicy : SetCmdletBase
     {
         public SetIntersightKvmPolicy()
@@ -1954,7 +1954,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KvmSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKvmSession")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKvmSession", SupportsShouldProcess = true)]
     public class SetIntersightKvmSession : SetCmdletBase
     {
         public SetIntersightKvmSession()
@@ -2108,7 +2108,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set KvmTunneledKvmPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightKvmTunneledKvmPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightKvmTunneledKvmPolicy", SupportsShouldProcess = true)]
     public class SetIntersightKvmTunneledKvmPolicy : SetCmdletBase
     {
         public SetIntersightKvmTunneledKvmPolicy()

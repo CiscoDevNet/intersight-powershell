@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightWorkspaceFolder
+# Initialize-IntersightStoragePureRealm
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkspaceFolder [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Archived< bool>][-Assets< System.Collections.Generic.List`1[Model.MoBaseMoRelationship]>][-ClassId< WorkspaceFolder.ClassIdEnum>][-Moid< string>][-Name< string>][-ObjectType< WorkspaceFolder.ObjectTypeEnum>][-ParentFolder< Model.WorkspaceFolderRelationship>][-SubFolders< System.Collections.Generic.List`1[Model.WorkspaceFolderRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightStoragePureRealm [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< StoragePureRealm.ClassIdEnum>][-Moid< string>][-ObjectType< StoragePureRealm.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,44 +39,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Archived
-It is to define if folder is archived or not.
-
-```yaml
-Type: bool
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Assets
-An array of relationships to moBaseMo resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.MoBaseMoRelationship]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ClassId
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: WorkspaceFolder.ClassIdEnum
+Type: StoragePureRealm.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -102,62 +69,11 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Name
-The name for this folder. You can have multiple versions of the folder with the same name. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.) or an underscore (_).
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: WorkspaceFolder.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ParentFolder
-A reference to a workspaceFolder resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.WorkspaceFolderRelationship
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -SubFolders
-An array of relationships to workspaceFolder resources.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.WorkspaceFolderRelationship]
+Type: StoragePureRealm.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -223,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightWorkspaceFolder
+PS C:\> Initialize-IntersightStoragePureRealm
 ```
 
 { Add example description here }

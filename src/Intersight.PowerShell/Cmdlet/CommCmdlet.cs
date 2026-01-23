@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CommHttpProxyPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCommHttpProxyPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCommHttpProxyPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCommHttpProxyPolicy : GetCmdletBase
     {
         public GetIntersightCommHttpProxyPolicy()
@@ -218,7 +218,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CommTagDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCommTagDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCommTagDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCommTagDefinition : GetCmdletBase
     {
         public GetIntersightCommTagDefinition()
@@ -416,7 +416,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CommHttpProxyPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCommHttpProxyPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightCommHttpProxyPolicy", SupportsShouldProcess = true)]
     public class NewIntersightCommHttpProxyPolicy : NewCmdletBase
     {
         public NewIntersightCommHttpProxyPolicy()
@@ -583,7 +583,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CommTagDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCommTagDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightCommTagDefinition", SupportsShouldProcess = true)]
     public class NewIntersightCommTagDefinition : NewCmdletBase
     {
         public NewIntersightCommTagDefinition()
@@ -720,7 +720,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CommHttpProxyPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCommHttpProxyPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCommHttpProxyPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightCommHttpProxyPolicy : RemoveCmdletBase
     {
         public RemoveIntersightCommHttpProxyPolicy()
@@ -732,7 +732,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CommTagDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCommTagDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCommTagDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightCommTagDefinition : RemoveCmdletBase
     {
         public RemoveIntersightCommTagDefinition()
@@ -744,7 +744,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CommHttpProxyPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCommHttpProxyPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCommHttpProxyPolicy", SupportsShouldProcess = true)]
     public class SetIntersightCommHttpProxyPolicy : SetCmdletBase
     {
         public SetIntersightCommHttpProxyPolicy()
@@ -900,7 +900,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CommTagDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCommTagDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCommTagDefinition", SupportsShouldProcess = true)]
     public class SetIntersightCommTagDefinition : SetCmdletBase
     {
         public SetIntersightCommTagDefinition()

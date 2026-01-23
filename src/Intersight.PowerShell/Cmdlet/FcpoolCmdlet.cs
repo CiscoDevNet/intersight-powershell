@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcpoolFcBlock.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolFcBlock", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolFcBlock", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFcpoolFcBlock : GetCmdletBase
     {
         public GetIntersightFcpoolFcBlock()
@@ -175,7 +175,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcpoolLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolLease", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolLease", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFcpoolLease : GetCmdletBase
     {
         public GetIntersightFcpoolLease()
@@ -405,7 +405,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolPool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolPool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFcpoolPool : GetCmdletBase
     {
         public GetIntersightFcpoolPool()
@@ -615,7 +615,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcpoolPoolMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolPoolMember", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolPoolMember", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFcpoolPoolMember : GetCmdletBase
     {
         public GetIntersightFcpoolPoolMember()
@@ -833,7 +833,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolReservation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolReservation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFcpoolReservation : GetCmdletBase
     {
         public GetIntersightFcpoolReservation()
@@ -1040,7 +1040,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcpoolUniverse.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolUniverse", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFcpoolUniverse", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFcpoolUniverse : GetCmdletBase
     {
         public GetIntersightFcpoolUniverse()
@@ -1170,7 +1170,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FcpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFcpoolPool")]
+    [Cmdlet(VerbsCommon.New, "IntersightFcpoolPool", SupportsShouldProcess = true)]
     public class NewIntersightFcpoolPool : NewCmdletBase
     {
         public NewIntersightFcpoolPool()
@@ -1329,7 +1329,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FcpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFcpoolReservation")]
+    [Cmdlet(VerbsCommon.New, "IntersightFcpoolReservation", SupportsShouldProcess = true)]
     public class NewIntersightFcpoolReservation : NewCmdletBase
     {
         public NewIntersightFcpoolReservation()
@@ -1465,7 +1465,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FcpoolLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFcpoolLease")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFcpoolLease", SupportsShouldProcess = true)]
     public class RemoveIntersightFcpoolLease : RemoveCmdletBase
     {
         public RemoveIntersightFcpoolLease()
@@ -1477,7 +1477,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FcpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFcpoolPool")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFcpoolPool", SupportsShouldProcess = true)]
     public class RemoveIntersightFcpoolPool : RemoveCmdletBase
     {
         public RemoveIntersightFcpoolPool()
@@ -1489,7 +1489,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FcpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFcpoolReservation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFcpoolReservation", SupportsShouldProcess = true)]
     public class RemoveIntersightFcpoolReservation : RemoveCmdletBase
     {
         public RemoveIntersightFcpoolReservation()
@@ -1501,7 +1501,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FcpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFcpoolPool")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFcpoolPool", SupportsShouldProcess = true)]
     public class SetIntersightFcpoolPool : SetCmdletBase
     {
         public SetIntersightFcpoolPool()
@@ -1649,7 +1649,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FcpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFcpoolReservation")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFcpoolReservation", SupportsShouldProcess = true)]
     public class SetIntersightFcpoolReservation : SetCmdletBase
     {
         public SetIntersightFcpoolReservation()

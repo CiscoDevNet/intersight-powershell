@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VmediaPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVmediaPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVmediaPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVmediaPolicy : GetCmdletBase
     {
         public GetIntersightVmediaPolicy()
@@ -197,7 +197,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VmediaPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVmediaPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVmediaPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVmediaPolicyInventory : GetCmdletBase
     {
         public GetIntersightVmediaPolicyInventory()
@@ -394,7 +394,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VmediaPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVmediaPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightVmediaPolicy", SupportsShouldProcess = true)]
     public class NewIntersightVmediaPolicy : NewCmdletBase
     {
         public NewIntersightVmediaPolicy()
@@ -560,7 +560,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VmediaPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVmediaPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVmediaPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightVmediaPolicy : RemoveCmdletBase
     {
         public RemoveIntersightVmediaPolicy()
@@ -572,7 +572,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VmediaPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVmediaPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVmediaPolicy", SupportsShouldProcess = true)]
     public class SetIntersightVmediaPolicy : SetCmdletBase
     {
         public SetIntersightVmediaPolicy()

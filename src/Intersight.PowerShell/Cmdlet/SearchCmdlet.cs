@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SearchSearchItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSearchSearchItem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSearchSearchItem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSearchSearchItem : GetCmdletBase
     {
         public GetIntersightSearchSearchItem()
@@ -129,7 +129,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SearchTagItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSearchTagItem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSearchTagItem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSearchTagItem : GetCmdletBase
     {
         public GetIntersightSearchTagItem()
@@ -294,7 +294,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SearchSuggestItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSearchSuggestItem")]
+    [Cmdlet(VerbsCommon.New, "IntersightSearchSuggestItem", SupportsShouldProcess = true)]
     public class NewIntersightSearchSuggestItem : NewCmdletBase
     {
         public NewIntersightSearchSuggestItem()

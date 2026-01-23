@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PortGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPortGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPortGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPortGroup : GetCmdletBase
     {
         public GetIntersightPortGroup()
@@ -220,7 +220,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PortMacBinding.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPortMacBinding", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPortMacBinding", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPortMacBinding : GetCmdletBase
     {
         public GetIntersightPortMacBinding()
@@ -581,7 +581,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PortSubGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPortSubGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPortSubGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPortSubGroup : GetCmdletBase
     {
         public GetIntersightPortSubGroup()
@@ -813,7 +813,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PortGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPortGroup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPortGroup", SupportsShouldProcess = true)]
     public class SetIntersightPortGroup : SetCmdletBase
     {
         public SetIntersightPortGroup()
@@ -891,7 +891,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PortMacBinding.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPortMacBinding")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPortMacBinding", SupportsShouldProcess = true)]
     public class SetIntersightPortMacBinding : SetCmdletBase
     {
         public SetIntersightPortMacBinding()
@@ -1150,7 +1150,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PortSubGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPortSubGroup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPortSubGroup", SupportsShouldProcess = true)]
     public class SetIntersightPortSubGroup : SetCmdletBase
     {
         public SetIntersightPortSubGroup()

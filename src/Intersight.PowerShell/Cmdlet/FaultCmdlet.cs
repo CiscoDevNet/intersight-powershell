@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FaultInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFaultInstance", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFaultInstance", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFaultInstance : GetCmdletBase
     {
         public GetIntersightFaultInstance()
@@ -371,7 +371,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FaultInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFaultInstance")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFaultInstance", SupportsShouldProcess = true)]
     public class SetIntersightFaultInstance : SetCmdletBase
     {
         public SetIntersightFaultInstance()

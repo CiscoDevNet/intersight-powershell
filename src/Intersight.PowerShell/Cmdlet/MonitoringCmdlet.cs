@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get MonitoringHealthStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightMonitoringHealthStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightMonitoringHealthStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightMonitoringHealthStatus : GetCmdletBase
     {
         public GetIntersightMonitoringHealthStatus()

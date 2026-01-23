@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HclDriverImage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclDriverImage", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHclDriverImage", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHclDriverImage : GetCmdletBase
     {
         public GetIntersightHclDriverImage()
@@ -162,7 +162,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HclExemptedCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclExemptedCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHclExemptedCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHclExemptedCatalog : GetCmdletBase
     {
         public GetIntersightHclExemptedCatalog()
@@ -392,7 +392,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HclHwCatalogInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclHwCatalogInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHclHwCatalogInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHclHwCatalogInfo : GetCmdletBase
     {
         public GetIntersightHclHwCatalogInfo()
@@ -534,7 +534,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HclHyperflexSoftwareCompatibilityInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclHyperflexSoftwareCompatibilityInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHclHyperflexSoftwareCompatibilityInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHclHyperflexSoftwareCompatibilityInfo : GetCmdletBase
     {
         public GetIntersightHclHyperflexSoftwareCompatibilityInfo()
@@ -742,7 +742,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HclOperatingSystem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclOperatingSystem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHclOperatingSystem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHclOperatingSystem : GetCmdletBase
     {
         public GetIntersightHclOperatingSystem()
@@ -883,7 +883,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HclOperatingSystemVendor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclOperatingSystemVendor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHclOperatingSystemVendor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHclOperatingSystemVendor : GetCmdletBase
     {
         public GetIntersightHclOperatingSystemVendor()
@@ -1013,7 +1013,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HclServerCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclServerCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHclServerCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHclServerCatalog : GetCmdletBase
     {
         public GetIntersightHclServerCatalog()
@@ -1144,7 +1144,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get HclServerHwCatalogInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightHclServerHwCatalogInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightHclServerHwCatalogInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightHclServerHwCatalogInfo : GetCmdletBase
     {
         public GetIntersightHclServerHwCatalogInfo()
@@ -1310,7 +1310,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HclCompatibilityStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHclCompatibilityStatus")]
+    [Cmdlet(VerbsCommon.New, "IntersightHclCompatibilityStatus", SupportsShouldProcess = true)]
     public class NewIntersightHclCompatibilityStatus : NewCmdletBase
     {
         public NewIntersightHclCompatibilityStatus()
@@ -1410,7 +1410,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HclHyperflexSoftwareCompatibilityInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHclHyperflexSoftwareCompatibilityInfo")]
+    [Cmdlet(VerbsCommon.New, "IntersightHclHyperflexSoftwareCompatibilityInfo", SupportsShouldProcess = true)]
     public class NewIntersightHclHyperflexSoftwareCompatibilityInfo : NewCmdletBase
     {
         public NewIntersightHclHyperflexSoftwareCompatibilityInfo()
@@ -1587,7 +1587,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New HclSupportedDriverName.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightHclSupportedDriverName")]
+    [Cmdlet(VerbsCommon.New, "IntersightHclSupportedDriverName", SupportsShouldProcess = true)]
     public class NewIntersightHclSupportedDriverName : NewCmdletBase
     {
         public NewIntersightHclSupportedDriverName()
@@ -1698,7 +1698,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove HclHyperflexSoftwareCompatibilityInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightHclHyperflexSoftwareCompatibilityInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightHclHyperflexSoftwareCompatibilityInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightHclHyperflexSoftwareCompatibilityInfo : RemoveCmdletBase
     {
         public RemoveIntersightHclHyperflexSoftwareCompatibilityInfo()
@@ -1710,7 +1710,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set HclHyperflexSoftwareCompatibilityInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightHclHyperflexSoftwareCompatibilityInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightHclHyperflexSoftwareCompatibilityInfo", SupportsShouldProcess = true)]
     public class SetIntersightHclHyperflexSoftwareCompatibilityInfo : SetCmdletBase
     {
         public SetIntersightHclHyperflexSoftwareCompatibilityInfo()

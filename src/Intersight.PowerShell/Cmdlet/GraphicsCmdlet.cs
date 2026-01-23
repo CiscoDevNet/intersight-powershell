@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get GraphicsCard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightGraphicsCard", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightGraphicsCard", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightGraphicsCard : GetCmdletBase
     {
         public GetIntersightGraphicsCard()
@@ -550,7 +550,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get GraphicsController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightGraphicsController", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightGraphicsController", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightGraphicsController : GetCmdletBase
     {
         public GetIntersightGraphicsController()
@@ -845,7 +845,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set GraphicsCard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightGraphicsCard")]
+    [Cmdlet(VerbsCommon.Set, "IntersightGraphicsCard", SupportsShouldProcess = true)]
     public class SetIntersightGraphicsCard : SetCmdletBase
     {
         public SetIntersightGraphicsCard()
@@ -993,7 +993,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set GraphicsController.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightGraphicsController")]
+    [Cmdlet(VerbsCommon.Set, "IntersightGraphicsController", SupportsShouldProcess = true)]
     public class SetIntersightGraphicsController : SetCmdletBase
     {
         public SetIntersightGraphicsController()

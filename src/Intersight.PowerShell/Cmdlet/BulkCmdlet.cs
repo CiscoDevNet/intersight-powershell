@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BulkExport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBulkExport", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkExport", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBulkExport : GetCmdletBase
     {
         public GetIntersightBulkExport()
@@ -244,7 +244,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BulkExportedItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBulkExportedItem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkExportedItem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBulkExportedItem : GetCmdletBase
     {
         public GetIntersightBulkExportedItem()
@@ -344,6 +344,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Indicates whether the value of the 'aesKey' property has been set."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsAesKeySet
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -403,6 +414,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Name of the target service that owns the item MO. Service responsible for handling exported item mo notifications."</para>
         /// </summary>
@@ -437,7 +449,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Status of the item's export operation.\n* `` - The operation has not started.\n* `ValidationInProgress` - The validation operation is in progress.\n* `Valid` - The content to be imported is valid.\n* `InValid` - The content to be imported is not valid and the status message will have the reason.\n* `InProgress` - The operation is in progress.\n* `Success` - The operation has succeeded.\n* `Failed` - The operation has failed.\n* `RollBackInitiated` - The rollback has been inititiated for import failure.\n* `RollBackFailed` - The rollback has failed for import failure.\n* `RollbackCompleted` - The rollback has completed for import failure.\n* `RollbackAborted` - The rollback has been aborted for import failure.\n* `OperationTimedOut` - The operation has timed out.\n* `OperationCancelled` - The operation has been canceled.\n* `CancelInProgress` - The operation is being canceled."</para>
+        /// <para type="description">"Status of the item's export operation.\n* `` - The operation has not started.\n* `Ready` - The operation is ready to start.\n* `ValidationInProgress` - The validation operation is in progress.\n* `Valid` - The content to be imported is valid.\n* `InValid` - The content to be imported is not valid and the status message will have the reason.\n* `InProgress` - The operation is in progress.\n* `Success` - The operation has succeeded.\n* `Failed` - The operation has failed.\n* `RollBackInitiated` - The rollback has been initiated for import failure.\n* `RollBackFailed` - The rollback has failed for import failure.\n* `RollbackCompleted` - The rollback has completed for import failure.\n* `RollbackAborted` - The rollback has been aborted for import failure.\n* `OperationTimedOut` - The operation has timed out.\n* `OperationCancelled` - The operation has been canceled.\n* `CancelInProgress` - The operation is being canceled."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -487,7 +499,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BulkMoCloner.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBulkMoCloner", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkMoCloner", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBulkMoCloner : GetCmdletBase
     {
         public GetIntersightBulkMoCloner()
@@ -643,7 +655,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BulkMoDeepCloner.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBulkMoDeepCloner", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkMoDeepCloner", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBulkMoDeepCloner : GetCmdletBase
     {
         public GetIntersightBulkMoDeepCloner()
@@ -820,7 +832,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BulkMoMerger.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBulkMoMerger", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkMoMerger", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBulkMoMerger : GetCmdletBase
     {
         public GetIntersightBulkMoMerger()
@@ -987,7 +999,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BulkRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBulkRequest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkRequest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBulkRequest : GetCmdletBase
     {
         public GetIntersightBulkRequest()
@@ -1244,7 +1256,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BulkResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBulkResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBulkResult : GetCmdletBase
     {
         public GetIntersightBulkResult()
@@ -1497,7 +1509,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BulkSubRequestObj.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBulkSubRequestObj", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBulkSubRequestObj", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBulkSubRequestObj : GetCmdletBase
     {
         public GetIntersightBulkSubRequestObj()
@@ -1761,7 +1773,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New BulkExport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightBulkExport")]
+    [Cmdlet(VerbsCommon.New, "IntersightBulkExport", SupportsShouldProcess = true)]
     public class NewIntersightBulkExport : NewCmdletBase
     {
         public NewIntersightBulkExport()
@@ -1934,7 +1946,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New BulkMoCloner.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightBulkMoCloner")]
+    [Cmdlet(VerbsCommon.New, "IntersightBulkMoCloner", SupportsShouldProcess = true)]
     public class NewIntersightBulkMoCloner : NewCmdletBase
     {
         public NewIntersightBulkMoCloner()
@@ -2080,7 +2092,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New BulkMoDeepCloner.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightBulkMoDeepCloner")]
+    [Cmdlet(VerbsCommon.New, "IntersightBulkMoDeepCloner", SupportsShouldProcess = true)]
     public class NewIntersightBulkMoDeepCloner : NewCmdletBase
     {
         public NewIntersightBulkMoDeepCloner()
@@ -2247,7 +2259,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New BulkMoMerger.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightBulkMoMerger")]
+    [Cmdlet(VerbsCommon.New, "IntersightBulkMoMerger", SupportsShouldProcess = true)]
     public class NewIntersightBulkMoMerger : NewCmdletBase
     {
         public NewIntersightBulkMoMerger()
@@ -2404,7 +2416,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New BulkRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightBulkRequest")]
+    [Cmdlet(VerbsCommon.New, "IntersightBulkRequest", SupportsShouldProcess = true)]
     public class NewIntersightBulkRequest : NewCmdletBase
     {
         public NewIntersightBulkRequest()
@@ -2581,7 +2593,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove BulkExport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightBulkExport")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightBulkExport", SupportsShouldProcess = true)]
     public class RemoveIntersightBulkExport : RemoveCmdletBase
     {
         public RemoveIntersightBulkExport()
@@ -2593,7 +2605,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BulkExport.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBulkExport")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBulkExport", SupportsShouldProcess = true)]
     public class SetIntersightBulkExport : SetCmdletBase
     {
         public SetIntersightBulkExport()

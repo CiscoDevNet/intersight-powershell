@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FmcDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFmcDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFmcDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFmcDevice : GetCmdletBase
     {
         public GetIntersightFmcDevice()
@@ -173,7 +173,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FmcDeviceHaPair.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFmcDeviceHaPair", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFmcDeviceHaPair", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFmcDeviceHaPair : GetCmdletBase
     {
         public GetIntersightFmcDeviceHaPair()
@@ -336,7 +336,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FmcDomain.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFmcDomain", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFmcDomain", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFmcDomain : GetCmdletBase
     {
         public GetIntersightFmcDomain()
@@ -488,7 +488,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FmcPhysicalInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFmcPhysicalInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFmcPhysicalInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFmcPhysicalInterface : GetCmdletBase
     {
         public GetIntersightFmcPhysicalInterface()

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecoveryBackupConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryBackupConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryBackupConfigPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecoveryBackupConfigPolicy : GetCmdletBase
     {
         public GetIntersightRecoveryBackupConfigPolicy()
@@ -251,7 +251,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecoveryBackupProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryBackupProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryBackupProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecoveryBackupProfile : GetCmdletBase
     {
         public GetIntersightRecoveryBackupProfile()
@@ -500,7 +500,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecoveryConfigResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryConfigResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryConfigResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecoveryConfigResult : GetCmdletBase
     {
         public GetIntersightRecoveryConfigResult()
@@ -665,7 +665,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecoveryConfigResultEntry.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryConfigResultEntry", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryConfigResultEntry", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecoveryConfigResultEntry : GetCmdletBase
     {
         public GetIntersightRecoveryConfigResultEntry()
@@ -851,7 +851,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecoveryOnDemandBackup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryOnDemandBackup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryOnDemandBackup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecoveryOnDemandBackup : GetCmdletBase
     {
         public GetIntersightRecoveryOnDemandBackup()
@@ -1113,7 +1113,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecoveryRestore.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryRestore", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryRestore", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecoveryRestore : GetCmdletBase
     {
         public GetIntersightRecoveryRestore()
@@ -1277,7 +1277,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecoveryScheduleConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryScheduleConfigPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecoveryScheduleConfigPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecoveryScheduleConfigPolicy : GetCmdletBase
     {
         public GetIntersightRecoveryScheduleConfigPolicy()
@@ -1431,7 +1431,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New RecoveryBackupConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightRecoveryBackupConfigPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightRecoveryBackupConfigPolicy", SupportsShouldProcess = true)]
     public class NewIntersightRecoveryBackupConfigPolicy : NewCmdletBase
     {
         public NewIntersightRecoveryBackupConfigPolicy()
@@ -1631,7 +1631,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New RecoveryBackupProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightRecoveryBackupProfile")]
+    [Cmdlet(VerbsCommon.New, "IntersightRecoveryBackupProfile", SupportsShouldProcess = true)]
     public class NewIntersightRecoveryBackupProfile : NewCmdletBase
     {
         public NewIntersightRecoveryBackupProfile()
@@ -1869,7 +1869,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New RecoveryOnDemandBackup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightRecoveryOnDemandBackup")]
+    [Cmdlet(VerbsCommon.New, "IntersightRecoveryOnDemandBackup", SupportsShouldProcess = true)]
     public class NewIntersightRecoveryOnDemandBackup : NewCmdletBase
     {
         public NewIntersightRecoveryOnDemandBackup()
@@ -2070,7 +2070,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New RecoveryRestore.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightRecoveryRestore")]
+    [Cmdlet(VerbsCommon.New, "IntersightRecoveryRestore", SupportsShouldProcess = true)]
     public class NewIntersightRecoveryRestore : NewCmdletBase
     {
         public NewIntersightRecoveryRestore()
@@ -2193,7 +2193,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New RecoveryScheduleConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightRecoveryScheduleConfigPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightRecoveryScheduleConfigPolicy", SupportsShouldProcess = true)]
     public class NewIntersightRecoveryScheduleConfigPolicy : NewCmdletBase
     {
         public NewIntersightRecoveryScheduleConfigPolicy()
@@ -2326,7 +2326,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove RecoveryBackupConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightRecoveryBackupConfigPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightRecoveryBackupConfigPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightRecoveryBackupConfigPolicy : RemoveCmdletBase
     {
         public RemoveIntersightRecoveryBackupConfigPolicy()
@@ -2338,7 +2338,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove RecoveryBackupProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightRecoveryBackupProfile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightRecoveryBackupProfile", SupportsShouldProcess = true)]
     public class RemoveIntersightRecoveryBackupProfile : RemoveCmdletBase
     {
         public RemoveIntersightRecoveryBackupProfile()
@@ -2350,7 +2350,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove RecoveryOnDemandBackup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightRecoveryOnDemandBackup")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightRecoveryOnDemandBackup", SupportsShouldProcess = true)]
     public class RemoveIntersightRecoveryOnDemandBackup : RemoveCmdletBase
     {
         public RemoveIntersightRecoveryOnDemandBackup()
@@ -2362,7 +2362,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove RecoveryRestore.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightRecoveryRestore")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightRecoveryRestore", SupportsShouldProcess = true)]
     public class RemoveIntersightRecoveryRestore : RemoveCmdletBase
     {
         public RemoveIntersightRecoveryRestore()
@@ -2374,7 +2374,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove RecoveryScheduleConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightRecoveryScheduleConfigPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightRecoveryScheduleConfigPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightRecoveryScheduleConfigPolicy : RemoveCmdletBase
     {
         public RemoveIntersightRecoveryScheduleConfigPolicy()
@@ -2386,7 +2386,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set RecoveryBackupConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightRecoveryBackupConfigPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightRecoveryBackupConfigPolicy", SupportsShouldProcess = true)]
     public class SetIntersightRecoveryBackupConfigPolicy : SetCmdletBase
     {
         public SetIntersightRecoveryBackupConfigPolicy()
@@ -2575,7 +2575,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set RecoveryBackupProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightRecoveryBackupProfile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightRecoveryBackupProfile", SupportsShouldProcess = true)]
     public class SetIntersightRecoveryBackupProfile : SetCmdletBase
     {
         public SetIntersightRecoveryBackupProfile()
@@ -2802,7 +2802,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set RecoveryOnDemandBackup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightRecoveryOnDemandBackup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightRecoveryOnDemandBackup", SupportsShouldProcess = true)]
     public class SetIntersightRecoveryOnDemandBackup : SetCmdletBase
     {
         public SetIntersightRecoveryOnDemandBackup()
@@ -2992,7 +2992,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set RecoveryScheduleConfigPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightRecoveryScheduleConfigPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightRecoveryScheduleConfigPolicy", SupportsShouldProcess = true)]
     public class SetIntersightRecoveryScheduleConfigPolicy : SetCmdletBase
     {
         public SetIntersightRecoveryScheduleConfigPolicy()

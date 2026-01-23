@@ -1,4 +1,4 @@
-﻿using Intersight.Client;
+using Intersight.Client;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -117,25 +117,24 @@ namespace Intersight.PowerShell
             }
 
             uri.Path = path;
-            var queryString = string.Empty;
             if (requestOption.QueryParameters.Count > 0)
             {
-                var queryParam = HttpUtility.ParseQueryString(string.Empty);
+                var queryParts = new List<string>();
                 foreach (var item in requestOption.QueryParameters)
                 {
                     if (item.Value.Count > 1)
                     { // array
                         foreach (var value in item.Value)
                         {
-                            queryParam.Add(HttpUtility.UrlEncode(item.Key) + "[]", value);
+                            queryParts.Add(System.Uri.EscapeDataString(item.Key + "[]") + "=" + System.Uri.EscapeDataString(value));
                         }
                     }
                     else
                     {
-                        queryParam.Add(HttpUtility.UrlEncode(item.Key), item.Value[0]);
+                        queryParts.Add(System.Uri.EscapeDataString(item.Key) + "=" + System.Uri.EscapeDataString(item.Value[0]));
                     }
                 }
-                uri.Query = queryParam.ToString().Replace("+", "%20");
+                uri.Query = string.Join("&", queryParts);
             }
             return uri.Uri.ToString();
         }

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecommendationCapacityRunway.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationCapacityRunway", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationCapacityRunway", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecommendationCapacityRunway : GetCmdletBase
     {
         public GetIntersightRecommendationCapacityRunway()
@@ -240,7 +240,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecommendationClusterExpansion.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationClusterExpansion", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationClusterExpansion", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecommendationClusterExpansion : GetCmdletBase
     {
         public GetIntersightRecommendationClusterExpansion()
@@ -427,7 +427,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecommendationHardwareExpansionRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationHardwareExpansionRequest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationHardwareExpansionRequest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecommendationHardwareExpansionRequest : GetCmdletBase
     {
         public GetIntersightRecommendationHardwareExpansionRequest()
@@ -613,7 +613,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecommendationHardwareExpansionRequestItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationHardwareExpansionRequestItem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationHardwareExpansionRequestItem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecommendationHardwareExpansionRequestItem : GetCmdletBase
     {
         public GetIntersightRecommendationHardwareExpansionRequestItem()
@@ -798,7 +798,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecommendationPhysicalItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationPhysicalItem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationPhysicalItem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecommendationPhysicalItem : GetCmdletBase
     {
         public GetIntersightRecommendationPhysicalItem()
@@ -1083,7 +1083,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecommendationPurchaseOrderEstimate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationPurchaseOrderEstimate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationPurchaseOrderEstimate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecommendationPurchaseOrderEstimate : GetCmdletBase
     {
         public GetIntersightRecommendationPurchaseOrderEstimate()
@@ -1312,7 +1312,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecommendationPurchaseOrderList.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationPurchaseOrderList", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationPurchaseOrderList", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecommendationPurchaseOrderList : GetCmdletBase
     {
         public GetIntersightRecommendationPurchaseOrderList()
@@ -1486,7 +1486,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get RecommendationSoftwareItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationSoftwareItem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightRecommendationSoftwareItem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightRecommendationSoftwareItem : GetCmdletBase
     {
         public GetIntersightRecommendationSoftwareItem()
@@ -1671,7 +1671,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New RecommendationHardwareExpansionRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightRecommendationHardwareExpansionRequest")]
+    [Cmdlet(VerbsCommon.New, "IntersightRecommendationHardwareExpansionRequest", SupportsShouldProcess = true)]
     public class NewIntersightRecommendationHardwareExpansionRequest : NewCmdletBase
     {
         public NewIntersightRecommendationHardwareExpansionRequest()
@@ -1766,7 +1766,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New RecommendationHardwareExpansionRequestItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightRecommendationHardwareExpansionRequestItem")]
+    [Cmdlet(VerbsCommon.New, "IntersightRecommendationHardwareExpansionRequestItem", SupportsShouldProcess = true)]
     public class NewIntersightRecommendationHardwareExpansionRequestItem : NewCmdletBase
     {
         public NewIntersightRecommendationHardwareExpansionRequestItem()
@@ -1900,7 +1900,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New RecommendationPurchaseOrderEstimate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightRecommendationPurchaseOrderEstimate")]
+    [Cmdlet(VerbsCommon.New, "IntersightRecommendationPurchaseOrderEstimate", SupportsShouldProcess = true)]
     public class NewIntersightRecommendationPurchaseOrderEstimate : NewCmdletBase
     {
         public NewIntersightRecommendationPurchaseOrderEstimate()
@@ -2008,7 +2008,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set RecommendationHardwareExpansionRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightRecommendationHardwareExpansionRequest")]
+    [Cmdlet(VerbsCommon.Set, "IntersightRecommendationHardwareExpansionRequest", SupportsShouldProcess = true)]
     public class SetIntersightRecommendationHardwareExpansionRequest : SetCmdletBase
     {
         public SetIntersightRecommendationHardwareExpansionRequest()
@@ -2092,7 +2092,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set RecommendationHardwareExpansionRequestItem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightRecommendationHardwareExpansionRequestItem")]
+    [Cmdlet(VerbsCommon.Set, "IntersightRecommendationHardwareExpansionRequestItem", SupportsShouldProcess = true)]
     public class SetIntersightRecommendationHardwareExpansionRequestItem : SetCmdletBase
     {
         public SetIntersightRecommendationHardwareExpansionRequestItem()
@@ -2215,7 +2215,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set RecommendationPurchaseOrderEstimate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightRecommendationPurchaseOrderEstimate")]
+    [Cmdlet(VerbsCommon.Set, "IntersightRecommendationPurchaseOrderEstimate", SupportsShouldProcess = true)]
     public class SetIntersightRecommendationPurchaseOrderEstimate : SetCmdletBase
     {
         public SetIntersightRecommendationPurchaseOrderEstimate()

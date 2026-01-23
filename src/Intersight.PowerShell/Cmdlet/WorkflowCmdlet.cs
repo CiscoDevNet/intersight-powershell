@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowAnsibleBatchExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowAnsibleBatchExecutor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowAnsibleBatchExecutor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowAnsibleBatchExecutor : GetCmdletBase
     {
         public GetIntersightWorkflowAnsibleBatchExecutor()
@@ -190,7 +190,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowBatchApiExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowBatchApiExecutor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowBatchApiExecutor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowBatchApiExecutor : GetCmdletBase
     {
         public GetIntersightWorkflowBatchApiExecutor()
@@ -381,7 +381,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowCatalog : GetCmdletBase
     {
         public GetIntersightWorkflowCatalog()
@@ -522,7 +522,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowCatalogItemDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowCatalogItemDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowCatalogItemDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowCatalogItemDefinition : GetCmdletBase
     {
         public GetIntersightWorkflowCatalogItemDefinition()
@@ -731,7 +731,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowCatalogServiceRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowCatalogServiceRequest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowCatalogServiceRequest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowCatalogServiceRequest : GetCmdletBase
     {
         public GetIntersightWorkflowCatalogServiceRequest()
@@ -977,7 +977,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowCustomDataTypeDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowCustomDataTypeDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowCustomDataTypeDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowCustomDataTypeDefinition : GetCmdletBase
     {
         public GetIntersightWorkflowCustomDataTypeDefinition()
@@ -1165,7 +1165,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowErrorResponseHandler.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowErrorResponseHandler", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowErrorResponseHandler", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowErrorResponseHandler : GetCmdletBase
     {
         public GetIntersightWorkflowErrorResponseHandler()
@@ -1330,7 +1330,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowPowerShellBatchApiExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowPowerShellBatchApiExecutor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowPowerShellBatchApiExecutor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowPowerShellBatchApiExecutor : GetCmdletBase
     {
         public GetIntersightWorkflowPowerShellBatchApiExecutor()
@@ -1521,7 +1521,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowRollbackWorkflow.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowRollbackWorkflow", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowRollbackWorkflow", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowRollbackWorkflow : GetCmdletBase
     {
         public GetIntersightWorkflowRollbackWorkflow()
@@ -1687,7 +1687,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowServiceItemActionDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemActionDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemActionDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowServiceItemActionDefinition : GetCmdletBase
     {
         public GetIntersightWorkflowServiceItemActionDefinition()
@@ -1917,7 +1917,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowServiceItemActionInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemActionInstance", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemActionInstance", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowServiceItemActionInstance : GetCmdletBase
     {
         public GetIntersightWorkflowServiceItemActionInstance()
@@ -2228,7 +2228,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowServiceItemAttribute.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemAttribute", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemAttribute", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowServiceItemAttribute : GetCmdletBase
     {
         public GetIntersightWorkflowServiceItemAttribute()
@@ -2403,7 +2403,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowServiceItemDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowServiceItemDefinition : GetCmdletBase
     {
         public GetIntersightWorkflowServiceItemDefinition()
@@ -2701,7 +2701,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowServiceItemHealthCheckDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemHealthCheckDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemHealthCheckDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowServiceItemHealthCheckDefinition : GetCmdletBase
     {
         public GetIntersightWorkflowServiceItemHealthCheckDefinition()
@@ -2898,7 +2898,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowServiceItemHealthCheckExecution.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemHealthCheckExecution", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemHealthCheckExecution", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowServiceItemHealthCheckExecution : GetCmdletBase
     {
         public GetIntersightWorkflowServiceItemHealthCheckExecution()
@@ -3106,7 +3106,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowServiceItemInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemInstance", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemInstance", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowServiceItemInstance : GetCmdletBase
     {
         public GetIntersightWorkflowServiceItemInstance()
@@ -3359,7 +3359,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowServiceItemOutput.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemOutput", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowServiceItemOutput", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowServiceItemOutput : GetCmdletBase
     {
         public GetIntersightWorkflowServiceItemOutput()
@@ -3501,7 +3501,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowSshBatchExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowSshBatchExecutor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowSshBatchExecutor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowSshBatchExecutor : GetCmdletBase
     {
         public GetIntersightWorkflowSshBatchExecutor()
@@ -3681,7 +3681,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowTaskDebugLog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowTaskDebugLog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowTaskDebugLog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowTaskDebugLog : GetCmdletBase
     {
         public GetIntersightWorkflowTaskDebugLog()
@@ -3845,7 +3845,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowTaskDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowTaskDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowTaskDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowTaskDefinition : GetCmdletBase
     {
         public GetIntersightWorkflowTaskDefinition()
@@ -4089,7 +4089,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowTaskInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowTaskInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowTaskInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowTaskInfo : GetCmdletBase
     {
         public GetIntersightWorkflowTaskInfo()
@@ -4390,7 +4390,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowTaskMetadata.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowTaskMetadata", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowTaskMetadata", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowTaskMetadata : GetCmdletBase
     {
         public GetIntersightWorkflowTaskMetadata()
@@ -4555,7 +4555,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowTemplateFunctionMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowTemplateFunctionMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowTemplateFunctionMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowTemplateFunctionMeta : GetCmdletBase
     {
         public GetIntersightWorkflowTemplateFunctionMeta()
@@ -4699,7 +4699,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowUiDisplayMetadata.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowUiDisplayMetadata", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowUiDisplayMetadata", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowUiDisplayMetadata : GetCmdletBase
     {
         public GetIntersightWorkflowUiDisplayMetadata()
@@ -4831,7 +4831,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowVariable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowVariable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowVariable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowVariable : GetCmdletBase
     {
         public GetIntersightWorkflowVariable()
@@ -4996,7 +4996,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowWorkflowDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowWorkflowDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowWorkflowDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowWorkflowDefinition : GetCmdletBase
     {
         public GetIntersightWorkflowWorkflowDefinition()
@@ -5268,7 +5268,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowWorkflowInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowWorkflowInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowWorkflowInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowWorkflowInfo : GetCmdletBase
     {
         public GetIntersightWorkflowWorkflowInfo()
@@ -5703,7 +5703,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkflowWorkflowMetadata.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowWorkflowMetadata", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkflowWorkflowMetadata", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkflowWorkflowMetadata : GetCmdletBase
     {
         public GetIntersightWorkflowWorkflowMetadata()
@@ -5868,7 +5868,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowAnsibleBatchExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowAnsibleBatchExecutor")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowAnsibleBatchExecutor", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowAnsibleBatchExecutor : NewCmdletBase
     {
         public NewIntersightWorkflowAnsibleBatchExecutor()
@@ -6067,7 +6067,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowBatchApiExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowBatchApiExecutor")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowBatchApiExecutor", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowBatchApiExecutor : NewCmdletBase
     {
         public NewIntersightWorkflowBatchApiExecutor()
@@ -6277,7 +6277,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowCatalogItemDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowCatalogItemDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowCatalogItemDefinition", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowCatalogItemDefinition : NewCmdletBase
     {
         public NewIntersightWorkflowCatalogItemDefinition()
@@ -6445,7 +6445,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowCatalogServiceRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowCatalogServiceRequest")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowCatalogServiceRequest", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowCatalogServiceRequest : NewCmdletBase
     {
         public NewIntersightWorkflowCatalogServiceRequest()
@@ -6630,7 +6630,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowCustomDataTypeDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowCustomDataTypeDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowCustomDataTypeDefinition", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowCustomDataTypeDefinition : NewCmdletBase
     {
         public NewIntersightWorkflowCustomDataTypeDefinition()
@@ -6797,7 +6797,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowErrorResponseHandler.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowErrorResponseHandler")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowErrorResponseHandler", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowErrorResponseHandler : NewCmdletBase
     {
         public NewIntersightWorkflowErrorResponseHandler()
@@ -6941,7 +6941,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowPowerShellBatchApiExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowPowerShellBatchApiExecutor")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowPowerShellBatchApiExecutor", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowPowerShellBatchApiExecutor : NewCmdletBase
     {
         public NewIntersightWorkflowPowerShellBatchApiExecutor()
@@ -7151,7 +7151,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowRollbackWorkflow.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowRollbackWorkflow")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowRollbackWorkflow", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowRollbackWorkflow : NewCmdletBase
     {
         public NewIntersightWorkflowRollbackWorkflow()
@@ -7276,7 +7276,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowServiceItemActionDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemActionDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemActionDefinition", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowServiceItemActionDefinition : NewCmdletBase
     {
         public NewIntersightWorkflowServiceItemActionDefinition()
@@ -7555,7 +7555,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowServiceItemActionInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemActionInstance")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemActionInstance", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowServiceItemActionInstance : NewCmdletBase
     {
         public NewIntersightWorkflowServiceItemActionInstance()
@@ -7725,7 +7725,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowServiceItemDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemDefinition", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowServiceItemDefinition : NewCmdletBase
     {
         public NewIntersightWorkflowServiceItemDefinition()
@@ -7952,7 +7952,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowServiceItemHealthCheckDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemHealthCheckDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemHealthCheckDefinition", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowServiceItemHealthCheckDefinition : NewCmdletBase
     {
         public NewIntersightWorkflowServiceItemHealthCheckDefinition()
@@ -8108,7 +8108,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowServiceItemInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemInstance")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemInstance", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowServiceItemInstance : NewCmdletBase
     {
         public NewIntersightWorkflowServiceItemInstance()
@@ -8290,7 +8290,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowServiceItemOutput.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemOutput")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowServiceItemOutput", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowServiceItemOutput : NewCmdletBase
     {
         public NewIntersightWorkflowServiceItemOutput()
@@ -8401,7 +8401,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowSshBatchExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowSshBatchExecutor")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowSshBatchExecutor", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowSshBatchExecutor : NewCmdletBase
     {
         public NewIntersightWorkflowSshBatchExecutor()
@@ -8600,7 +8600,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowTaskDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowTaskDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowTaskDefinition", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowTaskDefinition : NewCmdletBase
     {
         public NewIntersightWorkflowTaskDefinition()
@@ -8803,7 +8803,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowTemplateEvaluation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowTemplateEvaluation")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowTemplateEvaluation", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowTemplateEvaluation : NewCmdletBase
     {
         public NewIntersightWorkflowTemplateEvaluation()
@@ -8916,7 +8916,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowTemplateParser.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowTemplateParser")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowTemplateParser", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowTemplateParser : NewCmdletBase
     {
         public NewIntersightWorkflowTemplateParser()
@@ -9006,7 +9006,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowUiDisplayMetadata.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowUiDisplayMetadata")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowUiDisplayMetadata", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowUiDisplayMetadata : NewCmdletBase
     {
         public NewIntersightWorkflowUiDisplayMetadata()
@@ -9117,7 +9117,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowVariable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowVariable")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowVariable", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowVariable : NewCmdletBase
     {
         public NewIntersightWorkflowVariable()
@@ -9231,7 +9231,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowWorkflowDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowWorkflowDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowWorkflowDefinition", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowWorkflowDefinition : NewCmdletBase
     {
         public NewIntersightWorkflowWorkflowDefinition()
@@ -9492,7 +9492,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkflowWorkflowInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkflowWorkflowInfo")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkflowWorkflowInfo", SupportsShouldProcess = true)]
     public class NewIntersightWorkflowWorkflowInfo : NewCmdletBase
     {
         public NewIntersightWorkflowWorkflowInfo()
@@ -9736,7 +9736,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowAnsibleBatchExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowAnsibleBatchExecutor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowAnsibleBatchExecutor", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowAnsibleBatchExecutor : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowAnsibleBatchExecutor()
@@ -9748,7 +9748,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowBatchApiExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowBatchApiExecutor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowBatchApiExecutor", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowBatchApiExecutor : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowBatchApiExecutor()
@@ -9760,7 +9760,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowCatalogItemDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowCatalogItemDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowCatalogItemDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowCatalogItemDefinition : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowCatalogItemDefinition()
@@ -9772,7 +9772,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowCatalogServiceRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowCatalogServiceRequest")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowCatalogServiceRequest", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowCatalogServiceRequest : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowCatalogServiceRequest()
@@ -9784,7 +9784,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowCustomDataTypeDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowCustomDataTypeDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowCustomDataTypeDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowCustomDataTypeDefinition : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowCustomDataTypeDefinition()
@@ -9796,7 +9796,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowErrorResponseHandler.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowErrorResponseHandler")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowErrorResponseHandler", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowErrorResponseHandler : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowErrorResponseHandler()
@@ -9808,7 +9808,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowPowerShellBatchApiExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowPowerShellBatchApiExecutor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowPowerShellBatchApiExecutor", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowPowerShellBatchApiExecutor : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowPowerShellBatchApiExecutor()
@@ -9820,7 +9820,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowRollbackWorkflow.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowRollbackWorkflow")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowRollbackWorkflow", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowRollbackWorkflow : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowRollbackWorkflow()
@@ -9832,7 +9832,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowServiceItemActionDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemActionDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemActionDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowServiceItemActionDefinition : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowServiceItemActionDefinition()
@@ -9844,7 +9844,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowServiceItemActionInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemActionInstance")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemActionInstance", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowServiceItemActionInstance : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowServiceItemActionInstance()
@@ -9856,7 +9856,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowServiceItemDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowServiceItemDefinition : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowServiceItemDefinition()
@@ -9868,7 +9868,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowServiceItemHealthCheckDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemHealthCheckDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemHealthCheckDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowServiceItemHealthCheckDefinition : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowServiceItemHealthCheckDefinition()
@@ -9880,7 +9880,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowServiceItemInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemInstance")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemInstance", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowServiceItemInstance : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowServiceItemInstance()
@@ -9892,7 +9892,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowServiceItemOutput.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemOutput")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowServiceItemOutput", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowServiceItemOutput : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowServiceItemOutput()
@@ -9904,7 +9904,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowSshBatchExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowSshBatchExecutor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowSshBatchExecutor", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowSshBatchExecutor : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowSshBatchExecutor()
@@ -9916,7 +9916,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowTaskDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowTaskDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowTaskDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowTaskDefinition : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowTaskDefinition()
@@ -9928,7 +9928,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowUiDisplayMetadata.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowUiDisplayMetadata")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowUiDisplayMetadata", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowUiDisplayMetadata : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowUiDisplayMetadata()
@@ -9940,7 +9940,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowVariable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowVariable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowVariable", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowVariable : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowVariable()
@@ -9952,7 +9952,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowWorkflowDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowWorkflowDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowWorkflowDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowWorkflowDefinition : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowWorkflowDefinition()
@@ -9964,7 +9964,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkflowWorkflowInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowWorkflowInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkflowWorkflowInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkflowWorkflowInfo : RemoveCmdletBase
     {
         public RemoveIntersightWorkflowWorkflowInfo()
@@ -9976,7 +9976,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowAnsibleBatchExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowAnsibleBatchExecutor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowAnsibleBatchExecutor", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowAnsibleBatchExecutor : SetCmdletBase
     {
         public SetIntersightWorkflowAnsibleBatchExecutor()
@@ -10164,7 +10164,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowBatchApiExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowBatchApiExecutor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowBatchApiExecutor", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowBatchApiExecutor : SetCmdletBase
     {
         public SetIntersightWorkflowBatchApiExecutor()
@@ -10363,7 +10363,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowCatalogItemDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowCatalogItemDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowCatalogItemDefinition", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowCatalogItemDefinition : SetCmdletBase
     {
         public SetIntersightWorkflowCatalogItemDefinition()
@@ -10520,7 +10520,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowCatalogServiceRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowCatalogServiceRequest")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowCatalogServiceRequest", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowCatalogServiceRequest : SetCmdletBase
     {
         public SetIntersightWorkflowCatalogServiceRequest()
@@ -10694,7 +10694,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowCustomDataTypeDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowCustomDataTypeDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowCustomDataTypeDefinition", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowCustomDataTypeDefinition : SetCmdletBase
     {
         public SetIntersightWorkflowCustomDataTypeDefinition()
@@ -10850,7 +10850,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowErrorResponseHandler.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowErrorResponseHandler")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowErrorResponseHandler", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowErrorResponseHandler : SetCmdletBase
     {
         public SetIntersightWorkflowErrorResponseHandler()
@@ -10983,7 +10983,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowPowerShellBatchApiExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowPowerShellBatchApiExecutor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowPowerShellBatchApiExecutor", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowPowerShellBatchApiExecutor : SetCmdletBase
     {
         public SetIntersightWorkflowPowerShellBatchApiExecutor()
@@ -11182,7 +11182,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowRollbackWorkflow.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowRollbackWorkflow")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowRollbackWorkflow", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowRollbackWorkflow : SetCmdletBase
     {
         public SetIntersightWorkflowRollbackWorkflow()
@@ -11296,7 +11296,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowServiceItemActionDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemActionDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemActionDefinition", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowServiceItemActionDefinition : SetCmdletBase
     {
         public SetIntersightWorkflowServiceItemActionDefinition()
@@ -11564,7 +11564,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowServiceItemActionInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemActionInstance")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemActionInstance", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowServiceItemActionInstance : SetCmdletBase
     {
         public SetIntersightWorkflowServiceItemActionInstance()
@@ -11723,7 +11723,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowServiceItemDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemDefinition", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowServiceItemDefinition : SetCmdletBase
     {
         public SetIntersightWorkflowServiceItemDefinition()
@@ -11939,7 +11939,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowServiceItemHealthCheckDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemHealthCheckDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemHealthCheckDefinition", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowServiceItemHealthCheckDefinition : SetCmdletBase
     {
         public SetIntersightWorkflowServiceItemHealthCheckDefinition()
@@ -12084,7 +12084,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowServiceItemInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemInstance")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemInstance", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowServiceItemInstance : SetCmdletBase
     {
         public SetIntersightWorkflowServiceItemInstance()
@@ -12255,7 +12255,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowServiceItemOutput.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemOutput")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowServiceItemOutput", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowServiceItemOutput : SetCmdletBase
     {
         public SetIntersightWorkflowServiceItemOutput()
@@ -12355,7 +12355,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowSshBatchExecutor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowSshBatchExecutor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowSshBatchExecutor", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowSshBatchExecutor : SetCmdletBase
     {
         public SetIntersightWorkflowSshBatchExecutor()
@@ -12543,7 +12543,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowTaskDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowTaskDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowTaskDefinition", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowTaskDefinition : SetCmdletBase
     {
         public SetIntersightWorkflowTaskDefinition()
@@ -12735,7 +12735,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowTaskInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowTaskInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowTaskInfo", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowTaskInfo : SetCmdletBase
     {
         public SetIntersightWorkflowTaskInfo()
@@ -12834,7 +12834,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowUiDisplayMetadata.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowUiDisplayMetadata")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowUiDisplayMetadata", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowUiDisplayMetadata : SetCmdletBase
     {
         public SetIntersightWorkflowUiDisplayMetadata()
@@ -12934,7 +12934,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowVariable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowVariable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowVariable", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowVariable : SetCmdletBase
     {
         public SetIntersightWorkflowVariable()
@@ -13037,7 +13037,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowWorkflowDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowWorkflowDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowWorkflowDefinition", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowWorkflowDefinition : SetCmdletBase
     {
         public SetIntersightWorkflowWorkflowDefinition()
@@ -13287,7 +13287,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkflowWorkflowInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowWorkflowInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkflowWorkflowInfo", SupportsShouldProcess = true)]
     public class SetIntersightWorkflowWorkflowInfo : SetCmdletBase
     {
         public SetIntersightWorkflowWorkflowInfo()

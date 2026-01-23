@@ -57,7 +57,12 @@ namespace Intersight.PowerShell
 
                 if (Json.IsPresent)
                 {
-                    WriteRequestJson();
+                    WriteObject(GetRequestJson());
+                }
+
+                if (!ShouldProcess(Config.BasePath, string.Format("Update {0} : {1}", ModelObject.GetType().Name, GetRequestJson())))
+                {
+                    return;
                 }
 
                 var methodInfo = GetMethodInfo(MethodName);

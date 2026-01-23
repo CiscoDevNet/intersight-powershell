@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PartnerintegrationDcLogs.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationDcLogs", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationDcLogs", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPartnerintegrationDcLogs : GetCmdletBase
     {
         public GetIntersightPartnerintegrationDcLogs()
@@ -153,7 +153,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PartnerintegrationDeviceConnector.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationDeviceConnector", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationDeviceConnector", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPartnerintegrationDeviceConnector : GetCmdletBase
     {
         public GetIntersightPartnerintegrationDeviceConnector()
@@ -361,7 +361,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PartnerintegrationDocIssues.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationDocIssues", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationDocIssues", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPartnerintegrationDocIssues : GetCmdletBase
     {
         public GetIntersightPartnerintegrationDocIssues()
@@ -492,7 +492,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PartnerintegrationEtl.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationEtl", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationEtl", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPartnerintegrationEtl : GetCmdletBase
     {
         public GetIntersightPartnerintegrationEtl()
@@ -634,7 +634,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PartnerintegrationFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationFile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationFile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPartnerintegrationFile : GetCmdletBase
     {
         public GetIntersightPartnerintegrationFile()
@@ -963,7 +963,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PartnerintegrationInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPartnerintegrationInventory : GetCmdletBase
     {
         public GetIntersightPartnerintegrationInventory()
@@ -1207,7 +1207,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PartnerintegrationLogs.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationLogs", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationLogs", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPartnerintegrationLogs : GetCmdletBase
     {
         public GetIntersightPartnerintegrationLogs()
@@ -1350,7 +1350,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PartnerintegrationMetrics.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationMetrics", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationMetrics", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPartnerintegrationMetrics : GetCmdletBase
     {
         public GetIntersightPartnerintegrationMetrics()
@@ -1492,7 +1492,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PartnerintegrationModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationModel", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPartnerintegrationModel", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPartnerintegrationModel : GetCmdletBase
     {
         public GetIntersightPartnerintegrationModel()
@@ -1634,7 +1634,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New PartnerintegrationDeviceConnector.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationDeviceConnector")]
+    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationDeviceConnector", SupportsShouldProcess = true)]
     public class NewIntersightPartnerintegrationDeviceConnector : NewCmdletBase
     {
         public NewIntersightPartnerintegrationDeviceConnector()
@@ -1751,7 +1751,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New PartnerintegrationEtl.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationEtl")]
+    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationEtl", SupportsShouldProcess = true)]
     public class NewIntersightPartnerintegrationEtl : NewCmdletBase
     {
         public NewIntersightPartnerintegrationEtl()
@@ -1862,7 +1862,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New PartnerintegrationFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationFile")]
+    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationFile", SupportsShouldProcess = true)]
     public class NewIntersightPartnerintegrationFile : NewCmdletBase
     {
         public NewIntersightPartnerintegrationFile()
@@ -1934,6 +1934,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationFile.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -2090,7 +2100,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New PartnerintegrationInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationInventory")]
+    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationInventory", SupportsShouldProcess = true)]
     public class NewIntersightPartnerintegrationInventory : NewCmdletBase
     {
         public NewIntersightPartnerintegrationInventory()
@@ -2253,7 +2263,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New PartnerintegrationMetrics.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationMetrics")]
+    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationMetrics", SupportsShouldProcess = true)]
     public class NewIntersightPartnerintegrationMetrics : NewCmdletBase
     {
         public NewIntersightPartnerintegrationMetrics()
@@ -2364,7 +2374,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New PartnerintegrationModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationModel")]
+    [Cmdlet(VerbsCommon.New, "IntersightPartnerintegrationModel", SupportsShouldProcess = true)]
     public class NewIntersightPartnerintegrationModel : NewCmdletBase
     {
         public NewIntersightPartnerintegrationModel()
@@ -2475,7 +2485,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove PartnerintegrationDeviceConnector.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationDeviceConnector")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationDeviceConnector", SupportsShouldProcess = true)]
     public class RemoveIntersightPartnerintegrationDeviceConnector : RemoveCmdletBase
     {
         public RemoveIntersightPartnerintegrationDeviceConnector()
@@ -2487,7 +2497,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove PartnerintegrationEtl.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationEtl")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationEtl", SupportsShouldProcess = true)]
     public class RemoveIntersightPartnerintegrationEtl : RemoveCmdletBase
     {
         public RemoveIntersightPartnerintegrationEtl()
@@ -2499,7 +2509,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove PartnerintegrationFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationFile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationFile", SupportsShouldProcess = true)]
     public class RemoveIntersightPartnerintegrationFile : RemoveCmdletBase
     {
         public RemoveIntersightPartnerintegrationFile()
@@ -2511,7 +2521,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove PartnerintegrationInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationInventory")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationInventory", SupportsShouldProcess = true)]
     public class RemoveIntersightPartnerintegrationInventory : RemoveCmdletBase
     {
         public RemoveIntersightPartnerintegrationInventory()
@@ -2523,7 +2533,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove PartnerintegrationMetrics.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationMetrics")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationMetrics", SupportsShouldProcess = true)]
     public class RemoveIntersightPartnerintegrationMetrics : RemoveCmdletBase
     {
         public RemoveIntersightPartnerintegrationMetrics()
@@ -2535,7 +2545,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove PartnerintegrationModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationModel")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightPartnerintegrationModel", SupportsShouldProcess = true)]
     public class RemoveIntersightPartnerintegrationModel : RemoveCmdletBase
     {
         public RemoveIntersightPartnerintegrationModel()
@@ -2547,7 +2557,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PartnerintegrationDeviceConnector.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationDeviceConnector")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationDeviceConnector", SupportsShouldProcess = true)]
     public class SetIntersightPartnerintegrationDeviceConnector : SetCmdletBase
     {
         public SetIntersightPartnerintegrationDeviceConnector()
@@ -2653,7 +2663,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PartnerintegrationEtl.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationEtl")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationEtl", SupportsShouldProcess = true)]
     public class SetIntersightPartnerintegrationEtl : SetCmdletBase
     {
         public SetIntersightPartnerintegrationEtl()
@@ -2753,7 +2763,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PartnerintegrationFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationFile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationFile", SupportsShouldProcess = true)]
     public class SetIntersightPartnerintegrationFile : SetCmdletBase
     {
         public SetIntersightPartnerintegrationFile()
@@ -2825,6 +2835,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PartnerintegrationFile.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -2970,7 +2990,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PartnerintegrationInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationInventory")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationInventory", SupportsShouldProcess = true)]
     public class SetIntersightPartnerintegrationInventory : SetCmdletBase
     {
         public SetIntersightPartnerintegrationInventory()
@@ -3122,7 +3142,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PartnerintegrationMetrics.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationMetrics")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationMetrics", SupportsShouldProcess = true)]
     public class SetIntersightPartnerintegrationMetrics : SetCmdletBase
     {
         public SetIntersightPartnerintegrationMetrics()
@@ -3222,7 +3242,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PartnerintegrationModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationModel")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPartnerintegrationModel", SupportsShouldProcess = true)]
     public class SetIntersightPartnerintegrationModel : SetCmdletBase
     {
         public SetIntersightPartnerintegrationModel()

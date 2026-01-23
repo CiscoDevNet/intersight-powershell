@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get TerminalAuditLog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightTerminalAuditLog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightTerminalAuditLog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightTerminalAuditLog : GetCmdletBase
     {
         public GetIntersightTerminalAuditLog()

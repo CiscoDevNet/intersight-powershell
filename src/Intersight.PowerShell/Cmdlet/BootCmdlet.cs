@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootCddDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootCddDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootCddDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootCddDevice : GetCmdletBase
     {
         public GetIntersightBootCddDevice()
@@ -316,7 +316,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootDeviceBootMode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootDeviceBootMode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootDeviceBootMode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootDeviceBootMode : GetCmdletBase
     {
         public GetIntersightBootDeviceBootMode()
@@ -523,7 +523,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootDeviceBootSecurity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootDeviceBootSecurity", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootDeviceBootSecurity", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootDeviceBootSecurity : GetCmdletBase
     {
         public GetIntersightBootDeviceBootSecurity()
@@ -719,7 +719,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootHddDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootHddDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootHddDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootHddDevice : GetCmdletBase
     {
         public GetIntersightBootHddDevice()
@@ -1025,7 +1025,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootIscsiDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootIscsiDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootIscsiDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootIscsiDevice : GetCmdletBase
     {
         public GetIntersightBootIscsiDevice()
@@ -1331,7 +1331,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootNvmeDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootNvmeDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootNvmeDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootNvmeDevice : GetCmdletBase
     {
         public GetIntersightBootNvmeDevice()
@@ -1637,7 +1637,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootPchStorageDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootPchStorageDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootPchStorageDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootPchStorageDevice : GetCmdletBase
     {
         public GetIntersightBootPchStorageDevice()
@@ -1943,7 +1943,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootPrecisionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootPrecisionPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootPrecisionPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootPrecisionPolicy : GetCmdletBase
     {
         public GetIntersightBootPrecisionPolicy()
@@ -2119,7 +2119,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootPxeDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootPxeDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootPxeDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootPxeDevice : GetCmdletBase
     {
         public GetIntersightBootPxeDevice()
@@ -2425,7 +2425,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootSanDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootSanDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootSanDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootSanDevice : GetCmdletBase
     {
         public GetIntersightBootSanDevice()
@@ -2731,7 +2731,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootSdDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootSdDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootSdDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootSdDevice : GetCmdletBase
     {
         public GetIntersightBootSdDevice()
@@ -3037,7 +3037,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootUefiShellDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootUefiShellDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootUefiShellDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootUefiShellDevice : GetCmdletBase
     {
         public GetIntersightBootUefiShellDevice()
@@ -3343,7 +3343,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootUsbDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootUsbDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootUsbDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootUsbDevice : GetCmdletBase
     {
         public GetIntersightBootUsbDevice()
@@ -3649,7 +3649,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get BootVmediaDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightBootVmediaDevice", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightBootVmediaDevice", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightBootVmediaDevice : GetCmdletBase
     {
         public GetIntersightBootVmediaDevice()
@@ -3955,7 +3955,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New BootPrecisionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightBootPrecisionPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightBootPrecisionPolicy", SupportsShouldProcess = true)]
     public class NewIntersightBootPrecisionPolicy : NewCmdletBase
     {
         public NewIntersightBootPrecisionPolicy()
@@ -4110,7 +4110,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove BootPrecisionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightBootPrecisionPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightBootPrecisionPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightBootPrecisionPolicy : RemoveCmdletBase
     {
         public RemoveIntersightBootPrecisionPolicy()
@@ -4122,7 +4122,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootCddDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootCddDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootCddDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootCddDevice : SetCmdletBase
     {
         public SetIntersightBootCddDevice()
@@ -4256,7 +4256,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootDeviceBootMode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootDeviceBootMode")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootDeviceBootMode", SupportsShouldProcess = true)]
     public class SetIntersightBootDeviceBootMode : SetCmdletBase
     {
         public SetIntersightBootDeviceBootMode()
@@ -4341,7 +4341,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootDeviceBootSecurity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootDeviceBootSecurity")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootDeviceBootSecurity", SupportsShouldProcess = true)]
     public class SetIntersightBootDeviceBootSecurity : SetCmdletBase
     {
         public SetIntersightBootDeviceBootSecurity()
@@ -4425,7 +4425,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootHddDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootHddDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootHddDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootHddDevice : SetCmdletBase
     {
         public SetIntersightBootHddDevice()
@@ -4559,7 +4559,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootIscsiDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootIscsiDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootIscsiDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootIscsiDevice : SetCmdletBase
     {
         public SetIntersightBootIscsiDevice()
@@ -4693,7 +4693,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootNvmeDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootNvmeDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootNvmeDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootNvmeDevice : SetCmdletBase
     {
         public SetIntersightBootNvmeDevice()
@@ -4827,7 +4827,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootPchStorageDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootPchStorageDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootPchStorageDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootPchStorageDevice : SetCmdletBase
     {
         public SetIntersightBootPchStorageDevice()
@@ -4961,7 +4961,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootPrecisionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootPrecisionPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootPrecisionPolicy", SupportsShouldProcess = true)]
     public class SetIntersightBootPrecisionPolicy : SetCmdletBase
     {
         public SetIntersightBootPrecisionPolicy()
@@ -5105,7 +5105,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootPxeDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootPxeDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootPxeDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootPxeDevice : SetCmdletBase
     {
         public SetIntersightBootPxeDevice()
@@ -5239,7 +5239,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootSanDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootSanDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootSanDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootSanDevice : SetCmdletBase
     {
         public SetIntersightBootSanDevice()
@@ -5373,7 +5373,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootSdDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootSdDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootSdDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootSdDevice : SetCmdletBase
     {
         public SetIntersightBootSdDevice()
@@ -5507,7 +5507,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootUefiShellDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootUefiShellDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootUefiShellDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootUefiShellDevice : SetCmdletBase
     {
         public SetIntersightBootUefiShellDevice()
@@ -5641,7 +5641,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootUsbDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootUsbDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootUsbDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootUsbDevice : SetCmdletBase
     {
         public SetIntersightBootUsbDevice()
@@ -5775,7 +5775,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set BootVmediaDevice.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightBootVmediaDevice")]
+    [Cmdlet(VerbsCommon.Set, "IntersightBootVmediaDevice", SupportsShouldProcess = true)]
     public class SetIntersightBootVmediaDevice : SetCmdletBase
     {
         public SetIntersightBootVmediaDevice()

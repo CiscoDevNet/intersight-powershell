@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeBlade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeBlade", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeBlade", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeBlade : GetCmdletBase
     {
         public GetIntersightComputeBlade()
@@ -884,7 +884,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeBladeIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeBladeIdentity", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeBladeIdentity", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeBladeIdentity : GetCmdletBase
     {
         public GetIntersightComputeBladeIdentity()
@@ -1227,7 +1227,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeBoard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeBoard", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeBoard", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeBoard : GetCmdletBase
     {
         public GetIntersightComputeBoard()
@@ -1558,7 +1558,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeDownloadStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeDownloadStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeDownloadStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeDownloadStatus : GetCmdletBase
     {
         public GetIntersightComputeDownloadStatus()
@@ -1788,7 +1788,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeHostUtilityOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeHostUtilityOperation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeHostUtilityOperation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeHostUtilityOperation : GetCmdletBase
     {
         public GetIntersightComputeHostUtilityOperation()
@@ -1963,7 +1963,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeMapping.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeMapping", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeMapping", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeMapping : GetCmdletBase
     {
         public GetIntersightComputeMapping()
@@ -2193,7 +2193,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputePcieConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputePcieConnectivityPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputePcieConnectivityPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputePcieConnectivityPolicy : GetCmdletBase
     {
         public GetIntersightComputePcieConnectivityPolicy()
@@ -2347,7 +2347,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputePcieConnectivityPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputePcieConnectivityPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputePcieConnectivityPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputePcieConnectivityPolicyInventory : GetCmdletBase
     {
         public GetIntersightComputePcieConnectivityPolicyInventory()
@@ -2511,7 +2511,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputePersonality.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputePersonality", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputePersonality", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputePersonality : GetCmdletBase
     {
         public GetIntersightComputePersonality()
@@ -2729,7 +2729,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputePhysicalSummary.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputePhysicalSummary", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputePhysicalSummary", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputePhysicalSummary : GetCmdletBase
     {
         public GetIntersightComputePhysicalSummary()
@@ -3491,7 +3491,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeRackUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeRackUnit", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeRackUnit", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeRackUnit : GetCmdletBase
     {
         public GetIntersightComputeRackUnit()
@@ -4391,7 +4391,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeRackUnitIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeRackUnitIdentity", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeRackUnitIdentity", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeRackUnitIdentity : GetCmdletBase
     {
         public GetIntersightComputeRackUnitIdentity()
@@ -4665,7 +4665,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeScrubPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeScrubPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeScrubPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeScrubPolicy : GetCmdletBase
     {
         public GetIntersightComputeScrubPolicy()
@@ -4819,7 +4819,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeServerIdPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerIdPool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerIdPool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeServerIdPool : GetCmdletBase
     {
         public GetIntersightComputeServerIdPool()
@@ -4962,7 +4962,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeServerPowerParameters.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerPowerParameters", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerPowerParameters", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeServerPowerParameters : GetCmdletBase
     {
         public GetIntersightComputeServerPowerParameters()
@@ -5202,7 +5202,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeServerPowerPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerPowerPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerPowerPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeServerPowerPolicy : GetCmdletBase
     {
         public GetIntersightComputeServerPowerPolicy()
@@ -5399,7 +5399,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeServerSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerSetting", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeServerSetting", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeServerSetting : GetCmdletBase
     {
         public GetIntersightComputeServerSetting()
@@ -5758,7 +5758,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ComputeVmedia.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightComputeVmedia", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightComputeVmedia", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightComputeVmedia : GetCmdletBase
     {
         public GetIntersightComputeVmedia()
@@ -5977,7 +5977,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ComputeHostUtilityOperation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightComputeHostUtilityOperation")]
+    [Cmdlet(VerbsCommon.New, "IntersightComputeHostUtilityOperation", SupportsShouldProcess = true)]
     public class NewIntersightComputeHostUtilityOperation : NewCmdletBase
     {
         public NewIntersightComputeHostUtilityOperation()
@@ -6091,7 +6091,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ComputePcieConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightComputePcieConnectivityPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightComputePcieConnectivityPolicy", SupportsShouldProcess = true)]
     public class NewIntersightComputePcieConnectivityPolicy : NewCmdletBase
     {
         public NewIntersightComputePcieConnectivityPolicy()
@@ -6224,7 +6224,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ComputeScrubPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightComputeScrubPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightComputeScrubPolicy", SupportsShouldProcess = true)]
     public class NewIntersightComputeScrubPolicy : NewCmdletBase
     {
         public NewIntersightComputeScrubPolicy()
@@ -6357,7 +6357,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ComputePcieConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightComputePcieConnectivityPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightComputePcieConnectivityPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightComputePcieConnectivityPolicy : RemoveCmdletBase
     {
         public RemoveIntersightComputePcieConnectivityPolicy()
@@ -6369,7 +6369,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ComputeRackUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightComputeRackUnit")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightComputeRackUnit", SupportsShouldProcess = true)]
     public class RemoveIntersightComputeRackUnit : RemoveCmdletBase
     {
         public RemoveIntersightComputeRackUnit()
@@ -6381,7 +6381,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ComputeRackUnitIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightComputeRackUnitIdentity")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightComputeRackUnitIdentity", SupportsShouldProcess = true)]
     public class RemoveIntersightComputeRackUnitIdentity : RemoveCmdletBase
     {
         public RemoveIntersightComputeRackUnitIdentity()
@@ -6393,7 +6393,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ComputeScrubPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightComputeScrubPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightComputeScrubPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightComputeScrubPolicy : RemoveCmdletBase
     {
         public RemoveIntersightComputeScrubPolicy()
@@ -6405,7 +6405,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ComputeServerPowerPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightComputeServerPowerPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightComputeServerPowerPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightComputeServerPowerPolicy : RemoveCmdletBase
     {
         public RemoveIntersightComputeServerPowerPolicy()
@@ -6417,7 +6417,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeBlade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeBlade")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeBlade", SupportsShouldProcess = true)]
     public class SetIntersightComputeBlade : SetCmdletBase
     {
         public SetIntersightComputeBlade()
@@ -6929,7 +6929,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeBladeIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeBladeIdentity")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeBladeIdentity", SupportsShouldProcess = true)]
     public class SetIntersightComputeBladeIdentity : SetCmdletBase
     {
         public SetIntersightComputeBladeIdentity()
@@ -7040,7 +7040,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeBoard.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeBoard")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeBoard", SupportsShouldProcess = true)]
     public class SetIntersightComputeBoard : SetCmdletBase
     {
         public SetIntersightComputeBoard()
@@ -7139,7 +7139,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeMapping.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeMapping")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeMapping", SupportsShouldProcess = true)]
     public class SetIntersightComputeMapping : SetCmdletBase
     {
         public SetIntersightComputeMapping()
@@ -7227,7 +7227,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputePcieConnectivityPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputePcieConnectivityPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputePcieConnectivityPolicy", SupportsShouldProcess = true)]
     public class SetIntersightComputePcieConnectivityPolicy : SetCmdletBase
     {
         public SetIntersightComputePcieConnectivityPolicy()
@@ -7349,7 +7349,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputePersonality.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputePersonality")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputePersonality", SupportsShouldProcess = true)]
     public class SetIntersightComputePersonality : SetCmdletBase
     {
         public SetIntersightComputePersonality()
@@ -7425,7 +7425,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeRackUnit.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeRackUnit")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeRackUnit", SupportsShouldProcess = true)]
     public class SetIntersightComputeRackUnit : SetCmdletBase
     {
         public SetIntersightComputeRackUnit()
@@ -7973,7 +7973,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeRackUnitIdentity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeRackUnitIdentity")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeRackUnitIdentity", SupportsShouldProcess = true)]
     public class SetIntersightComputeRackUnitIdentity : SetCmdletBase
     {
         public SetIntersightComputeRackUnitIdentity()
@@ -8075,7 +8075,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeScrubPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeScrubPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeScrubPolicy", SupportsShouldProcess = true)]
     public class SetIntersightComputeScrubPolicy : SetCmdletBase
     {
         public SetIntersightComputeScrubPolicy()
@@ -8197,7 +8197,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeServerPowerPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeServerPowerPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeServerPowerPolicy", SupportsShouldProcess = true)]
     public class SetIntersightComputeServerPowerPolicy : SetCmdletBase
     {
         public SetIntersightComputeServerPowerPolicy()
@@ -8322,7 +8322,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ComputeServerSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightComputeServerSetting")]
+    [Cmdlet(VerbsCommon.Set, "IntersightComputeServerSetting", SupportsShouldProcess = true)]
     public class SetIntersightComputeServerSetting : SetCmdletBase
     {
         public SetIntersightComputeServerSetting()

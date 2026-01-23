@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkloadBlueprint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadBlueprint", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadBlueprint", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkloadBlueprint : GetCmdletBase
     {
         public GetIntersightWorkloadBlueprint()
@@ -225,7 +225,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkloadClearWorkloadTag.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadClearWorkloadTag", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadClearWorkloadTag", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkloadClearWorkloadTag : GetCmdletBase
     {
         public GetIntersightWorkloadClearWorkloadTag()
@@ -345,7 +345,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkloadDeploymentInput.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadDeploymentInput", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadDeploymentInput", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkloadDeploymentInput : GetCmdletBase
     {
         public GetIntersightWorkloadDeploymentInput()
@@ -498,7 +498,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkloadWorkloadDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadWorkloadDefinition", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadWorkloadDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkloadWorkloadDefinition : GetCmdletBase
     {
         public GetIntersightWorkloadWorkloadDefinition()
@@ -710,7 +710,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkloadWorkloadDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadWorkloadDeployment", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadWorkloadDeployment", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkloadWorkloadDeployment : GetCmdletBase
     {
         public GetIntersightWorkloadWorkloadDeployment()
@@ -1026,7 +1026,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkloadWorkloadInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadWorkloadInstance", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadWorkloadInstance", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkloadWorkloadInstance : GetCmdletBase
     {
         public GetIntersightWorkloadWorkloadInstance()
@@ -1281,7 +1281,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get WorkloadWorkloadMetadata.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadWorkloadMetadata", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightWorkloadWorkloadMetadata", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightWorkloadWorkloadMetadata : GetCmdletBase
     {
         public GetIntersightWorkloadWorkloadMetadata()
@@ -1424,7 +1424,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkloadBlueprint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkloadBlueprint")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkloadBlueprint", SupportsShouldProcess = true)]
     public class NewIntersightWorkloadBlueprint : NewCmdletBase
     {
         public NewIntersightWorkloadBlueprint()
@@ -1668,7 +1668,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkloadClearWorkloadTag.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkloadClearWorkloadTag")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkloadClearWorkloadTag", SupportsShouldProcess = true)]
     public class NewIntersightWorkloadClearWorkloadTag : NewCmdletBase
     {
         public NewIntersightWorkloadClearWorkloadTag()
@@ -1757,7 +1757,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkloadWorkloadDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkloadWorkloadDefinition")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkloadWorkloadDefinition", SupportsShouldProcess = true)]
     public class NewIntersightWorkloadWorkloadDefinition : NewCmdletBase
     {
         public NewIntersightWorkloadWorkloadDefinition()
@@ -1938,7 +1938,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New WorkloadWorkloadDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightWorkloadWorkloadDeployment")]
+    [Cmdlet(VerbsCommon.New, "IntersightWorkloadWorkloadDeployment", SupportsShouldProcess = true)]
     public class NewIntersightWorkloadWorkloadDeployment : NewCmdletBase
     {
         public NewIntersightWorkloadWorkloadDeployment()
@@ -2163,7 +2163,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkloadBlueprint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkloadBlueprint")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkloadBlueprint", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkloadBlueprint : RemoveCmdletBase
     {
         public RemoveIntersightWorkloadBlueprint()
@@ -2175,7 +2175,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkloadClearWorkloadTag.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkloadClearWorkloadTag")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkloadClearWorkloadTag", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkloadClearWorkloadTag : RemoveCmdletBase
     {
         public RemoveIntersightWorkloadClearWorkloadTag()
@@ -2187,7 +2187,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkloadWorkloadDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkloadWorkloadDefinition")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkloadWorkloadDefinition", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkloadWorkloadDefinition : RemoveCmdletBase
     {
         public RemoveIntersightWorkloadWorkloadDefinition()
@@ -2199,7 +2199,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkloadWorkloadDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkloadWorkloadDeployment")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkloadWorkloadDeployment", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkloadWorkloadDeployment : RemoveCmdletBase
     {
         public RemoveIntersightWorkloadWorkloadDeployment()
@@ -2211,7 +2211,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove WorkloadWorkloadInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightWorkloadWorkloadInstance")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightWorkloadWorkloadInstance", SupportsShouldProcess = true)]
     public class RemoveIntersightWorkloadWorkloadInstance : RemoveCmdletBase
     {
         public RemoveIntersightWorkloadWorkloadInstance()
@@ -2223,7 +2223,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkloadBlueprint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkloadBlueprint")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkloadBlueprint", SupportsShouldProcess = true)]
     public class SetIntersightWorkloadBlueprint : SetCmdletBase
     {
         public SetIntersightWorkloadBlueprint()
@@ -2456,7 +2456,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkloadWorkloadDefinition.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkloadWorkloadDefinition")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkloadWorkloadDefinition", SupportsShouldProcess = true)]
     public class SetIntersightWorkloadWorkloadDefinition : SetCmdletBase
     {
         public SetIntersightWorkloadWorkloadDefinition()
@@ -2626,7 +2626,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkloadWorkloadDeployment.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkloadWorkloadDeployment")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkloadWorkloadDeployment", SupportsShouldProcess = true)]
     public class SetIntersightWorkloadWorkloadDeployment : SetCmdletBase
     {
         public SetIntersightWorkloadWorkloadDeployment()
@@ -2840,7 +2840,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set WorkloadWorkloadInstance.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightWorkloadWorkloadInstance")]
+    [Cmdlet(VerbsCommon.Set, "IntersightWorkloadWorkloadInstance", SupportsShouldProcess = true)]
     public class SetIntersightWorkloadWorkloadInstance : SetCmdletBase
     {
         public SetIntersightWorkloadWorkloadInstance()

@@ -710,6 +710,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The checksum of the downloaded file as calculated by the download plugin after successfully downloading a file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ConnectorFileChecksum Checksum
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -725,6 +735,36 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ServerDiagnosticStatus.DiagnosticsTypeEnum DiagnosticsType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Any error encountered. Set to empty when download is in progress or completed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DownloadError
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DownloadProgress
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of retries the plugin attempted before succeeding or failing the download."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DownloadRetries
         {
             get;
             set;
@@ -760,6 +800,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The sha256checksum of the downloaded file as calculated by the download plugin after successfully downloading a file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public byte[] Sha256checksum
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -778,10 +828,26 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Checksum"))
+            {
+                initObject.Checksum = this.Checksum;
+            }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("DiagnosticsType"))
             {
                 initObject.DiagnosticsType = this.DiagnosticsType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DownloadError"))
+            {
+                initObject.DownloadError = this.DownloadError;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DownloadProgress"))
+            {
+                initObject.DownloadProgress = this.DownloadProgress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DownloadRetries"))
+            {
+                initObject.DownloadRetries = this.DownloadRetries;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
@@ -791,6 +857,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Server"))
             {
                 initObject.Server = this.Server;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Sha256checksum"))
+            {
+                initObject.Sha256checksum = this.Sha256checksum;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

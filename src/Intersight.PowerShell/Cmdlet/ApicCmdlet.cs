@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicAciPod.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicAciPod", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicAciPod", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicAciPod : GetCmdletBase
     {
         public GetIntersightApicAciPod()
@@ -162,7 +162,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicApplication.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicApplication", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicApplication", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicApplication : GetCmdletBase
     {
         public GetIntersightApicApplication()
@@ -325,7 +325,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicApplicationEndpointGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicApplicationEndpointGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicApplicationEndpointGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicApplicationEndpointGroup : GetCmdletBase
     {
         public GetIntersightApicApplicationEndpointGroup()
@@ -488,7 +488,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicBridgeDomain.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicBridgeDomain", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicBridgeDomain", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicBridgeDomain : GetCmdletBase
     {
         public GetIntersightApicBridgeDomain()
@@ -651,7 +651,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicExternalRoutedLayerThreeDomain.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicExternalRoutedLayerThreeDomain", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicExternalRoutedLayerThreeDomain", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicExternalRoutedLayerThreeDomain : GetCmdletBase
     {
         public GetIntersightApicExternalRoutedLayerThreeDomain()
@@ -803,7 +803,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicFabricLeafNode.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicFabricLeafNode", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicFabricLeafNode", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicFabricLeafNode : GetCmdletBase
     {
         public GetIntersightApicFabricLeafNode()
@@ -978,7 +978,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicFabricLeafNodeInterface.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicFabricLeafNodeInterface", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicFabricLeafNodeInterface", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicFabricLeafNodeInterface : GetCmdletBase
     {
         public GetIntersightApicFabricLeafNodeInterface()
@@ -1163,7 +1163,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicOut.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicOut", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicOut", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicOut : GetCmdletBase
     {
         public GetIntersightApicOut()
@@ -1326,7 +1326,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicSubnet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicSubnet", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicSubnet", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicSubnet : GetCmdletBase
     {
         public GetIntersightApicSubnet()
@@ -1500,7 +1500,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicTenant.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicTenant", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicTenant", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicTenant : GetCmdletBase
     {
         public GetIntersightApicTenant()
@@ -1663,7 +1663,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicVpcGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicVpcGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicVpcGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicVpcGroup : GetCmdletBase
     {
         public GetIntersightApicVpcGroup()
@@ -1815,7 +1815,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ApicVrfs.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightApicVrfs", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightApicVrfs", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightApicVrfs : GetCmdletBase
     {
         public GetIntersightApicVrfs()

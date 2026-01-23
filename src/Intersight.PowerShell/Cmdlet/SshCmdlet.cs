@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SshPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSshPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSshPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSshPolicy : GetCmdletBase
     {
         public GetIntersightSshPolicy()
@@ -196,7 +196,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SshPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSshPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSshPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSshPolicyInventory : GetCmdletBase
     {
         public GetIntersightSshPolicyInventory()
@@ -392,7 +392,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SshPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSshPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightSshPolicy", SupportsShouldProcess = true)]
     public class NewIntersightSshPolicy : NewCmdletBase
     {
         public NewIntersightSshPolicy()
@@ -547,7 +547,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SshPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSshPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSshPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightSshPolicy : RemoveCmdletBase
     {
         public RemoveIntersightSshPolicy()
@@ -559,7 +559,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SshPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSshPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSshPolicy", SupportsShouldProcess = true)]
     public class SetIntersightSshPolicy : SetCmdletBase
     {
         public SetIntersightSshPolicy()

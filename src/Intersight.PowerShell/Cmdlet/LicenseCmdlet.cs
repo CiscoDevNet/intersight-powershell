@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseAccountLicenseData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseAccountLicenseData", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseAccountLicenseData", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseAccountLicenseData : GetCmdletBase
     {
         public GetIntersightLicenseAccountLicenseData()
@@ -581,7 +581,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseCustomerOp", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseCustomerOp", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseCustomerOp : GetCmdletBase
     {
         public GetIntersightLicenseCustomerOp()
@@ -821,7 +821,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseErpCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseErpCustomerOp", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseErpCustomerOp", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseErpCustomerOp : GetCmdletBase
     {
         public GetIntersightLicenseErpCustomerOp()
@@ -995,7 +995,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseErpLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseErpLicenseCount", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseErpLicenseCount", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseErpLicenseCount : GetCmdletBase
     {
         public GetIntersightLicenseErpLicenseCount()
@@ -1136,7 +1136,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseIksCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIksCustomerOp", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIksCustomerOp", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseIksCustomerOp : GetCmdletBase
     {
         public GetIntersightLicenseIksCustomerOp()
@@ -1310,7 +1310,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseIksLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIksLicenseCount", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIksLicenseCount", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseIksLicenseCount : GetCmdletBase
     {
         public GetIntersightLicenseIksLicenseCount()
@@ -1451,7 +1451,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseIncCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIncCustomerOp", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIncCustomerOp", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseIncCustomerOp : GetCmdletBase
     {
         public GetIntersightLicenseIncCustomerOp()
@@ -1636,7 +1636,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseIncLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIncLicenseCount", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIncLicenseCount", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseIncLicenseCount : GetCmdletBase
     {
         public GetIntersightLicenseIncLicenseCount()
@@ -1865,7 +1865,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseIwoCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIwoCustomerOp", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIwoCustomerOp", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseIwoCustomerOp : GetCmdletBase
     {
         public GetIntersightLicenseIwoCustomerOp()
@@ -2050,7 +2050,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseIwoLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIwoLicenseCount", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseIwoLicenseCount", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseIwoLicenseCount : GetCmdletBase
     {
         public GetIntersightLicenseIwoLicenseCount()
@@ -2191,7 +2191,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseLicenseInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseLicenseInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseLicenseInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseLicenseInfo : GetCmdletBase
     {
         public GetIntersightLicenseLicenseInfo()
@@ -2340,6 +2340,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long ExtraEvaluation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The last time the trial/grace period evaluation was performed for this license."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime LastTrialGraceEvalTime
         {
             get;
             set;
@@ -2509,7 +2520,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseLicenseInfoView.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseLicenseInfoView", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseLicenseInfoView", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseLicenseInfoView : GetCmdletBase
     {
         public GetIntersightLicenseLicenseInfoView()
@@ -2639,7 +2650,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseLicenseRegistrationStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseLicenseRegistrationStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseLicenseRegistrationStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseLicenseRegistrationStatus : GetCmdletBase
     {
         public GetIntersightLicenseLicenseRegistrationStatus()
@@ -2813,7 +2824,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseLicenseReservationOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseLicenseReservationOp", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseLicenseReservationOp", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseLicenseReservationOp : GetCmdletBase
     {
         public GetIntersightLicenseLicenseReservationOp()
@@ -3020,7 +3031,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get LicenseSmartlicenseToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightLicenseSmartlicenseToken", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightLicenseSmartlicenseToken", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightLicenseSmartlicenseToken : GetCmdletBase
     {
         public GetIntersightLicenseSmartlicenseToken()
@@ -3161,7 +3172,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New LicenseErpLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightLicenseErpLicenseCount")]
+    [Cmdlet(VerbsCommon.New, "IntersightLicenseErpLicenseCount", SupportsShouldProcess = true)]
     public class NewIntersightLicenseErpLicenseCount : NewCmdletBase
     {
         public NewIntersightLicenseErpLicenseCount()
@@ -3251,7 +3262,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New LicenseIksLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightLicenseIksLicenseCount")]
+    [Cmdlet(VerbsCommon.New, "IntersightLicenseIksLicenseCount", SupportsShouldProcess = true)]
     public class NewIntersightLicenseIksLicenseCount : NewCmdletBase
     {
         public NewIntersightLicenseIksLicenseCount()
@@ -3341,7 +3352,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New LicenseIncLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightLicenseIncLicenseCount")]
+    [Cmdlet(VerbsCommon.New, "IntersightLicenseIncLicenseCount", SupportsShouldProcess = true)]
     public class NewIntersightLicenseIncLicenseCount : NewCmdletBase
     {
         public NewIntersightLicenseIncLicenseCount()
@@ -3439,7 +3450,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New LicenseIwoLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightLicenseIwoLicenseCount")]
+    [Cmdlet(VerbsCommon.New, "IntersightLicenseIwoLicenseCount", SupportsShouldProcess = true)]
     public class NewIntersightLicenseIwoLicenseCount : NewCmdletBase
     {
         public NewIntersightLicenseIwoLicenseCount()
@@ -3529,7 +3540,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New LicenseLicenseInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightLicenseLicenseInfo")]
+    [Cmdlet(VerbsCommon.New, "IntersightLicenseLicenseInfo", SupportsShouldProcess = true)]
     public class NewIntersightLicenseLicenseInfo : NewCmdletBase
     {
         public NewIntersightLicenseLicenseInfo()
@@ -3599,6 +3610,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -3656,7 +3668,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New LicenseLicenseReservationOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightLicenseLicenseReservationOp")]
+    [Cmdlet(VerbsCommon.New, "IntersightLicenseLicenseReservationOp", SupportsShouldProcess = true)]
     public class NewIntersightLicenseLicenseReservationOp : NewCmdletBase
     {
         public NewIntersightLicenseLicenseReservationOp()
@@ -3772,7 +3784,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseAccountLicenseData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseAccountLicenseData")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseAccountLicenseData", SupportsShouldProcess = true)]
     public class SetIntersightLicenseAccountLicenseData : SetCmdletBase
     {
         public SetIntersightLicenseAccountLicenseData()
@@ -4031,7 +4043,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseCustomerOp")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseCustomerOp", SupportsShouldProcess = true)]
     public class SetIntersightLicenseCustomerOp : SetCmdletBase
     {
         public SetIntersightLicenseCustomerOp()
@@ -4219,7 +4231,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseErpCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseErpCustomerOp")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseErpCustomerOp", SupportsShouldProcess = true)]
     public class SetIntersightLicenseErpCustomerOp : SetCmdletBase
     {
         public SetIntersightLicenseErpCustomerOp()
@@ -4341,7 +4353,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseErpLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseErpLicenseCount")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseErpLicenseCount", SupportsShouldProcess = true)]
     public class SetIntersightLicenseErpLicenseCount : SetCmdletBase
     {
         public SetIntersightLicenseErpLicenseCount()
@@ -4420,7 +4432,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseIksCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIksCustomerOp")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIksCustomerOp", SupportsShouldProcess = true)]
     public class SetIntersightLicenseIksCustomerOp : SetCmdletBase
     {
         public SetIntersightLicenseIksCustomerOp()
@@ -4542,7 +4554,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseIksLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIksLicenseCount")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIksLicenseCount", SupportsShouldProcess = true)]
     public class SetIntersightLicenseIksLicenseCount : SetCmdletBase
     {
         public SetIntersightLicenseIksLicenseCount()
@@ -4621,7 +4633,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseIncCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIncCustomerOp")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIncCustomerOp", SupportsShouldProcess = true)]
     public class SetIntersightLicenseIncCustomerOp : SetCmdletBase
     {
         public SetIntersightLicenseIncCustomerOp()
@@ -4754,7 +4766,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseIncLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIncLicenseCount")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIncLicenseCount", SupportsShouldProcess = true)]
     public class SetIntersightLicenseIncLicenseCount : SetCmdletBase
     {
         public SetIntersightLicenseIncLicenseCount()
@@ -4841,7 +4853,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseIwoCustomerOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIwoCustomerOp")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIwoCustomerOp", SupportsShouldProcess = true)]
     public class SetIntersightLicenseIwoCustomerOp : SetCmdletBase
     {
         public SetIntersightLicenseIwoCustomerOp()
@@ -4974,7 +4986,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseIwoLicenseCount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIwoLicenseCount")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseIwoLicenseCount", SupportsShouldProcess = true)]
     public class SetIntersightLicenseIwoLicenseCount : SetCmdletBase
     {
         public SetIntersightLicenseIwoLicenseCount()
@@ -5053,7 +5065,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseLicenseInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseLicenseInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseLicenseInfo", SupportsShouldProcess = true)]
     public class SetIntersightLicenseLicenseInfo : SetCmdletBase
     {
         public SetIntersightLicenseLicenseInfo()
@@ -5123,6 +5135,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -5169,7 +5182,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseLicenseRegistrationStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseLicenseRegistrationStatus")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseLicenseRegistrationStatus", SupportsShouldProcess = true)]
     public class SetIntersightLicenseLicenseRegistrationStatus : SetCmdletBase
     {
         public SetIntersightLicenseLicenseRegistrationStatus()
@@ -5281,7 +5294,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseLicenseReservationOp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseLicenseReservationOp")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseLicenseReservationOp", SupportsShouldProcess = true)]
     public class SetIntersightLicenseLicenseReservationOp : SetCmdletBase
     {
         public SetIntersightLicenseLicenseReservationOp()
@@ -5386,7 +5399,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set LicenseSmartlicenseToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightLicenseSmartlicenseToken")]
+    [Cmdlet(VerbsCommon.Set, "IntersightLicenseSmartlicenseToken", SupportsShouldProcess = true)]
     public class SetIntersightLicenseSmartlicenseToken : SetCmdletBase
     {
         public SetIntersightLicenseSmartlicenseToken()

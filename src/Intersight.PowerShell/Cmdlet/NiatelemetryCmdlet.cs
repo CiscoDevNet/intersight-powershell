@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryAaaLdapProviderDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryAaaLdapProviderDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryAaaLdapProviderDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryAaaLdapProviderDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryAaaLdapProviderDetails()
@@ -217,7 +217,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryAaaRadiusProviderDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryAaaRadiusProviderDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryAaaRadiusProviderDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryAaaRadiusProviderDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryAaaRadiusProviderDetails()
@@ -402,7 +402,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryAaaTacacsProviderDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryAaaTacacsProviderDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryAaaTacacsProviderDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryAaaTacacsProviderDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryAaaTacacsProviderDetails()
@@ -587,7 +587,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicAppPluginDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicAppPluginDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicAppPluginDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicAppPluginDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicAppPluginDetails()
@@ -783,7 +783,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicCoreFileDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicCoreFileDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicCoreFileDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicCoreFileDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicCoreFileDetails()
@@ -1166,7 +1166,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicDbgexpRsExportDest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicDbgexpRsExportDest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicDbgexpRsExportDest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicDbgexpRsExportDest : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicDbgexpRsExportDest()
@@ -1340,7 +1340,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicDbgexpRsTsScheduler.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicDbgexpRsTsScheduler", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicDbgexpRsTsScheduler", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicDbgexpRsTsScheduler : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicDbgexpRsTsScheduler()
@@ -1514,7 +1514,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicFanDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicFanDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicFanDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicFanDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicFanDetails()
@@ -1743,7 +1743,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicFexDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicFexDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicFexDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicFexDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicFexDetails()
@@ -1972,7 +1972,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicFlashDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicFlashDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicFlashDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicFlashDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicFlashDetails()
@@ -2179,7 +2179,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicNtpAuth.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicNtpAuth", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicNtpAuth", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicNtpAuth : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicNtpAuth()
@@ -2364,7 +2364,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicPerformanceData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicPerformanceData", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicPerformanceData", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicPerformanceData : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicPerformanceData()
@@ -2559,7 +2559,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicPodData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicPodData", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicPodData", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicPodData : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicPodData()
@@ -2755,7 +2755,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicPsuDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicPsuDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicPsuDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicPsuDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicPsuDetails()
@@ -2984,7 +2984,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicRealmDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicRealmDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicRealmDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicRealmDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicRealmDetails()
@@ -3169,7 +3169,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicSnmpClientGrpDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpClientGrpDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpClientGrpDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicSnmpClientGrpDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicSnmpClientGrpDetails()
@@ -3376,7 +3376,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicSnmpCommunityAccessDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpCommunityAccessDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpCommunityAccessDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicSnmpCommunityAccessDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicSnmpCommunityAccessDetails()
@@ -3561,7 +3561,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicSnmpCommunityDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpCommunityDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpCommunityDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicSnmpCommunityDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicSnmpCommunityDetails()
@@ -3746,7 +3746,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicSnmpTrapDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpTrapDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpTrapDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicSnmpTrapDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicSnmpTrapDetails()
@@ -3942,7 +3942,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicSnmpTrapFwdServerDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpTrapFwdServerDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpTrapFwdServerDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicSnmpTrapFwdServerDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicSnmpTrapFwdServerDetails()
@@ -4138,7 +4138,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicSnmpVersionThreeDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpVersionThreeDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSnmpVersionThreeDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicSnmpVersionThreeDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicSnmpVersionThreeDetails()
@@ -4345,7 +4345,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicSysLogGrp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSysLogGrp", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSysLogGrp", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicSysLogGrp : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicSysLogGrp()
@@ -4530,7 +4530,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicSysLogSrc.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSysLogSrc", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicSysLogSrc", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicSysLogSrc : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicSysLogSrc()
@@ -4737,7 +4737,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicTransceiverDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicTransceiverDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicTransceiverDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicTransceiverDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicTransceiverDetails()
@@ -4955,7 +4955,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicUiPageCounts.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicUiPageCounts", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicUiPageCounts", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicUiPageCounts : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicUiPageCounts()
@@ -5151,7 +5151,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryApicVision.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicVision", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryApicVision", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryApicVision : GetCmdletBase
     {
         public GetIntersightNiatelemetryApicVision()
@@ -5325,7 +5325,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryAppDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryAppDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryAppDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryAppDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryAppDetails()
@@ -5521,7 +5521,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryCloudDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryCloudDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryCloudDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryCloudDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryCloudDetails()
@@ -5707,7 +5707,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryCommonPolicies.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryCommonPolicies", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryCommonPolicies", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryCommonPolicies : GetCmdletBase
     {
         public GetIntersightNiatelemetryCommonPolicies()
@@ -5914,7 +5914,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryDcnmFanDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDcnmFanDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDcnmFanDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryDcnmFanDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryDcnmFanDetails()
@@ -6110,7 +6110,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryDcnmFexDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDcnmFexDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDcnmFexDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryDcnmFexDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryDcnmFexDetails()
@@ -6306,7 +6306,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryDcnmModuleDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDcnmModuleDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDcnmModuleDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryDcnmModuleDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryDcnmModuleDetails()
@@ -6502,7 +6502,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryDcnmPsuDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDcnmPsuDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDcnmPsuDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryDcnmPsuDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryDcnmPsuDetails()
@@ -6698,7 +6698,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryDcnmTransceiverDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDcnmTransceiverDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDcnmTransceiverDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryDcnmTransceiverDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryDcnmTransceiverDetails()
@@ -6894,7 +6894,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryDomInfoObject.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDomInfoObject", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDomInfoObject", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryDomInfoObject : GetCmdletBase
     {
         public GetIntersightNiatelemetryDomInfoObject()
@@ -7080,7 +7080,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryDomThresInfoObject.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDomThresInfoObject", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryDomThresInfoObject", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryDomThresInfoObject : GetCmdletBase
     {
         public GetIntersightNiatelemetryDomThresInfoObject()
@@ -7255,7 +7255,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryEpg.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryEpg", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryEpg", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryEpg : GetCmdletBase
     {
         public GetIntersightNiatelemetryEpg()
@@ -7572,7 +7572,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryFabricModuleDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryFabricModuleDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryFabricModuleDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryFabricModuleDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryFabricModuleDetails()
@@ -7801,7 +7801,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryFabricNodeControlDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryFabricNodeControlDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryFabricNodeControlDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryFabricNodeControlDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryFabricNodeControlDetails()
@@ -7986,7 +7986,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryFabricPodProfile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryFabricPodProfile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryFabricPodProfile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryFabricPodProfile : GetCmdletBase
     {
         public GetIntersightNiatelemetryFabricPodProfile()
@@ -8182,7 +8182,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryFabricPodSs.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryFabricPodSs", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryFabricPodSs", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryFabricPodSs : GetCmdletBase
     {
         public GetIntersightNiatelemetryFabricPodSs()
@@ -8400,7 +8400,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryFault.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryFault", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryFault", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryFault : GetCmdletBase
     {
         public GetIntersightNiatelemetryFault()
@@ -8640,7 +8640,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryHcloudDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHcloudDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHcloudDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryHcloudDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryHcloudDetails()
@@ -8892,7 +8892,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryHealthInsightsData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHealthInsightsData", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHealthInsightsData", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryHealthInsightsData : GetCmdletBase
     {
         public GetIntersightNiatelemetryHealthInsightsData()
@@ -9088,7 +9088,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryHttpsAclContractDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHttpsAclContractDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHttpsAclContractDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryHttpsAclContractDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryHttpsAclContractDetails()
@@ -9306,7 +9306,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryHttpsAclContractFilterMap.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHttpsAclContractFilterMap", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHttpsAclContractFilterMap", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryHttpsAclContractFilterMap : GetCmdletBase
     {
         public GetIntersightNiatelemetryHttpsAclContractFilterMap()
@@ -9502,7 +9502,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryHttpsAclEpgContractMap.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHttpsAclEpgContractMap", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHttpsAclEpgContractMap", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryHttpsAclEpgContractMap : GetCmdletBase
     {
         public GetIntersightNiatelemetryHttpsAclEpgContractMap()
@@ -9709,7 +9709,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryHttpsAclEpgDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHttpsAclEpgDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHttpsAclEpgDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryHttpsAclEpgDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryHttpsAclEpgDetails()
@@ -9894,7 +9894,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryHttpsAclFilterDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHttpsAclFilterDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryHttpsAclFilterDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryHttpsAclFilterDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryHttpsAclFilterDetails()
@@ -10134,7 +10134,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryInsightGroupDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryInsightGroupDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryInsightGroupDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryInsightGroupDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryInsightGroupDetails()
@@ -10397,7 +10397,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryLc.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryLc", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryLc", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryLc : GetCmdletBase
     {
         public GetIntersightNiatelemetryLc()
@@ -10670,7 +10670,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryLeafPolGrpDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryLeafPolGrpDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryLeafPolGrpDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryLeafPolGrpDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryLeafPolGrpDetails()
@@ -10899,7 +10899,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryMdsNeighbors.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMdsNeighbors", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMdsNeighbors", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryMdsNeighbors : GetCmdletBase
     {
         public GetIntersightNiatelemetryMdsNeighbors()
@@ -11096,7 +11096,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryMsoContractDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMsoContractDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMsoContractDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryMsoContractDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryMsoContractDetails()
@@ -11303,7 +11303,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryMsoEpgDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMsoEpgDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMsoEpgDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryMsoEpgDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryMsoEpgDetails()
@@ -11510,7 +11510,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryMsoSchemaDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMsoSchemaDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMsoSchemaDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryMsoSchemaDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryMsoSchemaDetails()
@@ -11706,7 +11706,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryMsoSiteDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMsoSiteDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMsoSiteDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryMsoSiteDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryMsoSiteDetails()
@@ -11924,7 +11924,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryMsoTenantDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMsoTenantDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryMsoTenantDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryMsoTenantDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryMsoTenantDetails()
@@ -12109,7 +12109,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNexusCloudAccount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusCloudAccount", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusCloudAccount", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNexusCloudAccount : GetCmdletBase
     {
         public GetIntersightNiatelemetryNexusCloudAccount()
@@ -12261,7 +12261,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNexusCloudSite.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusCloudSite", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusCloudSite", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNexusCloudSite : GetCmdletBase
     {
         public GetIntersightNiatelemetryNexusCloudSite()
@@ -12479,7 +12479,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNexusDashboardControllerDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusDashboardControllerDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusDashboardControllerDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNexusDashboardControllerDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryNexusDashboardControllerDetails()
@@ -12653,7 +12653,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNexusDashboardDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusDashboardDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusDashboardDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNexusDashboardDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryNexusDashboardDetails()
@@ -12838,7 +12838,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNexusDashboardMemoryDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusDashboardMemoryDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusDashboardMemoryDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNexusDashboardMemoryDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetryNexusDashboardMemoryDetails()
@@ -13001,7 +13001,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNexusDashboards.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusDashboards", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNexusDashboards", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNexusDashboards : GetCmdletBase
     {
         public GetIntersightNiatelemetryNexusDashboards()
@@ -13319,7 +13319,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNiaFeatureUsage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNiaFeatureUsage", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNiaFeatureUsage", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNiaFeatureUsage : GetCmdletBase
     {
         public GetIntersightNiatelemetryNiaFeatureUsage()
@@ -14671,7 +14671,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNiaInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNiaInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNiaInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNiaInventory : GetCmdletBase
     {
         public GetIntersightNiatelemetryNiaInventory()
@@ -15340,7 +15340,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNiaInventoryDcnm.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNiaInventoryDcnm", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNiaInventoryDcnm", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNiaInventoryDcnm : GetCmdletBase
     {
         public GetIntersightNiatelemetryNiaInventoryDcnm()
@@ -15825,7 +15825,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNiaInventoryFabric.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNiaInventoryFabric", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNiaInventoryFabric", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNiaInventoryFabric : GetCmdletBase
     {
         public GetIntersightNiatelemetryNiaInventoryFabric()
@@ -16487,7 +16487,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNiaLicenseState.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNiaLicenseState", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNiaLicenseState", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNiaLicenseState : GetCmdletBase
     {
         public GetIntersightNiatelemetryNiaLicenseState()
@@ -16694,7 +16694,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryNicc.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNicc", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryNicc", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryNicc : GetCmdletBase
     {
         public GetIntersightNiatelemetryNicc()
@@ -16868,7 +16868,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryPasswordStrengthCheck.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryPasswordStrengthCheck", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryPasswordStrengthCheck", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryPasswordStrengthCheck : GetCmdletBase
     {
         public GetIntersightNiatelemetryPasswordStrengthCheck()
@@ -17053,7 +17053,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryPodCommPolicies.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryPodCommPolicies", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryPodCommPolicies", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryPodCommPolicies : GetCmdletBase
     {
         public GetIntersightNiatelemetryPodCommPolicies()
@@ -17271,7 +17271,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryPodSnmpPolicies.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryPodSnmpPolicies", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryPodSnmpPolicies", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryPodSnmpPolicies : GetCmdletBase
     {
         public GetIntersightNiatelemetryPodSnmpPolicies()
@@ -17500,7 +17500,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryPodTimeServerPolicies.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryPodTimeServerPolicies", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryPodTimeServerPolicies", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryPodTimeServerPolicies : GetCmdletBase
     {
         public GetIntersightNiatelemetryPodTimeServerPolicies()
@@ -17696,7 +17696,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetrySiteInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySiteInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySiteInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetrySiteInventory : GetCmdletBase
     {
         public GetIntersightNiatelemetrySiteInventory()
@@ -17916,7 +17916,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetrySnmpSrc.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySnmpSrc", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySnmpSrc", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetrySnmpSrc : GetCmdletBase
     {
         public GetIntersightNiatelemetrySnmpSrc()
@@ -18123,7 +18123,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetrySpinePolGrpDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySpinePolGrpDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySpinePolGrpDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetrySpinePolGrpDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetrySpinePolGrpDetails()
@@ -18352,7 +18352,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetrySshVersionTwo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySshVersionTwo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySshVersionTwo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetrySshVersionTwo : GetCmdletBase
     {
         public GetIntersightNiatelemetrySshVersionTwo()
@@ -18570,7 +18570,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetrySupervisorModuleDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySupervisorModuleDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySupervisorModuleDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetrySupervisorModuleDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetrySupervisorModuleDetails()
@@ -18777,7 +18777,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetrySyslogRemoteDest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySyslogRemoteDest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySyslogRemoteDest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetrySyslogRemoteDest : GetCmdletBase
     {
         public GetIntersightNiatelemetrySyslogRemoteDest()
@@ -19006,7 +19006,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetrySyslogSysMsg.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySyslogSysMsg", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySyslogSysMsg", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetrySyslogSysMsg : GetCmdletBase
     {
         public GetIntersightNiatelemetrySyslogSysMsg()
@@ -19202,7 +19202,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetrySyslogSysMsgFacFilter.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySyslogSysMsgFacFilter", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySyslogSysMsgFacFilter", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetrySyslogSysMsgFacFilter : GetCmdletBase
     {
         public GetIntersightNiatelemetrySyslogSysMsgFacFilter()
@@ -19420,7 +19420,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetrySystemControllerDetails.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySystemControllerDetails", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetrySystemControllerDetails", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetrySystemControllerDetails : GetCmdletBase
     {
         public GetIntersightNiatelemetrySystemControllerDetails()
@@ -19627,7 +19627,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryTenant.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryTenant", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryTenant", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightNiatelemetryTenant : GetCmdletBase
     {
         public GetIntersightNiatelemetryTenant()
@@ -20186,7 +20186,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New NiatelemetryNexusCloudAccount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightNiatelemetryNexusCloudAccount")]
+    [Cmdlet(VerbsCommon.New, "IntersightNiatelemetryNexusCloudAccount", SupportsShouldProcess = true)]
     public class NewIntersightNiatelemetryNexusCloudAccount : NewCmdletBase
     {
         public NewIntersightNiatelemetryNexusCloudAccount()
@@ -20287,7 +20287,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New NiatelemetryNexusCloudSite.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightNiatelemetryNexusCloudSite")]
+    [Cmdlet(VerbsCommon.New, "IntersightNiatelemetryNexusCloudSite", SupportsShouldProcess = true)]
     public class NewIntersightNiatelemetryNexusCloudSite : NewCmdletBase
     {
         public NewIntersightNiatelemetryNexusCloudSite()
@@ -20454,7 +20454,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove NiatelemetryNexusCloudSite.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightNiatelemetryNexusCloudSite")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightNiatelemetryNexusCloudSite", SupportsShouldProcess = true)]
     public class RemoveIntersightNiatelemetryNexusCloudSite : RemoveCmdletBase
     {
         public RemoveIntersightNiatelemetryNexusCloudSite()
@@ -20466,7 +20466,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NiatelemetryNexusCloudAccount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNiatelemetryNexusCloudAccount")]
+    [Cmdlet(VerbsCommon.Set, "IntersightNiatelemetryNexusCloudAccount", SupportsShouldProcess = true)]
     public class SetIntersightNiatelemetryNexusCloudAccount : SetCmdletBase
     {
         public SetIntersightNiatelemetryNexusCloudAccount()
@@ -20556,7 +20556,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NiatelemetryNexusCloudSite.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNiatelemetryNexusCloudSite")]
+    [Cmdlet(VerbsCommon.Set, "IntersightNiatelemetryNexusCloudSite", SupportsShouldProcess = true)]
     public class SetIntersightNiatelemetryNexusCloudSite : SetCmdletBase
     {
         public SetIntersightNiatelemetryNexusCloudSite()
@@ -20712,7 +20712,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set NiatelemetryNiaInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightNiatelemetryNiaInventory")]
+    [Cmdlet(VerbsCommon.Set, "IntersightNiatelemetryNiaInventory", SupportsShouldProcess = true)]
     public class SetIntersightNiatelemetryNiaInventory : SetCmdletBase
     {
         public SetIntersightNiatelemetryNiaInventory()

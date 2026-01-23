@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityActionsMetaData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityActionsMetaData", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityActionsMetaData", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityActionsMetaData : GetCmdletBase
     {
         public GetIntersightCapabilityActionsMetaData()
@@ -218,7 +218,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityAdapterDeprecatedDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterDeprecatedDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterDeprecatedDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityAdapterDeprecatedDef : GetCmdletBase
     {
         public GetIntersightCapabilityAdapterDeprecatedDef()
@@ -370,7 +370,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityAdapterFirmwareRequirement.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterFirmwareRequirement", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterFirmwareRequirement", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityAdapterFirmwareRequirement : GetCmdletBase
     {
         public GetIntersightCapabilityAdapterFirmwareRequirement()
@@ -556,7 +556,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityAdapterUnitDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterUnitDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterUnitDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityAdapterUnitDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityAdapterUnitDescriptor()
@@ -908,7 +908,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityAdapterUpdateConstraintMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterUpdateConstraintMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterUpdateConstraintMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityAdapterUpdateConstraintMeta : GetCmdletBase
     {
         public GetIntersightCapabilityAdapterUpdateConstraintMeta()
@@ -1083,7 +1083,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityAdapterUpgradeSupportMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityAdapterUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityAdapterUpgradeSupportMeta : GetCmdletBase
     {
         public GetIntersightCapabilityAdapterUpgradeSupportMeta()
@@ -1236,7 +1236,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityCatalog : GetCmdletBase
     {
         public GetIntersightCapabilityCatalog()
@@ -1377,7 +1377,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityChassisDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityChassisDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityChassisDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityChassisDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityChassisDescriptor()
@@ -1552,7 +1552,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityChassisManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityChassisManufacturingDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityChassisManufacturingDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityChassisManufacturingDef : GetCmdletBase
     {
         public GetIntersightCapabilityChassisManufacturingDef()
@@ -1759,7 +1759,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityChassisUpgradeSupportMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityChassisUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityChassisUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityChassisUpgradeSupportMeta : GetCmdletBase
     {
         public GetIntersightCapabilityChassisUpgradeSupportMeta()
@@ -1925,7 +1925,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityCimcFirmwareDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityCimcFirmwareDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityCimcFirmwareDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityCimcFirmwareDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityCimcFirmwareDescriptor()
@@ -2133,7 +2133,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityCpuEndpointDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityCpuEndpointDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityCpuEndpointDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityCpuEndpointDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityCpuEndpointDescriptor()
@@ -2308,7 +2308,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityDimmsEndpointDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityDimmsEndpointDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityDimmsEndpointDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityDimmsEndpointDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityDimmsEndpointDescriptor()
@@ -2483,7 +2483,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityDomainPolicyRequirement.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityDomainPolicyRequirement", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityDomainPolicyRequirement", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityDomainPolicyRequirement : GetCmdletBase
     {
         public GetIntersightCapabilityDomainPolicyRequirement()
@@ -2659,7 +2659,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityDrivesEndpointDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityDrivesEndpointDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityDrivesEndpointDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityDrivesEndpointDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityDrivesEndpointDescriptor()
@@ -2845,7 +2845,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityEquipmentPhysicalDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityEquipmentPhysicalDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityEquipmentPhysicalDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityEquipmentPhysicalDef : GetCmdletBase
     {
         public GetIntersightCapabilityEquipmentPhysicalDef()
@@ -3085,7 +3085,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityEquipmentSlotArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityEquipmentSlotArray", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityEquipmentSlotArray", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityEquipmentSlotArray : GetCmdletBase
     {
         public GetIntersightCapabilityEquipmentSlotArray()
@@ -3424,7 +3424,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityFanModuleDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFanModuleDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFanModuleDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityFanModuleDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityFanModuleDescriptor()
@@ -3599,7 +3599,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityFanModuleManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFanModuleManufacturingDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFanModuleManufacturingDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityFanModuleManufacturingDef : GetCmdletBase
     {
         public GetIntersightCapabilityFanModuleManufacturingDef()
@@ -3795,7 +3795,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityFexCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFexCapabilityDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFexCapabilityDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityFexCapabilityDef : GetCmdletBase
     {
         public GetIntersightCapabilityFexCapabilityDef()
@@ -3936,7 +3936,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityFexDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFexDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFexDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityFexDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityFexDescriptor()
@@ -4111,7 +4111,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityFexManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFexManufacturingDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFexManufacturingDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityFexManufacturingDef : GetCmdletBase
     {
         public GetIntersightCapabilityFexManufacturingDef()
@@ -4318,7 +4318,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityFexSupportMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFexSupportMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityFexSupportMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityFexSupportMeta : GetCmdletBase
     {
         public GetIntersightCapabilityFexSupportMeta()
@@ -4471,7 +4471,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityGpuEndpointDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityGpuEndpointDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityGpuEndpointDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityGpuEndpointDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityGpuEndpointDescriptor()
@@ -4646,7 +4646,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityHsuIsoFileSupportMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityHsuIsoFileSupportMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityHsuIsoFileSupportMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityHsuIsoFileSupportMeta : GetCmdletBase
     {
         public GetIntersightCapabilityHsuIsoFileSupportMeta()
@@ -4810,7 +4810,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityIoCardCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityIoCardCapabilityDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityIoCardCapabilityDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityIoCardCapabilityDef : GetCmdletBase
     {
         public GetIntersightCapabilityIoCardCapabilityDef()
@@ -4951,7 +4951,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityIoCardDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityIoCardDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityIoCardDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityIoCardDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityIoCardDescriptor()
@@ -5193,7 +5193,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityIoCardManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityIoCardManufacturingDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityIoCardManufacturingDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityIoCardManufacturingDef : GetCmdletBase
     {
         public GetIntersightCapabilityIoCardManufacturingDef()
@@ -5389,7 +5389,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityIomUpgradeSupportMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityIomUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityIomUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityIomUpgradeSupportMeta : GetCmdletBase
     {
         public GetIntersightCapabilityIomUpgradeSupportMeta()
@@ -5553,7 +5553,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityPolicyConstants.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityPolicyConstants", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityPolicyConstants", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityPolicyConstants : GetCmdletBase
     {
         public GetIntersightCapabilityPolicyConstants()
@@ -5694,7 +5694,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityPortGroupAggregationDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityPortGroupAggregationDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityPortGroupAggregationDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityPortGroupAggregationDef : GetCmdletBase
     {
         public GetIntersightCapabilityPortGroupAggregationDef()
@@ -5857,7 +5857,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityProcessorUnitUpdateConstraintMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityProcessorUnitUpdateConstraintMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityProcessorUnitUpdateConstraintMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityProcessorUnitUpdateConstraintMeta : GetCmdletBase
     {
         public GetIntersightCapabilityProcessorUnitUpdateConstraintMeta()
@@ -6032,7 +6032,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityPsuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityPsuDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityPsuDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityPsuDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityPsuDescriptor()
@@ -6207,7 +6207,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityPsuManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityPsuManufacturingDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityPsuManufacturingDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityPsuManufacturingDef : GetCmdletBase
     {
         public GetIntersightCapabilityPsuManufacturingDef()
@@ -6403,7 +6403,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityServerActionsMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerActionsMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerActionsMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityServerActionsMeta : GetCmdletBase
     {
         public GetIntersightCapabilityServerActionsMeta()
@@ -6566,7 +6566,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityServerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityServerDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityServerDescriptor()
@@ -6775,7 +6775,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityServerModelsCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerModelsCapabilityDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerModelsCapabilityDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityServerModelsCapabilityDef : GetCmdletBase
     {
         public GetIntersightCapabilityServerModelsCapabilityDef()
@@ -6917,7 +6917,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityServerPcieConnectivityCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerPcieConnectivityCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerPcieConnectivityCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityServerPcieConnectivityCatalog : GetCmdletBase
     {
         public GetIntersightCapabilityServerPcieConnectivityCatalog()
@@ -7049,7 +7049,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityServerSchemaDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerSchemaDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerSchemaDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityServerSchemaDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityServerSchemaDescriptor()
@@ -7235,7 +7235,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityServerTopologyMap.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerTopologyMap", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerTopologyMap", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityServerTopologyMap : GetCmdletBase
     {
         public GetIntersightCapabilityServerTopologyMap()
@@ -7390,7 +7390,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityServerUpgradeSupportMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityServerUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityServerUpgradeSupportMeta : GetCmdletBase
     {
         public GetIntersightCapabilityServerUpgradeSupportMeta()
@@ -7554,7 +7554,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilitySiocModuleCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySiocModuleCapabilityDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySiocModuleCapabilityDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilitySiocModuleCapabilityDef : GetCmdletBase
     {
         public GetIntersightCapabilitySiocModuleCapabilityDef()
@@ -7695,7 +7695,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilitySiocModuleDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySiocModuleDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySiocModuleDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilitySiocModuleDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilitySiocModuleDescriptor()
@@ -7870,7 +7870,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilitySiocModuleManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySiocModuleManufacturingDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySiocModuleManufacturingDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilitySiocModuleManufacturingDef : GetCmdletBase
     {
         public GetIntersightCapabilitySiocModuleManufacturingDef()
@@ -8066,7 +8066,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityStandardRedfishSupportMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityStandardRedfishSupportMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityStandardRedfishSupportMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityStandardRedfishSupportMeta : GetCmdletBase
     {
         public GetIntersightCapabilityStandardRedfishSupportMeta()
@@ -8219,7 +8219,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityStorageControllerUpdateConstraintMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityStorageControllerUpdateConstraintMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityStorageControllerUpdateConstraintMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityStorageControllerUpdateConstraintMeta : GetCmdletBase
     {
         public GetIntersightCapabilityStorageControllerUpdateConstraintMeta()
@@ -8394,7 +8394,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityStorageControllersMetaData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityStorageControllersMetaData", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityStorageControllersMetaData", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityStorageControllersMetaData : GetCmdletBase
     {
         public GetIntersightCapabilityStorageControllersMetaData()
@@ -8602,7 +8602,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilitySwitchCapability.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySwitchCapability", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySwitchCapability", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilitySwitchCapability : GetCmdletBase
     {
         public GetIntersightCapabilitySwitchCapability()
@@ -8924,7 +8924,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilitySwitchDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySwitchDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySwitchDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilitySwitchDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilitySwitchDescriptor()
@@ -9133,7 +9133,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilitySwitchEquipmentInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySwitchEquipmentInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySwitchEquipmentInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilitySwitchEquipmentInfo : GetCmdletBase
     {
         public GetIntersightCapabilitySwitchEquipmentInfo()
@@ -9318,7 +9318,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilitySwitchManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySwitchManufacturingDef", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySwitchManufacturingDef", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilitySwitchManufacturingDef : GetCmdletBase
     {
         public GetIntersightCapabilitySwitchManufacturingDef()
@@ -9525,7 +9525,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilitySwitchUpgradeSupportMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySwitchUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilitySwitchUpgradeSupportMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilitySwitchUpgradeSupportMeta : GetCmdletBase
     {
         public GetIntersightCapabilitySwitchUpgradeSupportMeta()
@@ -9700,7 +9700,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityTemplateCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityTemplateCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityTemplateCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityTemplateCatalog : GetCmdletBase
     {
         public GetIntersightCapabilityTemplateCatalog()
@@ -9831,7 +9831,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityUpdateOrderMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityUpdateOrderMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityUpdateOrderMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityUpdateOrderMeta : GetCmdletBase
     {
         public GetIntersightCapabilityUpdateOrderMeta()
@@ -9995,7 +9995,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CapabilityVicDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityVicDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCapabilityVicDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCapabilityVicDescriptor : GetCmdletBase
     {
         public GetIntersightCapabilityVicDescriptor()
@@ -10147,7 +10147,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityActionsMetaData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityActionsMetaData")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityActionsMetaData", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityActionsMetaData : NewCmdletBase
     {
         public NewIntersightCapabilityActionsMetaData()
@@ -10304,7 +10304,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityAdapterDeprecatedDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityAdapterDeprecatedDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityAdapterDeprecatedDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityAdapterDeprecatedDef : NewCmdletBase
     {
         public NewIntersightCapabilityAdapterDeprecatedDef()
@@ -10415,7 +10415,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityAdapterUnitDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityAdapterUnitDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityAdapterUnitDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityAdapterUnitDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilityAdapterUnitDescriptor()
@@ -10746,7 +10746,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityChassisDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityChassisDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityChassisDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityChassisDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilityChassisDescriptor()
@@ -10890,7 +10890,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityChassisManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityChassisManufacturingDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityChassisManufacturingDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityChassisManufacturingDef : NewCmdletBase
     {
         public NewIntersightCapabilityChassisManufacturingDef()
@@ -11056,7 +11056,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityCimcFirmwareDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityCimcFirmwareDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityCimcFirmwareDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityCimcFirmwareDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilityCimcFirmwareDescriptor()
@@ -11203,7 +11203,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityEquipmentPhysicalDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityEquipmentPhysicalDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityEquipmentPhysicalDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityEquipmentPhysicalDef : NewCmdletBase
     {
         public NewIntersightCapabilityEquipmentPhysicalDef()
@@ -11402,7 +11402,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityEquipmentSlotArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityEquipmentSlotArray")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityEquipmentSlotArray", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityEquipmentSlotArray : NewCmdletBase
     {
         public NewIntersightCapabilityEquipmentSlotArray()
@@ -11700,7 +11700,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityFanModuleDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFanModuleDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFanModuleDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityFanModuleDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilityFanModuleDescriptor()
@@ -11844,7 +11844,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityFanModuleManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFanModuleManufacturingDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFanModuleManufacturingDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityFanModuleManufacturingDef : NewCmdletBase
     {
         public NewIntersightCapabilityFanModuleManufacturingDef()
@@ -11999,7 +11999,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityFexCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFexCapabilityDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFexCapabilityDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityFexCapabilityDef : NewCmdletBase
     {
         public NewIntersightCapabilityFexCapabilityDef()
@@ -12099,7 +12099,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityFexDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFexDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFexDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityFexDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilityFexDescriptor()
@@ -12243,7 +12243,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityFexManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFexManufacturingDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityFexManufacturingDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityFexManufacturingDef : NewCmdletBase
     {
         public NewIntersightCapabilityFexManufacturingDef()
@@ -12409,7 +12409,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityIoCardCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityIoCardCapabilityDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityIoCardCapabilityDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityIoCardCapabilityDef : NewCmdletBase
     {
         public NewIntersightCapabilityIoCardCapabilityDef()
@@ -12509,7 +12509,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityIoCardDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityIoCardDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityIoCardDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityIoCardDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilityIoCardDescriptor()
@@ -12730,7 +12730,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityIoCardManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityIoCardManufacturingDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityIoCardManufacturingDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityIoCardManufacturingDef : NewCmdletBase
     {
         public NewIntersightCapabilityIoCardManufacturingDef()
@@ -12885,7 +12885,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityPortGroupAggregationDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityPortGroupAggregationDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityPortGroupAggregationDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityPortGroupAggregationDef : NewCmdletBase
     {
         public NewIntersightCapabilityPortGroupAggregationDef()
@@ -13007,7 +13007,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityPsuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityPsuDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityPsuDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityPsuDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilityPsuDescriptor()
@@ -13151,7 +13151,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityPsuManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityPsuManufacturingDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityPsuManufacturingDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityPsuManufacturingDef : NewCmdletBase
     {
         public NewIntersightCapabilityPsuManufacturingDef()
@@ -13306,7 +13306,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityServerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityServerDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilityServerDescriptor()
@@ -13484,7 +13484,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityServerModelsCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerModelsCapabilityDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerModelsCapabilityDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityServerModelsCapabilityDef : NewCmdletBase
     {
         public NewIntersightCapabilityServerModelsCapabilityDef()
@@ -13595,7 +13595,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityServerPcieConnectivityCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerPcieConnectivityCatalog")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerPcieConnectivityCatalog", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityServerPcieConnectivityCatalog : NewCmdletBase
     {
         public NewIntersightCapabilityServerPcieConnectivityCatalog()
@@ -13706,7 +13706,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityServerSchemaDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerSchemaDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerSchemaDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityServerSchemaDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilityServerSchemaDescriptor()
@@ -13861,7 +13861,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityServerTopologyMap.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerTopologyMap")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityServerTopologyMap", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityServerTopologyMap : NewCmdletBase
     {
         public NewIntersightCapabilityServerTopologyMap()
@@ -14005,7 +14005,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilitySiocModuleCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySiocModuleCapabilityDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySiocModuleCapabilityDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilitySiocModuleCapabilityDef : NewCmdletBase
     {
         public NewIntersightCapabilitySiocModuleCapabilityDef()
@@ -14105,7 +14105,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilitySiocModuleDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySiocModuleDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySiocModuleDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilitySiocModuleDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilitySiocModuleDescriptor()
@@ -14249,7 +14249,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilitySiocModuleManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySiocModuleManufacturingDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySiocModuleManufacturingDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilitySiocModuleManufacturingDef : NewCmdletBase
     {
         public NewIntersightCapabilitySiocModuleManufacturingDef()
@@ -14404,7 +14404,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilitySwitchCapability.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySwitchCapability")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySwitchCapability", SupportsShouldProcess = true)]
     public class NewIntersightCapabilitySwitchCapability : NewCmdletBase
     {
         public NewIntersightCapabilitySwitchCapability()
@@ -14565,7 +14565,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilitySwitchDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySwitchDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySwitchDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilitySwitchDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilitySwitchDescriptor()
@@ -14753,7 +14753,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilitySwitchEquipmentInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySwitchEquipmentInfo")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySwitchEquipmentInfo", SupportsShouldProcess = true)]
     public class NewIntersightCapabilitySwitchEquipmentInfo : NewCmdletBase
     {
         public NewIntersightCapabilitySwitchEquipmentInfo()
@@ -14847,7 +14847,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilitySwitchManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySwitchManufacturingDef")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilitySwitchManufacturingDef", SupportsShouldProcess = true)]
     public class NewIntersightCapabilitySwitchManufacturingDef : NewCmdletBase
     {
         public NewIntersightCapabilitySwitchManufacturingDef()
@@ -15013,7 +15013,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CapabilityVicDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCapabilityVicDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightCapabilityVicDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightCapabilityVicDescriptor : NewCmdletBase
     {
         public NewIntersightCapabilityVicDescriptor()
@@ -15124,7 +15124,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityActionsMetaData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityActionsMetaData")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityActionsMetaData", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityActionsMetaData : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityActionsMetaData()
@@ -15136,7 +15136,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityAdapterDeprecatedDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityAdapterDeprecatedDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityAdapterDeprecatedDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityAdapterDeprecatedDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityAdapterDeprecatedDef()
@@ -15148,7 +15148,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityAdapterUnitDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityAdapterUnitDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityAdapterUnitDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityAdapterUnitDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityAdapterUnitDescriptor()
@@ -15160,7 +15160,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityChassisDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityChassisDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityChassisDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityChassisDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityChassisDescriptor()
@@ -15172,7 +15172,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityChassisManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityChassisManufacturingDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityChassisManufacturingDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityChassisManufacturingDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityChassisManufacturingDef()
@@ -15184,7 +15184,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityCimcFirmwareDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityCimcFirmwareDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityCimcFirmwareDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityCimcFirmwareDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityCimcFirmwareDescriptor()
@@ -15196,7 +15196,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityEquipmentPhysicalDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityEquipmentPhysicalDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityEquipmentPhysicalDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityEquipmentPhysicalDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityEquipmentPhysicalDef()
@@ -15208,7 +15208,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityEquipmentSlotArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityEquipmentSlotArray")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityEquipmentSlotArray", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityEquipmentSlotArray : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityEquipmentSlotArray()
@@ -15220,7 +15220,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityFanModuleDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFanModuleDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFanModuleDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityFanModuleDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityFanModuleDescriptor()
@@ -15232,7 +15232,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityFanModuleManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFanModuleManufacturingDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFanModuleManufacturingDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityFanModuleManufacturingDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityFanModuleManufacturingDef()
@@ -15244,7 +15244,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityFexCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFexCapabilityDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFexCapabilityDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityFexCapabilityDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityFexCapabilityDef()
@@ -15256,7 +15256,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityFexDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFexDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFexDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityFexDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityFexDescriptor()
@@ -15268,7 +15268,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityFexManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFexManufacturingDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityFexManufacturingDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityFexManufacturingDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityFexManufacturingDef()
@@ -15280,7 +15280,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityIoCardCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityIoCardCapabilityDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityIoCardCapabilityDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityIoCardCapabilityDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityIoCardCapabilityDef()
@@ -15292,7 +15292,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityIoCardDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityIoCardDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityIoCardDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityIoCardDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityIoCardDescriptor()
@@ -15304,7 +15304,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityIoCardManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityIoCardManufacturingDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityIoCardManufacturingDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityIoCardManufacturingDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityIoCardManufacturingDef()
@@ -15316,7 +15316,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityPortGroupAggregationDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityPortGroupAggregationDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityPortGroupAggregationDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityPortGroupAggregationDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityPortGroupAggregationDef()
@@ -15328,7 +15328,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityPsuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityPsuDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityPsuDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityPsuDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityPsuDescriptor()
@@ -15340,7 +15340,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityPsuManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityPsuManufacturingDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityPsuManufacturingDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityPsuManufacturingDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityPsuManufacturingDef()
@@ -15352,7 +15352,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityServerActionsMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerActionsMeta")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerActionsMeta", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityServerActionsMeta : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityServerActionsMeta()
@@ -15364,7 +15364,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityServerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityServerDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityServerDescriptor()
@@ -15376,7 +15376,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityServerModelsCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerModelsCapabilityDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerModelsCapabilityDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityServerModelsCapabilityDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityServerModelsCapabilityDef()
@@ -15388,7 +15388,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityServerPcieConnectivityCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerPcieConnectivityCatalog")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerPcieConnectivityCatalog", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityServerPcieConnectivityCatalog : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityServerPcieConnectivityCatalog()
@@ -15400,7 +15400,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityServerSchemaDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerSchemaDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerSchemaDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityServerSchemaDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityServerSchemaDescriptor()
@@ -15412,7 +15412,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityServerTopologyMap.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerTopologyMap")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityServerTopologyMap", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityServerTopologyMap : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityServerTopologyMap()
@@ -15424,7 +15424,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilitySiocModuleCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySiocModuleCapabilityDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySiocModuleCapabilityDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilitySiocModuleCapabilityDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilitySiocModuleCapabilityDef()
@@ -15436,7 +15436,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilitySiocModuleDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySiocModuleDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySiocModuleDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilitySiocModuleDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilitySiocModuleDescriptor()
@@ -15448,7 +15448,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilitySiocModuleManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySiocModuleManufacturingDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySiocModuleManufacturingDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilitySiocModuleManufacturingDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilitySiocModuleManufacturingDef()
@@ -15460,7 +15460,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilitySwitchCapability.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySwitchCapability")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySwitchCapability", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilitySwitchCapability : RemoveCmdletBase
     {
         public RemoveIntersightCapabilitySwitchCapability()
@@ -15472,7 +15472,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilitySwitchDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySwitchDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySwitchDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilitySwitchDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilitySwitchDescriptor()
@@ -15484,7 +15484,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilitySwitchEquipmentInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySwitchEquipmentInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySwitchEquipmentInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilitySwitchEquipmentInfo : RemoveCmdletBase
     {
         public RemoveIntersightCapabilitySwitchEquipmentInfo()
@@ -15496,7 +15496,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilitySwitchManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySwitchManufacturingDef")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilitySwitchManufacturingDef", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilitySwitchManufacturingDef : RemoveCmdletBase
     {
         public RemoveIntersightCapabilitySwitchManufacturingDef()
@@ -15508,7 +15508,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CapabilityVicDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityVicDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCapabilityVicDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightCapabilityVicDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightCapabilityVicDescriptor()
@@ -15520,7 +15520,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityActionsMetaData.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityActionsMetaData")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityActionsMetaData", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityActionsMetaData : SetCmdletBase
     {
         public SetIntersightCapabilityActionsMetaData()
@@ -15666,7 +15666,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityAdapterDeprecatedDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityAdapterDeprecatedDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityAdapterDeprecatedDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityAdapterDeprecatedDef : SetCmdletBase
     {
         public SetIntersightCapabilityAdapterDeprecatedDef()
@@ -15766,7 +15766,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityAdapterUnitDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityAdapterUnitDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityAdapterUnitDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityAdapterUnitDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilityAdapterUnitDescriptor()
@@ -16086,7 +16086,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityCatalog")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityCatalog", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityCatalog : SetCmdletBase
     {
         public SetIntersightCapabilityCatalog()
@@ -16175,7 +16175,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityChassisDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityChassisDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityChassisDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityChassisDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilityChassisDescriptor()
@@ -16308,7 +16308,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityChassisManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityChassisManufacturingDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityChassisManufacturingDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityChassisManufacturingDef : SetCmdletBase
     {
         public SetIntersightCapabilityChassisManufacturingDef()
@@ -16463,7 +16463,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityCimcFirmwareDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityCimcFirmwareDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityCimcFirmwareDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityCimcFirmwareDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilityCimcFirmwareDescriptor()
@@ -16599,7 +16599,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityEquipmentPhysicalDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityEquipmentPhysicalDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityEquipmentPhysicalDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityEquipmentPhysicalDef : SetCmdletBase
     {
         public SetIntersightCapabilityEquipmentPhysicalDef()
@@ -16787,7 +16787,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityEquipmentSlotArray.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityEquipmentSlotArray")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityEquipmentSlotArray", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityEquipmentSlotArray : SetCmdletBase
     {
         public SetIntersightCapabilityEquipmentSlotArray()
@@ -17074,7 +17074,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityFanModuleDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFanModuleDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFanModuleDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityFanModuleDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilityFanModuleDescriptor()
@@ -17207,7 +17207,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityFanModuleManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFanModuleManufacturingDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFanModuleManufacturingDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityFanModuleManufacturingDef : SetCmdletBase
     {
         public SetIntersightCapabilityFanModuleManufacturingDef()
@@ -17351,7 +17351,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityFexCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFexCapabilityDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFexCapabilityDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityFexCapabilityDef : SetCmdletBase
     {
         public SetIntersightCapabilityFexCapabilityDef()
@@ -17440,7 +17440,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityFexDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFexDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFexDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityFexDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilityFexDescriptor()
@@ -17573,7 +17573,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityFexManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFexManufacturingDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityFexManufacturingDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityFexManufacturingDef : SetCmdletBase
     {
         public SetIntersightCapabilityFexManufacturingDef()
@@ -17728,7 +17728,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityIoCardCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityIoCardCapabilityDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityIoCardCapabilityDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityIoCardCapabilityDef : SetCmdletBase
     {
         public SetIntersightCapabilityIoCardCapabilityDef()
@@ -17817,7 +17817,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityIoCardDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityIoCardDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityIoCardDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityIoCardDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilityIoCardDescriptor()
@@ -18027,7 +18027,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityIoCardManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityIoCardManufacturingDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityIoCardManufacturingDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityIoCardManufacturingDef : SetCmdletBase
     {
         public SetIntersightCapabilityIoCardManufacturingDef()
@@ -18171,7 +18171,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityPortGroupAggregationDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityPortGroupAggregationDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityPortGroupAggregationDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityPortGroupAggregationDef : SetCmdletBase
     {
         public SetIntersightCapabilityPortGroupAggregationDef()
@@ -18282,7 +18282,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityPsuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityPsuDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityPsuDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityPsuDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilityPsuDescriptor()
@@ -18415,7 +18415,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityPsuManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityPsuManufacturingDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityPsuManufacturingDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityPsuManufacturingDef : SetCmdletBase
     {
         public SetIntersightCapabilityPsuManufacturingDef()
@@ -18559,7 +18559,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityServerActionsMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerActionsMeta")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerActionsMeta", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityServerActionsMeta : SetCmdletBase
     {
         public SetIntersightCapabilityServerActionsMeta()
@@ -18640,7 +18640,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityServerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityServerDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilityServerDescriptor()
@@ -18807,7 +18807,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityServerModelsCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerModelsCapabilityDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerModelsCapabilityDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityServerModelsCapabilityDef : SetCmdletBase
     {
         public SetIntersightCapabilityServerModelsCapabilityDef()
@@ -18907,7 +18907,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityServerPcieConnectivityCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerPcieConnectivityCatalog")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerPcieConnectivityCatalog", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityServerPcieConnectivityCatalog : SetCmdletBase
     {
         public SetIntersightCapabilityServerPcieConnectivityCatalog()
@@ -19007,7 +19007,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityServerSchemaDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerSchemaDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerSchemaDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityServerSchemaDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilityServerSchemaDescriptor()
@@ -19151,7 +19151,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityServerTopologyMap.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerTopologyMap")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityServerTopologyMap", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityServerTopologyMap : SetCmdletBase
     {
         public SetIntersightCapabilityServerTopologyMap()
@@ -19284,7 +19284,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilitySiocModuleCapabilityDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySiocModuleCapabilityDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySiocModuleCapabilityDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilitySiocModuleCapabilityDef : SetCmdletBase
     {
         public SetIntersightCapabilitySiocModuleCapabilityDef()
@@ -19373,7 +19373,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilitySiocModuleDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySiocModuleDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySiocModuleDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilitySiocModuleDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilitySiocModuleDescriptor()
@@ -19506,7 +19506,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilitySiocModuleManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySiocModuleManufacturingDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySiocModuleManufacturingDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilitySiocModuleManufacturingDef : SetCmdletBase
     {
         public SetIntersightCapabilitySiocModuleManufacturingDef()
@@ -19650,7 +19650,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilitySwitchCapability.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySwitchCapability")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySwitchCapability", SupportsShouldProcess = true)]
     public class SetIntersightCapabilitySwitchCapability : SetCmdletBase
     {
         public SetIntersightCapabilitySwitchCapability()
@@ -19800,7 +19800,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilitySwitchDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySwitchDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySwitchDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilitySwitchDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilitySwitchDescriptor()
@@ -19977,7 +19977,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilitySwitchEquipmentInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySwitchEquipmentInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySwitchEquipmentInfo", SupportsShouldProcess = true)]
     public class SetIntersightCapabilitySwitchEquipmentInfo : SetCmdletBase
     {
         public SetIntersightCapabilitySwitchEquipmentInfo()
@@ -20060,7 +20060,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilitySwitchManufacturingDef.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySwitchManufacturingDef")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilitySwitchManufacturingDef", SupportsShouldProcess = true)]
     public class SetIntersightCapabilitySwitchManufacturingDef : SetCmdletBase
     {
         public SetIntersightCapabilitySwitchManufacturingDef()
@@ -20215,7 +20215,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CapabilityVicDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityVicDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCapabilityVicDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightCapabilityVicDescriptor : SetCmdletBase
     {
         public SetIntersightCapabilityVicDescriptor()

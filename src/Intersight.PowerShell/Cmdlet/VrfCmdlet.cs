@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VrfVrf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightVrfVrf", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightVrfVrf", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightVrfVrf : GetCmdletBase
     {
         public GetIntersightVrfVrf()
@@ -162,7 +162,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New VrfVrf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightVrfVrf")]
+    [Cmdlet(VerbsCommon.New, "IntersightVrfVrf", SupportsShouldProcess = true)]
     public class NewIntersightVrfVrf : NewCmdletBase
     {
         public NewIntersightVrfVrf()
@@ -263,7 +263,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove VrfVrf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightVrfVrf")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightVrfVrf", SupportsShouldProcess = true)]
     public class RemoveIntersightVrfVrf : RemoveCmdletBase
     {
         public RemoveIntersightVrfVrf()
@@ -275,7 +275,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set VrfVrf.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVrfVrf")]
+    [Cmdlet(VerbsCommon.Set, "IntersightVrfVrf", SupportsShouldProcess = true)]
     public class SetIntersightVrfVrf : SetCmdletBase
     {
         public SetIntersightVrfVrf()

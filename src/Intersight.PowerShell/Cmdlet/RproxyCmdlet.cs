@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New RproxyReverseProxy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightRproxyReverseProxy")]
+    [Cmdlet(VerbsCommon.New, "IntersightRproxyReverseProxy", SupportsShouldProcess = true)]
     public class NewIntersightRproxyReverseProxy : NewCmdletBase
     {
         public NewIntersightRproxyReverseProxy()

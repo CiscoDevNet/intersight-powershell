@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwarerepositoryAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryAuthorization", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryAuthorization", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwarerepositoryAuthorization : GetCmdletBase
     {
         public GetIntersightSoftwarerepositoryAuthorization()
@@ -206,7 +206,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwarerepositoryCachedImage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCachedImage", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCachedImage", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwarerepositoryCachedImage : GetCmdletBase
     {
         public GetIntersightSoftwarerepositoryCachedImage()
@@ -481,7 +481,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwarerepositoryCatalog.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCatalog", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCatalog", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwarerepositoryCatalog : GetCmdletBase
     {
         public GetIntersightSoftwarerepositoryCatalog()
@@ -644,7 +644,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwarerepositoryCategoryMapper.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCategoryMapper", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCategoryMapper", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwarerepositoryCategoryMapper : GetCmdletBase
     {
         public GetIntersightSoftwarerepositoryCategoryMapper()
@@ -875,7 +875,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwarerepositoryCategoryMapperModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCategoryMapperModel", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCategoryMapperModel", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwarerepositoryCategoryMapperModel : GetCmdletBase
     {
         public GetIntersightSoftwarerepositoryCategoryMapperModel()
@@ -1072,7 +1072,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwarerepositoryCategorySupportConstraint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCategorySupportConstraint", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCategorySupportConstraint", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwarerepositoryCategorySupportConstraint : GetCmdletBase
     {
         public GetIntersightSoftwarerepositoryCategorySupportConstraint()
@@ -1248,7 +1248,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwarerepositoryCategoryUnsupportedModels.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCategoryUnsupportedModels", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryCategoryUnsupportedModels", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwarerepositoryCategoryUnsupportedModels : GetCmdletBase
     {
         public GetIntersightSoftwarerepositoryCategoryUnsupportedModels()
@@ -1390,7 +1390,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwarerepositoryDownloadSpec.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryDownloadSpec", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryDownloadSpec", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwarerepositoryDownloadSpec : GetCmdletBase
     {
         public GetIntersightSoftwarerepositoryDownloadSpec()
@@ -1597,7 +1597,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwarerepositoryOperatingSystemFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryOperatingSystemFile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryOperatingSystemFile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwarerepositoryOperatingSystemFile : GetCmdletBase
     {
         public GetIntersightSoftwarerepositoryOperatingSystemFile()
@@ -2036,7 +2036,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SoftwarerepositoryRelease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryRelease", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSoftwarerepositoryRelease", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSoftwarerepositoryRelease : GetCmdletBase
     {
         public GetIntersightSoftwarerepositoryRelease()
@@ -2211,7 +2211,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwarerepositoryAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryAuthorization")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryAuthorization", SupportsShouldProcess = true)]
     public class NewIntersightSoftwarerepositoryAuthorization : NewCmdletBase
     {
         public NewIntersightSoftwarerepositoryAuthorization()
@@ -2326,7 +2326,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwarerepositoryCategoryMapper.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryCategoryMapper")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryCategoryMapper", SupportsShouldProcess = true)]
     public class NewIntersightSoftwarerepositoryCategoryMapper : NewCmdletBase
     {
         public NewIntersightSoftwarerepositoryCategoryMapper()
@@ -2536,7 +2536,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwarerepositoryCategoryMapperModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryCategoryMapperModel")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryCategoryMapperModel", SupportsShouldProcess = true)]
     public class NewIntersightSoftwarerepositoryCategoryMapperModel : NewCmdletBase
     {
         public NewIntersightSoftwarerepositoryCategoryMapperModel()
@@ -2702,7 +2702,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwarerepositoryCategorySupportConstraint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryCategorySupportConstraint")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryCategorySupportConstraint", SupportsShouldProcess = true)]
     public class NewIntersightSoftwarerepositoryCategorySupportConstraint : NewCmdletBase
     {
         public NewIntersightSoftwarerepositoryCategorySupportConstraint()
@@ -2857,7 +2857,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwarerepositoryCategoryUnsupportedModels.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryCategoryUnsupportedModels")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryCategoryUnsupportedModels", SupportsShouldProcess = true)]
     public class NewIntersightSoftwarerepositoryCategoryUnsupportedModels : NewCmdletBase
     {
         public NewIntersightSoftwarerepositoryCategoryUnsupportedModels()
@@ -2968,7 +2968,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwarerepositoryOperatingSystemFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryOperatingSystemFile")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryOperatingSystemFile", SupportsShouldProcess = true)]
     public class NewIntersightSoftwarerepositoryOperatingSystemFile : NewCmdletBase
     {
         public NewIntersightSoftwarerepositoryOperatingSystemFile()
@@ -3052,6 +3052,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwarerepositoryOperatingSystemFile.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -3286,7 +3296,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SoftwarerepositoryRelease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryRelease")]
+    [Cmdlet(VerbsCommon.New, "IntersightSoftwarerepositoryRelease", SupportsShouldProcess = true)]
     public class NewIntersightSoftwarerepositoryRelease : NewCmdletBase
     {
         public NewIntersightSoftwarerepositoryRelease()
@@ -3430,7 +3440,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwarerepositoryCategoryMapper.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryCategoryMapper")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryCategoryMapper", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwarerepositoryCategoryMapper : RemoveCmdletBase
     {
         public RemoveIntersightSoftwarerepositoryCategoryMapper()
@@ -3442,7 +3452,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwarerepositoryCategoryMapperModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryCategoryMapperModel")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryCategoryMapperModel", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwarerepositoryCategoryMapperModel : RemoveCmdletBase
     {
         public RemoveIntersightSoftwarerepositoryCategoryMapperModel()
@@ -3454,7 +3464,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwarerepositoryCategorySupportConstraint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryCategorySupportConstraint")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryCategorySupportConstraint", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwarerepositoryCategorySupportConstraint : RemoveCmdletBase
     {
         public RemoveIntersightSoftwarerepositoryCategorySupportConstraint()
@@ -3466,7 +3476,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwarerepositoryCategoryUnsupportedModels.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryCategoryUnsupportedModels")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryCategoryUnsupportedModels", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwarerepositoryCategoryUnsupportedModels : RemoveCmdletBase
     {
         public RemoveIntersightSoftwarerepositoryCategoryUnsupportedModels()
@@ -3478,7 +3488,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwarerepositoryOperatingSystemFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryOperatingSystemFile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryOperatingSystemFile", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwarerepositoryOperatingSystemFile : RemoveCmdletBase
     {
         public RemoveIntersightSoftwarerepositoryOperatingSystemFile()
@@ -3490,7 +3500,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SoftwarerepositoryRelease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryRelease")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSoftwarerepositoryRelease", SupportsShouldProcess = true)]
     public class RemoveIntersightSoftwarerepositoryRelease : RemoveCmdletBase
     {
         public RemoveIntersightSoftwarerepositoryRelease()
@@ -3502,7 +3512,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwarerepositoryAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryAuthorization")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryAuthorization", SupportsShouldProcess = true)]
     public class SetIntersightSoftwarerepositoryAuthorization : SetCmdletBase
     {
         public SetIntersightSoftwarerepositoryAuthorization()
@@ -3606,7 +3616,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwarerepositoryCategoryMapper.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryCategoryMapper")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryCategoryMapper", SupportsShouldProcess = true)]
     public class SetIntersightSoftwarerepositoryCategoryMapper : SetCmdletBase
     {
         public SetIntersightSoftwarerepositoryCategoryMapper()
@@ -3805,7 +3815,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwarerepositoryCategoryMapperModel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryCategoryMapperModel")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryCategoryMapperModel", SupportsShouldProcess = true)]
     public class SetIntersightSoftwarerepositoryCategoryMapperModel : SetCmdletBase
     {
         public SetIntersightSoftwarerepositoryCategoryMapperModel()
@@ -3960,7 +3970,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwarerepositoryCategorySupportConstraint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryCategorySupportConstraint")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryCategorySupportConstraint", SupportsShouldProcess = true)]
     public class SetIntersightSoftwarerepositoryCategorySupportConstraint : SetCmdletBase
     {
         public SetIntersightSoftwarerepositoryCategorySupportConstraint()
@@ -4104,7 +4114,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwarerepositoryCategoryUnsupportedModels.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryCategoryUnsupportedModels")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryCategoryUnsupportedModels", SupportsShouldProcess = true)]
     public class SetIntersightSoftwarerepositoryCategoryUnsupportedModels : SetCmdletBase
     {
         public SetIntersightSoftwarerepositoryCategoryUnsupportedModels()
@@ -4204,7 +4214,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwarerepositoryOperatingSystemFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryOperatingSystemFile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryOperatingSystemFile", SupportsShouldProcess = true)]
     public class SetIntersightSoftwarerepositoryOperatingSystemFile : SetCmdletBase
     {
         public SetIntersightSoftwarerepositoryOperatingSystemFile()
@@ -4288,6 +4298,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwarerepositoryOperatingSystemFile.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -4511,7 +4531,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SoftwarerepositoryRelease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryRelease")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSoftwarerepositoryRelease", SupportsShouldProcess = true)]
     public class SetIntersightSoftwarerepositoryRelease : SetCmdletBase
     {
         public SetIntersightSoftwarerepositoryRelease()

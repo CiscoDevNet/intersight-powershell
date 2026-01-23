@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get UuidpoolBlock.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolBlock", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolBlock", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightUuidpoolBlock : GetCmdletBase
     {
         public GetIntersightUuidpoolBlock()
@@ -186,7 +186,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get UuidpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolPool", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolPool", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightUuidpoolPool : GetCmdletBase
     {
         public GetIntersightUuidpoolPool()
@@ -396,7 +396,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get UuidpoolPoolMember.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolPoolMember", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolPoolMember", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightUuidpoolPoolMember : GetCmdletBase
     {
         public GetIntersightUuidpoolPoolMember()
@@ -614,7 +614,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get UuidpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolReservation", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolReservation", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightUuidpoolReservation : GetCmdletBase
     {
         public GetIntersightUuidpoolReservation()
@@ -810,7 +810,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get UuidpoolUniverse.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolUniverse", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolUniverse", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightUuidpoolUniverse : GetCmdletBase
     {
         public GetIntersightUuidpoolUniverse()
@@ -940,7 +940,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get UuidpoolUuidLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolUuidLease", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightUuidpoolUuidLease", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightUuidpoolUuidLease : GetCmdletBase
     {
         public GetIntersightUuidpoolUuidLease()
@@ -1148,7 +1148,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New UuidpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightUuidpoolPool")]
+    [Cmdlet(VerbsCommon.New, "IntersightUuidpoolPool", SupportsShouldProcess = true)]
     public class NewIntersightUuidpoolPool : NewCmdletBase
     {
         public NewIntersightUuidpoolPool()
@@ -1307,7 +1307,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New UuidpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightUuidpoolReservation")]
+    [Cmdlet(VerbsCommon.New, "IntersightUuidpoolReservation", SupportsShouldProcess = true)]
     public class NewIntersightUuidpoolReservation : NewCmdletBase
     {
         public NewIntersightUuidpoolReservation()
@@ -1432,7 +1432,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove UuidpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightUuidpoolPool")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightUuidpoolPool", SupportsShouldProcess = true)]
     public class RemoveIntersightUuidpoolPool : RemoveCmdletBase
     {
         public RemoveIntersightUuidpoolPool()
@@ -1444,7 +1444,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove UuidpoolReservation.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightUuidpoolReservation")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightUuidpoolReservation", SupportsShouldProcess = true)]
     public class RemoveIntersightUuidpoolReservation : RemoveCmdletBase
     {
         public RemoveIntersightUuidpoolReservation()
@@ -1456,7 +1456,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove UuidpoolUuidLease.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightUuidpoolUuidLease")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightUuidpoolUuidLease", SupportsShouldProcess = true)]
     public class RemoveIntersightUuidpoolUuidLease : RemoveCmdletBase
     {
         public RemoveIntersightUuidpoolUuidLease()
@@ -1468,7 +1468,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set UuidpoolPool.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightUuidpoolPool")]
+    [Cmdlet(VerbsCommon.Set, "IntersightUuidpoolPool", SupportsShouldProcess = true)]
     public class SetIntersightUuidpoolPool : SetCmdletBase
     {
         public SetIntersightUuidpoolPool()

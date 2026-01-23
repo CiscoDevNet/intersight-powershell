@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SchedulerSchedulePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSchedulerSchedulePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSchedulerSchedulePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSchedulerSchedulePolicy : GetCmdletBase
     {
         public GetIntersightSchedulerSchedulePolicy()
@@ -187,7 +187,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SchedulerTaskResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSchedulerTaskResult", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSchedulerTaskResult", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSchedulerTaskResult : GetCmdletBase
     {
         public GetIntersightSchedulerTaskResult()
@@ -362,7 +362,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SchedulerTaskSchedule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSchedulerTaskSchedule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSchedulerTaskSchedule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSchedulerTaskSchedule : GetCmdletBase
     {
         public GetIntersightSchedulerTaskSchedule()
@@ -595,7 +595,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SchedulerSchedulePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSchedulerSchedulePolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightSchedulerSchedulePolicy", SupportsShouldProcess = true)]
     public class NewIntersightSchedulerSchedulePolicy : NewCmdletBase
     {
         public NewIntersightSchedulerSchedulePolicy()
@@ -741,7 +741,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SchedulerTaskSchedule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSchedulerTaskSchedule")]
+    [Cmdlet(VerbsCommon.New, "IntersightSchedulerTaskSchedule", SupportsShouldProcess = true)]
     public class NewIntersightSchedulerTaskSchedule : NewCmdletBase
     {
         public NewIntersightSchedulerTaskSchedule()
@@ -923,7 +923,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SchedulerSchedulePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSchedulerSchedulePolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSchedulerSchedulePolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightSchedulerSchedulePolicy : RemoveCmdletBase
     {
         public RemoveIntersightSchedulerSchedulePolicy()
@@ -935,7 +935,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SchedulerTaskResult.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSchedulerTaskResult")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSchedulerTaskResult", SupportsShouldProcess = true)]
     public class RemoveIntersightSchedulerTaskResult : RemoveCmdletBase
     {
         public RemoveIntersightSchedulerTaskResult()
@@ -947,7 +947,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SchedulerTaskSchedule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSchedulerTaskSchedule")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSchedulerTaskSchedule", SupportsShouldProcess = true)]
     public class RemoveIntersightSchedulerTaskSchedule : RemoveCmdletBase
     {
         public RemoveIntersightSchedulerTaskSchedule()
@@ -959,7 +959,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SchedulerSchedulePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSchedulerSchedulePolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSchedulerSchedulePolicy", SupportsShouldProcess = true)]
     public class SetIntersightSchedulerSchedulePolicy : SetCmdletBase
     {
         public SetIntersightSchedulerSchedulePolicy()
@@ -1094,7 +1094,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SchedulerTaskSchedule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSchedulerTaskSchedule")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSchedulerTaskSchedule", SupportsShouldProcess = true)]
     public class SetIntersightSchedulerTaskSchedule : SetCmdletBase
     {
         public SetIntersightSchedulerTaskSchedule()

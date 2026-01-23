@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AaaAuditRecord.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAaaAuditRecord", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAaaAuditRecord", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAaaAuditRecord : GetCmdletBase
     {
         public GetIntersightAaaAuditRecord()
@@ -320,7 +320,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AaaRetentionConfig.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAaaRetentionConfig", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAaaRetentionConfig", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAaaRetentionConfig : GetCmdletBase
     {
         public GetIntersightAaaRetentionConfig()
@@ -450,7 +450,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get AaaRetentionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightAaaRetentionPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightAaaRetentionPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightAaaRetentionPolicy : GetCmdletBase
     {
         public GetIntersightAaaRetentionPolicy()
@@ -613,7 +613,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New AaaRetentionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightAaaRetentionPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightAaaRetentionPolicy", SupportsShouldProcess = true)]
     public class NewIntersightAaaRetentionPolicy : NewCmdletBase
     {
         public NewIntersightAaaRetentionPolicy()
@@ -725,7 +725,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AaaRetentionPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightAaaRetentionPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightAaaRetentionPolicy", SupportsShouldProcess = true)]
     public class SetIntersightAaaRetentionPolicy : SetCmdletBase
     {
         public SetIntersightAaaRetentionPolicy()

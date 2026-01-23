@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "npdoKeojE/c=",
+  "dgSpecHash": "GWhZJdVoT/M=",
   "success": true,
-  "projectFilePath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2025121206/src/Intersight.PowerShellTest/Intersight.PowerShellTest.csproj",
+  "projectFilePath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2026011407/src/Intersight.PowerShellTest/Intersight.PowerShellTest.csproj",
   "expectedPackageFiles": [
     "/var/lib/jenkins/.nuget/packages/comparenetobjects/4.61.0/comparenetobjects.4.61.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
-    "/var/lib/jenkins/.nuget/packages/jsonsubtypes/2.0.1/jsonsubtypes.2.0.1.nupkg.sha512",
+    "/var/lib/jenkins/.nuget/packages/jsonsubtypes/1.8.0/jsonsubtypes.1.8.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/microsoft.applicationinsights/2.18.0/microsoft.applicationinsights.2.18.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/microsoft.codecoverage/17.1.0/microsoft.codecoverage.17.1.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareBiosDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareBiosDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareBiosDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareBiosDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareBiosDescriptor()
@@ -207,7 +207,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareBoardControllerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareBoardControllerDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareBoardControllerDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareBoardControllerDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareBoardControllerDescriptor()
@@ -404,7 +404,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareChassisUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareChassisUpgrade", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareChassisUpgrade", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareChassisUpgrade : GetCmdletBase
     {
         public GetIntersightFirmwareChassisUpgrade()
@@ -648,7 +648,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareCimcDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareCimcDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareCimcDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareCimcDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareCimcDescriptor()
@@ -845,7 +845,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareDimmDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareDimmDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareDimmDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareDimmDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareDimmDescriptor()
@@ -1042,7 +1042,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareDistributable : GetCmdletBase
     {
         public GetIntersightFirmwareDistributable()
@@ -1495,7 +1495,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareDistributableMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareDistributableMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareDistributableMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareDistributableMeta : GetCmdletBase
     {
         public GetIntersightFirmwareDistributableMeta()
@@ -1692,7 +1692,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareDriveDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareDriveDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareDriveDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareDriveDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareDriveDescriptor()
@@ -1889,7 +1889,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareDriverDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareDriverDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareDriverDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareDriverDistributable : GetCmdletBase
     {
         public GetIntersightFirmwareDriverDistributable()
@@ -2353,7 +2353,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareEula.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareEula", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareEula", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareEula : GetCmdletBase
     {
         public GetIntersightFirmwareEula()
@@ -2549,7 +2549,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareFirmwareSummary.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareFirmwareSummary", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareFirmwareSummary", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareFirmwareSummary : GetCmdletBase
     {
         public GetIntersightFirmwareFirmwareSummary()
@@ -2757,7 +2757,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareGpuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareGpuDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareGpuDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareGpuDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareGpuDescriptor()
@@ -2954,7 +2954,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareHbaDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareHbaDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareHbaDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareHbaDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareHbaDescriptor()
@@ -3151,7 +3151,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareIomDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareIomDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareIomDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareIomDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareIomDescriptor()
@@ -3348,7 +3348,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareMswitchDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareMswitchDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareMswitchDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareMswitchDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareMswitchDescriptor()
@@ -3545,7 +3545,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareNxosDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareNxosDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareNxosDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareNxosDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareNxosDescriptor()
@@ -3742,7 +3742,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwarePciNodeUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePciNodeUpgrade", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePciNodeUpgrade", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwarePciNodeUpgrade : GetCmdletBase
     {
         public GetIntersightFirmwarePciNodeUpgrade()
@@ -3963,7 +3963,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwarePcieDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePcieDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePcieDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwarePcieDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwarePcieDescriptor()
@@ -4160,7 +4160,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwarePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwarePolicy : GetCmdletBase
     {
         public GetIntersightFirmwarePolicy()
@@ -4326,7 +4326,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwarePsuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePsuDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePsuDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwarePsuDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwarePsuDescriptor()
@@ -4523,7 +4523,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwarePsxDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePsxDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwarePsxDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwarePsxDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwarePsxDescriptor()
@@ -4720,7 +4720,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareRunningFirmware.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareRunningFirmware", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareRunningFirmware", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareRunningFirmware : GetCmdletBase
     {
         public GetIntersightFirmwareRunningFirmware()
@@ -5038,7 +5038,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareSasExpanderDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareSasExpanderDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareSasExpanderDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareSasExpanderDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareSasExpanderDescriptor()
@@ -5235,7 +5235,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareServerConfigurationUtilityDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareServerConfigurationUtilityDistributable", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareServerConfigurationUtilityDistributable", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareServerConfigurationUtilityDistributable : GetCmdletBase
     {
         public GetIntersightFirmwareServerConfigurationUtilityDistributable()
@@ -5655,7 +5655,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareStorageControllerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareStorageControllerDescriptor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareStorageControllerDescriptor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareStorageControllerDescriptor : GetCmdletBase
     {
         public GetIntersightFirmwareStorageControllerDescriptor()
@@ -5852,7 +5852,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareSwitchUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareSwitchUpgrade", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareSwitchUpgrade", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareSwitchUpgrade : GetCmdletBase
     {
         public GetIntersightFirmwareSwitchUpgrade()
@@ -6129,7 +6129,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareUnsupportedVersionUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareUnsupportedVersionUpgrade", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareUnsupportedVersionUpgrade", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareUnsupportedVersionUpgrade : GetCmdletBase
     {
         public GetIntersightFirmwareUnsupportedVersionUpgrade()
@@ -6337,7 +6337,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareUpgrade", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareUpgrade", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareUpgrade : GetCmdletBase
     {
         public GetIntersightFirmwareUpgrade()
@@ -6582,7 +6582,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareUpgradeImpactStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareUpgradeImpactStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareUpgradeImpactStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareUpgradeImpactStatus : GetCmdletBase
     {
         public GetIntersightFirmwareUpgradeImpactStatus()
@@ -6737,7 +6737,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FirmwareUpgradeStatus.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareUpgradeStatus", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFirmwareUpgradeStatus", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFirmwareUpgradeStatus : GetCmdletBase
     {
         public GetIntersightFirmwareUpgradeStatus()
@@ -7066,7 +7066,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareBiosDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareBiosDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareBiosDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareBiosDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareBiosDescriptor()
@@ -7232,7 +7232,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareBoardControllerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareBoardControllerDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareBoardControllerDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareBoardControllerDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareBoardControllerDescriptor()
@@ -7398,7 +7398,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareChassisUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareChassisUpgrade")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareChassisUpgrade", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareChassisUpgrade : NewCmdletBase
     {
         public NewIntersightFirmwareChassisUpgrade()
@@ -7601,7 +7601,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareCimcDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareCimcDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareCimcDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareCimcDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareCimcDescriptor()
@@ -7767,7 +7767,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareDimmDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareDimmDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareDimmDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareDimmDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareDimmDescriptor()
@@ -7933,7 +7933,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareDistributable", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareDistributable : NewCmdletBase
     {
         public NewIntersightFirmwareDistributable()
@@ -8050,6 +8050,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -8295,7 +8305,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareDriveDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareDriveDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareDriveDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareDriveDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareDriveDescriptor()
@@ -8461,7 +8471,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareDriverDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareDriverDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareDriverDistributable", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareDriverDistributable : NewCmdletBase
     {
         public NewIntersightFirmwareDriverDistributable()
@@ -8578,6 +8588,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareDriverDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -8834,7 +8854,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareEula.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareEula")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareEula", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareEula : NewCmdletBase
     {
         public NewIntersightFirmwareEula()
@@ -8919,7 +8939,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareGpuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareGpuDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareGpuDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareGpuDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareGpuDescriptor()
@@ -9085,7 +9105,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareHbaDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareHbaDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareHbaDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareHbaDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareHbaDescriptor()
@@ -9251,7 +9271,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareIomDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareIomDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareIomDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareIomDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareIomDescriptor()
@@ -9417,7 +9437,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareMswitchDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareMswitchDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareMswitchDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareMswitchDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareMswitchDescriptor()
@@ -9583,7 +9603,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareNxosDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareNxosDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareNxosDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareNxosDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareNxosDescriptor()
@@ -9749,7 +9769,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwarePciNodeUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePciNodeUpgrade")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePciNodeUpgrade", SupportsShouldProcess = true)]
     public class NewIntersightFirmwarePciNodeUpgrade : NewCmdletBase
     {
         public NewIntersightFirmwarePciNodeUpgrade()
@@ -9929,7 +9949,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwarePcieDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePcieDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePcieDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwarePcieDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwarePcieDescriptor()
@@ -10095,7 +10115,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwarePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePolicy", SupportsShouldProcess = true)]
     public class NewIntersightFirmwarePolicy : NewCmdletBase
     {
         public NewIntersightFirmwarePolicy()
@@ -10250,7 +10270,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwarePsuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePsuDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePsuDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwarePsuDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwarePsuDescriptor()
@@ -10416,7 +10436,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwarePsxDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePsxDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwarePsxDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwarePsxDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwarePsxDescriptor()
@@ -10582,7 +10602,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareSasExpanderDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareSasExpanderDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareSasExpanderDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareSasExpanderDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareSasExpanderDescriptor()
@@ -10748,7 +10768,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareServerConfigurationUtilityDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareServerConfigurationUtilityDistributable")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareServerConfigurationUtilityDistributable", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareServerConfigurationUtilityDistributable : NewCmdletBase
     {
         public NewIntersightFirmwareServerConfigurationUtilityDistributable()
@@ -10843,6 +10863,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareServerConfigurationUtilityDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -11077,7 +11107,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareStorageControllerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareStorageControllerDescriptor")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareStorageControllerDescriptor", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareStorageControllerDescriptor : NewCmdletBase
     {
         public NewIntersightFirmwareStorageControllerDescriptor()
@@ -11243,7 +11273,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareSwitchUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareSwitchUpgrade")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareSwitchUpgrade", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareSwitchUpgrade : NewCmdletBase
     {
         public NewIntersightFirmwareSwitchUpgrade()
@@ -11479,7 +11509,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareUnsupportedVersionUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareUnsupportedVersionUpgrade")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareUnsupportedVersionUpgrade", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareUnsupportedVersionUpgrade : NewCmdletBase
     {
         public NewIntersightFirmwareUnsupportedVersionUpgrade()
@@ -11646,7 +11676,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareUpgrade")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareUpgrade", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareUpgrade : NewCmdletBase
     {
         public NewIntersightFirmwareUpgrade()
@@ -11860,7 +11890,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareUpgradeImpact.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareUpgradeImpact")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareUpgradeImpact", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareUpgradeImpact : NewCmdletBase
     {
         public NewIntersightFirmwareUpgradeImpact()
@@ -12082,7 +12112,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FirmwareUpgradeValidity.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightFirmwareUpgradeValidity")]
+    [Cmdlet(VerbsCommon.New, "IntersightFirmwareUpgradeValidity", SupportsShouldProcess = true)]
     public class NewIntersightFirmwareUpgradeValidity : NewCmdletBase
     {
         public NewIntersightFirmwareUpgradeValidity()
@@ -12173,7 +12203,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareBiosDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareBiosDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareBiosDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareBiosDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareBiosDescriptor()
@@ -12185,7 +12215,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareBoardControllerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareBoardControllerDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareBoardControllerDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareBoardControllerDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareBoardControllerDescriptor()
@@ -12197,7 +12227,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareChassisUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareChassisUpgrade")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareChassisUpgrade", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareChassisUpgrade : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareChassisUpgrade()
@@ -12209,7 +12239,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareCimcDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareCimcDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareCimcDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareCimcDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareCimcDescriptor()
@@ -12221,7 +12251,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareDimmDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareDimmDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareDimmDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareDimmDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareDimmDescriptor()
@@ -12233,7 +12263,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareDistributable : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareDistributable()
@@ -12245,7 +12275,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareDriveDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareDriveDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareDriveDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareDriveDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareDriveDescriptor()
@@ -12257,7 +12287,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareDriverDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareDriverDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareDriverDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareDriverDistributable : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareDriverDistributable()
@@ -12269,7 +12299,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareGpuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareGpuDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareGpuDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareGpuDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareGpuDescriptor()
@@ -12281,7 +12311,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareHbaDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareHbaDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareHbaDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareHbaDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareHbaDescriptor()
@@ -12293,7 +12323,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareIomDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareIomDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareIomDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareIomDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareIomDescriptor()
@@ -12305,7 +12335,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareMswitchDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareMswitchDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareMswitchDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareMswitchDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareMswitchDescriptor()
@@ -12317,7 +12347,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareNxosDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareNxosDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareNxosDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareNxosDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareNxosDescriptor()
@@ -12329,7 +12359,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwarePciNodeUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePciNodeUpgrade")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePciNodeUpgrade", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwarePciNodeUpgrade : RemoveCmdletBase
     {
         public RemoveIntersightFirmwarePciNodeUpgrade()
@@ -12341,7 +12371,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwarePcieDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePcieDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePcieDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwarePcieDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwarePcieDescriptor()
@@ -12353,7 +12383,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwarePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwarePolicy : RemoveCmdletBase
     {
         public RemoveIntersightFirmwarePolicy()
@@ -12365,7 +12395,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwarePsuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePsuDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePsuDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwarePsuDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwarePsuDescriptor()
@@ -12377,7 +12407,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwarePsxDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePsxDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwarePsxDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwarePsxDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwarePsxDescriptor()
@@ -12389,7 +12419,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareSasExpanderDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareSasExpanderDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareSasExpanderDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareSasExpanderDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareSasExpanderDescriptor()
@@ -12401,7 +12431,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareServerConfigurationUtilityDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareServerConfigurationUtilityDistributable")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareServerConfigurationUtilityDistributable", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareServerConfigurationUtilityDistributable : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareServerConfigurationUtilityDistributable()
@@ -12413,7 +12443,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareStorageControllerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareStorageControllerDescriptor")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareStorageControllerDescriptor", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareStorageControllerDescriptor : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareStorageControllerDescriptor()
@@ -12425,7 +12455,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareSwitchUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareSwitchUpgrade")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareSwitchUpgrade", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareSwitchUpgrade : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareSwitchUpgrade()
@@ -12437,7 +12467,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareUnsupportedVersionUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareUnsupportedVersionUpgrade")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareUnsupportedVersionUpgrade", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareUnsupportedVersionUpgrade : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareUnsupportedVersionUpgrade()
@@ -12449,7 +12479,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FirmwareUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareUpgrade")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightFirmwareUpgrade", SupportsShouldProcess = true)]
     public class RemoveIntersightFirmwareUpgrade : RemoveCmdletBase
     {
         public RemoveIntersightFirmwareUpgrade()
@@ -12461,7 +12491,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareBiosDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareBiosDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareBiosDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareBiosDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareBiosDescriptor()
@@ -12616,7 +12646,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareBoardControllerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareBoardControllerDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareBoardControllerDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareBoardControllerDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareBoardControllerDescriptor()
@@ -12771,7 +12801,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareCimcDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareCimcDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareCimcDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareCimcDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareCimcDescriptor()
@@ -12926,7 +12956,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareDimmDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareDimmDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareDimmDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareDimmDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareDimmDescriptor()
@@ -13081,7 +13111,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareDistributable", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareDistributable : SetCmdletBase
     {
         public SetIntersightFirmwareDistributable()
@@ -13198,6 +13228,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -13432,7 +13472,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareDriveDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareDriveDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareDriveDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareDriveDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareDriveDescriptor()
@@ -13587,7 +13627,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareDriverDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareDriverDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareDriverDistributable", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareDriverDistributable : SetCmdletBase
     {
         public SetIntersightFirmwareDriverDistributable()
@@ -13704,6 +13744,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareDriverDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -13949,7 +13999,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareGpuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareGpuDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareGpuDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareGpuDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareGpuDescriptor()
@@ -14104,7 +14154,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareHbaDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareHbaDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareHbaDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareHbaDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareHbaDescriptor()
@@ -14259,7 +14309,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareIomDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareIomDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareIomDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareIomDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareIomDescriptor()
@@ -14414,7 +14464,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareMswitchDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareMswitchDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareMswitchDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareMswitchDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareMswitchDescriptor()
@@ -14569,7 +14619,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareNxosDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareNxosDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareNxosDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareNxosDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareNxosDescriptor()
@@ -14724,7 +14774,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwarePcieDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwarePcieDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwarePcieDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwarePcieDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwarePcieDescriptor()
@@ -14879,7 +14929,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwarePolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwarePolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwarePolicy", SupportsShouldProcess = true)]
     public class SetIntersightFirmwarePolicy : SetCmdletBase
     {
         public SetIntersightFirmwarePolicy()
@@ -15023,7 +15073,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwarePsuDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwarePsuDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwarePsuDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwarePsuDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwarePsuDescriptor()
@@ -15178,7 +15228,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwarePsxDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwarePsxDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwarePsxDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwarePsxDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwarePsxDescriptor()
@@ -15333,7 +15383,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareRunningFirmware.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareRunningFirmware")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareRunningFirmware", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareRunningFirmware : SetCmdletBase
     {
         public SetIntersightFirmwareRunningFirmware()
@@ -15429,7 +15479,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareSasExpanderDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareSasExpanderDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareSasExpanderDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareSasExpanderDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareSasExpanderDescriptor()
@@ -15584,7 +15634,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareServerConfigurationUtilityDistributable.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareServerConfigurationUtilityDistributable")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareServerConfigurationUtilityDistributable", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareServerConfigurationUtilityDistributable : SetCmdletBase
     {
         public SetIntersightFirmwareServerConfigurationUtilityDistributable()
@@ -15679,6 +15729,16 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareServerConfigurationUtilityDistributable.ImportStateEnum ImportState
+        {
+            get;
+            set;
+        }
 
 
 
@@ -15902,7 +15962,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareStorageControllerDescriptor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareStorageControllerDescriptor")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareStorageControllerDescriptor", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareStorageControllerDescriptor : SetCmdletBase
     {
         public SetIntersightFirmwareStorageControllerDescriptor()
@@ -16057,7 +16117,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareUnsupportedVersionUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareUnsupportedVersionUpgrade")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareUnsupportedVersionUpgrade", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareUnsupportedVersionUpgrade : SetCmdletBase
     {
         public SetIntersightFirmwareUnsupportedVersionUpgrade()
@@ -16213,7 +16273,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FirmwareUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareUpgrade")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFirmwareUpgrade", SupportsShouldProcess = true)]
     public class SetIntersightFirmwareUpgrade : SetCmdletBase
     {
         public SetIntersightFirmwareUpgrade()

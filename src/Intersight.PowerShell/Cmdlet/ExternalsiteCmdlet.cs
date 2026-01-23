@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ExternalsiteAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightExternalsiteAuthorization", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightExternalsiteAuthorization", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightExternalsiteAuthorization : GetCmdletBase
     {
         public GetIntersightExternalsiteAuthorization()
@@ -195,7 +195,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ExternalsiteAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightExternalsiteAuthorization")]
+    [Cmdlet(VerbsCommon.New, "IntersightExternalsiteAuthorization", SupportsShouldProcess = true)]
     public class NewIntersightExternalsiteAuthorization : NewCmdletBase
     {
         public NewIntersightExternalsiteAuthorization()
@@ -309,7 +309,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set ExternalsiteAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightExternalsiteAuthorization")]
+    [Cmdlet(VerbsCommon.Set, "IntersightExternalsiteAuthorization", SupportsShouldProcess = true)]
     public class SetIntersightExternalsiteAuthorization : SetCmdletBase
     {
         public SetIntersightExternalsiteAuthorization()

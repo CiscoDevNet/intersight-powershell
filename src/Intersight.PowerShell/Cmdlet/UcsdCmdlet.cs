@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get UcsdBackupInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightUcsdBackupInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightUcsdBackupInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightUcsdBackupInfo : GetCmdletBase
     {
         public GetIntersightUcsdBackupInfo()
@@ -306,7 +306,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove UcsdBackupInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightUcsdBackupInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightUcsdBackupInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightUcsdBackupInfo : RemoveCmdletBase
     {
         public RemoveIntersightUcsdBackupInfo()

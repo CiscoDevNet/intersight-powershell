@@ -17,6 +17,7 @@ namespace Intersight.PowerShell
         {
             ClassId = SoftwareApplianceDistributable.ClassIdEnum.SoftwareApplianceDistributable;
             ImportAction = SoftwareApplianceDistributable.ImportActionEnum.None;
+            ImportState = SoftwareApplianceDistributable.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwareApplianceDistributable.ObjectTypeEnum.SoftwareApplianceDistributable;
 
         }
@@ -96,6 +97,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public SoftwareApplianceDistributable.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareApplianceDistributable.ImportStateEnum ImportState
         {
             get;
             set;
@@ -324,6 +335,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ImportAction = this.ImportAction;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
+            {
+                initObject.ImportState = this.ImportState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
                 initObject.Md5eTag = this.Md5eTag;
@@ -510,6 +525,7 @@ namespace Intersight.PowerShell
         {
             ClassId = SoftwareHciBundleDistributable.ClassIdEnum.SoftwareHciBundleDistributable;
             ImportAction = SoftwareHciBundleDistributable.ImportActionEnum.None;
+            ImportState = SoftwareHciBundleDistributable.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwareHciBundleDistributable.ObjectTypeEnum.SoftwareHciBundleDistributable;
 
         }
@@ -589,6 +605,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public SoftwareHciBundleDistributable.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHciBundleDistributable.ImportStateEnum ImportState
         {
             get;
             set;
@@ -817,6 +843,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ImportAction = this.ImportAction;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
+            {
+                initObject.ImportState = this.ImportState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
                 initObject.Md5eTag = this.Md5eTag;
@@ -904,6 +934,7 @@ namespace Intersight.PowerShell
         {
             ClassId = SoftwareHciDistributable.ClassIdEnum.SoftwareHciDistributable;
             ImportAction = SoftwareHciDistributable.ImportActionEnum.None;
+            ImportState = SoftwareHciDistributable.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwareHciDistributable.ObjectTypeEnum.SoftwareHciDistributable;
 
         }
@@ -983,6 +1014,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public SoftwareHciDistributable.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHciDistributable.ImportStateEnum ImportState
         {
             get;
             set;
@@ -1211,6 +1252,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ImportAction = this.ImportAction;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
+            {
+                initObject.ImportState = this.ImportState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
                 initObject.Md5eTag = this.Md5eTag;
@@ -1299,6 +1344,7 @@ namespace Intersight.PowerShell
             ClassId = SoftwareHclMeta.ClassIdEnum.SoftwareHclMeta;
             ContentType = SoftwareHclMeta.ContentTypeEnum.Full;
             ImportAction = SoftwareHclMeta.ImportActionEnum.None;
+            ImportState = SoftwareHclMeta.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwareHclMeta.ObjectTypeEnum.SoftwareHclMeta;
 
         }
@@ -1388,6 +1434,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public SoftwareHclMeta.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHclMeta.ImportStateEnum ImportState
         {
             get;
             set;
@@ -1620,6 +1676,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ImportAction = this.ImportAction;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
+            {
+                initObject.ImportState = this.ImportState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
                 initObject.Md5eTag = this.Md5eTag;
@@ -1707,6 +1767,7 @@ namespace Intersight.PowerShell
         {
             ClassId = SoftwareHyperflexBundleDistributable.ClassIdEnum.SoftwareHyperflexBundleDistributable;
             ImportAction = SoftwareHyperflexBundleDistributable.ImportActionEnum.None;
+            ImportState = SoftwareHyperflexBundleDistributable.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwareHyperflexBundleDistributable.ObjectTypeEnum.SoftwareHyperflexBundleDistributable;
 
         }
@@ -1786,6 +1847,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public SoftwareHyperflexBundleDistributable.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHyperflexBundleDistributable.ImportStateEnum ImportState
         {
             get;
             set;
@@ -2014,6 +2085,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ImportAction = this.ImportAction;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
+            {
+                initObject.ImportState = this.ImportState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
                 initObject.Md5eTag = this.Md5eTag;
@@ -2101,6 +2176,7 @@ namespace Intersight.PowerShell
         {
             ClassId = SoftwareHyperflexDistributable.ClassIdEnum.SoftwareHyperflexDistributable;
             ImportAction = SoftwareHyperflexDistributable.ImportActionEnum.None;
+            ImportState = SoftwareHyperflexDistributable.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwareHyperflexDistributable.ObjectTypeEnum.SoftwareHyperflexDistributable;
 
         }
@@ -2180,6 +2256,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public SoftwareHyperflexDistributable.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareHyperflexDistributable.ImportStateEnum ImportState
         {
             get;
             set;
@@ -2408,6 +2494,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ImportAction = this.ImportAction;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
+            {
+                initObject.ImportState = this.ImportState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
                 initObject.Md5eTag = this.Md5eTag;
@@ -2495,6 +2585,7 @@ namespace Intersight.PowerShell
         {
             ClassId = SoftwareIksBundleDistributable.ClassIdEnum.SoftwareIksBundleDistributable;
             ImportAction = SoftwareIksBundleDistributable.ImportActionEnum.None;
+            ImportState = SoftwareIksBundleDistributable.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwareIksBundleDistributable.ObjectTypeEnum.SoftwareIksBundleDistributable;
 
         }
@@ -2574,6 +2665,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public SoftwareIksBundleDistributable.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareIksBundleDistributable.ImportStateEnum ImportState
         {
             get;
             set;
@@ -2801,6 +2902,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ImportAction"))
             {
                 initObject.ImportAction = this.ImportAction;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
+            {
+                initObject.ImportState = this.ImportState;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
@@ -3030,6 +3135,7 @@ namespace Intersight.PowerShell
         {
             ClassId = SoftwareSolutionDistributable.ClassIdEnum.SoftwareSolutionDistributable;
             ImportAction = SoftwareSolutionDistributable.ImportActionEnum.None;
+            ImportState = SoftwareSolutionDistributable.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwareSolutionDistributable.ObjectTypeEnum.SoftwareSolutionDistributable;
             SubType = SoftwareSolutionDistributable.SubTypeEnum.Osimage;
 
@@ -3110,6 +3216,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public SoftwareSolutionDistributable.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareSolutionDistributable.ImportStateEnum ImportState
         {
             get;
             set;
@@ -3358,6 +3474,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ImportAction = this.ImportAction;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
+            {
+                initObject.ImportState = this.ImportState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
                 initObject.Md5eTag = this.Md5eTag;
@@ -3453,6 +3573,7 @@ namespace Intersight.PowerShell
         {
             ClassId = SoftwareUcsdBundleDistributable.ClassIdEnum.SoftwareUcsdBundleDistributable;
             ImportAction = SoftwareUcsdBundleDistributable.ImportActionEnum.None;
+            ImportState = SoftwareUcsdBundleDistributable.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwareUcsdBundleDistributable.ObjectTypeEnum.SoftwareUcsdBundleDistributable;
 
         }
@@ -3532,6 +3653,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public SoftwareUcsdBundleDistributable.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareUcsdBundleDistributable.ImportStateEnum ImportState
         {
             get;
             set;
@@ -3760,6 +3891,10 @@ namespace Intersight.PowerShell
             {
                 initObject.ImportAction = this.ImportAction;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
+            {
+                initObject.ImportState = this.ImportState;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
                 initObject.Md5eTag = this.Md5eTag;
@@ -3847,6 +3982,7 @@ namespace Intersight.PowerShell
         {
             ClassId = SoftwareUcsdDistributable.ClassIdEnum.SoftwareUcsdDistributable;
             ImportAction = SoftwareUcsdDistributable.ImportActionEnum.None;
+            ImportState = SoftwareUcsdDistributable.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwareUcsdDistributable.ObjectTypeEnum.SoftwareUcsdDistributable;
 
         }
@@ -3926,6 +4062,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public SoftwareUcsdDistributable.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public SoftwareUcsdDistributable.ImportStateEnum ImportState
         {
             get;
             set;
@@ -4153,6 +4299,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ImportAction"))
             {
                 initObject.ImportAction = this.ImportAction;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
+            {
+                initObject.ImportState = this.ImportState;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {

@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SyslogPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSyslogPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSyslogPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSyslogPolicy : GetCmdletBase
     {
         public GetIntersightSyslogPolicy()
@@ -165,7 +165,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SyslogPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSyslogPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSyslogPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSyslogPolicyInventory : GetCmdletBase
     {
         public GetIntersightSyslogPolicyInventory()
@@ -330,7 +330,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SyslogPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSyslogPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightSyslogPolicy", SupportsShouldProcess = true)]
     public class NewIntersightSyslogPolicy : NewCmdletBase
     {
         public NewIntersightSyslogPolicy()
@@ -474,7 +474,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SyslogPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSyslogPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSyslogPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightSyslogPolicy : RemoveCmdletBase
     {
         public RemoveIntersightSyslogPolicy()
@@ -486,7 +486,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SyslogPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSyslogPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSyslogPolicy", SupportsShouldProcess = true)]
     public class SetIntersightSyslogPolicy : SetCmdletBase
     {
         public SetIntersightSyslogPolicy()

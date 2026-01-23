@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsCommon.Remove, "IntersightManagedObject")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightManagedObject", SupportsShouldProcess = true)]
     public class RemoveManagedObject : CmdletBase
     {
         public RemoveManagedObject()
@@ -23,6 +23,11 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+
+            if (!ShouldProcess(CmdletBase.Config.BasePath, string.Format("Delete {0} : Moid {1}", ObjectType, Moid)))
+            {
+                return;
+            }
             //Check the objectType in MoBaseMo.ObjectTypeEnum if it belongs to that enum
             //fetch the display name.
             //this is done to work with specific Get cmdlets.

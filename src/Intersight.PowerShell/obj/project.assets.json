@@ -18,10 +18,10 @@
           }
         }
       },
-      "JsonSubTypes/2.0.1": {
+      "JsonSubTypes/1.8.0": {
         "type": "package",
         "dependencies": {
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "10.0.1"
         },
         "compile": {
           "lib/netstandard2.0/JsonSubTypes.dll": {}
@@ -589,16 +589,15 @@
         "lib/netstandard2.0/KellermanSoftware.Compare-NET-Objects.xml"
       ]
     },
-    "JsonSubTypes/2.0.1": {
-      "sha512": "1Po+Ypf0SjCeEKx5+C89Nb5OgTcqNvfS3uTI46MUM+KEp6Rq/M0h+vVsTUt/6DFRwZMTpsAJM4yJrZmEObVANA==",
+    "JsonSubTypes/1.8.0": {
+      "sha512": "pBChxyl9mt0F1s1giHlN6yQ9WWb5FljluCNhMnSb7sspPfPRPTrc0a0psdu2/FVb5nZu5bQN50OMMaSp8jm8xQ==",
       "type": "package",
-      "path": "jsonsubtypes/2.0.1",
+      "path": "jsonsubtypes/1.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
-        "README.md",
-        "jsonsubtypes.2.0.1.nupkg.sha512",
+        "jsonsubtypes.1.8.0.nupkg.sha512",
         "jsonsubtypes.nuspec",
         "lib/net35/JsonSubTypes.dll",
         "lib/net40/JsonSubTypes.dll",
@@ -606,6 +605,9 @@
         "lib/net46/JsonSubTypes.dll",
         "lib/net47/JsonSubTypes.dll",
         "lib/netstandard1.3/JsonSubTypes.dll",
+        "lib/netstandard1.4/JsonSubTypes.dll",
+        "lib/netstandard1.5/JsonSubTypes.dll",
+        "lib/netstandard1.6/JsonSubTypes.dll",
         "lib/netstandard2.0/JsonSubTypes.dll"
       ]
     },
@@ -1539,7 +1541,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "CompareNETObjects >= 4.61.0",
-      "JsonSubTypes >= 2.0.1",
+      "JsonSubTypes >= 1.8.0",
       "Newtonsoft.Json >= 13.0.3",
       "Polly >= 7.2.3",
       "RestSharp >= 112.0.0",
@@ -1551,13 +1553,13 @@
     "/var/lib/jenkins/.nuget/packages/": {}
   },
   "project": {
-    "version": "1.0.11.2025121206",
+    "version": "1.0.11.2026011407",
     "restore": {
-      "projectUniqueName": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2025121206/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
+      "projectUniqueName": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2026011407/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
       "projectName": "PSIntersight",
-      "projectPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2025121206/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
+      "projectPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2026011407/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
       "packagesPath": "/var/lib/jenkins/.nuget/packages/",
-      "outputPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2025121206/src/Intersight.PowerShell/obj/",
+      "outputPath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2026011407/src/Intersight.PowerShell/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/var/lib/jenkins/.nuget/NuGet/NuGet.Config"
@@ -1595,7 +1597,7 @@
           },
           "JsonSubTypes": {
             "target": "Package",
-            "version": "[2.0.1, )"
+            "version": "[1.8.0, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

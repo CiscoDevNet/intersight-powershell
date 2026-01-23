@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OauthAccessToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOauthAccessToken", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOauthAccessToken", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOauthAccessToken : GetCmdletBase
     {
         public GetIntersightOauthAccessToken()
@@ -195,7 +195,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get OauthAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightOauthAuthorization", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightOauthAuthorization", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightOauthAuthorization : GetCmdletBase
     {
         public GetIntersightOauthAuthorization()
@@ -391,7 +391,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New OauthAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightOauthAuthorization")]
+    [Cmdlet(VerbsCommon.New, "IntersightOauthAuthorization", SupportsShouldProcess = true)]
     public class NewIntersightOauthAuthorization : NewCmdletBase
     {
         public NewIntersightOauthAuthorization()
@@ -506,7 +506,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove OauthAccessToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightOauthAccessToken")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightOauthAccessToken", SupportsShouldProcess = true)]
     public class RemoveIntersightOauthAccessToken : RemoveCmdletBase
     {
         public RemoveIntersightOauthAccessToken()
@@ -518,7 +518,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set OauthAuthorization.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightOauthAuthorization")]
+    [Cmdlet(VerbsCommon.Set, "IntersightOauthAuthorization", SupportsShouldProcess = true)]
     public class SetIntersightOauthAuthorization : SetCmdletBase
     {
         public SetIntersightOauthAuthorization()

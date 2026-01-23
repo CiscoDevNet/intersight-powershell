@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamAccount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamAccount", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamAccount", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamAccount : GetCmdletBase
     {
         public GetIntersightIamAccount()
@@ -205,7 +205,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamAccountExperience.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamAccountExperience", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamAccountExperience", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamAccountExperience : GetCmdletBase
     {
         public GetIntersightIamAccountExperience()
@@ -336,7 +336,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamApiKey.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamApiKey", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamApiKey", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamApiKey : GetCmdletBase
     {
         public GetIntersightIamApiKey()
@@ -600,7 +600,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamAppRegistration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamAppRegistration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamAppRegistration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamAppRegistration : GetCmdletBase
     {
         public GetIntersightIamAppRegistration()
@@ -978,7 +978,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamBannerMessage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamBannerMessage", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamBannerMessage", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamBannerMessage : GetCmdletBase
     {
         public GetIntersightIamBannerMessage()
@@ -1141,7 +1141,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamCertificate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamCertificate", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamCertificate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamCertificate : GetCmdletBase
     {
         public GetIntersightIamCertificate()
@@ -1283,7 +1283,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamCertificateRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamCertificateRequest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamCertificateRequest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamCertificateRequest : GetCmdletBase
     {
         public GetIntersightIamCertificateRequest()
@@ -1481,7 +1481,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamDefaultAuthentication.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamDefaultAuthentication", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamDefaultAuthentication", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamDefaultAuthentication : GetCmdletBase
     {
         public GetIntersightIamDefaultAuthentication()
@@ -1633,7 +1633,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamDomainGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamDomainGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamDomainGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamDomainGroup : GetCmdletBase
     {
         public GetIntersightIamDomainGroup()
@@ -1829,7 +1829,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamDomainNameInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamDomainNameInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamDomainNameInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamDomainNameInfo : GetCmdletBase
     {
         public GetIntersightIamDomainNameInfo()
@@ -2015,7 +2015,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamEndPointPrivilege.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointPrivilege", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointPrivilege", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamEndPointPrivilege : GetCmdletBase
     {
         public GetIntersightIamEndPointPrivilege()
@@ -2178,7 +2178,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamEndPointRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamEndPointRole : GetCmdletBase
     {
         public GetIntersightIamEndPointRole()
@@ -2353,7 +2353,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamEndPointUser.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUser", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUser", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamEndPointUser : GetCmdletBase
     {
         public GetIntersightIamEndPointUser()
@@ -2495,7 +2495,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamEndPointUserInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUserInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUserInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamEndPointUserInventory : GetCmdletBase
     {
         public GetIntersightIamEndPointUserInventory()
@@ -2659,7 +2659,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamEndPointUserPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUserPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUserPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamEndPointUserPolicy : GetCmdletBase
     {
         public GetIntersightIamEndPointUserPolicy()
@@ -2814,7 +2814,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamEndPointUserPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUserPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUserPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamEndPointUserPolicyInventory : GetCmdletBase
     {
         public GetIntersightIamEndPointUserPolicyInventory()
@@ -2979,7 +2979,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamEndPointUserRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUserRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUserRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamEndPointUserRole : GetCmdletBase
     {
         public GetIntersightIamEndPointUserRole()
@@ -3177,7 +3177,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamEndPointUserRoleInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUserRoleInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamEndPointUserRoleInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamEndPointUserRoleInventory : GetCmdletBase
     {
         public GetIntersightIamEndPointUserRoleInventory()
@@ -3386,7 +3386,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamGuestAccessSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamGuestAccessSettings", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamGuestAccessSettings", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamGuestAccessSettings : GetCmdletBase
     {
         public GetIntersightIamGuestAccessSettings()
@@ -3539,7 +3539,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamIdp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamIdp", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamIdp", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamIdp : GetCmdletBase
     {
         public GetIntersightIamIdp()
@@ -3795,7 +3795,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamIdpReference.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamIdpReference", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamIdpReference", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamIdpReference : GetCmdletBase
     {
         public GetIntersightIamIdpReference()
@@ -3984,7 +3984,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamIpAccessManagement.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamIpAccessManagement", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamIpAccessManagement", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamIpAccessManagement : GetCmdletBase
     {
         public GetIntersightIamIpAccessManagement()
@@ -4137,7 +4137,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamIpAddress.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamIpAddress", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamIpAddress", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamIpAddress : GetCmdletBase
     {
         public GetIntersightIamIpAddress()
@@ -4289,7 +4289,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamLdapConfigParams.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamLdapConfigParams", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamLdapConfigParams", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamLdapConfigParams : GetCmdletBase
     {
         public GetIntersightIamLdapConfigParams()
@@ -4430,7 +4430,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamLdapGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamLdapGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamLdapGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamLdapGroup : GetCmdletBase
     {
         public GetIntersightIamLdapGroup()
@@ -4594,7 +4594,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamLdapMeta.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamLdapMeta", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamLdapMeta", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamLdapMeta : GetCmdletBase
     {
         public GetIntersightIamLdapMeta()
@@ -4736,7 +4736,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamLdapPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamLdapPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamLdapPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamLdapPolicy : GetCmdletBase
     {
         public GetIntersightIamLdapPolicy()
@@ -4937,7 +4937,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamLdapProvider.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamLdapProvider", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamLdapProvider", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamLdapProvider : GetCmdletBase
     {
         public GetIntersightIamLdapProvider()
@@ -5100,7 +5100,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamLocalUserPassword.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamLocalUserPassword", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamLocalUserPassword", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamLocalUserPassword : GetCmdletBase
     {
         public GetIntersightIamLocalUserPassword()
@@ -5318,7 +5318,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamLocalUserPasswordPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamLocalUserPasswordPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamLocalUserPasswordPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamLocalUserPasswordPolicy : GetCmdletBase
     {
         public GetIntersightIamLocalUserPasswordPolicy()
@@ -5580,7 +5580,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamOAuthToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamOAuthToken", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamOAuthToken", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamOAuthToken : GetCmdletBase
     {
         public GetIntersightIamOAuthToken()
@@ -5821,7 +5821,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamPasswordHistorySettingCollection.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamPasswordHistorySettingCollection", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamPasswordHistorySettingCollection", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamPasswordHistorySettingCollection : GetCmdletBase
     {
         public GetIntersightIamPasswordHistorySettingCollection()
@@ -5996,7 +5996,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamPermission.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamPermission", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamPermission", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamPermission : GetCmdletBase
     {
         public GetIntersightIamPermission()
@@ -6165,7 +6165,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamPrivateKeySpec.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamPrivateKeySpec", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamPrivateKeySpec", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamPrivateKeySpec : GetCmdletBase
     {
         public GetIntersightIamPrivateKeySpec()
@@ -6296,7 +6296,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamPrivilege.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamPrivilege", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamPrivilege", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamPrivilege : GetCmdletBase
     {
         public GetIntersightIamPrivilege()
@@ -6526,7 +6526,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamPrivilegeSet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamPrivilegeSet", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamPrivilegeSet", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamPrivilegeSet : GetCmdletBase
     {
         public GetIntersightIamPrivilegeSet()
@@ -6747,7 +6747,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamPrivilegeSetMetaInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamPrivilegeSetMetaInfo", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamPrivilegeSetMetaInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamPrivilegeSetMetaInfo : GetCmdletBase
     {
         public GetIntersightIamPrivilegeSetMetaInfo()
@@ -6895,7 +6895,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamQualifier.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamQualifier", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamQualifier", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamQualifier : GetCmdletBase
     {
         public GetIntersightIamQualifier()
@@ -7037,7 +7037,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamResourceLimits.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamResourceLimits", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamResourceLimits", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamResourceLimits : GetCmdletBase
     {
         public GetIntersightIamResourceLimits()
@@ -7222,7 +7222,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamResourcePermission.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamResourcePermission", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamResourcePermission", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamResourcePermission : GetCmdletBase
     {
         public GetIntersightIamResourcePermission()
@@ -7375,7 +7375,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamResourceRoles.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamResourceRoles", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamResourceRoles", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamResourceRoles : GetCmdletBase
     {
         public GetIntersightIamResourceRoles()
@@ -7519,7 +7519,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamRole", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamRole", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamRole : GetCmdletBase
     {
         public GetIntersightIamRole()
@@ -7684,7 +7684,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamSecurityHolder.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamSecurityHolder", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamSecurityHolder", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamSecurityHolder : GetCmdletBase
     {
         public GetIntersightIamSecurityHolder()
@@ -7826,7 +7826,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamServiceProvider.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamServiceProvider", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamServiceProvider", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamServiceProvider : GetCmdletBase
     {
         public GetIntersightIamServiceProvider()
@@ -7989,7 +7989,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamSession", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamSession", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamSession : GetCmdletBase
     {
         public GetIntersightIamSession()
@@ -8253,7 +8253,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamSessionLimits.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamSessionLimits", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamSessionLimits", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamSessionLimits : GetCmdletBase
     {
         public GetIntersightIamSessionLimits()
@@ -8438,7 +8438,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamSharingRule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamSharingRule", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamSharingRule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamSharingRule : GetCmdletBase
     {
         public GetIntersightIamSharingRule()
@@ -8590,7 +8590,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamSystem.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamSystem", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamSystem", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamSystem : GetCmdletBase
     {
         public GetIntersightIamSystem()
@@ -8736,7 +8736,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamTestIdpConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamTestIdpConfiguration", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamTestIdpConfiguration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamTestIdpConfiguration : GetCmdletBase
     {
         public GetIntersightIamTestIdpConfiguration()
@@ -8954,7 +8954,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamTrustPoint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamTrustPoint", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamTrustPoint", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamTrustPoint : GetCmdletBase
     {
         public GetIntersightIamTrustPoint()
@@ -9097,7 +9097,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamUser.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamUser", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamUser", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamUser : GetCmdletBase
     {
         public GetIntersightIamUser()
@@ -9376,7 +9376,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamUserGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamUserGroup", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamUserGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamUserGroup : GetCmdletBase
     {
         public GetIntersightIamUserGroup()
@@ -9607,7 +9607,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamUserPreference.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamUserPreference", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamUserPreference", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamUserPreference : GetCmdletBase
     {
         public GetIntersightIamUserPreference()
@@ -9760,7 +9760,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamUserQualifier.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamUserQualifier", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamUserQualifier", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamUserQualifier : GetCmdletBase
     {
         public GetIntersightIamUserQualifier()
@@ -9924,7 +9924,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get IamUserSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightIamUserSetting", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightIamUserSetting", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightIamUserSetting : GetCmdletBase
     {
         public GetIntersightIamUserSetting()
@@ -10098,7 +10098,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamAccount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamAccount")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamAccount", SupportsShouldProcess = true)]
     public class NewIntersightIamAccount : NewCmdletBase
     {
         public NewIntersightIamAccount()
@@ -10202,7 +10202,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamAccountExperience.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamAccountExperience")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamAccountExperience", SupportsShouldProcess = true)]
     public class NewIntersightIamAccountExperience : NewCmdletBase
     {
         public NewIntersightIamAccountExperience()
@@ -10302,7 +10302,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamApiKey.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamApiKey")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamApiKey", SupportsShouldProcess = true)]
     public class NewIntersightIamApiKey : NewCmdletBase
     {
         public NewIntersightIamApiKey()
@@ -10475,7 +10475,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamAppRegistration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamAppRegistration")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamAppRegistration", SupportsShouldProcess = true)]
     public class NewIntersightIamAppRegistration : NewCmdletBase
     {
         public NewIntersightIamAppRegistration()
@@ -10702,7 +10702,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamCertificate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamCertificate")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamCertificate", SupportsShouldProcess = true)]
     public class NewIntersightIamCertificate : NewCmdletBase
     {
         public NewIntersightIamCertificate()
@@ -10803,7 +10803,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamCertificateRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamCertificateRequest")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamCertificateRequest", SupportsShouldProcess = true)]
     public class NewIntersightIamCertificateRequest : NewCmdletBase
     {
         public NewIntersightIamCertificateRequest()
@@ -10960,7 +10960,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamDomainNameInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamDomainNameInfo")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamDomainNameInfo", SupportsShouldProcess = true)]
     public class NewIntersightIamDomainNameInfo : NewCmdletBase
     {
         public NewIntersightIamDomainNameInfo()
@@ -11065,7 +11065,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamEndPointUser.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamEndPointUser")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamEndPointUser", SupportsShouldProcess = true)]
     public class NewIntersightIamEndPointUser : NewCmdletBase
     {
         public NewIntersightIamEndPointUser()
@@ -11176,7 +11176,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamEndPointUserPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamEndPointUserPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamEndPointUserPolicy", SupportsShouldProcess = true)]
     public class NewIntersightIamEndPointUserPolicy : NewCmdletBase
     {
         public NewIntersightIamEndPointUserPolicy()
@@ -11320,7 +11320,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamEndPointUserRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamEndPointUserRole")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamEndPointUserRole", SupportsShouldProcess = true)]
     public class NewIntersightIamEndPointUserRole : NewCmdletBase
     {
         public NewIntersightIamEndPointUserRole()
@@ -11477,7 +11477,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamGuestAccessSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamGuestAccessSettings")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamGuestAccessSettings", SupportsShouldProcess = true)]
     public class NewIntersightIamGuestAccessSettings : NewCmdletBase
     {
         public NewIntersightIamGuestAccessSettings()
@@ -11589,7 +11589,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamIdp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamIdp")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamIdp", SupportsShouldProcess = true)]
     public class NewIntersightIamIdp : NewCmdletBase
     {
         public NewIntersightIamIdp()
@@ -11784,7 +11784,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamIpAccessManagement.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamIpAccessManagement")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamIpAccessManagement", SupportsShouldProcess = true)]
     public class NewIntersightIamIpAccessManagement : NewCmdletBase
     {
         public NewIntersightIamIpAccessManagement()
@@ -11876,7 +11876,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamIpAddress.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamIpAddress")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamIpAddress", SupportsShouldProcess = true)]
     public class NewIntersightIamIpAddress : NewCmdletBase
     {
         public NewIntersightIamIpAddress()
@@ -11977,7 +11977,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamLdapGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamLdapGroup")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamLdapGroup", SupportsShouldProcess = true)]
     public class NewIntersightIamLdapGroup : NewCmdletBase
     {
         public NewIntersightIamLdapGroup()
@@ -12110,7 +12110,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamLdapPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamLdapPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamLdapPolicy", SupportsShouldProcess = true)]
     public class NewIntersightIamLdapPolicy : NewCmdletBase
     {
         public NewIntersightIamLdapPolicy()
@@ -12320,7 +12320,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamLdapProvider.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamLdapProvider")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamLdapProvider", SupportsShouldProcess = true)]
     public class NewIntersightIamLdapProvider : NewCmdletBase
     {
         public NewIntersightIamLdapProvider()
@@ -12442,7 +12442,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamLocalUserPassword.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamLocalUserPassword")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamLocalUserPassword", SupportsShouldProcess = true)]
     public class NewIntersightIamLocalUserPassword : NewCmdletBase
     {
         public NewIntersightIamLocalUserPassword()
@@ -12569,7 +12569,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamPermission.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamPermission")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamPermission", SupportsShouldProcess = true)]
     public class NewIntersightIamPermission : NewCmdletBase
     {
         public NewIntersightIamPermission()
@@ -12737,7 +12737,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamPrivateKeySpec.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamPrivateKeySpec")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamPrivateKeySpec", SupportsShouldProcess = true)]
     public class NewIntersightIamPrivateKeySpec : NewCmdletBase
     {
         public NewIntersightIamPrivateKeySpec()
@@ -12837,7 +12837,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamPrivilegeSet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamPrivilegeSet")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamPrivilegeSet", SupportsShouldProcess = true)]
     public class NewIntersightIamPrivilegeSet : NewCmdletBase
     {
         public NewIntersightIamPrivilegeSet()
@@ -12977,7 +12977,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamPrivilegeSetMetaInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamPrivilegeSetMetaInfo")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamPrivilegeSetMetaInfo", SupportsShouldProcess = true)]
     public class NewIntersightIamPrivilegeSetMetaInfo : NewCmdletBase
     {
         public NewIntersightIamPrivilegeSetMetaInfo()
@@ -13074,7 +13074,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamQualifier.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamQualifier")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamQualifier", SupportsShouldProcess = true)]
     public class NewIntersightIamQualifier : NewCmdletBase
     {
         public NewIntersightIamQualifier()
@@ -13175,7 +13175,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamResourceRoles.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamResourceRoles")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamResourceRoles", SupportsShouldProcess = true)]
     public class NewIntersightIamResourceRoles : NewCmdletBase
     {
         public NewIntersightIamResourceRoles()
@@ -13298,7 +13298,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamSessionLimits.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamSessionLimits")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamSessionLimits", SupportsShouldProcess = true)]
     public class NewIntersightIamSessionLimits : NewCmdletBase
     {
         public NewIntersightIamSessionLimits()
@@ -13432,7 +13432,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamSharingRule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamSharingRule")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamSharingRule", SupportsShouldProcess = true)]
     public class NewIntersightIamSharingRule : NewCmdletBase
     {
         public NewIntersightIamSharingRule()
@@ -13533,7 +13533,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamTrustPoint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamTrustPoint")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamTrustPoint", SupportsShouldProcess = true)]
     public class NewIntersightIamTrustPoint : NewCmdletBase
     {
         public NewIntersightIamTrustPoint()
@@ -13625,7 +13625,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamUser.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamUser")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamUser", SupportsShouldProcess = true)]
     public class NewIntersightIamUser : NewCmdletBase
     {
         public NewIntersightIamUser()
@@ -13793,7 +13793,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamUserGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamUserGroup")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamUserGroup", SupportsShouldProcess = true)]
     public class NewIntersightIamUserGroup : NewCmdletBase
     {
         public NewIntersightIamUserGroup()
@@ -13973,7 +13973,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamUserQualifier.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamUserQualifier")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamUserQualifier", SupportsShouldProcess = true)]
     public class NewIntersightIamUserQualifier : NewCmdletBase
     {
         public NewIntersightIamUserQualifier()
@@ -14096,7 +14096,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New IamUserSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightIamUserSetting")]
+    [Cmdlet(VerbsCommon.New, "IntersightIamUserSetting", SupportsShouldProcess = true)]
     public class NewIntersightIamUserSetting : NewCmdletBase
     {
         public NewIntersightIamUserSetting()
@@ -14189,7 +14189,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamAccount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamAccount")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamAccount", SupportsShouldProcess = true)]
     public class RemoveIntersightIamAccount : RemoveCmdletBase
     {
         public RemoveIntersightIamAccount()
@@ -14201,7 +14201,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamApiKey.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamApiKey")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamApiKey", SupportsShouldProcess = true)]
     public class RemoveIntersightIamApiKey : RemoveCmdletBase
     {
         public RemoveIntersightIamApiKey()
@@ -14213,7 +14213,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamAppRegistration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamAppRegistration")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamAppRegistration", SupportsShouldProcess = true)]
     public class RemoveIntersightIamAppRegistration : RemoveCmdletBase
     {
         public RemoveIntersightIamAppRegistration()
@@ -14225,7 +14225,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamCertificate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamCertificate")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamCertificate", SupportsShouldProcess = true)]
     public class RemoveIntersightIamCertificate : RemoveCmdletBase
     {
         public RemoveIntersightIamCertificate()
@@ -14237,7 +14237,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamCertificateRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamCertificateRequest")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamCertificateRequest", SupportsShouldProcess = true)]
     public class RemoveIntersightIamCertificateRequest : RemoveCmdletBase
     {
         public RemoveIntersightIamCertificateRequest()
@@ -14249,7 +14249,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamDomainNameInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamDomainNameInfo")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamDomainNameInfo", SupportsShouldProcess = true)]
     public class RemoveIntersightIamDomainNameInfo : RemoveCmdletBase
     {
         public RemoveIntersightIamDomainNameInfo()
@@ -14261,7 +14261,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamEndPointUser.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamEndPointUser")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamEndPointUser", SupportsShouldProcess = true)]
     public class RemoveIntersightIamEndPointUser : RemoveCmdletBase
     {
         public RemoveIntersightIamEndPointUser()
@@ -14273,7 +14273,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamEndPointUserPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamEndPointUserPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamEndPointUserPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightIamEndPointUserPolicy : RemoveCmdletBase
     {
         public RemoveIntersightIamEndPointUserPolicy()
@@ -14285,7 +14285,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamEndPointUserRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamEndPointUserRole")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamEndPointUserRole", SupportsShouldProcess = true)]
     public class RemoveIntersightIamEndPointUserRole : RemoveCmdletBase
     {
         public RemoveIntersightIamEndPointUserRole()
@@ -14297,7 +14297,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamGuestAccessSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamGuestAccessSettings")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamGuestAccessSettings", SupportsShouldProcess = true)]
     public class RemoveIntersightIamGuestAccessSettings : RemoveCmdletBase
     {
         public RemoveIntersightIamGuestAccessSettings()
@@ -14309,7 +14309,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamIdp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamIdp")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamIdp", SupportsShouldProcess = true)]
     public class RemoveIntersightIamIdp : RemoveCmdletBase
     {
         public RemoveIntersightIamIdp()
@@ -14321,7 +14321,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamIpAddress.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamIpAddress")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamIpAddress", SupportsShouldProcess = true)]
     public class RemoveIntersightIamIpAddress : RemoveCmdletBase
     {
         public RemoveIntersightIamIpAddress()
@@ -14333,7 +14333,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamLdapGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamLdapGroup")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamLdapGroup", SupportsShouldProcess = true)]
     public class RemoveIntersightIamLdapGroup : RemoveCmdletBase
     {
         public RemoveIntersightIamLdapGroup()
@@ -14345,7 +14345,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamLdapPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamLdapPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamLdapPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightIamLdapPolicy : RemoveCmdletBase
     {
         public RemoveIntersightIamLdapPolicy()
@@ -14357,7 +14357,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamLdapProvider.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamLdapProvider")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamLdapProvider", SupportsShouldProcess = true)]
     public class RemoveIntersightIamLdapProvider : RemoveCmdletBase
     {
         public RemoveIntersightIamLdapProvider()
@@ -14369,7 +14369,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamOAuthToken.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamOAuthToken")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamOAuthToken", SupportsShouldProcess = true)]
     public class RemoveIntersightIamOAuthToken : RemoveCmdletBase
     {
         public RemoveIntersightIamOAuthToken()
@@ -14381,7 +14381,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamPermission.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamPermission")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamPermission", SupportsShouldProcess = true)]
     public class RemoveIntersightIamPermission : RemoveCmdletBase
     {
         public RemoveIntersightIamPermission()
@@ -14393,7 +14393,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamPrivateKeySpec.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamPrivateKeySpec")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamPrivateKeySpec", SupportsShouldProcess = true)]
     public class RemoveIntersightIamPrivateKeySpec : RemoveCmdletBase
     {
         public RemoveIntersightIamPrivateKeySpec()
@@ -14405,7 +14405,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamPrivilegeSet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamPrivilegeSet")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamPrivilegeSet", SupportsShouldProcess = true)]
     public class RemoveIntersightIamPrivilegeSet : RemoveCmdletBase
     {
         public RemoveIntersightIamPrivilegeSet()
@@ -14417,7 +14417,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamQualifier.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamQualifier")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamQualifier", SupportsShouldProcess = true)]
     public class RemoveIntersightIamQualifier : RemoveCmdletBase
     {
         public RemoveIntersightIamQualifier()
@@ -14429,7 +14429,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamResourceRoles.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamResourceRoles")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamResourceRoles", SupportsShouldProcess = true)]
     public class RemoveIntersightIamResourceRoles : RemoveCmdletBase
     {
         public RemoveIntersightIamResourceRoles()
@@ -14441,7 +14441,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamSession.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamSession")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamSession", SupportsShouldProcess = true)]
     public class RemoveIntersightIamSession : RemoveCmdletBase
     {
         public RemoveIntersightIamSession()
@@ -14453,7 +14453,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamSessionLimits.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamSessionLimits")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamSessionLimits", SupportsShouldProcess = true)]
     public class RemoveIntersightIamSessionLimits : RemoveCmdletBase
     {
         public RemoveIntersightIamSessionLimits()
@@ -14465,7 +14465,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamSharingRule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamSharingRule")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamSharingRule", SupportsShouldProcess = true)]
     public class RemoveIntersightIamSharingRule : RemoveCmdletBase
     {
         public RemoveIntersightIamSharingRule()
@@ -14477,7 +14477,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamTrustPoint.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamTrustPoint")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamTrustPoint", SupportsShouldProcess = true)]
     public class RemoveIntersightIamTrustPoint : RemoveCmdletBase
     {
         public RemoveIntersightIamTrustPoint()
@@ -14489,7 +14489,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamUser.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamUser")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamUser", SupportsShouldProcess = true)]
     public class RemoveIntersightIamUser : RemoveCmdletBase
     {
         public RemoveIntersightIamUser()
@@ -14501,7 +14501,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamUserGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamUserGroup")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamUserGroup", SupportsShouldProcess = true)]
     public class RemoveIntersightIamUserGroup : RemoveCmdletBase
     {
         public RemoveIntersightIamUserGroup()
@@ -14513,7 +14513,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove IamUserQualifier.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIamUserQualifier")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightIamUserQualifier", SupportsShouldProcess = true)]
     public class RemoveIntersightIamUserQualifier : RemoveCmdletBase
     {
         public RemoveIntersightIamUserQualifier()
@@ -14525,7 +14525,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamAccount.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamAccount")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamAccount", SupportsShouldProcess = true)]
     public class SetIntersightIamAccount : SetCmdletBase
     {
         public SetIntersightIamAccount()
@@ -14618,7 +14618,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamAccountExperience.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamAccountExperience")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamAccountExperience", SupportsShouldProcess = true)]
     public class SetIntersightIamAccountExperience : SetCmdletBase
     {
         public SetIntersightIamAccountExperience()
@@ -14707,7 +14707,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamApiKey.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamApiKey")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamApiKey", SupportsShouldProcess = true)]
     public class SetIntersightIamApiKey : SetCmdletBase
     {
         public SetIntersightIamApiKey()
@@ -14869,7 +14869,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamAppRegistration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamAppRegistration")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamAppRegistration", SupportsShouldProcess = true)]
     public class SetIntersightIamAppRegistration : SetCmdletBase
     {
         public SetIntersightIamAppRegistration()
@@ -15085,7 +15085,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamBannerMessage.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamBannerMessage")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamBannerMessage", SupportsShouldProcess = true)]
     public class SetIntersightIamBannerMessage : SetCmdletBase
     {
         public SetIntersightIamBannerMessage()
@@ -15196,7 +15196,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamCertificate.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamCertificate")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamCertificate", SupportsShouldProcess = true)]
     public class SetIntersightIamCertificate : SetCmdletBase
     {
         public SetIntersightIamCertificate()
@@ -15286,7 +15286,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamCertificateRequest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamCertificateRequest")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamCertificateRequest", SupportsShouldProcess = true)]
     public class SetIntersightIamCertificateRequest : SetCmdletBase
     {
         public SetIntersightIamCertificateRequest()
@@ -15432,7 +15432,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamDefaultAuthentication.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamDefaultAuthentication")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamDefaultAuthentication", SupportsShouldProcess = true)]
     public class SetIntersightIamDefaultAuthentication : SetCmdletBase
     {
         public SetIntersightIamDefaultAuthentication()
@@ -15522,7 +15522,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamDomainNameInfo.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamDomainNameInfo")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamDomainNameInfo", SupportsShouldProcess = true)]
     public class SetIntersightIamDomainNameInfo : SetCmdletBase
     {
         public SetIntersightIamDomainNameInfo()
@@ -15616,7 +15616,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamEndPointUser.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamEndPointUser")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamEndPointUser", SupportsShouldProcess = true)]
     public class SetIntersightIamEndPointUser : SetCmdletBase
     {
         public SetIntersightIamEndPointUser()
@@ -15716,7 +15716,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamEndPointUserPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamEndPointUserPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamEndPointUserPolicy", SupportsShouldProcess = true)]
     public class SetIntersightIamEndPointUserPolicy : SetCmdletBase
     {
         public SetIntersightIamEndPointUserPolicy()
@@ -15849,7 +15849,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamEndPointUserRole.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamEndPointUserRole")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamEndPointUserRole", SupportsShouldProcess = true)]
     public class SetIntersightIamEndPointUserRole : SetCmdletBase
     {
         public SetIntersightIamEndPointUserRole()
@@ -15995,7 +15995,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamGuestAccessSettings.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamGuestAccessSettings")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamGuestAccessSettings", SupportsShouldProcess = true)]
     public class SetIntersightIamGuestAccessSettings : SetCmdletBase
     {
         public SetIntersightIamGuestAccessSettings()
@@ -16096,7 +16096,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamIdp.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamIdp")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamIdp", SupportsShouldProcess = true)]
     public class SetIntersightIamIdp : SetCmdletBase
     {
         public SetIntersightIamIdp()
@@ -16280,7 +16280,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamIdpReference.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamIdpReference")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamIdpReference", SupportsShouldProcess = true)]
     public class SetIntersightIamIdpReference : SetCmdletBase
     {
         public SetIntersightIamIdpReference()
@@ -16387,7 +16387,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamIpAccessManagement.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamIpAccessManagement")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamIpAccessManagement", SupportsShouldProcess = true)]
     public class SetIntersightIamIpAccessManagement : SetCmdletBase
     {
         public SetIntersightIamIpAccessManagement()
@@ -16468,7 +16468,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamIpAddress.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamIpAddress")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamIpAddress", SupportsShouldProcess = true)]
     public class SetIntersightIamIpAddress : SetCmdletBase
     {
         public SetIntersightIamIpAddress()
@@ -16558,7 +16558,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamLdapGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamLdapGroup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamLdapGroup", SupportsShouldProcess = true)]
     public class SetIntersightIamLdapGroup : SetCmdletBase
     {
         public SetIntersightIamLdapGroup()
@@ -16680,7 +16680,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamLdapPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamLdapPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamLdapPolicy", SupportsShouldProcess = true)]
     public class SetIntersightIamLdapPolicy : SetCmdletBase
     {
         public SetIntersightIamLdapPolicy()
@@ -16879,7 +16879,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamLdapProvider.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamLdapProvider")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamLdapProvider", SupportsShouldProcess = true)]
     public class SetIntersightIamLdapProvider : SetCmdletBase
     {
         public SetIntersightIamLdapProvider()
@@ -16990,7 +16990,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamLocalUserPassword.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamLocalUserPassword")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamLocalUserPassword", SupportsShouldProcess = true)]
     public class SetIntersightIamLocalUserPassword : SetCmdletBase
     {
         public SetIntersightIamLocalUserPassword()
@@ -17106,7 +17106,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamLocalUserPasswordPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamLocalUserPasswordPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamLocalUserPasswordPolicy", SupportsShouldProcess = true)]
     public class SetIntersightIamLocalUserPasswordPolicy : SetCmdletBase
     {
         public SetIntersightIamLocalUserPasswordPolicy()
@@ -17306,7 +17306,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamPermission.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamPermission")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamPermission", SupportsShouldProcess = true)]
     public class SetIntersightIamPermission : SetCmdletBase
     {
         public SetIntersightIamPermission()
@@ -17463,7 +17463,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamPrivateKeySpec.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamPrivateKeySpec")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamPrivateKeySpec", SupportsShouldProcess = true)]
     public class SetIntersightIamPrivateKeySpec : SetCmdletBase
     {
         public SetIntersightIamPrivateKeySpec()
@@ -17552,7 +17552,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamPrivilegeSet.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamPrivilegeSet")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamPrivilegeSet", SupportsShouldProcess = true)]
     public class SetIntersightIamPrivilegeSet : SetCmdletBase
     {
         public SetIntersightIamPrivilegeSet()
@@ -17681,7 +17681,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamQualifier.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamQualifier")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamQualifier", SupportsShouldProcess = true)]
     public class SetIntersightIamQualifier : SetCmdletBase
     {
         public SetIntersightIamQualifier()
@@ -17771,7 +17771,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamResourceLimits.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamResourceLimits")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamResourceLimits", SupportsShouldProcess = true)]
     public class SetIntersightIamResourceLimits : SetCmdletBase
     {
         public SetIntersightIamResourceLimits()
@@ -17884,7 +17884,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamResourceRoles.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamResourceRoles")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamResourceRoles", SupportsShouldProcess = true)]
     public class SetIntersightIamResourceRoles : SetCmdletBase
     {
         public SetIntersightIamResourceRoles()
@@ -17996,7 +17996,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamSessionLimits.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamSessionLimits")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamSessionLimits", SupportsShouldProcess = true)]
     public class SetIntersightIamSessionLimits : SetCmdletBase
     {
         public SetIntersightIamSessionLimits()
@@ -18119,7 +18119,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamSharingRule.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamSharingRule")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamSharingRule", SupportsShouldProcess = true)]
     public class SetIntersightIamSharingRule : SetCmdletBase
     {
         public SetIntersightIamSharingRule()
@@ -18209,7 +18209,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamTestIdpConfiguration.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamTestIdpConfiguration")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamTestIdpConfiguration", SupportsShouldProcess = true)]
     public class SetIntersightIamTestIdpConfiguration : SetCmdletBase
     {
         public SetIntersightIamTestIdpConfiguration()
@@ -18315,7 +18315,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamUser.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamUser")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamUser", SupportsShouldProcess = true)]
     public class SetIntersightIamUser : SetCmdletBase
     {
         public SetIntersightIamUser()
@@ -18472,7 +18472,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamUserGroup.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamUserGroup")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamUserGroup", SupportsShouldProcess = true)]
     public class SetIntersightIamUserGroup : SetCmdletBase
     {
         public SetIntersightIamUserGroup()
@@ -18641,7 +18641,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamUserPreference.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamUserPreference")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamUserPreference", SupportsShouldProcess = true)]
     public class SetIntersightIamUserPreference : SetCmdletBase
     {
         public SetIntersightIamUserPreference()
@@ -18722,7 +18722,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamUserQualifier.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamUserQualifier")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamUserQualifier", SupportsShouldProcess = true)]
     public class SetIntersightIamUserQualifier : SetCmdletBase
     {
         public SetIntersightIamUserQualifier()
@@ -18834,7 +18834,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IamUserSetting.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightIamUserSetting")]
+    [Cmdlet(VerbsCommon.Set, "IntersightIamUserSetting", SupportsShouldProcess = true)]
     public class SetIntersightIamUserSetting : SetCmdletBase
     {
         public SetIntersightIamUserSetting()

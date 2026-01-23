@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PowerControlState.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPowerControlState", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPowerControlState", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPowerControlState : GetCmdletBase
     {
         public GetIntersightPowerControlState()
@@ -261,7 +261,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PowerPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPowerPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPowerPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPowerPolicy : GetCmdletBase
     {
         public GetIntersightPowerPolicy()
@@ -513,7 +513,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get PowerPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightPowerPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightPowerPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightPowerPolicyInventory : GetCmdletBase
     {
         public GetIntersightPowerPolicyInventory()
@@ -775,7 +775,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New PowerPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightPowerPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightPowerPolicy", SupportsShouldProcess = true)]
     public class NewIntersightPowerPolicy : NewCmdletBase
     {
         public NewIntersightPowerPolicy()
@@ -996,7 +996,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove PowerPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightPowerPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightPowerPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightPowerPolicy : RemoveCmdletBase
     {
         public RemoveIntersightPowerPolicy()
@@ -1008,7 +1008,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set PowerPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightPowerPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightPowerPolicy", SupportsShouldProcess = true)]
     public class SetIntersightPowerPolicy : SetCmdletBase
     {
         public SetIntersightPowerPolicy()

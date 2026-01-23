@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SdaaciConnection.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSdaaciConnection", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSdaaciConnection", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSdaaciConnection : GetCmdletBase
     {
         public GetIntersightSdaaciConnection()
@@ -327,7 +327,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SdaaciConnectionDetail.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSdaaciConnectionDetail", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSdaaciConnectionDetail", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSdaaciConnectionDetail : GetCmdletBase
     {
         public GetIntersightSdaaciConnectionDetail()
@@ -600,7 +600,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SdaaciConnection.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSdaaciConnection")]
+    [Cmdlet(VerbsCommon.New, "IntersightSdaaciConnection", SupportsShouldProcess = true)]
     public class NewIntersightSdaaciConnection : NewCmdletBase
     {
         public NewIntersightSdaaciConnection()
@@ -876,7 +876,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SdaaciConnectionDetail.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSdaaciConnectionDetail")]
+    [Cmdlet(VerbsCommon.New, "IntersightSdaaciConnectionDetail", SupportsShouldProcess = true)]
     public class NewIntersightSdaaciConnectionDetail : NewCmdletBase
     {
         public NewIntersightSdaaciConnectionDetail()
@@ -1108,7 +1108,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SdaaciConnection.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSdaaciConnection")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSdaaciConnection", SupportsShouldProcess = true)]
     public class RemoveIntersightSdaaciConnection : RemoveCmdletBase
     {
         public RemoveIntersightSdaaciConnection()
@@ -1120,7 +1120,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SdaaciConnectionDetail.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSdaaciConnectionDetail")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSdaaciConnectionDetail", SupportsShouldProcess = true)]
     public class RemoveIntersightSdaaciConnectionDetail : RemoveCmdletBase
     {
         public RemoveIntersightSdaaciConnectionDetail()
@@ -1132,7 +1132,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SdaaciConnection.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSdaaciConnection")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSdaaciConnection", SupportsShouldProcess = true)]
     public class SetIntersightSdaaciConnection : SetCmdletBase
     {
         public SetIntersightSdaaciConnection()
@@ -1397,7 +1397,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SdaaciConnectionDetail.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSdaaciConnectionDetail")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSdaaciConnectionDetail", SupportsShouldProcess = true)]
     public class SetIntersightSdaaciConnectionDetail : SetCmdletBase
     {
         public SetIntersightSdaaciConnectionDetail()

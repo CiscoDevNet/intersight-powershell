@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CoremanagementCoreFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCoremanagementCoreFile", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCoremanagementCoreFile", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCoremanagementCoreFile : GetCmdletBase
     {
         public GetIntersightCoremanagementCoreFile()
@@ -272,7 +272,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CoremanagementDownload.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCoremanagementDownload", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCoremanagementDownload", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCoremanagementDownload : GetCmdletBase
     {
         public GetIntersightCoremanagementDownload()
@@ -402,7 +402,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CoremanagementCoreFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCoremanagementCoreFile")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCoremanagementCoreFile", SupportsShouldProcess = true)]
     public class RemoveIntersightCoremanagementCoreFile : RemoveCmdletBase
     {
         public RemoveIntersightCoremanagementCoreFile()
@@ -414,7 +414,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CoremanagementCoreFile.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCoremanagementCoreFile")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCoremanagementCoreFile", SupportsShouldProcess = true)]
     public class SetIntersightCoremanagementCoreFile : SetCmdletBase
     {
         public SetIntersightCoremanagementCoreFile()

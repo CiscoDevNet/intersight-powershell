@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CertificatemanagementPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCertificatemanagementPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCertificatemanagementPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCertificatemanagementPolicy : GetCmdletBase
     {
         public GetIntersightCertificatemanagementPolicy()
@@ -164,7 +164,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get CertificatemanagementPolicyInventory.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightCertificatemanagementPolicyInventory", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightCertificatemanagementPolicyInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightCertificatemanagementPolicyInventory : GetCmdletBase
     {
         public GetIntersightCertificatemanagementPolicyInventory()
@@ -328,7 +328,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CertificatemanagementPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightCertificatemanagementPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightCertificatemanagementPolicy", SupportsShouldProcess = true)]
     public class NewIntersightCertificatemanagementPolicy : NewCmdletBase
     {
         public NewIntersightCertificatemanagementPolicy()
@@ -461,7 +461,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CertificatemanagementPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightCertificatemanagementPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightCertificatemanagementPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightCertificatemanagementPolicy : RemoveCmdletBase
     {
         public RemoveIntersightCertificatemanagementPolicy()
@@ -473,7 +473,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set CertificatemanagementPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightCertificatemanagementPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightCertificatemanagementPolicy", SupportsShouldProcess = true)]
     public class SetIntersightCertificatemanagementPolicy : SetCmdletBase
     {
         public SetIntersightCertificatemanagementPolicy()

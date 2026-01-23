@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConnectorpackConnectorPackUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConnectorpackConnectorPackUpgrade", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightConnectorpackConnectorPackUpgrade", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightConnectorpackConnectorPackUpgrade : GetCmdletBase
     {
         public GetIntersightConnectorpackConnectorPackUpgrade()
@@ -162,7 +162,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get ConnectorpackUpgradeImpact.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightConnectorpackUpgradeImpact", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightConnectorpackUpgradeImpact", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightConnectorpackUpgradeImpact : GetCmdletBase
     {
         public GetIntersightConnectorpackUpgradeImpact()
@@ -315,7 +315,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ConnectorpackConnectorPackUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightConnectorpackConnectorPackUpgrade")]
+    [Cmdlet(VerbsCommon.New, "IntersightConnectorpackConnectorPackUpgrade", SupportsShouldProcess = true)]
     public class NewIntersightConnectorpackConnectorPackUpgrade : NewCmdletBase
     {
         public NewIntersightConnectorpackConnectorPackUpgrade()
@@ -416,7 +416,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ConnectorpackConnectorPackUpgrade.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightConnectorpackConnectorPackUpgrade")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightConnectorpackConnectorPackUpgrade", SupportsShouldProcess = true)]
     public class RemoveIntersightConnectorpackConnectorPackUpgrade : RemoveCmdletBase
     {
         public RemoveIntersightConnectorpackConnectorPackUpgrade()

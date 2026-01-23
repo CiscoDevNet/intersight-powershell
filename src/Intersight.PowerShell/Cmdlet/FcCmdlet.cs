@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcNeighbor.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcNeighbor", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFcNeighbor", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFcNeighbor : GetCmdletBase
     {
         public GetIntersightFcNeighbor()
@@ -239,7 +239,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcPhysicalPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcPhysicalPort", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFcPhysicalPort", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFcPhysicalPort : GetCmdletBase
     {
         public GetIntersightFcPhysicalPort()
@@ -688,7 +688,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FcPortChannel.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightFcPortChannel", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightFcPortChannel", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightFcPortChannel : GetCmdletBase
     {
         public GetIntersightFcPortChannel()
@@ -1017,7 +1017,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FcPhysicalPort.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightFcPhysicalPort")]
+    [Cmdlet(VerbsCommon.Set, "IntersightFcPhysicalPort", SupportsShouldProcess = true)]
     public class SetIntersightFcPhysicalPort : SetCmdletBase
     {
         public SetIntersightFcPhysicalPort()

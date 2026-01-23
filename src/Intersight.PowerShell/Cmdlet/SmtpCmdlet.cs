@@ -10,7 +10,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SmtpPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSmtpPolicy", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSmtpPolicy", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSmtpPolicy : GetCmdletBase
     {
         public GetIntersightSmtpPolicy()
@@ -296,7 +296,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get SmtpPolicyTest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Get, "IntersightSmtpPolicyTest", DefaultParameterSetName = "CmdletParam")]
+    [Cmdlet(VerbsCommon.Get, "IntersightSmtpPolicyTest", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
     public class GetIntersightSmtpPolicyTest : GetCmdletBase
     {
         public GetIntersightSmtpPolicyTest()
@@ -483,7 +483,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SmtpPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSmtpPolicy")]
+    [Cmdlet(VerbsCommon.New, "IntersightSmtpPolicy", SupportsShouldProcess = true)]
     public class NewIntersightSmtpPolicy : NewCmdletBase
     {
         public NewIntersightSmtpPolicy()
@@ -738,7 +738,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to New SmtpPolicyTest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightSmtpPolicyTest")]
+    [Cmdlet(VerbsCommon.New, "IntersightSmtpPolicyTest", SupportsShouldProcess = true)]
     public class NewIntersightSmtpPolicyTest : NewCmdletBase
     {
         public NewIntersightSmtpPolicyTest()
@@ -864,7 +864,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SmtpPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSmtpPolicy")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSmtpPolicy", SupportsShouldProcess = true)]
     public class RemoveIntersightSmtpPolicy : RemoveCmdletBase
     {
         public RemoveIntersightSmtpPolicy()
@@ -876,7 +876,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SmtpPolicyTest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSmtpPolicyTest")]
+    [Cmdlet(VerbsCommon.Remove, "IntersightSmtpPolicyTest", SupportsShouldProcess = true)]
     public class RemoveIntersightSmtpPolicyTest : RemoveCmdletBase
     {
         public RemoveIntersightSmtpPolicyTest()
@@ -888,7 +888,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SmtpPolicy.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSmtpPolicy")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSmtpPolicy", SupportsShouldProcess = true)]
     public class SetIntersightSmtpPolicy : SetCmdletBase
     {
         public SetIntersightSmtpPolicy()
@@ -1132,7 +1132,7 @@ namespace Intersight.PowerShell
     /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set SmtpPolicyTest.</para>
     /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightSmtpPolicyTest")]
+    [Cmdlet(VerbsCommon.Set, "IntersightSmtpPolicyTest", SupportsShouldProcess = true)]
     public class SetIntersightSmtpPolicyTest : SetCmdletBase
     {
         public SetIntersightSmtpPolicyTest()
