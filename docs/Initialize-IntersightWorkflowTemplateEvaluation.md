@@ -138,8 +138,6 @@ Accept wildcard characters: False
 ### -Values
 Values to be fed to the template for execution.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

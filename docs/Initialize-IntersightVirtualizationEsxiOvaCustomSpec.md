@@ -57,8 +57,6 @@ Accept wildcard characters: False
 ### -ExtraConfig
 Specify the Extra Config specification which can be configured on virtual machine.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -88,8 +86,6 @@ Accept wildcard characters: False
 
 ### -OvaEnvSpec
 Specify the OVA Environment specification which can be configured on the virtual machine.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object

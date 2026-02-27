@@ -27,8 +27,6 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 ### -AdditionalInformation
 Additional information to be set along with the personality value. This can include information like the\nhypervisor type, last update time etc..
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

@@ -57,8 +57,6 @@ Accept wildcard characters: False
 ### -Config
 Schema of the UI config for the set of defined datatypes.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

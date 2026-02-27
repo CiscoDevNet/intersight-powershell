@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamUser [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Email< string>][-FirstName< string>][-Idp< IamIdpRelationship>][-Idpreference< IamIdpReferenceRelationship>][-LastName< string>][-Moid< string>][-Permissions< System.Collections.Generic.List`1[IamPermissionRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserIdOrEmail< string>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIamUser [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Email< string>][-ExternalIdentifier< string>][-FirstName< string>][-Idp< IamIdpRelationship>][-Idpreference< IamIdpReferenceRelationship>][-LastName< string>][-Moid< string>][-Permissions< System.Collections.Generic.List`1[IamPermissionRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UserIdOrEmail< string>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,6 +40,21 @@ Accept wildcard characters: False
 
 ### -Email
 Email of the user. Remote users are added to Intersight using the email configured in the IdP.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExternalIdentifier
+External identifier for the user, used for integration with external identity systems.
 
 ```yaml
 Type: string

@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -CdnDisabled
-A boolean flag which indicates that the generated pre-signed url is not a CDN URL. An URL to Intersight storage source will be returned with the old domain name. This flag should be used when the  pre-signed CDN URL is not accessible from endpoint/appliance.
+A boolean flag which indicates that the generated pre-signed url is not a CDN URL. An URL to Intersight storage source will be returned with the old domain name. This flag should be used when the pre-signed CDN URL is not accessible from endpoint/appliance.
 
 ```yaml
 Type: bool

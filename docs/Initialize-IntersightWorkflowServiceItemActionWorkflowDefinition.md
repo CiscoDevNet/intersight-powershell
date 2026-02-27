@@ -87,8 +87,6 @@ Accept wildcard characters: False
 ### -InputParameters
 Capture the mapping of ActionDefinition inputDefinition to workflow definition.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

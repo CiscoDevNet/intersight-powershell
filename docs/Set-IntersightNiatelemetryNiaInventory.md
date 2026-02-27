@@ -1074,6 +1074,8 @@ PS C:\> Set-IntersightNiatelemetryNiaInventory
 
 [Initialize-IntersightNiatelemetryNxosBgpMvpn](./Initialize-IntersightNiatelemetryNxosBgpMvpn.md)
 
+[Initialize-IntersightNiatelemetryNxosModuleInfo](./Initialize-IntersightNiatelemetryNxosModuleInfo.md)
+
 [Initialize-IntersightNiatelemetryNxosVtp](./Initialize-IntersightNiatelemetryNxosVtp.md)
 
 [Initialize-IntersightNiatelemetryVniStatus](./Initialize-IntersightNiatelemetryVniStatus.md)

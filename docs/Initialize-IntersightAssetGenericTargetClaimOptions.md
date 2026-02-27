@@ -72,8 +72,6 @@ Accept wildcard characters: False
 ### -TargetOptions
 The generic device connector will consume these options.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

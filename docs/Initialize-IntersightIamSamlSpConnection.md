@@ -117,8 +117,6 @@ Accept wildcard characters: False
 ### -IdpCertificateStore
 Decoded Certificate from IdP Metatdata.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

@@ -229,8 +229,6 @@ Accept wildcard characters: False
 ### -VisualConfig
 Chart configuration options.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

@@ -56,8 +56,6 @@ Accept wildcard characters: False
 ### -Preference
 UI preferences of the user.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

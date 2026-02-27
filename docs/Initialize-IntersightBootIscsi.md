@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBootIscsi [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bootloader< Model.BootBootloader>][-ClassId< BootIscsi.ClassIdEnum>][-Enabled< bool>][-InterfaceName< string>][-Name< string>][-ObjectType< BootIscsi.ObjectTypeEnum>][-Port< long>][-Slot< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBootIscsi [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Bootloader< Model.BootBootloader>][-ClassId< BootIscsi.ClassIdEnum>][-Enabled< bool>][-InterfaceName< string>][-InterfaceSource< BootIscsi.InterfaceSourceEnum>][-Name< string>][-ObjectType< BootIscsi.ObjectTypeEnum>][-Port< long>][-Slot< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -91,6 +91,21 @@ The name of the underlying virtual ethernet interface used by the iSCSI boot dev
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InterfaceSource
+Lists the supported methods to provide network boot device configuration. Supported values are \&quot;name\&quot; and \&quot;port\&quot;.\n* `name` - Use interface name to select virtual ethernet interface.\n* `mac` - Use MAC address to select virtual ethernet interface.\n* `port` - Use port to select virtual ethernet interface.
+
+```yaml
+Type: BootIscsi.InterfaceSourceEnum
 Parameter Sets: (All)
 Aliases:
 

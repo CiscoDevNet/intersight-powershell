@@ -42,8 +42,6 @@ Accept wildcard characters: False
 ### -Attribute
 Service item attribute for a service item instance and the format is specified by attribute definition of the service item definition.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

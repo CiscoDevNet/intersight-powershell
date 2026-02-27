@@ -110,8 +110,6 @@ Accept wildcard characters: False
 ### -Input
 Inputs for a catalog service request instance creation, format is specified by input definition of the catalog item definition.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

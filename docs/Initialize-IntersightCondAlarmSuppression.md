@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCondAlarmSuppression [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CondAlarmSuppression.ClassIdEnum>][-Classifications< System.Collections.Generic.List`1[Model.CondAlarmClassificationRelationship]>][-Description< string>][-Entity< Model.MoBaseMoRelationship>][-Moid< string>][-Name< string>][-ObjectType< CondAlarmSuppression.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCondAlarmSuppression [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmRules< System.Collections.Generic.List`1[Model.CondAlarmRuleExpression]>][-ClassId< CondAlarmSuppression.ClassIdEnum>][-Classifications< System.Collections.Generic.List`1[Model.CondAlarmClassificationRelationship]>][-Description< string>][-Enabled< bool>][-EndDate< DateTime>][-Entity< Model.MoBaseMoRelationship>][-Moid< string>][-Name< string>][-ObjectType< CondAlarmSuppression.ObjectTypeEnum>][-RulesOperator< CondAlarmSuppression.RulesOperatorEnum>][-StartDate< DateTime>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -29,6 +29,23 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AlarmRules
+
+
+Note :- Use Initialize-IntersightCondAlarmRuleExpression to create the object of complex type CondAlarmRuleExpression
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.CondAlarmRuleExpression]
 Parameter Sets: (All)
 Aliases:
 
@@ -77,6 +94,36 @@ User given description on why the suppression is enabled at this entity.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Enabled
+Indicates whether the suppression is enabled by the user or not. The user should be able to toggle this between true and false.\nThe property is set to true when the suppression is created. The user can set this to false to disable the suppression.\nThe suppression rule should be active only if both systemEnabled and enabled are true.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EndDate
+The end date for this alarm suppression rule. The date must follow the RFC 3339 format for date and time representation.
+
+```yaml
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
 
@@ -140,6 +187,36 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: CondAlarmSuppression.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RulesOperator
+Operation that binds all the different rules together.\n* `All` - All is an AND condition applied against the individual conditions.\n* `Any` - Any is an OR condition applied against the individual conditions.
+
+```yaml
+Type: CondAlarmSuppression.RulesOperatorEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StartDate
+The start date for enabling this alarm suppression rule. The date must follow\nthe RFC 3339 format for date and time representation. If this date more than\n60 seconds in the past, the suppression rule will be rejected. If the date is\nwithin 60 seconds of the present time (plus or minus), the suppression will be\nstarted immediately. Otherwise, the suppression will be scheduled to start at\nthe requested time.
+
+```yaml
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
 
@@ -223,5 +300,9 @@ PS C:\> Initialize-IntersightCondAlarmSuppression
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightCondAlarmRuleExpression](./Initialize-IntersightCondAlarmRuleExpression.md)
+
+[Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

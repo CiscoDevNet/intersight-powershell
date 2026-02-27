@@ -1482,7 +1482,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"A boolean flag which indicates that the generated pre-signed url is not a CDN URL. An URL to Intersight storage source will be returned with the old domain name. This flag should be used when the  pre-signed CDN URL is not accessible from endpoint/appliance."</para>
+        /// <para type="description">"A boolean flag which indicates that the generated pre-signed url is not a CDN URL. An URL to Intersight storage source will be returned with the old domain name. This flag should be used when the pre-signed CDN URL is not accessible from endpoint/appliance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -2023,7 +2023,6 @@ namespace Intersight.PowerShell
         {
             ClassId = SoftwarerepositoryOperatingSystemFile.ClassIdEnum.SoftwarerepositoryOperatingSystemFile;
             ImportAction = SoftwarerepositoryOperatingSystemFile.ImportActionEnum.None;
-            ImportState = SoftwarerepositoryOperatingSystemFile.ImportStateEnum.ReadyForImport;
             ObjectType = SoftwarerepositoryOperatingSystemFile.ObjectTypeEnum.SoftwarerepositoryOperatingSystemFile;
 
         }
@@ -2068,6 +2067,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"File name of the uploaded image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FileName
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, Unified Edge server. The field is used in private appliance mode, where image does not have description populated from CCO."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2093,16 +2102,6 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long ImportProgress
-        {
-            get;
-            set;
-        }
-        // <summary>
-        /// <para type="description">"The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public SoftwarerepositoryOperatingSystemFile.ImportStateEnum ImportState
         {
             get;
             set;
@@ -2315,6 +2314,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Description = this.Description;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FileName"))
+            {
+                initObject.FileName = this.FileName;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ImageType"))
             {
                 initObject.ImageType = this.ImageType;
@@ -2326,10 +2329,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ImportProgress"))
             {
                 initObject.ImportProgress = this.ImportProgress;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ImportState"))
-            {
-                initObject.ImportState = this.ImportState;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {

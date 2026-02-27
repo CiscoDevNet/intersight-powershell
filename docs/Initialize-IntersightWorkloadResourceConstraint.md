@@ -57,8 +57,6 @@ Accept wildcard characters: False
 ### -Input
 The input values from the user for the resource definition of the blueprint.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

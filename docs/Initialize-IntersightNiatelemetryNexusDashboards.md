@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryNexusDashboards [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNexusDashboards.ClassIdEnum>][-ClusterName< string>][-ClusterUuid< string>][-Dn< string>][-IsClusterHealthy< string>][-Moid< string>][-NdClusterSize< long>][-NdSites< System.Collections.Generic.List`1[Model.NiatelemetrySites]>][-NdType< string>][-NdVersion< string>][-NumberOfApps< long>][-NumberOfInsightGroups< long>][-NumberOfNirDashboards< long>][-NumberOfSchemasInMso< long>][-NumberOfSitesInMso< long>][-NumberOfSitesServiced< long>][-NumberOfTenantsInMso< long>][-NumberOfVxlanFabricSitesInMso< long>][-ObjectType< NiatelemetryNexusDashboards.ObjectTypeEnum>][-RecordType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TypeOfSiteInMso< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryNexusDashboards [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNexusDashboards.ClassIdEnum>][-ClusterName< string>][-ClusterUuid< string>][-Dn< string>][-FeatureOperStatus< bool>][-IsClusterHealthy< string>][-Moid< string>][-NdClusterSize< long>][-NdSites< System.Collections.Generic.List`1[Model.NiatelemetrySites]>][-NdType< string>][-NdVersion< string>][-NumberOfApps< long>][-NumberOfInsightGroups< long>][-NumberOfNirDashboards< long>][-NumberOfSchemasInMso< long>][-NumberOfSitesInMso< long>][-NumberOfSitesServiced< long>][-NumberOfTenantsInMso< long>][-NumberOfVxlanFabricSitesInMso< long>][-ObjectType< NiatelemetryNexusDashboards.ObjectTypeEnum>][-RecordType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TypeOfSiteInMso< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -89,6 +89,21 @@ Dn of the objects present for Nexus Dashboard devices.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FeatureOperStatus
+Feature Operation status of change management.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

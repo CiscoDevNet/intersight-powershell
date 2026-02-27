@@ -72,8 +72,6 @@ Accept wildcard characters: False
 ### -Parameters
 The runtime properties and the value can be stored in this property.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

@@ -168,8 +168,6 @@ Accept wildcard characters: False
 ### -PropertyParameters
 A list of key value pairs where key is the property path and value is the template to derive the value.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

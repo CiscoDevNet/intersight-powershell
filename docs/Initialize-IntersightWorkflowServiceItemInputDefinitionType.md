@@ -74,8 +74,6 @@ Accept wildcard characters: False
 ### -InputParameters
 Capture the mapping of service item ActionDefinition inputDefinition to catalog service request.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

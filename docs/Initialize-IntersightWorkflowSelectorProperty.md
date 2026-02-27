@@ -42,8 +42,6 @@ Accept wildcard characters: False
 ### -Body
 Content of the request body to send for POST request.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

@@ -117,8 +117,6 @@ Accept wildcard characters: False
 ### -Queries
 Set of queries to identify objects to be inventoried as part of this scoped inventory action.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

@@ -72,8 +72,6 @@ Accept wildcard characters: False
 ### -TargetDataType
 List of property constraints that helps to narrow down task implementations based on target device input.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

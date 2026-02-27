@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2026011407
-- C# SDK version: 1.0.11.2026011407
+- Intersight.PowerShell version: 1.0.11.2026022006
+- C# SDK version: 1.0.11.2026022006
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026011407"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026022006"}
 ```
 or
 
@@ -750,6 +750,7 @@ ApplianceClusterInfo | [**Get-IntersightApplianceClusterInfo**](docs/Get-Intersi
 ApplianceClusterInstall | [**Get-IntersightApplianceClusterInstall**](docs/Get-IntersightApplianceClusterInstall.md) | Read a 'ApplianceClusterInstall' resource.
 ApplianceClusterReplaceNode | [**Get-IntersightApplianceClusterReplaceNode**](docs/Get-IntersightApplianceClusterReplaceNode.md) | Read a 'ApplianceClusterReplaceNode' resource.
 ApplianceClusterWorkerNode | [**Get-IntersightApplianceClusterWorkerNode**](docs/Get-IntersightApplianceClusterWorkerNode.md) | Read a 'ApplianceClusterWorkerNode' resource.
+ApplianceCpuUtilization | [**Get-IntersightApplianceCpuUtilization**](docs/Get-IntersightApplianceCpuUtilization.md) | Read a 'ApplianceCpuUtilization' resource.
 ApplianceDataExportPolicy | [**Get-IntersightApplianceDataExportPolicy**](docs/Get-IntersightApplianceDataExportPolicy.md) | Read a 'ApplianceDataExportPolicy' resource.
 ApplianceDeviceCertificate | [**Get-IntersightApplianceDeviceCertificate**](docs/Get-IntersightApplianceDeviceCertificate.md) | Read a 'ApplianceDeviceCertificate' resource.
 ApplianceDeviceClaim | [**Get-IntersightApplianceDeviceClaim**](docs/Get-IntersightApplianceDeviceClaim.md) | Read a 'ApplianceDeviceClaim' resource.
@@ -765,11 +766,13 @@ ApplianceFqdnUpdate | [**Get-IntersightApplianceFqdnUpdate**](docs/Get-Intersigh
 ApplianceGroupOpStatus | [**Get-IntersightApplianceGroupOpStatus**](docs/Get-IntersightApplianceGroupOpStatus.md) | Read a 'ApplianceGroupOpStatus' resource.
 ApplianceGroupStatus | [**Get-IntersightApplianceGroupStatus**](docs/Get-IntersightApplianceGroupStatus.md) | Read a 'ApplianceGroupStatus' resource.
 ApplianceImageBundle | [**Get-IntersightApplianceImageBundle**](docs/Get-IntersightApplianceImageBundle.md) | Read a 'ApplianceImageBundle' resource.
+ApplianceMemoryUtilization | [**Get-IntersightApplianceMemoryUtilization**](docs/Get-IntersightApplianceMemoryUtilization.md) | Read a 'ApplianceMemoryUtilization' resource.
 ApplianceMetaManifest | [**Get-IntersightApplianceMetaManifest**](docs/Get-IntersightApplianceMetaManifest.md) | Read a 'ApplianceMetaManifest' resource.
 ApplianceMetricsConfig | [**Get-IntersightApplianceMetricsConfig**](docs/Get-IntersightApplianceMetricsConfig.md) | Read a 'ApplianceMetricsConfig' resource.
 ApplianceMetricsIngestionUtilization | [**Get-IntersightApplianceMetricsIngestionUtilization**](docs/Get-IntersightApplianceMetricsIngestionUtilization.md) | Read a 'ApplianceMetricsIngestionUtilization' resource.
 ApplianceNetworkLinkStatus | [**Get-IntersightApplianceNetworkLinkStatus**](docs/Get-IntersightApplianceNetworkLinkStatus.md) | Read a 'ApplianceNetworkLinkStatus' resource.
 ApplianceNodeInfo | [**Get-IntersightApplianceNodeInfo**](docs/Get-IntersightApplianceNodeInfo.md) | Read a 'ApplianceNodeInfo' resource.
+ApplianceNodeIopsMetric | [**Get-IntersightApplianceNodeIopsMetric**](docs/Get-IntersightApplianceNodeIopsMetric.md) | Read a 'ApplianceNodeIopsMetric' resource.
 ApplianceNodeOpStatus | [**Get-IntersightApplianceNodeOpStatus**](docs/Get-IntersightApplianceNodeOpStatus.md) | Read a 'ApplianceNodeOpStatus' resource.
 ApplianceNodeStatus | [**Get-IntersightApplianceNodeStatus**](docs/Get-IntersightApplianceNodeStatus.md) | Read a 'ApplianceNodeStatus' resource.
 ApplianceReleaseNote | [**Get-IntersightApplianceReleaseNote**](docs/Get-IntersightApplianceReleaseNote.md) | Read a 'ApplianceReleaseNote' resource.
@@ -1141,13 +1144,20 @@ CondAlarmAggregation | [**Get-IntersightCondAlarmAggregation**](docs/Get-Intersi
 CondAlarmClassification | [**Get-IntersightCondAlarmClassification**](docs/Get-IntersightCondAlarmClassification.md) | Read a 'CondAlarmClassification' resource.
 CondAlarmDefinition | [**Get-IntersightCondAlarmDefinition**](docs/Get-IntersightCondAlarmDefinition.md) | Read a 'CondAlarmDefinition' resource.
 CondAlarmSuppression | [**Get-IntersightCondAlarmSuppression**](docs/Get-IntersightCondAlarmSuppression.md) | Read a 'CondAlarmSuppression' resource.
+CondCustomHclBaseline | [**Get-IntersightCondCustomHclBaseline**](docs/Get-IntersightCondCustomHclBaseline.md) | Read a 'CondCustomHclBaseline' resource.
+CondCustomHclStatus | [**Get-IntersightCondCustomHclStatus**](docs/Get-IntersightCondCustomHclStatus.md) | Read a 'CondCustomHclStatus' resource.
 CondHclStatus | [**Get-IntersightCondHclStatus**](docs/Get-IntersightCondHclStatus.md) | Read a 'CondHclStatus' resource.
 CondHclStatusDetail | [**Get-IntersightCondHclStatusDetail**](docs/Get-IntersightCondHclStatusDetail.md) | Read a 'CondHclStatusDetail' resource.
 CondHclStatusJob | [**Get-IntersightCondHclStatusJob**](docs/Get-IntersightCondHclStatusJob.md) | Read a 'CondHclStatusJob' resource.
 CondAlarmSuppression | [**New-IntersightCondAlarmSuppression**](docs/New-IntersightCondAlarmSuppression.md) | Create a 'CondAlarmSuppression' resource.
+CondAlarmSuppressionDryRun | [**New-IntersightCondAlarmSuppressionDryRun**](docs/New-IntersightCondAlarmSuppressionDryRun.md) | Create a 'CondAlarmSuppressionDryRun' resource.
+CondCustomHclBaseline | [**New-IntersightCondCustomHclBaseline**](docs/New-IntersightCondCustomHclBaseline.md) | Create a 'CondCustomHclBaseline' resource.
+CondCustomHclStatus | [**New-IntersightCondCustomHclStatus**](docs/New-IntersightCondCustomHclStatus.md) | Create a 'CondCustomHclStatus' resource.
 CondAlarmSuppression | [**Remove-IntersightCondAlarmSuppression**](docs/Remove-IntersightCondAlarmSuppression.md) | Delete a 'CondAlarmSuppression' resource.
+CondCustomHclBaseline | [**Remove-IntersightCondCustomHclBaseline**](docs/Remove-IntersightCondCustomHclBaseline.md) | Delete a 'CondCustomHclBaseline' resource.
 CondAlarm | [**Set-IntersightCondAlarm**](docs/Set-IntersightCondAlarm.md) | Update a 'CondAlarm' resource.
 CondAlarmSuppression | [**Set-IntersightCondAlarmSuppression**](docs/Set-IntersightCondAlarmSuppression.md) | Update a 'CondAlarmSuppression' resource.
+CondCustomHclBaseline | [**Set-IntersightCondCustomHclBaseline**](docs/Set-IntersightCondCustomHclBaseline.md) | Update a 'CondCustomHclBaseline' resource.
 ConnectorpackConnectorPackUpgrade | [**Get-IntersightConnectorpackConnectorPackUpgrade**](docs/Get-IntersightConnectorpackConnectorPackUpgrade.md) | Read a 'ConnectorpackConnectorPackUpgrade' resource.
 ConnectorpackUpgradeImpact | [**Get-IntersightConnectorpackUpgradeImpact**](docs/Get-IntersightConnectorpackUpgradeImpact.md) | Read a 'ConnectorpackUpgradeImpact' resource.
 ConnectorpackConnectorPackUpgrade | [**New-IntersightConnectorpackConnectorPackUpgrade**](docs/New-IntersightConnectorpackConnectorPackUpgrade.md) | Create a 'ConnectorpackConnectorPackUpgrade' resource.
@@ -1811,6 +1821,7 @@ IamAppRegistration | [**Get-IntersightIamAppRegistration**](docs/Get-IntersightI
 IamBannerMessage | [**Get-IntersightIamBannerMessage**](docs/Get-IntersightIamBannerMessage.md) | Read a 'IamBannerMessage' resource.
 IamCertificate | [**Get-IntersightIamCertificate**](docs/Get-IntersightIamCertificate.md) | Read a 'IamCertificate' resource.
 IamCertificateRequest | [**Get-IntersightIamCertificateRequest**](docs/Get-IntersightIamCertificateRequest.md) | Read a 'IamCertificateRequest' resource.
+IamCuiIntegration | [**Get-IntersightIamCuiIntegration**](docs/Get-IntersightIamCuiIntegration.md) | Read a 'IamCuiIntegration' resource.
 IamDefaultAuthentication | [**Get-IntersightIamDefaultAuthentication**](docs/Get-IntersightIamDefaultAuthentication.md) | Read a 'IamDefaultAuthentication' resource.
 IamDomainGroup | [**Get-IntersightIamDomainGroup**](docs/Get-IntersightIamDomainGroup.md) | Read a 'IamDomainGroup' resource.
 IamDomainNameInfo | [**Get-IntersightIamDomainNameInfo**](docs/Get-IntersightIamDomainNameInfo.md) | Read a 'IamDomainNameInfo' resource.
@@ -2224,6 +2235,10 @@ MetricsMetricsExploration | [**Remove-IntersightMetricsMetricsExploration**](doc
 MetricsConfiguration | [**Set-IntersightMetricsConfiguration**](docs/Set-IntersightMetricsConfiguration.md) | Update a 'MetricsConfiguration' resource.
 MetricsMetricsExploration | [**Set-IntersightMetricsMetricsExploration**](docs/Set-IntersightMetricsMetricsExploration.md) | Update a 'MetricsMetricsExploration' resource.
 MetricsResourceConfiguration | [**Set-IntersightMetricsResourceConfiguration**](docs/Set-IntersightMetricsResourceConfiguration.md) | Update a 'MetricsResourceConfiguration' resource.
+MgmtConfigBackupFile | [**Get-IntersightMgmtConfigBackupFile**](docs/Get-IntersightMgmtConfigBackupFile.md) | Read a 'MgmtConfigBackupFile' resource.
+MgmtConfigBackupFile | [**New-IntersightMgmtConfigBackupFile**](docs/New-IntersightMgmtConfigBackupFile.md) | Create a 'MgmtConfigBackupFile' resource.
+MgmtConfigBackupFile | [**Remove-IntersightMgmtConfigBackupFile**](docs/Remove-IntersightMgmtConfigBackupFile.md) | Delete a 'MgmtConfigBackupFile' resource.
+MgmtConfigBackupFile | [**Set-IntersightMgmtConfigBackupFile**](docs/Set-IntersightMgmtConfigBackupFile.md) | Update a 'MgmtConfigBackupFile' resource.
 MonitoringHealthStatus | [**Get-IntersightMonitoringHealthStatus**](docs/Get-IntersightMonitoringHealthStatus.md) | Read a 'MonitoringHealthStatus' resource.
 NetworkDiscoveredNeighbor | [**Get-IntersightNetworkDiscoveredNeighbor**](docs/Get-IntersightNetworkDiscoveredNeighbor.md) | Read a 'NetworkDiscoveredNeighbor' resource.
 NetworkDns | [**Get-IntersightNetworkDns**](docs/Get-IntersightNetworkDns.md) | Read a 'NetworkDns' resource.
@@ -2265,6 +2280,10 @@ NiaapiDcnmLatestMaintainedRelease | [**Get-IntersightNiaapiDcnmLatestMaintainedR
 NiaapiDcnmReleaseRecommend | [**Get-IntersightNiaapiDcnmReleaseRecommend**](docs/Get-IntersightNiaapiDcnmReleaseRecommend.md) | Read a 'NiaapiDcnmReleaseRecommend' resource.
 NiaapiDcnmSweol | [**Get-IntersightNiaapiDcnmSweol**](docs/Get-IntersightNiaapiDcnmSweol.md) | Read a 'NiaapiDcnmSweol' resource.
 NiaapiFileDownloader | [**Get-IntersightNiaapiFileDownloader**](docs/Get-IntersightNiaapiFileDownloader.md) | Read a 'NiaapiFileDownloader' resource.
+NiaapiNdEncryptedFileDownload | [**Get-IntersightNiaapiNdEncryptedFileDownload**](docs/Get-IntersightNiaapiNdEncryptedFileDownload.md) | Read a 'NiaapiNdEncryptedFileDownload' resource.
+NiaapiNdMetadata | [**Get-IntersightNiaapiNdMetadata**](docs/Get-IntersightNiaapiNdMetadata.md) | Read a 'NiaapiNdMetadata' resource.
+NiaapiNdMetadataFileDownloader | [**Get-IntersightNiaapiNdMetadataFileDownloader**](docs/Get-IntersightNiaapiNdMetadataFileDownloader.md) | Read a 'NiaapiNdMetadataFileDownloader' resource.
+NiaapiNdMetadataSoftwareDownload | [**Get-IntersightNiaapiNdMetadataSoftwareDownload**](docs/Get-IntersightNiaapiNdMetadataSoftwareDownload.md) | Read a 'NiaapiNdMetadataSoftwareDownload' resource.
 NiaapiNiaMetadata | [**Get-IntersightNiaapiNiaMetadata**](docs/Get-IntersightNiaapiNiaMetadata.md) | Read a 'NiaapiNiaMetadata' resource.
 NiaapiNibFileDownloader | [**Get-IntersightNiaapiNibFileDownloader**](docs/Get-IntersightNiaapiNibFileDownloader.md) | Read a 'NiaapiNibFileDownloader' resource.
 NiaapiNibMetadata | [**Get-IntersightNiaapiNibMetadata**](docs/Get-IntersightNiaapiNibMetadata.md) | Read a 'NiaapiNibMetadata' resource.
@@ -2376,6 +2395,12 @@ OauthAuthorization | [**Get-IntersightOauthAuthorization**](docs/Get-IntersightO
 OauthAuthorization | [**New-IntersightOauthAuthorization**](docs/New-IntersightOauthAuthorization.md) | Create a 'OauthAuthorization' resource.
 OauthAccessToken | [**Remove-IntersightOauthAccessToken**](docs/Remove-IntersightOauthAccessToken.md) | Delete a 'OauthAccessToken' resource.
 OauthAuthorization | [**Set-IntersightOauthAuthorization**](docs/Set-IntersightOauthAuthorization.md) | Update a 'OauthAuthorization' resource.
+OnpremApplianceSystemInfo | [**Get-IntersightOnpremApplianceSystemInfo**](docs/Get-IntersightOnpremApplianceSystemInfo.md) | Read a 'OnpremApplianceSystemInfo' resource.
+OnpremAuditRecord | [**Get-IntersightOnpremAuditRecord**](docs/Get-IntersightOnpremAuditRecord.md) | Read a 'OnpremAuditRecord' resource.
+OnpremUpgrade | [**Get-IntersightOnpremUpgrade**](docs/Get-IntersightOnpremUpgrade.md) | Read a 'OnpremUpgrade' resource.
+OnpremUserPreference | [**Get-IntersightOnpremUserPreference**](docs/Get-IntersightOnpremUserPreference.md) | Read a 'OnpremUserPreference' resource.
+OnpremUpgrade | [**Set-IntersightOnpremUpgrade**](docs/Set-IntersightOnpremUpgrade.md) | Update a 'OnpremUpgrade' resource.
+OnpremUserPreference | [**Set-IntersightOnpremUserPreference**](docs/Set-IntersightOnpremUserPreference.md) | Update a 'OnpremUserPreference' resource.
 OpenapiApiMethodMeta | [**Get-IntersightOpenapiApiMethodMeta**](docs/Get-IntersightOpenapiApiMethodMeta.md) | Read a 'OpenapiApiMethodMeta' resource.
 OpenapiOpenApiSpecification | [**Get-IntersightOpenapiOpenApiSpecification**](docs/Get-IntersightOpenapiOpenApiSpecification.md) | Read a 'OpenapiOpenApiSpecification' resource.
 OpenapiProcessFile | [**Get-IntersightOpenapiProcessFile**](docs/Get-IntersightOpenapiProcessFile.md) | Read a 'OpenapiProcessFile' resource.

@@ -105,8 +105,6 @@ Accept wildcard characters: False
 ### -Request
 The individual request to be executed asynchronously.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

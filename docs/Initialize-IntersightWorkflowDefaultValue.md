@@ -87,8 +87,6 @@ Accept wildcard characters: False
 ### -Value
 Default value for the data type. If default value was provided and the input was required the default value will be used as the input.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

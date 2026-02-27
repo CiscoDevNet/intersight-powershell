@@ -87,8 +87,6 @@ Accept wildcard characters: False
 ### -InputParameters
 Capture the mapping of blueprint inputs to service item inputs. The mapping for inputs can refer to blueprint inputs or to the generated objects which are part of this blueprint and all nested blueprints. The mapping will be referred using the convention of ${&lt;BlueprintName&gt;.input.&lt;InputName&gt;} or ${&lt;BlueprintName&gt;.generatedObject.&lt;GeneratedObjectName&gt;}.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

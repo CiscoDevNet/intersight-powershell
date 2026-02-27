@@ -87,8 +87,6 @@ Accept wildcard characters: False
 ### -TemplateValues
 Input values to render text output file from template file.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

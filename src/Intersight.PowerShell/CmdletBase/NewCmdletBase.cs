@@ -32,6 +32,10 @@ namespace Intersight.PowerShell
 
                 PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
                 var propertyList = this.ModelObject.GetType().GetProperties();
+
+                // Get reserved keyword mapping once before the loop to avoid repeated calls
+                var reservedKeywordMapping = PSUtils.GetReservedKeywordMapping(this.ModelObject.GetType());
+
                 foreach (var item in propertyList)
                 {
                     var propName = item.Name;
@@ -40,19 +44,23 @@ namespace Intersight.PowerShell
                         propName = item.Name.TrimStart('_');
                     }
 
-                    if (this.MyInvocation.BoundParameters.ContainsKey(propName))
+                    // Get the PowerShell parameter name (JSON name) for this CLR property
+                    // For reserved keywords, return the JSON name, otherwise return the CLR property name
+                    string boundParamKey = reservedKeywordMapping.TryGetValue(propName, out var jsonName) ? jsonName : propName;
+
+                    if (this.MyInvocation.BoundParameters.ContainsKey(boundParamKey))
                     {
-                        if (propName == "Moid" || this.MyInvocation.BoundParameters[propName] == null)
+                        if (boundParamKey == "Moid" || this.MyInvocation.BoundParameters[boundParamKey] == null)
                         {
                             continue;
                         }
                         // Handle for DateTime to be always sent in UTC format
-                        if (this.MyInvocation.BoundParameters[propName].GetType() == typeof(DateTime))
+                        if (this.MyInvocation.BoundParameters[boundParamKey].GetType() == typeof(DateTime))
                         {
-                            DateTime receivedDateTime = (DateTime)this.MyInvocation.BoundParameters[propName];
-                            this.MyInvocation.BoundParameters[propName] = receivedDateTime.ToUniversalTime();
+                            DateTime receivedDateTime = (DateTime)this.MyInvocation.BoundParameters[boundParamKey];
+                            this.MyInvocation.BoundParameters[boundParamKey] = receivedDateTime.ToUniversalTime();
                         }
-                        item.SetValue(ModelObject, this.MyInvocation.BoundParameters[propName]);
+                        item.SetValue(ModelObject, this.MyInvocation.BoundParameters[boundParamKey]);
                     }
                     else
                     /*
@@ -100,6 +108,11 @@ namespace Intersight.PowerShell
                     }
                 }
                 var result = methodInfo.Invoke(ApiInstance, argList.ToArray());
+
+                // Register TypeData for reserved keyword properties (e.g., Version -> VarVersion)
+                // This enables $obj.Version to work on the returned object
+                PSUtils.RegisterReservedKeywordTypeData(result.GetType());
+
                 if (Json.IsPresent)
                 {
                     WriteResponseJson(result);

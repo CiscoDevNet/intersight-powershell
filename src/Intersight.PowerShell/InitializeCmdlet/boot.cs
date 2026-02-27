@@ -1049,6 +1049,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightBootIscsi()
         {
             ClassId = BootIscsi.ClassIdEnum.BootIscsi;
+            InterfaceSource = BootIscsi.InterfaceSourceEnum.Name;
             ObjectType = BootIscsi.ObjectTypeEnum.BootIscsi;
 
         }
@@ -1098,6 +1099,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9-._:]*$")]
         public string InterfaceName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Lists the supported methods to provide network boot device configuration. Supported values are \"name\" and \"port\".\n* `name` - Use interface name to select virtual ethernet interface.\n* `mac` - Use MAC address to select virtual ethernet interface.\n* `port` - Use port to select virtual ethernet interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BootIscsi.InterfaceSourceEnum InterfaceSource
         {
             get;
             set;
@@ -1163,6 +1174,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("InterfaceName"))
             {
                 initObject.InterfaceName = this.InterfaceName;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InterfaceSource"))
+            {
+                initObject.InterfaceSource = this.InterfaceSource;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {

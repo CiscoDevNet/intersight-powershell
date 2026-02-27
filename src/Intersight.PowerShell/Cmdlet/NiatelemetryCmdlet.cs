@@ -13024,6 +13024,39 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Feature operational state of bandwidth monitoring."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool BandwidthUsageMonitoring
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of total Change Control tickets that have been approved and completed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ChangeApprovalCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count the number of change control tickets that have been rolled back."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ChangeRollbackCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Nexus Dashboard can onboard multiple APIC clusters/sites."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -13057,6 +13090,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Count of number of image snapshots taken."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DeviceSnapshotsCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Dn of the objects present for Nexus Dashboard devices."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -13079,11 +13123,66 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Count of number of devices with attached image policies."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long FabricImagePoliciesCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Feature Operation status of change management."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool FeatureOperStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of number of image operations of type stage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ImageFileStagingCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Feature Operation status of Integration with IPAM."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IpamOperState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Health of Nexus Dashboard cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string IsClusterHealthy
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Feature Operation status of Kubernetes Visualizer."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string K8VisualizerAdminState
         {
             get;
             set;
@@ -13245,6 +13344,50 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Feature operational state of performance Monitoring."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool PerformanceMonitoring
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Count of post upgrade report generation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long PostUpgradeReportGenerationCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of pre upgrade report generation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long PreUpgradeReportGenerationCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Feature Operation status of Precision Time Protocol Monitoring."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PtpAdminState
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
@@ -13291,6 +13434,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Feature Operation status of VMM Visualizer."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string VmmVisualizerAdminState
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
@@ -15072,6 +15226,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -17720,6 +17875,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Count of configuration change tracking."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ConfigurationChangeTrackingCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Returns the total number of connectivity Analysis run for EPs in NDFC Fabrics."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -17747,6 +17913,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of total Endpoint Locators."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long EndpointLocatorCount
         {
             get;
             set;
@@ -17830,6 +18007,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Count of number of manual backups."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool OnDemandBackups
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -17860,6 +18048,50 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of number of scheduled backups."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool ScheduledBackups
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of total security groups."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long SecurityGroupsCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of total Service Clusters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ServiceClustersCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of total Service Functions configured."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ServiceFunctionCount
         {
             get;
             set;
@@ -21155,6 +21387,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"Returns the value of the nxosNveInterface field."</para>

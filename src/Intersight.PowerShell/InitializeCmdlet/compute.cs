@@ -3760,7 +3760,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"User defined description of the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\.\\/:\\?@\\[\\]_\\{\\}~a-zA-Z0-9]*$")]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\.\\/:;\\|\\?@\\[\\]_\\{\\}~a-zA-Z0-9]*$")]
         public string UserLabel
         {
             get;

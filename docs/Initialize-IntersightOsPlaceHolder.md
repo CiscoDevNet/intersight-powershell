@@ -87,8 +87,6 @@ Accept wildcard characters: False
 ### -Type
 Definition of place holder.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -103,8 +101,6 @@ Accept wildcard characters: False
 
 ### -Value
 Value for placeholder provided by user.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object

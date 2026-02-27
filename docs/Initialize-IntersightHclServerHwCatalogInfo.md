@@ -181,8 +181,6 @@ Accept wildcard characters: False
 ### -Value
 Value of specific tag, having type as json.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

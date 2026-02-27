@@ -57,6 +57,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description">"External identifier for the account, used for integration with external identity systems."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ExternalIdentifier
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -1452,6 +1463,170 @@ namespace Intersight.PowerShell
 
 
 
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IamCuiIntegration.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIamCuiIntegration", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightIamCuiIntegration : GetCmdletBase
+    {
+        public GetIntersightIamCuiIntegration()
+        {
+            ApiInstance = new IamApi(Config);
+            MethodName = "GetIamCuiIntegrationListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"CCC inventory synchronization setting.\n* `enable` - Cisco Cloud Control inventory synchronization is enabled.\n* `disable` - Cisco Cloud Control inventory synchronization is disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamCuiIntegration.CiscoCloudControlInventorySyncEnum CiscoCloudControlInventorySync
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Current synchronization status of CUI integration data.\n* `Needs-Sync` - CUI integration data needs to be synchronized.\n* `InProgress` - CUI integration synchronization is in progress.\n* `Done` - CUI integration synchronization is completed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamCuiIntegration.SyncStatusEnum SyncStatus
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Primary tenant ID for CUI integration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string TenantId
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -3851,7 +4026,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The email domain name for this IdP of the user. When a user enters an email during login in the Intersight home page, the IdP is picked by matching this domain name with the email domain name for authentication."</para>
+        /// <para type="description">"The DomainNameInfo object represents an organization’s email domain used during login mapping and ownership verification. It supports verifying domain control via DNS to enhance trust.\n#### Purpose\nDomainNameInfo ensures that only verified domains are used to route users to the correct identity provider, improving login integrity.\n#### Key Concepts\n- **Domain Routing:** Associates email domains with IdPs for seamless login.\n- **Ownership Verification:** Supports DNS-based verification for trust establishment.\n- **Status Tracking:** Maintains domain verification lifecycle state.\n- **Account Scoped:** Managed within the context of the owning account."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -8112,6 +8287,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The type of login that created this session. Indicates whether the session was created through standard web login or JWT token exchange.\n* `weblogin` - Session created through standard web login process.\n* `tokenexchange` - Session created through JWT token exchange process."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamSession.LoginTypeEnum LoginType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -9166,6 +9352,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"External identifier for the user, used for integration with external identity systems."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ExternalIdentifier
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"First name of the user. For remote users, this field is populated from the IdP attributes received after authentication."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -10119,6 +10316,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -13665,6 +13863,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"External identifier for the user, used for integration with external identity systems."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ExternalIdentifier
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"First name of the user. For remote users, this field is populated from the IdP attributes received after authentication."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14546,6 +14755,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -18349,6 +18559,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")]
         public string Email
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"External identifier for the user, used for integration with external identity systems."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ExternalIdentifier
         {
             get;
             set;

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightConnectorHttpRequest [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssetTargetMoid< string>][-Body< byte[]>][-ClassId< ConnectorHttpRequest.ClassIdEnum>][-DialTimeout< long>][-EncryptedAesKey< string>][-EncryptionKey< string>][-EndpointMoid< string>][-Header< object>][-Internal< bool>][-Method< string>][-ObjectType< ConnectorHttpRequest.ObjectTypeEnum>][-SecureProperties< object>][-Timeout< long>][-Url< Model.ConnectorUrl>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightConnectorHttpRequest [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssetTargetMoid< string>][-Body< byte[]>][-Certificate< string>][-ClassId< ConnectorHttpRequest.ClassIdEnum>][-DialTimeout< long>][-EncryptedAesKey< string>][-EncryptionKey< string>][-EndpointMoid< string>][-Header< object>][-Internal< bool>][-Method< string>][-ObjectType< ConnectorHttpRequest.ObjectTypeEnum>][-SecureProperties< object>][-Timeout< long>][-Url< Model.ConnectorUrl>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -61,6 +61,21 @@ Note :- Use Initialize-Intersightbyte[] to create the object of complex type byt
 
 ```yaml
 Type: byte[]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Certificate
+An SSL certificate to use to authenticate the identity of the remote server if the target of the request is an HTTPS server. Format of the certificate is a PEM encoded x509 certificate.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -149,8 +164,6 @@ Accept wildcard characters: False
 ### -Header
 Collection of key/value pairs to set in the request header.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -210,8 +223,6 @@ Accept wildcard characters: False
 
 ### -SecureProperties
 A dictionary of encrypted secure values mapped against the secure property name. The values that are encrypted using the AES key must be mapped against the secure property name with an &apos;AES&apos; prefix\nDevice connector expects the message body to be a golang template and the template can use the secure property names as placeholders.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object

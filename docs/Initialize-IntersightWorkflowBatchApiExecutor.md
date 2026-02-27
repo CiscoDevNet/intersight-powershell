@@ -186,8 +186,6 @@ Accept wildcard characters: False
 ### -Outcomes
 Collection of possible task outcomes, represented as workflow.Outcome objects. Outcomes can be mapped to messages and are evaluated in the given order. \nA catch-all success or failure outcome with condition &apos;true&apos; can be included at the end. Optional property; if not specified, the task defaults to success.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -202,8 +200,6 @@ Accept wildcard characters: False
 
 ### -Output
 JSON mapping of extracted API response values to task output parameters, using API response grammar defined in Intersight Orchestrator.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object
@@ -284,8 +280,6 @@ Accept wildcard characters: False
 
 ### -UiRenderingData
 Data required for rendering the task in the user interface.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object

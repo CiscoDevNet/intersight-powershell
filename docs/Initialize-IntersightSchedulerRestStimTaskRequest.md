@@ -42,8 +42,6 @@ Accept wildcard characters: False
 ### -Body
 The request body that is sent as part of this API request.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -73,8 +71,6 @@ Accept wildcard characters: False
 
 ### -Headers
 Collection of key value pairs to set in the request header.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object
@@ -135,8 +131,6 @@ Accept wildcard characters: False
 
 ### -Response
 The response obtained for the scheduled API service.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object

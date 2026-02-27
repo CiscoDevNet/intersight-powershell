@@ -87,8 +87,6 @@ Accept wildcard characters: False
 ### -PropertyParameters
 A list of key value pairs where key is the property path and value is the template to derive the value. The target of the pre-generation operation is updated with the resolved values of these parameters. This operation is only applicable if the operation is of type \&quot;Update\&quot;.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

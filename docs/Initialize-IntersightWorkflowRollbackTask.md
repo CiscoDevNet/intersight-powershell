@@ -87,8 +87,6 @@ Accept wildcard characters: False
 ### -InputParameters
 Input parameters mapping for rollback task from the input or output of the main task definition.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

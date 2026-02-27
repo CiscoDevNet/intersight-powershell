@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightCondAlarmSuppression [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Classifications< System.Collections.Generic.List`1[CondAlarmClassificationRelationship]>][-Description< string>][-Entity< MoBaseMoRelationship>][-Moid< string>][[-Name]< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightCondAlarmSuppression [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmRules< System.Collections.Generic.List`1[CondAlarmRuleExpression]>][-Classifications< System.Collections.Generic.List`1[CondAlarmClassificationRelationship]>][-Description< string>][-Enabled< bool>][-EndDate< DateTime>][-Entity< MoBaseMoRelationship>][-Moid< string>][[-Name]< string>][-RulesOperator< CondAlarmSuppression.RulesOperatorEnum>][-StartDate< DateTime>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,23 @@ Create a &apos;CondAlarmSuppression&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AlarmRules
+
+
+Note :- Use Initialize-IntersightCondAlarmRuleExpression to create the object of complex type CondAlarmRuleExpression
+
+```yaml
+Type: System.Collections.Generic.List`1[CondAlarmRuleExpression]
 Parameter Sets: (All)
 Aliases:
 
@@ -61,6 +78,36 @@ User given description on why the suppression is enabled at this entity.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Enabled
+Indicates whether the suppression is enabled by the user or not. The user should be able to toggle this between true and false.\nThe property is set to true when the suppression is created. The user can set this to false to disable the suppression.\nThe suppression rule should be active only if both systemEnabled and enabled are true.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EndDate
+The end date for this alarm suppression rule. The date must follow the RFC 3339 format for date and time representation.
+
+```yaml
+Type: DateTime
 Parameter Sets: (All)
 Aliases:
 
@@ -116,6 +163,36 @@ Required: true
 Position: Named
 Default value: None
 Accept pipeline input: True False
+Accept wildcard characters: False
+```
+
+### -RulesOperator
+Operation that binds all the different rules together.\n* `All` - All is an AND condition applied against the individual conditions.\n* `Any` - Any is an OR condition applied against the individual conditions.
+
+```yaml
+Type: CondAlarmSuppression.RulesOperatorEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StartDate
+The start date for enabling this alarm suppression rule. The date must follow\nthe RFC 3339 format for date and time representation. If this date more than\n60 seconds in the past, the suppression rule will be rejected. If the date is\nwithin 60 seconds of the present time (plus or minus), the suppression will be\nstarted immediately. Otherwise, the suppression will be scheduled to start at\nthe requested time.
+
+```yaml
+Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
@@ -224,6 +301,8 @@ PS C:\> New-IntersightCondAlarmSuppression
 ## RELATED LINKS
 
 [Get-IntersightCondAlarmSuppression](./Get-IntersightCondAlarmSuppression.md)
+
+[Initialize-IntersightCondAlarmRuleExpression](./Initialize-IntersightCondAlarmRuleExpression.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

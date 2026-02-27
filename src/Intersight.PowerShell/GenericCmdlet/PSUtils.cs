@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Reflection;
@@ -7,6 +7,8 @@ using Intersight.Model;
 using System.Linq;
 using System.Collections;
 using System.Management.Automation;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace Intersight.PowerShell
 {
@@ -454,5 +456,214 @@ namespace Intersight.PowerShell
             }
         }
 
+        // Cache for reserved keyword mappings per type to avoid repeated contract resolution
+        private static Dictionary<Type, Dictionary<string, string>> _reservedKeywordCache = new Dictionary<Type, Dictionary<string, string>>();
+        private static readonly object _cacheLock = new object();
+
+        // Cache for types that have already had TypeData registered
+        private static HashSet<string> _registeredTypeData = new HashSet<string>();
+        private static readonly object _typeDataLock = new object();
+
+        /// <summary>
+        /// Gets the mapping from C# property names to JSON property names for reserved keywords.
+        /// Only includes properties where names differ (e.g., VarVersion -> Version).
+        /// </summary>
+        /// <param name="modelType">The model type to get mappings for</param>
+        /// <returns>Dictionary mapping C# property name to JSON property name</returns>
+        public static Dictionary<string, string> GetReservedKeywordMapping(Type modelType)
+        {
+            if (modelType == null)
+            {
+                return new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            }
+
+            lock (_cacheLock)
+            {
+                if (_reservedKeywordCache.TryGetValue(modelType, out var cachedMapping))
+                {
+                    return cachedMapping;
+                }
+            }
+
+            var mapping = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+            var contract = JsonSerializer.CreateDefault().ContractResolver.ResolveContract(modelType) as JsonObjectContract;
+
+            if (contract != null)
+            {
+                foreach (var jsonProp in contract.Properties)
+                {
+                    // Only add mappings where names differ (reserved keywords)
+                    if (!string.IsNullOrEmpty(jsonProp.PropertyName) &&
+                        !string.IsNullOrEmpty(jsonProp.UnderlyingName) &&
+                        !string.Equals(jsonProp.PropertyName, jsonProp.UnderlyingName, StringComparison.OrdinalIgnoreCase))
+                    {
+                        // CLR name -> JSON name (e.g., "VarVersion" -> "Version")
+                        mapping[jsonProp.UnderlyingName] = jsonProp.PropertyName;
+                    }
+                }
+            }
+
+            lock (_cacheLock)
+            {
+                _reservedKeywordCache[modelType] = mapping;
+            }
+
+            return mapping;
+        }
+
+        /// <summary>
+        /// Gets the PowerShell parameter name (JSON name) for a given C# property name.
+        /// For reserved keywords, this returns the JSON name (e.g., "Version" for C# property "VarVersion").
+        /// </summary>
+        /// <param name="modelType">The model type</param>
+        /// <param name="clrPropertyName">The C# property name</param>
+        /// <returns>The PowerShell parameter name (JSON name)</returns>
+        public static string GetPowerShellParamName(Type modelType, string clrPropertyName)
+        {
+            var mapping = GetReservedKeywordMapping(modelType);
+            if (mapping.TryGetValue(clrPropertyName, out var jsonName))
+            {
+                return jsonName;
+            }
+            return clrPropertyName;
+        }
+
+        /// <summary>
+        /// Gets the C# property name for a given PowerShell parameter name (JSON name).
+        /// For reserved keywords, this returns the C# property name (e.g., "VarVersion" for JSON name "Version").
+        /// </summary>
+        /// <param name="modelType">The model type</param>
+        /// <param name="psParamName">The PowerShell parameter name (JSON name)</param>
+        /// <returns>The C# property name</returns>
+        public static string GetClrPropertyName(Type modelType, string psParamName)
+        {
+            var mapping = GetReservedKeywordMapping(modelType);
+            var match = mapping.FirstOrDefault(kvp => kvp.Value.Equals(psParamName, StringComparison.OrdinalIgnoreCase));
+            return !string.IsNullOrEmpty(match.Key) ? match.Key : psParamName;
+        }
+
+        /// <summary>
+        /// Registers PowerShell TypeData (alias properties) for reserved keyword properties on a type.
+        /// This allows users to access $obj.Version instead of $obj.VarVersion.
+        /// If the type is an ApiResponse wrapper, the generic type argument is unwrapped automatically.
+        /// </summary>
+        /// <param name="objType">The type to register TypeData for</param>
+        public static void RegisterReservedKeywordTypeData(Type objType)
+        {
+            if (objType == null) return;
+
+            // Unwrap ApiResponse<T> wrapper to get the actual model type
+            var targetType = UnwrapApiResponseType(objType);
+            var typeName = targetType.FullName;
+
+            // Skip if type name is null (can happen with certain generic types)
+            if (string.IsNullOrEmpty(typeName)) return;
+
+            var mapping = GetReservedKeywordMapping(targetType);
+
+            // Skip if no reserved keywords to map
+            if (mapping.Count == 0) return;
+
+            // Check if already registered (after we know there's work to do)
+            lock (_typeDataLock)
+            {
+                if (_registeredTypeData.Contains(typeName))
+                {
+                    return;
+                }
+                _registeredTypeData.Add(typeName);
+            }
+
+            var typeData = new System.Management.Automation.Runspaces.TypeData(typeName);
+
+            // Single pass: add script properties and build display property list
+            var displayProperties = AddPropertiesAndBuildDisplayList(typeData, targetType, mapping);
+
+            var propertySet = new System.Management.Automation.Runspaces.PropertySetData(displayProperties);
+            typeData.DefaultDisplayPropertySet = propertySet;
+
+            // Register the TypeData with PowerShell
+            ExecuteUpdateTypeData(typeData, typeName);
+        }
+
+        /// <summary>
+        /// Unwraps ApiResponse&lt;T&gt; to get the actual model type.
+        /// </summary>
+        private static Type UnwrapApiResponseType(Type objType)
+        {
+            if (objType.IsGenericType && objType.Name.StartsWith("ApiResponse"))
+            {
+                var genericArgs = objType.GetGenericArguments();
+                if (genericArgs != null && genericArgs.Length > 0)
+                {
+                    var actualModelType = genericArgs[0];
+                    if (actualModelType.FullName != null && actualModelType.FullName.StartsWith("Intersight.Model"))
+                    {
+                        return actualModelType;
+                    }
+                }
+            }
+            return objType;
+        }
+
+        /// <summary>
+        /// Single pass through all properties: adds script properties for reserved keywords
+        /// and builds the display property list simultaneously.
+        /// </summary>
+        private static List<string> AddPropertiesAndBuildDisplayList(
+            System.Management.Automation.Runspaces.TypeData typeData,
+            Type targetType,
+            Dictionary<string, string> mapping)
+        {
+            var displayProperties = new List<string>();
+
+            foreach (var prop in targetType.GetProperties(BindingFlags.Public | BindingFlags.Instance))
+            {
+                if (mapping.TryGetValue(prop.Name, out var jsonName))
+                {
+                    // Reserved keyword: create alias property (e.g., Version -> VarVersion)
+                    // Using AliasProperty since we're only renaming,
+                    var aliasProperty = new System.Management.Automation.Runspaces.AliasPropertyData(
+                        jsonName,      // alias name (e.g., "Version")
+                        prop.Name      // referenced property (e.g., "VarVersion")
+                    );
+
+                    typeData.Members.Add(jsonName, aliasProperty);
+                    displayProperties.Add(jsonName);
+                }
+                else
+                {
+                    // Regular property: just add to display list
+                    displayProperties.Add(prop.Name);
+                }
+            }
+
+            return displayProperties;
+        }
+
+        /// <summary>
+        /// Executes Update-TypeData PowerShell command to register the TypeData.
+        /// </summary>
+        private static void ExecuteUpdateTypeData(System.Management.Automation.Runspaces.TypeData typeData, string typeName)
+        {
+            using (var ps = System.Management.Automation.PowerShell.Create(System.Management.Automation.RunspaceMode.CurrentRunspace))
+            {
+                ps.AddCommand("Update-TypeData")
+                    .AddParameter("TypeData", typeData)
+                    .AddParameter("Force", true);
+                ps.Invoke();
+
+                // Check for PowerShell errors
+                if (ps.HadErrors)
+                {
+                    var errorMessage = ps.Streams.Error.Count > 0
+                        ? (ps.Streams.Error[0].Exception?.Message ?? ps.Streams.Error[0].ToString())
+                        : "Unknown error";
+
+                    throw new InvalidOperationException(
+                        string.Format("TypeData registration failed for '{0}': {1}", typeName, errorMessage));
+                }
+            }
+        }
     }
 }

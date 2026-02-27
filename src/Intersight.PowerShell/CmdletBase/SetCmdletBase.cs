@@ -37,11 +37,17 @@ namespace Intersight.PowerShell
                 PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
                 var changedProperties = GetChangedProperty();
                 var propertyInfos = this.ModelObject.GetType().GetProperties();
+
+                // Get reserved keyword mapping once before the loop to avoid repeated calls
+                var reservedKeywordMapping = PSUtils.GetReservedKeywordMapping(this.ModelObject.GetType());
+
                 foreach (var propertyInfo in propertyInfos)
                 {
                     if (changedProperties.ContainsKey(propertyInfo.Name) && propertyInfo.SetMethod != null)
                     {
-                        propertyInfo.SetValue(this.ModelObject, this.MyInvocation.BoundParameters[propertyInfo.Name]);
+                        // Convert CLR property name (e.g., "VarVersion") to PowerShell parameter name (e.g., "Version")
+                        var psParamName = reservedKeywordMapping.TryGetValue(propertyInfo.Name, out var jsonName) ? jsonName : propertyInfo.Name;
+                        propertyInfo.SetValue(this.ModelObject, this.MyInvocation.BoundParameters[psParamName]);
                     }
                     else
                     /*
@@ -149,6 +155,9 @@ namespace Intersight.PowerShell
                 }
             }
 
+            // Get reserved keyword mapping once for efficient reverse lookups
+            var reservedKeywordMapping = PSUtils.GetReservedKeywordMapping(getObject.GetType());
+
             foreach (var propName in this.MyInvocation.BoundParameters)
             {
                 if (propName.Key == "Moid" || propName.Key == "Name")
@@ -156,7 +165,10 @@ namespace Intersight.PowerShell
                     continue;
                 }
 
-                var getPropertyInfo = getObject.GetType().GetProperty(propName.Key);
+                // Convert PowerShell parameter name (JSON name like "Version") to CLR property name (like "VarVersion")
+                // Do reverse lookup: find CLR property name where JSON name matches propName.Key
+                var clrPropertyName = reservedKeywordMapping.FirstOrDefault(kvp => kvp.Value.Equals(propName.Key, StringComparison.OrdinalIgnoreCase)).Key ?? propName.Key;
+                var getPropertyInfo = getObject.GetType().GetProperty(clrPropertyName);
                 if (getPropertyInfo != null)
                 {
                     var getVal = getPropertyInfo.GetValue(getObject);
@@ -164,7 +176,7 @@ namespace Intersight.PowerShell
                     {
                         if (getVal != propName.Value)
                         {
-                            changedProperties.Add(propName.Key, propName.Value);
+                            changedProperties.Add(clrPropertyName, propName.Value);
                         }
                         continue;
                     }
@@ -173,7 +185,7 @@ namespace Intersight.PowerShell
                     {
                         if (getVal != propName.Value)
                         {
-                            changedProperties.Add(propName.Key, propName.Value);
+                            changedProperties.Add(clrPropertyName, propName.Value);
                         }
                         continue;
                     }
@@ -182,35 +194,35 @@ namespace Intersight.PowerShell
                     {
                         if (!(getVal.Equals(propName.Value)))
                         {
-                            changedProperties.Add(propName.Key, propName.Value);
+                            changedProperties.Add(clrPropertyName, propName.Value);
                         }
                     }
                     else if (getVal.GetType().Name == "List`1")
                     {
                         if (!(PSUtils.CompareList(getVal, propName.Value, CommandRuntime)))
                         {
-                            changedProperties.Add(propName.Key, propName.Value);
+                            changedProperties.Add(clrPropertyName, propName.Value);
                         }
                     }
                     else if (getVal.GetType().Name == "Dictionary`2")
                     {
                         if (!PSUtils.CompareDictionary(getVal, propName.Value, CommandRuntime))
                         {
-                            changedProperties.Add(propName.Key, propName.Value);
+                            changedProperties.Add(clrPropertyName, propName.Value);
                         }
                     }
                     else if (getVal.GetType().IsEnum)
                     {
                         if (getVal.ToString() != propName.Value.ToString())
                         {
-                            changedProperties.Add(propName.Key, propName.Value);
+                            changedProperties.Add(clrPropertyName, propName.Value);
                         }
                     }
                     else
                     {
                         if (!PSUtils.CompareIntersightObject(getVal, propName.Value, CommandRuntime))
                         {
-                            changedProperties.Add(propName.Key, propName.Value);
+                            changedProperties.Add(clrPropertyName, propName.Value);
                         }
                     }
                 }

@@ -102,8 +102,6 @@ Accept wildcard characters: False
 ### -InputParameters
 If any input of the nested blueprint needs to be modified in some form to include data from the parent blueprint, then the input parameters can be specified here.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

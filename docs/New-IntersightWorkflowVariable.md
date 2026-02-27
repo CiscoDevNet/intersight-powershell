@@ -108,8 +108,6 @@ Accept wildcard characters: False
 ### -Value
 This defines the value of the variable and it will be validated against the datatype defined in the definition.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

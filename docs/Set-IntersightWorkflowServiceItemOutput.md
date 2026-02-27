@@ -71,8 +71,6 @@ Accept wildcard characters: False
 ### -Output
 Service item output for a service item instance and the format is specified by output definition of the service item definition.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightSoftwarerepositoryOperatingSystemFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.SoftwarerepositoryCatalogRelationship>][-ClassId< SoftwarerepositoryOperatingSystemFile.ClassIdEnum>][-Description< string>][-ImageType< string>][-ImportAction< SoftwarerepositoryOperatingSystemFile.ImportActionEnum>][-ImportProgress< long>][-ImportState< SoftwarerepositoryOperatingSystemFile.ImportStateEnum>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][-Moid< string>][-Name< string>][-ObjectType< SoftwarerepositoryOperatingSystemFile.ObjectTypeEnum>][-RecommendedBuild< string>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-SampleHashes< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< Model.SoftwarerepositoryFileServer>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightSoftwarerepositoryOperatingSystemFile [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.SoftwarerepositoryCatalogRelationship>][-ClassId< SoftwarerepositoryOperatingSystemFile.ClassIdEnum>][-Description< string>][-FileName< string>][-ImageType< string>][-ImportAction< SoftwarerepositoryOperatingSystemFile.ImportActionEnum>][-ImportProgress< long>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][-Moid< string>][-Name< string>][-ObjectType< SoftwarerepositoryOperatingSystemFile.ObjectTypeEnum>][-RecommendedBuild< string>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-SampleHashes< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< Model.SoftwarerepositoryFileServer>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -87,6 +87,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -FileName
+File name of the uploaded image.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ImageType
 The type of image which the distributable falls into according to the component it can upgrade. For e.g.; Standalone server, Intersight managed server, Unified Edge server. The field is used in private appliance mode, where image does not have description populated from CCO.
 
@@ -122,21 +137,6 @@ The progress percentage for the import operation.
 
 ```yaml
 Type: long
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ImportState
-The state  of this file in the repository or Appliance. The importState is updated during the import operation and as part of the repository monitoring process.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image.
-
-```yaml
-Type: SoftwarerepositoryOperatingSystemFile.ImportStateEnum
 Parameter Sets: (All)
 Aliases:
 

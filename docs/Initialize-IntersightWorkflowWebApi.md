@@ -87,8 +87,6 @@ Accept wildcard characters: False
 ### -Cookies
 Collection of key value pairs to set in the request header as Cookie list.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -148,8 +146,6 @@ Accept wildcard characters: False
 
 ### -Headers
 Collection of key value pairs to set in the request header.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object
@@ -241,8 +237,6 @@ Accept wildcard characters: False
 ### -Outcomes
 All the possible outcomes of this API are captured here. Outcomes property\nis a collection property of type workflow.Outcome objects.\nThe outcomes can be mapped to the message to be shown. The outcomes are\nevaluated in the order they are given. At the end of the outcomes list,\nan catchall success/fail outcome can be added with condition as &apos;true&apos;.\nThis is an optional\nproperty and if not specified the task will be marked as success.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -272,8 +266,6 @@ Accept wildcard characters: False
 
 ### -ResponseSpec
 The optional grammar specification for parsing the response to extract the\nrequired values.\nThe specification should have extraction specification specified for\nall the API output parameters.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object

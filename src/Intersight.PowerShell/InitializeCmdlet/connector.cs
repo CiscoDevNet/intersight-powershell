@@ -1040,6 +1040,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An SSL certificate to use to authenticate the identity of the remote server if the target of the request is an HTTPS server. Format of the certificate is a PEM encoded x509 certificate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Certificate
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1175,6 +1185,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Body"))
             {
                 initObject.Body = this.Body;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Certificate"))
+            {
+                initObject.Certificate = this.Certificate;
             }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("DialTimeout"))

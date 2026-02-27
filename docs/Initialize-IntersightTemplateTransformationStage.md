@@ -72,8 +72,6 @@ Accept wildcard characters: False
 ### -FunctionArguments
 A collection of arguments for the function being executed.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

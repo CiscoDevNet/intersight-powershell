@@ -42,8 +42,6 @@ Accept wildcard characters: False
 ### -Annotations
 Kubernetes metadata annotations for a Node.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -73,8 +71,6 @@ Accept wildcard characters: False
 
 ### -Labels
 Kubernetes metadata labels for a Node.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object

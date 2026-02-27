@@ -1249,6 +1249,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"This MAC address will be the source MAC address for NetFlow packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string RouterMac
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
@@ -2165,6 +2176,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Rn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This MAC address will be the source MAC address for NetFlow packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string RouterMac
         {
             get;
             set;
@@ -6028,6 +6050,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

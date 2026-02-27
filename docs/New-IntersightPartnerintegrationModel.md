@@ -41,8 +41,6 @@ Accept wildcard characters: False
 ### -Data
 Endpoint model in yaml format.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

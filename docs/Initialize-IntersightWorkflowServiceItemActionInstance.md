@@ -108,8 +108,6 @@ Accept wildcard characters: False
 ### -Input
 Inputs for a service item action and the format is specified by input definition of the service item action definition.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

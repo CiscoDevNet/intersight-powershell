@@ -74,8 +74,6 @@ Accept wildcard characters: False
 ### -Input
 The input data for the referred blueprint. All required inputs of the blueprint must have a value provided.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)

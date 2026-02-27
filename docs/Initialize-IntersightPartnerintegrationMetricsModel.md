@@ -42,8 +42,6 @@ Accept wildcard characters: False
 ### -Attributes
 Transformation attributes model in yaml format.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -74,8 +72,6 @@ Accept wildcard characters: False
 ### -DruidInstrumentExporters
 Transformation druid instrument exporters model in yaml format.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -90,8 +86,6 @@ Accept wildcard characters: False
 
 ### -Instruments
 Transformation instruments model in yaml format.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object
@@ -108,8 +102,6 @@ Accept wildcard characters: False
 ### -MeterProviders
 Transformation meter providers model in yaml format.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
@@ -124,8 +116,6 @@ Accept wildcard characters: False
 
 ### -Metrics
 Transformation metrics model in yaml format.
-
-Note :- Use Initialize-Intersightobject to create the object of complex type object
 
 ```yaml
 Type: object

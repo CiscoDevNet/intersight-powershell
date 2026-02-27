@@ -1,4 +1,4 @@
-﻿using Intersight.Client;
+using Intersight.Client;
 using Intersight.Model;
 using System;
 using System.Collections.Generic;
@@ -188,17 +188,26 @@ namespace Intersight.PowerShell
                     {
                         var actualResult = resultsProperty.GetValue(ActualInstanceResult);
                         var convertedResults = ConvertJObjectToPSObject(actualResult);
-
                         WriteObject(convertedResults, true);
                         return;
                     }
                 }
+
+                // Register TypeData for reserved keyword properties before writing output
+                PSUtils.RegisterReservedKeywordTypeData(ActualInstanceResult.GetType());
                 WriteObject(ActualInstanceResult);
             }
             else if (this.ParameterSetName == Constants.CmdletParam)
             {
                 var actualResult = ActualInstanceResult.GetType().GetProperty(Constants.Results).GetValue(ActualInstanceResult);
                 var collection = new List<Object>((IEnumerable<Object>)actualResult);
+
+                // Register TypeData for the element type if there are results
+                if (collection.Count > 0)
+                {
+                    PSUtils.RegisterReservedKeywordTypeData(collection[0].GetType());
+                }
+
                 if (collection.Count == 1)
                 {
                     WriteObject(collection[0]);

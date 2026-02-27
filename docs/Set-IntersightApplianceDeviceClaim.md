@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightApplianceDeviceClaim [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Hostname< string>][-IsRenew< bool>][[-Moid]< string>][-Password< string>][-PlatformType< ApplianceDeviceClaim.PlatformTypeEnum>][-RequestId< string>][-Reservation< ResourceReservationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Username< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightApplianceDeviceClaim [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedLocation< AssetGeoLocationRelationship>][-Hostname< string>][-IsRenew< bool>][[-Moid]< string>][-Password< string>][-PlatformType< ApplianceDeviceClaim.PlatformTypeEnum>][-RequestId< string>][-Reservation< ResourceReservationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Username< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -28,6 +28,24 @@ Update a &apos;ApplianceDeviceClaim&apos; resource.
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AssignedLocation
+A reference to a assetGeoLocation resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: AssetGeoLocationRelationship
 Parameter Sets: (All)
 Aliases:
 

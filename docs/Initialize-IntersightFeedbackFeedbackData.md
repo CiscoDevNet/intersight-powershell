@@ -207,8 +207,6 @@ Accept wildcard characters: False
 ### -TraceIds
 Collection of last traceId for replicating the user&apos;s last activity.
 
-Note :- Use Initialize-Intersightobject to create the object of complex type object
-
 ```yaml
 Type: object
 Parameter Sets: (All)
