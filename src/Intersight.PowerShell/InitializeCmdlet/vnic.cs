@@ -873,6 +873,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.VnicNetFlowMonitorSession> NetFlowMonitorSessions
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1057,6 +1067,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
                 initObject.Name = this.Name;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetFlowMonitorSessions"))
+            {
+                initObject.NetFlowMonitorSessions = this.NetFlowMonitorSessions;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Order"))
@@ -5935,6 +5949,92 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicNetFlowMonitorSession.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicNetFlowMonitorSession")]
+    public class InitializeIntersightVnicNetFlowMonitorSession : PSCmdlet
+    {
+        public InitializeIntersightVnicNetFlowMonitorSession()
+        {
+            ClassId = VnicNetFlowMonitorSession.ClassIdEnum.VnicNetFlowMonitorSession;
+            FlowDirection = VnicNetFlowMonitorSession.FlowDirectionEnum.Both;
+            ObjectType = VnicNetFlowMonitorSession.ObjectTypeEnum.VnicNetFlowMonitorSession;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicNetFlowMonitorSession.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Direction of the flow to monitor (ingress, egress, or both).\n* `both` - Both direction for NetFlow monitor.\n* `rx` - Input direction for NetFlow monitor.\n* `tx` - Output direction for NetFlow monitor."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicNetFlowMonitorSession.FlowDirectionEnum FlowDirection
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the NetFlow monitor to use for this vNIC. The NetFlow monitor must be pre-configured on the Fabric Interconnects. It is configured as part of the NetFlow policy attached to the Fabric Switch Cluster profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string MonitorName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicNetFlowMonitorSession.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.VnicNetFlowMonitorSession initObject = new Intersight.Model.VnicNetFlowMonitorSession();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlowDirection"))
+            {
+                initObject.FlowDirection = this.FlowDirection;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MonitorName"))
+            {
+                initObject.MonitorName = this.MonitorName;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize VnicNvgreSettings.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightVnicNvgreSettings")]
@@ -7355,6 +7455,246 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicServiceEthIf.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicServiceEthIf")]
+    public class InitializeIntersightVnicServiceEthIf : PSCmdlet
+    {
+        public InitializeIntersightVnicServiceEthIf()
+        {
+            ClassId = VnicServiceEthIf.ClassIdEnum.VnicServiceEthIf;
+            ObjectType = VnicServiceEthIf.ObjectTypeEnum.VnicServiceEthIf;
+
+        }
+        // <summary>
+        /// <para type="description">"Adapter Information for server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string AdapterId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicServiceEthIf.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the service virtual ethernet interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicServiceEthIf.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Placement Settings for the virtual interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.VnicPlacementSettings Placement
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a policyAbstractConfigProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.PolicyAbstractConfigProfileRelationship Profile
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.VnicServiceEthIf initObject = new Intersight.Model.VnicServiceEthIf();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdapterId"))
+            {
+                initObject.AdapterId = this.AdapterId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Placement"))
+            {
+                initObject.Placement = this.Placement;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profile"))
+            {
+                initObject.Profile = this.Profile;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize VnicServiceEthIfInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightVnicServiceEthIfInventory")]
+    public class InitializeIntersightVnicServiceEthIfInventory : PSCmdlet
+    {
+        public InitializeIntersightVnicServiceEthIfInventory()
+        {
+            ClassId = VnicServiceEthIfInventory.ClassIdEnum.VnicServiceEthIfInventory;
+            ObjectType = VnicServiceEthIfInventory.ObjectTypeEnum.VnicServiceEthIfInventory;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicServiceEthIfInventory.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public VnicServiceEthIfInventory.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.VnicServiceEthIfInventory initObject = new Intersight.Model.VnicServiceEthIfInventory();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize VnicSriovSettings.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightVnicSriovSettings")]
@@ -8664,6 +9004,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.VnicNetFlowMonitorSession> NetFlowMonitorSessions
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8824,6 +9174,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
                 initObject.Name = this.Name;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetFlowMonitorSessions"))
+            {
+                initObject.NetFlowMonitorSessions = this.NetFlowMonitorSessions;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))

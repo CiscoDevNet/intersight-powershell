@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicVnicTemplate [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< Model.VnicCdn>][-ClassId< VnicVnicTemplate.ClassIdEnum>][-Description< string>][-EnableOverride< bool>][-EthAdapterPolicy< Model.VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< Model.VnicEthNetworkPolicyRelationship>][-EthQosPolicy< Model.VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IscsiBootPolicy< Model.VnicIscsiBootPolicyRelationship>][-MacPool< Model.MacpoolPoolRelationship>][-Moid< string>][-Name< string>][-ObjectType< VnicVnicTemplate.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PeerVnicName< string>][-PinGroupName< string>][-SriovSettings< Model.VnicSriovSettings>][-SwitchId< VnicVnicTemplate.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-UsnicSettings< Model.VnicUsnicSettings>][-VmqSettings< Model.VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicVnicTemplate [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< Model.VnicCdn>][-ClassId< VnicVnicTemplate.ClassIdEnum>][-Description< string>][-EnableOverride< bool>][-EthAdapterPolicy< Model.VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< Model.VnicEthNetworkPolicyRelationship>][-EthQosPolicy< Model.VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IscsiBootPolicy< Model.VnicIscsiBootPolicyRelationship>][-MacPool< Model.MacpoolPoolRelationship>][-Moid< string>][-Name< string>][-NetFlowMonitorSessions< System.Collections.Generic.List`1[Model.VnicNetFlowMonitorSession]>][-ObjectType< VnicVnicTemplate.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PeerVnicName< string>][-PinGroupName< string>][-SriovSettings< Model.VnicSriovSettings>][-SwitchId< VnicVnicTemplate.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-UsnicSettings< Model.VnicUsnicSettings>][-VmqSettings< Model.VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -272,6 +272,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -NetFlowMonitorSessions
+
+
+Note :- Use Initialize-IntersightVnicNetFlowMonitorSession to create the object of complex type VnicNetFlowMonitorSession
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.VnicNetFlowMonitorSession]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
@@ -497,6 +514,8 @@ PS C:\> Initialize-IntersightVnicVnicTemplate
 [Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)
 
 [Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
+
+[Initialize-IntersightVnicNetFlowMonitorSession](./Initialize-IntersightVnicNetFlowMonitorSession.md)
 
 [Initialize-IntersightVnicSriovSettings](./Initialize-IntersightVnicSriovSettings.md)
 

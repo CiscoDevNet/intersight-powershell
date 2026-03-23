@@ -748,6 +748,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"The order in which the virtual interface is brought up. The order assigned to an interface should be unique for all the Ethernet and Fibre-Channel interfaces on each PCI link on a VIC adapter. The order should start from zero with no overlaps. The maximum value of PCI order is limited by the number of virtual interfaces (Ethernet and Fibre-Channel) on each PCI link on a VIC adapter. All VIC adapters have a single PCI link except VIC 1340, VIC 1380 and VIC 1385 which have two."</para>
         /// </summary>
@@ -1186,6 +1187,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -7607,6 +7609,362 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VnicServiceEthIf.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicServiceEthIf", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightVnicServiceEthIf : GetCmdletBase
+    {
+        public GetIntersightVnicServiceEthIf()
+        {
+            ApiInstance = new VnicApi(Config);
+            MethodName = "GetVnicServiceEthIfListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Adapter Information for server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AdapterId
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the service virtual ethernet interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a policyAbstractConfigProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public PolicyAbstractConfigProfileRelationship Profile
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"The sync status of the current MO wrt the attached Template MO.\n* `None` - The Enum value represents that the object is not attached to any template.\n* `OK` - The Enum value represents that the object values are in sync with attached template.\n* `Scheduled` - The Enum value represents that the object sync from attached template is scheduled from template.\n* `InProgress` - The Enum value represents that the object sync with the attached template is in progress.\n* `OutOfSync` - The Enum value represents that the object values are not in sync with attached template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public VnicServiceEthIf.TemplateSyncStatusEnum TemplateSyncStatus
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The Vif Id should be same as the channel number of the vethernet created on switch in order to set up the data path. The property is applicable only for Fabric Interconnect attached servers where a vethernet is created on the switch for every vNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VifId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get VnicServiceEthIfInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightVnicServiceEthIfInventory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightVnicServiceEthIfInventory : GetCmdletBase
+    {
+        public GetIntersightVnicServiceEthIfInventory()
+        {
+            ApiInstance = new VnicApi(Config);
+            MethodName = "GetVnicServiceEthIfInventoryListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Adapter Information for server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AdapterId
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Device ID of the entity from where inventory is reported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceMoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Name of the service virtual ethernet interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"The sync status of the current MO wrt the attached Template MO.\n* `None` - The Enum value represents that the object is not attached to any template.\n* `OK` - The Enum value represents that the object values are in sync with attached template.\n* `Scheduled` - The Enum value represents that the object sync from attached template is scheduled from template.\n* `InProgress` - The Enum value represents that the object sync with the attached template is in progress.\n* `OutOfSync` - The Enum value represents that the object values are not in sync with attached template."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public VnicServiceEthIfInventory.TemplateSyncStatusEnum TemplateSyncStatus
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The Vif Id should be same as the channel number of the vethernet created on switch in order to set up the data path. The property is applicable only for Fabric Interconnect attached servers where a vethernet is created on the switch for every vNIC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VifId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get VnicVhbaTemplate.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightVnicVhbaTemplate", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
@@ -8237,6 +8595,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -8842,6 +9201,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
         public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<VnicNetFlowMonitorSession> NetFlowMonitorSessions
         {
             get;
             set;
@@ -11501,6 +11871,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<VnicNetFlowMonitorSession> NetFlowMonitorSessions
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -12282,6 +12663,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
         public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<VnicNetFlowMonitorSession> NetFlowMonitorSessions
         {
             get;
             set;
@@ -14892,6 +15284,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[a-zA-Z0-9-._:]+$")]
         public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<VnicNetFlowMonitorSession> NetFlowMonitorSessions
         {
             get;
             set;

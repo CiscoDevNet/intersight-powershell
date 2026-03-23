@@ -3546,6 +3546,486 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricFlowNonKey.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricFlowNonKey")]
+    public class InitializeIntersightFabricFlowNonKey : PSCmdlet
+    {
+        public InitializeIntersightFabricFlowNonKey()
+        {
+            ClassId = FabricFlowNonKey.ClassIdEnum.FabricFlowNonKey;
+            ObjectType = FabricFlowNonKey.ObjectTypeEnum.FabricFlowNonKey;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Total number of bytes transferred for flow record."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ByteCounters
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricFlowNonKey.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The timestamp when a flow was first observed or created in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool FirstSystemTime
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The last timestamp recorded for flow record by the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool LastSystemTime
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricFlowNonKey.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Total number of packets transferred for flow record."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool PacketCounters
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricFlowNonKey initObject = new Intersight.Model.FabricFlowNonKey();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ByteCounters"))
+            {
+                initObject.ByteCounters = this.ByteCounters;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FirstSystemTime"))
+            {
+                initObject.FirstSystemTime = this.FirstSystemTime;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LastSystemTime"))
+            {
+                initObject.LastSystemTime = this.LastSystemTime;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PacketCounters"))
+            {
+                initObject.PacketCounters = this.PacketCounters;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricIpv4FlowKey.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricIpv4FlowKey")]
+    public class InitializeIntersightFabricIpv4FlowKey : PSCmdlet
+    {
+        public InitializeIntersightFabricIpv4FlowKey()
+        {
+            ClassId = FabricIpv4FlowKey.ClassIdEnum.FabricIpv4FlowKey;
+            ObjectType = FabricIpv4FlowKey.ObjectTypeEnum.FabricIpv4FlowKey;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricIpv4FlowKey.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv4 Packet destination address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool DestinationIpAddress
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv4 Packet destination port field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool DestinationPort
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricIpv4FlowKey.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv4 packet protocol field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Protocol
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv4 Packet source address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SourceIpAddress
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv4 Packet source port field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SourcePort
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv4 Packet type of service."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Tos
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricIpv4FlowKey initObject = new Intersight.Model.FabricIpv4FlowKey();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DestinationIpAddress"))
+            {
+                initObject.DestinationIpAddress = this.DestinationIpAddress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DestinationPort"))
+            {
+                initObject.DestinationPort = this.DestinationPort;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Protocol"))
+            {
+                initObject.Protocol = this.Protocol;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceIpAddress"))
+            {
+                initObject.SourceIpAddress = this.SourceIpAddress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourcePort"))
+            {
+                initObject.SourcePort = this.SourcePort;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tos"))
+            {
+                initObject.Tos = this.Tos;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricIpv6FlowKey.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricIpv6FlowKey")]
+    public class InitializeIntersightFabricIpv6FlowKey : PSCmdlet
+    {
+        public InitializeIntersightFabricIpv6FlowKey()
+        {
+            ClassId = FabricIpv6FlowKey.ClassIdEnum.FabricIpv6FlowKey;
+            ObjectType = FabricIpv6FlowKey.ObjectTypeEnum.FabricIpv6FlowKey;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricIpv6FlowKey.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv6 Packet destination address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool DestinationIpAddress
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv6 Packet destination port field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool DestinationPort
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricIpv6FlowKey.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv6 Packet protocol field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Protocol
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv6 Packet source address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SourceIpAddress
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv6 Packet source port field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SourcePort
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricIpv6FlowKey initObject = new Intersight.Model.FabricIpv6FlowKey();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DestinationIpAddress"))
+            {
+                initObject.DestinationIpAddress = this.DestinationIpAddress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DestinationPort"))
+            {
+                initObject.DestinationPort = this.DestinationPort;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Protocol"))
+            {
+                initObject.Protocol = this.Protocol;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceIpAddress"))
+            {
+                initObject.SourceIpAddress = this.SourceIpAddress;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourcePort"))
+            {
+                initObject.SourcePort = this.SourcePort;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricL2FlowKey.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricL2FlowKey")]
+    public class InitializeIntersightFabricL2FlowKey : PSCmdlet
+    {
+        public InitializeIntersightFabricL2FlowKey()
+        {
+            ClassId = FabricL2FlowKey.ClassIdEnum.FabricL2FlowKey;
+            ObjectType = FabricL2FlowKey.ObjectTypeEnum.FabricL2FlowKey;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricL2FlowKey.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"L2 Packet destination address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool DestinationMac
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"L2 Packet ether type field."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EtherType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricL2FlowKey.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"L2 Packet source address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SourceMac
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricL2FlowKey initObject = new Intersight.Model.FabricL2FlowKey();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DestinationMac"))
+            {
+                initObject.DestinationMac = this.DestinationMac;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EtherType"))
+            {
+                initObject.EtherType = this.EtherType;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceMac"))
+            {
+                initObject.SourceMac = this.SourceMac;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricLanPinGroup.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricLanPinGroup")]
@@ -4686,6 +5166,697 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SrcIpProxy"))
             {
                 initObject.SrcIpProxy = this.SrcIpProxy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricNetFlowExporter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricNetFlowExporter")]
+    public class InitializeIntersightFabricNetFlowExporter : PSCmdlet
+    {
+        public InitializeIntersightFabricNetFlowExporter()
+        {
+            ClassId = FabricNetFlowExporter.ClassIdEnum.FabricNetFlowExporter;
+            ObjectType = FabricNetFlowExporter.ObjectTypeEnum.FabricNetFlowExporter;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricNetFlowExporter.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Netflow collector IP address, The Netflow collector receives flow records from one or more exporters.  It processes the received export packets and stores the flow record information."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Destination
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"DSCP value for export packets to ensure they receive proper QoS treatment. By default, NetFlow export packets may use the default DSCP value (usually 0, equivalent to Best Effort)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Dscp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Gateway IP address for the export interface network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string GatewayIp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of netflow exporter. Must be a maximum of 31 characters, without spacing."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricNetFlowPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricNetFlowPolicyRelationship NetFlowPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricNetFlowExporter.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The time interval, in seconds, during which a NetFlow collector maintains an option template after it has been received from an exporter. An Option Template Record is a special type of template in NetFlow used to export metadata or control information, rather than flow data such as sampling parameters or exporter statistics."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(60, 86400)]
+        public long OptionExporterStatsTimeout
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The time interval, in seconds, during which a NetFlow collector maintains an interface option template after it has been received from an exporter. The optionInterfaceTable refers to an option data record exported by NetFlow exporters that provides metadata about network interfaces such as interface names, types, and speeds."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(60, 86400)]
+        public long OptionInterfaceTableTimeout
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Netflow exporter source interface, used as the source address for netflow export packet."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricVlanExportInterface SourceInterface
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The time interval, in seconds, during which a NetFlow collector maintains a template after it has been received from an exporter. templateData refers to the actual flow record data that is exported from a exporter to a collector, using a previously defined template. The template specifies the structure and the templateData provides the corresponding values for those fields for each flow."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(60, 86400)]
+        public long TemplateDataTimeout
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"NetFlow export packets are encapsulated within UDP datagrams for transmission to the NetFlow collector."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 65535)]
+        public long UdpPort
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricNetFlowExporter initObject = new Intersight.Model.FabricNetFlowExporter();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Destination"))
+            {
+                initObject.Destination = this.Destination;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Dscp"))
+            {
+                initObject.Dscp = this.Dscp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("GatewayIp"))
+            {
+                initObject.GatewayIp = this.GatewayIp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetFlowPolicy"))
+            {
+                initObject.NetFlowPolicy = this.NetFlowPolicy;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OptionExporterStatsTimeout"))
+            {
+                initObject.OptionExporterStatsTimeout = this.OptionExporterStatsTimeout;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("OptionInterfaceTableTimeout"))
+            {
+                initObject.OptionInterfaceTableTimeout = this.OptionInterfaceTableTimeout;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceInterface"))
+            {
+                initObject.SourceInterface = this.SourceInterface;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateDataTimeout"))
+            {
+                initObject.TemplateDataTimeout = this.TemplateDataTimeout;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UdpPort"))
+            {
+                initObject.UdpPort = this.UdpPort;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricNetFlowMonitor.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricNetFlowMonitor")]
+    public class InitializeIntersightFabricNetFlowMonitor : PSCmdlet
+    {
+        public InitializeIntersightFabricNetFlowMonitor()
+        {
+            ClassId = FabricNetFlowMonitor.ClassIdEnum.FabricNetFlowMonitor;
+            ObjectType = FabricNetFlowMonitor.ObjectTypeEnum.FabricNetFlowMonitor;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricNetFlowMonitor.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricNetFlowExporter resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FabricNetFlowExporterRelationship> FlowExporters
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricNetFlowRecord resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricNetFlowRecordRelationship FlowRecord
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Netflow Monitor name, must be a maximum of 63 characters, without spacing."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricNetFlowPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricNetFlowPolicyRelationship NetFlowPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricNetFlowMonitor.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricNetFlowMonitor initObject = new Intersight.Model.FabricNetFlowMonitor();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlowExporters"))
+            {
+                initObject.FlowExporters = this.FlowExporters;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlowRecord"))
+            {
+                initObject.FlowRecord = this.FlowRecord;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetFlowPolicy"))
+            {
+                initObject.NetFlowPolicy = this.NetFlowPolicy;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricNetFlowPolicy.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricNetFlowPolicy")]
+    public class InitializeIntersightFabricNetFlowPolicy : PSCmdlet
+    {
+        public InitializeIntersightFabricNetFlowPolicy()
+        {
+            ClassId = FabricNetFlowPolicy.ClassIdEnum.FabricNetFlowPolicy;
+            ObjectType = FabricNetFlowPolicy.ObjectTypeEnum.FabricNetFlowPolicy;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricNetFlowPolicy.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Description of the policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the concrete policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricNetFlowPolicy.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricBaseSwitchProfile resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FabricBaseSwitchProfileRelationship> Profiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricNetFlowPolicy initObject = new Intersight.Model.FabricNetFlowPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
+            {
+                initObject.Profiles = this.Profiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricNetFlowRecord.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricNetFlowRecord")]
+    public class InitializeIntersightFabricNetFlowRecord : PSCmdlet
+    {
+        public InitializeIntersightFabricNetFlowRecord()
+        {
+            ClassId = FabricNetFlowRecord.ClassIdEnum.FabricNetFlowRecord;
+            ObjectType = FabricNetFlowRecord.ObjectTypeEnum.FabricNetFlowRecord;
+            RecordType = FabricNetFlowRecord.RecordTypeEnum.Invalid;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricNetFlowRecord.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Flow Non-Key (byte counter, packet counter, first system uptime and last system uptime)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricFlowNonKey FlowNonKey
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv4 Flow Key (source address, destination address, protocol, source port, destination port and tos)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricIpv4FlowKey Ipv4FlowKey
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IPv6 Flow Key (source address, destination address, protocol, source port and destination port)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricIpv6FlowKey Ipv6FlowKey
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"L2 Flow Key (source mac-address, destination mac-address and ether-type)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricL2FlowKey L2FlowKey
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Netflow record name. Must be a maximum of 63 characters, without spacing."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9_.:-]{1,64}$")]
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricNetFlowPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricNetFlowPolicyRelationship NetFlowPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricNetFlowRecord.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Netflow Record Type IPv4, IPv6 and L2.\n* `Invalid` - Netflow record invlaid type.\n* `IPv4` - Netflow record type for IPv4 packet.\n* `IPv6` - Netflow record type for IPv6 packet.\n* `L2` - Netflow record type for L2 packet."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricNetFlowRecord.RecordTypeEnum RecordType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricNetFlowRecord initObject = new Intersight.Model.FabricNetFlowRecord();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("FlowNonKey"))
+            {
+                initObject.FlowNonKey = this.FlowNonKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ipv4FlowKey"))
+            {
+                initObject.Ipv4FlowKey = this.Ipv4FlowKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Ipv6FlowKey"))
+            {
+                initObject.Ipv6FlowKey = this.Ipv6FlowKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("L2FlowKey"))
+            {
+                initObject.L2FlowKey = this.L2FlowKey;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetFlowPolicy"))
+            {
+                initObject.NetFlowPolicy = this.NetFlowPolicy;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
+            {
+                initObject.RecordType = this.RecordType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -9678,6 +10849,133 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("VlanSet"))
             {
                 initObject.VlanSet = this.VlanSet;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricVlanExportInterface.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricVlanExportInterface")]
+    public class InitializeIntersightFabricVlanExportInterface : PSCmdlet
+    {
+        public InitializeIntersightFabricVlanExportInterface()
+        {
+            ClassId = FabricVlanExportInterface.ClassIdEnum.FabricVlanExportInterface;
+            ObjectType = FabricVlanExportInterface.ObjectTypeEnum.FabricVlanExportInterface;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricVlanExportInterface.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricVlanExportInterface.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Switch IP for the export interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string SwitchAip
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Subnet mask for the export interface network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string SwitchAsubnetmask
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Switch IP for the export interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string SwitchBip
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Subnet mask for the export interface network."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string SwitchBsubnetmask
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"VLAN ID for the export interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 4095)]
+        public long VlanId
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricVlanExportInterface initObject = new Intersight.Model.FabricVlanExportInterface();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchAip"))
+            {
+                initObject.SwitchAip = this.SwitchAip;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchAsubnetmask"))
+            {
+                initObject.SwitchAsubnetmask = this.SwitchAsubnetmask;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchBip"))
+            {
+                initObject.SwitchBip = this.SwitchBip;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchBsubnetmask"))
+            {
+                initObject.SwitchBsubnetmask = this.SwitchBsubnetmask;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VlanId"))
+            {
+                initObject.VlanId = this.VlanId;
             }
             WriteObject(initObject);
         }

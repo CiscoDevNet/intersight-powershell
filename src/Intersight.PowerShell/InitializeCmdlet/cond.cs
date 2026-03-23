@@ -826,6 +826,7 @@ namespace Intersight.PowerShell
         {
             ClassId = CondAlarmDefinition.ClassIdEnum.CondAlarmDefinition;
             ObjectType = CondAlarmDefinition.ObjectTypeEnum.CondAlarmDefinition;
+            Status = CondAlarmDefinition.StatusEnum.Enabled;
 
         }
         // <summary>
@@ -929,6 +930,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Controls the behavior of alarm processing depending upon the status. If Enabled, alarm is evaluated for any condition that meets the criteria. If Disabled or SystemDisabled, alarm is not evaluated and the existing alarms for this AlarmDefinition is cleared. If Inactive, alarm is not evaluated and the existing alarms for this AlarmDefinition is deleted.\n* `Enabled` - Enables alarm evaluation for any condition that meets the criteria.\n* `Disabled` - Disables alarm evaluation temporarily and clears the existing alarms.\n* `SystemDisabled` - Disables alarm evaluation temporarily and clears the existing alarms once alarm limit per alarm rule is reached.\n* `Inactive` - Stops alarm evaluation permanently and deletes the existing alarms."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmDefinition.StatusEnum Status
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -986,6 +997,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Remediation"))
             {
                 initObject.Remediation = this.Remediation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            {
+                initObject.Status = this.Status;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SystemClassifications"))
             {
@@ -1052,6 +1067,190 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CondAlarmRule.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCondAlarmRule")]
+    public class InitializeIntersightCondAlarmRule : PSCmdlet
+    {
+        public InitializeIntersightCondAlarmRule()
+        {
+            ClassId = CondAlarmRule.ClassIdEnum.CondAlarmRule;
+            ObjectType = CondAlarmRule.ObjectTypeEnum.CondAlarmRule;
+            State = CondAlarmRule.StateEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmRule.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Informative description of AlarmRule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to moBaseMo resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoBaseMoRelationship> Devices
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A unique name assigned by the user to AlarmRule. This user-defined name acts as the identity field, ensuring that AlarmRule is distinctly identifiable within the account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmRule.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Controls the behavior of alarm processing depending upon the state. If Enabled, which is also the default behavior, the alarm is evaluated for the device based on the conditions specified in the ThresholdDefinition objects attached to it. If Disabled or SystemDisabled, alarm is not evaluated for the device and the existing alarms raised against the device is cleared.\n* `Enabled` - User initiated action which is also the default action that enables alarm evaluation for any condition that meets the criteria.\n* `Disabled` - User initiated action that disables alarm evaluation temporarily and clears the existing alarms.\n* `SystemDisabled` - System initiated action that disables alarm evaluation temporarily and clears the existing alarms once alarm limit per alarm rule is reached."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmRule.StateEnum State
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.CondThresholdDefinitionState> ThresholdDefinitionStates
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to condThresholdDefinition resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.CondThresholdDefinitionRelationship> ThresholdDefinitions
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CondAlarmRule initObject = new Intersight.Model.CondAlarmRule();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
+            {
+                initObject.Account = this.Account;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Devices"))
+            {
+                initObject.Devices = this.Devices;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("State"))
+            {
+                initObject.State = this.State;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ThresholdDefinitionStates"))
+            {
+                initObject.ThresholdDefinitionStates = this.ThresholdDefinitionStates;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ThresholdDefinitions"))
+            {
+                initObject.ThresholdDefinitions = this.ThresholdDefinitions;
+            }
             WriteObject(initObject);
         }
 
@@ -1793,7 +1992,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The operating system vendor name running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ ]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ -]+$")]
         public string OsVendor
         {
             get;
@@ -1803,7 +2002,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Operating System version running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ .]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ .()-]+$")]
         public string OsVersion
         {
             get;
@@ -2028,6 +2227,105 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CondFilterRule.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCondFilterRule")]
+    public class InitializeIntersightCondFilterRule : PSCmdlet
+    {
+        public InitializeIntersightCondFilterRule()
+        {
+            ClassId = CondFilterRule.ClassIdEnum.CondFilterRule;
+            ObjectType = CondFilterRule.ObjectTypeEnum.CondFilterRule;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondFilterRule.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondFilterRule.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The operator to apply. Operators supported are: eq, contains, in."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Operator
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The property name to filter on (e.g., HostName, Domain, Affected Endpoint, Alarm Code)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Property
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CondFilterRule initObject = new Intersight.Model.CondFilterRule();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Operator"))
+            {
+                initObject.Operator = this.Operator;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Property"))
+            {
+                initObject.Property = this.Property;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
             }
             WriteObject(initObject);
         }
@@ -2335,6 +2633,244 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CondServerBaselineStatus initObject = new Intersight.Model.CondServerBaselineStatus();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CondThresholdDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCondThresholdDefinition")]
+    public class InitializeIntersightCondThresholdDefinition : PSCmdlet
+    {
+        public InitializeIntersightCondThresholdDefinition()
+        {
+            ClassId = CondThresholdDefinition.ClassIdEnum.CondThresholdDefinition;
+            ObjectType = CondThresholdDefinition.ObjectTypeEnum.CondThresholdDefinition;
+
+        }
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondThresholdDefinition.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Condition defines the set of criteria under which an issue exists."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IssueCondition Condition
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A description of the issue which is common to all instances of the issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An informational display name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondThresholdDefinition.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An explanation of the likely causes of the detected issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProbableCause
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An explanation of the steps to perform to remediate the detected issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Remediation
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> SystemClassifications
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CondThresholdDefinition initObject = new Intersight.Model.CondThresholdDefinition();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
+            {
+                initObject.Account = this.Account;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Condition"))
+            {
+                initObject.Condition = this.Condition;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
+            {
+                initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProbableCause"))
+            {
+                initObject.ProbableCause = this.ProbableCause;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Remediation"))
+            {
+                initObject.Remediation = this.Remediation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SystemClassifications"))
+            {
+                initObject.SystemClassifications = this.SystemClassifications;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CondThresholdDefinitionState.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCondThresholdDefinitionState")]
+    public class InitializeIntersightCondThresholdDefinitionState : PSCmdlet
+    {
+        public InitializeIntersightCondThresholdDefinitionState()
+        {
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondThresholdDefinitionState.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondThresholdDefinitionState.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CondThresholdDefinitionState initObject = new Intersight.Model.CondThresholdDefinitionState();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

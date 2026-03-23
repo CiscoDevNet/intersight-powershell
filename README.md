@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2026022006
-- C# SDK version: 1.0.11.2026022006
+- Intersight.PowerShell version: 1.0.11.2026030305
+- C# SDK version: 1.0.11.2026030305
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026022006"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026030305"}
 ```
 or
 
@@ -761,6 +761,7 @@ ApplianceDiagSetting | [**Get-IntersightApplianceDiagSetting**](docs/Get-Intersi
 ApplianceExternalSyslogSetting | [**Get-IntersightApplianceExternalSyslogSetting**](docs/Get-IntersightApplianceExternalSyslogSetting.md) | Read a 'ApplianceExternalSyslogSetting' resource.
 ApplianceFileGateway | [**Get-IntersightApplianceFileGateway**](docs/Get-IntersightApplianceFileGateway.md) | Read a 'ApplianceFileGateway' resource.
 ApplianceFileSystemOpStatus | [**Get-IntersightApplianceFileSystemOpStatus**](docs/Get-IntersightApplianceFileSystemOpStatus.md) | Read a 'ApplianceFileSystemOpStatus' resource.
+ApplianceFileSystemOpSummary | [**Get-IntersightApplianceFileSystemOpSummary**](docs/Get-IntersightApplianceFileSystemOpSummary.md) | Read a 'ApplianceFileSystemOpSummary' resource.
 ApplianceFileSystemStatus | [**Get-IntersightApplianceFileSystemStatus**](docs/Get-IntersightApplianceFileSystemStatus.md) | Read a 'ApplianceFileSystemStatus' resource.
 ApplianceFqdnUpdate | [**Get-IntersightApplianceFqdnUpdate**](docs/Get-IntersightApplianceFqdnUpdate.md) | Read a 'ApplianceFqdnUpdate' resource.
 ApplianceGroupOpStatus | [**Get-IntersightApplianceGroupOpStatus**](docs/Get-IntersightApplianceGroupOpStatus.md) | Read a 'ApplianceGroupOpStatus' resource.
@@ -1143,21 +1144,29 @@ CondAlarm | [**Get-IntersightCondAlarm**](docs/Get-IntersightCondAlarm.md) | Rea
 CondAlarmAggregation | [**Get-IntersightCondAlarmAggregation**](docs/Get-IntersightCondAlarmAggregation.md) | Read a 'CondAlarmAggregation' resource.
 CondAlarmClassification | [**Get-IntersightCondAlarmClassification**](docs/Get-IntersightCondAlarmClassification.md) | Read a 'CondAlarmClassification' resource.
 CondAlarmDefinition | [**Get-IntersightCondAlarmDefinition**](docs/Get-IntersightCondAlarmDefinition.md) | Read a 'CondAlarmDefinition' resource.
+CondAlarmRule | [**Get-IntersightCondAlarmRule**](docs/Get-IntersightCondAlarmRule.md) | Read a 'CondAlarmRule' resource.
 CondAlarmSuppression | [**Get-IntersightCondAlarmSuppression**](docs/Get-IntersightCondAlarmSuppression.md) | Read a 'CondAlarmSuppression' resource.
 CondCustomHclBaseline | [**Get-IntersightCondCustomHclBaseline**](docs/Get-IntersightCondCustomHclBaseline.md) | Read a 'CondCustomHclBaseline' resource.
 CondCustomHclStatus | [**Get-IntersightCondCustomHclStatus**](docs/Get-IntersightCondCustomHclStatus.md) | Read a 'CondCustomHclStatus' resource.
 CondHclStatus | [**Get-IntersightCondHclStatus**](docs/Get-IntersightCondHclStatus.md) | Read a 'CondHclStatus' resource.
 CondHclStatusDetail | [**Get-IntersightCondHclStatusDetail**](docs/Get-IntersightCondHclStatusDetail.md) | Read a 'CondHclStatusDetail' resource.
 CondHclStatusJob | [**Get-IntersightCondHclStatusJob**](docs/Get-IntersightCondHclStatusJob.md) | Read a 'CondHclStatusJob' resource.
+CondThresholdDefinition | [**Get-IntersightCondThresholdDefinition**](docs/Get-IntersightCondThresholdDefinition.md) | Read a 'CondThresholdDefinition' resource.
+CondAlarmRule | [**New-IntersightCondAlarmRule**](docs/New-IntersightCondAlarmRule.md) | Create a 'CondAlarmRule' resource.
 CondAlarmSuppression | [**New-IntersightCondAlarmSuppression**](docs/New-IntersightCondAlarmSuppression.md) | Create a 'CondAlarmSuppression' resource.
 CondAlarmSuppressionDryRun | [**New-IntersightCondAlarmSuppressionDryRun**](docs/New-IntersightCondAlarmSuppressionDryRun.md) | Create a 'CondAlarmSuppressionDryRun' resource.
 CondCustomHclBaseline | [**New-IntersightCondCustomHclBaseline**](docs/New-IntersightCondCustomHclBaseline.md) | Create a 'CondCustomHclBaseline' resource.
 CondCustomHclStatus | [**New-IntersightCondCustomHclStatus**](docs/New-IntersightCondCustomHclStatus.md) | Create a 'CondCustomHclStatus' resource.
+CondThresholdDefinition | [**New-IntersightCondThresholdDefinition**](docs/New-IntersightCondThresholdDefinition.md) | Create a 'CondThresholdDefinition' resource.
+CondAlarmRule | [**Remove-IntersightCondAlarmRule**](docs/Remove-IntersightCondAlarmRule.md) | Delete a 'CondAlarmRule' resource.
 CondAlarmSuppression | [**Remove-IntersightCondAlarmSuppression**](docs/Remove-IntersightCondAlarmSuppression.md) | Delete a 'CondAlarmSuppression' resource.
 CondCustomHclBaseline | [**Remove-IntersightCondCustomHclBaseline**](docs/Remove-IntersightCondCustomHclBaseline.md) | Delete a 'CondCustomHclBaseline' resource.
+CondThresholdDefinition | [**Remove-IntersightCondThresholdDefinition**](docs/Remove-IntersightCondThresholdDefinition.md) | Delete a 'CondThresholdDefinition' resource.
 CondAlarm | [**Set-IntersightCondAlarm**](docs/Set-IntersightCondAlarm.md) | Update a 'CondAlarm' resource.
+CondAlarmRule | [**Set-IntersightCondAlarmRule**](docs/Set-IntersightCondAlarmRule.md) | Update a 'CondAlarmRule' resource.
 CondAlarmSuppression | [**Set-IntersightCondAlarmSuppression**](docs/Set-IntersightCondAlarmSuppression.md) | Update a 'CondAlarmSuppression' resource.
 CondCustomHclBaseline | [**Set-IntersightCondCustomHclBaseline**](docs/Set-IntersightCondCustomHclBaseline.md) | Update a 'CondCustomHclBaseline' resource.
+CondThresholdDefinition | [**Set-IntersightCondThresholdDefinition**](docs/Set-IntersightCondThresholdDefinition.md) | Update a 'CondThresholdDefinition' resource.
 ConnectorpackConnectorPackUpgrade | [**Get-IntersightConnectorpackConnectorPackUpgrade**](docs/Get-IntersightConnectorpackConnectorPackUpgrade.md) | Read a 'ConnectorpackConnectorPackUpgrade' resource.
 ConnectorpackUpgradeImpact | [**Get-IntersightConnectorpackUpgradeImpact**](docs/Get-IntersightConnectorpackUpgradeImpact.md) | Read a 'ConnectorpackUpgradeImpact' resource.
 ConnectorpackConnectorPackUpgrade | [**New-IntersightConnectorpackConnectorPackUpgrade**](docs/New-IntersightConnectorpackConnectorPackUpgrade.md) | Create a 'ConnectorpackConnectorPackUpgrade' resource.
@@ -1296,6 +1305,10 @@ FabricLinkAggregationPolicy | [**Get-IntersightFabricLinkAggregationPolicy**](do
 FabricLinkControlPolicy | [**Get-IntersightFabricLinkControlPolicy**](docs/Get-IntersightFabricLinkControlPolicy.md) | Read a 'FabricLinkControlPolicy' resource.
 FabricMacSecPolicy | [**Get-IntersightFabricMacSecPolicy**](docs/Get-IntersightFabricMacSecPolicy.md) | Read a 'FabricMacSecPolicy' resource.
 FabricMulticastPolicy | [**Get-IntersightFabricMulticastPolicy**](docs/Get-IntersightFabricMulticastPolicy.md) | Read a 'FabricMulticastPolicy' resource.
+FabricNetFlowExporter | [**Get-IntersightFabricNetFlowExporter**](docs/Get-IntersightFabricNetFlowExporter.md) | Read a 'FabricNetFlowExporter' resource.
+FabricNetFlowMonitor | [**Get-IntersightFabricNetFlowMonitor**](docs/Get-IntersightFabricNetFlowMonitor.md) | Read a 'FabricNetFlowMonitor' resource.
+FabricNetFlowPolicy | [**Get-IntersightFabricNetFlowPolicy**](docs/Get-IntersightFabricNetFlowPolicy.md) | Read a 'FabricNetFlowPolicy' resource.
+FabricNetFlowRecord | [**Get-IntersightFabricNetFlowRecord**](docs/Get-IntersightFabricNetFlowRecord.md) | Read a 'FabricNetFlowRecord' resource.
 FabricPcMember | [**Get-IntersightFabricPcMember**](docs/Get-IntersightFabricPcMember.md) | Read a 'FabricPcMember' resource.
 FabricPcOperation | [**Get-IntersightFabricPcOperation**](docs/Get-IntersightFabricPcOperation.md) | Read a 'FabricPcOperation' resource.
 FabricPortMode | [**Get-IntersightFabricPortMode**](docs/Get-IntersightFabricPortMode.md) | Read a 'FabricPortMode' resource.
@@ -1341,6 +1354,10 @@ FabricLinkAggregationPolicy | [**New-IntersightFabricLinkAggregationPolicy**](do
 FabricLinkControlPolicy | [**New-IntersightFabricLinkControlPolicy**](docs/New-IntersightFabricLinkControlPolicy.md) | Create a 'FabricLinkControlPolicy' resource.
 FabricMacSecPolicy | [**New-IntersightFabricMacSecPolicy**](docs/New-IntersightFabricMacSecPolicy.md) | Create a 'FabricMacSecPolicy' resource.
 FabricMulticastPolicy | [**New-IntersightFabricMulticastPolicy**](docs/New-IntersightFabricMulticastPolicy.md) | Create a 'FabricMulticastPolicy' resource.
+FabricNetFlowExporter | [**New-IntersightFabricNetFlowExporter**](docs/New-IntersightFabricNetFlowExporter.md) | Create a 'FabricNetFlowExporter' resource.
+FabricNetFlowMonitor | [**New-IntersightFabricNetFlowMonitor**](docs/New-IntersightFabricNetFlowMonitor.md) | Create a 'FabricNetFlowMonitor' resource.
+FabricNetFlowPolicy | [**New-IntersightFabricNetFlowPolicy**](docs/New-IntersightFabricNetFlowPolicy.md) | Create a 'FabricNetFlowPolicy' resource.
+FabricNetFlowRecord | [**New-IntersightFabricNetFlowRecord**](docs/New-IntersightFabricNetFlowRecord.md) | Create a 'FabricNetFlowRecord' resource.
 FabricPcOperation | [**New-IntersightFabricPcOperation**](docs/New-IntersightFabricPcOperation.md) | Create a 'FabricPcOperation' resource.
 FabricPortMode | [**New-IntersightFabricPortMode**](docs/New-IntersightFabricPortMode.md) | Create a 'FabricPortMode' resource.
 FabricPortOperation | [**New-IntersightFabricPortOperation**](docs/New-IntersightFabricPortOperation.md) | Create a 'FabricPortOperation' resource.
@@ -1381,6 +1398,10 @@ FabricLinkAggregationPolicy | [**Remove-IntersightFabricLinkAggregationPolicy**]
 FabricLinkControlPolicy | [**Remove-IntersightFabricLinkControlPolicy**](docs/Remove-IntersightFabricLinkControlPolicy.md) | Delete a 'FabricLinkControlPolicy' resource.
 FabricMacSecPolicy | [**Remove-IntersightFabricMacSecPolicy**](docs/Remove-IntersightFabricMacSecPolicy.md) | Delete a 'FabricMacSecPolicy' resource.
 FabricMulticastPolicy | [**Remove-IntersightFabricMulticastPolicy**](docs/Remove-IntersightFabricMulticastPolicy.md) | Delete a 'FabricMulticastPolicy' resource.
+FabricNetFlowExporter | [**Remove-IntersightFabricNetFlowExporter**](docs/Remove-IntersightFabricNetFlowExporter.md) | Delete a 'FabricNetFlowExporter' resource.
+FabricNetFlowMonitor | [**Remove-IntersightFabricNetFlowMonitor**](docs/Remove-IntersightFabricNetFlowMonitor.md) | Delete a 'FabricNetFlowMonitor' resource.
+FabricNetFlowPolicy | [**Remove-IntersightFabricNetFlowPolicy**](docs/Remove-IntersightFabricNetFlowPolicy.md) | Delete a 'FabricNetFlowPolicy' resource.
+FabricNetFlowRecord | [**Remove-IntersightFabricNetFlowRecord**](docs/Remove-IntersightFabricNetFlowRecord.md) | Delete a 'FabricNetFlowRecord' resource.
 FabricPcOperation | [**Remove-IntersightFabricPcOperation**](docs/Remove-IntersightFabricPcOperation.md) | Delete a 'FabricPcOperation' resource.
 FabricPortMode | [**Remove-IntersightFabricPortMode**](docs/Remove-IntersightFabricPortMode.md) | Delete a 'FabricPortMode' resource.
 FabricPortOperation | [**Remove-IntersightFabricPortOperation**](docs/Remove-IntersightFabricPortOperation.md) | Delete a 'FabricPortOperation' resource.
@@ -1422,6 +1443,10 @@ FabricLinkAggregationPolicy | [**Set-IntersightFabricLinkAggregationPolicy**](do
 FabricLinkControlPolicy | [**Set-IntersightFabricLinkControlPolicy**](docs/Set-IntersightFabricLinkControlPolicy.md) | Update a 'FabricLinkControlPolicy' resource.
 FabricMacSecPolicy | [**Set-IntersightFabricMacSecPolicy**](docs/Set-IntersightFabricMacSecPolicy.md) | Update a 'FabricMacSecPolicy' resource.
 FabricMulticastPolicy | [**Set-IntersightFabricMulticastPolicy**](docs/Set-IntersightFabricMulticastPolicy.md) | Update a 'FabricMulticastPolicy' resource.
+FabricNetFlowExporter | [**Set-IntersightFabricNetFlowExporter**](docs/Set-IntersightFabricNetFlowExporter.md) | Update a 'FabricNetFlowExporter' resource.
+FabricNetFlowMonitor | [**Set-IntersightFabricNetFlowMonitor**](docs/Set-IntersightFabricNetFlowMonitor.md) | Update a 'FabricNetFlowMonitor' resource.
+FabricNetFlowPolicy | [**Set-IntersightFabricNetFlowPolicy**](docs/Set-IntersightFabricNetFlowPolicy.md) | Update a 'FabricNetFlowPolicy' resource.
+FabricNetFlowRecord | [**Set-IntersightFabricNetFlowRecord**](docs/Set-IntersightFabricNetFlowRecord.md) | Update a 'FabricNetFlowRecord' resource.
 FabricPcOperation | [**Set-IntersightFabricPcOperation**](docs/Set-IntersightFabricPcOperation.md) | Update a 'FabricPcOperation' resource.
 FabricPortMode | [**Set-IntersightFabricPortMode**](docs/Set-IntersightFabricPortMode.md) | Update a 'FabricPortMode' resource.
 FabricPortOperation | [**Set-IntersightFabricPortOperation**](docs/Set-IntersightFabricPortOperation.md) | Update a 'FabricPortOperation' resource.
@@ -3066,6 +3091,8 @@ VnicSanConnectivityPolicy | [**Get-IntersightVnicSanConnectivityPolicy**](docs/G
 VnicSanConnectivityPolicyInventory | [**Get-IntersightVnicSanConnectivityPolicyInventory**](docs/Get-IntersightVnicSanConnectivityPolicyInventory.md) | Read a 'VnicSanConnectivityPolicyInventory' resource.
 VnicSanSettings | [**Get-IntersightVnicSanSettings**](docs/Get-IntersightVnicSanSettings.md) | Read a 'VnicSanSettings' resource.
 VnicScpStatus | [**Get-IntersightVnicScpStatus**](docs/Get-IntersightVnicScpStatus.md) | Read a 'VnicScpStatus' resource.
+VnicServiceEthIf | [**Get-IntersightVnicServiceEthIf**](docs/Get-IntersightVnicServiceEthIf.md) | Read a 'VnicServiceEthIf' resource.
+VnicServiceEthIfInventory | [**Get-IntersightVnicServiceEthIfInventory**](docs/Get-IntersightVnicServiceEthIfInventory.md) | Read a 'VnicServiceEthIfInventory' resource.
 VnicVhbaTemplate | [**Get-IntersightVnicVhbaTemplate**](docs/Get-IntersightVnicVhbaTemplate.md) | Read a 'VnicVhbaTemplate' resource.
 VnicVifIdPool | [**Get-IntersightVnicVifIdPool**](docs/Get-IntersightVnicVifIdPool.md) | Read a 'VnicVifIdPool' resource.
 VnicVnicTemplate | [**Get-IntersightVnicVnicTemplate**](docs/Get-IntersightVnicVnicTemplate.md) | Read a 'VnicVnicTemplate' resource.

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< Model.VnicCdn>][-ClassId< VnicEthIf.ClassIdEnum>][-EthAdapterPolicy< Model.VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< Model.VnicEthNetworkPolicyRelationship>][-EthQosPolicy< Model.VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IscsiBootPolicy< Model.VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< Model.VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< Model.MacpoolLeaseRelationship>][-MacPool< Model.MacpoolPoolRelationship>][-Moid< string>][-Name< string>][-ObjectType< VnicEthIf.ObjectTypeEnum>][-Order< long>][-PinGroupName< string>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-SrcTemplate< Model.VnicVnicTemplateRelationship>][-SriovSettings< Model.VnicSriovSettings>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-UsnicSettings< Model.VnicUsnicSettings>][-VmqSettings< Model.VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< Model.VnicCdn>][-ClassId< VnicEthIf.ClassIdEnum>][-EthAdapterPolicy< Model.VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< Model.VnicEthNetworkPolicyRelationship>][-EthQosPolicy< Model.VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< Model.FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[Model.FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IscsiBootPolicy< Model.VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< Model.VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< Model.MacpoolLeaseRelationship>][-MacPool< Model.MacpoolPoolRelationship>][-Moid< string>][-Name< string>][-NetFlowMonitorSessions< System.Collections.Generic.List`1[Model.VnicNetFlowMonitorSession]>][-ObjectType< VnicEthIf.ObjectTypeEnum>][-Order< long>][-PinGroupName< string>][-Placement< Model.VnicPlacementSettings>][-Profile< Model.PolicyAbstractConfigProfileRelationship>][-SrcTemplate< Model.VnicVnicTemplateRelationship>][-SriovSettings< Model.VnicSriovSettings>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-UsnicSettings< Model.VnicUsnicSettings>][-VmqSettings< Model.VnicVmqSettings>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -293,6 +293,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -NetFlowMonitorSessions
+
+
+Note :- Use Initialize-IntersightVnicNetFlowMonitorSession to create the object of complex type VnicNetFlowMonitorSession
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.VnicNetFlowMonitorSession]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ObjectType
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
@@ -553,6 +570,8 @@ PS C:\> Initialize-IntersightVnicEthIf
 [Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)
 
 [Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
+
+[Initialize-IntersightVnicNetFlowMonitorSession](./Initialize-IntersightVnicNetFlowMonitorSession.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
 

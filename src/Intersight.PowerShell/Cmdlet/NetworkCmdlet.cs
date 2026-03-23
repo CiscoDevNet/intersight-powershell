@@ -1113,6 +1113,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Any error message related to IPv6 configuration on the network Element out-of-band management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string OutOfBandIpv6Error
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The default IPv6 gateway of the network Element out-of-band management interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1124,11 +1135,44 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The IPv6 address configuration mode of the network Element out-of-band management interface.\n* `` - The IPv6 address mode is not available or not applicable.\n* `slaac` - IPv6 address is configured via Stateless Address Autoconfiguration (SLAAC).\n* `static` - IPv6 address is statically configured.\n* `disabled` - IPv6 is disabled on the out-of-band management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElement.OutOfBandIpv6ModeEnum OutOfBandIpv6Mode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The network mask of the network Element out-of-band management interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string OutOfBandIpv6Prefix
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The SLAAC Interface Identifier (IID) mode for the network Element out-of-band management IPv6 address.\n* `` - The SLAAC IID mode is not available or not applicable.\n* `eui64` - The SLAAC IID is derived from the MAC address using the EUI-64 method.\n* `opaque` - The SLAAC IID is generated using an opaque identifier for privacy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElement.OutOfBandIpv6SlaacIidModeEnum OutOfBandIpv6SlaacIidMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The status of the IPv6 configuration on the network Element out-of-band management interface.\n* `` - The IPv6 address status is not available or not applicable.\n* `active` - The IPv6 address is active and in use.\n* `tentative` - The IPv6 address is in tentative state (Duplicate Address Detection in progress).\n* `duplicate` - The IPv6 address is a duplicate (DAD failed).\n* `disabled` - The IPv6 address is disabled.\n* `error` - An error occurred during IPv6 address configuration.\n* `unknown` - The IPv6 address status is unknown."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElement.OutOfBandIpv6StatusEnum OutOfBandIpv6Status
         {
             get;
             set;
@@ -2070,6 +2114,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The IPv6 error message if any issue occurred during address configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string OutOfBandIpv6Error
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The default IPv6 gateway of the network Element out-of-band management interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2081,11 +2136,44 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The IPv6 address configuration mode of the network Element out-of-band management interface.\n* `` - The IPv6 address mode is not available or not applicable.\n* `slaac` - IPv6 address is configured via Stateless Address Autoconfiguration (SLAAC).\n* `static` - IPv6 address is statically configured.\n* `disabled` - IPv6 is disabled on the out-of-band management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElementSummary.OutOfBandIpv6ModeEnum OutOfBandIpv6Mode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The network mask of the network Element out-of-band management interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string OutOfBandIpv6Prefix
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The SLAAC Interface Identifier (IID) mode for the network Element out-of-band management IPv6 address.\n* `` - The SLAAC IID mode is not available or not applicable.\n* `eui64` - The SLAAC IID is derived from the MAC address using the EUI-64 method.\n* `opaque` - The SLAAC IID is generated using an opaque identifier for privacy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElementSummary.OutOfBandIpv6SlaacIidModeEnum OutOfBandIpv6SlaacIidMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The status of the IPv6 configuration on the network Element out-of-band management interface.\n* `` - The IPv6 address status is not available or not applicable.\n* `active` - The IPv6 address is active and in use.\n* `tentative` - The IPv6 address is in tentative state (Duplicate Address Detection in progress).\n* `duplicate` - The IPv6 address is a duplicate (DAD failed).\n* `disabled` - The IPv6 address is disabled.\n* `error` - An error occurred during IPv6 address configuration.\n* `unknown` - The IPv6 address status is unknown."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElementSummary.OutOfBandIpv6StatusEnum OutOfBandIpv6Status
         {
             get;
             set;
@@ -5999,6 +6087,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"The default IPv6 gateway of the network Element out-of-band management interface."</para>
         /// </summary>
@@ -6010,6 +6099,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"The network mask of the network Element out-of-band management interface."</para>
         /// </summary>
@@ -6020,6 +6110,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
 

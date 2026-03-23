@@ -3221,6 +3221,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"This field identifies the Non Recoverable Threshold Minimum Revolutions Per Minute Speed for this Fan Unit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long NrThresholdMinRpmSpeed
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"This field is used to indicate this fan unit's operational state."</para>
@@ -12897,6 +12908,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

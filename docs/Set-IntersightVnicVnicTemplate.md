@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicVnicTemplate [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< VnicCdn>][-Description< string>][-EnableOverride< bool>][-EthAdapterPolicy< VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< VnicEthNetworkPolicyRelationship>][-EthQosPolicy< VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IscsiBootPolicy< VnicIscsiBootPolicyRelationship>][-MacPool< MacpoolPoolRelationship>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PeerVnicName< string>][-PinGroupName< string>][-SriovSettings< VnicSriovSettings>][-SwitchId< VnicVnicTemplate.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-UsnicSettings< VnicUsnicSettings>][-VmqSettings< VnicVmqSettings>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVnicVnicTemplate [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< VnicCdn>][-Description< string>][-EnableOverride< bool>][-EthAdapterPolicy< VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< VnicEthNetworkPolicyRelationship>][-EthQosPolicy< VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IscsiBootPolicy< VnicIscsiBootPolicyRelationship>][-MacPool< MacpoolPoolRelationship>][[-Moid]< string>][-Name< string>][-NetFlowMonitorSessions< System.Collections.Generic.List`1[VnicNetFlowMonitorSession]>][-Organization< OrganizationOrganizationRelationship>][-PeerVnicName< string>][-PinGroupName< string>][-SriovSettings< VnicSriovSettings>][-SwitchId< VnicVnicTemplate.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-UsnicSettings< VnicUsnicSettings>][-VmqSettings< VnicVmqSettings>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -256,6 +256,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -NetFlowMonitorSessions
+
+
+Note :- Use Initialize-IntersightVnicNetFlowMonitorSession to create the object of complex type VnicNetFlowMonitorSession
+
+```yaml
+Type: System.Collections.Generic.List`1[VnicNetFlowMonitorSession]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Organization
 A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -483,6 +500,8 @@ PS C:\> Set-IntersightVnicVnicTemplate
 [Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)
 
 [Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
+
+[Initialize-IntersightVnicNetFlowMonitorSession](./Initialize-IntersightVnicNetFlowMonitorSession.md)
 
 [Initialize-IntersightVnicSriovSettings](./Initialize-IntersightVnicSriovSettings.md)
 

@@ -163,4 +163,6 @@ PS C:\> Set-IntersightManagementController
 
 [Initialize-IntersightCertificatemanagementRootCaCertificate](./Initialize-IntersightCertificatemanagementRootCaCertificate.md)
 
+[Initialize-IntersightManagementReplayConfigInfo](./Initialize-IntersightManagementReplayConfigInfo.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

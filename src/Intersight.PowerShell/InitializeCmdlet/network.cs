@@ -646,6 +646,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The network mask of the network Element out-of-band management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string OutOfBandIpv6Prefix
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Part number of the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -718,6 +728,10 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OutOfBandIpv6Prefix"))
+            {
+                initObject.OutOfBandIpv6Prefix = this.OutOfBandIpv6Prefix;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("PartNumber"))
             {
                 initObject.PartNumber = this.PartNumber;

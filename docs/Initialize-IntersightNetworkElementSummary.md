@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNetworkElementSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkElementSummary.ClassIdEnum>][-ConnectionStatus< string>][-DefaultDomain< string>][-Moid< string>][-ObjectType< NetworkElementSummary.ObjectTypeEnum>][-PartNumber< string>][-Status< string>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< NetworkElementSummary.ThermalEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNetworkElementSummary [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NetworkElementSummary.ClassIdEnum>][-ConnectionStatus< string>][-DefaultDomain< string>][-Moid< string>][-ObjectType< NetworkElementSummary.ObjectTypeEnum>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-Status< string>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< NetworkElementSummary.ThermalEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -104,6 +104,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: NetworkElementSummary.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OutOfBandIpv6Prefix
+The network mask of the network Element out-of-band management interface.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

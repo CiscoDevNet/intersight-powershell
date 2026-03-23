@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCondAlarmDefinition [-Actions< System.Collections.Generic.List`1[Model.CondAlarmAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CondAlarmDefinition.ClassIdEnum>][-Condition< Model.IssueCondition>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< CondAlarmDefinition.ObjectTypeEnum>][-ProbableCause< string>][-Remediation< string>][-SystemClassifications< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCondAlarmDefinition [-Actions< System.Collections.Generic.List`1[Model.CondAlarmAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CondAlarmDefinition.ClassIdEnum>][-Condition< Model.IssueCondition>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< CondAlarmDefinition.ObjectTypeEnum>][-ProbableCause< string>][-Remediation< string>][-Status< CondAlarmDefinition.StatusEnum>][-SystemClassifications< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -168,6 +168,21 @@ An explanation of the steps to perform to remediate the detected issue.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Status
+Controls the behavior of alarm processing depending upon the status. If Enabled, alarm is evaluated for any condition that meets the criteria. If Disabled or SystemDisabled, alarm is not evaluated and the existing alarms for this AlarmDefinition is cleared. If Inactive, alarm is not evaluated and the existing alarms for this AlarmDefinition is deleted.\n* `Enabled` - Enables alarm evaluation for any condition that meets the criteria.\n* `Disabled` - Disables alarm evaluation temporarily and clears the existing alarms.\n* `SystemDisabled` - Disables alarm evaluation temporarily and clears the existing alarms once alarm limit per alarm rule is reached.\n* `Inactive` - Stops alarm evaluation permanently and deletes the existing alarms.
+
+```yaml
+Type: CondAlarmDefinition.StatusEnum
 Parameter Sets: (All)
 Aliases:
 

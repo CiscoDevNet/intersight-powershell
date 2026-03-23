@@ -746,6 +746,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The Account ID for this managed object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -777,6 +788,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Device
         {
             get;
             set;
@@ -871,6 +893,205 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+        // <summary>
+        /// <para type="description">"Controls the behavior of alarm processing depending upon the status. If Enabled, alarm is evaluated for any condition that meets the criteria. If Disabled or SystemDisabled, alarm is not evaluated and the existing alarms for this AlarmDefinition is cleared. If Inactive, alarm is not evaluated and the existing alarms for this AlarmDefinition is deleted.\n* `Enabled` - Enables alarm evaluation for any condition that meets the criteria.\n* `Disabled` - Disables alarm evaluation temporarily and clears the existing alarms.\n* `SystemDisabled` - Disables alarm evaluation temporarily and clears the existing alarms once alarm limit per alarm rule is reached.\n* `Inactive` - Stops alarm evaluation permanently and deletes the existing alarms."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public CondAlarmDefinition.StatusEnum Status
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a condThresholdDefinition resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public CondThresholdDefinitionRelationship ThresholdDefinition
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondAlarmRule.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondAlarmRule", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightCondAlarmRule : GetCmdletBase
+    {
+        public GetIntersightCondAlarmRule()
+        {
+            ApiInstance = new CondApi(Config);
+            MethodName = "GetCondAlarmRuleListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Informative description of AlarmRule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A unique name assigned by the user to AlarmRule. This user-defined name acts as the identity field, ensuring that AlarmRule is distinctly identifiable within the account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Controls the behavior of alarm processing depending upon the state. If Enabled, which is also the default behavior, the alarm is evaluated for the device based on the conditions specified in the ThresholdDefinition objects attached to it. If Disabled or SystemDisabled, alarm is not evaluated for the device and the existing alarms raised against the device is cleared.\n* `Enabled` - User initiated action which is also the default action that enables alarm evaluation for any condition that meets the criteria.\n* `Disabled` - User initiated action that disables alarm evaluation temporarily and clears the existing alarms.\n* `SystemDisabled` - System initiated action that disables alarm evaluation temporarily and clears the existing alarms once alarm limit per alarm rule is reached."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public CondAlarmRule.StateEnum State
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time at which AlarmRule object is system-disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime SystemDisabledTime
+        {
+            get;
+            set;
+        }
+
 
 
 
@@ -1314,7 +1535,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The operating system vendor name running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ ]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ -]+$")]
         public string OsVendor
         {
             get;
@@ -1325,7 +1546,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Operating System version running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ .]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ .()-]+$")]
         public string OsVersion
         {
             get;
@@ -2492,6 +2713,338 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get CondThresholdDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightCondThresholdDefinition", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightCondThresholdDefinition : GetCmdletBase
+    {
+        public GetIntersightCondThresholdDefinition()
+        {
+            ApiInstance = new CondApi(Config);
+            MethodName = "GetCondThresholdDefinitionListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A description of the issue which is common to all instances of the issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An informational display name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"An explanation of the likely causes of the detected issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ProbableCause
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An explanation of the steps to perform to remediate the detected issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Remediation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New CondAlarmRule.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightCondAlarmRule", SupportsShouldProcess = true)]
+    public class NewIntersightCondAlarmRule : NewCmdletBase
+    {
+        public NewIntersightCondAlarmRule()
+        {
+            ApiInstance = new CondApi(Config);
+            ModelObject = new CondAlarmRule();
+            MethodName = "CreateCondAlarmRuleWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Informative description of AlarmRule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An array of relationships to moBaseMo resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoBaseMoRelationship> Devices
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A unique name assigned by the user to AlarmRule. This user-defined name acts as the identity field, ensuring that AlarmRule is distinctly identifiable within the account."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Controls the behavior of alarm processing depending upon the state. If Enabled, which is also the default behavior, the alarm is evaluated for the device based on the conditions specified in the ThresholdDefinition objects attached to it. If Disabled or SystemDisabled, alarm is not evaluated for the device and the existing alarms raised against the device is cleared.\n* `Enabled` - User initiated action which is also the default action that enables alarm evaluation for any condition that meets the criteria.\n* `Disabled` - User initiated action that disables alarm evaluation temporarily and clears the existing alarms.\n* `SystemDisabled` - System initiated action that disables alarm evaluation temporarily and clears the existing alarms once alarm limit per alarm rule is reached."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmRule.StateEnum State
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CondThresholdDefinitionState> ThresholdDefinitionStates
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An array of relationships to condThresholdDefinition resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CondThresholdDefinitionRelationship> ThresholdDefinitions
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfNoneMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New CondAlarmSuppression.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightCondAlarmSuppression", SupportsShouldProcess = true)]
@@ -2898,7 +3451,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The operating system vendor name running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ ]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ -]+$")]
         public string OsVendor
         {
             get;
@@ -2909,7 +3462,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Operating System version running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ .]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ .()-]+$")]
         public string OsVersion
         {
             get;
@@ -3103,6 +3656,173 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New CondThresholdDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightCondThresholdDefinition", SupportsShouldProcess = true)]
+    public class NewIntersightCondThresholdDefinition : NewCmdletBase
+    {
+        public NewIntersightCondThresholdDefinition()
+        {
+            ApiInstance = new CondApi(Config);
+            ModelObject = new CondThresholdDefinition();
+            MethodName = "CreateCondThresholdDefinitionWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Condition defines the set of criteria under which an issue exists."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IssueCondition Condition
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A description of the issue which is common to all instances of the issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An informational display name."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"An explanation of the likely causes of the detected issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProbableCause
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An explanation of the steps to perform to remediate the detected issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Remediation
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> SystemClassifications
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfNoneMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CondAlarmRule.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCondAlarmRule", SupportsShouldProcess = true)]
+    public class RemoveIntersightCondAlarmRule : RemoveCmdletBase
+    {
+        public RemoveIntersightCondAlarmRule()
+        {
+            ApiInstance = new CondApi(Config);
+            MethodName = "DeleteCondAlarmRuleWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove CondAlarmSuppression.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightCondAlarmSuppression", SupportsShouldProcess = true)]
@@ -3124,6 +3844,18 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new CondApi(Config);
             MethodName = "DeleteCondCustomHclBaselineWithHttpInfo";
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove CondThresholdDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightCondThresholdDefinition", SupportsShouldProcess = true)]
+    public class RemoveIntersightCondThresholdDefinition : RemoveCmdletBase
+    {
+        public RemoveIntersightCondThresholdDefinition()
+        {
+            ApiInstance = new CondApi(Config);
+            MethodName = "DeleteCondThresholdDefinitionWithHttpInfo";
         }
     }
     /// <summary>
@@ -3244,6 +3976,151 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set CondAlarmRule.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightCondAlarmRule", SupportsShouldProcess = true)]
+    public class SetIntersightCondAlarmRule : SetCmdletBase
+    {
+        public SetIntersightCondAlarmRule()
+        {
+            ApiInstance = new CondApi(Config);
+            ModelObject = new CondAlarmRule();
+            MethodName = "UpdateCondAlarmRuleWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Informative description of AlarmRule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An array of relationships to moBaseMo resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoBaseMoRelationship> Devices
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A unique name assigned by the user to AlarmRule. This user-defined name acts as the identity field, ensuring that AlarmRule is distinctly identifiable within the account."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Controls the behavior of alarm processing depending upon the state. If Enabled, which is also the default behavior, the alarm is evaluated for the device based on the conditions specified in the ThresholdDefinition objects attached to it. If Disabled or SystemDisabled, alarm is not evaluated for the device and the existing alarms raised against the device is cleared.\n* `Enabled` - User initiated action which is also the default action that enables alarm evaluation for any condition that meets the criteria.\n* `Disabled` - User initiated action that disables alarm evaluation temporarily and clears the existing alarms.\n* `SystemDisabled` - System initiated action that disables alarm evaluation temporarily and clears the existing alarms once alarm limit per alarm rule is reached."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmRule.StateEnum State
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CondThresholdDefinitionState> ThresholdDefinitionStates
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An array of relationships to condThresholdDefinition resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<CondThresholdDefinitionRelationship> ThresholdDefinitions
         {
             get;
             set;
@@ -3555,7 +4432,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The operating system vendor name running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ ]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ -]+$")]
         public string OsVendor
         {
             get;
@@ -3566,7 +4443,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Operating System version running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ .]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ .()-]+$")]
         public string OsVersion
         {
             get;
@@ -3598,6 +4475,150 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set CondThresholdDefinition.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightCondThresholdDefinition", SupportsShouldProcess = true)]
+    public class SetIntersightCondThresholdDefinition : SetCmdletBase
+    {
+        public SetIntersightCondThresholdDefinition()
+        {
+            ApiInstance = new CondApi(Config);
+            ModelObject = new CondThresholdDefinition();
+            MethodName = "UpdateCondThresholdDefinitionWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Condition defines the set of criteria under which an issue exists."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IssueCondition Condition
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A description of the issue which is common to all instances of the issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Description
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An informational display name."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"An explanation of the likely causes of the detected issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ProbableCause
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"An explanation of the steps to perform to remediate the detected issue."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Remediation
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> SystemClassifications
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description"></para>

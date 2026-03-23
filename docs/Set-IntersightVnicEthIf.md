@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< VnicCdn>][-EthAdapterPolicy< VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< VnicEthNetworkPolicyRelationship>][-EthQosPolicy< VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IscsiBootPolicy< VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< MacpoolLeaseRelationship>][-MacPool< MacpoolPoolRelationship>][[-Moid]< string>][-Name< string>][-Order< long>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SrcTemplate< VnicVnicTemplateRelationship>][-SriovSettings< VnicSriovSettings>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-UsnicSettings< VnicUsnicSettings>][-VmqSettings< VnicVmqSettings>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightVnicEthIf [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Cdn< VnicCdn>][-EthAdapterPolicy< VnicEthAdapterPolicyRelationship>][-EthNetworkPolicy< VnicEthNetworkPolicyRelationship>][-EthQosPolicy< VnicEthQosPolicyRelationship>][-FabricEthNetworkControlPolicy< FabricEthNetworkControlPolicyRelationship>][-FabricEthNetworkGroupPolicy< System.Collections.Generic.List`1[FabricEthNetworkGroupPolicyRelationship]>][-FailoverEnabled< bool>][-IscsiBootPolicy< VnicIscsiBootPolicyRelationship>][-LanConnectivityPolicy< VnicLanConnectivityPolicyRelationship>][-MacAddressType< VnicEthIf.MacAddressTypeEnum>][-MacLease< MacpoolLeaseRelationship>][-MacPool< MacpoolPoolRelationship>][[-Moid]< string>][-Name< string>][-NetFlowMonitorSessions< System.Collections.Generic.List`1[VnicNetFlowMonitorSession]>][-Order< long>][-PinGroupName< string>][-Placement< VnicPlacementSettings>][-Profile< PolicyAbstractConfigProfileRelationship>][-SrcTemplate< VnicVnicTemplateRelationship>][-SriovSettings< VnicSriovSettings>][-StaticMacAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-UsnicSettings< VnicUsnicSettings>][-VmqSettings< VnicVmqSettings>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -267,6 +267,23 @@ Name of the virtual ethernet interface.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetFlowMonitorSessions
+
+
+Note :- Use Initialize-IntersightVnicNetFlowMonitorSession to create the object of complex type VnicNetFlowMonitorSession
+
+```yaml
+Type: System.Collections.Generic.List`1[VnicNetFlowMonitorSession]
 Parameter Sets: (All)
 Aliases:
 
@@ -547,6 +564,8 @@ PS C:\> Set-IntersightVnicEthIf
 [Initialize-IntersightVnicCdn](./Initialize-IntersightVnicCdn.md)
 
 [Initialize-IntersightVnicEthIfOldInfo](./Initialize-IntersightVnicEthIfOldInfo.md)
+
+[Initialize-IntersightVnicNetFlowMonitorSession](./Initialize-IntersightVnicNetFlowMonitorSession.md)
 
 [Initialize-IntersightVnicPlacementSettings](./Initialize-IntersightVnicPlacementSettings.md)
 
