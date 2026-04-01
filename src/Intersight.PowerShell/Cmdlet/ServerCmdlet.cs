@@ -1486,6 +1486,39 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Used with initialAutoDeployState to indicate if the server profile is ready for auto-deploy for the first time. The default value is false."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool InitialAutoDeployConfigComplete
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Automatically performs an initial deployment when a server is assigned. Subsequent changes require manual redeployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool InitialAutoDeployMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The auto-deploy state of the server profile. It is used to track the state of the auto-deploy process.\n* `None` - Default value for Auto-deploy state when it is not configured and old server profiles.\n* `Pending` - Server profile is ready for autodeploy but not yet scheduled for deployment.\n* `AutoDeployPending` - AutoDeployPending is set when auto-deploy is yet to be scheduled.\n* `AutoDeployInProgress` - AutoDeployInProgress is set when auto-deploy action is in progress.\n* `AutoActivationPending` - AutoActivationPending is set when auto-deploy is yet to be scheduled.\n* `AutoActivationInProgress` - AutoActivationInProgress set when auto-deploy-activate action is in progress.\n* `Completed` - Completed states that all the auto deploy actions are completed successfully.\n* `Failed` - Failed states that one of the auto deploy actions failed.\n* `Unsupported` - Unsupported for direct server assignment and unassigned profiles."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ServerProfile.InitialAutoDeployStateEnum InitialAutoDeployState
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Indicates whether the value of the 'pmcDeployedSecurePassphrase' property has been set."</para>
@@ -2775,6 +2808,29 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Used with initialAutoDeployState to indicate if the server profile is ready for auto-deploy for the first time. The default value is false."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool InitialAutoDeployConfigComplete
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Automatically performs an initial deployment when a server is assigned. Subsequent changes require manual redeployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool InitialAutoDeployMode
+        {
+            get;
+            set;
+        }
+
+
 
 
         // <summary>
@@ -3725,6 +3781,29 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
         public string Description
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Used with initialAutoDeployState to indicate if the server profile is ready for auto-deploy for the first time. The default value is false."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool InitialAutoDeployConfigComplete
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Automatically performs an initial deployment when a server is assigned. Subsequent changes require manual redeployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool InitialAutoDeployMode
         {
             get;
             set;

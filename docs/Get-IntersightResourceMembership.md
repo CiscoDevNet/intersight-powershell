@@ -285,7 +285,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightResourceMembership](./New-IntersightResourceMembership.md)
-
 [Set-IntersightResourceMembership](./Set-IntersightResourceMembership.md)
 

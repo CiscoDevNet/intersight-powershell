@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightNiatelemetryNexusCloudSite](./New-IntersightNiatelemetryNexusCloudSite.md)
-
-[Remove-IntersightNiatelemetryNexusCloudSite](./Remove-IntersightNiatelemetryNexusCloudSite.md)
-
-[Set-IntersightNiatelemetryNexusCloudSite](./Set-IntersightNiatelemetryNexusCloudSite.md)
-

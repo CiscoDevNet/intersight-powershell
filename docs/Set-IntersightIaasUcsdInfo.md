@@ -145,5 +145,3 @@ PS C:\> Set-IntersightIaasUcsdInfo
 [Get-IntersightIaasUcsdInfo](./Get-IntersightIaasUcsdInfo.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
-[Remove-IntersightIaasUcsdInfo](./Remove-IntersightIaasUcsdInfo.md)

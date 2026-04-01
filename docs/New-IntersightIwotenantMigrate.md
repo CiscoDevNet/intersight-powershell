@@ -209,6 +209,4 @@ PS C:\> New-IntersightIwotenantMigrate
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
-[Remove-IntersightIwotenantMigrate](./Remove-IntersightIwotenantMigrate.md)
-
 [Set-IntersightIwotenantMigrate](./Set-IntersightIwotenantMigrate.md)

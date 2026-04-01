@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityFexDescriptor](./New-IntersightCapabilityFexDescriptor.md)
-
-[Remove-IntersightCapabilityFexDescriptor](./Remove-IntersightCapabilityFexDescriptor.md)
-
-[Set-IntersightCapabilityFexDescriptor](./Set-IntersightCapabilityFexDescriptor.md)
-

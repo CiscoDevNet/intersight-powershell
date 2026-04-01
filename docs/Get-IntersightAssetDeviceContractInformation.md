@@ -285,7 +285,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightAssetDeviceContractInformation](./Remove-IntersightAssetDeviceContractInformation.md)
-
 [Set-IntersightAssetDeviceContractInformation](./Set-IntersightAssetDeviceContractInformation.md)
 

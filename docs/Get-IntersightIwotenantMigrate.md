@@ -287,7 +287,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightIwotenantMigrate](./New-IntersightIwotenantMigrate.md)
 
-[Remove-IntersightIwotenantMigrate](./Remove-IntersightIwotenantMigrate.md)
-
 [Set-IntersightIwotenantMigrate](./Set-IntersightIwotenantMigrate.md)
 

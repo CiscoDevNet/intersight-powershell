@@ -176,6 +176,4 @@ PS C:\> New-IntersightHyperflexReduceReSync
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
-[Remove-IntersightHyperflexReduceReSync](./Remove-IntersightHyperflexReduceReSync.md)
-
 [Set-IntersightHyperflexReduceReSync](./Set-IntersightHyperflexReduceReSync.md)

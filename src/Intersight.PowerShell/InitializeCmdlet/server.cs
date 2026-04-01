@@ -1280,6 +1280,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Used with initialAutoDeployState to indicate if the server profile is ready for auto-deploy for the first time. The default value is false."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool InitialAutoDeployConfigComplete
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Automatically performs an initial deployment when a server is assigned. Subsequent changes require manual redeployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool InitialAutoDeployMode
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a computePhysical resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1532,6 +1552,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InitialAutoDeployConfigComplete"))
+            {
+                initObject.InitialAutoDeployConfigComplete = this.InitialAutoDeployConfigComplete;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InitialAutoDeployMode"))
+            {
+                initObject.InitialAutoDeployMode = this.InitialAutoDeployMode;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("LeasedServer"))
             {

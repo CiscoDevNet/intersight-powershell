@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityAdapterDeprecatedDef](./New-IntersightCapabilityAdapterDeprecatedDef.md)
-
-[Remove-IntersightCapabilityAdapterDeprecatedDef](./Remove-IntersightCapabilityAdapterDeprecatedDef.md)
-
-[Set-IntersightCapabilityAdapterDeprecatedDef](./Set-IntersightCapabilityAdapterDeprecatedDef.md)
-

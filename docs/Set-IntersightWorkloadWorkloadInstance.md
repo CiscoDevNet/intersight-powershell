@@ -233,6 +233,8 @@ PS C:\> Set-IntersightWorkloadWorkloadInstance
 
 [Initialize-IntersightCommGeoLocationDetails](./Initialize-IntersightCommGeoLocationDetails.md)
 
+[Initialize-IntersightComputeAlarmSummary](./Initialize-IntersightComputeAlarmSummary.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightWorkloadAssignedResource](./Initialize-IntersightWorkloadAssignedResource.md)

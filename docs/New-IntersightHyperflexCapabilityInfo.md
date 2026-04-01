@@ -213,6 +213,4 @@ PS C:\> New-IntersightHyperflexCapabilityInfo
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
-[Remove-IntersightHyperflexCapabilityInfo](./Remove-IntersightHyperflexCapabilityInfo.md)
-
 [Set-IntersightHyperflexCapabilityInfo](./Set-IntersightHyperflexCapabilityInfo.md)

@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityServerPcieConnectivityCatalog](./New-IntersightCapabilityServerPcieConnectivityCatalog.md)
-
-[Remove-IntersightCapabilityServerPcieConnectivityCatalog](./Remove-IntersightCapabilityServerPcieConnectivityCatalog.md)
-
-[Set-IntersightCapabilityServerPcieConnectivityCatalog](./Set-IntersightCapabilityServerPcieConnectivityCatalog.md)
-

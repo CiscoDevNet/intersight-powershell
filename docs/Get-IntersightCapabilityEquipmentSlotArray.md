@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityEquipmentSlotArray](./New-IntersightCapabilityEquipmentSlotArray.md)
-
-[Remove-IntersightCapabilityEquipmentSlotArray](./Remove-IntersightCapabilityEquipmentSlotArray.md)
-
-[Set-IntersightCapabilityEquipmentSlotArray](./Set-IntersightCapabilityEquipmentSlotArray.md)
-

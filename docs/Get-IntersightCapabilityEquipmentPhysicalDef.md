@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityEquipmentPhysicalDef](./New-IntersightCapabilityEquipmentPhysicalDef.md)
-
-[Remove-IntersightCapabilityEquipmentPhysicalDef](./Remove-IntersightCapabilityEquipmentPhysicalDef.md)
-
-[Set-IntersightCapabilityEquipmentPhysicalDef](./Set-IntersightCapabilityEquipmentPhysicalDef.md)
-

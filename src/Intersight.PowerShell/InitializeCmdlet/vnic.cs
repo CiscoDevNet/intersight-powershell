@@ -1693,10 +1693,10 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts."</para>
+        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts.Only 5th Gen Adapters and above with firmware version 5.4.2.15 and later support MTU size greater than 9000."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1500, 9000)]
+        [ValidateRange(1500, 9158)]
         public long Mtu
         {
             get;
@@ -2380,7 +2380,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The maximum number of LUNs that the Fibre Channel driver will export or show. The maximum number of LUNs is usually controlled by the operating system running on the server. Lun Count value can exceed 1024 only for vHBA of type 'FC Initiator' and on servers having supported firmware version."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 4096)]
+        [ValidateRange(1, 16384)]
         public long LunCount
         {
             get;

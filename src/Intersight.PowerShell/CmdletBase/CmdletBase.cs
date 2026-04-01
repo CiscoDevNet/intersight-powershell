@@ -33,7 +33,20 @@ namespace Intersight.PowerShell
 
         protected override void BeginProcessing()
         {
-            if (CmdletBase.Config == null || CmdletBase.Config.HttpSigningConfiguration == null)
+            if (CmdletBase.Config == null)
+            {
+                throw new Exception("Intersight environment is not configured. Use the cmdlet Set-IntersightConfiguration to configure it.");
+            }
+
+            // Check for either HTTP Signature (API Key), OAuth, or Bearer Token configuration
+            bool hasHttpSignature = CmdletBase.Config.HttpSigningConfiguration != null;
+            bool hasOAuth = !string.IsNullOrEmpty(CmdletBase.Config.OAuthClientId) &&
+                            !string.IsNullOrEmpty(CmdletBase.Config.OAuthClientSecret) &&
+                            !string.IsNullOrEmpty(CmdletBase.Config.OAuthTokenUrl) &&
+                            CmdletBase.Config.OAuthFlow != null;
+            bool hasBearerToken = !string.IsNullOrEmpty(CmdletBase.Config.AccessToken);
+
+            if (!hasHttpSignature && !hasOAuth && !hasBearerToken)
             {
                 throw new Exception("Intersight environment is not configured. Use the cmdlet Set-IntersightConfiguration to configure it.");
             }

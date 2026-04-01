@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareStorageControllerDescriptor](./New-IntersightFirmwareStorageControllerDescriptor.md)
-
-[Remove-IntersightFirmwareStorageControllerDescriptor](./Remove-IntersightFirmwareStorageControllerDescriptor.md)
-
-[Set-IntersightFirmwareStorageControllerDescriptor](./Set-IntersightFirmwareStorageControllerDescriptor.md)
-

@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightTamAdvisoryCount](./New-IntersightTamAdvisoryCount.md)
-
-[Remove-IntersightTamAdvisoryCount](./Remove-IntersightTamAdvisoryCount.md)
-
-[Set-IntersightTamAdvisoryCount](./Set-IntersightTamAdvisoryCount.md)
-

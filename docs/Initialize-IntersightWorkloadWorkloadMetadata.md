@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkloadWorkloadMetadata [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkloadWorkloadMetadata.ClassIdEnum>][-Moid< string>][-ObjectType< WorkloadWorkloadMetadata.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkloadWorkloadMetadata [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkloadWorkloadMetadata.ClassIdEnum>][-Moid< string>][-ObjectType< WorkloadWorkloadMetadata.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-RenameRequest< Model.WorkloadRenameRequest>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -102,6 +102,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -RenameRequest
+The request for the renaming operation on the workload definition object.
+
+Note :- Use Initialize-IntersightWorkloadRenameRequest to create the object of complex type WorkloadRenameRequest
+
+```yaml
+Type: Model.WorkloadRenameRequest
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -177,3 +194,5 @@ PS C:\> Initialize-IntersightWorkloadWorkloadMetadata
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-IntersightWorkloadRenameRequest](./Initialize-IntersightWorkloadRenameRequest.md)

@@ -285,7 +285,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Remove-IntersightIaasUcsdInfo](./Remove-IntersightIaasUcsdInfo.md)
-
 [Set-IntersightIaasUcsdInfo](./Set-IntersightIaasUcsdInfo.md)
 

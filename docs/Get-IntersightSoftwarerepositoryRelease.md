@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSoftwarerepositoryRelease](./New-IntersightSoftwarerepositoryRelease.md)
-
-[Remove-IntersightSoftwarerepositoryRelease](./Remove-IntersightSoftwarerepositoryRelease.md)
-
-[Set-IntersightSoftwarerepositoryRelease](./Set-IntersightSoftwarerepositoryRelease.md)
-

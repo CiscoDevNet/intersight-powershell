@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightFirmwareNxosDescriptor](./New-IntersightFirmwareNxosDescriptor.md)
-
-[Remove-IntersightFirmwareNxosDescriptor](./Remove-IntersightFirmwareNxosDescriptor.md)
-
-[Set-IntersightFirmwareNxosDescriptor](./Set-IntersightFirmwareNxosDescriptor.md)
-

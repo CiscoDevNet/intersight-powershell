@@ -1385,6 +1385,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"World Wide Name of the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SwitchWwn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"System up time of the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2363,6 +2374,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public NetworkElementSummary.SwitchTypeEnum SwitchType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"World Wide Name of the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SwitchWwn
         {
             get;
             set;
@@ -6175,6 +6197,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

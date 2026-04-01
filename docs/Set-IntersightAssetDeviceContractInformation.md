@@ -168,5 +168,3 @@ PS C:\> Set-IntersightAssetDeviceContractInformation
 [Initialize-IntersightAssetProductInformation](./Initialize-IntersightAssetProductInformation.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
-[Remove-IntersightAssetDeviceContractInformation](./Remove-IntersightAssetDeviceContractInformation.md)

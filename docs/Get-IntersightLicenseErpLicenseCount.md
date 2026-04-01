@@ -287,5 +287,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightLicenseErpLicenseCount](./New-IntersightLicenseErpLicenseCount.md)
 
-[Set-IntersightLicenseErpLicenseCount](./Set-IntersightLicenseErpLicenseCount.md)
-

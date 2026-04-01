@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityCimcFirmwareDescriptor](./New-IntersightCapabilityCimcFirmwareDescriptor.md)
-
-[Remove-IntersightCapabilityCimcFirmwareDescriptor](./Remove-IntersightCapabilityCimcFirmwareDescriptor.md)
-
-[Set-IntersightCapabilityCimcFirmwareDescriptor](./Set-IntersightCapabilityCimcFirmwareDescriptor.md)
-

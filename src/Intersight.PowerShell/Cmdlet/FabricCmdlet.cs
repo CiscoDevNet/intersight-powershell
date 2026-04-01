@@ -88,7 +88,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for Appliance Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for Appliance Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -329,7 +329,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3177,7 +3177,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for Fcoe Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for Fcoe Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3385,7 +3385,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6478,7 +6478,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108/UCS-FI-6652 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108/UCS-FI-6652 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6696,7 +6696,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction setting of the SPAN Destination Port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction setting of the SPAN Destination Port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -8339,6 +8339,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
@@ -9221,7 +9222,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -9452,7 +9453,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -10730,7 +10731,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for Appliance Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for Appliance Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -10940,7 +10941,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -12391,7 +12392,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for Fcoe Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for Fcoe Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -12568,7 +12569,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -14921,7 +14922,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108/UCS-FI-6652 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108/UCS-FI-6652 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -15098,7 +15099,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction setting of the SPAN Destination Port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction setting of the SPAN Destination Port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -16313,6 +16314,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Settings to control mac learning options."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricMacLearningSettings MacLearningSettings
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -17121,7 +17133,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -17331,7 +17343,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -18401,7 +18413,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for Appliance Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for Appliance Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -18600,7 +18612,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -19988,7 +20000,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for Fcoe Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for Fcoe Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -20154,7 +20166,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -22331,7 +22343,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108/UCS-FI-6652 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for server port. This configuration is required only for FEX Model N9K-C93180YC-FX3 connected with 25G speed ports on UCS-FI-6454/UCS-FI-64108/UCS-FI-6652 and should be set as Cl74.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -22497,7 +22509,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Forward error correction setting of the SPAN Destination Port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction setting of the SPAN Destination Port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -23191,6 +23203,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FabricMacAgingSettings MacAgingSettings
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Settings to control mac learning options."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricMacLearningSettings MacLearningSettings
         {
             get;
             set;
@@ -23960,7 +23983,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for Uplink Port Channel member ports.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -24159,7 +24182,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100 Gbps."</para>
+        /// <para type="description">"Forward error correction configuration for the port.\n* `Auto` - Forward error correction option 'Auto'. Supported speeds are Auto, 1Gbps, 10Gbps, 25Gbps, 40Gbps and 100 Gbps.\n* `Cl91` - Forward error correction option 'cl91'. Supported speeds are 25Gbps and 100 Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `Cl74` - Forward error correction option 'cl74'. Supported speeds are 25Gbps.\n* `rs-cons16` - Forward error correction option \"rs-cons16\". Supported speeds are 25Gbps. This FEC setting is not supported on Unified Edge platforms.\n* `rs-ieee` - Forward error correction option \"rs-ieee\". Supported speeds are 25Gbps.\n* `Off` - Turn off forward error correction. Supported speeds are 25Gbps and 100Gbps. Additionally, 1Gbps is supported on Unified Edge platforms."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

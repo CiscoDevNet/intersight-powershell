@@ -89,7 +89,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The status of the persistent connection between the device connector and Intersight.\n* `` - The target details have been persisted but Intersight has not yet attempted to connect to the target.\n* `Connected` - Intersight is able to establish a connection to the target and initiate management activities.\n* `NotConnected` - Intersight is unable to establish a connection to the target.\n* `ClaimInProgress` - Claim of the target is in progress. A connection to the target has not been fully established.\n* `UnclaimInProgress` - Unclaim of the target is in progress. Intersight is able to connect to the target and all management operations are supported.\n* `Unclaimed` - The device was un-claimed from the users account by an Administrator of the device. Also indicates the failure to claim Targets of type HTTP Endpoint in Intersight.\n* `Claimed` - Target of type HTTP Endpoint is successfully claimed in Intersight. Currently no validation is performed to verify the Target connectivity from Intersight at the time of creation. However invoking API from Intersight Orchestrator fails if this Target is not reachable from Intersight or if Target API credentials are incorrect."</para>
+        /// <para type="description">"The status of the persistent connection between the device connector and Intersight.\n* `` - The target details have been persisted but Intersight has not yet attempted to connect to the target.\n* `Connected` - Intersight is able to establish a connection to the target and initiate management activities.\n* `NotConnected` - Intersight is unable to establish a connection to the target.\n* `ClaimInProgress` - Claim of the target is in progress. A connection to the target has not been fully established.\n* `UnclaimInProgress` - Unclaim of the target is in progress. Intersight is able to connect to the target and all management operations are supported.\n* `Unclaimed` - The device was un-claimed from the users account by an Administrator of the device. Also indicates the failure to claim Targets of type HTTP Endpoint in Intersight.\n* `Claimed` - Target of type HTTP Endpoint is successfully claimed in Intersight. Currently no validation is performed to verify the Target connectivity from Intersight at the time of creation. However invoking API from Intersight Orchestrator fails if this Target is not reachable from Intersight or if Target API credentials are incorrect.\n* `PreClaimed` - Target has been pre-claimed and is pending claim completion. Pre-claimed targets are pre-provisioned before endpoint is available to connect to Intersight, once target connects the claim can be completed by providing the security token to the pre-claim API."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1567,7 +1567,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The status of the persistent connection between the device connector and Intersight.\n* `` - The target details have been persisted but Intersight has not yet attempted to connect to the target.\n* `Connected` - Intersight is able to establish a connection to the target and initiate management activities.\n* `NotConnected` - Intersight is unable to establish a connection to the target.\n* `ClaimInProgress` - Claim of the target is in progress. A connection to the target has not been fully established.\n* `UnclaimInProgress` - Unclaim of the target is in progress. Intersight is able to connect to the target and all management operations are supported.\n* `Unclaimed` - The device was un-claimed from the users account by an Administrator of the device. Also indicates the failure to claim Targets of type HTTP Endpoint in Intersight.\n* `Claimed` - Target of type HTTP Endpoint is successfully claimed in Intersight. Currently no validation is performed to verify the Target connectivity from Intersight at the time of creation. However invoking API from Intersight Orchestrator fails if this Target is not reachable from Intersight or if Target API credentials are incorrect."</para>
+        /// <para type="description">"The status of the persistent connection between the device connector and Intersight.\n* `` - The target details have been persisted but Intersight has not yet attempted to connect to the target.\n* `Connected` - Intersight is able to establish a connection to the target and initiate management activities.\n* `NotConnected` - Intersight is unable to establish a connection to the target.\n* `ClaimInProgress` - Claim of the target is in progress. A connection to the target has not been fully established.\n* `UnclaimInProgress` - Unclaim of the target is in progress. Intersight is able to connect to the target and all management operations are supported.\n* `Unclaimed` - The device was un-claimed from the users account by an Administrator of the device. Also indicates the failure to claim Targets of type HTTP Endpoint in Intersight.\n* `Claimed` - Target of type HTTP Endpoint is successfully claimed in Intersight. Currently no validation is performed to verify the Target connectivity from Intersight at the time of creation. However invoking API from Intersight Orchestrator fails if this Target is not reachable from Intersight or if Target API credentials are incorrect.\n* `PreClaimed` - Target has been pre-claimed and is pending claim completion. Pre-claimed targets are pre-provisioned before endpoint is available to connect to Intersight, once target connects the claim can be completed by providing the security token to the pre-claim API."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2535,6 +2535,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The date at which the target was claimed to this account. For pre-provisioned targets this is the time at which the claim was completed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ClaimedTime
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The Device Connector version for target types which are managed by via embedded Device Connector."</para>
@@ -2686,7 +2697,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Status indicates if Intersight can establish a connection and authenticate with the managed target. Status does not include information about the functional health of the target.\n* `` - The target details have been persisted but Intersight has not yet attempted to connect to the target.\n* `Connected` - Intersight is able to establish a connection to the target and initiate management activities.\n* `NotConnected` - Intersight is unable to establish a connection to the target.\n* `ClaimInProgress` - Claim of the target is in progress. A connection to the target has not been fully established.\n* `UnclaimInProgress` - Unclaim of the target is in progress. Intersight is able to connect to the target and all management operations are supported.\n* `Unclaimed` - The device was un-claimed from the users account by an Administrator of the device. Also indicates the failure to claim Targets of type HTTP Endpoint in Intersight.\n* `Claimed` - Target of type HTTP Endpoint is successfully claimed in Intersight. Currently no validation is performed to verify the Target connectivity from Intersight at the time of creation. However invoking API from Intersight Orchestrator fails if this Target is not reachable from Intersight or if Target API credentials are incorrect."</para>
+        /// <para type="description">"Status indicates if Intersight can establish a connection and authenticate with the managed target. Status does not include information about the functional health of the target.\n* `` - The target details have been persisted but Intersight has not yet attempted to connect to the target.\n* `Connected` - Intersight is able to establish a connection to the target and initiate management activities.\n* `NotConnected` - Intersight is unable to establish a connection to the target.\n* `ClaimInProgress` - Claim of the target is in progress. A connection to the target has not been fully established.\n* `UnclaimInProgress` - Unclaim of the target is in progress. Intersight is able to connect to the target and all management operations are supported.\n* `Unclaimed` - The device was un-claimed from the users account by an Administrator of the device. Also indicates the failure to claim Targets of type HTTP Endpoint in Intersight.\n* `Claimed` - Target of type HTTP Endpoint is successfully claimed in Intersight. Currently no validation is performed to verify the Target connectivity from Intersight at the time of creation. However invoking API from Intersight Orchestrator fails if this Target is not reachable from Intersight or if Target API credentials are incorrect.\n* `PreClaimed` - Target has been pre-claimed and is pending claim completion. Pre-claimed targets are pre-provisioned before endpoint is available to connect to Intersight, once target connects the claim can be completed by providing the security token to the pre-claim API."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3370,6 +3381,107 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New AssetPreClaim.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightAssetPreClaim", SupportsShouldProcess = true)]
+    public class NewIntersightAssetPreClaim : NewCmdletBase
+    {
+        public NewIntersightAssetPreClaim()
+        {
+            ApiInstance = new AssetApi(Config);
+            ModelObject = new AssetPreClaim();
+            MethodName = "CreateAssetPreClaimWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Obtained from the device connector management UI or API (REST endpoint '/connector/SecurityTokens')."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SecurityToken
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Obtained from the device connector management UI or API (REST endpoint '/connector/DeviceIdentifiers')."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SerialNumber
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfNoneMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New AssetTarget.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightAssetTarget", SupportsShouldProcess = true)]
@@ -3428,6 +3540,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -3572,42 +3685,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetClusterMember.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetClusterMember", SupportsShouldProcess = true)]
-    public class RemoveIntersightAssetClusterMember : RemoveCmdletBase
-    {
-        public RemoveIntersightAssetClusterMember()
-        {
-            ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetClusterMemberWithHttpInfo";
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetDeployment.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeployment", SupportsShouldProcess = true)]
-    public class RemoveIntersightAssetDeployment : RemoveCmdletBase
-    {
-        public RemoveIntersightAssetDeployment()
-        {
-            ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetDeploymentWithHttpInfo";
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetDeploymentDevice.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeploymentDevice", SupportsShouldProcess = true)]
-    public class RemoveIntersightAssetDeploymentDevice : RemoveCmdletBase
-    {
-        public RemoveIntersightAssetDeploymentDevice()
-        {
-            ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetDeploymentDeviceWithHttpInfo";
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceClaim.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceClaim", SupportsShouldProcess = true)]
@@ -3620,30 +3697,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceContractInformation.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceContractInformation", SupportsShouldProcess = true)]
-    public class RemoveIntersightAssetDeviceContractInformation : RemoveCmdletBase
-    {
-        public RemoveIntersightAssetDeviceContractInformation()
-        {
-            ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetDeviceContractInformationWithHttpInfo";
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetDeviceRegistration.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetDeviceRegistration", SupportsShouldProcess = true)]
-    public class RemoveIntersightAssetDeviceRegistration : RemoveCmdletBase
-    {
-        public RemoveIntersightAssetDeviceRegistration()
-        {
-            ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetDeviceRegistrationWithHttpInfo";
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove AssetGeoLocation.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightAssetGeoLocation", SupportsShouldProcess = true)]
@@ -3653,30 +3706,6 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new AssetApi(Config);
             MethodName = "DeleteAssetGeoLocationWithHttpInfo";
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetSubscription.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetSubscription", SupportsShouldProcess = true)]
-    public class RemoveIntersightAssetSubscription : RemoveCmdletBase
-    {
-        public RemoveIntersightAssetSubscription()
-        {
-            ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetSubscriptionWithHttpInfo";
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove AssetSubscriptionAccount.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightAssetSubscriptionAccount", SupportsShouldProcess = true)]
-    public class RemoveIntersightAssetSubscriptionAccount : RemoveCmdletBase
-    {
-        public RemoveIntersightAssetSubscriptionAccount()
-        {
-            ApiInstance = new AssetApi(Config);
-            MethodName = "DeleteAssetSubscriptionAccountWithHttpInfo";
         }
     }
     /// <summary>
@@ -4142,6 +4171,96 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set AssetPreClaim.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightAssetPreClaim", SupportsShouldProcess = true)]
+    public class SetIntersightAssetPreClaim : SetCmdletBase
+    {
+        public SetIntersightAssetPreClaim()
+        {
+            ApiInstance = new AssetApi(Config);
+            ModelObject = new AssetPreClaim();
+            MethodName = "UpdateAssetPreClaimWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Obtained from the device connector management UI or API (REST endpoint '/connector/SecurityTokens')."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public string SecurityToken
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Obtained from the device connector management UI or API (REST endpoint '/connector/DeviceIdentifiers')."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SerialNumber
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set AssetTarget.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightAssetTarget", SupportsShouldProcess = true)]
@@ -4200,6 +4319,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>

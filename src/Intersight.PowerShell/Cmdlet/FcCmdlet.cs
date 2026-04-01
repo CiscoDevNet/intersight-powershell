@@ -133,7 +133,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"This field defines if neighbor is a switch or an NPV device.\n* `Switch` - Switch type neighbors of an interface.\n* `NPV` - N Port Virtualization neighbors of an interface."</para>
+        /// <para type="description">"This field defines if neighbor is a switch, storage or an NPV device.\n* `Switch` - Switch type neighbors of an interface.\n* `NPV` - N Port Virtualization neighbors of an interface.\n* `Storage` - Storage type neighbors of an interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -160,6 +160,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string PeerIpAddress
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"World Wide Name of the neighbor port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PeerPortWwn
         {
             get;
             set;
@@ -211,6 +222,28 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Vendor name for the neighboring storage device. Available only for Storage neighbors."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"VSAN associated with this neighbor port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long Vsan
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>

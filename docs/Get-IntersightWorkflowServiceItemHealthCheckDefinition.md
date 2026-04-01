@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightWorkflowServiceItemHealthCheckDefinition](./New-IntersightWorkflowServiceItemHealthCheckDefinition.md)
-
-[Remove-IntersightWorkflowServiceItemHealthCheckDefinition](./Remove-IntersightWorkflowServiceItemHealthCheckDefinition.md)
-
-[Set-IntersightWorkflowServiceItemHealthCheckDefinition](./Set-IntersightWorkflowServiceItemHealthCheckDefinition.md)
-

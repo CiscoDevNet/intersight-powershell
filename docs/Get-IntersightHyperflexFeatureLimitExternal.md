@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexFeatureLimitExternal](./New-IntersightHyperflexFeatureLimitExternal.md)
-
-[Remove-IntersightHyperflexFeatureLimitExternal](./Remove-IntersightHyperflexFeatureLimitExternal.md)
-
-[Set-IntersightHyperflexFeatureLimitExternal](./Set-IntersightHyperflexFeatureLimitExternal.md)
-

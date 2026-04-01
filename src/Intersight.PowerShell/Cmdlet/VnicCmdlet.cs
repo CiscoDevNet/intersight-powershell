@@ -1778,10 +1778,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts."</para>
+        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts.Only 5th Gen Adapters and above with firmware version 5.4.2.15 and later support MTU size greater than 9000."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidateRange(1500, 9000)]
+        [ValidateRange(1500, 9158)]
         public long Mtu
         {
             get;
@@ -2007,10 +2007,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts."</para>
+        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts.Only 5th Gen Adapters and above with firmware version 5.4.2.15 and later support MTU size greater than 9000."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidateRange(1500, 9000)]
+        [ValidateRange(1500, 9158)]
         public long Mtu
         {
             get;
@@ -2590,7 +2590,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The maximum number of LUNs that the Fibre Channel driver will export or show. The maximum number of LUNs is usually controlled by the operating system running on the server. Lun Count value can exceed 1024 only for vHBA of type 'FC Initiator' and on servers having supported firmware version."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidateRange(1, 4096)]
+        [ValidateRange(1, 16384)]
         public long LunCount
         {
             get;
@@ -2815,7 +2815,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The maximum number of LUNs that the Fibre Channel driver will export or show. The maximum number of LUNs is usually controlled by the operating system running on the server. Lun Count value can exceed 1024 only for vHBA of type 'FC Initiator' and on servers having supported firmware version."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidateRange(1, 4096)]
+        [ValidateRange(1, 16384)]
         public long LunCount
         {
             get;
@@ -9580,10 +9580,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts."</para>
+        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts.Only 5th Gen Adapters and above with firmware version 5.4.2.15 and later support MTU size greater than 9000."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1500, 9000)]
+        [ValidateRange(1500, 9158)]
         public long Mtu
         {
             get;
@@ -9781,7 +9781,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The maximum number of LUNs that the Fibre Channel driver will export or show. The maximum number of LUNs is usually controlled by the operating system running on the server. Lun Count value can exceed 1024 only for vHBA of type 'FC Initiator' and on servers having supported firmware version."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 4096)]
+        [ValidateRange(1, 16384)]
         public long LunCount
         {
             get;
@@ -13020,10 +13020,10 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts."</para>
+        /// <para type="description">"The Maximum Transmission Unit (MTU) or packet size that the virtual interface accepts.Only 5th Gen Adapters and above with firmware version 5.4.2.15 and later support MTU size greater than 9000."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1500, 9000)]
+        [ValidateRange(1500, 9158)]
         public long Mtu
         {
             get;
@@ -13210,7 +13210,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The maximum number of LUNs that the Fibre Channel driver will export or show. The maximum number of LUNs is usually controlled by the operating system running on the server. Lun Count value can exceed 1024 only for vHBA of type 'FC Initiator' and on servers having supported firmware version."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidateRange(1, 4096)]
+        [ValidateRange(1, 16384)]
         public long LunCount
         {
             get;
@@ -15004,106 +15004,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-
-        // <summary>
-        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
-
-        public String IfMatch
-        {
-            get;
-            set;
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Set VnicVifIdPool.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Set, "IntersightVnicVifIdPool", SupportsShouldProcess = true)]
-    public class SetIntersightVnicVifIdPool : SetCmdletBase
-    {
-        public SetIntersightVnicVifIdPool()
-        {
-            ApiInstance = new VnicApi(Config);
-            ModelObject = new VnicVifIdPool();
-            MethodName = "UpdateVnicVifIdPoolWithHttpInfo";
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<long> GapAvailableIds
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public NetworkElementRelationship NetworkElement
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"Shows the next available channel number ID to be allocated for a vNIC."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public long NextAvailableId
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
 
         // <summary>
         /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>

@@ -285,7 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightIwotenantMaintenanceNotification](./New-IntersightIwotenantMaintenanceNotification.md)
-
-[Remove-IntersightIwotenantMaintenanceNotification](./Remove-IntersightIwotenantMaintenanceNotification.md)
-

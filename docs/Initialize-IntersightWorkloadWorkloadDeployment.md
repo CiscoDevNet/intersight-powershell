@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkloadWorkloadDeployment [-Action< WorkloadWorkloadDeployment.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Blueprints< System.Collections.Generic.List`1[Model.WorkloadBlueprintInputReference]>][-ClassId< WorkloadWorkloadDeployment.ClassIdEnum>][-Description< string>][-DigitCount< long>][-Moid< string>][-Name< string>][-ObjectType< WorkloadWorkloadDeployment.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Qualifiers< System.Collections.Generic.List`1[Model.ResourceResourceQualifier]>][-RolloutStrategy< Model.WorkloadRolloutStrategy>][-SchedulePolicy< Model.SchedulerSchedulePolicyRelationship>][-StartIndexForSuffix< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WorkloadDefinitionReference< Model.WorkloadDefinitionMapper>][-WorkloadInstancePrefix< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkloadWorkloadDeployment [-Action< WorkloadWorkloadDeployment.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Blueprints< System.Collections.Generic.List`1[Model.WorkloadBlueprintInputReference]>][-ClassId< WorkloadWorkloadDeployment.ClassIdEnum>][-Description< string>][-DigitCount< long>][-Moid< string>][-Name< string>][-ObjectType< WorkloadWorkloadDeployment.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Qualifiers< System.Collections.Generic.List`1[Model.ResourceResourceQualifier]>][-RenameRequest< Model.WorkloadRenameRequest>][-RolloutStrategy< Model.WorkloadRolloutStrategy>][-SchedulePolicy< Model.SchedulerSchedulePolicyRelationship>][-StartIndexForSuffix< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-WorkloadDefinitionReference< Model.WorkloadDefinitionMapper>][-WorkloadInstancePrefix< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -196,6 +196,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -RenameRequest
+The request for the renaming operation on the workload deployment object.
+
+Note :- Use Initialize-IntersightWorkloadRenameRequest to create the object of complex type WorkloadRenameRequest
+
+```yaml
+Type: Model.WorkloadRenameRequest
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -RolloutStrategy
 The strategy used for rolling out deployment changes.
 
@@ -359,5 +376,7 @@ PS C:\> Initialize-IntersightWorkloadWorkloadDeployment
 [Initialize-IntersightWorkloadBlueprintInputReference](./Initialize-IntersightWorkloadBlueprintInputReference.md)
 
 [Initialize-IntersightWorkloadDefinitionMapper](./Initialize-IntersightWorkloadDefinitionMapper.md)
+
+[Initialize-IntersightWorkloadRenameRequest](./Initialize-IntersightWorkloadRenameRequest.md)
 
 [Initialize-IntersightWorkloadRolloutStrategy](./Initialize-IntersightWorkloadRolloutStrategy.md)

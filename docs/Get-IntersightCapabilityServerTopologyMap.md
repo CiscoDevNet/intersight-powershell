@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityServerTopologyMap](./New-IntersightCapabilityServerTopologyMap.md)
-
-[Remove-IntersightCapabilityServerTopologyMap](./Remove-IntersightCapabilityServerTopologyMap.md)
-
-[Set-IntersightCapabilityServerTopologyMap](./Set-IntersightCapabilityServerTopologyMap.md)
-

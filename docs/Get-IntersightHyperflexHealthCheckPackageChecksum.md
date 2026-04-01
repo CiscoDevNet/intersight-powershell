@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexHealthCheckPackageChecksum](./New-IntersightHyperflexHealthCheckPackageChecksum.md)
-
-[Remove-IntersightHyperflexHealthCheckPackageChecksum](./Remove-IntersightHyperflexHealthCheckPackageChecksum.md)
-
-[Set-IntersightHyperflexHealthCheckPackageChecksum](./Set-IntersightHyperflexHealthCheckPackageChecksum.md)
-

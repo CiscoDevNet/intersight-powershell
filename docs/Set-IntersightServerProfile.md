@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-AssociatedServerPool< ResourcepoolPoolRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-LeasedServer< ComputePhysicalRelationship>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[PoolReservationReference]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< ResourcepoolPoolRelationship>][-ServerPreAssignBySerial< string>][-ServerPreAssignBySlot< ServerServerAssignTypeSlot>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-Type< ServerProfile.TypeEnum>][-UserLabel< string>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-AssociatedServerPool< ResourcepoolPoolRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-InitialAutoDeployConfigComplete< bool>][-InitialAutoDeployMode< bool>][-LeasedServer< ComputePhysicalRelationship>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[PoolReservationReference]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< ResourcepoolPoolRelationship>][-ServerPreAssignBySerial< string>][-ServerPreAssignBySlot< ServerServerAssignTypeSlot>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-Type< ServerProfile.TypeEnum>][-UserLabel< string>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -128,6 +128,36 @@ Description of the profile.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InitialAutoDeployConfigComplete
+Used with initialAutoDeployState to indicate if the server profile is ready for auto-deploy for the first time. The default value is false.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InitialAutoDeployMode
+Automatically performs an initial deployment when a server is assigned. Subsequent changes require manual redeployment.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

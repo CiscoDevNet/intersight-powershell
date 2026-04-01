@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSoftwareHclMeta](./New-IntersightSoftwareHclMeta.md)
-
-[Remove-IntersightSoftwareHclMeta](./Remove-IntersightSoftwareHclMeta.md)
-
-[Set-IntersightSoftwareHclMeta](./Set-IntersightSoftwareHclMeta.md)
-

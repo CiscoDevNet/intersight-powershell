@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSoftwarerepositoryCategoryUnsupportedModels](./New-IntersightSoftwarerepositoryCategoryUnsupportedModels.md)
-
-[Remove-IntersightSoftwarerepositoryCategoryUnsupportedModels](./Remove-IntersightSoftwarerepositoryCategoryUnsupportedModels.md)
-
-[Set-IntersightSoftwarerepositoryCategoryUnsupportedModels](./Set-IntersightSoftwarerepositoryCategoryUnsupportedModels.md)
-

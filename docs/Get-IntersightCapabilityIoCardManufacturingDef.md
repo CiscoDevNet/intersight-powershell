@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityIoCardManufacturingDef](./New-IntersightCapabilityIoCardManufacturingDef.md)
-
-[Remove-IntersightCapabilityIoCardManufacturingDef](./Remove-IntersightCapabilityIoCardManufacturingDef.md)
-
-[Set-IntersightCapabilityIoCardManufacturingDef](./Set-IntersightCapabilityIoCardManufacturingDef.md)
-

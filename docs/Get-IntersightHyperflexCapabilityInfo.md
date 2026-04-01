@@ -287,7 +287,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-IntersightHyperflexCapabilityInfo](./New-IntersightHyperflexCapabilityInfo.md)
 
-[Remove-IntersightHyperflexCapabilityInfo](./Remove-IntersightHyperflexCapabilityInfo.md)
-
 [Set-IntersightHyperflexCapabilityInfo](./Set-IntersightHyperflexCapabilityInfo.md)
 

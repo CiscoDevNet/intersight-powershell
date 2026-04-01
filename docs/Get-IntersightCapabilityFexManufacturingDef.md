@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityFexManufacturingDef](./New-IntersightCapabilityFexManufacturingDef.md)
-
-[Remove-IntersightCapabilityFexManufacturingDef](./Remove-IntersightCapabilityFexManufacturingDef.md)
-
-[Set-IntersightCapabilityFexManufacturingDef](./Set-IntersightCapabilityFexManufacturingDef.md)
-

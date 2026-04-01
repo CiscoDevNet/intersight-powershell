@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkloadWorkloadDeployment [-Action< WorkloadWorkloadDeployment.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Blueprints< System.Collections.Generic.List`1[WorkloadBlueprintInputReference]>][-Description< string>][-DigitCount< long>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Qualifiers< System.Collections.Generic.List`1[ResourceResourceQualifier]>][-RolloutStrategy< WorkloadRolloutStrategy>][-SchedulePolicy< SchedulerSchedulePolicyRelationship>][-StartIndexForSuffix< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WorkloadDefinitionReference< WorkloadDefinitionMapper>][-WorkloadInstancePrefix< string>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightWorkloadWorkloadDeployment [-Action< WorkloadWorkloadDeployment.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Blueprints< System.Collections.Generic.List`1[WorkloadBlueprintInputReference]>][-Description< string>][-DigitCount< long>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Qualifiers< System.Collections.Generic.List`1[ResourceResourceQualifier]>][-RenameRequest< WorkloadRenameRequest>][-RolloutStrategy< WorkloadRolloutStrategy>][-SchedulePolicy< SchedulerSchedulePolicyRelationship>][-StartIndexForSuffix< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-WorkloadDefinitionReference< WorkloadDefinitionMapper>][-WorkloadInstancePrefix< string>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -155,6 +155,23 @@ Note :- Use Initialize-IntersightResourceResourceQualifier to create the object 
 
 ```yaml
 Type: System.Collections.Generic.List`1[ResourceResourceQualifier]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RenameRequest
+The request for the renaming operation on the workload deployment object.
+
+Note :- Use Initialize-IntersightWorkloadRenameRequest to create the object of complex type WorkloadRenameRequest
+
+```yaml
+Type: WorkloadRenameRequest
 Parameter Sets: (All)
 Aliases:
 
@@ -364,6 +381,8 @@ PS C:\> New-IntersightWorkloadWorkloadDeployment
 [Initialize-IntersightWorkloadDefinitionMapper](./Initialize-IntersightWorkloadDefinitionMapper.md)
 
 [Initialize-IntersightWorkloadDeploymentChangeDetail](./Initialize-IntersightWorkloadDeploymentChangeDetail.md)
+
+[Initialize-IntersightWorkloadRenameRequest](./Initialize-IntersightWorkloadRenameRequest.md)
 
 [Initialize-IntersightWorkloadRolloutStrategy](./Initialize-IntersightWorkloadRolloutStrategy.md)
 

@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightHyperflexHealthCheckDefinition](./New-IntersightHyperflexHealthCheckDefinition.md)
-
-[Remove-IntersightHyperflexHealthCheckDefinition](./Remove-IntersightHyperflexHealthCheckDefinition.md)
-
-[Set-IntersightHyperflexHealthCheckDefinition](./Set-IntersightHyperflexHealthCheckDefinition.md)
-

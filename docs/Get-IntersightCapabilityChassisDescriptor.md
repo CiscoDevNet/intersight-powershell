@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightCapabilityChassisDescriptor](./New-IntersightCapabilityChassisDescriptor.md)
-
-[Remove-IntersightCapabilityChassisDescriptor](./Remove-IntersightCapabilityChassisDescriptor.md)
-
-[Set-IntersightCapabilityChassisDescriptor](./Set-IntersightCapabilityChassisDescriptor.md)
-

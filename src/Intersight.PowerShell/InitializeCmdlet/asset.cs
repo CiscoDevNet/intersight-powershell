@@ -3003,6 +3003,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A pre-claim of an embedded target. Does not require a security token to be provided at target create, target will be created in a pre-claim state."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool PreClaim
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The SecurityToken object holds a time-limited random string used for claiming a device. It is created implicitly for each device connector at the time of registration, providing a secure mechanism for users to assert administrative access during device claim operations.\n#### Purpose\nSecurityToken acts as a temporary credential that proves a user's administrative access to a device, allowing them to claim the device within Intersight. It strengthens the security of claim operations, preventing unauthorized device claims by restricting access to users who possess the token.\n#### Key Concepts\n- **Time-Bound Security:** Tokens are generated with expiration times, ensuring they are only valid for a limited duration to reduce the risk of misuse.\n- **Claim Validation:** Used during claim operations to validate that the user has the necessary privileges to manage the device.\n- **Access Control:** Integrates with Intersight's security model, providing controlled access to device claim functionalities."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -3037,6 +3047,10 @@ namespace Intersight.PowerShell
                 initObject.Credential = this.Credential;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreClaim"))
+            {
+                initObject.PreClaim = this.PreClaim;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("SecurityToken"))
             {
                 initObject.SecurityToken = this.SecurityToken;
@@ -3895,6 +3909,119 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("TimeStamp"))
             {
                 initObject.TimeStamp = this.TimeStamp;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AssetPreClaim.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAssetPreClaim")]
+    public class InitializeIntersightAssetPreClaim : PSCmdlet
+    {
+        public InitializeIntersightAssetPreClaim()
+        {
+            ClassId = AssetPreClaim.ClassIdEnum.AssetPreClaim;
+            ObjectType = AssetPreClaim.ObjectTypeEnum.AssetPreClaim;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AssetPreClaim.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AssetPreClaim.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Obtained from the device connector management UI or API (REST endpoint '/connector/SecurityTokens')."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SecurityToken
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Obtained from the device connector management UI or API (REST endpoint '/connector/DeviceIdentifiers')."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SerialNumber
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.AssetPreClaim initObject = new Intersight.Model.AssetPreClaim();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SecurityToken"))
+            {
+                initObject.SecurityToken = this.SecurityToken;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SerialNumber"))
+            {
+                initObject.SerialNumber = this.SerialNumber;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
             }
             WriteObject(initObject);
         }

@@ -1535,7 +1535,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The operating system vendor name running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ -]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ ]+$")]
         public string OsVendor
         {
             get;
@@ -1546,7 +1546,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Operating System version running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ .()-]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ .]+$")]
         public string OsVersion
         {
             get;
@@ -3451,7 +3451,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The operating system vendor name running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ -]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ ]+$")]
         public string OsVendor
         {
             get;
@@ -3462,7 +3462,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Operating System version running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ .()-]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ .]+$")]
         public string OsVersion
         {
             get;
@@ -4432,7 +4432,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The operating system vendor name running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ -]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ ]+$")]
         public string OsVendor
         {
             get;
@@ -4443,7 +4443,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Operating System version running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ .()-]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ .]+$")]
         public string OsVersion
         {
             get;

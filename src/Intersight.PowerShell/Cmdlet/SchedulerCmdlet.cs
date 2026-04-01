@@ -933,18 +933,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove SchedulerTaskResult.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightSchedulerTaskResult", SupportsShouldProcess = true)]
-    public class RemoveIntersightSchedulerTaskResult : RemoveCmdletBase
-    {
-        public RemoveIntersightSchedulerTaskResult()
-        {
-            ApiInstance = new SchedulerApi(Config);
-            MethodName = "DeleteSchedulerTaskResultWithHttpInfo";
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove SchedulerTaskSchedule.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightSchedulerTaskSchedule", SupportsShouldProcess = true)]

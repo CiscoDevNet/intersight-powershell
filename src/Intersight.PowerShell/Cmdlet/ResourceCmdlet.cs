@@ -1493,120 +1493,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to New ResourceMembership.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.New, "IntersightResourceMembership", SupportsShouldProcess = true)]
-    public class NewIntersightResourceMembership : NewCmdletBase
-    {
-        public NewIntersightResourceMembership()
-        {
-            ApiInstance = new ResourceApi(Config);
-            ModelObject = new ResourceMembership();
-            MethodName = "CreateResourceMembershipWithHttpInfo";
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public Dictionary<string, object> AdditionalProperties
-        {
-            get;
-            set;
-        }
-
-
-
-
-
-
-
-        // <summary>
-        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string Moid
-        {
-            get;
-            set;
-        }
-
-
-
-
-        // <summary>
-        /// <para type="description">"Set Reevaluate to true to reevaluate the membership of a resource."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool Reevaluate
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public MoBaseMoRelationship Resource
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">"An array of relationships to moBaseMo resources."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoBaseMoRelationship> ResourceAncestors
-        {
-            get;
-            set;
-        }
-
-
-        // <summary>
-        /// <para type="description"></para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public List<MoTag> Tags
-        {
-            get;
-            set;
-        }
-
-
-
-        // <summary>
-        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
-
-        public String IfMatch
-        {
-            get;
-            set;
-        }
-
-        // <summary>
-        /// <para type="description">For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte.</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
-
-        public String IfNoneMatch
-        {
-            get;
-            set;
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New ResourceReservation.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightResourceReservation", SupportsShouldProcess = true)]
@@ -1902,18 +1788,6 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove ResourceGroupMember.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourceGroupMember", SupportsShouldProcess = true)]
-    public class RemoveIntersightResourceGroupMember : RemoveCmdletBase
-    {
-        public RemoveIntersightResourceGroupMember()
-        {
-            ApiInstance = new ResourceApi(Config);
-            MethodName = "DeleteResourceGroupMemberWithHttpInfo";
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove ResourceReservation.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightResourceReservation", SupportsShouldProcess = true)]
@@ -1935,18 +1809,6 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new ResourceApi(Config);
             MethodName = "DeleteResourceSelectionCriteriaWithHttpInfo";
-        }
-    }
-    /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove ResourceSharedResourcesInfoHolder.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightResourceSharedResourcesInfoHolder", SupportsShouldProcess = true)]
-    public class RemoveIntersightResourceSharedResourcesInfoHolder : RemoveCmdletBase
-    {
-        public RemoveIntersightResourceSharedResourcesInfoHolder()
-        {
-            ApiInstance = new ResourceApi(Config);
-            MethodName = "DeleteResourceSharedResourcesInfoHolderWithHttpInfo";
         }
     }
     /// <summary>

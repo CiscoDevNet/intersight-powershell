@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAssetIntersightDeviceConnectorConnection [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetIntersightDeviceConnectorConnection.ClassIdEnum>][-Credential< Model.AssetCredential>][-ObjectType< AssetIntersightDeviceConnectorConnection.ObjectTypeEnum>][-SecurityToken< string>][-SerialNumber< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAssetIntersightDeviceConnectorConnection [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< AssetIntersightDeviceConnectorConnection.ClassIdEnum>][-Credential< Model.AssetCredential>][-ObjectType< AssetIntersightDeviceConnectorConnection.ObjectTypeEnum>][-PreClaim< bool>][-SecurityToken< string>][-SerialNumber< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -76,6 +76,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: AssetIntersightDeviceConnectorConnection.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PreClaim
+A pre-claim of an embedded target. Does not require a security token to be provided at target create, target will be created in a pre-claim state.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

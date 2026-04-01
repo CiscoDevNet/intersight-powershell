@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wQMHVt5hK90=",
+  "dgSpecHash": "vQx2FFChWy8=",
   "success": true,
-  "projectFilePath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2026030305/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
+  "projectFilePath": "/home/jenkins/workspace/Release-IS-Powershell-Module/src/github.com/cisco-intersight/powershell-generator-intersight/generated/Intersight.PowerShell_1.0.11.2026032021/src/Intersight.PowerShell/Intersight.PowerShell.csproj",
   "expectedPackageFiles": [
     "/var/lib/jenkins/.nuget/packages/comparenetobjects/4.61.0/comparenetobjects.4.61.0.nupkg.sha512",
     "/var/lib/jenkins/.nuget/packages/jsonsubtypes/1.8.0/jsonsubtypes.1.8.0.nupkg.sha512",

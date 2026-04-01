@@ -285,9 +285,3 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-IntersightSoftwarerepositoryCategorySupportConstraint](./New-IntersightSoftwarerepositoryCategorySupportConstraint.md)
-
-[Remove-IntersightSoftwarerepositoryCategorySupportConstraint](./Remove-IntersightSoftwarerepositoryCategorySupportConstraint.md)
-
-[Set-IntersightSoftwarerepositoryCategorySupportConstraint](./Set-IntersightSoftwarerepositoryCategorySupportConstraint.md)
-

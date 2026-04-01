@@ -2206,18 +2206,6 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
-    /// <para type="synopsis">This is the cmdlet to Remove IaasUcsdInfo.</para>
-    /// </summary>
-    [Cmdlet(VerbsCommon.Remove, "IntersightIaasUcsdInfo", SupportsShouldProcess = true)]
-    public class RemoveIntersightIaasUcsdInfo : RemoveCmdletBase
-    {
-        public RemoveIntersightIaasUcsdInfo()
-        {
-            ApiInstance = new IaasApi(Config);
-            MethodName = "DeleteIaasUcsdInfoWithHttpInfo";
-        }
-    }
-    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set IaasUcsdInfo.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightIaasUcsdInfo", SupportsShouldProcess = true)]

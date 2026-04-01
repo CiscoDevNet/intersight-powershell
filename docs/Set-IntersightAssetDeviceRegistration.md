@@ -224,5 +224,3 @@ PS C:\> Set-IntersightAssetDeviceRegistration
 [Initialize-IntersightAssetClaimSignature](./Initialize-IntersightAssetClaimSignature.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
-[Remove-IntersightAssetDeviceRegistration](./Remove-IntersightAssetDeviceRegistration.md)

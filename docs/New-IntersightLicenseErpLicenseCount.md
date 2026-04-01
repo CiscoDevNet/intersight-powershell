@@ -178,5 +178,3 @@ PS C:\> New-IntersightLicenseErpLicenseCount
 [Get-IntersightLicenseErpLicenseCount](./Get-IntersightLicenseErpLicenseCount.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
-[Set-IntersightLicenseErpLicenseCount](./Set-IntersightLicenseErpLicenseCount.md)

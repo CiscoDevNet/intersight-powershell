@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricSwitchControlPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AesPrimaryKey< string>][-Description< string>][-EnableJumboFrame< bool>][-EthernetSwitchingMode< FabricSwitchControlPolicy.EthernetSwitchingModeEnum>][-FabricPcVhbaReset< FabricSwitchControlPolicy.FabricPcVhbaResetEnum>][-FcSwitchingMode< FabricSwitchControlPolicy.FcSwitchingModeEnum>][-MacAgingSettings< FabricMacAgingSettings>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricBaseSwitchProfileRelationship]>][-ReservedVlanStartId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchControlPolicy.TargetPlatformEnum>][-UdldSettings< FabricUdldGlobalSettings>][-VlanPortOptimizationEnabled< bool>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricSwitchControlPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AesPrimaryKey< string>][-Description< string>][-EnableJumboFrame< bool>][-EthernetSwitchingMode< FabricSwitchControlPolicy.EthernetSwitchingModeEnum>][-FabricPcVhbaReset< FabricSwitchControlPolicy.FabricPcVhbaResetEnum>][-FcSwitchingMode< FabricSwitchControlPolicy.FcSwitchingModeEnum>][-MacAgingSettings< FabricMacAgingSettings>][-MacLearningSettings< FabricMacLearningSettings>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricBaseSwitchProfileRelationship]>][-ReservedVlanStartId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchControlPolicy.TargetPlatformEnum>][-UdldSettings< FabricUdldGlobalSettings>][-VlanPortOptimizationEnabled< bool>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -135,6 +135,23 @@ Note :- Use Initialize-IntersightFabricMacAgingSettings to create the object of 
 
 ```yaml
 Type: FabricMacAgingSettings
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MacLearningSettings
+Settings to control mac learning options.
+
+Note :- Use Initialize-IntersightFabricMacLearningSettings to create the object of complex type FabricMacLearningSettings
+
+```yaml
+Type: FabricMacLearningSettings
 Parameter Sets: (All)
 Aliases:
 
@@ -365,6 +382,8 @@ PS C:\> Set-IntersightFabricSwitchControlPolicy
 [Get-IntersightFabricSwitchControlPolicy](./Get-IntersightFabricSwitchControlPolicy.md)
 
 [Initialize-IntersightFabricMacAgingSettings](./Initialize-IntersightFabricMacAgingSettings.md)
+
+[Initialize-IntersightFabricMacLearningSettings](./Initialize-IntersightFabricMacLearningSettings.md)
 
 [Initialize-IntersightFabricUdldGlobalSettings](./Initialize-IntersightFabricUdldGlobalSettings.md)
 

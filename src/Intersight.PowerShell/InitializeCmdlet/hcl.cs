@@ -207,6 +207,163 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize HclDataImportLog.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightHclDataImportLog")]
+    public class InitializeIntersightHclDataImportLog : PSCmdlet
+    {
+        public InitializeIntersightHclDataImportLog()
+        {
+            ClassId = HclDataImportLog.ClassIdEnum.HclDataImportLog;
+            ImportType = HclDataImportLog.ImportTypeEnum.Delta;
+            ObjectType = HclDataImportLog.ObjectTypeEnum.HclDataImportLog;
+            Status = HclDataImportLog.StatusEnum.None;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"MD5 Checksum of the HCL Data file."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CheckSum
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HclDataImportLog.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the import whether it is full or a delta.\n* `Delta` - Imports only changes from the HCL tool into Intersight.\n* `Full` - Deletes the current data and does an full import of the data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HclDataImportLog.ImportTypeEnum ImportType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The timestamp of the last modified record in the HCL tool database. Used to query and get updated records."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public DateTime LastHclDataModifiedTime
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HclDataImportLog.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Status of the import process.\n* `None` - Default import status when no activity is taking place with respect to import.\n* `InProgress` - Data import is in progress.\n* `Success` - Data import is successful.\n* `Started` - Data import process has started.\n* `Failed` - Data import process has failed.\n* `NoChange` - There is no change in the data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HclDataImportLog.StatusEnum Status
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"More information on the status."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string StatusDetails
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.HclDataImportLog initObject = new Intersight.Model.HclDataImportLog();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CheckSum"))
+            {
+                initObject.CheckSum = this.CheckSum;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportType"))
+            {
+                initObject.ImportType = this.ImportType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LastHclDataModifiedTime"))
+            {
+                initObject.LastHclDataModifiedTime = this.LastHclDataModifiedTime;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            {
+                initObject.Status = this.Status;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StatusDetails"))
+            {
+                initObject.StatusDetails = this.StatusDetails;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize HclDriverImage.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightHclDriverImage")]
@@ -1713,6 +1870,63 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize HclServerConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightHclServerConfiguration")]
+    public class InitializeIntersightHclServerConfiguration : PSCmdlet
+    {
+        public InitializeIntersightHclServerConfiguration()
+        {
+            ClassId = HclServerConfiguration.ClassIdEnum.HclServerConfiguration;
+            ObjectType = HclServerConfiguration.ObjectTypeEnum.HclServerConfiguration;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HclServerConfiguration.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public HclServerConfiguration.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.HclServerConfiguration initObject = new Intersight.Model.HclServerConfiguration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

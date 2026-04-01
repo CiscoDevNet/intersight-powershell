@@ -198,5 +198,3 @@ PS C:\> Set-IntersightResourceMembership
 [Initialize-IntersightIamGroupPermissionToRoles](./Initialize-IntersightIamGroupPermissionToRoles.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
-
-[New-IntersightResourceMembership](./New-IntersightResourceMembership.md)
