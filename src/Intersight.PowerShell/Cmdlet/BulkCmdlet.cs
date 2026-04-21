@@ -301,17 +301,6 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"A reference to a bulkExport resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public BulkExportRelationship Export
-        {
-            get;
-            set;
-        }
-
-        // <summary>
         /// <para type="description">"Specifies whether tags must be exported for item MO."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1009,6 +998,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The Account ID for this managed object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1068,6 +1068,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Indicates whether the value of the 'backupEncryptionKey' property has been set."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsBackupEncryptionKeySet
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -1690,7 +1701,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The status of the request.\n* `Pending` - Indicates that the request is yet to be processed.\n* `ObjPresenceCheckInProgress` - Indicates that the checking for object presence is in progress.\n* `ObjPresenceCheckInComplete` - Indicates that the request is being processed.\n* `ObjPresenceCheckFailed` - Indicates that the checking for object presence failed.\n* `Processing` - Indicates that the request is being processed.\n* `TimedOut` - Indicates that the request processing timed out.\n* `Failed` - Indicates that the request processing failed.\n* `Completed` - Indicates that the request processing is complete.\n* `Skipped` - Indicates that the request was skipped."</para>
+        /// <para type="description">"The status of the request.\n* `Pending` - Indicates that the request is yet to be processed.\n* `ObjPresenceCheckInProgress` - Indicates that the checking for object presence is in progress.\n* `ObjPresenceCheckInComplete` - Indicates that the request is being processed.\n* `ObjPresenceCheckFailed` - Indicates that the checking for object presence failed.\n* `Processing` - Indicates that the request is being processed.\n* `TimedOut` - Indicates that the request processing timed out.\n* `Failed` - Indicates that the request processing failed.\n* `Completed` - Indicates that the request processing is complete.\n* `Partial` - Indicates that the request is partially complete due to an error.\n* `Skipped` - Indicates that the request was skipped."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2426,6 +2437,17 @@ namespace Intersight.PowerShell
             MethodName = "CreateBulkRequestWithHttpInfo";
         }
 
+        // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The action to be taken when an error occurs during processing of the request.\n* `Stop` - Stop the processing of the request after the first error.\n* `Proceed` - Proceed with the processing of the request even when an error occurs."</para>
@@ -2459,6 +2481,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

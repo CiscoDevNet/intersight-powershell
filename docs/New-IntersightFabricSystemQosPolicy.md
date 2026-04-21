@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFabricSystemQosPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Classes< System.Collections.Generic.List`1[FabricQosClass]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSystemQosPolicy.TargetPlatformEnum>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFabricSystemQosPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Classes< System.Collections.Generic.List`1[FabricQosClass]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PfcWatchdog< FabricPfcWatchDog>][-Profiles< System.Collections.Generic.List`1[FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSystemQosPolicy.TargetPlatformEnum>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -108,6 +108,23 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PfcWatchdog
+PFC Watchdog configuration.
+
+Note :- Use Initialize-IntersightFabricPfcWatchDog to create the object of complex type FabricPfcWatchDog
+
+```yaml
+Type: FabricPfcWatchDog
 Parameter Sets: (All)
 Aliases:
 
@@ -256,6 +273,8 @@ PS C:\> New-IntersightFabricSystemQosPolicy
 ## RELATED LINKS
 
 [Get-IntersightFabricSystemQosPolicy](./Get-IntersightFabricSystemQosPolicy.md)
+
+[Initialize-IntersightFabricPfcWatchDog](./Initialize-IntersightFabricPfcWatchDog.md)
 
 [Initialize-IntersightFabricQosClass](./Initialize-IntersightFabricQosClass.md)
 

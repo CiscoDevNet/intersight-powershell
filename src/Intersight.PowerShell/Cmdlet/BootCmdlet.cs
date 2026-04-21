@@ -2011,6 +2011,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Flag to denote if migration is enabled for the boot devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EnableBootMigrationSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"If UEFI secure boot is enabled, the boot mode is set to UEFI by default. Secure boot enforces that device boots using only software that is trusted by the Original Equipment Manufacturer (OEM)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -4014,6 +4025,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Flag to denote if migration is enabled for the boot devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableBootMigrationSupport
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"If UEFI secure boot is enabled, the boot mode is set to UEFI by default. Secure boot enforces that device boots using only software that is trusted by the Original Equipment Manufacturer (OEM)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5018,6 +5040,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Flag to denote if migration is enabled for the boot devices."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableBootMigrationSupport
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"If UEFI secure boot is enabled, the boot mode is set to UEFI by default. Secure boot enforces that device boots using only software that is trusted by the Original Equipment Manufacturer (OEM)."</para>

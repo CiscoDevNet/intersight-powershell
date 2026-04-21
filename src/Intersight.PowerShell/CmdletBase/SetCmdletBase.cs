@@ -123,7 +123,13 @@ namespace Intersight.PowerShell
             var getMethodInfo = this.ApiInstance.GetType().GetMethod(methodName);
             if (getMethodInfo != null)
             {
-                object[] argList = new[] { moid, 0 };
+                var parameters = getMethodInfo.GetParameters();
+                var argList = new object[parameters.Length];
+                argList[0] = moid;
+                for (int i = 1; i < parameters.Length; i++)
+                {
+                    argList[i] = parameters[i].HasDefaultValue ? parameters[i].DefaultValue : null;
+                }
                 var result = getMethodInfo.Invoke(ApiInstance, argList);
                 return result;
             }

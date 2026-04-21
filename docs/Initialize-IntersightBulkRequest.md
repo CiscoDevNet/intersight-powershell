@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBulkRequest [-ActionOnError< BulkRequest.ActionOnErrorEnum>][-Actions< System.Collections.Generic.List`1[BulkRequest.ActionsEnum]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkRequest.ClassIdEnum>][-Moid< string>][-ObjectType< BulkRequest.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Requests< System.Collections.Generic.List`1[Model.BulkSubRequest]>][-SkipDuplicates< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uri< string>][-Verb< BulkRequest.VerbEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBulkRequest [-Account< Model.IamAccountRelationship>][-ActionOnError< BulkRequest.ActionOnErrorEnum>][-Actions< System.Collections.Generic.List`1[BulkRequest.ActionsEnum]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BulkRequest.ClassIdEnum>][-Moid< string>][-ObjectType< BulkRequest.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Requests< System.Collections.Generic.List`1[Model.BulkSubRequest]>][-SkipDuplicates< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uri< string>][-Verb< BulkRequest.VerbEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,6 +23,24 @@ Initialize-IntersightBulkRequest [-ActionOnError< BulkRequest.ActionOnErrorEnum>
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
+
+### -Account
+A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.IamAccountRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -ActionOnError
 The action to be taken when an error occurs during processing of the request.\n* `Stop` - Stop the processing of the request after the first error.\n* `Proceed` - Proceed with the processing of the request even when an error occurs.

@@ -45,6 +45,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamTrustPointRelationship Certificate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Operation that binds all the different conditions together.\n* `All` - All is an AND condition applied against the individual conditions.\n* `Any` - Any is an OR condition applied against the individual conditions."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -84,6 +95,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"When true, TLS with custom certificate validation is enabled for this webhook subscription. The\ncertificate relationship must be set to a TrustPoint when enableTls is true. Only applicable for\nwebhook-type subscriptions; used for appliance deployments with private CAs. When false or unset,\ndefault TLS behavior (public CA trust) is used. SaaS typically leaves this false or unset."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EnableTls
         {
             get;
             set;
@@ -244,6 +266,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamTrustPointRelationship Certificate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Operation that binds all the different conditions together.\n* `All` - All is an AND condition applied against the individual conditions.\n* `Any` - Any is an OR condition applied against the individual conditions."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -277,6 +310,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"When true, TLS with custom certificate validation is enabled for this webhook subscription. The\ncertificate relationship must be set to a TrustPoint when enableTls is true. Only applicable for\nwebhook-type subscriptions; used for appliance deployments with private CAs. When false or unset,\ndefault TLS behavior (public CA trust) is used. SaaS typically leaves this false or unset."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableTls
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Subscription can be switched on/off without necessity to change the subscription\nsettings: notification methods, conditions, etc.\nEx.: Subscription MO can be configured, but switched off."</para>
@@ -423,6 +467,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamTrustPointRelationship Certificate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Operation that binds all the different conditions together.\n* `All` - All is an AND condition applied against the individual conditions.\n* `Any` - Any is an OR condition applied against the individual conditions."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -456,6 +511,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"When true, TLS with custom certificate validation is enabled for this webhook subscription. The\ncertificate relationship must be set to a TrustPoint when enableTls is true. Only applicable for\nwebhook-type subscriptions; used for appliance deployments with private CAs. When false or unset,\ndefault TLS behavior (public CA trust) is used. SaaS typically leaves this false or unset."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableTls
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Subscription can be switched on/off without necessity to change the subscription\nsettings: notification methods, conditions, etc.\nEx.: Subscription MO can be configured, but switched off."</para>

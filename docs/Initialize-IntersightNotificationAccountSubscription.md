@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNotificationAccountSubscription [-Actions< System.Collections.Generic.List`1[Model.NotificationAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NotificationAccountSubscription.ClassIdEnum>][-ConditionOperator< NotificationAccountSubscription.ConditionOperatorEnum>][-Conditions< System.Collections.Generic.List`1[Model.NotificationAbstractCondition]>][-Description< string>][-Enabled< bool>][-Moid< string>][-Name< string>][-ObjectType< NotificationAccountSubscription.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< NotificationAccountSubscription.TypeEnum>][-Verify< NotificationAccountSubscription.VerifyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNotificationAccountSubscription [-Actions< System.Collections.Generic.List`1[Model.NotificationAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Certificate< Model.IamTrustPointRelationship>][-ClassId< NotificationAccountSubscription.ClassIdEnum>][-ConditionOperator< NotificationAccountSubscription.ConditionOperatorEnum>][-Conditions< System.Collections.Generic.List`1[Model.NotificationAbstractCondition]>][-Description< string>][-EnableTls< bool>][-Enabled< bool>][-Moid< string>][-Name< string>][-ObjectType< NotificationAccountSubscription.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Type< NotificationAccountSubscription.TypeEnum>][-Verify< NotificationAccountSubscription.VerifyEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -46,6 +46,24 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Certificate
+A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.IamTrustPointRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -108,6 +126,21 @@ The description for the subscription.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableTls
+When true, TLS with custom certificate validation is enabled for this webhook subscription. The\ncertificate relationship must be set to a TrustPoint when enableTls is true. Only applicable for\nwebhook-type subscriptions; used for appliance deployments with private CAs. When false or unset,\ndefault TLS behavior (public CA trust) is used. SaaS typically leaves this false or unset.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

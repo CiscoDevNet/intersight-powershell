@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricSystemQosPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricSystemQosPolicy.ClassIdEnum>][-Classes< System.Collections.Generic.List`1[Model.FabricQosClass]>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSystemQosPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< FabricSystemQosPolicy.TargetPlatformEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricSystemQosPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< FabricSystemQosPolicy.ClassIdEnum>][-Classes< System.Collections.Generic.List`1[Model.FabricQosClass]>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSystemQosPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PfcWatchdog< Model.FabricPfcWatchDog>][-Profiles< System.Collections.Generic.List`1[Model.FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< FabricSystemQosPolicy.TargetPlatformEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -149,6 +149,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PfcWatchdog
+PFC Watchdog configuration.
+
+Note :- Use Initialize-IntersightFabricPfcWatchDog to create the object of complex type FabricPfcWatchDog
+
+```yaml
+Type: Model.FabricPfcWatchDog
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Profiles
 An array of relationships to fabricBaseSwitchProfile resources.
 
@@ -255,6 +272,8 @@ PS C:\> Initialize-IntersightFabricSystemQosPolicy
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightFabricPfcWatchDog](./Initialize-IntersightFabricPfcWatchDog.md)
 
 [Initialize-IntersightFabricQosClass](./Initialize-IntersightFabricQosClass.md)
 

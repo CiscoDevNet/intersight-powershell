@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Model
-Specific GPU model to select.\n* `Any` - To select any GPU model available in GPU Node.\n* `UCSC-GPU-H100-NVL` - NVIDIA H100 GPU with NVL interface.\n* `UCSC-GPU-H200-NVL` - NVIDIA H200 GPU with NVLink interface.\n* `UCSC-GPU-L40S` - NVIDIA L40S GPU with PCIe interface.\n* `UCSC-GPU-RTXP6000` - NVIDIA RTXP6000 GPU with PCIe interface.
+Specific GPU model to select.\n* `Any` - To select any GPU model available in GPU Node.\n* `UCSC-GPU-H100-NVL` - NVIDIA H100 GPU with NVL interface.\n* `UCSC-GPU-H200-NVL` - NVIDIA H200 GPU with NVLink interface.\n* `UCSC-GPU-L40S` - NVIDIA L40S GPU with PCIe interface.\n* `UCSC-GPU-RTXP6000` - NVIDIA RTXP6000 GPU with PCIe interface.\n* `UCSC-GPU-RTXP4500` - NVIDIA RTXP4500 GPU with PCIe interface.
 
 ```yaml
 Type: ComputeGpuPropFilter.ModelEnum

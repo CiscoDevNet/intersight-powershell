@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2026032021
-- C# SDK version: 1.0.11.2026032021
+- Intersight.PowerShell version: 1.0.11.2026041816
+- C# SDK version: 1.0.11.2026041816
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026032021"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026041816"}
 ```
 or
 
@@ -738,6 +738,7 @@ ApicSubnet | [**Get-IntersightApicSubnet**](docs/Get-IntersightApicSubnet.md) | 
 ApicTenant | [**Get-IntersightApicTenant**](docs/Get-IntersightApicTenant.md) | Read a 'ApicTenant' resource.
 ApicVpcGroup | [**Get-IntersightApicVpcGroup**](docs/Get-IntersightApicVpcGroup.md) | Read a 'ApicVpcGroup' resource.
 ApicVrfs | [**Get-IntersightApicVrfs**](docs/Get-IntersightApicVrfs.md) | Read a 'ApicVrfs' resource.
+ApiproxyAllowList | [**Get-IntersightApiproxyAllowList**](docs/Get-IntersightApiproxyAllowList.md) | Read a 'ApiproxyAllowList' resource.
 ApplianceAppOpStatus | [**Get-IntersightApplianceAppOpStatus**](docs/Get-IntersightApplianceAppOpStatus.md) | Read a 'ApplianceAppOpStatus' resource.
 ApplianceAppStatus | [**Get-IntersightApplianceAppStatus**](docs/Get-IntersightApplianceAppStatus.md) | Read a 'ApplianceAppStatus' resource.
 ApplianceAutoRmaPolicy | [**Get-IntersightApplianceAutoRmaPolicy**](docs/Get-IntersightApplianceAutoRmaPolicy.md) | Read a 'ApplianceAutoRmaPolicy' resource.
@@ -2326,6 +2327,7 @@ ServerConfigResultEntry | [**Get-IntersightServerConfigResultEntry**](docs/Get-I
 ServerDiagnosticStatus | [**Get-IntersightServerDiagnosticStatus**](docs/Get-IntersightServerDiagnosticStatus.md) | Read a 'ServerDiagnosticStatus' resource.
 ServerDiagnostics | [**Get-IntersightServerDiagnostics**](docs/Get-IntersightServerDiagnostics.md) | Read a 'ServerDiagnostics' resource.
 ServerDisruption | [**Get-IntersightServerDisruption**](docs/Get-IntersightServerDisruption.md) | Read a 'ServerDisruption' resource.
+ServerMigrationKeyDetails | [**Get-IntersightServerMigrationKeyDetails**](docs/Get-IntersightServerMigrationKeyDetails.md) | Read a 'ServerMigrationKeyDetails' resource.
 ServerProfile | [**Get-IntersightServerProfile**](docs/Get-IntersightServerProfile.md) | Read a 'ServerProfile' resource.
 ServerProfilePendingChangeEval | [**Get-IntersightServerProfilePendingChangeEval**](docs/Get-IntersightServerProfilePendingChangeEval.md) | Read a 'ServerProfilePendingChangeEval' resource.
 ServerProfileTemplate | [**Get-IntersightServerProfileTemplate**](docs/Get-IntersightServerProfileTemplate.md) | Read a 'ServerProfileTemplate' resource.
@@ -2336,6 +2338,7 @@ ServerProfile | [**New-IntersightServerProfile**](docs/New-IntersightServerProfi
 ServerProfileTemplate | [**New-IntersightServerProfileTemplate**](docs/New-IntersightServerProfileTemplate.md) | Create a 'ServerProfileTemplate' resource.
 ServerDiagnosticStatus | [**Remove-IntersightServerDiagnosticStatus**](docs/Remove-IntersightServerDiagnosticStatus.md) | Delete a 'ServerDiagnosticStatus' resource.
 ServerDiagnostics | [**Remove-IntersightServerDiagnostics**](docs/Remove-IntersightServerDiagnostics.md) | Delete a 'ServerDiagnostics' resource.
+ServerMigrationKeyDetails | [**Remove-IntersightServerMigrationKeyDetails**](docs/Remove-IntersightServerMigrationKeyDetails.md) | Delete a 'ServerMigrationKeyDetails' resource.
 ServerProfile | [**Remove-IntersightServerProfile**](docs/Remove-IntersightServerProfile.md) | Delete a 'ServerProfile' resource.
 ServerProfileTemplate | [**Remove-IntersightServerProfileTemplate**](docs/Remove-IntersightServerProfileTemplate.md) | Delete a 'ServerProfileTemplate' resource.
 ServerDiagnosticStatus | [**Set-IntersightServerDiagnosticStatus**](docs/Set-IntersightServerDiagnosticStatus.md) | Update a 'ServerDiagnosticStatus' resource.

@@ -8577,6 +8577,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
@@ -8829,6 +8830,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -9111,6 +9113,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -16542,6 +16545,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -16784,6 +16788,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -17024,6 +17029,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"PFC Watchdog configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricPfcWatchDog PfcWatchdog
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"An array of relationships to fabricBaseSwitchProfile resources."</para>
@@ -23425,6 +23441,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -23656,6 +23673,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -23885,6 +23903,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"PFC Watchdog configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricPfcWatchDog PfcWatchdog
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"An array of relationships to fabricBaseSwitchProfile resources."</para>

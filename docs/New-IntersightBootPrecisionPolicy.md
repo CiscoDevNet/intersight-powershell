@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightBootPrecisionPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootDevices< System.Collections.Generic.List`1[BootDeviceBase]>][-ConfiguredBootMode< BootPrecisionPolicy.ConfiguredBootModeEnum>][-Description< string>][-EnforceUefiSecureBoot< bool>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightBootPrecisionPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BootDevices< System.Collections.Generic.List`1[BootDeviceBase]>][-ConfiguredBootMode< BootPrecisionPolicy.ConfiguredBootModeEnum>][-Description< string>][-EnableBootMigrationSupport< bool>][-EnforceUefiSecureBoot< bool>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -90,6 +90,21 @@ Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableBootMigrationSupport
+Flag to denote if migration is enabled for the boot devices.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
