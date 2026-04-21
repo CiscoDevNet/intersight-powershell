@@ -153,6 +153,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamTrustPointRelationship Certificate
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -188,6 +198,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9_.\\- ]{1,128}$")]
         public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When true, TLS with custom certificate validation is enabled for this webhook subscription. The\ncertificate relationship must be set to a TrustPoint when enableTls is true. Only applicable for\nwebhook-type subscriptions; used for appliance deployments with private CAs. When false or unset,\ndefault TLS behavior (public CA trust) is used. SaaS typically leaves this false or unset."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableTls
         {
             get;
             set;
@@ -275,6 +295,10 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Certificate"))
+            {
+                initObject.Certificate = this.Certificate;
+            }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("ConditionOperator"))
             {
@@ -287,6 +311,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableTls"))
+            {
+                initObject.EnableTls = this.EnableTls;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
             {

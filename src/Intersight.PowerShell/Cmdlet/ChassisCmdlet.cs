@@ -817,6 +817,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"IOM in chassis for which IOM profile is applicable. or which is attached to a Fabric Interconnect managed by Intersight.\n* `IOMA` - IOM on left side of chassis.\n* `IOMB` - IOM on right side of chassis."</para>
         /// </summary>
@@ -1070,6 +1071,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
@@ -1297,6 +1299,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -1679,6 +1682,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -1893,6 +1897,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -2143,6 +2148,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -2346,6 +2352,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightBulkRequest [-ActionOnError< BulkRequest.ActionOnErrorEnum>][-Actions< System.Collections.Generic.List`1[BulkRequest.ActionsEnum]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Requests< System.Collections.Generic.List`1[BulkSubRequest]>][-SkipDuplicates< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uri< string>][-Verb< BulkRequest.VerbEnum>][-IfMatch< String>][-IfNoneMatch< String>][-Prefer< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightBulkRequest [-Account< IamAccountRelationship>][-ActionOnError< BulkRequest.ActionOnErrorEnum>][-Actions< System.Collections.Generic.List`1[BulkRequest.ActionsEnum]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-Requests< System.Collections.Generic.List`1[BulkSubRequest]>][-SkipDuplicates< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uri< string>][-Verb< BulkRequest.VerbEnum>][-IfMatch< String>][-IfNoneMatch< String>][-Prefer< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -22,6 +22,24 @@ New-IntersightBulkRequest [-ActionOnError< BulkRequest.ActionOnErrorEnum>][-Acti
 Create a &apos;BulkRequest&apos; resource.
 
 ## PARAMETERS
+
+### -Account
+A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamAccountRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -ActionOnError
 The action to be taken when an error occurs during processing of the request.\n* `Stop` - Stop the processing of the request after the first error.\n* `Proceed` - Proceed with the processing of the request even when an error occurs.

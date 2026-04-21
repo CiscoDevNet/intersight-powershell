@@ -1433,7 +1433,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The reason of the current Cisco HCL status of the custom Hcl baseline.\n* `Missing-Os-Info` - This means the HclStatus for the server failed HCL validation because we have missing operating system information. Either install ucstools vib or use power shell scripts to tag proper operating system information.\n* `Incompatible-Components` - This means the HclStatus for the server failed HCL validation because one or more of its components failed validation. To see why components failed check the related HclStatusDetails.\n* `Compatible` - This means the HclStatus for the server has passed HCL validation for all of its related components.\n* `Not-Evaluated` - This means the HclStatus for the server has not been evaluated because it is exempted.\n* `Not-Applicable` - At the HclStatus level this means that the custom Hcl provided is not applicable to the server."</para>
+        /// <para type="description">"The reason of the current Cisco HCL status of the custom Hcl baseline.\n* `Missing-Os-Info` - This means the HclStatus for the server failed HCL validation because we have missing operating system information. Either install ucstools vib or use power shell scripts to tag proper operating system information.\n* `Incompatible-Components` - This means the HclStatus for the server failed HCL validation because one or more of its components failed validation. To see why components failed check the related HclStatusDetails.\n* `Compatible` - This means the HclStatus for the server has passed HCL validation for all of its related components.\n* `Not-Evaluated` - This means the HclStatus for the server has not been evaluated because it is exempted.\n* `Not-Applicable` - At the HclStatus level this means that the custom Hcl provided is not applicable to the server.\n* `Onboarding-Account` - This means the HclStatus for the server has not been evaluated because the server belongs to onboarding account."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1535,7 +1535,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The operating system vendor name running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ ]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ -]+$")]
         public string OsVendor
         {
             get;
@@ -1546,7 +1546,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Operating System version running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ .]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ .()-]+$")]
         public string OsVersion
         {
             get;
@@ -2163,7 +2163,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The reason for the HCL status. It will be one of the following \"Missing-Os-Info\" - we are missing operating system information in the inventory from the device connector \"Incompatible-Components\" - we have 1 or more components with \"Not-Validated\" status \"Compatible\" - all the components have \"Validated\" status. \"Not-Evaluated\" - The server is not evaluated against the HCL because it is exempted.\n* `Missing-Os-Info` - This means the HclStatus for the server failed HCL validation because we have missing operating system information. Either install ucstools vib or use power shell scripts to tag proper operating system information.\n* `Incompatible-Components` - This means the HclStatus for the server failed HCL validation because one or more of its components failed validation. To see why components failed check the related HclStatusDetails.\n* `Compatible` - This means the HclStatus for the server has passed HCL validation for all of its related components.\n* `Not-Evaluated` - This means the HclStatus for the server has not been evaluated because it is exempted.\n* `Not-Applicable` - At the HclStatus level this means that the custom Hcl provided is not applicable to the server."</para>
+        /// <para type="description">"The reason for the HCL status. It will be one of the following \"Missing-Os-Info\" - we are missing operating system information in the inventory from the device connector \"Incompatible-Components\" - we have 1 or more components with \"Not-Validated\" status \"Compatible\" - all the components have \"Validated\" status. \"Not-Evaluated\" - The server is not evaluated against the HCL because it is exempted.\n* `Missing-Os-Info` - This means the HclStatus for the server failed HCL validation because we have missing operating system information. Either install ucstools vib or use power shell scripts to tag proper operating system information.\n* `Incompatible-Components` - This means the HclStatus for the server failed HCL validation because one or more of its components failed validation. To see why components failed check the related HclStatusDetails.\n* `Compatible` - This means the HclStatus for the server has passed HCL validation for all of its related components.\n* `Not-Evaluated` - This means the HclStatus for the server has not been evaluated because it is exempted.\n* `Not-Applicable` - At the HclStatus level this means that the custom Hcl provided is not applicable to the server.\n* `Onboarding-Account` - This means the HclStatus for the server has not been evaluated because the server belongs to onboarding account."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -3451,7 +3451,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The operating system vendor name running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ ]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ -]+$")]
         public string OsVendor
         {
             get;
@@ -3462,7 +3462,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Operating System version running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ .]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ .()-]+$")]
         public string OsVersion
         {
             get;
@@ -4432,7 +4432,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The operating system vendor name running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ ]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ -]+$")]
         public string OsVendor
         {
             get;
@@ -4443,7 +4443,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Operating System version running on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9_ .]+$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_ .()-]+$")]
         public string OsVersion
         {
             get;

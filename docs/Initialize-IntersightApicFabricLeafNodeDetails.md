@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-Id of an leaf node within the Cisco Application Policy Infrastructure Controller (APIC).
+Leaf node ID in Cisco Application Policy Infrastructure Controller (APIC).
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of an leaf node within the Cisco Application Policy Infrastructure Controller (APIC).
+Leaf node name in Cisco Application Policy Infrastructure Controller (APIC).
 
 ```yaml
 Type: string

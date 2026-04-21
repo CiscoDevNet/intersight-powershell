@@ -1141,6 +1141,16 @@ namespace Intersight.PowerShell
 
         }
         // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The action to be taken when an error occurs during processing of the request.\n* `Stop` - Stop the processing of the request after the first error.\n* `Proceed` - Proceed with the processing of the request even when an error occurs."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1265,6 +1275,10 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkRequest initObject = new Intersight.Model.BulkRequest();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
+            {
+                initObject.Account = this.Account;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ActionOnError"))
             {
                 initObject.ActionOnError = this.ActionOnError;

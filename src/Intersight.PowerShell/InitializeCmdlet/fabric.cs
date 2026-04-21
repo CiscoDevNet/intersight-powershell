@@ -6251,6 +6251,105 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricPfcWatchDog.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricPfcWatchDog")]
+    public class InitializeIntersightFabricPfcWatchDog : PSCmdlet
+    {
+        public InitializeIntersightFabricPfcWatchDog()
+        {
+            ClassId = FabricPfcWatchDog.ClassIdEnum.FabricPfcWatchDog;
+            ObjectType = FabricPfcWatchDog.ObjectTypeEnum.FabricPfcWatchDog;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricPfcWatchDog.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables or disables the Priority-based Flow Control (PFC) watchdog feature. When enabled, the watchdog actively monitors PFC pause frames. By default Priority Flow Control is enabled for new QoS policies. Existing policies remain unaffected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsWatchdogEnabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricPfcWatchDog.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Shutdown Multiplier, multiplied by the watchdog timer, determines the total duration a Priority-based Flow Control (PFC)-enabled queue remains in shutdown mode. The maximum Watchdog Shutdown Multiplier is 10. However, if the Watchdog Interval exceeds 500 milliseconds, the Multiplier limit is reduced to 2."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 10)]
+        public long ShutdownMultiplier
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Time in milliseconds for the PFC Watchdog. The Watchdog product (Watchdog Interval (in milliseconds) × Shutdown Multiplier) cannot exceed 1000ms."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(100, 1000)]
+        public long WatchdogInterval
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricPfcWatchDog initObject = new Intersight.Model.FabricPfcWatchDog();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsWatchdogEnabled"))
+            {
+                initObject.IsWatchdogEnabled = this.IsWatchdogEnabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ShutdownMultiplier"))
+            {
+                initObject.ShutdownMultiplier = this.ShutdownMultiplier;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("WatchdogInterval"))
+            {
+                initObject.WatchdogInterval = this.WatchdogInterval;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricPortIdentifier.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricPortIdentifier")]
@@ -9982,6 +10081,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"PFC Watchdog configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricPfcWatchDog PfcWatchdog
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"An array of relationships to fabricBaseSwitchProfile resources."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -10041,6 +10150,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
             {
                 initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PfcWatchdog"))
+            {
+                initObject.PfcWatchdog = this.PfcWatchdog;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Profiles"))
             {

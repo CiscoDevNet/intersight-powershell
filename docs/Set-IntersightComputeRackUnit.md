@@ -795,6 +795,8 @@ PS C:\> Set-IntersightComputeRackUnit
 
 [Initialize-IntersightComputeRackUnit.OperReasonEnum](./Initialize-IntersightComputeRackUnit.OperReasonEnum.md)
 
+[Initialize-IntersightComputeRecoveryKeyDetails](./Initialize-IntersightComputeRecoveryKeyDetails.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Remove-IntersightComputeRackUnit](./Remove-IntersightComputeRackUnit.md)

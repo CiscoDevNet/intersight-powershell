@@ -262,6 +262,7 @@ namespace Intersight.PowerShell
             CbsCmnApbdis = BiosPolicy.CbsCmnApbdisEnum.PlatformDefault;
             CbsCmnCpuAvx512 = BiosPolicy.CbsCmnCpuAvx512Enum.PlatformDefault;
             CbsCmnCpuCpb = BiosPolicy.CbsCmnCpuCpbEnum.PlatformDefault;
+            CbsCmnCpuFrequencyControl = BiosPolicy.CbsCmnCpuFrequencyControlEnum.PlatformDefault;
             CbsCmnCpuGenDowncoreCtrl = BiosPolicy.CbsCmnCpuGenDowncoreCtrlEnum.PlatformDefault;
             CbsCmnCpuGlobalCstateCtrl = BiosPolicy.CbsCmnCpuGlobalCstateCtrlEnum.PlatformDefault;
             CbsCmnCpuL1streamHwPrefetcher = BiosPolicy.CbsCmnCpuL1streamHwPrefetcherEnum.PlatformDefault;
@@ -648,6 +649,7 @@ namespace Intersight.PowerShell
             SnoopyModeFor2lm = BiosPolicy.SnoopyModeFor2lmEnum.PlatformDefault;
             SnoopyModeForAd = BiosPolicy.SnoopyModeForAdEnum.PlatformDefault;
             SparingMode = BiosPolicy.SparingModeEnum.PlatformDefault;
+            SpeculativeLockEnable = BiosPolicy.SpeculativeLockEnableEnum.PlatformDefault;
             SrIov = BiosPolicy.SrIovEnum.PlatformDefault;
             StreamerPrefetch = BiosPolicy.StreamerPrefetchEnum.PlatformDefault;
             SvmMode = BiosPolicy.SvmModeEnum.PlatformDefault;
@@ -1049,6 +1051,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsCmnCpuCpbEnum CbsCmnCpuCpb
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"BIOS Token for setting CPU Frequency Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuFrequencyControl token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuFrequencyControl token.\n* `enabled` - Value - enabled for configuring CbsCmnCpuFrequencyControl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnCpuFrequencyControlEnum CbsCmnCpuFrequencyControl
         {
             get;
             set;
@@ -5124,6 +5136,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"BIOS Token for setting Speculative Lock configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.SpeculativeLockEnableEnum SpeculativeLockEnable
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"BIOS Token for setting SR-IOV Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5615,6 +5637,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("CbsCmnCpuCpb"))
             {
                 initObject.CbsCmnCpuCpb = this.CbsCmnCpuCpb;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CbsCmnCpuFrequencyControl"))
+            {
+                initObject.CbsCmnCpuFrequencyControl = this.CbsCmnCpuFrequencyControl;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("CbsCmnCpuGenDowncoreCtrl"))
             {
@@ -7237,6 +7263,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SparingMode"))
             {
                 initObject.SparingMode = this.SparingMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SpeculativeLockEnable"))
+            {
+                initObject.SpeculativeLockEnable = this.SpeculativeLockEnable;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SrIov"))
             {

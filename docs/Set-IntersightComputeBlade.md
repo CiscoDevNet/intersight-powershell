@@ -747,4 +747,6 @@ PS C:\> Set-IntersightComputeBlade
 
 [Initialize-IntersightComputeIpAddress](./Initialize-IntersightComputeIpAddress.md)
 
+[Initialize-IntersightComputeRecoveryKeyDetails](./Initialize-IntersightComputeRecoveryKeyDetails.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

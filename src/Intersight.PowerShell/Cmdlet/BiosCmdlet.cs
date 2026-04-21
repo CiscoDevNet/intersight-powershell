@@ -909,6 +909,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting CPU Frequency Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuFrequencyControl token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuFrequencyControl token.\n* `enabled` - Value - enabled for configuring CbsCmnCpuFrequencyControl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.CbsCmnCpuFrequencyControlEnum CbsCmnCpuFrequencyControl
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting Downcore Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuGenDowncoreCtrl token.\n* `TWO (1 + 1)` - Value - TWO (1 + 1) for configuring CbsCmnCpuGenDowncoreCtrl token.\n* `FOUR (2 + 2)` - Value - FOUR (2 + 2) for configuring CbsCmnCpuGenDowncoreCtrl token.\n* `TWO (2 + 0)` - Value - TWO (2 + 0) for configuring CbsCmnCpuGenDowncoreCtrl token.\n* `SIX (3 + 3)` - Value - SIX (3 + 3) for configuring CbsCmnCpuGenDowncoreCtrl token.\n* `THREE (3 + 0)` - Value - THREE (3 + 0) for configuring CbsCmnCpuGenDowncoreCtrl token.\n* `FOUR (4 + 0)` - Value - FOUR (4 + 0) for configuring CbsCmnCpuGenDowncoreCtrl token."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -5411,6 +5422,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Speculative Lock configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.SpeculativeLockEnableEnum SpeculativeLockEnable
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting SR-IOV Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7244,6 +7266,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsCmnCpuCpbEnum CbsCmnCpuCpb
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting CPU Frequency Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuFrequencyControl token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuFrequencyControl token.\n* `enabled` - Value - enabled for configuring CbsCmnCpuFrequencyControl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnCpuFrequencyControlEnum CbsCmnCpuFrequencyControl
         {
             get;
             set;
@@ -11712,6 +11745,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"BIOS Token for setting Speculative Lock configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.SpeculativeLockEnableEnum SpeculativeLockEnable
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting SR-IOV Support configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -12642,6 +12686,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.CbsCmnCpuCpbEnum CbsCmnCpuCpb
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting CPU Frequency Control configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring CbsCmnCpuFrequencyControl token.\n* `disabled` - Value - disabled for configuring CbsCmnCpuFrequencyControl token.\n* `enabled` - Value - enabled for configuring CbsCmnCpuFrequencyControl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.CbsCmnCpuFrequencyControlEnum CbsCmnCpuFrequencyControl
         {
             get;
             set;
@@ -17104,6 +17159,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.SparingModeEnum SparingMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"BIOS Token for setting Speculative Lock configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.SpeculativeLockEnableEnum SpeculativeLockEnable
         {
             get;
             set;

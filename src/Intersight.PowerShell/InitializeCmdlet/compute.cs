@@ -1384,7 +1384,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Specific GPU model to select.\n* `Any` - To select any GPU model available in GPU Node.\n* `UCSC-GPU-H100-NVL` - NVIDIA H100 GPU with NVL interface.\n* `UCSC-GPU-H200-NVL` - NVIDIA H200 GPU with NVLink interface.\n* `UCSC-GPU-L40S` - NVIDIA L40S GPU with PCIe interface.\n* `UCSC-GPU-RTXP6000` - NVIDIA RTXP6000 GPU with PCIe interface."</para>
+        /// <para type="description">"Specific GPU model to select.\n* `Any` - To select any GPU model available in GPU Node.\n* `UCSC-GPU-H100-NVL` - NVIDIA H100 GPU with NVL interface.\n* `UCSC-GPU-H200-NVL` - NVIDIA H200 GPU with NVLink interface.\n* `UCSC-GPU-L40S` - NVIDIA L40S GPU with PCIe interface.\n* `UCSC-GPU-RTXP6000` - NVIDIA RTXP6000 GPU with PCIe interface.\n* `UCSC-GPU-RTXP4500` - NVIDIA RTXP4500 GPU with PCIe interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1761,6 +1761,63 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeMigrationKeyInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeMigrationKeyInfo")]
+    public class InitializeIntersightComputeMigrationKeyInfo : PSCmdlet
+    {
+        public InitializeIntersightComputeMigrationKeyInfo()
+        {
+            ClassId = ComputeMigrationKeyInfo.ClassIdEnum.ComputeMigrationKeyInfo;
+            ObjectType = ComputeMigrationKeyInfo.ObjectTypeEnum.ComputeMigrationKeyInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeMigrationKeyInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeMigrationKeyInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputeMigrationKeyInfo initObject = new Intersight.Model.ComputeMigrationKeyInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -3402,6 +3459,63 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ComputeRecoveryKeyDetails.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightComputeRecoveryKeyDetails")]
+    public class InitializeIntersightComputeRecoveryKeyDetails : PSCmdlet
+    {
+        public InitializeIntersightComputeRecoveryKeyDetails()
+        {
+            ClassId = ComputeRecoveryKeyDetails.ClassIdEnum.ComputeRecoveryKeyDetails;
+            ObjectType = ComputeRecoveryKeyDetails.ObjectTypeEnum.ComputeRecoveryKeyDetails;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeRecoveryKeyDetails.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ComputeRecoveryKeyDetails.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ComputeRecoveryKeyDetails initObject = new Intersight.Model.ComputeRecoveryKeyDetails();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

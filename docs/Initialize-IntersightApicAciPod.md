@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Name of a pod extracted from Dn within the Cisco Application Policy Infrastructure Controller (APIC).
+Pod name extracted from DN in Cisco Application Policy Infrastructure Controller (APIC).
 
 ```yaml
 Type: string
@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -PodType
-Pod type of an object within the Cisco Application Policy Infrastructure Controller (APIC).
+Object pod type in Cisco Application Policy Infrastructure Controller (APIC).
 
 ```yaml
 Type: string
