@@ -7,73 +7,100 @@ using Intersight.Model;
 using System.Linq;
 using System.Collections;
 using System.Management.Automation;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+
 
 namespace Intersight.PowerShell
 {
     public class PSUtils
     {
-        public const string ObjectType = "ObjectType";
-        public const string Moid = "Moid";
-        public const string CmdletParam = "cmdletParam";
-        public const string JsonData = "jsonData";
-
-        public static string GetPath(string objectType)
+        private static readonly Dictionary<string, string> IrregularPlurals = new Dictionary<string, string>
         {
-            var path = string.Empty;
-            var tempList = objectType.Split('.');
-            tempList[tempList.Length - 1] = GetPlurals(tempList[tempList.Length - 1]);
-            path = string.Join('/', tempList);
-            return path;
-        }
+            {"child", "children"},
+            {"man", "men"},
+            {"woman", "women"},
+            {"person", "people"},
+            {"tooth", "teeth"},
+            {"foot", "feet"},
+            {"mouse", "mice"},
+            {"ox", "oxen"},
+            {"goose", "geese"},
+            {"sheep", "sheep"},
+            {"deer", "deer"},
+            {"fish", "fish"}
+        };
 
-        public static string GetPlurals(string str)
+        private static readonly List<string> UncountableNouns = new List<string>
         {
-            var result = string.Empty;
-            var charArray = str.ToCharArray();
-            var lastChar = charArray[charArray.Length - 1];
-            var secondLastChar = charArray[charArray.Length - 2];
-            if (lastChar == 'o')
-            {
-                result = string.Concat(str, "es");
-            }
-            else if (lastChar == 'y')
-            {
-                if (isVowel(secondLastChar))
-                {
-                    result = string.Concat(str, "s");
-                }
-                else
-                {
-                    var temp = charArray;
-                    temp[temp.Length - 1] = 'i';
-                    result = string.Concat(string.Join("", temp), "es");
-                }
+            "sheep", "deer", "fish", "series", "species", "means", "news", "information"
+        };
 
-            }
-            else if (isVowel(lastChar) && isVowel(secondLastChar))
+        /// <summary>
+        /// Get APIPath to invoke the endpoint.
+        /// </summary>
+        /// <param name="objectType"></param>
+        /// <param name="apiPath"></param>
+        /// <param name="cmdletVerb"></param>
+        /// <returns></returns>
+        public static string GetPath(string objectType, string apiPath, string cmdletVerb)
+        {
+            if (!string.IsNullOrEmpty(objectType))
             {
-                result = string.Concat(str, "s");
+                var path = string.Empty;
+                var tempList = objectType.Split('.');
+                tempList[tempList.Length - 1] = GetPlurals(tempList[tempList.Length - 1]);
+                path = string.Join('/', tempList);
+                return GetAPIUrlFromObjectType(path, cmdletVerb);
+            }
+            else if (!string.IsNullOrEmpty(apiPath) && (cmdletVerb == VerbsCommon.Set || cmdletVerb == VerbsCommon.Remove))
+            {
+                return AppendMoidInUrl(apiPath);
             }
             else
             {
-                result = string.Concat(str, "s");
+                return apiPath;
             }
-
-            return result;
         }
 
-        public static bool isVowel(char ch)
+        public static string GetPlurals(string word)
         {
-            var vowels = new List<char> { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
-            if (vowels.Contains(ch))
+            if (string.IsNullOrEmpty(word))
             {
-                return true;
+                return word;
             }
-            return false;
+            if (UncountableNouns.Contains(word.ToLower()))
+            {
+                return word;
+            }
+            if (IrregularPlurals.TryGetValue(word.ToLower(), out string plural))
+            {
+                return plural;
+            }
+            if (word.EndsWith("y") && !EndsWithVowel(word.Substring(word.Length - 2)))
+            {
+                return word.Substring(0, word.Length - 1) + "ies";
+            }
+            if (word.EndsWith("s") || word.EndsWith("x") || word.EndsWith("ch") || word.EndsWith("sh") || word.EndsWith("ss"))
+            {
+                return word + "es";
+            }
+            if (word.EndsWith("f"))
+            {
+                return word.Substring(0, word.Length - 1) + "ves";
+            }
+            if (word.EndsWith("fe"))
+            {
+                return word.Substring(0, word.Length - 2) + "ves";
+            }
+            return word + "s";
         }
 
+        private static bool EndsWithVowel(string str)
+        {
+            return "aeiou".Contains(str.ToLower()[str.Length - 1]);
+        }
         public static string GetObjectTypeDisplayName(string objectType)
         {
             string result = String.Empty;
@@ -92,6 +119,65 @@ namespace Intersight.PowerShell
             }
 
             return result;
+        }
+
+        /// <summary>
+        /// Check either of ObjectType and APIPath should be provided
+        /// </summary>
+        /// <param name="ObjectType"></param>
+        /// <param name="APIPath"></param>
+        /// <exception cref="System.Exception"></exception>
+        public static void CheckMutualExclusiveForObjectTypeAndAPIPath(string ObjectType, string APIPath)
+        {
+            if (string.IsNullOrEmpty(ObjectType) && string.IsNullOrEmpty(APIPath))
+            {
+                throw new System.Exception(string.Format("ObjectType or APIPath should not be empty. Specify oneof it"));
+            }
+
+            if (!string.IsNullOrEmpty(ObjectType) && !string.IsNullOrEmpty(APIPath))
+            {
+                throw new System.Exception("Specify either the ObjectType or the APIPath");
+            }
+        }
+
+        /// <summary>
+        /// Appned the Moid in url in case if set and Remove cmdlet if it is not present in APIPath
+        /// </summary>
+        /// <param name="apiPath"></param>
+        /// <returns></returns>
+        public static string AppendMoidInUrl(string apiPath)
+        {
+            var urlregex = new Regex("^*{Moid}");
+            if (!urlregex.IsMatch(apiPath))
+            {
+                apiPath += "/{Moid}";
+            }
+            return apiPath;
+        }
+
+
+        /// <summary>
+        /// Get APIUrl from object type
+        /// </summary>
+        /// <param name="objectType"></param>
+        /// <param name="cmdletVerb"></param>
+        /// <returns></returns>
+        public static string GetAPIUrlFromObjectType(string objectType, string cmdletVerb)
+        {
+            if (string.IsNullOrEmpty(objectType))
+                return objectType;
+
+            var urlByMoid = "/api/v1/{0}/{{Moid}}";
+            var url = "/api/v1/{0}";
+
+            switch (cmdletVerb)
+            {
+                case VerbsCommon.Get:
+                case VerbsCommon.New: return string.Format(url, objectType);
+                case VerbsCommon.Set:
+                case VerbsCommon.Remove: return string.Format(urlByMoid, objectType);
+            }
+            return string.Empty;
         }
 
         /// <summary>

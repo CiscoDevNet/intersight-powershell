@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPoolReservationReference [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PoolReservationReference.ClassIdEnum>][-ObjectType< PoolReservationReference.ObjectTypeEnum>][-ReservationMoid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPoolReservationReference [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PoolReservationReference.ClassIdEnum>][-ObjectType< PoolReservationReference.ObjectTypeEnum>][-ReservationId< string>][-ReservationMoid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: PoolReservationReference.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ReservationId
+The identity for which the reference is created. It is used to store the ID allocated to the profile during export. \nReservation id and Reservation moid are mutually exclusive and during export only reservationid will be populated.\nDuring import, If necessary reservation will be created based on reservationId and reservationMoid will be populated in the reference.\nFor IP and UUid IDs, we create reservation, for other Ids we do not create reservations.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

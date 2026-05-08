@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightServerProfileTemplate [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ServerProfileTemplate.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-EnableOverride< bool>][-Moid< string>][-Name< string>][-ObjectType< ServerProfileTemplate.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ServerProfileTemplate.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-Type< ServerProfileTemplate.TypeEnum>][-UuidAddressType< ServerProfileTemplate.UuidAddressTypeEnum>][-UuidPool< Model.UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightServerProfileTemplate [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ServerProfileTemplate.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-EnableOverride< bool>][-Moid< string>][-Name< string>][-ObjectType< ServerProfileTemplate.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-ServerFamily< ServerProfileTemplate.ServerFamilyEnum>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ServerProfileTemplate.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-Type< ServerProfileTemplate.TypeEnum>][-UuidAddressType< ServerProfileTemplate.UuidAddressTypeEnum>][-UuidPool< Model.UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -221,6 +221,21 @@ Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of c
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.PolicyScheduledAction]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerFamily
+The server family type applicable to a server profile when the target platform is Standalone. For all other platform types, the value should be All.\n* `Unspecified` - Server Family type for Unspecified servers.\n* `All` - All server family types are included under this category.\n* `UCSC845A` - Server Family type for UCS C845A servers.\n* `UCSC2XX/4XX` - Server Family type for UCS C2XX/4XX servers.
+
+```yaml
+Type: ServerProfileTemplate.ServerFamilyEnum
 Parameter Sets: (All)
 Aliases:
 

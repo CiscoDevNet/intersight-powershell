@@ -8,6 +8,61 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosBaseBiosConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosBaseBiosConfiguration")]
+    public class InitializeIntersightBiosBaseBiosConfiguration : PSCmdlet
+    {
+        public InitializeIntersightBiosBaseBiosConfiguration()
+        {
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosBaseBiosConfiguration.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosBaseBiosConfiguration.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosBaseBiosConfiguration initObject = new Intersight.Model.BiosBaseBiosConfiguration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BiosBootDevice.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBiosBootDevice")]
@@ -220,6 +275,3443 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosC845BaseBiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosC845BaseBiosToken")]
+    public class InitializeIntersightBiosC845BaseBiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosC845BaseBiosToken()
+        {
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosC845BaseBiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosC845BaseBiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosC845BaseBiosToken initObject = new Intersight.Model.BiosC845BaseBiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosC845ServerBiosConfiguration.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosC845ServerBiosConfiguration")]
+    public class InitializeIntersightBiosC845ServerBiosConfiguration : PSCmdlet
+    {
+        public InitializeIntersightBiosC845ServerBiosConfiguration()
+        {
+            ClassId = BiosC845ServerBiosConfiguration.ClassIdEnum.BiosC845ServerBiosConfiguration;
+            ObjectType = BiosC845ServerBiosConfiguration.ObjectTypeEnum.BiosC845ServerBiosConfiguration;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.BiosC845BaseBiosToken> BiosTokens
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosC845ServerBiosConfiguration.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosC845ServerBiosConfiguration.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosC845ServerBiosConfiguration initObject = new Intersight.Model.BiosC845ServerBiosConfiguration();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BiosTokens"))
+            {
+                initObject.BiosTokens = this.BiosTokens;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnApbdisC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnApbdisC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnApbdisC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnApbdisC845BiosToken()
+        {
+            ClassId = BiosCbsCmnApbdisC845BiosToken.ClassIdEnum.BiosCbsCmnApbdisC845BiosToken;
+            ObjectType = BiosCbsCmnApbdisC845BiosToken.ObjectTypeEnum.BiosCbsCmnApbdisC845BiosToken;
+            Value = BiosCbsCmnApbdisC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnApbdisC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnApbdisC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"0 = not APBDIS (mission mode)  1 = APBDIS.\n* `Auto` - Value -- Auto for configuring CbsCmnApbdis token.\n* `0` - Value -- 0 for configuring CbsCmnApbdis token.\n* `1` - Value -- 1 for configuring CbsCmnApbdis token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnApbdisC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnApbdisC845BiosToken initObject = new Intersight.Model.BiosCbsCmnApbdisC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnCpuAvx512C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnCpuAvx512C845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnCpuAvx512C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnCpuAvx512C845BiosToken()
+        {
+            ClassId = BiosCbsCmnCpuAvx512C845BiosToken.ClassIdEnum.BiosCbsCmnCpuAvx512C845BiosToken;
+            ObjectType = BiosCbsCmnCpuAvx512C845BiosToken.ObjectTypeEnum.BiosCbsCmnCpuAvx512C845BiosToken;
+            Value = BiosCbsCmnCpuAvx512C845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuAvx512C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuAvx512C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or disable AVX-512.\n* `Auto` - Value -- Auto for configuring CbsCmnCpuAvx512 token.\n* `Disabled` - Value -- Disabled for configuring CbsCmnCpuAvx512 token.\n* `Enabled` - Value -- Enabled for configuring CbsCmnCpuAvx512 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuAvx512C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnCpuAvx512C845BiosToken initObject = new Intersight.Model.BiosCbsCmnCpuAvx512C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnCpuCpbC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnCpuCpbC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnCpuCpbC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnCpuCpbC845BiosToken()
+        {
+            ClassId = BiosCbsCmnCpuCpbC845BiosToken.ClassIdEnum.BiosCbsCmnCpuCpbC845BiosToken;
+            ObjectType = BiosCbsCmnCpuCpbC845BiosToken.ObjectTypeEnum.BiosCbsCmnCpuCpbC845BiosToken;
+            Value = BiosCbsCmnCpuCpbC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuCpbC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuCpbC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Disable Core Performance Boost (CPB).\n* `Auto` - Value -- Auto for configuring CbsCmnCpuCpb token.\n* `Disabled` - Value -- Disabled for configuring CbsCmnCpuCpb token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuCpbC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnCpuCpbC845BiosToken initObject = new Intersight.Model.BiosCbsCmnCpuCpbC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnCpuDowncoreModeC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnCpuDowncoreModeC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnCpuDowncoreModeC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnCpuDowncoreModeC845BiosToken()
+        {
+            ClassId = BiosCbsCmnCpuDowncoreModeC845BiosToken.ClassIdEnum.BiosCbsCmnCpuDowncoreModeC845BiosToken;
+            ObjectType = BiosCbsCmnCpuDowncoreModeC845BiosToken.ObjectTypeEnum.BiosCbsCmnCpuDowncoreModeC845BiosToken;
+            Value = BiosCbsCmnCpuDowncoreModeC845BiosToken.ValueEnum.EnablementOption;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuDowncoreModeC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuDowncoreModeC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Select the DownCore Mode.\n* `Enablement Option` - Value -- Enablement Option for configuring CbsCmnCpuDowncoreMode token.\n* `Bitmap` - Value -- Bitmap for configuring CbsCmnCpuDowncoreMode token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuDowncoreModeC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnCpuDowncoreModeC845BiosToken initObject = new Intersight.Model.BiosCbsCmnCpuDowncoreModeC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnCpuGlobalCstateCtrlC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnCpuGlobalCstateCtrlC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnCpuGlobalCstateCtrlC845BiosToken()
+        {
+            ClassId = BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken.ClassIdEnum.BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken;
+            ObjectType = BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken.ObjectTypeEnum.BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken;
+            Value = BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Controls IO based C-state generation and DF C-states.\n* `Auto` - Value -- Auto for configuring CbsCmnCpuGlobalCstateCtrl token.\n* `Disabled` - Value -- Disabled for configuring CbsCmnCpuGlobalCstateCtrl token.\n* `Enabled` - Value -- Enabled for configuring CbsCmnCpuGlobalCstateCtrl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken initObject = new Intersight.Model.BiosCbsCmnCpuGlobalCstateCtrlC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken()
+        {
+            ClassId = BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken.ClassIdEnum.BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken;
+            ObjectType = BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken.ObjectTypeEnum.BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken;
+            Value = BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Option to Enable | Disable L1 Burst Prefetch Mode.\n* `Auto` - Value -- Auto for configuring CbsCmnCpuL1BurstPrefetchMode token.\n* `Disable` - Value -- Disable for configuring CbsCmnCpuL1BurstPrefetchMode token.\n* `Enable` - Value -- Enable for configuring CbsCmnCpuL1BurstPrefetchMode token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken initObject = new Intersight.Model.BiosCbsCmnCpuL1BurstPrefetchModeC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken()
+        {
+            ClassId = BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken.ClassIdEnum.BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken;
+            ObjectType = BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken.ObjectTypeEnum.BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken;
+            Value = BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Option to Enable | Disable L1 Stream HW Prefetcher.\n* `Auto` - Value -- Auto for configuring CbsCmnCpuL1StreamHwPrefetcher token.\n* `Disable` - Value -- Disable for configuring CbsCmnCpuL1StreamHwPrefetcher token.\n* `Enable` - Value -- Enable for configuring CbsCmnCpuL1StreamHwPrefetcher token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken initObject = new Intersight.Model.BiosCbsCmnCpuL1StreamHwPrefetcherC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken()
+        {
+            ClassId = BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken.ClassIdEnum.BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken;
+            ObjectType = BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken.ObjectTypeEnum.BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken;
+            Value = BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Option to Enable | Disable L2 Stream HW Prefetcher.\n* `Auto` - Value -- Auto for configuring CbsCmnCpuL2StreamHwPrefetcher token.\n* `Disable` - Value -- Disable for configuring CbsCmnCpuL2StreamHwPrefetcher token.\n* `Enable` - Value -- Enable for configuring CbsCmnCpuL2StreamHwPrefetcher token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken initObject = new Intersight.Model.BiosCbsCmnCpuL2StreamHwPrefetcherC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnCpuSmeeC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnCpuSmeeC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnCpuSmeeC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnCpuSmeeC845BiosToken()
+        {
+            ClassId = BiosCbsCmnCpuSmeeC845BiosToken.ClassIdEnum.BiosCbsCmnCpuSmeeC845BiosToken;
+            ObjectType = BiosCbsCmnCpuSmeeC845BiosToken.ObjectTypeEnum.BiosCbsCmnCpuSmeeC845BiosToken;
+            Value = BiosCbsCmnCpuSmeeC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuSmeeC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuSmeeC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Control secure memory encryption enable  Enabling both SMEE and SME-MK is not supported. Results in #GP.\n* `Auto` - Value -- Auto for configuring CbsCmnCpuSmee token.\n* `Disable` - Value -- Disable for configuring CbsCmnCpuSmee token.\n* `Enable` - Value -- Enable for configuring CbsCmnCpuSmee token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuSmeeC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnCpuSmeeC845BiosToken initObject = new Intersight.Model.BiosCbsCmnCpuSmeeC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnCpuStreamingStoresCtrlC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnCpuStreamingStoresCtrlC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnCpuStreamingStoresCtrlC845BiosToken()
+        {
+            ClassId = BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken.ClassIdEnum.BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken;
+            ObjectType = BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken.ObjectTypeEnum.BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken;
+            Value = BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables or disables the streaming stores functionality.\n* `Auto` - Value -- Auto for configuring CbsCmnCpuStreamingStoresCtrl token.\n* `Disabled` - Value -- Disabled for configuring CbsCmnCpuStreamingStoresCtrl token.\n* `Enabled` - Value -- Enabled for configuring CbsCmnCpuStreamingStoresCtrl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken initObject = new Intersight.Model.BiosCbsCmnCpuStreamingStoresCtrlC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnCxlMemOnlineOfflineC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnCxlMemOnlineOfflineC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnCxlMemOnlineOfflineC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnCxlMemOnlineOfflineC845BiosToken()
+        {
+            ClassId = BiosCbsCmnCxlMemOnlineOfflineC845BiosToken.ClassIdEnum.BiosCbsCmnCxlMemOnlineOfflineC845BiosToken;
+            ObjectType = BiosCbsCmnCxlMemOnlineOfflineC845BiosToken.ObjectTypeEnum.BiosCbsCmnCxlMemOnlineOfflineC845BiosToken;
+            Value = BiosCbsCmnCxlMemOnlineOfflineC845BiosToken.ValueEnum.Disabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCxlMemOnlineOfflineC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCxlMemOnlineOfflineC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"All 4 Plink slots support memory online/offline  Only slot4 of Amber supports hot plug  CXL memory interleaving automatically disabled globally when this CBS is enabled.\n* `Disabled` - Value -- Disabled for configuring CbsCmnCxlMemOnlineOffline token.\n* `Enabled` - Value -- Enabled for configuring CbsCmnCxlMemOnlineOffline token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnCxlMemOnlineOfflineC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnCxlMemOnlineOfflineC845BiosToken initObject = new Intersight.Model.BiosCbsCmnCxlMemOnlineOfflineC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnDeterminismCtlC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnDeterminismCtlC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnDeterminismCtlC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnDeterminismCtlC845BiosToken()
+        {
+            ClassId = BiosCbsCmnDeterminismCtlC845BiosToken.ClassIdEnum.BiosCbsCmnDeterminismCtlC845BiosToken;
+            ObjectType = BiosCbsCmnDeterminismCtlC845BiosToken.ObjectTypeEnum.BiosCbsCmnDeterminismCtlC845BiosToken;
+            Value = BiosCbsCmnDeterminismCtlC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnDeterminismCtlC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnDeterminismCtlC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Auto = Use default performance determinism settings  Manual = User can set custom performance determinism settings.\n* `Auto` - Value -- Auto for configuring CbsCmnDeterminismCtl token.\n* `Manual` - Value -- Manual for configuring CbsCmnDeterminismCtl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnDeterminismCtlC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnDeterminismCtlC845BiosToken initObject = new Intersight.Model.BiosCbsCmnDeterminismCtlC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnDeterminismEnableC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnDeterminismEnableC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnDeterminismEnableC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnDeterminismEnableC845BiosToken()
+        {
+            ClassId = BiosCbsCmnDeterminismEnableC845BiosToken.ClassIdEnum.BiosCbsCmnDeterminismEnableC845BiosToken;
+            ObjectType = BiosCbsCmnDeterminismEnableC845BiosToken.ObjectTypeEnum.BiosCbsCmnDeterminismEnableC845BiosToken;
+            Value = BiosCbsCmnDeterminismEnableC845BiosToken.ValueEnum.Power;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnDeterminismEnableC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnDeterminismEnableC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"[0 = Power; 1 = Performance].\n* `Power` - Value -- Power for configuring CbsCmnDeterminismEnable token.\n* `Performance` - Value -- Performance for configuring CbsCmnDeterminismEnable token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnDeterminismEnableC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnDeterminismEnableC845BiosToken initObject = new Intersight.Model.BiosCbsCmnDeterminismEnableC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnGnbNbIommuC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnGnbNbIommuC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnGnbNbIommuC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnGnbNbIommuC845BiosToken()
+        {
+            ClassId = BiosCbsCmnGnbNbIommuC845BiosToken.ClassIdEnum.BiosCbsCmnGnbNbIommuC845BiosToken;
+            ObjectType = BiosCbsCmnGnbNbIommuC845BiosToken.ObjectTypeEnum.BiosCbsCmnGnbNbIommuC845BiosToken;
+            Value = BiosCbsCmnGnbNbIommuC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnGnbNbIommuC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnGnbNbIommuC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or Disable Input-Output Memory Management Unit (IOMMU).\n* `Auto` - Value -- Auto for configuring CbsCmnGnbNbIommu token.\n* `Disabled` - Value -- Disabled for configuring CbsCmnGnbNbIommu token.\n* `Enabled` - Value -- Enabled for configuring CbsCmnGnbNbIommu token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnGnbNbIommuC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnGnbNbIommuC845BiosToken initObject = new Intersight.Model.BiosCbsCmnGnbNbIommuC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnMemBootTimePostPackageRepairC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnMemBootTimePostPackageRepairC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnMemBootTimePostPackageRepairC845BiosToken()
+        {
+            ClassId = BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken.ClassIdEnum.BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken;
+            ObjectType = BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken.ObjectTypeEnum.BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken;
+            Value = BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken.ValueEnum.Disable;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or Disable DRAM Boot Time Post Package Repair.\n* `Disable` - Value -- Disable for configuring CbsCmnMemBootTimePostPackageRepair token.\n* `Enable` - Value -- Enable for configuring CbsCmnMemBootTimePostPackageRepair token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken initObject = new Intersight.Model.BiosCbsCmnMemBootTimePostPackageRepairC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnMemCsInterleaveDdrC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnMemCsInterleaveDdrC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnMemCsInterleaveDdrC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnMemCsInterleaveDdrC845BiosToken()
+        {
+            ClassId = BiosCbsCmnMemCsInterleaveDdrC845BiosToken.ClassIdEnum.BiosCbsCmnMemCsInterleaveDdrC845BiosToken;
+            ObjectType = BiosCbsCmnMemCsInterleaveDdrC845BiosToken.ObjectTypeEnum.BiosCbsCmnMemCsInterleaveDdrC845BiosToken;
+            Value = BiosCbsCmnMemCsInterleaveDdrC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemCsInterleaveDdrC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemCsInterleaveDdrC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Interleave memory blocks across the DRAM chip selects for node 0.\n* `Auto` - Value -- Auto for configuring CbsCmnMemCsInterleaveDdr token.\n* `Disabled` - Value -- Disabled for configuring CbsCmnMemCsInterleaveDdr token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemCsInterleaveDdrC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnMemCsInterleaveDdrC845BiosToken initObject = new Intersight.Model.BiosCbsCmnMemCsInterleaveDdrC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken()
+        {
+            ClassId = BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken.ClassIdEnum.BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken;
+            ObjectType = BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken.ObjectTypeEnum.BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken;
+            Value = BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"BankSwapMode value: 0=Disabled, 1=SwapCPU.\n* `Auto` - Value -- Auto for configuring CbsCmnMemCtrllerBankSwapModeDdr token.\n* `Disabled` - Value -- Disabled for configuring CbsCmnMemCtrllerBankSwapModeDdr token.\n* `Swap CPU` - Value -- Swap CPU for configuring CbsCmnMemCtrllerBankSwapModeDdr token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken initObject = new Intersight.Model.BiosCbsCmnMemCtrllerBankSwapModeDdrC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken()
+        {
+            ClassId = BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken.ClassIdEnum.BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken;
+            ObjectType = BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken.ObjectTypeEnum.BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken;
+            Value = BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or disable DDR power down mode.\n* `Auto` - Value -- Auto for configuring CbsCmnMemCtrllerPwrDnEnDdr token.\n* `Disabled` - Value -- Disabled for configuring CbsCmnMemCtrllerPwrDnEnDdr token.\n* `Enabled` - Value -- Enabled for configuring CbsCmnMemCtrllerPwrDnEnDdr token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken initObject = new Intersight.Model.BiosCbsCmnMemCtrllerPwrDnEnDdrC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnMemDramRefreshRateC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnMemDramRefreshRateC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnMemDramRefreshRateC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnMemDramRefreshRateC845BiosToken()
+        {
+            ClassId = BiosCbsCmnMemDramRefreshRateC845BiosToken.ClassIdEnum.BiosCbsCmnMemDramRefreshRateC845BiosToken;
+            ObjectType = BiosCbsCmnMemDramRefreshRateC845BiosToken.ObjectTypeEnum.BiosCbsCmnMemDramRefreshRateC845BiosToken;
+            Value = BiosCbsCmnMemDramRefreshRateC845BiosToken.ValueEnum._39Usec;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemDramRefreshRateC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemDramRefreshRateC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"DRAM refresh rate: 1.95us or 3.9us (default).\n* `3.9 usec` - Value -- 3.9 usec for configuring CbsCmnMemDramRefreshRate token.\n* `1.95 usec` - Value -- 1.95 usec for configuring CbsCmnMemDramRefreshRate token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemDramRefreshRateC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnMemDramRefreshRateC845BiosToken initObject = new Intersight.Model.BiosCbsCmnMemDramRefreshRateC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnMemDramScrubTimeC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnMemDramScrubTimeC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnMemDramScrubTimeC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnMemDramScrubTimeC845BiosToken()
+        {
+            ClassId = BiosCbsCmnMemDramScrubTimeC845BiosToken.ClassIdEnum.BiosCbsCmnMemDramScrubTimeC845BiosToken;
+            ObjectType = BiosCbsCmnMemDramScrubTimeC845BiosToken.ObjectTypeEnum.BiosCbsCmnMemDramScrubTimeC845BiosToken;
+            Value = BiosCbsCmnMemDramScrubTimeC845BiosToken.ValueEnum._24Hours;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemDramScrubTimeC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemDramScrubTimeC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Provide a value that is the number of hours to scrub memory.\n* `24 hours` - Value -- 24 hours for configuring CbsCmnMemDramScrubTime token.\n* `Disabled` - Value -- Disabled for configuring CbsCmnMemDramScrubTime token.\n* `1 hour` - Value -- 1 hour for configuring CbsCmnMemDramScrubTime token.\n* `4 hours` - Value -- 4 hours for configuring CbsCmnMemDramScrubTime token.\n* `6 hours` - Value -- 6 hours for configuring CbsCmnMemDramScrubTime token.\n* `8 hours` - Value -- 8 hours for configuring CbsCmnMemDramScrubTime token.\n* `12 hours` - Value -- 12 hours for configuring CbsCmnMemDramScrubTime token.\n* `16 hours` - Value -- 16 hours for configuring CbsCmnMemDramScrubTime token.\n* `48 hours` - Value -- 48 hours for configuring CbsCmnMemDramScrubTime token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemDramScrubTimeC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnMemDramScrubTimeC845BiosToken initObject = new Intersight.Model.BiosCbsCmnMemDramScrubTimeC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken()
+        {
+            ClassId = BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken.ClassIdEnum.BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken;
+            ObjectType = BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken.ObjectTypeEnum.BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken;
+            Value = BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken.ValueEnum.Disabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"This item enables a full memory test. Please note that this is a memory content test and is separate and distinct from the MBIST test of Interface and Data Eye.  PMU Mem BIST: this uses PMU firmware to test memory on all channels simultaneously. Failing memory will be repaired using soft or hard PPR depending on the PPR configuration.  Self-Healing Mem BIST: this runs the JEDEC DRAM self healing, if the device and DIMM support the feature. The DRAM will do a hard repair for failing memory.  PMU and Self-Healing Mem BIST: this option runs the PMU Mem BIST then the Self-Healing Mem BIST tests sequentially.\n* `Disabled` - Value -- Disabled for configuring CbsCmnMemHealingBistEnableBitMaskDdr token.\n* `PMU Mem BIST` - Value -- PMU Mem BIST for configuring CbsCmnMemHealingBistEnableBitMaskDdr token.\n* `Self-Healing Mem BIST` - Value -- Self-Healing Mem BIST for configuring CbsCmnMemHealingBistEnableBitMaskDdr token.\n* `PMU and Self-Healing Mem BIST` - Value -- PMU and Self-Healing Mem BIST for configuring CbsCmnMemHealingBistEnableBitMaskDdr token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken initObject = new Intersight.Model.BiosCbsCmnMemHealingBistEnableBitMaskDdrC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnMemHealingBistExecutionModeC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnMemHealingBistExecutionModeC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnMemHealingBistExecutionModeC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnMemHealingBistExecutionModeC845BiosToken()
+        {
+            ClassId = BiosCbsCmnMemHealingBistExecutionModeC845BiosToken.ClassIdEnum.BiosCbsCmnMemHealingBistExecutionModeC845BiosToken;
+            ObjectType = BiosCbsCmnMemHealingBistExecutionModeC845BiosToken.ObjectTypeEnum.BiosCbsCmnMemHealingBistExecutionModeC845BiosToken;
+            Value = BiosCbsCmnMemHealingBistExecutionModeC845BiosToken.ValueEnum.OneTime;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemHealingBistExecutionModeC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemHealingBistExecutionModeC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"[One Time]: DDR Healing BIST will only be executed one time.  [Every Boot]: DDR Healing BIST will be executed on every boot.\n* `One Time` - Value -- One Time for configuring CbsCmnMemHealingBistExecutionMode token.\n* `Every Boot` - Value -- Every Boot for configuring CbsCmnMemHealingBistExecutionMode token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemHealingBistExecutionModeC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnMemHealingBistExecutionModeC845BiosToken initObject = new Intersight.Model.BiosCbsCmnMemHealingBistExecutionModeC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnMemRuntimePostPackageRepairC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnMemRuntimePostPackageRepairC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnMemRuntimePostPackageRepairC845BiosToken()
+        {
+            ClassId = BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken.ClassIdEnum.BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken;
+            ObjectType = BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken.ObjectTypeEnum.BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken;
+            Value = BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken.ValueEnum.Disable;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or Disable DRAM Run Time Post Package Repair.\n* `Disable` - Value -- Disable for configuring CbsCmnMemRuntimePostPackageRepair token.\n* `Enable` - Value -- Enable for configuring CbsCmnMemRuntimePostPackageRepair token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken initObject = new Intersight.Model.BiosCbsCmnMemRuntimePostPackageRepairC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnMemTsmeEnableDdrC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnMemTsmeEnableDdrC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnMemTsmeEnableDdrC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnMemTsmeEnableDdrC845BiosToken()
+        {
+            ClassId = BiosCbsCmnMemTsmeEnableDdrC845BiosToken.ClassIdEnum.BiosCbsCmnMemTsmeEnableDdrC845BiosToken;
+            ObjectType = BiosCbsCmnMemTsmeEnableDdrC845BiosToken.ObjectTypeEnum.BiosCbsCmnMemTsmeEnableDdrC845BiosToken;
+            Value = BiosCbsCmnMemTsmeEnableDdrC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemTsmeEnableDdrC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemTsmeEnableDdrC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Transparent Secure Memory Encryption (TSME).\n* `Auto` - Value -- Auto for configuring CbsCmnMemTsmeEnableDdr token.\n* `Enabled` - Value -- Enabled for configuring CbsCmnMemTsmeEnableDdr token.\n* `Disabled` - Value -- Disabled for configuring CbsCmnMemTsmeEnableDdr token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnMemTsmeEnableDdrC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnMemTsmeEnableDdrC845BiosToken initObject = new Intersight.Model.BiosCbsCmnMemTsmeEnableDdrC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCmnPcieCaplinkSpeedC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCmnPcieCaplinkSpeedC845BiosToken")]
+    public class InitializeIntersightBiosCbsCmnPcieCaplinkSpeedC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCmnPcieCaplinkSpeedC845BiosToken()
+        {
+            ClassId = BiosCbsCmnPcieCaplinkSpeedC845BiosToken.ClassIdEnum.BiosCbsCmnPcieCaplinkSpeedC845BiosToken;
+            ObjectType = BiosCbsCmnPcieCaplinkSpeedC845BiosToken.ObjectTypeEnum.BiosCbsCmnPcieCaplinkSpeedC845BiosToken;
+            Value = BiosCbsCmnPcieCaplinkSpeedC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnPcieCaplinkSpeedC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnPcieCaplinkSpeedC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Set all PCIe port speed capability.\n* `Auto` - Value -- Auto for configuring CbsCmnPcieCaplinkSpeed token.\n* `Maximum speed` - Value -- Maximum speed for configuring CbsCmnPcieCaplinkSpeed token.\n* `Gen1` - Value -- Gen1 for configuring CbsCmnPcieCaplinkSpeed token.\n* `Gen2` - Value -- Gen2 for configuring CbsCmnPcieCaplinkSpeed token.\n* `GEN3` - Value -- GEN3 for configuring CbsCmnPcieCaplinkSpeed token.\n* `GEN4` - Value -- GEN4 for configuring CbsCmnPcieCaplinkSpeed token.\n* `GEN5` - Value -- GEN5 for configuring CbsCmnPcieCaplinkSpeed token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCmnPcieCaplinkSpeedC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCmnPcieCaplinkSpeedC845BiosToken initObject = new Intersight.Model.BiosCbsCmnPcieCaplinkSpeedC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCpuCcdCtrlC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCpuCcdCtrlC845BiosToken")]
+    public class InitializeIntersightBiosCbsCpuCcdCtrlC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCpuCcdCtrlC845BiosToken()
+        {
+            ClassId = BiosCbsCpuCcdCtrlC845BiosToken.ClassIdEnum.BiosCbsCpuCcdCtrlC845BiosToken;
+            ObjectType = BiosCbsCpuCcdCtrlC845BiosToken.ObjectTypeEnum.BiosCbsCpuCcdCtrlC845BiosToken;
+            Value = BiosCbsCpuCcdCtrlC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCpuCcdCtrlC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCpuCcdCtrlC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Sets the number of active CCDs.  Once this option has been used to remove any CCDs, a POWER CYCLE is required in order for future selections to take effect.\n* `Auto` - Value -- Auto for configuring CbsCpuCcdCtrl token.\n* `2 CCDs` - Value -- 2 CCDs for configuring CbsCpuCcdCtrl token.\n* `4 CCDs` - Value -- 4 CCDs for configuring CbsCpuCcdCtrl token.\n* `6 CCDs` - Value -- 6 CCDs for configuring CbsCpuCcdCtrl token.\n* `8 CCDs` - Value -- 8 CCDs for configuring CbsCpuCcdCtrl token.\n* `10 CCDs` - Value -- 10 CCDs for configuring CbsCpuCcdCtrl token.\n* `12 CCDs` - Value -- 12 CCDs for configuring CbsCpuCcdCtrl token.\n* `14 CCDs` - Value -- 14 CCDs for configuring CbsCpuCcdCtrl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCpuCcdCtrlC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCpuCcdCtrlC845BiosToken initObject = new Intersight.Model.BiosCbsCpuCcdCtrlC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsCpuSmtCtrlC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsCpuSmtCtrlC845BiosToken")]
+    public class InitializeIntersightBiosCbsCpuSmtCtrlC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsCpuSmtCtrlC845BiosToken()
+        {
+            ClassId = BiosCbsCpuSmtCtrlC845BiosToken.ClassIdEnum.BiosCbsCpuSmtCtrlC845BiosToken;
+            ObjectType = BiosCbsCpuSmtCtrlC845BiosToken.ObjectTypeEnum.BiosCbsCpuSmtCtrlC845BiosToken;
+            Value = BiosCbsCpuSmtCtrlC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCpuSmtCtrlC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCpuSmtCtrlC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Can be used to disable symmetric multithreading. To re-enable SMT, a POWER CYCLE is needed after selecting the 'Enable' option. Select 'Auto' based on BIOS PCD (PcdAmdSmtMode) default setting.\n* `Auto` - Value -- Auto for configuring CbsCpuSmtCtrl token.\n* `Disable` - Value -- Disable for configuring CbsCpuSmtCtrl token.\n* `Enable` - Value -- Enable for configuring CbsCpuSmtCtrl token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsCpuSmtCtrlC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsCpuSmtCtrlC845BiosToken initObject = new Intersight.Model.BiosCbsCpuSmtCtrlC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsDbgCpuLapicModeC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsDbgCpuLapicModeC845BiosToken")]
+    public class InitializeIntersightBiosCbsDbgCpuLapicModeC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsDbgCpuLapicModeC845BiosToken()
+        {
+            ClassId = BiosCbsDbgCpuLapicModeC845BiosToken.ClassIdEnum.BiosCbsDbgCpuLapicModeC845BiosToken;
+            ObjectType = BiosCbsDbgCpuLapicModeC845BiosToken.ObjectTypeEnum.BiosCbsDbgCpuLapicModeC845BiosToken;
+            Value = BiosCbsDbgCpuLapicModeC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDbgCpuLapicModeC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDbgCpuLapicModeC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Select local APIC operation modes.\n* `Auto` - Value -- Auto for configuring CbsDbgCpuLapicMode token.\n* `xAPIC` - Value -- xAPIC for configuring CbsDbgCpuLapicMode token.\n* `x2APIC` - Value -- x2APIC for configuring CbsDbgCpuLapicMode token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDbgCpuLapicModeC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsDbgCpuLapicModeC845BiosToken initObject = new Intersight.Model.BiosCbsDbgCpuLapicModeC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsDbgCpuSnpMemCoverC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsDbgCpuSnpMemCoverC845BiosToken")]
+    public class InitializeIntersightBiosCbsDbgCpuSnpMemCoverC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsDbgCpuSnpMemCoverC845BiosToken()
+        {
+            ClassId = BiosCbsDbgCpuSnpMemCoverC845BiosToken.ClassIdEnum.BiosCbsDbgCpuSnpMemCoverC845BiosToken;
+            ObjectType = BiosCbsDbgCpuSnpMemCoverC845BiosToken.ObjectTypeEnum.BiosCbsDbgCpuSnpMemCoverC845BiosToken;
+            Value = BiosCbsDbgCpuSnpMemCoverC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDbgCpuSnpMemCoverC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDbgCpuSnpMemCoverC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enabled = ENTIRE system memory is covered.\n* `Auto` - Value -- Auto for configuring CbsDbgCpuSnpMemCover token.\n* `Disabled` - Value -- Disabled for configuring CbsDbgCpuSnpMemCover token.\n* `Enabled` - Value -- Enabled for configuring CbsDbgCpuSnpMemCover token.\n* `Custom` - Value -- Custom for configuring CbsDbgCpuSnpMemCover token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDbgCpuSnpMemCoverC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsDbgCpuSnpMemCoverC845BiosToken initObject = new Intersight.Model.BiosCbsDbgCpuSnpMemCoverC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken")]
+    public class InitializeIntersightBiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken()
+        {
+            ClassId = BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken.ClassIdEnum.BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken;
+            ObjectType = BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken.ObjectTypeEnum.BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken;
+            Value = BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Maximum frequency used for XGMI PState in a 3-link topology.\n* `Auto` - Value -- Auto for configuring CbsDfCmn3LinkMaxXgmiSpeed token.\n* `20Gbps` - Value -- 20Gbps for configuring CbsDfCmn3LinkMaxXgmiSpeed token.\n* `25Gbps` - Value -- 25Gbps for configuring CbsDfCmn3LinkMaxXgmiSpeed token.\n* `32Gbps` - Value -- 32Gbps for configuring CbsDfCmn3LinkMaxXgmiSpeed token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken initObject = new Intersight.Model.BiosCbsDfCmn3LinkMaxXgmiSpeedC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsDfCmnAcpiSratL3NumaC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsDfCmnAcpiSratL3NumaC845BiosToken")]
+    public class InitializeIntersightBiosCbsDfCmnAcpiSratL3NumaC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsDfCmnAcpiSratL3NumaC845BiosToken()
+        {
+            ClassId = BiosCbsDfCmnAcpiSratL3NumaC845BiosToken.ClassIdEnum.BiosCbsDfCmnAcpiSratL3NumaC845BiosToken;
+            ObjectType = BiosCbsDfCmnAcpiSratL3NumaC845BiosToken.ObjectTypeEnum.BiosCbsDfCmnAcpiSratL3NumaC845BiosToken;
+            Value = BiosCbsDfCmnAcpiSratL3NumaC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDfCmnAcpiSratL3NumaC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDfCmnAcpiSratL3NumaC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enabled: Each CCX in the system will be declared as a separate NUMA domain.  Disabled: Memory Addressing  NUMA nodes per socket will be declared.\n* `Auto` - Value -- Auto for configuring CbsDfCmnAcpiSratL3Numa token.\n* `Disabled` - Value -- Disabled for configuring CbsDfCmnAcpiSratL3Numa token.\n* `Enabled` - Value -- Enabled for configuring CbsDfCmnAcpiSratL3Numa token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDfCmnAcpiSratL3NumaC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsDfCmnAcpiSratL3NumaC845BiosToken initObject = new Intersight.Model.BiosCbsDfCmnAcpiSratL3NumaC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsDfCmnDramNpsC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsDfCmnDramNpsC845BiosToken")]
+    public class InitializeIntersightBiosCbsDfCmnDramNpsC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsDfCmnDramNpsC845BiosToken()
+        {
+            ClassId = BiosCbsDfCmnDramNpsC845BiosToken.ClassIdEnum.BiosCbsDfCmnDramNpsC845BiosToken;
+            ObjectType = BiosCbsDfCmnDramNpsC845BiosToken.ObjectTypeEnum.BiosCbsDfCmnDramNpsC845BiosToken;
+            Value = BiosCbsDfCmnDramNpsC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDfCmnDramNpsC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDfCmnDramNpsC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The number of desired NUMA nodes per socket. Zero will attempt to interleave the two sockets together.\n* `Auto` - Value -- Auto for configuring CbsDfCmnDramNps token.\n* `NPS0` - Value -- NPS0 for configuring CbsDfCmnDramNps token.\n* `NPS1` - Value -- NPS1 for configuring CbsDfCmnDramNps token.\n* `NPS2` - Value -- NPS2 for configuring CbsDfCmnDramNps token.\n* `NPS4` - Value -- NPS4 for configuring CbsDfCmnDramNps token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsDfCmnDramNpsC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsDfCmnDramNpsC845BiosToken initObject = new Intersight.Model.BiosCbsDfCmnDramNpsC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCbsSevSnpSupportC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCbsSevSnpSupportC845BiosToken")]
+    public class InitializeIntersightBiosCbsSevSnpSupportC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCbsSevSnpSupportC845BiosToken()
+        {
+            ClassId = BiosCbsSevSnpSupportC845BiosToken.ClassIdEnum.BiosCbsSevSnpSupportC845BiosToken;
+            ObjectType = BiosCbsSevSnpSupportC845BiosToken.ObjectTypeEnum.BiosCbsSevSnpSupportC845BiosToken;
+            Value = BiosCbsSevSnpSupportC845BiosToken.ValueEnum.Auto;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsSevSnpSupportC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsSevSnpSupportC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables support for Secure Encrypted Virtualization and Secure Nested Paging.\n* `Auto` - Value -- Auto for configuring CbsSevSnpSupport token.\n* `Disable` - Value -- Disable for configuring CbsSevSnpSupport token.\n* `Enable` - Value -- Enable for configuring CbsSevSnpSupport token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCbsSevSnpSupportC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCbsSevSnpSupportC845BiosToken initObject = new Intersight.Model.BiosCbsSevSnpSupportC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosCpu005C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosCpu005C845BiosToken")]
+    public class InitializeIntersightBiosCpu005C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosCpu005C845BiosToken()
+        {
+            ClassId = BiosCpu005C845BiosToken.ClassIdEnum.BiosCpu005C845BiosToken;
+            ObjectType = BiosCpu005C845BiosToken.ObjectTypeEnum.BiosCpu005C845BiosToken;
+            Value = BiosCpu005C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCpu005C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCpu005C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable/disable CPU Virtualization.\n* `Enabled` - Value -- Enabled for configuring Cpu005 token.\n* `Disabled` - Value -- Disabled for configuring Cpu005 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosCpu005C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosCpu005C845BiosToken initObject = new Intersight.Model.BiosCpu005C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosIpmi100C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosIpmi100C845BiosToken")]
+    public class InitializeIntersightBiosIpmi100C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosIpmi100C845BiosToken()
+        {
+            ClassId = BiosIpmi100C845BiosToken.ClassIdEnum.BiosIpmi100C845BiosToken;
+            ObjectType = BiosIpmi100C845BiosToken.ObjectTypeEnum.BiosIpmi100C845BiosToken;
+            Value = BiosIpmi100C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi100C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi100C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or Disable FRB-2 timer (POST timer).\n* `Enabled` - Value -- Enabled for configuring Ipmi100 token.\n* `Disabled` - Value -- Disabled for configuring Ipmi100 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi100C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosIpmi100C845BiosToken initObject = new Intersight.Model.BiosIpmi100C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosIpmi103C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosIpmi103C845BiosToken")]
+    public class InitializeIntersightBiosIpmi103C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosIpmi103C845BiosToken()
+        {
+            ClassId = BiosIpmi103C845BiosToken.ClassIdEnum.BiosIpmi103C845BiosToken;
+            ObjectType = BiosIpmi103C845BiosToken.ObjectTypeEnum.BiosIpmi103C845BiosToken;
+            Value = BiosIpmi103C845BiosToken.ValueEnum.Disabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi103C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi103C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If enabled, starts a BIOS timer which can only be shut off by Management Software after the OS loads.  Helps determine that the OS successfully loaded or follows the OS Boot Watchdog Timer policy.\n* `Disabled` - Value -- Disabled for configuring Ipmi103 token.\n* `Enabled` - Value -- Enabled for configuring Ipmi103 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi103C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosIpmi103C845BiosToken initObject = new Intersight.Model.BiosIpmi103C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosIpmi104C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosIpmi104C845BiosToken")]
+    public class InitializeIntersightBiosIpmi104C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosIpmi104C845BiosToken()
+        {
+            ClassId = BiosIpmi104C845BiosToken.ClassIdEnum.BiosIpmi104C845BiosToken;
+            ObjectType = BiosIpmi104C845BiosToken.ObjectTypeEnum.BiosIpmi104C845BiosToken;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi104C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi104C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enter the value Between 1 to 30 min for OS Boot Watchdog Timer Expiration. Not available if OS Boot Watchdog Timer is disabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 30)]
+        public long Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosIpmi104C845BiosToken initObject = new Intersight.Model.BiosIpmi104C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosIpmi105C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosIpmi105C845BiosToken")]
+    public class InitializeIntersightBiosIpmi105C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosIpmi105C845BiosToken()
+        {
+            ClassId = BiosIpmi105C845BiosToken.ClassIdEnum.BiosIpmi105C845BiosToken;
+            ObjectType = BiosIpmi105C845BiosToken.ObjectTypeEnum.BiosIpmi105C845BiosToken;
+            Value = BiosIpmi105C845BiosToken.ValueEnum.Reset;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi105C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi105C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Configure how the system should respond if the OS Boot Watchdog Timer expires. Not available if OS Boot Watchdog Timer is disabled.\n* `Reset` - Value -- Reset for configuring Ipmi105 token.\n* `Do Nothing` - Value -- Do Nothing for configuring Ipmi105 token.\n* `Power Down` - Value -- Power Down for configuring Ipmi105 token.\n* `Power Cycle` - Value -- Power Cycle for configuring Ipmi105 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosIpmi105C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosIpmi105C845BiosToken initObject = new Intersight.Model.BiosIpmi105C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosNvlck002C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosNvlck002C845BiosToken")]
+    public class InitializeIntersightBiosNvlck002C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosNvlck002C845BiosToken()
+        {
+            ClassId = BiosNvlck002C845BiosToken.ClassIdEnum.BiosNvlck002C845BiosToken;
+            ObjectType = BiosNvlck002C845BiosToken.ObjectTypeEnum.BiosNvlck002C845BiosToken;
+            Value = BiosNvlck002C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNvlck002C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNvlck002C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Control the NVRAM Runtime Variable protection through System Admin Password.\n* `Enabled` - Value -- Enabled for configuring Nvlck002 token.\n* `Disabled` - Value -- Disabled for configuring Nvlck002 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNvlck002C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosNvlck002C845BiosToken initObject = new Intersight.Model.BiosNvlck002C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosNwsk001C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosNwsk001C845BiosToken")]
+    public class InitializeIntersightBiosNwsk001C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosNwsk001C845BiosToken()
+        {
+            ClassId = BiosNwsk001C845BiosToken.ClassIdEnum.BiosNwsk001C845BiosToken;
+            ObjectType = BiosNwsk001C845BiosToken.ObjectTypeEnum.BiosNwsk001C845BiosToken;
+            Value = BiosNwsk001C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk001C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk001C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable/Disable IPv4 PXE boot support. If disabled, IPv4 PXE boot support will not be available.\n* `Enabled` - Value -- Enabled for configuring Nwsk001 token.\n* `Disabled` - Value -- Disabled for configuring Nwsk001 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk001C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosNwsk001C845BiosToken initObject = new Intersight.Model.BiosNwsk001C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosNwsk002C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosNwsk002C845BiosToken")]
+    public class InitializeIntersightBiosNwsk002C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosNwsk002C845BiosToken()
+        {
+            ClassId = BiosNwsk002C845BiosToken.ClassIdEnum.BiosNwsk002C845BiosToken;
+            ObjectType = BiosNwsk002C845BiosToken.ObjectTypeEnum.BiosNwsk002C845BiosToken;
+            Value = BiosNwsk002C845BiosToken.ValueEnum.Disabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk002C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk002C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable/Disable IPv6 PXE boot support. If disabled, IPv6 PXE boot support will not be available.\n* `Disabled` - Value -- Disabled for configuring Nwsk002 token.\n* `Enabled` - Value -- Enabled for configuring Nwsk002 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk002C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosNwsk002C845BiosToken initObject = new Intersight.Model.BiosNwsk002C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosNwsk006C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosNwsk006C845BiosToken")]
+    public class InitializeIntersightBiosNwsk006C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosNwsk006C845BiosToken()
+        {
+            ClassId = BiosNwsk006C845BiosToken.ClassIdEnum.BiosNwsk006C845BiosToken;
+            ObjectType = BiosNwsk006C845BiosToken.ObjectTypeEnum.BiosNwsk006C845BiosToken;
+            Value = BiosNwsk006C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk006C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk006C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable/Disable IPv4 HTTP boot support. If disabled, IPv4 HTTP boot support will not be available.\n* `Enabled` - Value -- Enabled for configuring Nwsk006 token.\n* `Disabled` - Value -- Disabled for configuring Nwsk006 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk006C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosNwsk006C845BiosToken initObject = new Intersight.Model.BiosNwsk006C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosNwsk007C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosNwsk007C845BiosToken")]
+    public class InitializeIntersightBiosNwsk007C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosNwsk007C845BiosToken()
+        {
+            ClassId = BiosNwsk007C845BiosToken.ClassIdEnum.BiosNwsk007C845BiosToken;
+            ObjectType = BiosNwsk007C845BiosToken.ObjectTypeEnum.BiosNwsk007C845BiosToken;
+            Value = BiosNwsk007C845BiosToken.ValueEnum.Disabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk007C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk007C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable/Disable IPv6 HTTP boot support. If disabled, IPv6 HTTP boot support will not be available.\n* `Disabled` - Value -- Disabled for configuring Nwsk007 token.\n* `Enabled` - Value -- Enabled for configuring Nwsk007 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosNwsk007C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosNwsk007C845BiosToken initObject = new Intersight.Model.BiosNwsk007C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosPcid001C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosPcid001C845BiosToken")]
+    public class InitializeIntersightBiosPcid001C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosPcid001C845BiosToken()
+        {
+            ClassId = BiosPcid001C845BiosToken.ClassIdEnum.BiosPcid001C845BiosToken;
+            ObjectType = BiosPcid001C845BiosToken.ObjectTypeEnum.BiosPcid001C845BiosToken;
+            Value = BiosPcid001C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPcid001C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPcid001C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Globally Enables or Disables 64bit capable Devices to be Decoded in Above 4G Address Space (Only if System Supports 64 bit PCI Decoding).\n* `Enabled` - Value -- Enabled for configuring Pcid001 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPcid001C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosPcid001C845BiosToken initObject = new Intersight.Model.BiosPcid001C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosPcid002C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosPcid002C845BiosToken")]
+    public class InitializeIntersightBiosPcid002C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosPcid002C845BiosToken()
+        {
+            ClassId = BiosPcid002C845BiosToken.ClassIdEnum.BiosPcid002C845BiosToken;
+            ObjectType = BiosPcid002C845BiosToken.ObjectTypeEnum.BiosPcid002C845BiosToken;
+            Value = BiosPcid002C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPcid002C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPcid002C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"If system has SR-IOV capable PCIe Devices, this option Enables or Disables Single Root IO Virtualization Support.\n* `Enabled` - Value -- Enabled for configuring Pcid002 token.\n* `Disabled` - Value -- Disabled for configuring Pcid002 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPcid002C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosPcid002C845BiosToken initObject = new Intersight.Model.BiosPcid002C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosPcid003C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosPcid003C845BiosToken")]
+    public class InitializeIntersightBiosPcid003C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosPcid003C845BiosToken()
+        {
+            ClassId = BiosPcid003C845BiosToken.ClassIdEnum.BiosPcid003C845BiosToken;
+            ObjectType = BiosPcid003C845BiosToken.ObjectTypeEnum.BiosPcid003C845BiosToken;
+            Value = BiosPcid003C845BiosToken.ValueEnum.Disabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPcid003C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPcid003C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Re-enable Bus Initiator Attribute disabled during Pci enumeration for PCI Bridges after SMM Locked.\n* `Disabled` - Value -- Disabled for configuring Pcid003 token.\n* `Enabled` - Value -- Enabled for configuring Pcid003 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPcid003C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosPcid003C845BiosToken initObject = new Intersight.Model.BiosPcid003C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BiosPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBiosPolicy")]
@@ -404,6 +3896,7 @@ namespace Intersight.PowerShell
             MmcfgBase = BiosPolicy.MmcfgBaseEnum.PlatformDefault;
             MmiohBase = BiosPolicy.MmiohBaseEnum.PlatformDefault;
             MmiohSize = BiosPolicy.MmiohSizeEnum.PlatformDefault;
+            Model = BiosPolicy.ModelEnum.NotApplicable;
             NetworkStack = BiosPolicy.NetworkStackEnum.PlatformDefault;
             NumaOptimized = BiosPolicy.NumaOptimizedEnum.PlatformDefault;
             NvmdimmPerformConfig = BiosPolicy.NvmdimmPerformConfigEnum.PlatformDefault;
@@ -449,6 +3942,7 @@ namespace Intersight.PowerShell
             PcieSlotNvme6linkSpeed = BiosPolicy.PcieSlotNvme6linkSpeedEnum.PlatformDefault;
             PcieSlotNvme6optionRom = BiosPolicy.PcieSlotNvme6optionRomEnum.PlatformDefault;
             PcieSlotsCdnEnable = BiosPolicy.PcieSlotsCdnEnableEnum.PlatformDefault;
+            PolicyType = BiosPolicy.PolicyTypeEnum.Generic;
             PopSupport = BiosPolicy.PopSupportEnum.PlatformDefault;
             PostErrorPause = BiosPolicy.PostErrorPauseEnum.PlatformDefault;
             PostPackageRepair = BiosPolicy.PostPackageRepairEnum.PlatformDefault;
@@ -931,6 +4425,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.BaudRateEnum BaudRate
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.BiosBaseBiosConfiguration> BiosConfigurations
         {
             get;
             set;
@@ -2516,6 +6020,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Specifies supported server model.\n* `Not-Applicable` - Represents case where the server model does not apply.\n* `UCSC845A` - Represents UCS C845A server model."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.ModelEnum Model
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -3061,6 +6575,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BiosPolicy.PcieSlotsCdnEnableEnum PcieSlotsCdnEnable
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies BIOS policy compatibility type.\n* `Generic` - Generic BIOS type is compatible only for UCS B, C, and X Series models. Do not attempt to proceed if you are using an unsupported model, as this may result in configuration errors.\n* `ModelSpecific` - Model Specific BIOS type is compatible only for UCS C845A model. Do not attempt to proceed if you are using an unsupported model, as this may result in configuration errors."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.PolicyTypeEnum PolicyType
         {
             get;
             set;
@@ -5590,6 +9114,10 @@ namespace Intersight.PowerShell
             {
                 initObject.BaudRate = this.BaudRate;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BiosConfigurations"))
+            {
+                initObject.BiosConfigurations = this.BiosConfigurations;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("BmeDmaMitigation"))
             {
                 initObject.BmeDmaMitigation = this.BmeDmaMitigation;
@@ -6219,6 +9747,10 @@ namespace Intersight.PowerShell
             {
                 initObject.MmiohSize = this.MmiohSize;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -6435,6 +9967,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("PcieSlotsCdnEnable"))
             {
                 initObject.PcieSlotsCdnEnable = this.PcieSlotsCdnEnable;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PolicyType"))
+            {
+                initObject.PolicyType = this.PolicyType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("PopSupport"))
             {
@@ -7409,6 +10945,78 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosPtt000C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosPtt000C845BiosToken")]
+    public class InitializeIntersightBiosPtt000C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosPtt000C845BiosToken()
+        {
+            ClassId = BiosPtt000C845BiosToken.ClassIdEnum.BiosPtt000C845BiosToken;
+            ObjectType = BiosPtt000C845BiosToken.ObjectTypeEnum.BiosPtt000C845BiosToken;
+            Value = BiosPtt000C845BiosToken.ValueEnum.Disabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPtt000C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPtt000C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables or disables boot with initialization of a minimal set of devices required to launch active boot option. Has no effect for BBS boot options.\n* `Disabled` - Value -- Disabled for configuring Ptt000 token.\n* `Enabled` - Value -- Enabled for configuring Ptt000 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPtt000C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosPtt000C845BiosToken initObject = new Intersight.Model.BiosPtt000C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BiosSystemBootOrder.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBiosSystemBootOrder")]
@@ -7502,6 +11110,654 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosTcg001C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosTcg001C845BiosToken")]
+    public class InitializeIntersightBiosTcg001C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosTcg001C845BiosToken()
+        {
+            ClassId = BiosTcg001C845BiosToken.ClassIdEnum.BiosTcg001C845BiosToken;
+            ObjectType = BiosTcg001C845BiosToken.ObjectTypeEnum.BiosTcg001C845BiosToken;
+            Value = BiosTcg001C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg001C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg001C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable/Disable Security Device. NOTE: Your Computer will reboot during restart in order to change State of the Device.\n* `Enabled` - Value -- Enabled for configuring Tcg001 token.\n* `Disabled` - Value -- Disabled for configuring Tcg001 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg001C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosTcg001C845BiosToken initObject = new Intersight.Model.BiosTcg001C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosTcg003C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosTcg003C845BiosToken")]
+    public class InitializeIntersightBiosTcg003C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosTcg003C845BiosToken()
+        {
+            ClassId = BiosTcg003C845BiosToken.ClassIdEnum.BiosTcg003C845BiosToken;
+            ObjectType = BiosTcg003C845BiosToken.ObjectTypeEnum.BiosTcg003C845BiosToken;
+            Value = BiosTcg003C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg003C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg003C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables or Disables BIOS support for security device. O.S. will not show Security Device. TCG EFI protocol and INT1A interface will not be available.\n* `Enabled` - Value -- Enabled for configuring Tcg003 token.\n* `Disabled` - Value -- Disabled for configuring Tcg003 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg003C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosTcg003C845BiosToken initObject = new Intersight.Model.BiosTcg003C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosTcg007C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosTcg007C845BiosToken")]
+    public class InitializeIntersightBiosTcg007C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosTcg007C845BiosToken()
+        {
+            ClassId = BiosTcg007C845BiosToken.ClassIdEnum.BiosTcg007C845BiosToken;
+            ObjectType = BiosTcg007C845BiosToken.ObjectTypeEnum.BiosTcg007C845BiosToken;
+            Value = BiosTcg007C845BiosToken.ValueEnum.None;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg007C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg007C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Schedule an Operation for the Security Device. NOTE: Your Computer will reboot during restart in order to change State of Security Device.\n* `None` - Value -- None for configuring Tcg007 token.\n* `TPM Clear` - Value -- TPM Clear for configuring Tcg007 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg007C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosTcg007C845BiosToken initObject = new Intersight.Model.BiosTcg007C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosTcg018C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosTcg018C845BiosToken")]
+    public class InitializeIntersightBiosTcg018C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosTcg018C845BiosToken()
+        {
+            ClassId = BiosTcg018C845BiosToken.ClassIdEnum.BiosTcg018C845BiosToken;
+            ObjectType = BiosTcg018C845BiosToken.ObjectTypeEnum.BiosTcg018C845BiosToken;
+            Value = BiosTcg018C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg018C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg018C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or Disable SHA256 PCR Bank.\n* `Enabled` - Value -- Enabled for configuring Tcg018 token.\n* `Disabled` - Value -- Disabled for configuring Tcg018 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg018C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosTcg018C845BiosToken initObject = new Intersight.Model.BiosTcg018C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosTcg019C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosTcg019C845BiosToken")]
+    public class InitializeIntersightBiosTcg019C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosTcg019C845BiosToken()
+        {
+            ClassId = BiosTcg019C845BiosToken.ClassIdEnum.BiosTcg019C845BiosToken;
+            ObjectType = BiosTcg019C845BiosToken.ObjectTypeEnum.BiosTcg019C845BiosToken;
+            Value = BiosTcg019C845BiosToken.ValueEnum.Disabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg019C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg019C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable or Disable SHA384 PCR Bank.\n* `Disabled` - Value -- Disabled for configuring Tcg019 token.\n* `Enabled` - Value -- Enabled for configuring Tcg019 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTcg019C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosTcg019C845BiosToken initObject = new Intersight.Model.BiosTcg019C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosTer001C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosTer001C845BiosToken")]
+    public class InitializeIntersightBiosTer001C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosTer001C845BiosToken()
+        {
+            ClassId = BiosTer001C845BiosToken.ClassIdEnum.BiosTer001C845BiosToken;
+            ObjectType = BiosTer001C845BiosToken.ObjectTypeEnum.BiosTer001C845BiosToken;
+            Value = BiosTer001C845BiosToken.ValueEnum.Enabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer001C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer001C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Console Redirection Enable or Disable.\n* `Enabled` - Value -- Enabled for configuring Ter001 token.\n* `Disabled` - Value -- Disabled for configuring Ter001 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer001C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosTer001C845BiosToken initObject = new Intersight.Model.BiosTer001C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosTer0021C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosTer0021C845BiosToken")]
+    public class InitializeIntersightBiosTer0021C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosTer0021C845BiosToken()
+        {
+            ClassId = BiosTer0021C845BiosToken.ClassIdEnum.BiosTer0021C845BiosToken;
+            ObjectType = BiosTer0021C845BiosToken.ObjectTypeEnum.BiosTer0021C845BiosToken;
+            Value = BiosTer0021C845BiosToken.ValueEnum._115200;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer0021C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer0021C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Selects serial port transmission speed. The speed must be matched on the other side. Long or noisy lines may require lower speeds.\n* `115200` - Value -- 115200 for configuring Ter0021 token.\n* `9600` - Value -- 9600 for configuring Ter0021 token.\n* `19200` - Value -- 19200 for configuring Ter0021 token.\n* `38400` - Value -- 38400 for configuring Ter0021 token.\n* `57600` - Value -- 57600 for configuring Ter0021 token.\n* `230400` - Value -- 230400 for configuring Ter0021 token.\n* `460800` - Value -- 460800 for configuring Ter0021 token.\n* `921600` - Value -- 921600 for configuring Ter0021 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer0021C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosTer0021C845BiosToken initObject = new Intersight.Model.BiosTer0021C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosTer012C845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosTer012C845BiosToken")]
+    public class InitializeIntersightBiosTer012C845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosTer012C845BiosToken()
+        {
+            ClassId = BiosTer012C845BiosToken.ClassIdEnum.BiosTer012C845BiosToken;
+            ObjectType = BiosTer012C845BiosToken.ObjectTypeEnum.BiosTer012C845BiosToken;
+            Value = BiosTer012C845BiosToken.ValueEnum.ANSI;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer012C845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer012C845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Emulation: ANSI: Extended ASCII char set. VT100: ASCII char set. VT100Plus: Extends VT100 to support color, function keys, etc. VT-UTF8: Uses UTF8 encoding to map Unicode chars onto 1 or more bytes.\n* `ANSI` - Value -- ANSI for configuring Ter012 token.\n* `VT100` - Value -- VT100 for configuring Ter012 token.\n* `VT100Plus` - Value -- VT100Plus for configuring Ter012 token.\n* `VT-UTF8` - Value -- VT-UTF8 for configuring Ter012 token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer012C845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosTer012C845BiosToken initObject = new Intersight.Model.BiosTer012C845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BiosTer05dC845BiosToken.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBiosTer05dC845BiosToken")]
+    public class InitializeIntersightBiosTer05dC845BiosToken : PSCmdlet
+    {
+        public InitializeIntersightBiosTer05dC845BiosToken()
+        {
+            ClassId = BiosTer05dC845BiosToken.ClassIdEnum.BiosTer05dC845BiosToken;
+            ObjectType = BiosTer05dC845BiosToken.ObjectTypeEnum.BiosTer05dC845BiosToken;
+            Value = BiosTer05dC845BiosToken.ValueEnum.None;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer05dC845BiosToken.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer05dC845BiosToken.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Flow control can prevent data loss from buffer overflow. When sending data, if the receiving buffers are full, a 'stop' signal can be sent to stop the data flow. Once the buffers are empty, a 'start' signal can be sent to re-start the flow. Hardware flow control uses two wires to send start/stop signals.\n* `None` - Value -- None for configuring Ter05d token.\n* `Hardware RTS/CTS` - Value -- Hardware RTS/CTS for configuring Ter05d token."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosTer05dC845BiosToken.ValueEnum Value
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BiosTer05dC845BiosToken initObject = new Intersight.Model.BiosTer05dC845BiosToken();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Value"))
+            {
+                initObject.Value = this.Value;
             }
             WriteObject(initObject);
         }

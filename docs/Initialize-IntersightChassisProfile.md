@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< Model.EquipmentChassisRelationship>][-ClassId< ChassisProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ChassisProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< Model.EquipmentChassisRelationship>][-ChassisAssignmentMode< ChassisProfile.ChassisAssignmentModeEnum>][-ChassisPreAssignBySerial< string>][-ChassisReservation< Model.ResourcepoolReservationReference>][-ClassId< ChassisProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ChassisProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[Model.PoolReservationReference]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-ScheduledChassisAssignment< Model.ChassisChassisAssignment>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -79,6 +79,53 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.EquipmentChassisRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChassisAssignmentMode
+Source of the chassis assigned to the Chassis Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Chassis Profile. None is used if no chassis is attached to a Chassis Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Chassis is directly assigned to chassis profile using assign chassis.\n* `None` - No chassis is assigned to the chassis profile.
+
+```yaml
+Type: ChassisProfile.ChassisAssignmentModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChassisPreAssignBySerial
+Serial number of the chassis that would be assigned to this pre-assigned Chassis Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChassisReservation
+Serial number based reservation for the chassis to be assigned to this Chassis Profile.
+
+Note :- Use Initialize-IntersightResourcepoolReservationReference to create the object of complex type ResourcepoolReservationReference
+
+```yaml
+Type: Model.ResourcepoolReservationReference
 Parameter Sets: (All)
 Aliases:
 
@@ -217,6 +264,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ReservationReferences
+
+
+Note :- Use Initialize-IntersightPoolReservationReference to create the object of complex type PoolReservationReference
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.PoolReservationReference]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ScheduledActions
 
 
@@ -224,6 +288,23 @@ Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of c
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.PolicyScheduledAction]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ScheduledChassisAssignment
+Chassis reassignment information that is captured as part of the config import process.
+
+Note :- Use Initialize-IntersightChassisChassisAssignment to create the object of complex type ChassisChassisAssignment
+
+```yaml
+Type: Model.ChassisChassisAssignment
 Parameter Sets: (All)
 Aliases:
 
@@ -371,6 +452,8 @@ PS C:\> Initialize-IntersightChassisProfile
 
 ## RELATED LINKS
 
+[Initialize-IntersightChassisChassisAssignment](./Initialize-IntersightChassisChassisAssignment.md)
+
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
@@ -378,3 +461,7 @@ PS C:\> Initialize-IntersightChassisProfile
 [Initialize-IntersightPolicyConfigContext](./Initialize-IntersightPolicyConfigContext.md)
 
 [Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)
+
+[Initialize-IntersightPoolReservationReference](./Initialize-IntersightPoolReservationReference.md)
+
+[Initialize-IntersightResourcepoolReservationReference](./Initialize-IntersightResourcepoolReservationReference.md)

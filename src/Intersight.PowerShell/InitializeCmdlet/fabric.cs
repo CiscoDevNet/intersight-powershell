@@ -522,6 +522,91 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricChassisAssignment.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricChassisAssignment")]
+    public class InitializeIntersightFabricChassisAssignment : PSCmdlet
+    {
+        public InitializeIntersightFabricChassisAssignment()
+        {
+            ClassId = FabricChassisAssignment.ClassIdEnum.FabricChassisAssignment;
+            ObjectType = FabricChassisAssignment.ObjectTypeEnum.FabricChassisAssignment;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of the chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ChassisSerial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricChassisAssignment.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if this assignment is enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricChassisAssignment.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricChassisAssignment initObject = new Intersight.Model.FabricChassisAssignment();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ChassisSerial"))
+            {
+                initObject.ChassisSerial = this.ChassisSerial;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricClusterAssignment.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricClusterAssignment")]
@@ -8695,6 +8780,91 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricSwitchAssignment.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricSwitchAssignment")]
+    public class InitializeIntersightFabricSwitchAssignment : PSCmdlet
+    {
+        public InitializeIntersightFabricSwitchAssignment()
+        {
+            ClassId = FabricSwitchAssignment.ClassIdEnum.FabricSwitchAssignment;
+            ObjectType = FabricSwitchAssignment.ObjectTypeEnum.FabricSwitchAssignment;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchAssignment.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if this assignment is enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchAssignment.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SwitchSerial
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricSwitchAssignment initObject = new Intersight.Model.FabricSwitchAssignment();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchSerial"))
+            {
+                initObject.SwitchSerial = this.SwitchSerial;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricSwitchClusterProfile.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricSwitchClusterProfile")]
@@ -8702,6 +8872,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFabricSwitchClusterProfile()
         {
+            ChassisAssignmentMode = FabricSwitchClusterProfile.ChassisAssignmentModeEnum.Static;
             ClassId = FabricSwitchClusterProfile.ClassIdEnum.FabricSwitchClusterProfile;
             ObjectType = FabricSwitchClusterProfile.ObjectTypeEnum.FabricSwitchClusterProfile;
             TargetPlatform = FabricSwitchClusterProfile.TargetPlatformEnum.UCSDomain;
@@ -8734,6 +8905,26 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.MoBaseMoRelationship AssignedEntity
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source of the chassis assigned to the Switch Cluster Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Switch Cluster Profile. None is used if no chassis is attached to a Switch Cluster Profile. Serial pre-assignment is also considered None.\n* `Static` - Chassis is directly assigned to switch cluster profile.\n* `None` - No chassis is assigned to the switch cluster profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchClusterProfile.ChassisAssignmentModeEnum ChassisAssignmentMode
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of the chassis that would be assigned to this pre-assigned switch cluster profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string ChassisPreAssignBySerial
         {
             get;
             set;
@@ -8804,6 +8995,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Scheduled chassis assignment information captured during export and used during config restore to re-assign chassis to the switch cluster profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricChassisAssignment ScheduledChassisAssignment
         {
             get;
             set;
@@ -8885,6 +9086,14 @@ namespace Intersight.PowerShell
             {
                 initObject.AssignedEntity = this.AssignedEntity;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ChassisAssignmentMode"))
+            {
+                initObject.ChassisAssignmentMode = this.ChassisAssignmentMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ChassisPreAssignBySerial"))
+            {
+                initObject.ChassisPreAssignBySerial = this.ChassisPreAssignBySerial;
+            }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("ClusterAssignments"))
             {
@@ -8906,6 +9115,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
             {
                 initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScheduledChassisAssignment"))
+            {
+                initObject.ScheduledChassisAssignment = this.ScheduledChassisAssignment;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
             {
@@ -9429,6 +9642,7 @@ namespace Intersight.PowerShell
         {
             ClassId = FabricSwitchProfile.ClassIdEnum.FabricSwitchProfile;
             ObjectType = FabricSwitchProfile.ObjectTypeEnum.FabricSwitchProfile;
+            SwitchAssignmentMode = FabricSwitchProfile.SwitchAssignmentModeEnum.Static;
             SwitchId = FabricSwitchProfile.SwitchIdEnum.None;
             TargetPlatform = FabricSwitchProfile.TargetPlatformEnum.UCSDomain;
             Type = FabricSwitchProfile.TypeEnum.Instance;
@@ -9505,6 +9719,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Serial number of the fabric that would be assigned to this pre-assigned fabric switch Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string FabricPreAssignBySerial
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9555,11 +9779,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Switch reassignment information that is captured as part of the config import process."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricSwitchAssignment ScheduledSwitchAssignment
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.PolicyAbstractProfileRelationship SrcTemplate
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source of the switch assigned to the Domain Profile. Values can be Static or None. Static is used if a switch is attached directly to a Domain Profile. None is used if no switch is attached to a Domain Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Fabric is directly assigned to domain profile using assign chassis.\n* `None` - No fabric is assigned to the domain profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfile.SwitchAssignmentModeEnum SwitchAssignmentMode
         {
             get;
             set;
@@ -9654,6 +9898,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Description = this.Description;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FabricPreAssignBySerial"))
+            {
+                initObject.FabricPreAssignBySerial = this.FabricPreAssignBySerial;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -9671,9 +9919,17 @@ namespace Intersight.PowerShell
             {
                 initObject.ScheduledActions = this.ScheduledActions;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScheduledSwitchAssignment"))
+            {
+                initObject.ScheduledSwitchAssignment = this.ScheduledSwitchAssignment;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
             {
                 initObject.SrcTemplate = this.SrcTemplate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchAssignmentMode"))
+            {
+                initObject.SwitchAssignmentMode = this.SwitchAssignmentMode;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SwitchClusterProfile"))
             {

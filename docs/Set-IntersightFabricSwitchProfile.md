@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< NetworkElementRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][[-Moid]< string>][-Name< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchClusterProfile< FabricSwitchClusterProfileRelationship>][-SwitchId< FabricSwitchProfile.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-Type< FabricSwitchProfile.TypeEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricSwitchProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedSwitch< NetworkElementRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-FabricPreAssignBySerial< string>][[-Moid]< string>][-Name< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-ScheduledSwitchAssignment< FabricSwitchAssignment>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchAssignmentMode< FabricSwitchProfile.SwitchAssignmentModeEnum>][-SwitchClusterProfile< FabricSwitchClusterProfileRelationship>][-SwitchId< FabricSwitchProfile.SwitchIdEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-Type< FabricSwitchProfile.TypeEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -120,6 +120,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -FabricPreAssignBySerial
+Serial number of the fabric that would be assigned to this pre-assigned fabric switch Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -185,6 +200,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ScheduledSwitchAssignment
+Switch reassignment information that is captured as part of the config import process.
+
+Note :- Use Initialize-IntersightFabricSwitchAssignment to create the object of complex type FabricSwitchAssignment
+
+```yaml
+Type: FabricSwitchAssignment
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SrcTemplate
 A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -193,6 +225,21 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: PolicyAbstractProfileRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SwitchAssignmentMode
+Source of the switch assigned to the Domain Profile. Values can be Static or None. Static is used if a switch is attached directly to a Domain Profile. None is used if no switch is attached to a Domain Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Fabric is directly assigned to domain profile using assign chassis.\n* `None` - No fabric is assigned to the domain profile.
+
+```yaml
+Type: FabricSwitchProfile.SwitchAssignmentModeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -373,6 +420,8 @@ PS C:\> Set-IntersightFabricSwitchProfile
 ## RELATED LINKS
 
 [Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
+
+[Initialize-IntersightFabricSwitchAssignment](./Initialize-IntersightFabricSwitchAssignment.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

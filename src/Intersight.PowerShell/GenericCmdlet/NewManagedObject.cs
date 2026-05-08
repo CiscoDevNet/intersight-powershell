@@ -6,7 +6,7 @@ using System.Management.Automation;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsCommon.New, "IntersightManagedObject", SupportsShouldProcess = true)]
+    [Cmdlet(VerbsCommon.New, "IntersightManagedObject", DefaultParameterSetName = Constants.CmdletParam, SupportsShouldProcess = true)]
     public class NewManagedObject : CmdletBase
     {
         public NewManagedObject()
@@ -14,13 +14,21 @@ namespace Intersight.PowerShell
 
         }
 
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "cmdletParam")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.CmdletParam)]
         public string ObjectType { get; set; }
 
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "cmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.CmdletParam)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.JsonData)]
+        [ValidatePattern("^/api/v1/*")]
+        public string APIPath
+        {
+            get; set;
+        }
+
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.CmdletParam)]
         public Hashtable AdditionalProperties { get; set; }
 
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "jsonData")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.JsonData)]
         public string JsonRequestBody { get; set; }
 
         protected override void ProcessRecord()
@@ -44,27 +52,27 @@ namespace Intersight.PowerShell
             RequestOptions requestOption = new RequestOptions();
 
             psClient.BasePath = CmdletBase.Config.BasePath;
-            psClient.Method = "POST";
+            psClient.Method = HttpMethod.Post.ToString(); ;
 
-            if (ParameterSetName == PSUtils.CmdletParam)
+            if (ParameterSetName == Constants.CmdletParam)
             {
                 requestOption.Data = AdditionalProperties;
             }
             else
             {
                 var tempHashTable = JsonConvert.DeserializeObject<Hashtable>(JsonRequestBody);
-                if (tempHashTable.ContainsKey(PSUtils.ObjectType))
+                if (tempHashTable.ContainsKey(Constants.ObjectType))
                 {
-                    ObjectType = tempHashTable[PSUtils.ObjectType].ToString();
+                    ObjectType = tempHashTable[Constants.ObjectType].ToString();
                 }
                 else
                 {
-                    throw new Exception(string.Format("Property {0} is missing in JsonRequestBody", PSUtils.ObjectType));
+                    throw new Exception(string.Format("Property {0} is missing in JsonRequestBody", Constants.ObjectType));
                 }
                 requestOption.Data = tempHashTable;
             }
 
-            psClient.Path = string.Format("/api/v1/{0}", PSUtils.GetPath(ObjectType));
+            psClient.Path = PSUtils.GetPath(ObjectType, APIPath, VerbsCommon.New);
             var response = psClient.Execute(requestOption);
             WriteObject(response);
         }

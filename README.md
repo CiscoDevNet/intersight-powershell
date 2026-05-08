@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2026041816
-- C# SDK version: 1.0.11.2026041816
+- Intersight.PowerShell version: 1.0.11.2026042921
+- C# SDK version: 1.0.11.2026042921
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -115,7 +115,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026041816"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026042921"}
 ```
 or
 
@@ -917,6 +917,7 @@ CapabilityAdapterFirmwareRequirement | [**Get-IntersightCapabilityAdapterFirmwar
 CapabilityAdapterUnitDescriptor | [**Get-IntersightCapabilityAdapterUnitDescriptor**](docs/Get-IntersightCapabilityAdapterUnitDescriptor.md) | Read a 'CapabilityAdapterUnitDescriptor' resource.
 CapabilityAdapterUpdateConstraintMeta | [**Get-IntersightCapabilityAdapterUpdateConstraintMeta**](docs/Get-IntersightCapabilityAdapterUpdateConstraintMeta.md) | Read a 'CapabilityAdapterUpdateConstraintMeta' resource.
 CapabilityAdapterUpgradeSupportMeta | [**Get-IntersightCapabilityAdapterUpgradeSupportMeta**](docs/Get-IntersightCapabilityAdapterUpgradeSupportMeta.md) | Read a 'CapabilityAdapterUpgradeSupportMeta' resource.
+CapabilityBiosTokens | [**Get-IntersightCapabilityBiosTokens**](docs/Get-IntersightCapabilityBiosTokens.md) | Read a 'CapabilityBiosTokens' resource.
 CapabilityCatalog | [**Get-IntersightCapabilityCatalog**](docs/Get-IntersightCapabilityCatalog.md) | Read a 'CapabilityCatalog' resource.
 CapabilityChassisDescriptor | [**Get-IntersightCapabilityChassisDescriptor**](docs/Get-IntersightCapabilityChassisDescriptor.md) | Read a 'CapabilityChassisDescriptor' resource.
 CapabilityChassisManufacturingDef | [**Get-IntersightCapabilityChassisManufacturingDef**](docs/Get-IntersightCapabilityChassisManufacturingDef.md) | Read a 'CapabilityChassisManufacturingDef' resource.
@@ -964,6 +965,7 @@ CapabilitySwitchEquipmentInfo | [**Get-IntersightCapabilitySwitchEquipmentInfo**
 CapabilitySwitchManufacturingDef | [**Get-IntersightCapabilitySwitchManufacturingDef**](docs/Get-IntersightCapabilitySwitchManufacturingDef.md) | Read a 'CapabilitySwitchManufacturingDef' resource.
 CapabilitySwitchUpgradeSupportMeta | [**Get-IntersightCapabilitySwitchUpgradeSupportMeta**](docs/Get-IntersightCapabilitySwitchUpgradeSupportMeta.md) | Read a 'CapabilitySwitchUpgradeSupportMeta' resource.
 CapabilityTemplateCatalog | [**Get-IntersightCapabilityTemplateCatalog**](docs/Get-IntersightCapabilityTemplateCatalog.md) | Read a 'CapabilityTemplateCatalog' resource.
+CapabilityTimeZoneMetaData | [**Get-IntersightCapabilityTimeZoneMetaData**](docs/Get-IntersightCapabilityTimeZoneMetaData.md) | Read a 'CapabilityTimeZoneMetaData' resource.
 CapabilityUpdateOrderMeta | [**Get-IntersightCapabilityUpdateOrderMeta**](docs/Get-IntersightCapabilityUpdateOrderMeta.md) | Read a 'CapabilityUpdateOrderMeta' resource.
 CapabilityVicDescriptor | [**Get-IntersightCapabilityVicDescriptor**](docs/Get-IntersightCapabilityVicDescriptor.md) | Read a 'CapabilityVicDescriptor' resource.
 CatalystsdwanConfigGroup | [**Get-IntersightCatalystsdwanConfigGroup**](docs/Get-IntersightCatalystsdwanConfigGroup.md) | Read a 'CatalystsdwanConfigGroup' resource.
@@ -1676,9 +1678,12 @@ IamIpAccessManagement | [**Get-IntersightIamIpAccessManagement**](docs/Get-Inter
 IamIpAddress | [**Get-IntersightIamIpAddress**](docs/Get-IntersightIamIpAddress.md) | Read a 'IamIpAddress' resource.
 IamLdapConfigParams | [**Get-IntersightIamLdapConfigParams**](docs/Get-IntersightIamLdapConfigParams.md) | Read a 'IamLdapConfigParams' resource.
 IamLdapGroup | [**Get-IntersightIamLdapGroup**](docs/Get-IntersightIamLdapGroup.md) | Read a 'IamLdapGroup' resource.
+IamLdapGroupInventory | [**Get-IntersightIamLdapGroupInventory**](docs/Get-IntersightIamLdapGroupInventory.md) | Read a 'IamLdapGroupInventory' resource.
 IamLdapMeta | [**Get-IntersightIamLdapMeta**](docs/Get-IntersightIamLdapMeta.md) | Read a 'IamLdapMeta' resource.
 IamLdapPolicy | [**Get-IntersightIamLdapPolicy**](docs/Get-IntersightIamLdapPolicy.md) | Read a 'IamLdapPolicy' resource.
+IamLdapPolicyInventory | [**Get-IntersightIamLdapPolicyInventory**](docs/Get-IntersightIamLdapPolicyInventory.md) | Read a 'IamLdapPolicyInventory' resource.
 IamLdapProvider | [**Get-IntersightIamLdapProvider**](docs/Get-IntersightIamLdapProvider.md) | Read a 'IamLdapProvider' resource.
+IamLdapProviderInventory | [**Get-IntersightIamLdapProviderInventory**](docs/Get-IntersightIamLdapProviderInventory.md) | Read a 'IamLdapProviderInventory' resource.
 IamLocalUserPassword | [**Get-IntersightIamLocalUserPassword**](docs/Get-IntersightIamLocalUserPassword.md) | Read a 'IamLocalUserPassword' resource.
 IamLocalUserPasswordPolicy | [**Get-IntersightIamLocalUserPasswordPolicy**](docs/Get-IntersightIamLocalUserPasswordPolicy.md) | Read a 'IamLocalUserPasswordPolicy' resource.
 IamOAuthToken | [**Get-IntersightIamOAuthToken**](docs/Get-IntersightIamOAuthToken.md) | Read a 'IamOAuthToken' resource.
@@ -1956,10 +1961,30 @@ MetricsMetricsExploration | [**Remove-IntersightMetricsMetricsExploration**](doc
 MetricsConfiguration | [**Set-IntersightMetricsConfiguration**](docs/Set-IntersightMetricsConfiguration.md) | Update a 'MetricsConfiguration' resource.
 MetricsMetricsExploration | [**Set-IntersightMetricsMetricsExploration**](docs/Set-IntersightMetricsMetricsExploration.md) | Update a 'MetricsMetricsExploration' resource.
 MetricsResourceConfiguration | [**Set-IntersightMetricsResourceConfiguration**](docs/Set-IntersightMetricsResourceConfiguration.md) | Update a 'MetricsResourceConfiguration' resource.
+MgmtBackupCategory | [**Get-IntersightMgmtBackupCategory**](docs/Get-IntersightMgmtBackupCategory.md) | Read a 'MgmtBackupCategory' resource.
 MgmtConfigBackupFile | [**Get-IntersightMgmtConfigBackupFile**](docs/Get-IntersightMgmtConfigBackupFile.md) | Read a 'MgmtConfigBackupFile' resource.
+MgmtConfigBackupInstance | [**Get-IntersightMgmtConfigBackupInstance**](docs/Get-IntersightMgmtConfigBackupInstance.md) | Read a 'MgmtConfigBackupInstance' resource.
+MgmtConfigBackupOperation | [**Get-IntersightMgmtConfigBackupOperation**](docs/Get-IntersightMgmtConfigBackupOperation.md) | Read a 'MgmtConfigBackupOperation' resource.
+MgmtConfigCategorySummary | [**Get-IntersightMgmtConfigCategorySummary**](docs/Get-IntersightMgmtConfigCategorySummary.md) | Read a 'MgmtConfigCategorySummary' resource.
+MgmtConfigOperationSetting | [**Get-IntersightMgmtConfigOperationSetting**](docs/Get-IntersightMgmtConfigOperationSetting.md) | Read a 'MgmtConfigOperationSetting' resource.
+MgmtConfigRestoreCategorySummary | [**Get-IntersightMgmtConfigRestoreCategorySummary**](docs/Get-IntersightMgmtConfigRestoreCategorySummary.md) | Read a 'MgmtConfigRestoreCategorySummary' resource.
+MgmtConfigRestoreOperation | [**Get-IntersightMgmtConfigRestoreOperation**](docs/Get-IntersightMgmtConfigRestoreOperation.md) | Read a 'MgmtConfigRestoreOperation' resource.
+MgmtObjectBackupMeta | [**Get-IntersightMgmtObjectBackupMeta**](docs/Get-IntersightMgmtObjectBackupMeta.md) | Read a 'MgmtObjectBackupMeta' resource.
+MgmtOrgBackupOperation | [**Get-IntersightMgmtOrgBackupOperation**](docs/Get-IntersightMgmtOrgBackupOperation.md) | Read a 'MgmtOrgBackupOperation' resource.
+MgmtOrgRestoreOperation | [**Get-IntersightMgmtOrgRestoreOperation**](docs/Get-IntersightMgmtOrgRestoreOperation.md) | Read a 'MgmtOrgRestoreOperation' resource.
 MgmtConfigBackupFile | [**New-IntersightMgmtConfigBackupFile**](docs/New-IntersightMgmtConfigBackupFile.md) | Create a 'MgmtConfigBackupFile' resource.
+MgmtConfigBackupOperation | [**New-IntersightMgmtConfigBackupOperation**](docs/New-IntersightMgmtConfigBackupOperation.md) | Create a 'MgmtConfigBackupOperation' resource.
+MgmtConfigOperationSetting | [**New-IntersightMgmtConfigOperationSetting**](docs/New-IntersightMgmtConfigOperationSetting.md) | Create a 'MgmtConfigOperationSetting' resource.
+MgmtConfigRestoreOperation | [**New-IntersightMgmtConfigRestoreOperation**](docs/New-IntersightMgmtConfigRestoreOperation.md) | Create a 'MgmtConfigRestoreOperation' resource.
 MgmtConfigBackupFile | [**Remove-IntersightMgmtConfigBackupFile**](docs/Remove-IntersightMgmtConfigBackupFile.md) | Delete a 'MgmtConfigBackupFile' resource.
+MgmtConfigBackupInstance | [**Remove-IntersightMgmtConfigBackupInstance**](docs/Remove-IntersightMgmtConfigBackupInstance.md) | Delete a 'MgmtConfigBackupInstance' resource.
+MgmtConfigBackupOperation | [**Remove-IntersightMgmtConfigBackupOperation**](docs/Remove-IntersightMgmtConfigBackupOperation.md) | Delete a 'MgmtConfigBackupOperation' resource.
+MgmtConfigOperationSetting | [**Remove-IntersightMgmtConfigOperationSetting**](docs/Remove-IntersightMgmtConfigOperationSetting.md) | Delete a 'MgmtConfigOperationSetting' resource.
+MgmtConfigRestoreOperation | [**Remove-IntersightMgmtConfigRestoreOperation**](docs/Remove-IntersightMgmtConfigRestoreOperation.md) | Delete a 'MgmtConfigRestoreOperation' resource.
 MgmtConfigBackupFile | [**Set-IntersightMgmtConfigBackupFile**](docs/Set-IntersightMgmtConfigBackupFile.md) | Update a 'MgmtConfigBackupFile' resource.
+MgmtConfigBackupInstance | [**Set-IntersightMgmtConfigBackupInstance**](docs/Set-IntersightMgmtConfigBackupInstance.md) | Update a 'MgmtConfigBackupInstance' resource.
+MgmtConfigBackupOperation | [**Set-IntersightMgmtConfigBackupOperation**](docs/Set-IntersightMgmtConfigBackupOperation.md) | Update a 'MgmtConfigBackupOperation' resource.
+MgmtConfigOperationSetting | [**Set-IntersightMgmtConfigOperationSetting**](docs/Set-IntersightMgmtConfigOperationSetting.md) | Update a 'MgmtConfigOperationSetting' resource.
 MonitoringHealthStatus | [**Get-IntersightMonitoringHealthStatus**](docs/Get-IntersightMonitoringHealthStatus.md) | Read a 'MonitoringHealthStatus' resource.
 NetworkDiscoveredNeighbor | [**Get-IntersightNetworkDiscoveredNeighbor**](docs/Get-IntersightNetworkDiscoveredNeighbor.md) | Read a 'NetworkDiscoveredNeighbor' resource.
 NetworkDns | [**Get-IntersightNetworkDns**](docs/Get-IntersightNetworkDns.md) | Read a 'NetworkDns' resource.
@@ -2102,6 +2127,7 @@ NotificationAccountSubscription | [**Remove-IntersightNotificationAccountSubscri
 NotificationAccountSubscription | [**Set-IntersightNotificationAccountSubscription**](docs/Set-IntersightNotificationAccountSubscription.md) | Update a 'NotificationAccountSubscription' resource.
 NtpNtpServer | [**Get-IntersightNtpNtpServer**](docs/Get-IntersightNtpNtpServer.md) | Read a 'NtpNtpServer' resource.
 NtpPolicy | [**Get-IntersightNtpPolicy**](docs/Get-IntersightNtpPolicy.md) | Read a 'NtpPolicy' resource.
+NtpPolicyInventory | [**Get-IntersightNtpPolicyInventory**](docs/Get-IntersightNtpPolicyInventory.md) | Read a 'NtpPolicyInventory' resource.
 NtpPolicy | [**New-IntersightNtpPolicy**](docs/New-IntersightNtpPolicy.md) | Create a 'NtpPolicy' resource.
 NtpPolicy | [**Remove-IntersightNtpPolicy**](docs/Remove-IntersightNtpPolicy.md) | Delete a 'NtpPolicy' resource.
 NtpPolicy | [**Set-IntersightNtpPolicy**](docs/Set-IntersightNtpPolicy.md) | Update a 'NtpPolicy' resource.
@@ -2281,17 +2307,21 @@ ResourcepoolMembershipReservation | [**Get-IntersightResourcepoolMembershipReser
 ResourcepoolPool | [**Get-IntersightResourcepoolPool**](docs/Get-IntersightResourcepoolPool.md) | Read a 'ResourcepoolPool' resource.
 ResourcepoolPoolMember | [**Get-IntersightResourcepoolPoolMember**](docs/Get-IntersightResourcepoolPoolMember.md) | Read a 'ResourcepoolPoolMember' resource.
 ResourcepoolQualificationPolicy | [**Get-IntersightResourcepoolQualificationPolicy**](docs/Get-IntersightResourcepoolQualificationPolicy.md) | Read a 'ResourcepoolQualificationPolicy' resource.
+ResourcepoolReservation | [**Get-IntersightResourcepoolReservation**](docs/Get-IntersightResourcepoolReservation.md) | Read a 'ResourcepoolReservation' resource.
 ResourcepoolUniverse | [**Get-IntersightResourcepoolUniverse**](docs/Get-IntersightResourcepoolUniverse.md) | Read a 'ResourcepoolUniverse' resource.
 ResourcepoolPool | [**New-IntersightResourcepoolPool**](docs/New-IntersightResourcepoolPool.md) | Create a 'ResourcepoolPool' resource.
 ResourcepoolQualificationPolicy | [**New-IntersightResourcepoolQualificationPolicy**](docs/New-IntersightResourcepoolQualificationPolicy.md) | Create a 'ResourcepoolQualificationPolicy' resource.
+ResourcepoolReservation | [**New-IntersightResourcepoolReservation**](docs/New-IntersightResourcepoolReservation.md) | Create a 'ResourcepoolReservation' resource.
 ResourcepoolChassisQualificationPolicy | [**Remove-IntersightResourcepoolChassisQualificationPolicy**](docs/Remove-IntersightResourcepoolChassisQualificationPolicy.md) | Delete a 'ResourcepoolChassisQualificationPolicy' resource.
 ResourcepoolLease | [**Remove-IntersightResourcepoolLease**](docs/Remove-IntersightResourcepoolLease.md) | Delete a 'ResourcepoolLease' resource.
 ResourcepoolMembershipReservation | [**Remove-IntersightResourcepoolMembershipReservation**](docs/Remove-IntersightResourcepoolMembershipReservation.md) | Delete a 'ResourcepoolMembershipReservation' resource.
 ResourcepoolPool | [**Remove-IntersightResourcepoolPool**](docs/Remove-IntersightResourcepoolPool.md) | Delete a 'ResourcepoolPool' resource.
 ResourcepoolQualificationPolicy | [**Remove-IntersightResourcepoolQualificationPolicy**](docs/Remove-IntersightResourcepoolQualificationPolicy.md) | Delete a 'ResourcepoolQualificationPolicy' resource.
+ResourcepoolReservation | [**Remove-IntersightResourcepoolReservation**](docs/Remove-IntersightResourcepoolReservation.md) | Delete a 'ResourcepoolReservation' resource.
 ResourcepoolMembershipReservation | [**Set-IntersightResourcepoolMembershipReservation**](docs/Set-IntersightResourcepoolMembershipReservation.md) | Update a 'ResourcepoolMembershipReservation' resource.
 ResourcepoolPool | [**Set-IntersightResourcepoolPool**](docs/Set-IntersightResourcepoolPool.md) | Update a 'ResourcepoolPool' resource.
 ResourcepoolQualificationPolicy | [**Set-IntersightResourcepoolQualificationPolicy**](docs/Set-IntersightResourcepoolQualificationPolicy.md) | Update a 'ResourcepoolQualificationPolicy' resource.
+ResourcepoolReservation | [**Set-IntersightResourcepoolReservation**](docs/Set-IntersightResourcepoolReservation.md) | Update a 'ResourcepoolReservation' resource.
 RproxyReverseProxy | [**New-IntersightRproxyReverseProxy**](docs/New-IntersightRproxyReverseProxy.md) | Create a 'RproxyReverseProxy' resource.
 SchedulerSchedulePolicy | [**Get-IntersightSchedulerSchedulePolicy**](docs/Get-IntersightSchedulerSchedulePolicy.md) | Read a 'SchedulerSchedulePolicy' resource.
 SchedulerTaskResult | [**Get-IntersightSchedulerTaskResult**](docs/Get-IntersightSchedulerTaskResult.md) | Read a 'SchedulerTaskResult' resource.
@@ -2350,6 +2380,7 @@ ServicenowChangeRequestDoc | [**Get-IntersightServicenowChangeRequestDoc**](docs
 ServicenowIncident | [**Get-IntersightServicenowIncident**](docs/Get-IntersightServicenowIncident.md) | Read a 'ServicenowIncident' resource.
 ServicenowIncidentDoc | [**Get-IntersightServicenowIncidentDoc**](docs/Get-IntersightServicenowIncidentDoc.md) | Read a 'ServicenowIncidentDoc' resource.
 SmtpPolicy | [**Get-IntersightSmtpPolicy**](docs/Get-IntersightSmtpPolicy.md) | Read a 'SmtpPolicy' resource.
+SmtpPolicyInventory | [**Get-IntersightSmtpPolicyInventory**](docs/Get-IntersightSmtpPolicyInventory.md) | Read a 'SmtpPolicyInventory' resource.
 SmtpPolicyTest | [**Get-IntersightSmtpPolicyTest**](docs/Get-IntersightSmtpPolicyTest.md) | Read a 'SmtpPolicyTest' resource.
 SmtpPolicy | [**New-IntersightSmtpPolicy**](docs/New-IntersightSmtpPolicy.md) | Create a 'SmtpPolicy' resource.
 SmtpPolicyTest | [**New-IntersightSmtpPolicyTest**](docs/New-IntersightSmtpPolicyTest.md) | Create a 'SmtpPolicyTest' resource.

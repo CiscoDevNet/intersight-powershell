@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< Model.ComputePhysicalRelationship>][-AssociatedServerPool< Model.ResourcepoolPoolRelationship>][-ClassId< ServerProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-InitialAutoDeployConfigComplete< bool>][-InitialAutoDeployMode< bool>][-LeasedServer< Model.ComputePhysicalRelationship>][-Moid< string>][-Name< string>][-ObjectType< ServerProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[Model.PoolReservationReference]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< Model.ResourcepoolPoolRelationship>][-ServerPreAssignBySerial< string>][-ServerPreAssignBySlot< Model.ServerServerAssignTypeSlot>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-Type< ServerProfile.TypeEnum>][-UserLabel< string>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< Model.UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[Model.PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< Model.ComputePhysicalRelationship>][-AssociatedServerPool< Model.ResourcepoolPoolRelationship>][-ClassId< ServerProfile.ClassIdEnum>][-ConfigContext< Model.PolicyConfigContext>][-Description< string>][-InitialAutoDeployConfigComplete< bool>][-InitialAutoDeployMode< bool>][-LeasedServer< Model.ComputePhysicalRelationship>][-Moid< string>][-Name< string>][-ObjectType< ServerProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[Model.PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[Model.PoolReservationReference]>][-ScheduledActions< System.Collections.Generic.List`1[Model.PolicyScheduledAction]>][-ScheduledServerAssignment< Model.ServerServerAssignment>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerFamily< ServerProfile.ServerFamilyEnum>][-ServerPool< Model.ResourcepoolPoolRelationship>][-ServerPreAssignBySerial< string>][-ServerPreAssignBySlot< Model.ServerServerAssignTypeSlot>][-ServerReservation< Model.ResourcepoolReservationReference>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-Type< ServerProfile.TypeEnum>][-UserLabel< string>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< Model.UuidpoolPoolRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -332,11 +332,43 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ScheduledServerAssignment
+Server reassignment information that is captured as part of the config import process.
+
+Note :- Use Initialize-IntersightServerServerAssignment to create the object of complex type ServerServerAssignment
+
+```yaml
+Type: Model.ServerServerAssignment
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ServerAssignmentMode
 Source of the server assigned to the Server Profile. Values can be Static, Pool or None. Static is used if a server is attached directly to a Server Profile. Pool is used if a resource pool is attached to a Server Profile. None is used if no server or resource pool is attached to a Server Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `None` - No server is assigned to the server profile.\n* `Static` - Server is directly assigned to server profile using assign server.\n* `Pool` - Server is assigned from a resource pool.
 
 ```yaml
 Type: ServerProfile.ServerAssignmentModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerFamily
+The server family type applicable to a server profile when the target platform is Standalone. For all other platform types, the value should be All.\n* `Unspecified` - Server Family type for Unspecified servers.\n* `All` - All server family types are included under this category.\n* `UCSC845A` - Server Family type for UCS C845A servers.\n* `UCSC2XX/4XX` - Server Family type for UCS C2XX/4XX servers.
+
+```yaml
+Type: ServerProfile.ServerFamilyEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -387,6 +419,23 @@ Note :- Use Initialize-IntersightServerServerAssignTypeSlot to create the object
 
 ```yaml
 Type: Model.ServerServerAssignTypeSlot
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerReservation
+Serial number based reservation for the server to be assigned to this Server Profile.
+
+Note :- Use Initialize-IntersightResourcepoolReservationReference to create the object of complex type ResourcepoolReservationReference
+
+```yaml
+Type: Model.ResourcepoolReservationReference
 Parameter Sets: (All)
 Aliases:
 
@@ -611,4 +660,8 @@ PS C:\> Initialize-IntersightServerProfile
 
 [Initialize-IntersightPoolReservationReference](./Initialize-IntersightPoolReservationReference.md)
 
+[Initialize-IntersightResourcepoolReservationReference](./Initialize-IntersightResourcepoolReservationReference.md)
+
 [Initialize-IntersightServerServerAssignTypeSlot](./Initialize-IntersightServerServerAssignTypeSlot.md)
+
+[Initialize-IntersightServerServerAssignment](./Initialize-IntersightServerServerAssignment.md)

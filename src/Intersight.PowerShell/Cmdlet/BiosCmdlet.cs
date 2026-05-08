@@ -776,6 +776,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"BIOS Token for setting BME DMA Mitigation configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
         /// </summary>
@@ -2537,6 +2538,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Specifies supported server model.\n* `Not-Applicable` - Represents case where the server model does not apply.\n* `UCSC845A` - Represents UCS C845A server model."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.ModelEnum Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3142,6 +3154,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Specifies BIOS policy compatibility type.\n* `Generic` - Generic BIOS type is compatible only for UCS B, C, and X Series models. Do not attempt to proceed if you are using an unsupported model, as this may result in configuration errors.\n* `ModelSpecific` - Model Specific BIOS type is compatible only for UCS C845A model. Do not attempt to proceed if you are using an unsupported model, as this may result in configuration errors."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public BiosPolicy.PolicyTypeEnum PolicyType
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"BIOS Token for setting Power ON Password configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
@@ -7140,6 +7163,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<BiosBaseBiosConfiguration> BiosConfigurations
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting BME DMA Mitigation configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8870,6 +8904,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Specifies supported server model.\n* `Not-Applicable` - Represents case where the server model does not apply.\n* `UCSC845A` - Represents UCS C845A server model."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.ModelEnum Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9465,6 +9510,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Specifies BIOS policy compatibility type.\n* `Generic` - Generic BIOS type is compatible only for UCS B, C, and X Series models. Do not attempt to proceed if you are using an unsupported model, as this may result in configuration errors.\n* `ModelSpecific` - Model Specific BIOS type is compatible only for UCS C845A model. Do not attempt to proceed if you are using an unsupported model, as this may result in configuration errors."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.PolicyTypeEnum PolicyType
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"BIOS Token for setting Power ON Password configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
@@ -12560,6 +12616,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<BiosBaseBiosConfiguration> BiosConfigurations
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"BIOS Token for setting BME DMA Mitigation configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14290,6 +14357,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Specifies supported server model.\n* `Not-Applicable` - Represents case where the server model does not apply.\n* `UCSC845A` - Represents UCS C845A server model."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.ModelEnum Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14885,6 +14963,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Specifies BIOS policy compatibility type.\n* `Generic` - Generic BIOS type is compatible only for UCS B, C, and X Series models. Do not attempt to proceed if you are using an unsupported model, as this may result in configuration errors.\n* `ModelSpecific` - Model Specific BIOS type is compatible only for UCS C845A model. Do not attempt to proceed if you are using an unsupported model, as this may result in configuration errors."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BiosPolicy.PolicyTypeEnum PolicyType
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"BIOS Token for setting Power ON Password configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting."</para>

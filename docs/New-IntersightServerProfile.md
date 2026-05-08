@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-AssociatedServerPool< ResourcepoolPoolRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-InitialAutoDeployConfigComplete< bool>][-InitialAutoDeployMode< bool>][-LeasedServer< ComputePhysicalRelationship>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[PoolReservationReference]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerPool< ResourcepoolPoolRelationship>][-ServerPreAssignBySerial< string>][-ServerPreAssignBySlot< ServerServerAssignTypeSlot>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-Type< ServerProfile.TypeEnum>][-UserLabel< string>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightServerProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedServer< ComputePhysicalRelationship>][-AssociatedServerPool< ResourcepoolPoolRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-InitialAutoDeployConfigComplete< bool>][-InitialAutoDeployMode< bool>][-LeasedServer< ComputePhysicalRelationship>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PmcDeployedSecurePassphrase< string>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[PoolReservationReference]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-ScheduledServerAssignment< ServerServerAssignment>][-ServerAssignmentMode< ServerProfile.ServerAssignmentModeEnum>][-ServerFamily< ServerProfile.ServerFamilyEnum>][-ServerPool< ResourcepoolPoolRelationship>][-ServerPreAssignBySerial< string>][-ServerPreAssignBySlot< ServerServerAssignTypeSlot>][-ServerReservation< ResourcepoolReservationReference>][-SrcTemplate< PolicyAbstractProfileRelationship>][-StaticUuidAddress< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ServerProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-Type< ServerProfile.TypeEnum>][-UserLabel< string>][-UuidAddressType< ServerProfile.UuidAddressTypeEnum>][-UuidPool< UuidpoolPoolRelationship>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -301,11 +301,43 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ScheduledServerAssignment
+Server reassignment information that is captured as part of the config import process.
+
+Note :- Use Initialize-IntersightServerServerAssignment to create the object of complex type ServerServerAssignment
+
+```yaml
+Type: ServerServerAssignment
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ServerAssignmentMode
 Source of the server assigned to the Server Profile. Values can be Static, Pool or None. Static is used if a server is attached directly to a Server Profile. Pool is used if a resource pool is attached to a Server Profile. None is used if no server or resource pool is attached to a Server Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `None` - No server is assigned to the server profile.\n* `Static` - Server is directly assigned to server profile using assign server.\n* `Pool` - Server is assigned from a resource pool.
 
 ```yaml
 Type: ServerProfile.ServerAssignmentModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerFamily
+The server family type applicable to a server profile when the target platform is Standalone. For all other platform types, the value should be All.\n* `Unspecified` - Server Family type for Unspecified servers.\n* `All` - All server family types are included under this category.\n* `UCSC845A` - Server Family type for UCS C845A servers.\n* `UCSC2XX/4XX` - Server Family type for UCS C2XX/4XX servers.
+
+```yaml
+Type: ServerProfile.ServerFamilyEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -356,6 +388,23 @@ Note :- Use Initialize-IntersightServerServerAssignTypeSlot to create the object
 
 ```yaml
 Type: ServerServerAssignTypeSlot
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ServerReservation
+Serial number based reservation for the server to be assigned to this Server Profile.
+
+Note :- Use Initialize-IntersightResourcepoolReservationReference to create the object of complex type ResourcepoolReservationReference
+
+```yaml
+Type: ResourcepoolReservationReference
 Parameter Sets: (All)
 Aliases:
 
@@ -626,9 +675,13 @@ PS C:\> New-IntersightServerProfile
 
 [Initialize-IntersightPoolReservationReference](./Initialize-IntersightPoolReservationReference.md)
 
+[Initialize-IntersightResourcepoolReservationReference](./Initialize-IntersightResourcepoolReservationReference.md)
+
 [Initialize-IntersightServerProfile.PostDeployActionEnum](./Initialize-IntersightServerProfile.PostDeployActionEnum.md)
 
 [Initialize-IntersightServerServerAssignTypeSlot](./Initialize-IntersightServerServerAssignTypeSlot.md)
+
+[Initialize-IntersightServerServerAssignment](./Initialize-IntersightServerServerAssignment.md)
 
 [Remove-IntersightServerProfile](./Remove-IntersightServerProfile.md)
 

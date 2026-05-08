@@ -1219,6 +1219,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightApplianceClusterInfo()
         {
             ClassId = ApplianceClusterInfo.ClassIdEnum.ApplianceClusterInfo;
+            HypervisorType = ApplianceClusterInfo.HypervisorTypeEnum.ESXi;
             NodeType = ApplianceClusterInfo.NodeTypeEnum.Standalone;
             ObjectType = ApplianceClusterInfo.ObjectTypeEnum.ApplianceClusterInfo;
 
@@ -1289,6 +1290,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Hostname
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The hypervisor type of the node.\n* `ESXi` - VMware ESXi hypervisor type.Indicates the appliance node is running on a VMware ESXi virtualization platform.\n* `Hyper-V` - Microsoft Hyper-V hypervisor type.Indicates the appliance node is running on a Microsoft Hyper-V virtualization platform.\n* `KVM` - Kernel-based Virtual Machine hypervisor type.Indicates the appliance node is running on a KVM virtualization platform."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ApplianceClusterInfo.HypervisorTypeEnum HypervisorType
         {
             get;
             set;
@@ -1482,6 +1493,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Hostname"))
             {
                 initObject.Hostname = this.Hostname;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("HypervisorType"))
+            {
+                initObject.HypervisorType = this.HypervisorType;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("InstallerVersion"))
             {

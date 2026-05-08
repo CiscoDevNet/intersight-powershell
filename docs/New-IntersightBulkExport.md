@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightBulkExport [-Action< BulkExport.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ExcludePeers< System.Collections.Generic.List`1[string]>][-ExcludeRelations< bool>][-ExportTags< bool>][-IncludeOrgIdentity< bool>][-Items< System.Collections.Generic.List`1[MoMoRef]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightBulkExport [-Account< IamAccountRelationship>][-Action< BulkExport.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ExcludePeers< System.Collections.Generic.List`1[string]>][-ExcludeRelations< bool>][-ExportTags< bool>][-Idp< IamIdpRelationship>][-IdpReference< IamIdpReferenceRelationship>][-IncludeOrgIdentity< bool>][-ItemNames< System.Collections.Generic.List`1[string]>][-Items< System.Collections.Generic.List`1[MoMoRef]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PreserveIdentities< bool>][-RelatedTypeOptions< System.Collections.Generic.List`1[BulkRelatedTypeExportOption]>][-SplitRequests< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-User< IamUserRelationship>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -22,6 +22,24 @@ New-IntersightBulkExport [-Action< BulkExport.ActionEnum>][-AdditionalProperties
 Create a &apos;BulkExport&apos; resource.
 
 ## PARAMETERS
+
+### -Account
+A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamAccountRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -Action
 Action to be performed on the export operation.\n* `Start` - Starts the export operation.\n* `Cancel` - Cancels the export operation that is in progress.
@@ -98,11 +116,62 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Idp
+A reference to a iamIdp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamIdpRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IdpReference
+A reference to a iamIdpReference resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamIdpReferenceRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -IncludeOrgIdentity
 Indicates that exported references for objects which are organization owned should include the organization reference along with the other identity properties.
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ItemNames
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 
@@ -178,6 +247,53 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -PreserveIdentities
+The flag set by the user during a configuration backup to preserve static or dynamic IDs assigned to an export item.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -RelatedTypeOptions
+
+
+Note :- Use Initialize-IntersightBulkRelatedTypeExportOption to create the object of complex type BulkRelatedTypeExportOption
+
+```yaml
+Type: System.Collections.Generic.List`1[BulkRelatedTypeExportOption]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SplitRequests
+Intersight supports the import operation using bulk requests. A single bulk request is created using the bulk sub\nrequests created in export operation. There is a restriction of a single API request size in Intersight.\nIf the exported MOs are many in an export operation, this flag will store the bulk sub requests as two dimensional\ncollection property exportedObjectsAsGroups instead of one dimensional exportedObjects value where the sub requests are split into multiple smaller\ngroups. Each group can be sent in a single bulk request during import operation.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -185,6 +301,24 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -User
+A reference to a iamUser resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: IamUserRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -284,7 +418,11 @@ PS C:\> New-IntersightBulkExport
 
 [Get-IntersightBulkExport](./Get-IntersightBulkExport.md)
 
+[Initialize-IntersightBulkRelatedTypeExportOption](./Initialize-IntersightBulkRelatedTypeExportOption.md)
+
 [Initialize-IntersightBulkSubRequest](./Initialize-IntersightBulkSubRequest.md)
+
+[Initialize-IntersightBulkSubRequestsGroup](./Initialize-IntersightBulkSubRequestsGroup.md)
 
 [Initialize-IntersightMoMoRef](./Initialize-IntersightMoMoRef.md)
 

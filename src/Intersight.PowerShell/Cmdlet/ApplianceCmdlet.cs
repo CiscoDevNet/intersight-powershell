@@ -1793,6 +1793,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The hypervisor type of the node.\n* `ESXi` - VMware ESXi hypervisor type.Indicates the appliance node is running on a VMware ESXi virtualization platform.\n* `Hyper-V` - Microsoft Hyper-V hypervisor type.Indicates the appliance node is running on a Microsoft Hyper-V virtualization platform.\n* `KVM` - Kernel-based Virtual Machine hypervisor type.Indicates the appliance node is running on a KVM virtualization platform."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ApplianceClusterInfo.HypervisorTypeEnum HypervisorType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Installer version used to install on peer node."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -11066,6 +11077,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The hypervisor type of the node.\n* `ESXi` - VMware ESXi hypervisor type.Indicates the appliance node is running on a VMware ESXi virtualization platform.\n* `Hyper-V` - Microsoft Hyper-V hypervisor type.Indicates the appliance node is running on a Microsoft Hyper-V virtualization platform.\n* `KVM` - Kernel-based Virtual Machine hypervisor type.Indicates the appliance node is running on a KVM virtualization platform."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ApplianceClusterInfo.HypervisorTypeEnum HypervisorType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Installer version used to install on peer node."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -13115,6 +13137,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public string Hostname
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The hypervisor type of the node.\n* `ESXi` - VMware ESXi hypervisor type.Indicates the appliance node is running on a VMware ESXi virtualization platform.\n* `Hyper-V` - Microsoft Hyper-V hypervisor type.Indicates the appliance node is running on a Microsoft Hyper-V virtualization platform.\n* `KVM` - Kernel-based Virtual Machine hypervisor type.Indicates the appliance node is running on a KVM virtualization platform."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ApplianceClusterInfo.HypervisorTypeEnum HypervisorType
         {
             get;
             set;

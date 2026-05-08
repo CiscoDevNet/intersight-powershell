@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< EquipmentChassisRelationship>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-UserLabel< string>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightChassisProfile [-Action< string>][-ActionParams< System.Collections.Generic.List`1[PolicyActionParam]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedChassis< EquipmentChassisRelationship>][-ChassisAssignmentMode< ChassisProfile.ChassisAssignmentModeEnum>][-ChassisPreAssignBySerial< string>][-ChassisReservation< ResourcepoolReservationReference>][-ConfigContext< PolicyConfigContext>][-Description< string>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PolicyBucket< System.Collections.Generic.List`1[PolicyAbstractPolicyRelationship]>][-ReservationReferences< System.Collections.Generic.List`1[PoolReservationReference]>][-ScheduledActions< System.Collections.Generic.List`1[PolicyScheduledAction]>][-ScheduledChassisAssignment< ChassisChassisAssignment>][-SrcTemplate< PolicyAbstractProfileRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< ChassisProfile.TargetPlatformEnum>][-Type< ChassisProfile.TypeEnum>][-UserLabel< string>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -78,6 +78,53 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: EquipmentChassisRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChassisAssignmentMode
+Source of the chassis assigned to the Chassis Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Chassis Profile. None is used if no chassis is attached to a Chassis Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Chassis is directly assigned to chassis profile using assign chassis.\n* `None` - No chassis is assigned to the chassis profile.
+
+```yaml
+Type: ChassisProfile.ChassisAssignmentModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChassisPreAssignBySerial
+Serial number of the chassis that would be assigned to this pre-assigned Chassis Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChassisReservation
+Serial number based reservation for the chassis to be assigned to this Chassis Profile.
+
+Note :- Use Initialize-IntersightResourcepoolReservationReference to create the object of complex type ResourcepoolReservationReference
+
+```yaml
+Type: ResourcepoolReservationReference
 Parameter Sets: (All)
 Aliases:
 
@@ -186,6 +233,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ReservationReferences
+
+
+Note :- Use Initialize-IntersightPoolReservationReference to create the object of complex type PoolReservationReference
+
+```yaml
+Type: System.Collections.Generic.List`1[PoolReservationReference]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ScheduledActions
 
 
@@ -193,6 +257,23 @@ Note :- Use Initialize-IntersightPolicyScheduledAction to create the object of c
 
 ```yaml
 Type: System.Collections.Generic.List`1[PolicyScheduledAction]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ScheduledChassisAssignment
+Chassis reassignment information that is captured as part of the config import process.
+
+Note :- Use Initialize-IntersightChassisChassisAssignment to create the object of complex type ChassisChassisAssignment
+
+```yaml
+Type: ChassisChassisAssignment
 Parameter Sets: (All)
 Aliases:
 
@@ -372,6 +453,8 @@ PS C:\> New-IntersightChassisProfile
 
 [Get-IntersightChassisProfile](./Get-IntersightChassisProfile.md)
 
+[Initialize-IntersightChassisChassisAssignment](./Initialize-IntersightChassisChassisAssignment.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightPolicyActionParam](./Initialize-IntersightPolicyActionParam.md)
@@ -389,6 +472,10 @@ PS C:\> New-IntersightChassisProfile
 [Initialize-IntersightPolicyReportedPolicyChange](./Initialize-IntersightPolicyReportedPolicyChange.md)
 
 [Initialize-IntersightPolicyScheduledAction](./Initialize-IntersightPolicyScheduledAction.md)
+
+[Initialize-IntersightPoolReservationReference](./Initialize-IntersightPoolReservationReference.md)
+
+[Initialize-IntersightResourcepoolReservationReference](./Initialize-IntersightResourcepoolReservationReference.md)
 
 [Remove-IntersightChassisProfile](./Remove-IntersightChassisProfile.md)
 
