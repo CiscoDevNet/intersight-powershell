@@ -1021,6 +1021,29 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Source of the chassis assigned to the Chassis Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Chassis Profile. None is used if no chassis is attached to a Chassis Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Chassis is directly assigned to chassis profile using assign chassis.\n* `None` - No chassis is assigned to the chassis profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public ChassisProfile.ChassisAssignmentModeEnum ChassisAssignmentMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Serial number of the chassis that would be assigned to this pre-assigned Chassis Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string ChassisPreAssignBySerial
+        {
+            get;
+            set;
+        }
+
+
 
 
 
@@ -1127,6 +1150,8 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
 
 
 
@@ -1651,6 +1676,39 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Source of the chassis assigned to the Chassis Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Chassis Profile. None is used if no chassis is attached to a Chassis Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Chassis is directly assigned to chassis profile using assign chassis.\n* `None` - No chassis is assigned to the chassis profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ChassisProfile.ChassisAssignmentModeEnum ChassisAssignmentMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Serial number of the chassis that would be assigned to this pre-assigned Chassis Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string ChassisPreAssignBySerial
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Serial number based reservation for the chassis to be assigned to this Chassis Profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolReservationReference ChassisReservation
+        {
+            get;
+            set;
+        }
+
 
 
 
@@ -1734,6 +1792,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<PoolReservationReference> ReservationReferences
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description"></para>
@@ -1741,6 +1810,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<PolicyScheduledAction> ScheduledActions
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Chassis reassignment information that is captured as part of the config import process."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ChassisChassisAssignment ScheduledChassisAssignment
         {
             get;
             set;
@@ -2117,6 +2197,39 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Source of the chassis assigned to the Chassis Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Chassis Profile. None is used if no chassis is attached to a Chassis Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Chassis is directly assigned to chassis profile using assign chassis.\n* `None` - No chassis is assigned to the chassis profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ChassisProfile.ChassisAssignmentModeEnum ChassisAssignmentMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Serial number of the chassis that would be assigned to this pre-assigned Chassis Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string ChassisPreAssignBySerial
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Serial number based reservation for the chassis to be assigned to this Chassis Profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolReservationReference ChassisReservation
+        {
+            get;
+            set;
+        }
+
 
 
 
@@ -2200,6 +2313,17 @@ namespace Intersight.PowerShell
 
 
 
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<PoolReservationReference> ReservationReferences
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description"></para>
@@ -2207,6 +2331,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<PolicyScheduledAction> ScheduledActions
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Chassis reassignment information that is captured as part of the config import process."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ChassisChassisAssignment ScheduledChassisAssignment
         {
             get;
             set;

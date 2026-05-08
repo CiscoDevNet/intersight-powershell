@@ -2717,9 +2717,40 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightIamEndPointUserPolicy()
         {
+            AccountUnlockMode = IamEndPointUserPolicy.AccountUnlockModeEnum.Automatic;
             ClassId = IamEndPointUserPolicy.ClassIdEnum.IamEndPointUserPolicy;
             ObjectType = IamEndPointUserPolicy.ObjectTypeEnum.IamEndPointUserPolicy;
 
+        }
+        // <summary>
+        /// <para type="description">"Timeout duration specifies the duration (in seconds) after which a locked account is automatically unlocked. - Set to 0 when accountUnlockMode is Manual. - Set a value between 1 and 604800 when accountUnlockMode is Automatic."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long AccountLockoutDuration
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Set Account Lockout Threshold for endpoint users."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long AccountLockoutThreshold
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Account unlock method specifies how the account is unlocked after it is locked: - Manual: Account must be manually unlocked by an administrator. - Automatic: Account unlocks automatically after a timeout duration.\n* `Automatic` - Set Automatic on the selected end point.\n* `Manual` - Set Manual on the selected end point."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamEndPointUserPolicy.AccountUnlockModeEnum AccountUnlockMode
+        {
+            get;
+            set;
         }
         // <summary>
         /// <para type="description"></para>
@@ -2836,6 +2867,18 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.IamEndPointUserPolicy initObject = new Intersight.Model.IamEndPointUserPolicy();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountLockoutDuration"))
+            {
+                initObject.AccountLockoutDuration = this.AccountLockoutDuration;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountLockoutThreshold"))
+            {
+                initObject.AccountLockoutThreshold = this.AccountLockoutThreshold;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AccountUnlockMode"))
+            {
+                initObject.AccountUnlockMode = this.AccountUnlockMode;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -4718,6 +4761,91 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamLdapGroupInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamLdapGroupInventory")]
+    public class InitializeIntersightIamLdapGroupInventory : PSCmdlet
+    {
+        public InitializeIntersightIamLdapGroupInventory()
+        {
+            ClassId = IamLdapGroupInventory.ClassIdEnum.IamLdapGroupInventory;
+            ObjectType = IamLdapGroupInventory.ObjectTypeEnum.IamLdapGroupInventory;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapGroupInventory.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapGroupInventory.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamLdapGroupInventory initObject = new Intersight.Model.IamLdapGroupInventory();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize IamLdapMeta.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightIamLdapMeta")]
@@ -5071,6 +5199,91 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamLdapPolicyInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamLdapPolicyInventory")]
+    public class InitializeIntersightIamLdapPolicyInventory : PSCmdlet
+    {
+        public InitializeIntersightIamLdapPolicyInventory()
+        {
+            ClassId = IamLdapPolicyInventory.ClassIdEnum.IamLdapPolicyInventory;
+            ObjectType = IamLdapPolicyInventory.ObjectTypeEnum.IamLdapPolicyInventory;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapPolicyInventory.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapPolicyInventory.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamLdapPolicyInventory initObject = new Intersight.Model.IamLdapPolicyInventory();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize IamLdapProvider.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightIamLdapProvider")]
@@ -5207,6 +5420,91 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
             {
                 initObject.Vendor = this.Vendor;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamLdapProviderInventory.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamLdapProviderInventory")]
+    public class InitializeIntersightIamLdapProviderInventory : PSCmdlet
+    {
+        public InitializeIntersightIamLdapProviderInventory()
+        {
+            ClassId = IamLdapProviderInventory.ClassIdEnum.IamLdapProviderInventory;
+            ObjectType = IamLdapProviderInventory.ObjectTypeEnum.IamLdapProviderInventory;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapProviderInventory.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamLdapProviderInventory.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamLdapProviderInventory initObject = new Intersight.Model.IamLdapProviderInventory();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
             }
             WriteObject(initObject);
         }

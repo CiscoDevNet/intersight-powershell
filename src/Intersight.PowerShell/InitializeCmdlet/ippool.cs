@@ -1528,6 +1528,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The identity for which the reference is created. It is used to store the ID allocated to the profile during export. \nReservation id and Reservation moid are mutually exclusive and during export only reservationid will be populated.\nDuring import, If necessary reservation will be created based on reservationId and reservationMoid will be populated in the reference.\nFor IP and UUid IDs, we create reservation, for other Ids we do not create reservations."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ReservationId
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The moid of the reservation object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1556,6 +1566,10 @@ namespace Intersight.PowerShell
                 initObject.ConsumerType = this.ConsumerType;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReservationId"))
+            {
+                initObject.ReservationId = this.ReservationId;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ReservationMoid"))
             {
                 initObject.ReservationMoid = this.ReservationMoid;

@@ -135,6 +135,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ResourceSelector> ExportedSelectors
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -208,6 +218,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Description = this.Description;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExportedSelectors"))
+            {
+                initObject.ExportedSelectors = this.ExportedSelectors;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -274,6 +288,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The identity for which the reference is created. It is used to store the ID allocated to the profile during export. \nReservation id and Reservation moid are mutually exclusive and during export only reservationid will be populated.\nDuring import, If necessary reservation will be created based on reservationId and reservationMoid will be populated in the reference.\nFor IP and UUid IDs, we create reservation, for other Ids we do not create reservations."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ReservationId
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The moid of the reservation object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -294,6 +318,10 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReservationId"))
+            {
+                initObject.ReservationId = this.ReservationId;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ReservationMoid"))
             {
                 initObject.ReservationMoid = this.ReservationMoid;

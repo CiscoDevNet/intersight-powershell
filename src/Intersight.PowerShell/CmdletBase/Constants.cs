@@ -23,5 +23,13 @@ namespace Intersight.PowerShell
         public const string Filter = "Filter";
 
         public const string InlineCount = "Inlinecount";
+
+        public const string APIUrlPrefix = "/api/v1/";
+
+        public const string JsonData = "JsonData";
+
+        public const string ObjectType = "ObjectType";
+
+        public const string Moid = "Moid";
     }
 }

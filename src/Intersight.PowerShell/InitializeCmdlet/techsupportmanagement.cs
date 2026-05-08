@@ -519,6 +519,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"ShowTechOption specifies an optional custom show-tech option/command for NDFC tech support collection."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ShowTechOption
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"UpgradeLogs controls the inclusion of upgrade logs in tech support bundles."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -566,6 +576,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SerialNumbers"))
             {
                 initObject.SerialNumbers = this.SerialNumbers;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ShowTechOption"))
+            {
+                initObject.ShowTechOption = this.ShowTechOption;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("UpgradeLogs"))
             {

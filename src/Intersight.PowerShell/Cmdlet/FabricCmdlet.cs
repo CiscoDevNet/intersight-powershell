@@ -7799,6 +7799,28 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Source of the chassis assigned to the Switch Cluster Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Switch Cluster Profile. None is used if no chassis is attached to a Switch Cluster Profile. Serial pre-assignment is also considered None.\n* `Static` - Chassis is directly assigned to switch cluster profile.\n* `None` - No chassis is assigned to the switch cluster profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricSwitchClusterProfile.ChassisAssignmentModeEnum ChassisAssignmentMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Serial number of the chassis that would be assigned to this pre-assigned switch cluster profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string ChassisPreAssignBySerial
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -7911,6 +7933,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -8577,6 +8600,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Serial number of the fabric that would be assigned to this pre-assigned fabric switch Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string FabricPreAssignBySerial
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
@@ -8632,6 +8666,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
@@ -8649,6 +8684,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
 
         public PolicyAbstractProfileRelationship SrcTemplate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source of the switch assigned to the Domain Profile. Values can be Static or None. Static is used if a switch is attached directly to a Domain Profile. None is used if no switch is attached to a Domain Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Fabric is directly assigned to domain profile using assign chassis.\n* `None` - No fabric is assigned to the domain profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricSwitchProfile.SwitchAssignmentModeEnum SwitchAssignmentMode
         {
             get;
             set;
@@ -15900,6 +15946,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Source of the chassis assigned to the Switch Cluster Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Switch Cluster Profile. None is used if no chassis is attached to a Switch Cluster Profile. Serial pre-assignment is also considered None.\n* `Static` - Chassis is directly assigned to switch cluster profile.\n* `None` - No chassis is assigned to the switch cluster profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchClusterProfile.ChassisAssignmentModeEnum ChassisAssignmentMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Serial number of the chassis that would be assigned to this pre-assigned switch cluster profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string ChassisPreAssignBySerial
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -15962,6 +16030,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Scheduled chassis assignment information captured during export and used during config restore to re-assign chassis to the switch cluster profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricChassisAssignment ScheduledChassisAssignment
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -16544,6 +16623,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Serial number of the fabric that would be assigned to this pre-assigned fabric switch Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string FabricPreAssignBySerial
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -16599,6 +16689,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Switch reassignment information that is captured as part of the config import process."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchAssignment ScheduledSwitchAssignment
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -16606,6 +16707,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public PolicyAbstractProfileRelationship SrcTemplate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source of the switch assigned to the Domain Profile. Values can be Static or None. Static is used if a switch is attached directly to a Domain Profile. None is used if no switch is attached to a Domain Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Fabric is directly assigned to domain profile using assign chassis.\n* `None` - No fabric is assigned to the domain profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfile.SwitchAssignmentModeEnum SwitchAssignmentMode
         {
             get;
             set;
@@ -22829,6 +22941,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Source of the chassis assigned to the Switch Cluster Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Switch Cluster Profile. None is used if no chassis is attached to a Switch Cluster Profile. Serial pre-assignment is also considered None.\n* `Static` - Chassis is directly assigned to switch cluster profile.\n* `None` - No chassis is assigned to the switch cluster profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchClusterProfile.ChassisAssignmentModeEnum ChassisAssignmentMode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Serial number of the chassis that would be assigned to this pre-assigned switch cluster profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string ChassisPreAssignBySerial
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -22891,6 +23025,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Scheduled chassis assignment information captured during export and used during config restore to re-assign chassis to the switch cluster profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricChassisAssignment ScheduledChassisAssignment
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -23440,6 +23585,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Serial number of the fabric that would be assigned to this pre-assigned fabric switch Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string FabricPreAssignBySerial
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -23495,6 +23651,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Switch reassignment information that is captured as part of the config import process."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchAssignment ScheduledSwitchAssignment
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -23502,6 +23669,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public PolicyAbstractProfileRelationship SrcTemplate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source of the switch assigned to the Domain Profile. Values can be Static or None. Static is used if a switch is attached directly to a Domain Profile. None is used if no switch is attached to a Domain Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Fabric is directly assigned to domain profile using assign chassis.\n* `None` - No fabric is assigned to the domain profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSwitchProfile.SwitchAssignmentModeEnum SwitchAssignmentMode
         {
             get;
             set;

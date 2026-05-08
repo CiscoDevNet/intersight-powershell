@@ -8,6 +8,91 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ChassisChassisAssignment.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightChassisChassisAssignment")]
+    public class InitializeIntersightChassisChassisAssignment : PSCmdlet
+    {
+        public InitializeIntersightChassisChassisAssignment()
+        {
+            ClassId = ChassisChassisAssignment.ClassIdEnum.ChassisChassisAssignment;
+            ObjectType = ChassisChassisAssignment.ObjectTypeEnum.ChassisChassisAssignment;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of the chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ChassisSerial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ChassisChassisAssignment.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if this assignment is enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ChassisChassisAssignment.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ChassisChassisAssignment initObject = new Intersight.Model.ChassisChassisAssignment();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ChassisSerial"))
+            {
+                initObject.ChassisSerial = this.ChassisSerial;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ChassisConfigChangeDetail.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightChassisConfigChangeDetail")]
@@ -878,6 +963,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightChassisProfile()
         {
+            ChassisAssignmentMode = ChassisProfile.ChassisAssignmentModeEnum.Static;
             ClassId = ChassisProfile.ClassIdEnum.ChassisProfile;
             ObjectType = ChassisProfile.ObjectTypeEnum.ChassisProfile;
             TargetPlatform = ChassisProfile.TargetPlatformEnum.FIAttached;
@@ -920,6 +1006,36 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.EquipmentChassisRelationship AssignedChassis
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source of the chassis assigned to the Chassis Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Chassis Profile. None is used if no chassis is attached to a Chassis Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `Static` - Chassis is directly assigned to chassis profile using assign chassis.\n* `None` - No chassis is assigned to the chassis profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ChassisProfile.ChassisAssignmentModeEnum ChassisAssignmentMode
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of the chassis that would be assigned to this pre-assigned Chassis Profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[a-zA-Z0-9]{0,20}$")]
+        public string ChassisPreAssignBySerial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number based reservation for the chassis to be assigned to this Chassis Profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ResourcepoolReservationReference ChassisReservation
         {
             get;
             set;
@@ -1009,7 +1125,27 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
+        public List<Model.PoolReservationReference> ReservationReferences
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
         public List<Model.PolicyScheduledAction> ScheduledActions
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Chassis reassignment information that is captured as part of the config import process."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ChassisChassisAssignment ScheduledChassisAssignment
         {
             get;
             set;
@@ -1085,6 +1221,18 @@ namespace Intersight.PowerShell
             {
                 initObject.AssignedChassis = this.AssignedChassis;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ChassisAssignmentMode"))
+            {
+                initObject.ChassisAssignmentMode = this.ChassisAssignmentMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ChassisPreAssignBySerial"))
+            {
+                initObject.ChassisPreAssignBySerial = this.ChassisPreAssignBySerial;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ChassisReservation"))
+            {
+                initObject.ChassisReservation = this.ChassisReservation;
+            }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("ConfigContext"))
             {
@@ -1111,9 +1259,17 @@ namespace Intersight.PowerShell
             {
                 initObject.PolicyBucket = this.PolicyBucket;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReservationReferences"))
+            {
+                initObject.ReservationReferences = this.ReservationReferences;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ScheduledActions"))
             {
                 initObject.ScheduledActions = this.ScheduledActions;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScheduledChassisAssignment"))
+            {
+                initObject.ScheduledChassisAssignment = this.ScheduledChassisAssignment;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
             {

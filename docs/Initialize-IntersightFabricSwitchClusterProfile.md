@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricSwitchClusterProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedEntity< Model.MoBaseMoRelationship>][-ClassId< FabricSwitchClusterProfile.ClassIdEnum>][-ClusterAssignments< System.Collections.Generic.List`1[Model.FabricClusterAssignment]>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchClusterProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchProfiles< System.Collections.Generic.List`1[Model.FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< FabricSwitchClusterProfile.TargetPlatformEnum>][-Type< FabricSwitchClusterProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricSwitchClusterProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedEntity< Model.MoBaseMoRelationship>][-ChassisAssignmentMode< FabricSwitchClusterProfile.ChassisAssignmentModeEnum>][-ChassisPreAssignBySerial< string>][-ClassId< FabricSwitchClusterProfile.ClassIdEnum>][-ClusterAssignments< System.Collections.Generic.List`1[Model.FabricClusterAssignment]>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchClusterProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-ScheduledChassisAssignment< Model.FabricChassisAssignment>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchProfiles< System.Collections.Generic.List`1[Model.FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< FabricSwitchClusterProfile.TargetPlatformEnum>][-Type< FabricSwitchClusterProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -62,6 +62,36 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.MoBaseMoRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChassisAssignmentMode
+Source of the chassis assigned to the Switch Cluster Profile. Values can be Static or None. Static is used if a chassis is attached directly to a Switch Cluster Profile. None is used if no chassis is attached to a Switch Cluster Profile. Serial pre-assignment is also considered None.\n* `Static` - Chassis is directly assigned to switch cluster profile.\n* `None` - No chassis is assigned to the switch cluster profile.
+
+```yaml
+Type: FabricSwitchClusterProfile.ChassisAssignmentModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ChassisPreAssignBySerial
+Serial number of the chassis that would be assigned to this pre-assigned switch cluster profile. It can be any string that adheres to the following constraints:\nIt should start and end with an alphanumeric character.\nIt cannot be more than 20 characters.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -172,6 +202,23 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ScheduledChassisAssignment
+Scheduled chassis assignment information captured during export and used during config restore to re-assign chassis to the switch cluster profile.
+
+Note :- Use Initialize-IntersightFabricChassisAssignment to create the object of complex type FabricChassisAssignment
+
+```yaml
+Type: Model.FabricChassisAssignment
 Parameter Sets: (All)
 Aliases:
 
@@ -336,6 +383,8 @@ PS C:\> Initialize-IntersightFabricSwitchClusterProfile
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightFabricChassisAssignment](./Initialize-IntersightFabricChassisAssignment.md)
 
 [Initialize-IntersightFabricClusterAssignment](./Initialize-IntersightFabricClusterAssignment.md)
 

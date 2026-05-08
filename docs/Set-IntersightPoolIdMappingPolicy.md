@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightPoolIdMappingPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Selectors< System.Collections.Generic.List`1[ResourceSelector]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightPoolIdMappingPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-ExportedSelectors< System.Collections.Generic.List`1[ResourceSelector]>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Selectors< System.Collections.Generic.List`1[ResourceSelector]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,23 @@ Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExportedSelectors
+
+
+Note :- Use Initialize-IntersightResourceSelector to create the object of complex type ResourceSelector
+
+```yaml
+Type: System.Collections.Generic.List`1[ResourceSelector]
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightApplianceClusterInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BuildType< string>][-DeploymentSize< string>][-Gateway< string>][-Hostip< string>][-Hostname< string>][-InstallerVersion< string>][[-Moid]< string>][-NodeType< ApplianceClusterInfo.NodeTypeEnum>][-PartitionDatabase< long>][-PartitionFileCisco< long>][-PartitionOptData< long>][-PartitionOptKafka< long>][-PartitionOptMongo< long>][-PartitionVarLibDocker< long>][-PartitionVarLog< long>][-Peerkey< string>][-Responsekey< string>][-Subnetmask< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uuid< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightApplianceClusterInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BuildType< string>][-DeploymentSize< string>][-Gateway< string>][-Hostip< string>][-Hostname< string>][-HypervisorType< ApplianceClusterInfo.HypervisorTypeEnum>][-InstallerVersion< string>][[-Moid]< string>][-NodeType< ApplianceClusterInfo.NodeTypeEnum>][-PartitionDatabase< long>][-PartitionFileCisco< long>][-PartitionOptData< long>][-PartitionOptKafka< long>][-PartitionOptMongo< long>][-PartitionVarLibDocker< long>][-PartitionVarLog< long>][-Peerkey< string>][-Responsekey< string>][-Subnetmask< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uuid< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -103,6 +103,21 @@ Publicly accessible FQDN of the peer node.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HypervisorType
+The hypervisor type of the node.\n* `ESXi` - VMware ESXi hypervisor type.Indicates the appliance node is running on a VMware ESXi virtualization platform.\n* `Hyper-V` - Microsoft Hyper-V hypervisor type.Indicates the appliance node is running on a Microsoft Hyper-V virtualization platform.\n* `KVM` - Kernel-based Virtual Machine hypervisor type.Indicates the appliance node is running on a KVM virtualization platform.
+
+```yaml
+Type: ApplianceClusterInfo.HypervisorTypeEnum
 Parameter Sets: (All)
 Aliases:
 

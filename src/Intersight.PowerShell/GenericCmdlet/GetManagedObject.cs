@@ -3,64 +3,73 @@ using Newtonsoft.Json;
 using RestSharp;
 using System.Collections.Generic;
 using System.Management.Automation;
+using System.Reflection.Metadata;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsCommon.Get, "IntersightManagedObject", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    [Cmdlet(VerbsCommon.Get, "IntersightManagedObject", DefaultParameterSetName = Constants.CmdletParam, SupportsShouldProcess = true)]
     public class GetCmdlet : CmdletBase
     {
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.CmdletParam)]
         public string Moid
         {
             get; set;
         }
 
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = "CmdletParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.CmdletParam)]
         public string Name
         {
             get; set;
         }
 
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "CmdletParam")]
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.CmdletParam)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.QueryParam)]
         //[ValidatePattern("^[a-z][a-z0-9A-Z]*.[A-Z][a-zA-Z0-9]*")]
         public string ObjectType
         {
             get; set;
         }
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.CmdletParam)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.QueryParam)]
+        [ValidatePattern("^/api/v1/*")]
+        public string APIPath
+        {
+            get; set;
+        }
+
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         public bool? Count { get; set; } = null;
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         [ValidateSet("allpages", "none")]
         public string InlineCount { get; set; } = null;
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         public string Select { get; set; } = null;
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         public string Filter { get; set; } = null;
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         public string Expand { get; set; } = null;
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         public int? Skip { get; set; } = null;
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         public int? Top { get; set; } = null;
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         public string At { get; set; } = null;
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         public string Orderby { get; set; } = null;
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         public string Apply { get; set; } = null;
 
-        [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = Constants.QueryParam)]
         public string Tag { get; set; } = null;
 
 
@@ -73,6 +82,7 @@ namespace Intersight.PowerShell
 
         protected override void ProcessRecord()
         {
+            PSUtils.CheckMutualExclusiveForObjectTypeAndAPIPath(ObjectType, APIPath);
             // ExecuteRequestAsync(string.Format("/api/v1/{0}",ObjectType));
             if (!ShouldProcess(CmdletBase.Config.BasePath, string.Format("Get {0}", ObjectType)))
             {
@@ -90,18 +100,18 @@ namespace Intersight.PowerShell
             }
 
             var psClient = new PSHttpClient(CmdletBase.Config);
-            psClient.Method = "Get";
+            psClient.Method = HttpMethod.Get.ToString();
             psClient.BasePath = CmdletBase.Config.BasePath;
-            psClient.Path = string.Format("/api/v1/{0}", PSUtils.GetPath(ObjectType));
+            psClient.Path = PSUtils.GetPath(ObjectType, APIPath, VerbsCommon.Get);
             RequestOptions requestOption = new RequestOptions();
 
-            if (ParameterSetName == "CmdletParam")
+            if (ParameterSetName == Constants.CmdletParam)
             {
                 string queryStr = string.Empty;
                 var index = 0;
                 foreach (var item in this.MyInvocation.BoundParameters)
                 {
-                    if (item.Key == "ObjectType")
+                    if (item.Key == Constants.ObjectType || item.Key == "APIPath")
                     {
                         continue;
                     }
@@ -120,11 +130,11 @@ namespace Intersight.PowerShell
 
 
             }
-            else if (ParameterSetName == "QueryParam")
+            else if (ParameterSetName == Constants.QueryParam)
             {
                 foreach (var item in this.MyInvocation.BoundParameters)
                 {
-                    if (item.Key == "ObjectType")
+                    if (item.Key == Constants.ObjectType)
                     {
                         continue;
                     }
@@ -138,9 +148,9 @@ namespace Intersight.PowerShell
             if (!string.IsNullOrEmpty(response))
             {
                 Dictionary<string, object> responseData = JsonConvert.DeserializeObject<Dictionary<string, object>>(response);
-                if (ParameterSetName == "CmdletParam" && responseData.ContainsKey("Results"))
+                if (ParameterSetName == Constants.CmdletParam && responseData.ContainsKey(Constants.Results))
                 {
-                    var moList = JsonConvert.SerializeObject(responseData["Results"], Formatting.Indented);
+                    var moList = JsonConvert.SerializeObject(responseData[Constants.Results], Formatting.Indented);
                     WriteObject(moList);
                 }
                 else

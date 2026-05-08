@@ -13079,11 +13079,33 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Number of compliance rules on the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ComplianceRules
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of custom dashboard in the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DashboardCount
         {
             get;
             set;
@@ -13117,6 +13139,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Total number of endpoints on fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long EndpointCount
         {
             get;
             set;
@@ -13205,6 +13238,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of multicast routes on fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long MulticastRouteCount
         {
             get;
             set;
@@ -13379,6 +13423,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Number of pre-upgrade validations on the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long PreupgradeValidationCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Feature Operation status of Precision Time Protocol Monitoring."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -13422,6 +13477,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Status of sustainability report on fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SustainabilityReportStatus
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Type of site added to Multi-Site Orchestrator."</para>
@@ -13429,6 +13495,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string TypeOfSiteInMso
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of vCenters integrated into the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VcenterCount
         {
             get;
             set;
@@ -18030,6 +18107,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Count of service functions configured with use case Perimeter Service."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long PerimeterService
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Specifies whether Site object is DCNM or APIC or ND."</para>
@@ -18037,6 +18125,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string RecordType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of service functions configured with use case Service Chain Redirection."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long RedirectToServiceChain
         {
             get;
             set;
@@ -18076,6 +18175,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Count of service functions configured with use case Service As Default Gateway."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ServiceAsGateway
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Count of total Service Clusters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -18092,6 +18202,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long ServiceFunctionCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of total Service Function Insertions enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ServiceInsertionCount
         {
             get;
             set;

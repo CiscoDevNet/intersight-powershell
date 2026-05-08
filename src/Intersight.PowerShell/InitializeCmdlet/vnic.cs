@@ -4613,7 +4613,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Auto target interface that is represented via the Initiator name or the DHCP vendor ID. The vendor ID can be up to 64 characters."</para>
+        /// <para type="description">"Auto target interface that is represented via the Initiator name or the DHCP vendor ID. Accepted length: 1 to 63 characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

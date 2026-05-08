@@ -1279,6 +1279,7 @@ namespace Intersight.PowerShell
             ClassId = ServerProfile.ClassIdEnum.ServerProfile;
             ObjectType = ServerProfile.ObjectTypeEnum.ServerProfile;
             ServerAssignmentMode = ServerProfile.ServerAssignmentModeEnum.None;
+            ServerFamily = ServerProfile.ServerFamilyEnum.Unspecified;
             TargetPlatform = ServerProfile.TargetPlatformEnum.Standalone;
             Type = ServerProfile.TypeEnum.Instance;
             UuidAddressType = ServerProfile.UuidAddressTypeEnum.NONE;
@@ -1475,11 +1476,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Server reassignment information that is captured as part of the config import process."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ServerServerAssignment ScheduledServerAssignment
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Source of the server assigned to the Server Profile. Values can be Static, Pool or None. Static is used if a server is attached directly to a Server Profile. Pool is used if a resource pool is attached to a Server Profile. None is used if no server or resource pool is attached to a Server Profile. Slot or Serial pre-assignment is also considered to be None as it is different form of Assign Later.\n* `None` - No server is assigned to the server profile.\n* `Static` - Server is directly assigned to server profile using assign server.\n* `Pool` - Server is assigned from a resource pool."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public ServerProfile.ServerAssignmentModeEnum ServerAssignmentMode
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The server family type applicable to a server profile when the target platform is Standalone. For all other platform types, the value should be All.\n* `Unspecified` - Server Family type for Unspecified servers.\n* `All` - All server family types are included under this category.\n* `UCSC845A` - Server Family type for UCS C845A servers.\n* `UCSC2XX/4XX` - Server Family type for UCS C2XX/4XX servers."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ServerProfile.ServerFamilyEnum ServerFamily
         {
             get;
             set;
@@ -1510,6 +1531,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.ServerServerAssignTypeSlot ServerPreAssignBySlot
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number based reservation for the server to be assigned to this Server Profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ResourcepoolReservationReference ServerReservation
         {
             get;
             set;
@@ -1679,9 +1710,17 @@ namespace Intersight.PowerShell
             {
                 initObject.ScheduledActions = this.ScheduledActions;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ScheduledServerAssignment"))
+            {
+                initObject.ScheduledServerAssignment = this.ScheduledServerAssignment;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ServerAssignmentMode"))
             {
                 initObject.ServerAssignmentMode = this.ServerAssignmentMode;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerFamily"))
+            {
+                initObject.ServerFamily = this.ServerFamily;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ServerPool"))
             {
@@ -1694,6 +1733,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ServerPreAssignBySlot"))
             {
                 initObject.ServerPreAssignBySlot = this.ServerPreAssignBySlot;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerReservation"))
+            {
+                initObject.ServerReservation = this.ServerReservation;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
             {
@@ -1830,6 +1873,7 @@ namespace Intersight.PowerShell
         {
             ClassId = ServerProfileTemplate.ClassIdEnum.ServerProfileTemplate;
             ObjectType = ServerProfileTemplate.ObjectTypeEnum.ServerProfileTemplate;
+            ServerFamily = ServerProfileTemplate.ServerFamilyEnum.Unspecified;
             TargetPlatform = ServerProfileTemplate.TargetPlatformEnum.Standalone;
             Type = ServerProfileTemplate.TypeEnum.Instance;
             UuidAddressType = ServerProfileTemplate.UuidAddressTypeEnum.NONE;
@@ -1966,6 +2010,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The server family type applicable to a server profile when the target platform is Standalone. For all other platform types, the value should be All.\n* `Unspecified` - Server Family type for Unspecified servers.\n* `All` - All server family types are included under this category.\n* `UCSC845A` - Server Family type for UCS C845A servers.\n* `UCSC2XX/4XX` - Server Family type for UCS C2XX/4XX servers."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ServerProfileTemplate.ServerFamilyEnum ServerFamily
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a policyAbstractProfile resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2085,6 +2139,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ScheduledActions"))
             {
                 initObject.ScheduledActions = this.ScheduledActions;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerFamily"))
+            {
+                initObject.ServerFamily = this.ServerFamily;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("SrcTemplate"))
             {
@@ -2212,6 +2270,119 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SlotId"))
             {
                 initObject.SlotId = this.SlotId;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ServerServerAssignment.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightServerServerAssignment")]
+    public class InitializeIntersightServerServerAssignment : PSCmdlet
+    {
+        public InitializeIntersightServerServerAssignment()
+        {
+            ClassId = ServerServerAssignment.ClassIdEnum.ServerServerAssignment;
+            ObjectType = ServerServerAssignment.ObjectTypeEnum.ServerServerAssignment;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ServerServerAssignment.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Indicates if this assignment is enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ServerServerAssignment.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Odata selector that resolves to the server pool to be used for assignment, if applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PoolSelector
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of the server."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ServerSerial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The object type of the server - blade or rack."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ServerType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ServerServerAssignment initObject = new Intersight.Model.ServerServerAssignment();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PoolSelector"))
+            {
+                initObject.PoolSelector = this.PoolSelector;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerSerial"))
+            {
+                initObject.ServerSerial = this.ServerSerial;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ServerType"))
+            {
+                initObject.ServerType = this.ServerType;
             }
             WriteObject(initObject);
         }

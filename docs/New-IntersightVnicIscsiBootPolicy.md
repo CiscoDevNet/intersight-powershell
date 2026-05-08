@@ -39,7 +39,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoTargetvendorName
-Auto target interface that is represented via the Initiator name or the DHCP vendor ID. The vendor ID can be up to 64 characters.
+Auto target interface that is represented via the Initiator name or the DHCP vendor ID. Accepted length: 1 to 63 characters.
 
 ```yaml
 Type: string

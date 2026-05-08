@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightResourceGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-Moid< string>][[-Name]< string>][-Organizations< System.Collections.Generic.List`1[OrganizationOrganizationRelationship]>][-Qualifier< ResourceGroup.QualifierEnum>][-Reevaluate< bool>][-Selectors< System.Collections.Generic.List`1[ResourceSelector]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightResourceGroup [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-ExportedSelectors< System.Collections.Generic.List`1[ResourceSelector]>][-Moid< string>][[-Name]< string>][-Organizations< System.Collections.Generic.List`1[OrganizationOrganizationRelationship]>][-Qualifier< ResourceGroup.QualifierEnum>][-Reevaluate< bool>][-Selectors< System.Collections.Generic.List`1[ResourceSelector]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,23 @@ The informative description about the usage of this Resource Group.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExportedSelectors
+
+
+Note :- Use Initialize-IntersightResourceSelector to create the object of complex type ResourceSelector
+
+```yaml
+Type: System.Collections.Generic.List`1[ResourceSelector]
 Parameter Sets: (All)
 Aliases:
 

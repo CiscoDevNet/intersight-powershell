@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsCommon.Remove, "IntersightManagedObject", SupportsShouldProcess = true)]
+    [Cmdlet(VerbsCommon.Remove, "IntersightManagedObject", DefaultParameterSetName = Constants.CmdletParam, SupportsShouldProcess = true)]
     public class RemoveManagedObject : CmdletBase
     {
         public RemoveManagedObject()
@@ -18,7 +18,14 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true)]
         public string Moid { get; set; }
 
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true)]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.JsonData)]
+        [ValidatePattern("^/api/v1/*")]
+        public string APIPath
+        {
+            get; set;
+        }
+
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.CmdletParam)]
         public string ObjectType { get; set; }
 
         protected override void ProcessRecord()
@@ -42,9 +49,9 @@ namespace Intersight.PowerShell
             RequestOptions requestOption = new RequestOptions();
 
             psClient.BasePath = CmdletBase.Config.BasePath;
-            psClient.Path = string.Format("/api/v1/{0}/{{Moid}}", PSUtils.GetPath(ObjectType));
-            psClient.Method = "Delete";
-            requestOption.PathParameters.Add(PSUtils.Moid, Moid);
+            psClient.Path = PSUtils.GetPath(ObjectType, APIPath, VerbsCommon.Remove);
+            psClient.Method = HttpMethod.Delete.ToString(); ;
+            requestOption.PathParameters.Add(Constants.Moid, Moid);
             var response = psClient.Execute(requestOption);
             WriteObject(response);
         }

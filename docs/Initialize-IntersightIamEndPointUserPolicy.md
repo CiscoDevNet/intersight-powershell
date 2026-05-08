@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamEndPointUserPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamEndPointUserPolicy.ClassIdEnum>][-Description< string>][-EndPointUserRoles< System.Collections.Generic.List`1[Model.IamEndPointUserRoleRelationship]>][-Moid< string>][-Name< string>][-ObjectType< IamEndPointUserPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PasswordProperties< Model.IamEndPointPasswordProperties>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamEndPointUserPolicy [-AccountLockoutDuration< long>][-AccountLockoutThreshold< long>][-AccountUnlockMode< IamEndPointUserPolicy.AccountUnlockModeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamEndPointUserPolicy.ClassIdEnum>][-Description< string>][-EndPointUserRoles< System.Collections.Generic.List`1[Model.IamEndPointUserRoleRelationship]>][-Moid< string>][-Name< string>][-ObjectType< IamEndPointUserPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PasswordProperties< Model.IamEndPointPasswordProperties>][-Profiles< System.Collections.Generic.List`1[Model.PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,6 +23,51 @@ Initialize-IntersightIamEndPointUserPolicy [-AdditionalProperties< System.Collec
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
+
+### -AccountLockoutDuration
+Timeout duration specifies the duration (in seconds) after which a locked account is automatically unlocked. - Set to 0 when accountUnlockMode is Manual. - Set a value between 1 and 604800 when accountUnlockMode is Automatic.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AccountLockoutThreshold
+Set Account Lockout Threshold for endpoint users.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AccountUnlockMode
+Account unlock method specifies how the account is unlocked after it is locked: - Manual: Account must be manually unlocked by an administrator. - Automatic: Account unlocks automatically after a timeout duration.\n* `Automatic` - Set Automatic on the selected end point.\n* `Manual` - Set Manual on the selected end point.
+
+```yaml
+Type: IamEndPointUserPolicy.AccountUnlockModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 

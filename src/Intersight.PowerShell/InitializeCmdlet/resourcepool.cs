@@ -864,6 +864,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ResourceSelector> ExportedSelectors
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -919,6 +929,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.ResourceAbstractResourceQualificationPolicyRelationship> QualificationPolicies
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to resourcepoolReservation resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ResourcepoolReservationRelationship> Reservations
         {
             get;
             set;
@@ -985,6 +1005,10 @@ namespace Intersight.PowerShell
             {
                 initObject.Description = this.Description;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ExportedSelectors"))
+            {
+                initObject.ExportedSelectors = this.ExportedSelectors;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -1005,6 +1029,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("QualificationPolicies"))
             {
                 initObject.QualificationPolicies = this.QualificationPolicies;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Reservations"))
+            {
+                initObject.Reservations = this.Reservations;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ResourcePoolParameters"))
             {
@@ -1333,6 +1361,289 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolReservation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolReservation")]
+    public class InitializeIntersightResourcepoolReservation : PSCmdlet
+    {
+        public InitializeIntersightResourcepoolReservation()
+        {
+            AllocationType = ResourcepoolReservation.AllocationTypeEnum.Dynamic;
+            ClassId = ResourcepoolReservation.ClassIdEnum.ResourcepoolReservation;
+            ObjectType = ResourcepoolReservation.ObjectTypeEnum.ResourcepoolReservation;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the allocation for the identity in the reservation either static or dynamic (i.e. via pool).\n* `dynamic` - Identifiers to be allocated by system.\n* `static` - Identifiers are assigned by the user."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolReservation.AllocationTypeEnum AllocationType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolReservation.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolReservation.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a resourcepoolPool resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.ResourcepoolPoolRelationship Pool
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The serial number of the resource."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ResourceSerial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The MO type of the resource being reserved."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ResourceType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ResourcepoolReservation initObject = new Intersight.Model.ResourcepoolReservation();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AllocationType"))
+            {
+                initObject.AllocationType = this.AllocationType;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Pool"))
+            {
+                initObject.Pool = this.Pool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceSerial"))
+            {
+                initObject.ResourceSerial = this.ResourceSerial;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceType"))
+            {
+                initObject.ResourceType = this.ResourceType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourcepoolReservationReference.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightResourcepoolReservationReference")]
+    public class InitializeIntersightResourcepoolReservationReference : PSCmdlet
+    {
+        public InitializeIntersightResourcepoolReservationReference()
+        {
+            ClassId = ResourcepoolReservationReference.ClassIdEnum.ResourcepoolReservationReference;
+            ObjectType = ResourcepoolReservationReference.ObjectTypeEnum.ResourcepoolReservationReference;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolReservationReference.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourcepoolReservationReference.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The moid of the pool object, if applicable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string PoolMoid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The identity for which the reference is created. It is used to store the ID allocated to the profile during export. \nReservation id and Reservation moid are mutually exclusive and during export only reservationid will be populated.\nDuring import, If necessary reservation will be created based on reservationId and reservationMoid will be populated in the reference.\nFor IP and UUid IDs, we create reservation, for other Ids we do not create reservations."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ReservationId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The moid of the reservation object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ReservationMoid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The serial number of the resource that is being reserved."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ResourceSerial
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The resource type that is being reserved."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ResourceType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ResourcepoolReservationReference initObject = new Intersight.Model.ResourcepoolReservationReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PoolMoid"))
+            {
+                initObject.PoolMoid = this.PoolMoid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReservationId"))
+            {
+                initObject.ReservationId = this.ReservationId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ReservationMoid"))
+            {
+                initObject.ReservationMoid = this.ReservationMoid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceSerial"))
+            {
+                initObject.ResourceSerial = this.ResourceSerial;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceType"))
+            {
+                initObject.ResourceType = this.ResourceType;
+            }
             WriteObject(initObject);
         }
 

@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Intersight.PowerShell
 {
-    [Cmdlet(VerbsLifecycle.Invoke, "IntersightPatchDocument", SupportsShouldProcess = true)]
+    [Cmdlet(VerbsLifecycle.Invoke, "IntersightPatchDocument", DefaultParameterSetName = Constants.CmdletParam, SupportsShouldProcess = true)]
     public class InvokePatchDocument : CmdletBase
     {
         public InvokePatchDocument()
@@ -23,8 +23,14 @@ namespace Intersight.PowerShell
             get; set;
         }
 
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true)]
         public string ObjectType
+        {
+            get; set;
+        }
+
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true)]
+        public string APIPath
         {
             get; set;
         }
@@ -35,7 +41,7 @@ namespace Intersight.PowerShell
             get; set;
         }
 
-        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = "cmdletParam")]
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ParameterSetName = Constants.CmdletParam)]
         public List<PatchDocument> PatchDocument
         {
             get; set;
@@ -47,7 +53,7 @@ namespace Intersight.PowerShell
             //fetch the display name.
             //this is done to work with specific Get cmdlets.
             // Get-IntersightNtpPoicy -Name xxxx | Set-IntersightManagedObject
-
+            PSUtils.CheckMutualExclusiveForObjectTypeAndAPIPath(ObjectType, APIPath);
             // ExecuteRequestAsync(string.Format("/api/v1/{0}",ObjectType));
             if (!ShouldProcess(CmdletBase.Config.BasePath, string.Format("json-patch+json {0}", ObjectType)))
             {
@@ -63,10 +69,10 @@ namespace Intersight.PowerShell
             var psClient = new PSHttpClient(CmdletBase.Config);
             RequestOptions requestOption = new RequestOptions();
             psClient.BasePath = CmdletBase.Config.BasePath;
-            psClient.Method = "PATCH";
+            psClient.Method = HttpMethod.Patch.ToString(); ;
             psClient.ContentType = "application/json-patch+json";
 
-            if (ParameterSetName == PSUtils.CmdletParam)
+            if (ParameterSetName == Constants.CmdletParam)
             {
                 requestOption.Data = PatchDocument;
             }
@@ -76,8 +82,8 @@ namespace Intersight.PowerShell
                 requestOption.Data = tempHashTable;
             }
 
-            requestOption.PathParameters.Add(PSUtils.Moid, Moid);
-            psClient.Path = string.Format("/api/v1/{0}/{{Moid}}", PSUtils.GetPath(ObjectType));
+            requestOption.PathParameters.Add(Constants.Moid, Moid);
+            psClient.Path = PSUtils.GetPath(ObjectType, APIPath, VerbsCommon.Set);
             var response = psClient.Execute(requestOption);
             WriteObject(response);
         }

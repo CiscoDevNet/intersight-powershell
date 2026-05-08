@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightResourcepoolPool [-Action< ResourcepoolPool.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< ResourcepoolPool.AssignmentOrderEnum>][-ClassId< ResourcepoolPool.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< ResourcepoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PoolType< ResourcepoolPool.PoolTypeEnum>][-QualificationPolicies< System.Collections.Generic.List`1[Model.ResourceAbstractResourceQualificationPolicyRelationship]>][-ResourcePoolParameters< Model.ResourcepoolResourcePoolParameters>][-ResourceType< ResourcepoolPool.ResourceTypeEnum>][-Selectors< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightResourcepoolPool [-Action< ResourcepoolPool.ActionEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignmentOrder< ResourcepoolPool.AssignmentOrderEnum>][-ClassId< ResourcepoolPool.ClassIdEnum>][-Description< string>][-ExportedSelectors< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Moid< string>][-Name< string>][-ObjectType< ResourcepoolPool.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-PoolType< ResourcepoolPool.PoolTypeEnum>][-QualificationPolicies< System.Collections.Generic.List`1[Model.ResourceAbstractResourceQualificationPolicyRelationship]>][-Reservations< System.Collections.Generic.List`1[Model.ResourcepoolReservationRelationship]>][-ResourcePoolParameters< Model.ResourcepoolResourcePoolParameters>][-ResourceType< ResourcepoolPool.ResourceTypeEnum>][-Selectors< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -89,6 +89,23 @@ Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExportedSelectors
+
+
+Note :- Use Initialize-IntersightResourceSelector to create the object of complex type ResourceSelector
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.ResourceSelector]
 Parameter Sets: (All)
 Aliases:
 
@@ -185,6 +202,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.ResourceAbstractResourceQualificationPolicyRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Reservations
+An array of relationships to resourcepoolReservation resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.ResourcepoolReservationRelationship]
 Parameter Sets: (All)
 Aliases:
 

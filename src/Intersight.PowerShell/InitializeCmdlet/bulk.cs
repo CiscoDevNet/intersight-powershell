@@ -78,6 +78,16 @@ namespace Intersight.PowerShell
 
         }
         // <summary>
+        /// <para type="description">"A reference to a iamAccount resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamAccountRelationship Account
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Action to be performed on the export operation.\n* `Start` - Starts the export operation.\n* `Cancel` - Cancels the export operation that is in progress."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -138,11 +148,41 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a iamIdp resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamIdpRelationship Idp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a iamIdpReference resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamIdpReferenceRelationship IdpReference
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Indicates that exported references for objects which are organization owned should include the organization reference along with the other identity properties."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public bool IncludeOrgIdentity
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> ItemNames
         {
             get;
             set;
@@ -171,7 +211,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"An identifier for the export instance. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-) or an underscore (_)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9][a-zA-Z0-9_-]{1,92}$")]
+        [ValidatePattern("^[a-zA-Z0-9][a-zA-Z0-9_-]{1,255}$")]
         public string Name
         {
             get;
@@ -198,6 +238,36 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The flag set by the user during a configuration backup to preserve static or dynamic IDs assigned to an export item."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool PreserveIdentities
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.BulkRelatedTypeExportOption> RelatedTypeOptions
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Intersight supports the import operation using bulk requests. A single bulk request is created using the bulk sub\nrequests created in export operation. There is a restriction of a single API request size in Intersight.\nIf the exported MOs are many in an export operation, this flag will store the bulk sub requests as two dimensional\ncollection property exportedObjectsAsGroups instead of one dimensional exportedObjects value where the sub requests are split into multiple smaller\ngroups. Each group can be sent in a single bulk request during import operation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SplitRequests
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -207,11 +277,25 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description">"A reference to a iamUser resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.IamUserRelationship User
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.BulkExport initObject = new Intersight.Model.BulkExport();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Account"))
+            {
+                initObject.Account = this.Account;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
             {
                 initObject.Action = this.Action;
@@ -233,9 +317,21 @@ namespace Intersight.PowerShell
             {
                 initObject.ExportTags = this.ExportTags;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Idp"))
+            {
+                initObject.Idp = this.Idp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IdpReference"))
+            {
+                initObject.IdpReference = this.IdpReference;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("IncludeOrgIdentity"))
             {
                 initObject.IncludeOrgIdentity = this.IncludeOrgIdentity;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ItemNames"))
+            {
+                initObject.ItemNames = this.ItemNames;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Items"))
             {
@@ -254,9 +350,25 @@ namespace Intersight.PowerShell
             {
                 initObject.Organization = this.Organization;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreserveIdentities"))
+            {
+                initObject.PreserveIdentities = this.PreserveIdentities;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RelatedTypeOptions"))
+            {
+                initObject.RelatedTypeOptions = this.RelatedTypeOptions;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SplitRequests"))
+            {
+                initObject.SplitRequests = this.SplitRequests;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("User"))
+            {
+                initObject.User = this.User;
             }
             WriteObject(initObject);
         }
@@ -1904,6 +2016,63 @@ namespace Intersight.PowerShell
             {
                 initObject.Verb = this.Verb;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BulkSubRequestsGroup.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBulkSubRequestsGroup")]
+    public class InitializeIntersightBulkSubRequestsGroup : PSCmdlet
+    {
+        public InitializeIntersightBulkSubRequestsGroup()
+        {
+            ClassId = BulkSubRequestsGroup.ClassIdEnum.BulkSubRequestsGroup;
+            ObjectType = BulkSubRequestsGroup.ObjectTypeEnum.BulkSubRequestsGroup;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkSubRequestsGroup.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BulkSubRequestsGroup.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BulkSubRequestsGroup initObject = new Intersight.Model.BulkSubRequestsGroup();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPoolIdMappingPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PoolIdMappingPolicy.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< PoolIdMappingPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Selectors< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPoolIdMappingPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PoolIdMappingPolicy.ClassIdEnum>][-Description< string>][-ExportedSelectors< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Moid< string>][-Name< string>][-ObjectType< PoolIdMappingPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Selectors< System.Collections.Generic.List`1[Model.ResourceSelector]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,23 @@ Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ExportedSelectors
+
+
+Note :- Use Initialize-IntersightResourceSelector to create the object of complex type ResourceSelector
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.ResourceSelector]
 Parameter Sets: (All)
 Aliases:
 

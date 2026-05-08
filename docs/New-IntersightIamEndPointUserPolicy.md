@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamEndPointUserPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-EndPointUserRoles< System.Collections.Generic.List`1[IamEndPointUserRoleRelationship]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PasswordProperties< IamEndPointPasswordProperties>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIamEndPointUserPolicy [-AccountLockoutDuration< long>][-AccountLockoutThreshold< long>][-AccountUnlockMode< IamEndPointUserPolicy.AccountUnlockModeEnum>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-EndPointUserRoles< System.Collections.Generic.List`1[IamEndPointUserRoleRelationship]>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-PasswordProperties< IamEndPointPasswordProperties>][-Profiles< System.Collections.Generic.List`1[PolicyAbstractConfigProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -22,6 +22,51 @@ New-IntersightIamEndPointUserPolicy [-AdditionalProperties< System.Collections.G
 Create a &apos;IamEndPointUserPolicy&apos; resource.
 
 ## PARAMETERS
+
+### -AccountLockoutDuration
+Timeout duration specifies the duration (in seconds) after which a locked account is automatically unlocked. - Set to 0 when accountUnlockMode is Manual. - Set a value between 1 and 604800 when accountUnlockMode is Automatic.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AccountLockoutThreshold
+Set Account Lockout Threshold for endpoint users.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AccountUnlockMode
+Account unlock method specifies how the account is unlocked after it is locked: - Manual: Account must be manually unlocked by an administrator. - Automatic: Account unlocks automatically after a timeout duration.\n* `Automatic` - Set Automatic on the selected end point.\n* `Manual` - Set Manual on the selected end point.
+
+```yaml
+Type: IamEndPointUserPolicy.AccountUnlockModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 

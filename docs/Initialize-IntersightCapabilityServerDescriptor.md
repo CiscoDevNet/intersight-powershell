@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCapabilityServerDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[Model.CapabilityCapabilityRelationship]>][-ClassId< CapabilityServerDescriptor.ClassIdEnum>][-Description< string>][-IsNcsiEnabled< bool>][-IsPplEnabled< bool>][-MlomAdapterPcieSlotNumber< long>][-Model< string>][-Moid< string>][-ObjectType< CapabilityServerDescriptor.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnsupportedPolicies< System.Collections.Generic.List`1[string]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCapabilityServerDescriptor [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Capabilities< System.Collections.Generic.List`1[Model.CapabilityCapabilityRelationship]>][-ClassId< CapabilityServerDescriptor.ClassIdEnum>][-Description< string>][-IsNcsiEnabled< bool>][-IsPplEnabled< bool>][-MlomAdapterPcieSlotNumber< long>][-Model< string>][-Moid< string>][-ObjectType< CapabilityServerDescriptor.ObjectTypeEnum>][-SupportedPolicies< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-UnsupportedPolicies< System.Collections.Generic.List`1[string]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -167,6 +167,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: CapabilityServerDescriptor.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SupportedPolicies
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 
