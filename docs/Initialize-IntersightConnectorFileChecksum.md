@@ -72,7 +72,7 @@ Accept wildcard characters: False
 ```
 
 ### -HashAlgorithm
-The hash algorithm used to calculate the checksum.\n* `crc` - A CRC hash as definded by RFC 3385. Generated with the IEEE polynomial.\n* `sha256` - An SHA256 hash as defined by RFC 4634.
+The hash algorithm used to calculate the checksum.\n* `crc` - A CRC hash as definded by RFC 3385. Generated with the IEEE polynomial.\n* `sha256` - An SHA256 hash as defined by RFC 4634.\n* `md5sum` - An MD5 hash as defined by RFC 1321.
 
 ```yaml
 Type: ConnectorFileChecksum.HashAlgorithmEnum

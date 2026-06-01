@@ -23,24 +23,29 @@ namespace Intersight.PowerShell
         public string InlineCount { get; set; } = null;
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = "CmdletParam")]
         public string Select { get; set; } = null;
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
         public string Filter { get; set; } = null;
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = "CmdletParam")]
         public string Expand { get; set; } = null;
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = "CmdletParam")]
         public int? Skip { get; set; } = null;
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = "CmdletParam")]
         public int? Top { get; set; } = Constants.MaxTop;
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
         public string At { get; set; } = null;
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
+        [Parameter(Mandatory = false, ParameterSetName = "CmdletParam")]
         public string Orderby { get; set; } = null;
 
         [Parameter(Mandatory = false, ParameterSetName = "QueryParam")]
@@ -139,7 +144,12 @@ namespace Intersight.PowerShell
                 }
                 StoreResult(getResult);
 
-                if (this.ParameterSetName != Constants.QueryParam)
+                // Auto-pagination only when user has NOT explicitly specified -Top or -Skip.
+                // If user provided these, they are controlling pagination manually.
+                var userControlledPagination = this.MyInvocation.BoundParameters.ContainsKey("Top") ||
+                                               this.MyInvocation.BoundParameters.ContainsKey("Skip");
+
+                if (this.ParameterSetName != Constants.QueryParam && !userControlledPagination)
                 {
                     var TotalObjectCount = GetObjectCount(getResult);
                     WriteVerbose(String.Format("Total Count {0}", TotalObjectCount));
@@ -219,12 +229,39 @@ namespace Intersight.PowerShell
             }
         }
 
+        // OData query parameters that should not be converted to $filter conditions
+        // These parameters are passed directly to the API method and handled separately
+        private static readonly HashSet<string> ODataQueryParameters = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            "Top", "Skip", "Filter", "Select", "Expand", "Orderby", "Count", "InlineCount", "At", "Apply", "Tag"
+        };
+
+        // PowerShell common parameters that should not be converted to $filter conditions
+        // These are standard cmdlet parameters handled by PowerShell runtime
+        private static readonly HashSet<string> CommonParameters = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+        {
+            "ErrorAction", "WarningAction", "InformationAction", "Verbose", "Debug",
+            "ErrorVariable", "WarningVariable", "InformationVariable", "OutVariable",
+            "OutBuffer", "PipelineVariable", "ProgressAction", "WhatIf", "Confirm"
+        };
+
         private string CreateFilterQuery()
         {
             StringBuilder queryString = new StringBuilder();
             int i = 0;
             foreach (var item in this.MyInvocation.BoundParameters)
             {
+                // Skip OData query parameters - they are passed directly to API, not as filter conditions
+                if (ODataQueryParameters.Contains(item.Key))
+                {
+                    continue;
+                }
+
+                // Skip PowerShell common parameters - they control cmdlet behavior, not API filtering
+                if (CommonParameters.Contains(item.Key))
+                {
+                    continue;
+                }
 
                 if (item.Value != null && item.Value.GetType().Name == "SwitchParameter")
                 {

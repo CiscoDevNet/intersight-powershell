@@ -25,7 +25,7 @@ Initialize cmdlet is used to instantiate the object of complex type in the Power
 ## PARAMETERS
 
 ### -AciL3Out
-ACI L3Out Name User Input.
+User input for ACI L3Out name.
 
 ```yaml
 Type: string
@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -AciMatchRuleName
-Name of the Match Rule in Cisco APIC.
+Match rule name in Cisco APIC.
 
 ```yaml
 Type: string
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -AciTenant
-ACI tenant Name for Selected APIC Target.
+ACI tenant name for the selected APIC target.
 
 ```yaml
 Type: string
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -CampusFabricSite
-Campus fabric site id in which the border node has configured.
+Campus fabric site Id where the border node is configured.
 
 ```yaml
 Type: string
@@ -151,7 +151,7 @@ Accept wildcard characters: False
 ```
 
 ### -Epg
-Application EPG Name of this connection.
+Application EPG name for this connection.
 
 ```yaml
 Type: string
@@ -166,7 +166,7 @@ Accept wildcard characters: False
 ```
 
 ### -EpgSubnet
-EPG Subnet Ipv4Cidr which is configured on APIC.
+EPG Subnet Ipv4Cidr configured on APIC.
 
 ```yaml
 Type: string
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallDevice
-Device within the selected domain used to configure Firewall.
+Device within the selected domain used for firewall configuration.
 
 ```yaml
 Type: string
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 ```
 
 ### -FirewallDomain
-Domain used to configure Firewall.
+Domain used for firewall configuration.
 
 ```yaml
 Type: string
@@ -244,7 +244,7 @@ Accept wildcard characters: False
 ```
 
 ### -NodeProfile
-L3Out Node Profile in Cisco APIC.
+L3Out node profile in Cisco APIC.
 
 ```yaml
 Type: string
@@ -292,7 +292,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Connection status between SDA and ACI.\n* `NotConnected` - Connection Status NotConnected.\n* `Connected` - Connection Status Connected.
+Connection status between SDA and ACI.\n* `NotConnected` - Status of the connection:Not connected.\n* `Connected` - Status of the connection:Connected.
 
 ```yaml
 Type: SdaaciConnection.StatusEnum
@@ -324,7 +324,7 @@ Accept wildcard characters: False
 ```
 
 ### -Transit
-Transit id for given border node.
+Transit Id for the given border node.
 
 ```yaml
 Type: string
@@ -339,7 +339,7 @@ Accept wildcard characters: False
 ```
 
 ### -VirtualNetwork
-Virtual Network of this connection.
+Virtual Network for this connection.
 
 ```yaml
 Type: string
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 ```
 
 ### -VnEpg
-Contains both VN and EPG of this connection.
+VN and EPG information for this connection.
 
 ```yaml
 Type: string
@@ -369,7 +369,7 @@ Accept wildcard characters: False
 ```
 
 ### -Vrf
-APIC Tenant VRF from APIC.
+Tenant VRF in Cisco APIC.
 
 ```yaml
 Type: string
