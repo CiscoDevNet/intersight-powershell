@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2026042921
-- C# SDK version: 1.0.11.2026042921
+- Intersight.PowerShell version: 1.0.11.2026051817
+- C# SDK version: 1.0.11.2026051817
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -30,6 +30,13 @@ The Cisco Intersight.PowerShell module is updated frequently to be in sync with 
     1.2.3 [Uninstall Intersight.PowerShell](#uninstall-psmodule)
 
 2. [ Authentication ](#authentication)
+
+    2.1. [ Supported API Key Formats ](#supported-key-formats)
+
+    2.2. [ Using a Passphrase-Protected Key ](#using-passphrase)
+
+    2.3. [ Authenticating with an ECDSA Key ](#ecdsa-auth)
+
 3. [ Creating an Object ](#creating-an-object)
 
     3.1. [ Create Organization ](#create-organization)
@@ -43,6 +50,8 @@ The Cisco Intersight.PowerShell module is updated frequently to be in sync with 
 4. [ Reading Objects ](#reading-an-object)
 
     4.1  [ Reading list of objects ](#reading-object-list)
+
+    4.1.1  [ Pagination with Native Filters ](#pagination-native-filters)
 
     4.2  [ Read object based on specified parameter ](#reading-object-specified)
 
@@ -115,7 +124,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026042921"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026051817"}
 ```
 or
 
@@ -131,10 +140,12 @@ Environment configuration is required before Intersight cmdlets can be used. The
     BasePath :- connection URL of Intersight cloud or appliance, default value is https://intersight.com
     ApiKeyId :- Api Key Identifier - A user can generate it by logging into intersight.com or onprem portal.
     ApiKeyFilePath :- ApiKeyFilePath is the path of the secret key file which is in pem format. (RSA key or ECDSA key)
-    HashAlgorithm :- Accepted values are SHA256 and SHA512
-    HttpSignerHeader :- requires the name of the headers used for http signing. For Intersight the minimum required headers are "(request-target)", "Host", "Date", "Digest"
+    HashAlgorithm :- Accepted values are SHA256 and SHA512 (optional, defaults to SHA256)
+    HttpSigningHeader :- (optional) the name of the headers used for http signing. Defaults to @("(request-target)", "Host", "Date", "Digest")
 
 To explore the other supported cmdlet parameter like KeyPassPhrase, Proxy, SignatureValidityPeriod and SkipCertificateCheck refer the cmdlet help.
+
+> **Note:** `HttpSigningHeader` is optional and defaults to `@("(request-target)", "Host", "Date", "Digest")`. Specify it only if you need to use different values.
 
 <a name = "Authenticate"></a>
 ### Authenticate the user
@@ -145,7 +156,6 @@ $onprem = @{
     BasePath = "https://intersight.com"
     ApiKeyId = "xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx"
     ApiKeyFilePath = "C:\\secretKey.txt"
-    HttpSigningHeader =  @("(request-target)", "Host", "Date", "Digest")
 }
 
 PS C:\> Set-IntersightConfiguration @onprem
@@ -162,7 +172,55 @@ HttpSigningHeader       : {(request-target), Host, Date, Digest}
 SignatureValidityPeriod : 0
 
 ```
+<a name="supported-key-formats"></a>
+### Supported API Key Formats
 
+The Intersight PowerShell SDK supports the following private key formats for API authentication:
+
+| Key Format | PEM Header | Description |
+|---|---|---|
+| RSA PKCS#1 (v1) | `-----BEGIN RSA PRIVATE KEY-----` | Traditional/legacy RSA key format |
+| RSA PKCS#8 (v2) | `-----BEGIN PRIVATE KEY-----` | Modern unencrypted PKCS#8 format (recommended) |
+| RSA PKCS#8 Encrypted (v2) | `-----BEGIN ENCRYPTED PRIVATE KEY-----` | Passphrase-protected PKCS#8 format |
+| ECDSA PKCS#8 | `-----BEGIN PRIVATE KEY-----` | Elliptic Curve key in PKCS#8 format (P-256, P-384, P-521) |
+| ECDSA PKCS#8 Encrypted | `-----BEGIN ENCRYPTED PRIVATE KEY-----` | Passphrase-protected ECDSA key |
+
+The SDK automatically detects the key format from the PEM header and loads the key accordingly. No additional configuration is needed to switch between key types.
+
+<a name="using-passphrase"></a>
+### Using a Passphrase-Protected Key
+
+For encrypted private keys (`BEGIN ENCRYPTED PRIVATE KEY`), provide the passphrase using the `ApiKeyPassPhrase` parameter:
+
+```powershell
+$config = @{
+    BasePath = "https://intersight.com"
+    ApiKeyId = "xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx"
+    ApiKeyFilePath = "C:\\encrypted_key.pem"
+    ApiKeyPassPhrase = "YourPassphrase"
+}
+
+Set-IntersightConfiguration @config
+```
+
+> **Note:** If an encrypted key is used without providing `ApiKeyPassPhrase`, the SDK will return an error indicating that the key cannot be loaded.
+
+<a name="ecdsa-auth"></a>
+### Authenticating with an ECDSA Key
+
+ECDSA keys are used in the same way as RSA keys. The SDK detects the key type automatically:
+
+```powershell
+$config = @{
+    BasePath = "https://intersight.com"
+    ApiKeyId = "xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx"
+    ApiKeyFilePath = "C:\\ecdsa_key.pem"
+}
+
+Set-IntersightConfiguration @config
+```
+
+> **Note:** When using ECDSA keys, ensure the key registered in your Intersight account matches the key file used for authentication.
 <a name="create-an-object"></a>
 ## 3. Creating an Object
 New cmdlet is used to create a new object in Intersight. User can specify the required properties using the cmdlet parameter.
@@ -346,13 +404,41 @@ The cmdlets follow Get-Intersight<MO> naming pattern.
 When the Get cmdlet is used without any parameter, it returns list of objects.
 The return type is a collection, even when there is a single object.
 
-**NOTE** A maximum of 10,000 objects can be retrieved by Get cmdlets in a single invocation.
+**NOTE** A maximum of 10,000 objects can be retrieved by Get cmdlets in a single invocation. To retrieve more than 10,000 objects, use the `-Top` and `-Skip` parameters for pagination (see [Pagination with Native Filters](#pagination-native-filters)).
 
 
 ```powershell
 PS C:\> $list = Get-IntersightNtpPolicy
 PS C:\> $list.Count
 10
+```
+
+<a name="pagination-native-filters"></a>
+### 4.1.1. Pagination with Native Filters
+You can use `-Top` and `-Skip` parameters together with native filter parameters to paginate through large result sets that exceed 10,000 objects.
+
+```powershell
+# Paginate with native filters
+Get-IntersightFirmwareRunningFirmware -Type adaptor -Top 1000 -Skip 0      # First 1000
+Get-IntersightFirmwareRunningFirmware -Type adaptor -Top 1000 -Skip 1000   # Next 1000 (1001-2000)
+Get-IntersightFirmwareRunningFirmware -Type adaptor -Top 1000 -Skip 10000  # Beyond 10K (10001-11000)
+```
+
+#### Example: Fetching All Records Beyond 10K Limit
+```powershell
+# Fetch all records in batches using native filter + pagination
+$allResults = @()
+$skip = 0
+$batchSize = 1000
+
+do {
+    $batch = Get-IntersightComputePhysicalSummary -NumCpus 2 -Top $batchSize -Skip $skip
+    $allResults += $batch
+    $skip += $batchSize
+    Write-Host "Fetched $($allResults.Count) records so far..."
+} while ($batch.Count -eq $batchSize)
+
+Write-Host "Total: $($allResults.Count) records"
 ```
 
 <a name="reading-object-specified"></a>
@@ -660,7 +746,7 @@ Refer to [ Server Configuration ](./examples/server/serverConfiguration.ps1)
 
 Refer to [Direct Firmware Upgrade](./examples/firmware/DirectFirmwareUpgrade.ps1)
 
-Refer to [Network Firmware Upgrade](./example/firmware/NetworkFirmwareUpgrade.ps1)
+Refer to [Network Firmware Upgrade](./examples/firmware/NetworkFirmwareUpgrade.ps1)
 
 <a name="os-install"></a>
 ### 9.3. Example - OS Install
@@ -2040,6 +2126,7 @@ NiaapiVersionRegex | [**Get-IntersightNiaapiVersionRegex**](docs/Get-IntersightN
 NiatelemetryAaaLdapProviderDetails | [**Get-IntersightNiatelemetryAaaLdapProviderDetails**](docs/Get-IntersightNiatelemetryAaaLdapProviderDetails.md) | Read a 'NiatelemetryAaaLdapProviderDetails' resource.
 NiatelemetryAaaRadiusProviderDetails | [**Get-IntersightNiatelemetryAaaRadiusProviderDetails**](docs/Get-IntersightNiatelemetryAaaRadiusProviderDetails.md) | Read a 'NiatelemetryAaaRadiusProviderDetails' resource.
 NiatelemetryAaaTacacsProviderDetails | [**Get-IntersightNiatelemetryAaaTacacsProviderDetails**](docs/Get-IntersightNiatelemetryAaaTacacsProviderDetails.md) | Read a 'NiatelemetryAaaTacacsProviderDetails' resource.
+NiatelemetryAnomaly | [**Get-IntersightNiatelemetryAnomaly**](docs/Get-IntersightNiatelemetryAnomaly.md) | Read a 'NiatelemetryAnomaly' resource.
 NiatelemetryApicAppPluginDetails | [**Get-IntersightNiatelemetryApicAppPluginDetails**](docs/Get-IntersightNiatelemetryApicAppPluginDetails.md) | Read a 'NiatelemetryApicAppPluginDetails' resource.
 NiatelemetryApicCoreFileDetails | [**Get-IntersightNiatelemetryApicCoreFileDetails**](docs/Get-IntersightNiatelemetryApicCoreFileDetails.md) | Read a 'NiatelemetryApicCoreFileDetails' resource.
 NiatelemetryApicDbgexpRsExportDest | [**Get-IntersightNiatelemetryApicDbgexpRsExportDest**](docs/Get-IntersightNiatelemetryApicDbgexpRsExportDest.md) | Read a 'NiatelemetryApicDbgexpRsExportDest' resource.
@@ -2065,7 +2152,10 @@ NiatelemetryApicUiPageCounts | [**Get-IntersightNiatelemetryApicUiPageCounts**](
 NiatelemetryApicVision | [**Get-IntersightNiatelemetryApicVision**](docs/Get-IntersightNiatelemetryApicVision.md) | Read a 'NiatelemetryApicVision' resource.
 NiatelemetryAppDetails | [**Get-IntersightNiatelemetryAppDetails**](docs/Get-IntersightNiatelemetryAppDetails.md) | Read a 'NiatelemetryAppDetails' resource.
 NiatelemetryCloudDetails | [**Get-IntersightNiatelemetryCloudDetails**](docs/Get-IntersightNiatelemetryCloudDetails.md) | Read a 'NiatelemetryCloudDetails' resource.
+NiatelemetryCluster | [**Get-IntersightNiatelemetryCluster**](docs/Get-IntersightNiatelemetryCluster.md) | Read a 'NiatelemetryCluster' resource.
+NiatelemetryClusterNode | [**Get-IntersightNiatelemetryClusterNode**](docs/Get-IntersightNiatelemetryClusterNode.md) | Read a 'NiatelemetryClusterNode' resource.
 NiatelemetryCommonPolicies | [**Get-IntersightNiatelemetryCommonPolicies**](docs/Get-IntersightNiatelemetryCommonPolicies.md) | Read a 'NiatelemetryCommonPolicies' resource.
+NiatelemetryController | [**Get-IntersightNiatelemetryController**](docs/Get-IntersightNiatelemetryController.md) | Read a 'NiatelemetryController' resource.
 NiatelemetryDcnmFanDetails | [**Get-IntersightNiatelemetryDcnmFanDetails**](docs/Get-IntersightNiatelemetryDcnmFanDetails.md) | Read a 'NiatelemetryDcnmFanDetails' resource.
 NiatelemetryDcnmFexDetails | [**Get-IntersightNiatelemetryDcnmFexDetails**](docs/Get-IntersightNiatelemetryDcnmFexDetails.md) | Read a 'NiatelemetryDcnmFexDetails' resource.
 NiatelemetryDcnmModuleDetails | [**Get-IntersightNiatelemetryDcnmModuleDetails**](docs/Get-IntersightNiatelemetryDcnmModuleDetails.md) | Read a 'NiatelemetryDcnmModuleDetails' resource.
@@ -2074,6 +2164,7 @@ NiatelemetryDcnmTransceiverDetails | [**Get-IntersightNiatelemetryDcnmTransceive
 NiatelemetryDomInfoObject | [**Get-IntersightNiatelemetryDomInfoObject**](docs/Get-IntersightNiatelemetryDomInfoObject.md) | Read a 'NiatelemetryDomInfoObject' resource.
 NiatelemetryDomThresInfoObject | [**Get-IntersightNiatelemetryDomThresInfoObject**](docs/Get-IntersightNiatelemetryDomThresInfoObject.md) | Read a 'NiatelemetryDomThresInfoObject' resource.
 NiatelemetryEpg | [**Get-IntersightNiatelemetryEpg**](docs/Get-IntersightNiatelemetryEpg.md) | Read a 'NiatelemetryEpg' resource.
+NiatelemetryFabric | [**Get-IntersightNiatelemetryFabric**](docs/Get-IntersightNiatelemetryFabric.md) | Read a 'NiatelemetryFabric' resource.
 NiatelemetryFabricModuleDetails | [**Get-IntersightNiatelemetryFabricModuleDetails**](docs/Get-IntersightNiatelemetryFabricModuleDetails.md) | Read a 'NiatelemetryFabricModuleDetails' resource.
 NiatelemetryFabricNodeControlDetails | [**Get-IntersightNiatelemetryFabricNodeControlDetails**](docs/Get-IntersightNiatelemetryFabricNodeControlDetails.md) | Read a 'NiatelemetryFabricNodeControlDetails' resource.
 NiatelemetryFabricPodProfile | [**Get-IntersightNiatelemetryFabricPodProfile**](docs/Get-IntersightNiatelemetryFabricPodProfile.md) | Read a 'NiatelemetryFabricPodProfile' resource.
@@ -2089,6 +2180,7 @@ NiatelemetryHttpsAclFilterDetails | [**Get-IntersightNiatelemetryHttpsAclFilterD
 NiatelemetryInsightGroupDetails | [**Get-IntersightNiatelemetryInsightGroupDetails**](docs/Get-IntersightNiatelemetryInsightGroupDetails.md) | Read a 'NiatelemetryInsightGroupDetails' resource.
 NiatelemetryLc | [**Get-IntersightNiatelemetryLc**](docs/Get-IntersightNiatelemetryLc.md) | Read a 'NiatelemetryLc' resource.
 NiatelemetryLeafPolGrpDetails | [**Get-IntersightNiatelemetryLeafPolGrpDetails**](docs/Get-IntersightNiatelemetryLeafPolGrpDetails.md) | Read a 'NiatelemetryLeafPolGrpDetails' resource.
+NiatelemetryLink | [**Get-IntersightNiatelemetryLink**](docs/Get-IntersightNiatelemetryLink.md) | Read a 'NiatelemetryLink' resource.
 NiatelemetryMdsNeighbors | [**Get-IntersightNiatelemetryMdsNeighbors**](docs/Get-IntersightNiatelemetryMdsNeighbors.md) | Read a 'NiatelemetryMdsNeighbors' resource.
 NiatelemetryMsoContractDetails | [**Get-IntersightNiatelemetryMsoContractDetails**](docs/Get-IntersightNiatelemetryMsoContractDetails.md) | Read a 'NiatelemetryMsoContractDetails' resource.
 NiatelemetryMsoEpgDetails | [**Get-IntersightNiatelemetryMsoEpgDetails**](docs/Get-IntersightNiatelemetryMsoEpgDetails.md) | Read a 'NiatelemetryMsoEpgDetails' resource.
@@ -2116,6 +2208,8 @@ NiatelemetrySnmpSrc | [**Get-IntersightNiatelemetrySnmpSrc**](docs/Get-Intersigh
 NiatelemetrySpinePolGrpDetails | [**Get-IntersightNiatelemetrySpinePolGrpDetails**](docs/Get-IntersightNiatelemetrySpinePolGrpDetails.md) | Read a 'NiatelemetrySpinePolGrpDetails' resource.
 NiatelemetrySshVersionTwo | [**Get-IntersightNiatelemetrySshVersionTwo**](docs/Get-IntersightNiatelemetrySshVersionTwo.md) | Read a 'NiatelemetrySshVersionTwo' resource.
 NiatelemetrySupervisorModuleDetails | [**Get-IntersightNiatelemetrySupervisorModuleDetails**](docs/Get-IntersightNiatelemetrySupervisorModuleDetails.md) | Read a 'NiatelemetrySupervisorModuleDetails' resource.
+NiatelemetrySwitch | [**Get-IntersightNiatelemetrySwitch**](docs/Get-IntersightNiatelemetrySwitch.md) | Read a 'NiatelemetrySwitch' resource.
+NiatelemetrySwitchInterface | [**Get-IntersightNiatelemetrySwitchInterface**](docs/Get-IntersightNiatelemetrySwitchInterface.md) | Read a 'NiatelemetrySwitchInterface' resource.
 NiatelemetrySyslogRemoteDest | [**Get-IntersightNiatelemetrySyslogRemoteDest**](docs/Get-IntersightNiatelemetrySyslogRemoteDest.md) | Read a 'NiatelemetrySyslogRemoteDest' resource.
 NiatelemetrySyslogSysMsg | [**Get-IntersightNiatelemetrySyslogSysMsg**](docs/Get-IntersightNiatelemetrySyslogSysMsg.md) | Read a 'NiatelemetrySyslogSysMsg' resource.
 NiatelemetrySyslogSysMsgFacFilter | [**Get-IntersightNiatelemetrySyslogSysMsgFacFilter**](docs/Get-IntersightNiatelemetrySyslogSysMsgFacFilter.md) | Read a 'NiatelemetrySyslogSysMsgFacFilter' resource.

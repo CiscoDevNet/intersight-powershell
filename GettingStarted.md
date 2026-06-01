@@ -52,10 +52,12 @@ The environment related configuration is required once for each PowerShell sessi
 * BasePath :- Url of the Intersight, default value is https://intersight.com
 * ApiKeyId :- ApiKey Id , user can generate it by loging to intersight.com or onprem portal.
 * ApiKeyFilePath :- ApiKeyFilePath is secrect key file path which is in pem format. (RSA key or ECDSA key)
-* HashAlgorithm :- Accepted values is SHA256 and SHA512
-* HttpSignerHeader :- requires the name of the headers to use in the http signing, for intersight minimum required headers are "(request-target)", "Host", "Date", "Digest"
+* HashAlgorithm :- Accepted values is SHA256 and SHA512 (optional, defaults to SHA256)
+* HttpSigningHeader :- (optional) the name of the headers to use in the http signing. Defaults to @("(request-target)", "Host", "Date", "Digest")
 
 To expore the other supported cmdlet parameter like ```KeyPassPhrase```, ```Proxy```, ```SignatureValidityPeriod``` and ```SkipCertificateCheck``` refer to cmdlet help.
+
+> **Note:** `HttpSigningHeader` is optional and defaults to `@("(request-target)", "Host", "Date", "Digest")`. Specify it only if you need to use different values.
 
 <a name = "Authenticate"></a>
 
@@ -68,8 +70,7 @@ Intersight.PowerShell supports only HttpSigning Auth. The API key can be supplie
 $onprem = @{
     BasePath = "https://intersight.com" # or 'eu-central-1.intersight.com' if your account is in EMEA cluster
     ApiKeyId = "xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx"
-    ApiKeyFilePath = "C:\\secrectKey.txt" 
-    HttpSigningHeader =  @("(request-target)", "Host", "Date", "Digest")
+    ApiKeyFilePath = "C:\\secrectKey.txt"
 }
 
 PS C:\> Set-IntersightConfiguration @onprem
@@ -92,8 +93,7 @@ SignatureValidityPeriod : 0
 $onprem = @{
     BasePath = "https://intersight.com" # or 'eu-central-1.intersight.com' if your account is in EMEA cluster
     ApiKeyId = "xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx"
-    ApiKeyString = "-----BEGIN RSA PRIVATE KEY-----XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----END RSA PRIVATE KEY-----" 
-    HttpSigningHeader =  @("(request-target)", "Host", "Date", "Digest")
+    ApiKeyString = "-----BEGIN RSA PRIVATE KEY-----XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX-----END RSA PRIVATE KEY-----"
 }
 
 PS C:\> Set-IntersightConfiguration @onprem
@@ -110,6 +110,36 @@ HttpSigningHeader       : {(request-target), Host, Date, Digest}
 SignatureValidityPeriod : 0
 
 ```
+
+---
+
+### Supported API Key Formats
+
+The SDK supports the following private key formats. The format is detected automatically from the PEM header:
+
+| Key Format | PEM Header | Description |
+|---|---|---|
+| RSA PKCS#1 (v1) | `-----BEGIN RSA PRIVATE KEY-----` | Traditional/legacy RSA key format |
+| RSA PKCS#8 (v2) | `-----BEGIN PRIVATE KEY-----` | Modern unencrypted PKCS#8 format (recommended) |
+| RSA PKCS#8 Encrypted (v2) | `-----BEGIN ENCRYPTED PRIVATE KEY-----` | Passphrase-protected PKCS#8 format |
+| ECDSA PKCS#8 | `-----BEGIN PRIVATE KEY-----` | Elliptic Curve key in PKCS#8 format (P-256, P-384, P-521) |
+| ECDSA PKCS#8 Encrypted | `-----BEGIN ENCRYPTED PRIVATE KEY-----` | Passphrase-protected ECDSA key |
+
+#### Using a passphrase-protected key
+
+Provide the passphrase via the `ApiKeyPassPhrase` parameter:
+
+```powershell
+$config = @{
+    BasePath         = "https://intersight.com"
+    ApiKeyId         = "xxxxx27564612d30dxxxxx/5f21c9d97564612d30dd575a/5f9a8b877564612xxxxxxxx"
+    ApiKeyFilePath   = "C:\\encrypted_key.pem"
+    ApiKeyPassPhrase = "YourPassphrase"
+}
+Set-IntersightConfiguration @config
+```
+
+> **Note:** If an encrypted key is used without `ApiKeyPassPhrase`, the SDK returns an error that the key cannot be loaded.
 
 ---
 

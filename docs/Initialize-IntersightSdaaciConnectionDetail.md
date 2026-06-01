@@ -73,7 +73,7 @@ Accept wildcard characters: False
 ```
 
 ### -Description
-Description of this connection between two peers.
+Description of the connection between the two peers.
 
 ```yaml
 Type: string
@@ -88,7 +88,7 @@ Accept wildcard characters: False
 ```
 
 ### -IpPool
-Id of the ip pool configured for this connection.
+Ip pool Id configured for this connection.
 
 ```yaml
 Type: string
@@ -103,7 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### -Layer3HandoffId
-Id of layer 3 handoff configured between a border node and a border leaf.
+Layer 3 handoff Id configured between a border node and a border leaf.
 
 ```yaml
 Type: string
@@ -148,7 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerAinterface
-Interface id configured on Peer A.
+Interface Id configured on Peer A.
 
 ```yaml
 Type: string
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerAipAddress
-The IP Address of the device used as the local peer.
+IP address of the device used as the local peer.
 
 ```yaml
 Type: string
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerAtype
-Type of device used as Peer A for this peer connection.
+Type of device used as Peer A in this peer connection.
 
 ```yaml
 Type: string
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerBinterface
-Interface id configured on Peer B.
+Interface Id configured on Peer B.
 
 ```yaml
 Type: string
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerBipAddress
-The IP Address of the device used as the remote peer.
+IP address of the device used as the remote peer.
 
 ```yaml
 Type: string
@@ -223,7 +223,7 @@ Accept wildcard characters: False
 ```
 
 ### -PeerBtype
-Type of device used as Peer B for this peer connection.
+Type of device used as Peer B in this peer connection.
 
 ```yaml
 Type: string
@@ -238,7 +238,7 @@ Accept wildcard characters: False
 ```
 
 ### -Peera
-First peer of the connection.
+First peer in the connection.
 
 ```yaml
 Type: string
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 ```
 
 ### -Peerb
-Second Peer of the connection.
+Second peer in the connection.
 
 ```yaml
 Type: string
@@ -268,7 +268,7 @@ Accept wildcard characters: False
 ```
 
 ### -RouterId
-Router id defined for this peer connection.
+Router Id defined for this peer connection.
 
 ```yaml
 Type: string
@@ -283,7 +283,7 @@ Accept wildcard characters: False
 ```
 
 ### -Status
-Connection status between the peers.\n* `NotConnected` - Connection Status NotConnected.\n* `Connected` - Connection Status Connected.
+Connection status between the peers.\n* `NotConnected` - Status of the connection:Not connected.\n* `Connected` - Status of the connection:Connected.
 
 ```yaml
 Type: SdaaciConnectionDetail.StatusEnum
