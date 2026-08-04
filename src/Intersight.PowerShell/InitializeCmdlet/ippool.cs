@@ -342,6 +342,26 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The preferred IPv4 address can be specified only for dynamic lease requests. Intersight will make its best effort to allocate that IPv4 address if it is available in the pool. If the specified preferred IPv4 address is not in the range of the pool or if it is already leased or reserved, then the next available IPv4 address from the pool will be leased. Since this feature is specific to dynamic lease requests only, static lease request will fail if it specifies the preferred IPv4 address property. When the preferred IPv4 address property is specified in conjunction with 'migrate' property, existing static or dynamic lease will be replaced by the new lease. Migration also supported only for dynamic lease requests."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string PreferredIpV4Address
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The preferred IPv6 address can be specified only for dynamic lease requests. Intersight will make its best effort to allocate that IPv6 address if it is available in the pool. If the specified preferred IPv6 address is not in the range of the pool or if it is already leased or reserved, then the next available IPv6 address from the pool will be leased. Since this feature is specific to dynamic lease requests only, static lease request will fail if it specifies the preferred IPv6 address property. When the preferred IPv6 address property is specified in conjunction with 'migrate' property, existing static or dynamic lease will be replaced by the new lease. Migration also supported only for dynamic lease requests."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^(([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:([0-9A-Fa-f]{1,4}:[0-9A-Fa-f]{0,4}|:[0-9A-Fa-f]{1,4})?|(:[0-9A-Fa-f]{1,4}){0,2})|(:[0-9A-Fa-f]{1,4}){0,3})|(:[0-9A-Fa-f]{1,4}){0,4})|:(:[0-9A-Fa-f]{1,4}){0,5})((:[0-9A-Fa-f]{1,4}){2}|:(25[0-5]|(2[0-4]|1[0-9]|[1-9])?[0-9])(\\.(25[0-5]|(2[0-4]|1[0-9]|[1-9])?[0-9])){3})|(([0-9A-Fa-f]{1,4}:){1,6}|:):[0-9A-Fa-f]{0,4}|([0-9A-Fa-f]{1,4}:){7}:)$")]
+        public string PreferredIpV6Address
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The holder of a reference to reservation Moid and the specific details on lease condition for this reservation. Specified to allocate already reserved identities."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -429,6 +449,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Pool"))
             {
                 initObject.Pool = this.Pool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreferredIpV4Address"))
+            {
+                initObject.PreferredIpV4Address = this.PreferredIpV4Address;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreferredIpV6Address"))
+            {
+                initObject.PreferredIpV6Address = this.PreferredIpV6Address;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Reservation"))
             {

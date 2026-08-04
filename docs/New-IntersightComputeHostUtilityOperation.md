@@ -56,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -HostUtilityOperationMode
-Host utility operation need to be performed in the endpoint.\n* `None` - Host utility mode of the operation is set to none by default.\n* `SecureErase` - EU LOT-9 secure data cleanup on the server components.\n* `SecureEraseWithDecommission` - EU LOT-9 secure data cleanup on the server components and do decommission.\n* `Scrub` - Quick cleanup on storage and BIOS.
+Host utility operation need to be performed in the endpoint.\n* `None` - Host utility mode of the operation is set to none by default.\n* `SecureErase` - EU LOT-9 secure data cleanup on the server components.\n* `SecureEraseWithDecommission` - EU LOT-9 secure data cleanup on the server components and do decommission.\n* `SecureEraseWithDecommissionAndRemove` - EU LOT-9 secure data cleanup on the server components and do decommission and remove.\n* `Scrub` - Quick cleanup on storage and BIOS.
 
 ```yaml
 Type: ComputeHostUtilityOperation.HostUtilityOperationModeEnum

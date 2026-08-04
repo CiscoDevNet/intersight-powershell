@@ -245,7 +245,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightComputeBlade()
         {
             ClassId = ComputeBlade.ClassIdEnum.ComputeBlade;
-            FrontPanelLockState = ComputeBlade.FrontPanelLockStateEnum.None;
+            FrontPanelLockState = ComputeBlade.FrontPanelLockStateEnum.Unlock;
             ManagementMode = ComputeBlade.ManagementModeEnum.IntersightStandalone;
             ObjectType = ComputeBlade.ObjectTypeEnum.ComputeBlade;
 
@@ -461,7 +461,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The actual front panel state of the server.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state."</para>
+        /// <para type="description">"The actual front panel state of the server.\n* `Unlock` - Front Panel of the server is set to Unlocked state.\n* `Lock` - Front Panel of the server is set to Locked state."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -837,7 +837,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// <para type="description">"Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one.\n* `DecommissionAndRemove` - Decommissions the equipment and upon equipment physical removal, removes it automatically from Intersight."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1470,7 +1470,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Host utility operation need to be performed in the endpoint.\n* `None` - Host utility mode of the operation is set to none by default.\n* `SecureErase` - EU LOT-9 secure data cleanup on the server components.\n* `SecureEraseWithDecommission` - EU LOT-9 secure data cleanup on the server components and do decommission.\n* `Scrub` - Quick cleanup on storage and BIOS."</para>
+        /// <para type="description">"Host utility operation need to be performed in the endpoint.\n* `None` - Host utility mode of the operation is set to none by default.\n* `SecureErase` - EU LOT-9 secure data cleanup on the server components.\n* `SecureEraseWithDecommission` - EU LOT-9 secure data cleanup on the server components and do decommission.\n* `SecureEraseWithDecommissionAndRemove` - EU LOT-9 secure data cleanup on the server components and do decommission and remove.\n* `Scrub` - Quick cleanup on storage and BIOS."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -2638,7 +2638,7 @@ namespace Intersight.PowerShell
         public InitializeIntersightComputePhysicalSummary()
         {
             ClassId = ComputePhysicalSummary.ClassIdEnum.ComputePhysicalSummary;
-            FrontPanelLockState = ComputePhysicalSummary.FrontPanelLockStateEnum.None;
+            FrontPanelLockState = ComputePhysicalSummary.FrontPanelLockStateEnum.Unlock;
             ObjectType = ComputePhysicalSummary.ObjectTypeEnum.ComputePhysicalSummary;
 
         }
@@ -2663,7 +2663,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The actual front panel state of the server.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state."</para>
+        /// <para type="description">"The actual front panel state of the server.\n* `Unlock` - Front Panel of the server is set to Unlocked state.\n* `Lock` - Front Panel of the server is set to Locked state."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -2739,7 +2739,7 @@ namespace Intersight.PowerShell
         {
             AdminAction = ComputeRackUnit.AdminActionEnum.None;
             ClassId = ComputeRackUnit.ClassIdEnum.ComputeRackUnit;
-            FrontPanelLockState = ComputeRackUnit.FrontPanelLockStateEnum.None;
+            FrontPanelLockState = ComputeRackUnit.FrontPanelLockStateEnum.Unlock;
             ManagementMode = ComputeRackUnit.ManagementModeEnum.IntersightStandalone;
             ObjectType = ComputeRackUnit.ObjectTypeEnum.ComputeRackUnit;
 
@@ -2975,7 +2975,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The actual front panel state of the server.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state."</para>
+        /// <para type="description">"The actual front panel state of the server.\n* `Unlock` - Front Panel of the server is set to Unlocked state.\n* `Lock` - Front Panel of the server is set to Locked state."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -3373,7 +3373,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// <para type="description">"Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one.\n* `DecommissionAndRemove` - Decommissions the equipment and upon equipment physical removal, removes it automatically from Intersight."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

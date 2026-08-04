@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIppoolIpLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IppoolIpLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-BlockLease< Model.IppoolBlockLeaseRelationship>][-ClassId< IppoolIpLease.ClassIdEnum>][-HasDuplicate< bool>][-IpType< IppoolIpLease.IpTypeEnum>][-IpV4Address< string>][-IpV4Config< Model.IppoolIpV4Config>][-IpV6Address< string>][-IpV6Config< Model.IppoolIpV6Config>][-Migrate< bool>][-Moid< string>][-ObjectType< IppoolIpLease.ObjectTypeEnum>][-Pool< Model.IppoolPoolRelationship>][-Reservation< Model.IppoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vrf< Model.VrfVrfRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIppoolIpLease [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllocationType< IppoolIpLease.AllocationTypeEnum>][-AssignedToEntity< Model.MoBaseMoRelationship>][-BlockLease< Model.IppoolBlockLeaseRelationship>][-ClassId< IppoolIpLease.ClassIdEnum>][-HasDuplicate< bool>][-IpType< IppoolIpLease.IpTypeEnum>][-IpV4Address< string>][-IpV4Config< Model.IppoolIpV4Config>][-IpV6Address< string>][-IpV6Config< Model.IppoolIpV6Config>][-Migrate< bool>][-Moid< string>][-ObjectType< IppoolIpLease.ObjectTypeEnum>][-Pool< Model.IppoolPoolRelationship>][-PreferredIpV4Address< string>][-PreferredIpV6Address< string>][-Reservation< Model.IppoolReservationReference>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vrf< Model.VrfVrfRelationship>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -252,6 +252,36 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: Model.IppoolPoolRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PreferredIpV4Address
+The preferred IPv4 address can be specified only for dynamic lease requests. Intersight will make its best effort to allocate that IPv4 address if it is available in the pool. If the specified preferred IPv4 address is not in the range of the pool or if it is already leased or reserved, then the next available IPv4 address from the pool will be leased. Since this feature is specific to dynamic lease requests only, static lease request will fail if it specifies the preferred IPv4 address property. When the preferred IPv4 address property is specified in conjunction with &apos;migrate&apos; property, existing static or dynamic lease will be replaced by the new lease. Migration also supported only for dynamic lease requests.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -PreferredIpV6Address
+The preferred IPv6 address can be specified only for dynamic lease requests. Intersight will make its best effort to allocate that IPv6 address if it is available in the pool. If the specified preferred IPv6 address is not in the range of the pool or if it is already leased or reserved, then the next available IPv6 address from the pool will be leased. Since this feature is specific to dynamic lease requests only, static lease request will fail if it specifies the preferred IPv6 address property. When the preferred IPv6 address property is specified in conjunction with &apos;migrate&apos; property, existing static or dynamic lease will be replaced by the new lease. Migration also supported only for dynamic lease requests.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

@@ -2181,6 +2181,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> FeatureFlags
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The file location of the distributable."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -2216,6 +2226,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FirmwareDistributable.ImportActionEnum ImportAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Whether this distributable is a beta image and participates in OData filtering so callers can explicitly query beta or non-beta firmware images."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool IsBeta
         {
             get;
             set;
@@ -2446,6 +2466,10 @@ namespace Intersight.PowerShell
             {
                 initObject.DistributableMetas = this.DistributableMetas;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FeatureFlags"))
+            {
+                initObject.FeatureFlags = this.FeatureFlags;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("FileLocation"))
             {
                 initObject.FileLocation = this.FileLocation;
@@ -2461,6 +2485,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ImportAction"))
             {
                 initObject.ImportAction = this.ImportAction;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IsBeta"))
+            {
+                initObject.IsBeta = this.IsBeta;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Md5eTag"))
             {
@@ -4776,7 +4804,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The server family that will be impacted by this upgrade.\n* `UCSC-C220-M5` - The upgrade on all C220-M5 servers claimed in setup.\n* `UCSC-C220-M4` - The upgrade on all C220-M4 servers claimed in setup.\n* `UCSC-C240-M4` - The upgrade on all C240-M4 servers claimed in setup.\n* `UCSC-C460-M4` - The upgrade on all C460-M4 servers claimed in setup.\n* `UCSC-C240-M5` - The upgrade on all C240-M5 servers claimed in setup.\n* `UCSC-C480-M5` - The upgrade on all C480-M5 servers claimed in setup.\n* `UCSB-B200-M5` - The upgrade on all B200-M5 servers claimed in setup.\n* `UCSB-B480-M5` - The upgrade on all B480-M5 servers claimed in setup.\n* `UCSC-C220-M6` - The upgrade on all C220-M6 servers claimed in setup.\n* `UCSC-C240-M6` - The upgrade on all C240-M6 servers claimed in setup.\n* `UCSC-C225-M6` - The upgrade on all C225-M6 servers claimed in setup.\n* `UCSC-C245-M6` - The upgrade on all C245-M6 servers claimed in setup.\n* `UCSB-B200-M6` - The upgrade on all B200-M6 servers claimed in setup.\n* `UCSX-210C-M6` - The upgrade on all 210C-M6 servers claimed in setup.\n* `UCSX-210C-M7` - The upgrade on all 210C-M7 servers claimed in setup.\n* `UCSC-C220-M7` - The upgrade on all C220-M7 servers claimed in setup.\n* `UCSC-C240-M7` - The upgrade on all C240-M7 servers claimed in setup.\n* `UCSC-C125` - The upgrade on all C125 servers claimed in setup.\n* `UCSX-410C-M7` - The upgrade on all 410C-M7 servers claimed in setup.\n* `UCSC-C245-M8` - The upgrade on all UCSC-C245-M8 servers claimed in setup.\n* `UCSC-C225-M8` - The upgrade on all UCSC-C225-M8 servers claimed in setup.\n* `UCSX-215C-M8` - The upgrade on all UCSX-215C-M8 servers claimed in setup.\n* `UCSX-210C-M8` - The upgrade on all UCSX-210C-M8 servers claimed in setup.\n* `UCSX-410C-M8` - The upgrade on all UCSX-410C-M8 servers claimed in setup.\n* `UCSXE-130C-M8` - The upgrade on all UCSXE-130C-M8 servers claimed in setup.\n* `UCSC-C220-M8` - The upgrade on all UCSC-C220-M8 servers claimed in setup.\n* `UCSC-C240-M8` - The upgrade on all UCSC-C240-M8 servers claimed in setup.\n* `CAI-845A-M8` - The upgrade on all CAI-845A-M8 servers claimed in setup."</para>
+        /// <para type="description">"The server family that will be impacted by this upgrade.\n* `UCSC-C220-M5` - The upgrade on all C220-M5 servers claimed in setup.\n* `UCSC-C220-M4` - The upgrade on all C220-M4 servers claimed in setup.\n* `UCSC-C240-M4` - The upgrade on all C240-M4 servers claimed in setup.\n* `UCSC-C460-M4` - The upgrade on all C460-M4 servers claimed in setup.\n* `UCSC-C240-M5` - The upgrade on all C240-M5 servers claimed in setup.\n* `UCSC-C480-M5` - The upgrade on all C480-M5 servers claimed in setup.\n* `UCSB-B200-M5` - The upgrade on all B200-M5 servers claimed in setup.\n* `UCSB-B480-M5` - The upgrade on all B480-M5 servers claimed in setup.\n* `UCSC-C220-M6` - The upgrade on all C220-M6 servers claimed in setup.\n* `UCSC-C240-M6` - The upgrade on all C240-M6 servers claimed in setup.\n* `UCSC-C225-M6` - The upgrade on all C225-M6 servers claimed in setup.\n* `UCSC-C245-M6` - The upgrade on all C245-M6 servers claimed in setup.\n* `UCSB-B200-M6` - The upgrade on all B200-M6 servers claimed in setup.\n* `UCSX-210C-M6` - The upgrade on all 210C-M6 servers claimed in setup.\n* `UCSX-210C-M7` - The upgrade on all 210C-M7 servers claimed in setup.\n* `UCSC-C220-M7` - The upgrade on all C220-M7 servers claimed in setup.\n* `UCSC-C240-M7` - The upgrade on all C240-M7 servers claimed in setup.\n* `UCSC-C125` - The upgrade on all C125 servers claimed in setup.\n* `UCSX-410C-M7` - The upgrade on all 410C-M7 servers claimed in setup.\n* `UCSC-C245-M8` - The upgrade on all UCSC-C245-M8 servers claimed in setup.\n* `UCSC-C225-M8` - The upgrade on all UCSC-C225-M8 servers claimed in setup.\n* `UCSX-215C-M8` - The upgrade on all UCSX-215C-M8 servers claimed in setup.\n* `UCSX-210C-M8` - The upgrade on all UCSX-210C-M8 servers claimed in setup.\n* `UCSX-410C-M8` - The upgrade on all UCSX-410C-M8 servers claimed in setup.\n* `UCSXE-130C-M8` - The upgrade on all UCSXE-130C-M8 servers claimed in setup.\n* `UCSXE-150C-M8` - The upgrade on all UCSXE-150C-M8 servers claimed in setup.\n* `UCSC-C220-M8` - The upgrade on all UCSC-C220-M8 servers claimed in setup.\n* `UCSC-C240-M8` - The upgrade on all UCSC-C240-M8 servers claimed in setup.\n* `CAI-845A-M8` - The upgrade on all CAI-845A-M8 servers claimed in setup."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -6739,6 +6767,219 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FirmwareSecureRouterUpgrade.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFirmwareSecureRouterUpgrade")]
+    public class InitializeIntersightFirmwareSecureRouterUpgrade : PSCmdlet
+    {
+        public InitializeIntersightFirmwareSecureRouterUpgrade()
+        {
+            ClassId = FirmwareSecureRouterUpgrade.ClassIdEnum.FirmwareSecureRouterUpgrade;
+            ObjectType = FirmwareSecureRouterUpgrade.ObjectTypeEnum.FirmwareSecureRouterUpgrade;
+            Status = FirmwareSecureRouterUpgrade.StatusEnum.NONE;
+            UpgradeType = FirmwareSecureRouterUpgrade.UpgradeTypeEnum.DirectUpgrade;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareSecureRouterUpgrade.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Direct download options in case the upgradeType is direct download based upgrade."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FirmwareDirectDownload DirectDownload
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a firmwareDistributable resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FirmwareDistributableRelationship Distributable
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Location of the image in user software repository."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.SoftwarerepositoryFileServer FileServer
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a networkSecureRouter resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NetworkSecureRouterRelationship NetworkSecureRouter
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Deprecated (Use 'fileServer' property). Network share options in case of the upgradeType is network share based upgrade."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FirmwareNetworkShare NetworkShare
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareSecureRouterUpgrade.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a softwarerepositoryRelease resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.SoftwarerepositoryReleaseRelationship Release
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User has the option to skip the estimate impact calculation."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool SkipEstimateImpact
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Status of the upgrade operation.\n* `NONE` - Upgrade status is not populated.\n* `IN_PROGRESS` - The upgrade is in progress.\n* `SUCCESSFUL` - The upgrade successfully completed.\n* `FAILED` - The upgrade shows failed status.\n* `TERMINATED` - The upgrade has been terminated."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareSecureRouterUpgrade.StatusEnum Status
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Desired upgrade mode to choose either direct download based upgrade or network share upgrade.\n* `direct_upgrade` - Upgrade mode is direct download.\n* `network_upgrade` - Upgrade mode is network upgrade."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareSecureRouterUpgrade.UpgradeTypeEnum UpgradeType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FirmwareSecureRouterUpgrade initObject = new Intersight.Model.FirmwareSecureRouterUpgrade();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DirectDownload"))
+            {
+                initObject.DirectDownload = this.DirectDownload;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Distributable"))
+            {
+                initObject.Distributable = this.Distributable;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FileServer"))
+            {
+                initObject.FileServer = this.FileServer;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkSecureRouter"))
+            {
+                initObject.NetworkSecureRouter = this.NetworkSecureRouter;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkShare"))
+            {
+                initObject.NetworkShare = this.NetworkShare;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Release"))
+            {
+                initObject.Release = this.Release;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SkipEstimateImpact"))
+            {
+                initObject.SkipEstimateImpact = this.SkipEstimateImpact;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Status"))
+            {
+                initObject.Status = this.Status;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UpgradeType"))
+            {
+                initObject.UpgradeType = this.UpgradeType;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FirmwareServerConfigurationUtilityDistributable.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFirmwareServerConfigurationUtilityDistributable")]
@@ -8534,6 +8775,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to networkSecureRouter resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NetworkSecureRouterRelationship> NetworkSecureRouter
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8648,6 +8899,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElements"))
             {
                 initObject.NetworkElements = this.NetworkElements;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkSecureRouter"))
+            {
+                initObject.NetworkSecureRouter = this.NetworkSecureRouter;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("PciNode"))
@@ -8843,6 +9098,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightFirmwareUpgradeStatus()
         {
+            CacheState = FirmwareUpgradeStatus.CacheStateEnum.ReadyForImport;
             ClassId = FirmwareUpgradeStatus.ClassIdEnum.FirmwareUpgradeStatus;
             EpPowerStatus = FirmwareUpgradeStatus.EpPowerStatusEnum.None;
             InitialPowerStatus = FirmwareUpgradeStatus.InitialPowerStatusEnum.None;
@@ -8862,11 +9118,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The checksum of the downloaded file as calculated by the download plugin after successfully downloading a file."</para>
+        /// <para type="description">"Any error encountered in caching. Example, Space unavailability due to too many active workflows running."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public Model.ConnectorFileChecksum Checksum
+        public string CacheError
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Message to notify caching operation status."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CacheMessage
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The current cache status of the file.\n* `ReadyForImport` - The image is ready to be imported into the repository.\n* `Importing` - The image is being imported into the repository.\n* `Imported` - The image has been extracted and imported into the repository.\n* `ComputingMetadata` - Indicates that the image has been imported but its metadata computation has not been done.\n* `PendingExtraction` - Indicates that the image has been imported but not extracted in the repository.\n* `Extracting` - Indicates that the image is being extracted into the repository.\n* `Extracted` - Indicates that the image has been extracted into the repository.\n* `Failed` - The image import from an external source to the repository has failed.\n* `MetaOnly` - The image is present in an external repository.\n* `ReadyForCache` - The image is ready to be cached into the Intersight Appliance.\n* `Caching` - Indicates that the image is being cached into the Intersight Appliance or endpoint cache.\n* `Cached` - Indicates that the image has been cached into the Intersight Appliance or endpoint cache.\n* `CachingFailed` - Indicates that the image caching into the Intersight Appliance failed or endpoint cache.\n* `Corrupted` - Indicates that the image in the local repository (or endpoint cache) has been corrupted after it was cached.\n* `Evicted` - Indicates that the image has been evicted from the Intersight Appliance (or endpoint cache) to reclaim storage space.\n* `Invalid` - Indicates that the corresponding distributable MO has been removed from the backend. This can be due to unpublishing of an image."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareUpgradeStatus.CacheStateEnum CacheState
         {
             get;
             set;
@@ -8912,7 +9188,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The download progress of the file represented as a percentage between 0% and 100%. If progress reporting is not possible, a value of -1 is sent."</para>
+        /// <para type="description">"The download progress of the file represented as a percentage between 0 and 100. If progress reporting is not possible, a value of -1 is sent."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -9032,16 +9308,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The sha256checksum of the downloaded file as calculated by the download plugin after successfully downloading a file."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public byte[] Sha256checksum
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9060,9 +9326,17 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Checksum"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("CacheError"))
             {
-                initObject.Checksum = this.Checksum;
+                initObject.CacheError = this.CacheError;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CacheMessage"))
+            {
+                initObject.CacheMessage = this.CacheMessage;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CacheState"))
+            {
+                initObject.CacheState = this.CacheState;
             }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("DownloadError"))
@@ -9121,10 +9395,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("SdCardDownloadError"))
             {
                 initObject.SdCardDownloadError = this.SdCardDownloadError;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("Sha256checksum"))
-            {
-                initObject.Sha256checksum = this.Sha256checksum;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

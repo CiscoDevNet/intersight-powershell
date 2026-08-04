@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamCuiIntegration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamCuiIntegration.ClassIdEnum>][-Moid< string>][-ObjectType< IamCuiIntegration.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamCuiIntegration [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamCuiIntegration.ClassIdEnum>][-Moid< string>][-ObjectType< IamCuiIntegration.ObjectTypeEnum>][-OptIn< bool>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,6 +74,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: IamCuiIntegration.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -OptIn
+Indicates whether the account has opted in to CUI identity synchronization.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

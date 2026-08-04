@@ -6058,6 +6058,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"The current Intersight connection state of the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ConnectionState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -6201,6 +6212,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"The boot time of the node in the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string BootTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"A reference to a niatelemetryCluster resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
@@ -6245,11 +6267,44 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The firmware version of the node in the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string FirmwareVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The management IP address of the node in the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ManagementIp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The model of the node in the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Model
         {
             get;
             set;
@@ -6289,6 +6344,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The platform type of the node in the cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PlatformType
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Role of the node in the cluster."</para>
@@ -8668,6 +8734,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The license tier of the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LicenseTier
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -8701,6 +8778,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The network count of the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long NetworkCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The name of the cluster this fabric belongs to."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -8723,6 +8811,39 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The power status of the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PowerStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The power unit of the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PowerUnit
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The power value of the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PowerValue
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
@@ -8769,6 +8890,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The VRF count of the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VrfCount
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
@@ -14598,6 +14730,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Feature operational state of bandwidth monitoring."</para>
         /// </summary>
@@ -14796,6 +14929,18 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Count of devices with Live Protect shield status enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long LiveProtectEnabledCount
+        {
+            get;
+            set;
+        }
+
         // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
@@ -14835,6 +14980,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long NdClusterSize
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Health status of the Nexus Dashboard cluster."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool NdHealthy
         {
             get;
             set;
@@ -14952,6 +15108,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
@@ -15019,6 +15176,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Type of record DCNM / APIC / SE. This determines the type of platform where inventory was collected."</para>
         /// </summary>
@@ -15040,6 +15198,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
@@ -15097,6 +15256,18 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+        // <summary>
+        /// <para type="description">"The total number of active VXLAN-managed fabrics that have both leaf and spine switches configured."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long VxLanFabCount
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
@@ -19582,6 +19753,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Fabric technology reported by the onboarded DCNM site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string FabricTechnology
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Status of the fabric update."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string FabricUpdateStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Version of the specified site."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -19804,6 +19997,50 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"Sum of latestVersionCount and recommendedVersionCount."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long SumCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of switches in the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long SwitchCount
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Count of total Networks on the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long TotalNetworks
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Count of total VRFs on the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long TotalVrfs
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Type of site onboarded either APIC or DCNM."</para>
@@ -21026,6 +21263,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The system uptime of the managed switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SystemUpTime
+        {
+            get;
+            set;
+        }
 
 
         // <summary>

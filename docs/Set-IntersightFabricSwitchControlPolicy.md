@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricSwitchControlPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AesPrimaryKey< string>][-Description< string>][-EnableJumboFrame< bool>][-EthernetSwitchingMode< FabricSwitchControlPolicy.EthernetSwitchingModeEnum>][-FabricPcVhbaReset< FabricSwitchControlPolicy.FabricPcVhbaResetEnum>][-FcSwitchingMode< FabricSwitchControlPolicy.FcSwitchingModeEnum>][-MacAgingSettings< FabricMacAgingSettings>][-MacLearningSettings< FabricMacLearningSettings>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricBaseSwitchProfileRelationship]>][-ReservedVlanStartId< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchControlPolicy.TargetPlatformEnum>][-UdldSettings< FabricUdldGlobalSettings>][-VlanPortOptimizationEnabled< bool>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricSwitchControlPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AesPrimaryKey< string>][-Description< string>][-EnableJumboFrame< bool>][-EthernetSwitchingMode< FabricSwitchControlPolicy.EthernetSwitchingModeEnum>][-FabricPcVhbaReset< FabricSwitchControlPolicy.FabricPcVhbaResetEnum>][-FcSwitchingMode< FabricSwitchControlPolicy.FcSwitchingModeEnum>][-LldpSettings< FabricLldpGlobalSettings>][-MacAgingSettings< FabricMacAgingSettings>][-MacLearningSettings< FabricMacLearningSettings>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricBaseSwitchProfileRelationship]>][-ReservedVlanStartId< long>][-StpSettings< FabricStpGlobalSettings>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchControlPolicy.TargetPlatformEnum>][-UdldSettings< FabricUdldGlobalSettings>][-VlanPortOptimizationEnabled< bool>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -118,6 +118,23 @@ Enable or Disable FC End Host Switching Mode. FC is not supported on Unified Edg
 
 ```yaml
 Type: FabricSwitchControlPolicy.FcSwitchingModeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LldpSettings
+LLDP Global configurations for this switch. LLDP Global Configuration is supported on Unified Edge platform only, and will be ignored for other platforms.
+
+Note :- Use Initialize-IntersightFabricLldpGlobalSettings to create the object of complex type FabricLldpGlobalSettings
+
+```yaml
+Type: FabricLldpGlobalSettings
 Parameter Sets: (All)
 Aliases:
 
@@ -233,6 +250,23 @@ The starting ID for VLANs reserved for internal use within the Fabric Interconne
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StpSettings
+This specifies the Spanning Tree Protocol global configurations for this switch. STP global configuration is supported on Unified Edge platform only, and will be ignored for other platforms.
+
+Note :- Use Initialize-IntersightFabricStpGlobalSettings to create the object of complex type FabricStpGlobalSettings
+
+```yaml
+Type: FabricStpGlobalSettings
 Parameter Sets: (All)
 Aliases:
 
@@ -381,9 +415,13 @@ PS C:\> Set-IntersightFabricSwitchControlPolicy
 
 [Get-IntersightFabricSwitchControlPolicy](./Get-IntersightFabricSwitchControlPolicy.md)
 
+[Initialize-IntersightFabricLldpGlobalSettings](./Initialize-IntersightFabricLldpGlobalSettings.md)
+
 [Initialize-IntersightFabricMacAgingSettings](./Initialize-IntersightFabricMacAgingSettings.md)
 
 [Initialize-IntersightFabricMacLearningSettings](./Initialize-IntersightFabricMacLearningSettings.md)
+
+[Initialize-IntersightFabricStpGlobalSettings](./Initialize-IntersightFabricStpGlobalSettings.md)
 
 [Initialize-IntersightFabricUdldGlobalSettings](./Initialize-IntersightFabricUdldGlobalSettings.md)
 

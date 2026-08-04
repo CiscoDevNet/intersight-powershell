@@ -175,7 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### -Port
-The Port ID of the adapter on which the underlying virtual ethernet interface is present. If no port is specified, the default value is -1. Supported values are 0 to 255.
+Enter the port ID of the adapter for the virtual ethernet interface. Valid values are 0 to 255.
 
 ```yaml
 Type: long

@@ -946,6 +946,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The preferred UUID can be specified only for dynamic lease requests. Intersight will make its best effort to allocate that UUID if it is available in the pool. If the specified preferred UUID is not in the range of the pool or if it is already leased or reserved, then the next available UUID from the pool will be leased. Since this feature is specific to dynamic lease requests only, static lease request will fail if it specifies the preferred UUID property. When the preferred UUID property is specified in conjunction with 'migrate' property, existing static or dynamic lease will be replaced by the new lease. Migration also supported only for dynamic lease requests."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$")]
+        public string PreferredUuid
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The holder of a reference to reservation Moid and the specific details on lease condition for this reservation. Specified to allocate already reserved identities."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1009,6 +1019,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Pool"))
             {
                 initObject.Pool = this.Pool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreferredUuid"))
+            {
+                initObject.PreferredUuid = this.PreferredUuid;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Reservation"))
             {

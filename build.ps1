@@ -49,7 +49,7 @@ $manifestParam = @{
     Guid = "41ce1a70-9c4b-489f-a153-12fe49b7fe62"
     Author = "Cisco Systems"
     CompanyName = "Cisco Systems"
-    ModuleVersion = "1.0.11.2026051817"
+    ModuleVersion = "1.0.11.2026072720"
     Copyright = "(c) 2025 Cisco Systems, Inc. All rights reserved."
     LicenseUri = "https://www.apache.org/licenses/LICENSE-2.0.txt"
     ProjectUri = "https://github.com/CiscoDevNet/intersight-powershell"
@@ -58,8 +58,9 @@ $manifestParam = @{
     PowerShellVersion = "7.4.0"
     CmdletsToExport = $commandList
     ScriptsToProcess = @('Initialize-HelpFiles.ps1')
+    NestedModules = @('Register-IntersightEnumFormatting.ps1')
     Description = "Intersight Powershell module provides the cmdlets to manage, analyze, and automate the IT infrastructure in Intersight."
-    ReleaseNotes = "Intersight.PowerShell - Version 1.0.11.2026051817
+    ReleaseNotes = "Intersight.PowerShell - Version 1.0.11.2026072720
 
 Changelog:-
 https://github.com/CiscoDevNet/intersight-powershell/blob/master/CHANGELOG.md
@@ -96,6 +97,13 @@ if (Test-Path -Path $moduleDir -PathType Container){
     if (Test-Path -Path $initScriptPath) {
         Copy-Item -Path $initScriptPath -Destination $moduleDir
         Write-Host "Successfully copied the Initialize-HelpFiles.ps1 script to $moduleDir."
+    }
+
+    # Copy the Register-IntersightEnumFormatting.ps1 nested module to the module directory
+    $enumFormattingScriptPath = Join-Path -Path $PSScriptRoot -ChildPath "scripts\Register-IntersightEnumFormatting.ps1"
+    if (Test-Path -Path $enumFormattingScriptPath) {
+        Copy-Item -Path $enumFormattingScriptPath -Destination $moduleDir
+        Write-Host "Successfully copied the Register-IntersightEnumFormatting.ps1 script to $moduleDir."
     }
 }
 else{

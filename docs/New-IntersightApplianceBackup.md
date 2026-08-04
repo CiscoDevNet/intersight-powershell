@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightApplianceBackup [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Filename< string>][-Moid< string>][-Password< string>][-Protocol< ApplianceBackup.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Username< string>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightApplianceBackup [-Account< IamAccountRelationship>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Filename< string>][-ForceDelete< bool>][-Moid< string>][-Password< string>][-Protocol< ApplianceBackup.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-UsePolicySettings< bool>][-Username< string>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -71,6 +71,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ForceDelete
+Set to true to allow deletion of the oldest local backup when local backup retention limit is reached. If false and retention count is reached, the backup operation fails.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -102,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.
+Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.
 
 ```yaml
 Type: ApplianceBackup.ProtocolEnum
@@ -117,7 +132,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteHost
-Hostname of the remote file server.
+Hostname of the remote file server. Not required when protocol is local.
 
 ```yaml
 Type: string
@@ -132,7 +147,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePath
-File server directory or share name to copy the file.
+File server directory or share name to copy the file. Not required when protocol is local.
 
 ```yaml
 Type: string
@@ -147,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePort
-Remote TCP port on the file server (e.g. 22 for scp).
+Remote TCP port on the file server (e.g. 22 for scp). Not required when protocol is local.
 
 ```yaml
 Type: long
@@ -178,8 +193,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -UsePolicySettings
+Set to true to inherit credentials, protocol, and file server settings from the appliance backup policy. If false, use explicit settings provided in this backup object.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Username
-Username to authenticate the fileserver.
+Username to authenticate the fileserver. Not required when protocol is local.
 
 ```yaml
 Type: string

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamLocalUserPasswordPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EnableLockOutForAdminUser< bool>][-FailedLoginTrackerWindow< long>][-LockOutTimePeriod< long>][-MaxFailedLoginsAllowed< long>][-MinCharDifference< long>][-MinDaysBetweenPasswordChange< long>][-MinLengthPassword< long>][-MinLowerCase< long>][-MinNumeric< long>][-MinSpecialChar< long>][-MinUpperCase< long>][[-Moid]< string>][-NumPreviousPasswordsDisallowed< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightIamLocalUserPasswordPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-EnableLockOutForAdminUser< bool>][-FailedLoginTrackerWindow< long>][-LockOutTimePeriod< long>][-MaxDaysAllowedWithSamePassword< long>][-MaxFailedLoginsAllowed< long>][-MinCharDifference< long>][-MinDaysBetweenPasswordChange< long>][-MinLengthPassword< long>][-MinLowerCase< long>][-MinNumeric< long>][-MinSpecialChar< long>][-MinUpperCase< long>][[-Moid]< string>][-NumPreviousPasswordsDisallowed< long>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -54,7 +54,7 @@ Accept wildcard characters: False
 ```
 
 ### -FailedLoginTrackerWindow
-Seconds are tracked for consecutive incorrect login attempts. Users will be locked out if they exceed the max number of incorrect login attempts during this duration.
+The duration, in seconds, within which consecutive incorrect login attempts are counted. The system locks out the account if the number of incorrect attempts exceeds the maximum allowed value during this window.
 
 ```yaml
 Type: long
@@ -70,6 +70,21 @@ Accept wildcard characters: False
 
 ### -LockOutTimePeriod
 The time period, in seconds, during which a user account will remain locked.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MaxDaysAllowedWithSamePassword
+Maximum number of days a password can be used before it must be changed. Set to 0 to disable password expiration.
 
 ```yaml
 Type: long

@@ -87,7 +87,7 @@ Accept wildcard characters: False
 ```
 
 ### -Server
-LDAP Server Address, can be IP address or hostname.
+LDAP Server Address, such as an IP address or hostname.
 
 ```yaml
 Type: string

@@ -616,6 +616,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"Cisco Discovery Protocol configuration for the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool CdpEnabled
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Chassis IP of the switch."</para>
@@ -855,6 +866,50 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The IPv6 address of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string InbandIpv6Address
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The default IPv6 gateway of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string InbandIpv6Gateway
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The network mask of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string InbandIpv6Prefix
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The MAC address of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string InbandMac
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The VLAN ID of the network Element inband management interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -910,6 +965,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Link Layer Discovery Protocol configuration for the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool LldpEnabled
+        {
+            get;
+            set;
+        }
 
 
 
@@ -1157,6 +1223,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The IPv6 ICMPv6 redirects configuration on the network Element out-of-band management interface.\n* `` - The IPv6 redirects configuration is not available or not applicable.\n* `enabled` - IPv6 ICMPv6 redirects are enabled on the management interface.\n* `disabled` - IPv6 ICMPv6 redirects are disabled on the management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElement.OutOfBandIpv6RedirectsEnum OutOfBandIpv6Redirects
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The SLAAC Interface Identifier (IID) mode for the network Element out-of-band management IPv6 address.\n* `` - The SLAAC IID mode is not available or not applicable.\n* `eui64` - The SLAAC IID is derived from the MAC address using the EUI-64 method.\n* `opaque` - The SLAAC IID is generated using an opaque identifier for privacy."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1168,7 +1245,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The status of the IPv6 configuration on the network Element out-of-band management interface.\n* `` - The IPv6 address status is not available or not applicable.\n* `active` - The IPv6 address is active and in use.\n* `tentative` - The IPv6 address is in tentative state (Duplicate Address Detection in progress).\n* `duplicate` - The IPv6 address is a duplicate (DAD failed).\n* `disabled` - The IPv6 address is disabled.\n* `error` - An error occurred during IPv6 address configuration.\n* `unknown` - The IPv6 address status is unknown."</para>
+        /// <para type="description">"The status of the IPv6 configuration on the network Element out-of-band management interface.\n* `` - The IPv6 address status is not available or not applicable.\n* `active` - The IPv6 address is active and in use.\n* `tentative` - The IPv6 address is in tentative state (Duplicate Address Detection in progress).\n* `duplicate` - The IPv6 address is a duplicate (DAD failed).\n* `deprecated` - The IPv6 address is deprecated (preferred lifetime expired).\n* `disabled` - The IPv6 address is disabled.\n* `waiting` - SLAAC is configured but waiting for a Router Advertisement to assign an address.\n* `error` - An error occurred during IPv6 address configuration.\n* `unknown` - The IPv6 address status is unknown."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1305,6 +1382,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
         /// </summary>
@@ -1349,6 +1427,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Spanning Tree Protocol configuration for the switch.\n* `Disabled` - Spanning Tree Protocol (STP) is disabled.\n* `STP` - Spanning Tree Protocol (STP) is enabled and operating in STP.\n* `RSTP` - Spanning Tree Protocol (STP) is enabled and operating in RSTP mode.\n* `MSTP` - Spanning Tree Protocol (STP) is enabled and operating in MSTP mode.\n* `PVST+` - Spanning Tree Protocol (STP) is enabled and operating in PVST mode.\n* `RPVST+` - Spanning Tree Protocol (STP) is enabled and operating in RPVST mode."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElement.StpModeEnum StpMode
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -1596,6 +1685,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Cisco Discovery Protocol (CDP) configuration for the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool CdpEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Chassis IP of the switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1827,6 +1927,50 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The IPv6 address of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string InbandIpv6Address
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The default IPv6 gateway of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string InbandIpv6Gateway
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The network mask of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string InbandIpv6Prefix
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The MAC address of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string InbandMac
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The VLAN ID of the network Element inband management interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1887,6 +2031,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool JumboFrameEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Link Layer Discovery Protocol (LLDP) configuration for the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool LldpEnabled
         {
             get;
             set;
@@ -2169,6 +2324,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The IPv6 ICMPv6 redirects configuration on the network Element out-of-band management interface.\n* `` - The IPv6 redirects configuration is not available or not applicable.\n* `enabled` - IPv6 ICMPv6 redirects are enabled on the management interface.\n* `disabled` - IPv6 ICMPv6 redirects are disabled on the management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElementSummary.OutOfBandIpv6RedirectsEnum OutOfBandIpv6Redirects
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The SLAAC Interface Identifier (IID) mode for the network Element out-of-band management IPv6 address.\n* `` - The SLAAC IID mode is not available or not applicable.\n* `eui64` - The SLAAC IID is derived from the MAC address using the EUI-64 method.\n* `opaque` - The SLAAC IID is generated using an opaque identifier for privacy."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2180,7 +2346,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The status of the IPv6 configuration on the network Element out-of-band management interface.\n* `` - The IPv6 address status is not available or not applicable.\n* `active` - The IPv6 address is active and in use.\n* `tentative` - The IPv6 address is in tentative state (Duplicate Address Detection in progress).\n* `duplicate` - The IPv6 address is a duplicate (DAD failed).\n* `disabled` - The IPv6 address is disabled.\n* `error` - An error occurred during IPv6 address configuration.\n* `unknown` - The IPv6 address status is unknown."</para>
+        /// <para type="description">"The status of the IPv6 configuration on the network Element out-of-band management interface.\n* `` - The IPv6 address status is not available or not applicable.\n* `active` - The IPv6 address is active and in use.\n* `tentative` - The IPv6 address is in tentative state (Duplicate Address Detection in progress).\n* `duplicate` - The IPv6 address is a duplicate (DAD failed).\n* `deprecated` - The IPv6 address is deprecated (preferred lifetime expired).\n* `disabled` - The IPv6 address is disabled.\n* `waiting` - SLAAC is configured but waiting for a Router Advertisement to assign an address.\n* `error` - An error occurred during IPv6 address configuration.\n* `unknown` - The IPv6 address status is unknown."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2291,6 +2457,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"This field identifies the serial of the given component."</para>
         /// </summary>
@@ -2341,6 +2508,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Status
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Spanning Tree Protocol configuration for the switch.\n* `Disabled` - Spanning Tree Protocol (STP) is disabled.\n* `STP` - Spanning Tree Protocol (STP) is enabled and operating in STP.\n* `RSTP` - Spanning Tree Protocol (STP) is enabled and operating in RSTP mode.\n* `MSTP` - Spanning Tree Protocol (STP) is enabled and operating in MSTP mode.\n* `PVST+` - Spanning Tree Protocol (STP) is enabled and operating in PVST mode.\n* `RPVST+` - Spanning Tree Protocol (STP) is enabled and operating in RPVST mode."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElementSummary.StpModeEnum StpMode
         {
             get;
             set;
@@ -3504,6 +3682,611 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NetworkSecureRouter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkSecureRouter", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightNetworkSecureRouter : GetCmdletBase
+    {
+        public GetIntersightNetworkSecureRouter()
+        {
+            ApiInstance = new NetworkApi(Config);
+            MethodName = "GetNetworkSecureRouterListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a managementController resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public ManagementControllerRelationship Bmc
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The last reported boot progress of the secure router.\n* `Unknown` - The boot progress state of the system is unknown.\n* `None` - The system has not started the boot process.\n* `OSBootStarted` - The system has started the OS boot process.\n* `OSRunning` - The system has completed the boot process and the OS is running."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkSecureRouter.BootProgressLastStateEnum BootProgressLastState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The id of the chassis that the blade is discovered in."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long ChassisId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceMoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a equipmentChassis resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentChassisRelationship EquipmentChassis
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The version of the secure router CIMC firmware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string FirmwareVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUpgraded
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The lifecycle state of the secure router. This will map to the discovery lifecycle as represented in the Identity object.\n* `None` - Default state of an equipment. This should be an initial state when no state is defined for an equipment.\n* `Active` - Default Lifecycle State for a physical entity.\n* `Decommissioned` - Decommission Lifecycle state.\n* `SlotReserved` - Blade is inserted in a slot that is reserved for Secure Router.\n* `DiscoveryInProgress` - DiscoveryInProgress Lifecycle state.\n* `DiscoveryFailed` - DiscoveryFailed Lifecycle state.\n* `FirmwareUpgradeInProgress` - Firmware upgrade is in progress on given physical entity.\n* `DiagnosticsInProgress` - Diagnostics is in progress on given physical entity.\n* `SecureEraseInProgress` - Secure Erase is in progress on given physical entity.\n* `ScrubInProgress` - Scrub is in progress on given physical entity.\n* `BladeMigrationInProgress` - Server slot migration is in progress on given physical entity.\n* `SlotMismatch` - The blade server is detected in a different chassis/slot than it was previously.\n* `Removed` - The blade server has been removed from its discovered slot, and not detected anywhere else. Blade inventory can be cleaned up by performing a software remove operation on the physically removed blade.\n* `Moved` - The blade server has been moved from its discovered location to a new location. Blade inventory can be updated by performing a rediscover operation on the moved blade.\n* `Replaced` - The blade server has been removed from its discovered location and another blade has been inserted in that location. Blade inventory can be cleaned up and updated by doing a software remove operation on the physically removed blade.\n* `MovedAndReplaced` - The blade server has been moved from its discovered location to a new location and another blade has been inserted into the old discovered location. Blade inventory can be updated by performing a rediscover operation on the moved blade.\n* `DecommissionAndRemoveInProgress` - Decommission and remove operation is in progress.\n* `DecommissionedForRemove` - Server is decommissioned and once it is physically pulled from chassis, it will be automatically removed from inventory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkSecureRouter.LifecycleEnum Lifecycle
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a equipmentLocatorLed resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentLocatorLedRelationship LocatorLed
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field displays the model number of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The name of the secure router. The value is set to the UCSFI domain name along with the chassis and router id."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The power state of the secure router."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string OperPowerState
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"Bundle version which the CIMC firmware belongs to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PackageVersion
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"This field indicates the presence (equipped) or absence (absent) of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Presence
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a equipmentFru resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentFruRelationship PreviousFru
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field displays the revised version of the associated component or hardware (if any)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Revision
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Rn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field displays the serial number of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Serial
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The slot number in the chassis that the blade is discovered in."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long SlotId
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The user defined label assigned to the secure router."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"This field displays the vendor information of the associated component or hardware."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Vendor
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NetworkSecureRouterSetting.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkSecureRouterSetting", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightNetworkSecureRouterSetting : GetCmdletBase
+    {
+        public GetIntersightNetworkSecureRouterSetting()
+        {
+            ApiInstance = new NetworkApi(Config);
+            MethodName = "GetNetworkSecureRouterSettingListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"User configured action on the Secure Router.\n* `None` - Placeholder default value for Secure Router admin state property.\n* `Reboot` - Secure Router reboot state property value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkSecureRouterSetting.AdminActionEnum AdminAction
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User configured state of the locator LED for the PCIe Node.\n* `None` - No operation property for locator led.\n* `On` - The Locator Led is turned on.\n* `Off` - The Locator Led is turned off."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkSecureRouterSetting.AdminLocatorLedStateEnum AdminLocatorLedState
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The configured state of these settings in the target server. The value is any one of Applied, Applying, Failed. Applied - This state denotes that the settings are applied successfully in the target server. Applying - This state denotes that the settings are being applied in the target server. Failed - This state denotes that the settings could not be applied in the target server.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Scheduled` - User configured settings are scheduled to be applied.\n* `Failed` - User configured settings could not be applied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkSecureRouterSetting.ConfigStateEnum ConfigState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceMoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a equipmentLocatorLed resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public EquipmentLocatorLedRelationship LocatorLed
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The property used to identify the Secure Router it is associated with."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Rn
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a networkSecureRouter resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public NetworkSecureRouterRelationship SecureRouter
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -5964,6 +6747,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Chassis IP of the switch."</para>
         /// </summary>
@@ -6049,6 +6833,51 @@ namespace Intersight.PowerShell
 
 
 
+
+
+        // <summary>
+        /// <para type="description">"The IPv6 address of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InbandIpv6Address
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The default IPv6 gateway of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InbandIpv6Gateway
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The network mask of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InbandIpv6Prefix
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The MAC address of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InbandMac
+        {
+            get;
+            set;
+        }
 
 
 
@@ -6138,6 +6967,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Part number of the switch."</para>
         /// </summary>
@@ -6175,6 +7005,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The status of the switch."</para>
         /// </summary>
@@ -6185,6 +7016,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -6363,6 +7195,207 @@ namespace Intersight.PowerShell
 
 
 
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set NetworkSecureRouter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkSecureRouter", SupportsShouldProcess = true)]
+    public class SetIntersightNetworkSecureRouter : SetCmdletBase
+    {
+        public SetIntersightNetworkSecureRouter()
+        {
+            ApiInstance = new NetworkApi(Config);
+            ModelObject = new NetworkSecureRouter();
+            MethodName = "UpdateNetworkSecureRouterWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The user defined label assigned to the secure router."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set NetworkSecureRouterSetting.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightNetworkSecureRouterSetting", SupportsShouldProcess = true)]
+    public class SetIntersightNetworkSecureRouterSetting : SetCmdletBase
+    {
+        public SetIntersightNetworkSecureRouterSetting()
+        {
+            ApiInstance = new NetworkApi(Config);
+            ModelObject = new NetworkSecureRouterSetting();
+            MethodName = "UpdateNetworkSecureRouterSettingWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User configured action on the Secure Router.\n* `None` - Placeholder default value for Secure Router admin state property.\n* `Reboot` - Secure Router reboot state property value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkSecureRouterSetting.AdminActionEnum AdminAction
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"User configured state of the locator LED for the PCIe Node.\n* `None` - No operation property for locator led.\n* `On` - The Locator Led is turned on.\n* `Off` - The Locator Led is turned off."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkSecureRouterSetting.AdminLocatorLedStateEnum AdminLocatorLedState
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
 
 
         // <summary>

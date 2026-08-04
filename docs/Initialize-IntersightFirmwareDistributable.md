@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFirmwareDistributable [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.SoftwarerepositoryCatalogRelationship>][-ClassId< FirmwareDistributable.ClassIdEnum>][-ComponentMeta< System.Collections.Generic.List`1[Model.FirmwareComponentMeta]>][-Description< string>][-DistributableMetas< System.Collections.Generic.List`1[Model.FirmwareDistributableMetaRelationship]>][-FileLocation< string>][-ImageCategory< string>][-ImageType< string>][-ImportAction< FirmwareDistributable.ImportActionEnum>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][-Moid< string>][-Name< string>][-ObjectType< FirmwareDistributable.ObjectTypeEnum>][-Origin< FirmwareDistributable.OriginEnum>][-RecommendedBuild< string>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< Model.SoftwarerepositoryFileServer>][-SupportedModels< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFirmwareDistributable [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.SoftwarerepositoryCatalogRelationship>][-ClassId< FirmwareDistributable.ClassIdEnum>][-ComponentMeta< System.Collections.Generic.List`1[Model.FirmwareComponentMeta]>][-Description< string>][-DistributableMetas< System.Collections.Generic.List`1[Model.FirmwareDistributableMetaRelationship]>][-FeatureFlags< System.Collections.Generic.List`1[string]>][-FileLocation< string>][-ImageCategory< string>][-ImageType< string>][-ImportAction< FirmwareDistributable.ImportActionEnum>][-IsBeta< bool>][-Md5eTag< string>][-Md5sum< string>][-Mdfid< string>][-Model< string>][-Moid< string>][-Name< string>][-ObjectType< FirmwareDistributable.ObjectTypeEnum>][-Origin< FirmwareDistributable.OriginEnum>][-RecommendedBuild< string>][-Release< Model.SoftwarerepositoryReleaseRelationship>][-ReleaseDate< DateTime>][-ReleaseNotesUrl< string>][-Sha512sum< string>][-Size< long>][-SoftwareAdvisoryUrl< string>][-Source< Model.SoftwarerepositoryFileServer>][-SupportedModels< System.Collections.Generic.List`1[string]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Vendor< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -122,6 +122,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -FeatureFlags
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -FileLocation
 The file location of the distributable.
 
@@ -172,6 +187,21 @@ The action to be performed on the imported file. If &apos;PreCache&apos; is set,
 
 ```yaml
 Type: FirmwareDistributable.ImportActionEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -IsBeta
+Whether this distributable is a beta image and participates in OData filtering so callers can explicitly query beta or non-beta firmware images.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

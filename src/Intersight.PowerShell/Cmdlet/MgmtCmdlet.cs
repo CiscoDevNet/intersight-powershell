@@ -548,6 +548,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"SHA-256 checksum of the encrypted backup archive, returned as a hex-encoded string. Users can compare the checksum of a downloaded archive with this value to verify file integrity and confirm the archive was not corrupted or altered in transit."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Checksum
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -826,6 +837,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string BackupAccount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The domain group moid of the account from which the backup was taken."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string BackupAccountDomainGroupMoid
         {
             get;
             set;
@@ -2636,6 +2658,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the backup operation."</para>
         /// </summary>
@@ -3315,6 +3338,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Description of the backup operation that created this instance."</para>
         /// </summary>
@@ -3443,6 +3467,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

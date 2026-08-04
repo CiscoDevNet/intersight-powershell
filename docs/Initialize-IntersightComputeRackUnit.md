@@ -420,7 +420,7 @@ Accept wildcard characters: False
 ```
 
 ### -FrontPanelLockState
-The actual front panel state of the server.\n* `None` - Front Panel of the server is set to None state. It is required so that the next frontPanelLockState operation can be triggered.\n* `Lock` - Front Panel of the server is set to Locked state.\n* `Unlock` - Front Panel of the server is set to Unlocked state.
+The actual front panel state of the server.\n* `Unlock` - Front Panel of the server is set to Unlocked state.\n* `Lock` - Front Panel of the server is set to Locked state.
 
 ```yaml
 Type: ComputeRackUnit.FrontPanelLockStateEnum

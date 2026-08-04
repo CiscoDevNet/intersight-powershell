@@ -44,7 +44,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Unique Identifier of the Device."</para>
+        /// <para type="description">"Unique identifier for the device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -66,7 +66,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Unique Identifier of the Domain."</para>
+        /// <para type="description">"Unique identifier for the domain."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -99,7 +99,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"A user provided name of the Device."</para>
+        /// <para type="description">"User assigned name for the device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -207,7 +207,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Unique Identifier of the Device."</para>
+        /// <para type="description">"Unique identifier for the device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -229,7 +229,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Unique Identifier of the Domain."</para>
+        /// <para type="description">"Unique identifier for the domain."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -262,7 +262,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"A user provided name of the Device."</para>
+        /// <para type="description">"User assigned name for the device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -403,7 +403,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"A user provided name of the FMC Domain."</para>
+        /// <para type="description">"User assigned name for the FMC domain."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -450,7 +450,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Unique Identifier of the Domain."</para>
+        /// <para type="description">"Unique identifier for the domain."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -522,7 +522,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Represents Device Id associated with Physical Interface."</para>
+        /// <para type="description">"Physical interface device Id."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -544,7 +544,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Represents Domain Id associated with Physical Interface."</para>
+        /// <para type="description">"Physical interface domain Id."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -577,7 +577,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Represents Physical Interface Name."</para>
+        /// <para type="description">"The name for the physical interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -601,7 +601,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Represents Physical Interface Id."</para>
+        /// <para type="description">"The id for the physical interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamLocalUserPassword.ClassIdEnum>][-CurrentPassword< string>][-InitialPassword< string>][-Moid< string>][-NewPassword< string>][-ObjectType< IamLocalUserPassword.ObjectTypeEnum>][-Password< byte[]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamLocalUserPassword.ClassIdEnum>][-CurrentPassword< string>][-InitialPassword< string>][-Moid< string>][-NewPassword< string>][-ObjectType< IamLocalUserPassword.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -129,23 +129,6 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Password
-User&apos;s current valid password.
-
-Note :- Use Initialize-Intersightbyte[] to create the object of complex type byte[]
-
-```yaml
-Type: byte[]
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
 ### -Tags
 
 
@@ -221,5 +204,3 @@ PS C:\> Initialize-IntersightIamLocalUserPassword
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
-
-[Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)

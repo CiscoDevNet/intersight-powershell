@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BaseMac< string>][-EndMac< string>][-FcPortChannels< System.Collections.Generic.List`1[FcPortChannelRelationship]>][-FcPorts< System.Collections.Generic.List`1[FcPhysicalPortRelationship]>][-HostPorts< System.Collections.Generic.List`1[EtherHostPortRelationship]>][-HwVersion< string>][[-Moid]< string>][-Name< string>][-OutOfBandIpMask< string>][-PartNumber< string>][-PortChannels< System.Collections.Generic.List`1[EtherPortChannelRelationship]>][-PowerState< EquipmentSwitchCard.PowerStateEnum>][-Status< EquipmentSwitchCard.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Type< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BaseMac< string>][-EndMac< string>][-FcPortChannels< System.Collections.Generic.List`1[FcPortChannelRelationship]>][-FcPorts< System.Collections.Generic.List`1[FcPhysicalPortRelationship]>][-HostPorts< System.Collections.Generic.List`1[EtherHostPortRelationship]>][-HwVersion< string>][-InterSwitchPort< EtherInterSwitchPortRelationship>][[-Moid]< string>][-Name< string>][-OutOfBandIpMask< string>][-PartNumber< string>][-PortChannels< System.Collections.Generic.List`1[EtherPortChannelRelationship]>][-PowerState< EquipmentSwitchCard.PowerStateEnum>][-Status< EquipmentSwitchCard.StatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Type< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -127,6 +127,24 @@ The Hardware version of the switch hardware.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InterSwitchPort
+A reference to a etherInterSwitchPort resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: EtherInterSwitchPortRelationship
 Parameter Sets: (All)
 Aliases:
 

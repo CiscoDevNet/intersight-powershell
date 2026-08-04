@@ -1085,6 +1085,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"The preferred UUID can be specified only for dynamic lease requests. Intersight will make its best effort to allocate that UUID if it is available in the pool. If the specified preferred UUID is not in the range of the pool or if it is already leased or reserved, then the next available UUID from the pool will be leased. Since this feature is specific to dynamic lease requests only, static lease request will fail if it specifies the preferred UUID property. When the preferred UUID property is specified in conjunction with 'migrate' property, existing static or dynamic lease will be replaced by the new lease. Migration also supported only for dynamic lease requests."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$")]
+        public string PreferredUuid
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>

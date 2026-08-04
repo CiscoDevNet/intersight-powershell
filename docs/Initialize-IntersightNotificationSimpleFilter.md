@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Property
-The property name to filter on (e.g., HostName, Domain, \nServerProfile, Organization).
+The property name to filter on (e.g., HostName, Domain,\nServerProfile, Organization).
 
 ```yaml
 Type: string

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryNexusDashboards [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNexusDashboards.ClassIdEnum>][-ClusterName< string>][-ClusterUuid< string>][-Dn< string>][-FeatureOperStatus< bool>][-IsClusterHealthy< string>][-Moid< string>][-NdClusterSize< long>][-NdSites< System.Collections.Generic.List`1[Model.NiatelemetrySites]>][-NdType< string>][-NdVersion< string>][-NumberOfApps< long>][-NumberOfInsightGroups< long>][-NumberOfNirDashboards< long>][-NumberOfSchemasInMso< long>][-NumberOfSitesInMso< long>][-NumberOfSitesServiced< long>][-NumberOfTenantsInMso< long>][-NumberOfVxlanFabricSitesInMso< long>][-ObjectType< NiatelemetryNexusDashboards.ObjectTypeEnum>][-RecordType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TypeOfSiteInMso< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryNexusDashboards [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNexusDashboards.ClassIdEnum>][-ClusterName< string>][-ClusterUuid< string>][-Dn< string>][-FeatureOperStatus< bool>][-IsClusterHealthy< string>][-LiveProtectEnabledCount< long>][-Moid< string>][-NdClusterSize< long>][-NdSites< System.Collections.Generic.List`1[Model.NiatelemetrySites]>][-NdType< string>][-NdVersion< string>][-NumberOfApps< long>][-NumberOfInsightGroups< long>][-NumberOfNirDashboards< long>][-NumberOfSchemasInMso< long>][-NumberOfSitesInMso< long>][-NumberOfSitesServiced< long>][-NumberOfTenantsInMso< long>][-NumberOfVxlanFabricSitesInMso< long>][-ObjectType< NiatelemetryNexusDashboards.ObjectTypeEnum>][-RecordType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TypeOfSiteInMso< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -119,6 +119,21 @@ Health of Nexus Dashboard cluster.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LiveProtectEnabledCount
+Count of devices with Live Protect shield status enabled.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

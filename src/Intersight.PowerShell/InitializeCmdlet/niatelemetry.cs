@@ -14502,6 +14502,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Count of devices with Live Protect shield status enabled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long LiveProtectEnabledCount
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14700,6 +14710,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("IsClusterHealthy"))
             {
                 initObject.IsClusterHealthy = this.IsClusterHealthy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LiveProtectEnabledCount"))
+            {
+                initObject.LiveProtectEnabledCount = this.LiveProtectEnabledCount;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
@@ -21004,6 +21018,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Fabric technology reported by the onboarded DCNM site."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string FabricTechnology
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Version of the specified site."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -21130,6 +21154,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ConnectivityAnalysisCount"))
             {
                 initObject.ConnectivityAnalysisCount = this.ConnectivityAnalysisCount;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FabricTechnology"))
+            {
+                initObject.FabricTechnology = this.FabricTechnology;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("FirmwareVersion"))
             {

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowCustomDataTypeProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowCustomDataTypeProperties.ClassIdEnum>][-ObjectType< WorkflowCustomDataTypeProperties.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowCustomDataTypeProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowCustomDataTypeProperties.ClassIdEnum>][-ObjectType< WorkflowCustomDataTypeProperties.ObjectTypeEnum>][-SupportStatus< WorkflowCustomDataTypeProperties.SupportStatusEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: WorkflowCustomDataTypeProperties.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SupportStatus
+Supported status of the definition.\n* `Supported` - The definition is a supported version and there will be no changes to the mandatory inputs or outputs.\n* `Beta` - The definition is a Beta version and this version can under go changes until the version is marked supported.\n* `Deprecated` - The version of definition is deprecated and typically there will be a higher version of the same definition that has been added.
+
+```yaml
+Type: WorkflowCustomDataTypeProperties.SupportStatusEnum
 Parameter Sets: (All)
 Aliases:
 

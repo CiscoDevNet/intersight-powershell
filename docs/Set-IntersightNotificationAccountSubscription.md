@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightNotificationAccountSubscription [-Actions< System.Collections.Generic.List`1[NotificationAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Certificate< IamTrustPointRelationship>][-ConditionOperator< NotificationAccountSubscription.ConditionOperatorEnum>][-Conditions< System.Collections.Generic.List`1[NotificationAbstractCondition]>][-Description< string>][-EnableTls< bool>][-Enabled< bool>][[-Moid]< string>][-Name< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< NotificationAccountSubscription.TypeEnum>][-Verify< NotificationAccountSubscription.VerifyEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightNotificationAccountSubscription [-Actions< System.Collections.Generic.List`1[NotificationAction]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Certificate< IamTrustPointRelationship>][-ConditionOperator< NotificationAccountSubscription.ConditionOperatorEnum>][-Conditions< System.Collections.Generic.List`1[NotificationAbstractCondition]>][-Description< string>][-Enabled< bool>][[-Moid]< string>][-Name< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< NotificationAccountSubscription.TypeEnum>][-Verify< NotificationAccountSubscription.VerifyEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -110,21 +110,6 @@ The description for the subscription.
 
 ```yaml
 Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -EnableTls
-When true, TLS with custom certificate validation is enabled for this webhook subscription. The\ncertificate relationship must be set to a TrustPoint when enableTls is true. Only applicable for\nwebhook-type subscriptions; used for appliance deployments with private CAs. When false or unset,\ndefault TLS behavior (public CA trust) is used. SaaS typically leaves this false or unset.
-
-```yaml
-Type: bool
 Parameter Sets: (All)
 Aliases:
 

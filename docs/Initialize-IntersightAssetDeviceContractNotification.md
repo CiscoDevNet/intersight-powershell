@@ -425,7 +425,7 @@ Accept wildcard characters: False
 ```
 
 ### -StateContract
-Internal property used for triggering and tracking actions for contract information.\n* `Update` - Sn2Info/Contract information needs to be updated.\n* `OK` - Sn2Info/Contract information was fetched succcessfuly and updated.\n* `Failed` - Sn2Info/Contract information was not available  or failed while fetching.\n* `Retry` - Sn2Info/Contract information update failed and will be retried later.
+Internal property used for triggering and tracking actions for contract information.\n* `Update` - Sn2Info/Contract information needs to be updated.\n* `OK` - Sn2Info/Contract information was fetched succcessfuly and updated.\n* `Failed` - Sn2Info/Contract information was not available  or failed while fetching.\n* `Retry` - Sn2Info/Contract information update failed and will be retried later.\n* `Inactive` - Device is not in connected state (offline). No action will be taken when the state is Inactive.
 
 ```yaml
 Type: AssetDeviceContractNotification.StateContractEnum
@@ -440,7 +440,7 @@ Accept wildcard characters: False
 ```
 
 ### -StateSn2Info
-Internal property used for triggering and tracking actions for sn2info information.\n* `Update` - Sn2Info/Contract information needs to be updated.\n* `OK` - Sn2Info/Contract information was fetched succcessfuly and updated.\n* `Failed` - Sn2Info/Contract information was not available  or failed while fetching.\n* `Retry` - Sn2Info/Contract information update failed and will be retried later.
+Internal property used for triggering and tracking actions for sn2info information.\n* `Update` - Sn2Info/Contract information needs to be updated.\n* `OK` - Sn2Info/Contract information was fetched succcessfuly and updated.\n* `Failed` - Sn2Info/Contract information was not available  or failed while fetching.\n* `Retry` - Sn2Info/Contract information update failed and will be retried later.\n* `Inactive` - Device is not in connected state (offline). No action will be taken when the state is Inactive.
 
 ```yaml
 Type: AssetDeviceContractNotification.StateSn2InfoEnum

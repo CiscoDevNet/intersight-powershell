@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCapabilitySwitchNetworkLimits [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CapabilitySwitchNetworkLimits.ClassIdEnum>][-MaxCompressedPortVlanCount< long>][-MaxUncompressedPortVlanCount< long>][-MaximumActiveTrafficMonitoringSessions< long>][-MaximumEthernetPortChannels< long>][-MaximumEthernetUplinkPorts< long>][-MaximumFcPortChannelMembers< long>][-MaximumFcPortChannels< long>][-MaximumIgmpGroups< long>][-MaximumPortChannelMembers< long>][-MaximumPrimaryVlan< long>][-MaximumSecondaryVlan< long>][-MaximumSecondaryVlanPerPrimary< long>][-MaximumVifs< long>][-MaximumVlans< long>][-MinimumActiveFans< long>][-ObjectType< CapabilitySwitchNetworkLimits.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCapabilitySwitchNetworkLimits [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< CapabilitySwitchNetworkLimits.ClassIdEnum>][-MaxCompressedPortVlanCount< long>][-MaxUncompressedPortVlanCount< long>][-MaximumActiveTrafficMonitoringSessions< long>][-MaximumEthernetPortChannels< long>][-MaximumEthernetUplinkPorts< long>][-MaximumFcPortChannelMembers< long>][-MaximumFcPortChannels< long>][-MaximumIgmpGroups< long>][-MaximumPortChannelMembers< long>][-MaximumPrimaryVlan< long>][-MaximumSecondaryVlan< long>][-MaximumSecondaryVlanPerPrimary< long>][-MaximumSecureRouterPorts< long>][-MaximumVifs< long>][-MaximumVlans< long>][-MinimumActiveFans< long>][-ObjectType< CapabilitySwitchNetworkLimits.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -221,6 +221,21 @@ Accept wildcard characters: False
 
 ### -MaximumSecondaryVlanPerPrimary
 Maximum configurable Secondary VLANs per each Primary VLAN on Switch/Fabric-Interconnect.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -MaximumSecureRouterPorts
+Maximum configurable Secure Router ports on Switch/Fabric-Interconnect.
 
 ```yaml
 Type: long
