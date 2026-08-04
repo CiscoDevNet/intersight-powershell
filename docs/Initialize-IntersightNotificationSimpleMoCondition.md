@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNotificationSimpleMoCondition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NotificationSimpleMoCondition.ClassIdEnum>][-Enabled< bool>][-Filter< Model.NotificationSimpleFilter>][-MoType< string>][-ObjectType< NotificationSimpleMoCondition.ObjectTypeEnum>][-Operations< System.Collections.Generic.List`1[NotificationSimpleMoCondition.OperationsEnum]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNotificationSimpleMoCondition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NotificationSimpleMoCondition.ClassIdEnum>][-Enabled< bool>][-Filter< Model.NotificationSimpleFilter>][-FilterExpression< Model.FilterexprFilterExpression>][-MoType< string>][-ObjectType< NotificationSimpleMoCondition.ObjectTypeEnum>][-Operations< System.Collections.Generic.List`1[NotificationSimpleMoCondition.OperationsEnum]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -70,12 +70,29 @@ Accept wildcard characters: False
 ```
 
 ### -Filter
-Criteria that preserves the UI entered filter query.
+Simple single-predicate filter. Use either this or filterExpression, not both.\nCriteria that preserves the UI entered filter query.
 
 Note :- Use Initialize-IntersightNotificationSimpleFilter to create the object of complex type NotificationSimpleFilter
 
 ```yaml
 Type: Model.NotificationSimpleFilter
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -FilterExpression
+Boolean expression of predicates. Use either this or filter, not both.\nWhen set, odataFilter is built by the server from this tree.
+
+Note :- Use Initialize-IntersightFilterexprFilterExpression to create the object of complex type FilterexprFilterExpression
+
+```yaml
+Type: Model.FilterexprFilterExpression
 Parameter Sets: (All)
 Aliases:
 
@@ -187,5 +204,7 @@ PS C:\> Initialize-IntersightNotificationSimpleMoCondition
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightFilterexprFilterExpression](./Initialize-IntersightFilterexprFilterExpression.md)
 
 [Initialize-IntersightNotificationSimpleFilter](./Initialize-IntersightNotificationSimpleFilter.md)

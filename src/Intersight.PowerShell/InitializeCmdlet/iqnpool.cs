@@ -333,6 +333,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The preferred IQN address can be specified only for dynamic lease requests. Intersight will make its best effort to allocate that IQN address if it is available in the pool. If the specified preferred IQN address is not in the range of the pool or if it is already leased or reserved, then the next available IQN address from the pool will be leased. Since this feature is specific to dynamic lease requests only, static lease request will fail if it specifies the preferred IQN address property. When the preferred IQN address property is specified in conjunction with 'migrate' property, existing static or dynamic lease will be replaced by the new lease. Migration is supported only for dynamic lease requests."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^(?:iqn\\.[0-9]{4}-[0-9]{2}(?:\\.[A-Za-z](?:[A-Za-z0-9\\-]*[A-Za-z0-9])?)+(?::.*)?|eui\\.[0-9A-Fa-f]{16})")]
+        public string PreferredIqnAddress
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The holder of a reference to reservation Moid and the specific details on lease condition for this reservation. Specified to allocate already reserved identities."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -390,6 +400,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Pool"))
             {
                 initObject.Pool = this.Pool;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("PreferredIqnAddress"))
+            {
+                initObject.PreferredIqnAddress = this.PreferredIqnAddress;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Reservation"))
             {

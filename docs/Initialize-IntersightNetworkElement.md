@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-AssignedLocation< Model.AssetGeoLocationRelationship>][-Chassis< string>][-ClassId< NetworkElement.ClassIdEnum>][-ConfModTs< string>][-ConfModTsBackup< string>][-ConnectionStatus< string>][-DefaultDomain< string>][-FaultSummary< long>][-ManagementMode< NetworkElement.ManagementModeEnum>][-Moid< string>][-ObjectType< NetworkElement.ObjectTypeEnum>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-ProcessorUnit< System.Collections.Generic.List`1[Model.ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[Model.NetworkSupervisorCardRelationship]>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< Model.TopSystemRelationship>][-UcsmRunningFirmware< Model.FirmwareRunningFirmwareRelationship>][-UserLabel< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNetworkElement [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmSummary< Model.ComputeAlarmSummary>][-AssignedLocation< Model.AssetGeoLocationRelationship>][-Chassis< string>][-ClassId< NetworkElement.ClassIdEnum>][-ConfModTs< string>][-ConfModTsBackup< string>][-ConnectionStatus< string>][-DefaultDomain< string>][-FaultSummary< long>][-InbandIpv6Address< string>][-InbandIpv6Gateway< string>][-InbandIpv6Prefix< string>][-InbandMac< string>][-ManagementMode< NetworkElement.ManagementModeEnum>][-Moid< string>][-ObjectType< NetworkElement.ObjectTypeEnum>][-OutOfBandIpv6Address< string>][-OutOfBandIpv6Gateway< string>][-OutOfBandIpv6Prefix< string>][-PartNumber< string>][-ProcessorUnit< System.Collections.Generic.List`1[Model.ProcessorUnitRelationship]>][-Status< string>][-SupervisorCard< System.Collections.Generic.List`1[Model.NetworkSupervisorCardRelationship]>][-SystemUpTime< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< NetworkElement.ThermalEnum>][-TopSystem< Model.TopSystemRelationship>][-UcsmRunningFirmware< Model.FirmwareRunningFirmwareRelationship>][-UserLabel< string>][-Version< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -169,6 +169,66 @@ The fault summary of the network Element out-of-band management interface.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InbandIpv6Address
+The IPv6 address of the network Element inband management interface.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InbandIpv6Gateway
+The default IPv6 gateway of the network Element inband management interface.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InbandIpv6Prefix
+The network mask of the network Element inband management interface.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InbandMac
+The MAC address of the network Element inband management interface.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

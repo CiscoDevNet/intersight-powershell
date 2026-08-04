@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamUserSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowUiSessionRecording< bool>][-Moid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIamUserSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowUiSessionRecording< bool>][-DefaultPermission< System.Collections.Generic.List`1[IamDefaultPermissionInfo]>][-Moid< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,23 @@ UI preference of the user for Session Recording.
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultPermission
+
+
+Note :- Use Initialize-IntersightIamDefaultPermissionInfo to create the object of complex type IamDefaultPermissionInfo
+
+```yaml
+Type: System.Collections.Generic.List`1[IamDefaultPermissionInfo]
 Parameter Sets: (All)
 Aliases:
 
@@ -173,6 +190,8 @@ PS C:\> New-IntersightIamUserSetting
 ## RELATED LINKS
 
 [Get-IntersightIamUserSetting](./Get-IntersightIamUserSetting.md)
+
+[Initialize-IntersightIamDefaultPermissionInfo](./Initialize-IntersightIamDefaultPermissionInfo.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

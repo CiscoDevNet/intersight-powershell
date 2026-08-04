@@ -522,6 +522,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Email address of the user who created the schedule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SubmittedBy
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Suspend a task until an end date. this applies only to the action suspendTill."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -838,6 +849,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -1179,6 +1191,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

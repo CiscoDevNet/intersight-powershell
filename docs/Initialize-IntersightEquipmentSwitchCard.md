@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BaseMac< string>][-ClassId< EquipmentSwitchCard.ClassIdEnum>][-EndMac< string>][-FcPortChannels< System.Collections.Generic.List`1[Model.FcPortChannelRelationship]>][-FcPorts< System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]>][-HostPorts< System.Collections.Generic.List`1[Model.EtherHostPortRelationship]>][-HwVersion< string>][-Moid< string>][-Name< string>][-ObjectType< EquipmentSwitchCard.ObjectTypeEnum>][-OutOfBandIpMask< string>][-PartNumber< string>][-PortChannels< System.Collections.Generic.List`1[Model.EtherPortChannelRelationship]>][-PowerState< EquipmentSwitchCard.PowerStateEnum>][-Status< EquipmentSwitchCard.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightEquipmentSwitchCard [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BaseMac< string>][-ClassId< EquipmentSwitchCard.ClassIdEnum>][-EndMac< string>][-FcPortChannels< System.Collections.Generic.List`1[Model.FcPortChannelRelationship]>][-FcPorts< System.Collections.Generic.List`1[Model.FcPhysicalPortRelationship]>][-HostPorts< System.Collections.Generic.List`1[Model.EtherHostPortRelationship]>][-HwVersion< string>][-InterSwitchPort< Model.EtherInterSwitchPortRelationship>][-Moid< string>][-Name< string>][-ObjectType< EquipmentSwitchCard.ObjectTypeEnum>][-OutOfBandIpMask< string>][-PartNumber< string>][-PortChannels< System.Collections.Generic.List`1[Model.EtherPortChannelRelationship]>][-PowerState< EquipmentSwitchCard.PowerStateEnum>][-Status< EquipmentSwitchCard.StatusEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Thermal< EquipmentSwitchCard.ThermalEnum>][-Type< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -143,6 +143,24 @@ The Hardware version of the switch hardware.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InterSwitchPort
+A reference to a etherInterSwitchPort resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.EtherInterSwitchPortRelationship
 Parameter Sets: (All)
 Aliases:
 

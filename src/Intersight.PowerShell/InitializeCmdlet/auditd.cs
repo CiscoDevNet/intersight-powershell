@@ -8,6 +8,258 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize AuditdLogMonitorType.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightAuditdLogMonitorType")]
+    public class InitializeIntersightAuditdLogMonitorType : PSCmdlet
+    {
+        public InitializeIntersightAuditdLogMonitorType()
+        {
+            All = AuditdLogMonitorType.AllEnum.No;
+            AuthLogFiles = AuditdLogMonitorType.AuthLogFilesEnum.No;
+            ClassId = AuditdLogMonitorType.ClassIdEnum.AuditdLogMonitorType;
+            CronFiles = AuditdLogMonitorType.CronFilesEnum.No;
+            DnsClientFiles = AuditdLogMonitorType.DnsClientFilesEnum.No;
+            Docker = AuditdLogMonitorType.DockerEnum.No;
+            KernelModuleMgmt = AuditdLogMonitorType.KernelModuleMgmtEnum.No;
+            ObjectType = AuditdLogMonitorType.ObjectTypeEnum.AuditdLogMonitorType;
+            ProcessAudit = AuditdLogMonitorType.ProcessAuditEnum.No;
+            SystemLogFiles = AuditdLogMonitorType.SystemLogFilesEnum.No;
+            SystemLoginReboot = AuditdLogMonitorType.SystemLoginRebootEnum.No;
+            SystemSoftware = AuditdLogMonitorType.SystemSoftwareEnum.No;
+            SystemTimeChange = AuditdLogMonitorType.SystemTimeChangeEnum.No;
+            UserGroupConfigFiles = AuditdLogMonitorType.UserGroupConfigFilesEnum.No;
+            UserPrivilegeMgmt = AuditdLogMonitorType.UserPrivilegeMgmtEnum.No;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor all the log events.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.AllEnum All
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t auth log files changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.AuthLogFilesEnum AuthLogFiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t cron files changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.CronFilesEnum CronFiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t dns client files changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.DnsClientFilesEnum DnsClientFiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t Docker executions and file changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.DockerEnum Docker
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t kernel module files changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.KernelModuleMgmtEnum KernelModuleMgmt
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t process execution audit.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.ProcessAuditEnum ProcessAudit
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t system log files changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.SystemLogFilesEnum SystemLogFiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t system login reboot file changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.SystemLoginRebootEnum SystemLoginReboot
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t system software's binaries changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.SystemSoftwareEnum SystemSoftware
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t system time file changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.SystemTimeChangeEnum SystemTimeChange
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t User Group Config Files changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.UserGroupConfigFilesEnum UserGroupConfigFiles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"It can be configured to monitor log events only w.r.t User Privilege management file changes.\n* `no` - Value to disable the specific monitoring rule.\n* `yes` - Value to enable the specific monitoring rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public AuditdLogMonitorType.UserPrivilegeMgmtEnum UserPrivilegeMgmt
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.AuditdLogMonitorType initObject = new Intersight.Model.AuditdLogMonitorType();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("All"))
+            {
+                initObject.All = this.All;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AuthLogFiles"))
+            {
+                initObject.AuthLogFiles = this.AuthLogFiles;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CronFiles"))
+            {
+                initObject.CronFiles = this.CronFiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DnsClientFiles"))
+            {
+                initObject.DnsClientFiles = this.DnsClientFiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Docker"))
+            {
+                initObject.Docker = this.Docker;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("KernelModuleMgmt"))
+            {
+                initObject.KernelModuleMgmt = this.KernelModuleMgmt;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ProcessAudit"))
+            {
+                initObject.ProcessAudit = this.ProcessAudit;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SystemLogFiles"))
+            {
+                initObject.SystemLogFiles = this.SystemLogFiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SystemLoginReboot"))
+            {
+                initObject.SystemLoginReboot = this.SystemLoginReboot;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SystemSoftware"))
+            {
+                initObject.SystemSoftware = this.SystemSoftware;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SystemTimeChange"))
+            {
+                initObject.SystemTimeChange = this.SystemTimeChange;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserGroupConfigFiles"))
+            {
+                initObject.UserGroupConfigFiles = this.UserGroupConfigFiles;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserPrivilegeMgmt"))
+            {
+                initObject.UserPrivilegeMgmt = this.UserPrivilegeMgmt;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize AuditdPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightAuditdPolicy")]
@@ -67,6 +319,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
         public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Log monitor configuration for the AuditD feature."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AuditdLogMonitorType LogMonitor
         {
             get;
             set;
@@ -152,6 +414,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LogMonitor"))
+            {
+                initObject.LogMonitor = this.LogMonitor;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {

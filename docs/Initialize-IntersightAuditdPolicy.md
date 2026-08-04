@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightAuditdPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< AuditdPolicy.AdminStateEnum>][-AuditdLogLevel< AuditdPolicy.AuditdLogLevelEnum>][-ClassId< AuditdPolicy.ClassIdEnum>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< AuditdPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightAuditdPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< AuditdPolicy.AdminStateEnum>][-AuditdLogLevel< AuditdPolicy.AuditdLogLevelEnum>][-ClassId< AuditdPolicy.ClassIdEnum>][-Description< string>][-LogMonitor< Model.AuditdLogMonitorType>][-Moid< string>][-Name< string>][-ObjectType< AuditdPolicy.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[Model.FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -89,6 +89,23 @@ Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LogMonitor
+Log monitor configuration for the AuditD feature.
+
+Note :- Use Initialize-IntersightAuditdLogMonitorType to create the object of complex type AuditdLogMonitorType
+
+```yaml
+Type: Model.AuditdLogMonitorType
 Parameter Sets: (All)
 Aliases:
 
@@ -253,5 +270,7 @@ PS C:\> Initialize-IntersightAuditdPolicy
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightAuditdLogMonitorType](./Initialize-IntersightAuditdLogMonitorType.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricSwitchClusterProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedEntity< Model.MoBaseMoRelationship>][-ChassisAssignmentMode< FabricSwitchClusterProfile.ChassisAssignmentModeEnum>][-ChassisPreAssignBySerial< string>][-ClassId< FabricSwitchClusterProfile.ClassIdEnum>][-ClusterAssignments< System.Collections.Generic.List`1[Model.FabricClusterAssignment]>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchClusterProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-ScheduledChassisAssignment< Model.FabricChassisAssignment>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchProfiles< System.Collections.Generic.List`1[Model.FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< FabricSwitchClusterProfile.TargetPlatformEnum>][-Type< FabricSwitchClusterProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricSwitchClusterProfile [-Action< string>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssignedEntity< Model.MoBaseMoRelationship>][-ChassisAssignmentMode< FabricSwitchClusterProfile.ChassisAssignmentModeEnum>][-ChassisPreAssignBySerial< string>][-ClassId< FabricSwitchClusterProfile.ClassIdEnum>][-ClusterAssignments< System.Collections.Generic.List`1[Model.FabricClusterAssignment]>][-Description< string>][-Moid< string>][-Name< string>][-ObjectType< FabricSwitchClusterProfile.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-ScheduledChassisAssignment< Model.FabricChassisAssignment>][-SrcTemplate< Model.PolicyAbstractProfileRelationship>][-SwitchProfiles< System.Collections.Generic.List`1[Model.FabricSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TargetPlatform< FabricSwitchClusterProfile.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[Model.MotemplateActionEntry]>][-Type< FabricSwitchClusterProfile.TypeEnum>][-UserLabel< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -297,6 +297,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -TemplateActions
+
+
+Note :- Use Initialize-IntersightMotemplateActionEntry to create the object of complex type MotemplateActionEntry
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.MotemplateActionEntry]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Type
 Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target.
 
@@ -389,3 +406,5 @@ PS C:\> Initialize-IntersightFabricSwitchClusterProfile
 [Initialize-IntersightFabricClusterAssignment](./Initialize-IntersightFabricClusterAssignment.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)

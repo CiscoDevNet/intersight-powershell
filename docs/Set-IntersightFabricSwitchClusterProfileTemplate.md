@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricSwitchClusterProfileTemplate [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchProfileTemplates< System.Collections.Generic.List`1[FabricSwitchProfileTemplateRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchClusterProfileTemplate.TargetPlatformEnum>][-Type< FabricSwitchClusterProfileTemplate.TypeEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricSwitchClusterProfileTemplate [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Description< string>][-EnableOverride< bool>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-SrcTemplate< PolicyAbstractProfileRelationship>][-SwitchProfileTemplates< System.Collections.Generic.List`1[FabricSwitchProfileTemplateRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-TargetPlatform< FabricSwitchClusterProfileTemplate.TargetPlatformEnum>][-TemplateActions< System.Collections.Generic.List`1[MotemplateActionEntry]>][-Type< FabricSwitchClusterProfileTemplate.TypeEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,6 +43,21 @@ Description of the profile.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableOverride
+When enabled, the configuration of the derived instances may override the template configuration.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 
@@ -169,6 +184,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -TemplateActions
+
+
+Note :- Use Initialize-IntersightMotemplateActionEntry to create the object of complex type MotemplateActionEntry
+
+```yaml
+Type: System.Collections.Generic.List`1[MotemplateActionEntry]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Type
 Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target.
 
@@ -259,6 +291,8 @@ PS C:\> Set-IntersightFabricSwitchClusterProfileTemplate
 [Get-IntersightFabricSwitchClusterProfileTemplate](./Get-IntersightFabricSwitchClusterProfileTemplate.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
+
+[Initialize-IntersightMotemplateActionEntry](./Initialize-IntersightMotemplateActionEntry.md)
 
 [New-IntersightFabricSwitchClusterProfileTemplate](./New-IntersightFabricSwitchClusterProfileTemplate.md)
 

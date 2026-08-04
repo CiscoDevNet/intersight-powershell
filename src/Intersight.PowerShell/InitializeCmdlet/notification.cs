@@ -203,16 +203,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"When true, TLS with custom certificate validation is enabled for this webhook subscription. The\ncertificate relationship must be set to a TrustPoint when enableTls is true. Only applicable for\nwebhook-type subscriptions; used for appliance deployments with private CAs. When false or unset,\ndefault TLS behavior (public CA trust) is used. SaaS typically leaves this false or unset."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool EnableTls
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"Subscription can be switched on/off without necessity to change the subscription\nsettings: notification methods, conditions, etc.\nEx.: Subscription MO can be configured, but switched off."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -311,10 +301,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("EnableTls"))
-            {
-                initObject.EnableTls = this.EnableTls;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
             {
@@ -1109,6 +1095,119 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NotificationHttpHeader.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNotificationHttpHeader")]
+    public class InitializeIntersightNotificationHttpHeader : PSCmdlet
+    {
+        public InitializeIntersightNotificationHttpHeader()
+        {
+            ClassId = NotificationHttpHeader.ClassIdEnum.NotificationHttpHeader;
+            ObjectType = NotificationHttpHeader.ObjectTypeEnum.NotificationHttpHeader;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationHttpHeader.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The plaintext value of the HTTP header. Use this field when the header value\nis not sensitive. Used only when encrypt is false."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ClearTextValue
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When false (default), clearTextValue is attached to the outgoing request as-is.\nWhen true, encryptedValue is decrypted and attached to the outgoing request."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Encrypt
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The sensitive value of the HTTP header, stored encrypted. Use this field when\nthe header value is sensitive, for example an API key or token. Used only when\nencrypt is true. Not returned in GET API responses; use IsEncryptedValueSet to\ncheck whether a value has been set."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string EncryptedValue
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Name of the HTTP header, for example X-Custom-Header."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NotificationHttpHeader.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NotificationHttpHeader initObject = new Intersight.Model.NotificationHttpHeader();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ClearTextValue"))
+            {
+                initObject.ClearTextValue = this.ClearTextValue;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Encrypt"))
+            {
+                initObject.Encrypt = this.Encrypt;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EncryptedValue"))
+            {
+                initObject.EncryptedValue = this.EncryptedValue;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NotificationMoCondition.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNotificationMoCondition")]
@@ -1416,7 +1515,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The property name to filter on (e.g., HostName, Domain, \nServerProfile, Organization)."</para>
+        /// <para type="description">"The property name to filter on (e.g., HostName, Domain,\nServerProfile, Organization)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1505,11 +1604,21 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Criteria that preserves the UI entered filter query."</para>
+        /// <para type="description">"Simple single-predicate filter. Use either this or filterExpression, not both.\nCriteria that preserves the UI entered filter query."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public Model.NotificationSimpleFilter Filter
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Boolean expression of predicates. Use either this or filter, not both.\nWhen set, odataFilter is built by the server from this tree."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FilterexprFilterExpression FilterExpression
         {
             get;
             set;
@@ -1561,6 +1670,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Filter"))
             {
                 initObject.Filter = this.Filter;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("FilterExpression"))
+            {
+                initObject.FilterExpression = this.FilterExpression;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("MoType"))
             {
@@ -1711,11 +1824,41 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The credential used to authenticate webhook delivery requests. When set to a\nreal credential, the appropriate authentication header (Basic, Bearer, or Splunk)\nis attached to each outgoing notification. If not set or if\nasset.NoAuthenticationCredential is used, requests use HMAC-SHA256 via the secret\nfield when secret is set; otherwise the request is sent without Authorization\nsigning or headers."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.AssetCredential Authentication
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public NotificationTriggerWebhook.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When set to true on update, the HMAC shared secret is not carried over from the previous\nstored action when the request omits the write-only ``secret`` field. Use this to clear\nthe signing key without re-sending a secret value. When false or not set, the prior\nbehavior applies: the previous secret is preserved on PATCH if ``secret`` is omitted."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool ClearSecret
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.NotificationHttpHeader> CustomHeaders
         {
             get;
             set;
@@ -1731,7 +1874,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The secret is used to build the Authorization header, which will be attached to each webhook notification.\nBy this header developers of the webhooks servers can make sure that events are received from the trusted source - Intersight."</para>
+        /// <para type="description">"Prefer the Authentication property to configure how webhook deliveries are authenticated, including the Authorization header.\nThis field holds the shared secret used for HMAC-SHA256 signing when no credential is configured, and remains supported for existing integrations.\nBy this header developers of the webhooks servers can make sure that events are received from the trusted source - Intersight."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1759,7 +1902,19 @@ namespace Intersight.PowerShell
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Authentication"))
+            {
+                initObject.Authentication = this.Authentication;
+            }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ClearSecret"))
+            {
+                initObject.ClearSecret = this.ClearSecret;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CustomHeaders"))
+            {
+                initObject.CustomHeaders = this.CustomHeaders;
+            }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Secret"))
             {

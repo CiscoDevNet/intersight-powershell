@@ -1515,7 +1515,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Name of the certificate request."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
+        [ValidatePattern("^$|^[A-Za-z0-9]([^/\\\\.]*(\\.[^/\\\\.]+)*)?$")]
         public string Name
         {
             get;
@@ -1770,6 +1770,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Indicates whether the account has opted in to CUI identity synchronization."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool OptIn
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1794,6 +1804,10 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OptIn"))
+            {
+                initObject.OptIn = this.OptIn;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
@@ -1911,6 +1925,92 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamDefaultPermissionInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamDefaultPermissionInfo")]
+    public class InitializeIntersightIamDefaultPermissionInfo : PSCmdlet
+    {
+        public InitializeIntersightIamDefaultPermissionInfo()
+        {
+            ClassId = IamDefaultPermissionInfo.ClassIdEnum.IamDefaultPermissionInfo;
+            Interface = IamDefaultPermissionInfo.InterfaceEnum.All;
+            ObjectType = IamDefaultPermissionInfo.ObjectTypeEnum.IamDefaultPermissionInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamDefaultPermissionInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The shared login interface coverage for the stored default permission.\n* `All` - The stored default permission applies to all currently supported login interfaces."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamDefaultPermissionInfo.InterfaceEnum Interface
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamDefaultPermissionInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Reference to the selected default permission for the shared login interface coverage."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.MoMoRef Permission
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamDefaultPermissionInfo initObject = new Intersight.Model.IamDefaultPermissionInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Interface"))
+            {
+                initObject.Interface = this.Interface;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Permission"))
+            {
+                initObject.Permission = this.Permission;
             }
             WriteObject(initObject);
         }
@@ -3379,7 +3479,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The beta feature that will be enabled for specific account.\n* `IWO` - Intersight Workflow Optimizer.\n* `Hitachi` - Support to claim Hitachi Storage arrays using the Intersight Orchestrator framework.\n* `KubernetesExtension` - Extension to the IKS and Adopted Clusters.\n* `NetAppIO` - Support to claim NetApp Storage arrays as IO targets.\n* `IvsPublicCloud` - Enables virtualization service for public clouds.\n* `TerraformCloud` - Enables an ability to create Terraform Cloud.\n* `WashingtonEFT` - Support for EFT customers to use Washington firmware images for upgrades.\n* `Solutions` - Support for managing solutions.\n* `IksBm` - Enables Intersight Kubernetes Service on Baremetal server.\n* `NexusCloud` - Enables Nexus Cloud services functionality.\n* `NexusCloudTrial` - Enables Nexus Cloud trial period.\n* `NexusCloudUpgradeAssist` - Enables Nexus Cloud upgrade assist.\n* `NexusCloudSustainability` - Enables Nexus Cloud sustainability.\n* `PlatformUIRefresh` - Enables platform refreshed UI with new service launcher.\n* `IksGpu` - Enables GPU support for Intersight Kubernetes Service.\n* `IwoAppServiceVerticalScaling` - Enables vertical Scaling of App Service Plans.\n* `IwoDataExporter` - Enables IWO Data Exporter component.\n* `IwoMigrate` - Enables IWO data Migration.\n* `NexusCloudTechPreviewGold` - Enable Nexus Cloud Preview of stable features, available for public consumption.\n* `NexusCloudTechPreviewSilver` - Enable Nexus Cloud Preview of beta features. This feature set is intended for consumption by internal audiences.\n* `NexusCloudTechPreviewBronze` - Enable Nexus Cloud Preview of features still in development. This feature set is intended for consumption by internal audiences.\n* `DisconnectedTargetAlarm` - Raise an alarm when a Target is disconnected from Intersight. Intersight is unable to manage disconnected Targets.\n* `AsAService` - Enable AsAService Preview of beta features. This feature set is intended for consumption by selective audiences.\n* `EMEA` - Enable all avaialble features on Intersight EMEA region.\n* `CrossPlatformNavigation` - Enable Cross-Platform Navigation on UI.\n* `WorkflowsPreview` - Enable Workflows preview for this account.\n* `WorkflowsIntersightAssets` - Enable workflow Intersight assets for this account.\n* `ManualKEKSupport` - Enable support for Manual key to enhance storage controller security for this account.\n* `FirmwareConsolidationEFT` - Enable usage of firmware images transitioned from CCO to Intersight. This feature set is intended for consumption by internal audiences.\n* `FunctionAsAService` - Enable the usage of the function as a service (faas) for Workflows. This feature set is intended for consumption by selective audiences.\n* `FI6664EFT` - Support for EFT customers to use FI-6664 in Port Policy.\n* `GranularPrivilegeSets` - Enable granular privilege sets for this account.\n* `UnifiedEdge` - Enable Unified Edge related features for Avatar Platform.\n* `Goldeneye` - Enable Goldeneye related features.\n* `FI6652EFT` - Support for EFT customers to use FI-6652 in Port Policy.\n* `BackupAndRestore` - Enable Backup and Restore functionality for this account.\n* `CUIIntegration` - Enables Cisco Unified Identity (CUI) integration for Intersight accounts. With this flag, customers access their accounts using the intersight.com/cui URI and CUI IdP. Standard CCI or SSO login flows remain available during the transition period. Cisco Cloud Control customers must use /cui to create new accounts or contact Product Management to enable this feature to existing accounts, to use Cisco Cloud Control and Cisco Unified Identity."</para>
+        /// <para type="description">"The beta feature that will be enabled for specific account.\n* `IWO` - Intersight Workflow Optimizer.\n* `Hitachi` - Support to claim Hitachi Storage arrays using the Intersight Orchestrator framework.\n* `KubernetesExtension` - Extension to the IKS and Adopted Clusters.\n* `NetAppIO` - Support to claim NetApp Storage arrays as IO targets.\n* `IvsPublicCloud` - Enables virtualization service for public clouds.\n* `TerraformCloud` - Enables an ability to create Terraform Cloud.\n* `WashingtonEFT` - Support for EFT customers to use Washington firmware images for upgrades.\n* `Solutions` - Support for managing solutions.\n* `IksBm` - Enables Intersight Kubernetes Service on Baremetal server.\n* `NexusCloud` - Enables Nexus Cloud services functionality.\n* `NexusCloudTrial` - Enables Nexus Cloud trial period.\n* `NexusCloudUpgradeAssist` - Enables Nexus Cloud upgrade assist.\n* `NexusCloudSustainability` - Enables Nexus Cloud sustainability.\n* `PlatformUIRefresh` - Enables platform refreshed UI with new service launcher.\n* `IksGpu` - Enables GPU support for Intersight Kubernetes Service.\n* `IwoAppServiceVerticalScaling` - Enables vertical Scaling of App Service Plans.\n* `IwoDataExporter` - Enables IWO Data Exporter component.\n* `IwoMigrate` - Enables IWO data Migration.\n* `NexusCloudTechPreviewGold` - Enable Nexus Cloud Preview of stable features, available for public consumption.\n* `NexusCloudTechPreviewSilver` - Enable Nexus Cloud Preview of beta features. This feature set is intended for consumption by internal audiences.\n* `NexusCloudTechPreviewBronze` - Enable Nexus Cloud Preview of features still in development. This feature set is intended for consumption by internal audiences.\n* `DisconnectedTargetAlarm` - Raise an alarm when a Target is disconnected from Intersight. Intersight is unable to manage disconnected Targets.\n* `AsAService` - Enable AsAService Preview of beta features. This feature set is intended for consumption by selective audiences.\n* `EMEA` - Enable all avaialble features on Intersight EMEA region.\n* `CrossPlatformNavigation` - Enable Cross-Platform Navigation on UI.\n* `WorkflowsPreview` - Enable Workflows preview for this account.\n* `WorkflowsIntersightAssets` - Enable workflow Intersight assets for this account.\n* `ManualKEKSupport` - Enable support for Manual key to enhance storage controller security for this account.\n* `FirmwareConsolidationEFT` - Enable usage of firmware images transitioned from CCO to Intersight. This feature set is intended for consumption by internal audiences.\n* `FunctionAsAService` - Enable the usage of the function as a service (faas) for Workflows. This feature set is intended for consumption by selective audiences.\n* `FI6664EFT` - Support for EFT customers to use FI-6664 in Port Policy.\n* `GranularPrivilegeSets` - Enable granular privilege sets for this account.\n* `UnifiedEdge` - Enable Unified Edge related features for Avatar Platform.\n* `Goldeneye` - Enable Goldeneye related features.\n* `FI6652EFT` - Support for EFT customers to use FI-6652 in Port Policy.\n* `BackupAndRestore` - Enable Backup and Restore functionality for this account.\n* `CUIIntegration` - Enables Cisco Unified Identity (CUI) integration for Intersight accounts. With this flag, customers access their accounts using the intersight.com/cui URI and CUI IdP. Standard CCI or SSO login flows remain available during the transition period. Cisco Cloud Control customers must use /cui to create new accounts or contact Product Management to enable this feature to existing accounts, to use Cisco Cloud Control and Cisco Unified Identity.\n* `UnifiedEdgeSRN` - Enable Unified Edge Secure Router Node related features for Avatar Platform."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -4200,7 +4300,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Base Distinguished Name (DN). Starting point from where server will search for users and groups."</para>
+        /// <para type="description">"Base Distinguished Name (DN), the starting point for searching users and groups."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -4210,7 +4310,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Distinguished Name (DN) of the user, that is used to authenticate against LDAP servers."</para>
+        /// <para type="description">"Distinguished Name (DN) used to authenticate against LDAP servers."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -4250,7 +4350,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"If enabled, the endpoint encrypts all information it sends to the LDAP server."</para>
+        /// <para type="description">"If enabled, the endpoint encrypts all information sent to the LDAP server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -4270,7 +4370,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"If enabled, an extended search walks the chain of ancestry all the way to the root and returns all the groups and subgroups, each of those groups belong to recursively."</para>
+        /// <para type="description">"If enabled, an extended search walks the ancestry chain to the root and returns all groups and subgroups recursively."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -4320,7 +4420,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The password of the user for initial bind process. It can be any string that adheres to the following constraints. It can have character except spaces, tabs, line breaks. It cannot be more than 254 characters."</para>
+        /// <para type="description">"The password for the initial bind process. Must not contain spaces, tabs, or line breaks, and cannot exceed 254 characters."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^[\\S+]{0,254}$")]
@@ -4335,6 +4435,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long Timeout
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> UserSearchAttribute
         {
             get;
             set;
@@ -4401,6 +4511,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Timeout"))
             {
                 initObject.Timeout = this.Timeout;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserSearchAttribute"))
+            {
+                initObject.UserSearchAttribute = this.UserSearchAttribute;
             }
             WriteObject(initObject);
         }
@@ -5357,7 +5471,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"LDAP Server Address, can be IP address or hostname."</para>
+        /// <para type="description">"LDAP Server Address, such as an IP address or hostname."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -5593,16 +5707,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"User's current valid password."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public byte[] Password
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -5639,10 +5743,6 @@ namespace Intersight.PowerShell
                 initObject.NewPassword = this.NewPassword;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("Password"))
-            {
-                initObject.Password = this.Password;
-            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
@@ -5694,7 +5794,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Seconds are tracked for consecutive incorrect login attempts. Users will be locked out if they exceed the max number of incorrect login attempts during this duration."</para>
+        /// <para type="description">"The duration, in seconds, within which consecutive incorrect login attempts are counted. The system locks out the account if the number of incorrect attempts exceeds the maximum allowed value during this window."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(300, 3600)]
@@ -5709,6 +5809,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidateRange(60, 3600)]
         public long LockOutTimePeriod
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Maximum number of days a password can be used before it must be changed. Set to 0 to disable password expiration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long MaxDaysAllowedWithSamePassword
         {
             get;
             set;
@@ -5854,6 +5964,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("LockOutTimePeriod"))
             {
                 initObject.LockOutTimePeriod = this.LockOutTimePeriod;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("MaxDaysAllowedWithSamePassword"))
+            {
+                initObject.MaxDaysAllowedWithSamePassword = this.MaxDaysAllowedWithSamePassword;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("MaxFailedLoginsAllowed"))
             {
@@ -9852,6 +9966,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.IamDefaultPermissionInfo> DefaultPermission
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9895,6 +10019,10 @@ namespace Intersight.PowerShell
                 initObject.AllowUiSessionRecording = this.AllowUiSessionRecording;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DefaultPermission"))
+            {
+                initObject.DefaultPermission = this.DefaultPermission;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;

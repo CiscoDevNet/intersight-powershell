@@ -1169,7 +1169,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one."</para>
+        /// <para type="description">"Updated by UI/API to trigger specific action type.\n* `None` - No operation value for maintenance actions on an equipment.\n* `Decommission` - Decommission the equipment and temporarily remove it from being managed by Intersight.\n* `Recommission` - Recommission the equipment.\n* `Reack` - Reacknowledge the equipment and discover it again.\n* `Remove` - Remove the equipment permanently from Intersight management.\n* `Replace` - Replace the equipment with the other one.\n* `DecommissionAndRemove` - Decommissions the equipment and upon equipment physical removal, removes it automatically from Intersight."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -4535,6 +4535,77 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricLldpGlobalSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricLldpGlobalSettings")]
+    public class InitializeIntersightFabricLldpGlobalSettings : PSCmdlet
+    {
+        public InitializeIntersightFabricLldpGlobalSettings()
+        {
+            ClassId = FabricLldpGlobalSettings.ClassIdEnum.FabricLldpGlobalSettings;
+            ObjectType = FabricLldpGlobalSettings.ObjectTypeEnum.FabricLldpGlobalSettings;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricLldpGlobalSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Determines if the LLDP frames can be sent or received on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricLldpGlobalSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricLldpGlobalSettings initObject = new Intersight.Model.FabricLldpGlobalSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricLldpSettings.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricLldpSettings")]
@@ -7643,6 +7714,133 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricSecureRouterRole.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricSecureRouterRole")]
+    public class InitializeIntersightFabricSecureRouterRole : PSCmdlet
+    {
+        public InitializeIntersightFabricSecureRouterRole()
+        {
+            ClassId = FabricSecureRouterRole.ClassIdEnum.FabricSecureRouterRole;
+            ObjectType = FabricSecureRouterRole.ObjectTypeEnum.FabricSecureRouterRole;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSecureRouterRole.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricEthNetworkGroupPolicy resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FabricEthNetworkGroupPolicyRelationship> EthNetworkGroupPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Chassis slot identifier where the node is physically installed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 5)]
+        public long NodeSlotId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSecureRouterRole.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricPortPolicy resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricPortPolicyRelationship PortPolicy
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricSecureRouterRole initObject = new Intersight.Model.FabricSecureRouterRole();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("EthNetworkGroupPolicy"))
+            {
+                initObject.EthNetworkGroupPolicy = this.EthNetworkGroupPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NodeSlotId"))
+            {
+                initObject.NodeSlotId = this.NodeSlotId;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PortPolicy"))
+            {
+                initObject.PortPolicy = this.PortPolicy;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricServerRole.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricServerRole")]
@@ -8780,6 +8978,78 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricStpGlobalSettings.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricStpGlobalSettings")]
+    public class InitializeIntersightFabricStpGlobalSettings : PSCmdlet
+    {
+        public InitializeIntersightFabricStpGlobalSettings()
+        {
+            ClassId = FabricStpGlobalSettings.ClassIdEnum.FabricStpGlobalSettings;
+            ObjectType = FabricStpGlobalSettings.ObjectTypeEnum.FabricStpGlobalSettings;
+            StpMode = FabricStpGlobalSettings.StpModeEnum.Disabled;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricStpGlobalSettings.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricStpGlobalSettings.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Spanning Tree Protocol (STP) mode determines the specific version of STP that is used to prevent loops in a network topology.\n* `Disabled` - Spanning Tree Protocol is disabled, and the switch does not participate in STP calculations or operations.\n* `RPVST+` - Rapid Per-VLAN Spanning Tree (RPVST) is a Cisco proprietary protocol that improves STP by providing faster convergence and creating a separate spanning tree for each VLAN, enhancing network performance and redundancy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricStpGlobalSettings.StpModeEnum StpMode
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricStpGlobalSettings initObject = new Intersight.Model.FabricStpGlobalSettings();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("StpMode"))
+            {
+                initObject.StpMode = this.StpMode;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricSwitchAssignment.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricSwitchAssignment")]
@@ -9050,6 +9320,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9136,6 +9416,10 @@ namespace Intersight.PowerShell
             {
                 initObject.TargetPlatform = this.TargetPlatform;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
                 initObject.Type = this.Type;
@@ -9188,6 +9472,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
         public string Description
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"When enabled, the configuration of the derived instances may override the template configuration."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableOverride
         {
             get;
             set;
@@ -9273,6 +9567,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MotemplateActionEntry> TemplateActions
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Defines the type of the profile. Accepted values are instance or template.\n* `instance` - The profile defines the configuration for a specific instance of a target."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9295,6 +9599,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableOverride"))
+            {
+                initObject.EnableOverride = this.EnableOverride;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
@@ -9324,6 +9632,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("TargetPlatform"))
             {
                 initObject.TargetPlatform = this.TargetPlatform;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TemplateActions"))
+            {
+                initObject.TemplateActions = this.TemplateActions;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Type"))
             {
@@ -9430,6 +9742,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"LLDP Global configurations for this switch. LLDP Global Configuration is supported on Unified Edge platform only, and will be ignored for other platforms."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricLldpGlobalSettings LldpSettings
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"This specifies the MAC aging option and time settings."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9510,6 +9832,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"This specifies the Spanning Tree Protocol global configurations for this switch. STP global configuration is supported on Unified Edge platform only, and will be ignored for other platforms."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricStpGlobalSettings StpSettings
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9583,6 +9915,10 @@ namespace Intersight.PowerShell
             {
                 initObject.FcSwitchingMode = this.FcSwitchingMode;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("LldpSettings"))
+            {
+                initObject.LldpSettings = this.LldpSettings;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("MacAgingSettings"))
             {
                 initObject.MacAgingSettings = this.MacAgingSettings;
@@ -9611,6 +9947,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ReservedVlanStartId"))
             {
                 initObject.ReservedVlanStartId = this.ReservedVlanStartId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StpSettings"))
+            {
+                initObject.StpSettings = this.StpSettings;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {

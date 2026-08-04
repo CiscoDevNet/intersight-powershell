@@ -57,6 +57,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"When true, MO change events for this type include the previous (old) value of each modified field alongside the new value, so consumers (e.g. post-processing services) can see both. Implemented by enabling MongoDB change stream pre-image snapshots for the collection."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool EnablePreviousMo
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"Boolean flag to specify whether the meta class is a concrete class or not."</para>

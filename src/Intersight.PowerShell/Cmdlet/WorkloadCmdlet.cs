@@ -993,7 +993,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The prefix to be used for naming workload instances created by this deployment. Prefix can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), or an underscore (_). This prefix must be unique within the organization."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^[a-zA-Z0-9][a-zA-Z0-9-_]{0,31}$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9][a-zA-Z0-9-_]{0,31}$")]
         public string WorkloadInstancePrefix
         {
             get;
@@ -2145,7 +2145,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The prefix to be used for naming workload instances created by this deployment. Prefix can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), or an underscore (_). This prefix must be unique within the organization."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9][a-zA-Z0-9-_]{0,31}$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9][a-zA-Z0-9-_]{0,31}$")]
         public string WorkloadInstancePrefix
         {
             get;
@@ -2844,7 +2844,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The prefix to be used for naming workload instances created by this deployment. Prefix can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), or an underscore (_). This prefix must be unique within the organization."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^[a-zA-Z0-9][a-zA-Z0-9-_]{0,31}$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9][a-zA-Z0-9-_]{0,31}$")]
         public string WorkloadInstancePrefix
         {
             get;

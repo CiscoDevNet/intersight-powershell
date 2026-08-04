@@ -292,6 +292,46 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The IPv6 address of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InbandIpv6Address
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The default IPv6 gateway of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InbandIpv6Gateway
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The network mask of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InbandIpv6Prefix
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The MAC address of the network Element inband management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string InbandMac
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The management mode of the fabric interconnect.\n* `IntersightStandalone` - Intersight Standalone mode of operation.\n* `UCSM` - Unified Computing System Manager mode of operation.\n* `Intersight` - Intersight managed mode of operation."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -502,6 +542,22 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("FaultSummary"))
             {
                 initObject.FaultSummary = this.FaultSummary;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InbandIpv6Address"))
+            {
+                initObject.InbandIpv6Address = this.InbandIpv6Address;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InbandIpv6Gateway"))
+            {
+                initObject.InbandIpv6Gateway = this.InbandIpv6Gateway;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InbandIpv6Prefix"))
+            {
+                initObject.InbandIpv6Prefix = this.InbandIpv6Prefix;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InbandMac"))
+            {
+                initObject.InbandMac = this.InbandMac;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("ManagementMode"))
             {
@@ -1275,6 +1331,277 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Vendor"))
             {
                 initObject.Vendor = this.Vendor;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkSecureRouter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkSecureRouter")]
+    public class InitializeIntersightNetworkSecureRouter : PSCmdlet
+    {
+        public InitializeIntersightNetworkSecureRouter()
+        {
+            ClassId = NetworkSecureRouter.ClassIdEnum.NetworkSecureRouter;
+            ObjectType = NetworkSecureRouter.ObjectTypeEnum.NetworkSecureRouter;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkSecureRouter.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkSecureRouter.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The user defined label assigned to the secure router."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^[ !#$%&\\(\\)\\*\\+,\\-\\./:;\\?@\\[\\]_\\{\\|\\}~a-zA-Z0-9]*$")]
+        public string UserLabel
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NetworkSecureRouter initObject = new Intersight.Model.NetworkSecureRouter();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("UserLabel"))
+            {
+                initObject.UserLabel = this.UserLabel;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkSecureRouterInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkSecureRouterInfo")]
+    public class InitializeIntersightNetworkSecureRouterInfo : PSCmdlet
+    {
+        public InitializeIntersightNetworkSecureRouterInfo()
+        {
+            ClassId = NetworkSecureRouterInfo.ClassIdEnum.NetworkSecureRouterInfo;
+            ObjectType = NetworkSecureRouterInfo.ObjectTypeEnum.NetworkSecureRouterInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkSecureRouterInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkSecureRouterInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NetworkSecureRouterInfo initObject = new Intersight.Model.NetworkSecureRouterInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NetworkSecureRouterSetting.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNetworkSecureRouterSetting")]
+    public class InitializeIntersightNetworkSecureRouterSetting : PSCmdlet
+    {
+        public InitializeIntersightNetworkSecureRouterSetting()
+        {
+            AdminAction = NetworkSecureRouterSetting.AdminActionEnum.None;
+            AdminLocatorLedState = NetworkSecureRouterSetting.AdminLocatorLedStateEnum.None;
+            ClassId = NetworkSecureRouterSetting.ClassIdEnum.NetworkSecureRouterSetting;
+            ObjectType = NetworkSecureRouterSetting.ObjectTypeEnum.NetworkSecureRouterSetting;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User configured action on the Secure Router.\n* `None` - Placeholder default value for Secure Router admin state property.\n* `Reboot` - Secure Router reboot state property value."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkSecureRouterSetting.AdminActionEnum AdminAction
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"User configured state of the locator LED for the PCIe Node.\n* `None` - No operation property for locator led.\n* `On` - The Locator Led is turned on.\n* `Off` - The Locator Led is turned off."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkSecureRouterSetting.AdminLocatorLedStateEnum AdminLocatorLedState
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkSecureRouterSetting.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkSecureRouterSetting.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NetworkSecureRouterSetting initObject = new Intersight.Model.NetworkSecureRouterSetting();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminAction"))
+            {
+                initObject.AdminAction = this.AdminAction;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdminLocatorLedState"))
+            {
+                initObject.AdminLocatorLedState = this.AdminLocatorLedState;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
             }
             WriteObject(initObject);
         }

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightAuditdPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< AuditdPolicy.AdminStateEnum>][-AuditdLogLevel< AuditdPolicy.AuditdLogLevelEnum>][-Description< string>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightAuditdPolicy [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< AuditdPolicy.AdminStateEnum>][-AuditdLogLevel< AuditdPolicy.AuditdLogLevelEnum>][-Description< string>][-LogMonitor< AuditdLogMonitorType>][[-Moid]< string>][-Name< string>][-Organization< OrganizationOrganizationRelationship>][-Profiles< System.Collections.Generic.List`1[FabricBaseSwitchProfileRelationship]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -73,6 +73,23 @@ Description of the policy.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -LogMonitor
+Log monitor configuration for the AuditD feature.
+
+Note :- Use Initialize-IntersightAuditdLogMonitorType to create the object of complex type AuditdLogMonitorType
+
+```yaml
+Type: AuditdLogMonitorType
 Parameter Sets: (All)
 Aliases:
 
@@ -239,6 +256,8 @@ PS C:\> Set-IntersightAuditdPolicy
 ## RELATED LINKS
 
 [Get-IntersightAuditdPolicy](./Get-IntersightAuditdPolicy.md)
+
+[Initialize-IntersightAuditdLogMonitorType](./Initialize-IntersightAuditdLogMonitorType.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

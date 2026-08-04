@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightFirmwareUpgradeImpact [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Chassis< System.Collections.Generic.List`1[EquipmentChassisRelationship]>][-Components< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ComponentsEnum]>][-ComputationState< FirmwareUpgradeImpact.ComputationStateEnum>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ExcludeComponentListEnum]>][-ExcludeComponents< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ExcludeComponentsEnum]>][-Impacts< System.Collections.Generic.List`1[FirmwareBaseImpact]>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[NetworkElementRelationship]>][-PciNode< System.Collections.Generic.List`1[PciNodeRelationship]>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< System.Collections.Generic.List`1[ComputePhysicalRelationship]>][-Summary< FirmwareUpgradeImpact.SummaryEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-XfmUpgradeOption< FirmwareUpgradeImpact.XfmUpgradeOptionEnum>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightFirmwareUpgradeImpact [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Chassis< System.Collections.Generic.List`1[EquipmentChassisRelationship]>][-Components< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ComponentsEnum]>][-ComputationState< FirmwareUpgradeImpact.ComputationStateEnum>][-Distributable< FirmwareDistributableRelationship>][-ExcludeComponentList< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ExcludeComponentListEnum]>][-ExcludeComponents< System.Collections.Generic.List`1[FirmwareUpgradeImpact.ExcludeComponentsEnum]>][-Impacts< System.Collections.Generic.List`1[FirmwareBaseImpact]>][-Moid< string>][-NetworkElements< System.Collections.Generic.List`1[NetworkElementRelationship]>][-NetworkSecureRouter< System.Collections.Generic.List`1[NetworkSecureRouterRelationship]>][-PciNode< System.Collections.Generic.List`1[PciNodeRelationship]>][-Release< SoftwarerepositoryReleaseRelationship>][-Server< System.Collections.Generic.List`1[ComputePhysicalRelationship]>][-Summary< FirmwareUpgradeImpact.SummaryEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-XfmUpgradeOption< FirmwareUpgradeImpact.XfmUpgradeOptionEnum>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -174,6 +174,24 @@ or use the cmdlet Initialize-IntersightMoMoRef.
 
 ```yaml
 Type: System.Collections.Generic.List`1[NetworkElementRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -NetworkSecureRouter
+An array of relationships to networkSecureRouter resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[NetworkSecureRouterRelationship]
 Parameter Sets: (All)
 Aliases:
 

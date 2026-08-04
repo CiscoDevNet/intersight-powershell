@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamLdapBaseProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Attribute< string>][-BaseDn< string>][-BindDn< string>][-BindMethod< IamLdapBaseProperties.BindMethodEnum>][-ClassId< IamLdapBaseProperties.ClassIdEnum>][-Domain< string>][-EnableEncryption< bool>][-EnableGroupAuthorization< bool>][-EnableNestedGroupSearch< bool>][-Filter< string>][-GroupAttribute< string>][-NestedGroupSearchDepth< long>][-ObjectType< IamLdapBaseProperties.ObjectTypeEnum>][-Password< string>][-Timeout< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamLdapBaseProperties [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Attribute< string>][-BaseDn< string>][-BindDn< string>][-BindMethod< IamLdapBaseProperties.BindMethodEnum>][-ClassId< IamLdapBaseProperties.ClassIdEnum>][-Domain< string>][-EnableEncryption< bool>][-EnableGroupAuthorization< bool>][-EnableNestedGroupSearch< bool>][-Filter< string>][-GroupAttribute< string>][-NestedGroupSearchDepth< long>][-ObjectType< IamLdapBaseProperties.ObjectTypeEnum>][-Password< string>][-Timeout< long>][-UserSearchAttribute< System.Collections.Generic.List`1[string]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -BaseDn
-Base Distinguished Name (DN). Starting point from where server will search for users and groups.
+Base Distinguished Name (DN), the starting point for searching users and groups.
 
 ```yaml
 Type: string
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 ```
 
 ### -BindDn
-Distinguished Name (DN) of the user, that is used to authenticate against LDAP servers.
+Distinguished Name (DN) used to authenticate against LDAP servers.
 
 ```yaml
 Type: string
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEncryption
-If enabled, the endpoint encrypts all information it sends to the LDAP server.
+If enabled, the endpoint encrypts all information sent to the LDAP server.
 
 ```yaml
 Type: bool
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableNestedGroupSearch
-If enabled, an extended search walks the chain of ancestry all the way to the root and returns all the groups and subgroups, each of those groups belong to recursively.
+If enabled, an extended search walks the ancestry chain to the root and returns all groups and subgroups recursively.
 
 ```yaml
 Type: bool
@@ -235,7 +235,7 @@ Accept wildcard characters: False
 ```
 
 ### -Password
-The password of the user for initial bind process. It can be any string that adheres to the following constraints. It can have character except spaces, tabs, line breaks. It cannot be more than 254 characters.
+The password for the initial bind process. Must not contain spaces, tabs, or line breaks, and cannot exceed 254 characters.
 
 ```yaml
 Type: string
@@ -254,6 +254,21 @@ LDAP authentication timeout duration, in seconds.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -UserSearchAttribute
+
+
+```yaml
+Type: System.Collections.Generic.List`1[string]
 Parameter Sets: (All)
 Aliases:
 

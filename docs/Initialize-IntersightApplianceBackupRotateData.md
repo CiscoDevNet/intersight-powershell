@@ -100,7 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Communication protocol used by the file server (e.g. scp, sftp, or CIFS).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.
+Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.
 
 ```yaml
 Type: ApplianceBackupRotateData.ProtocolEnum
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteHost
-Hostname of the remote file server.
+Hostname of the remote file server. Not required when protocol is local.
 
 ```yaml
 Type: string
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePath
-File server directory or share name to copy the file.
+File server directory or share name to copy the file. Not required when protocol is local.
 
 ```yaml
 Type: string
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemotePort
-Remote TCP port on the file server (e.g. 22 for scp).
+Remote TCP port on the file server (e.g. 22 for scp). Not required when protocol is local.
 
 ```yaml
 Type: long
@@ -177,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -Username
-Username to authenticate the fileserver.
+Username to authenticate the fileserver. Not required when protocol is local.
 
 ```yaml
 Type: string

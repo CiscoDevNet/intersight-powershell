@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -DynamicRebalancing
-Sets the dynamic power rebalancing mode of the chassis. If enabled, this mode allows the chassis to dynamically reallocate the power between servers depending on their power usage.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+Sets the dynamic power rebalancing mode of the chassis. If enabled, this mode allows the chassis to dynamically reallocate the power between servers depending on their power usage.\n* `Enabled` - The power group is administratively enabled.\n* `Disabled` - The power group is administratively disabled.
 
 ```yaml
 Type: PowerPolicy.DynamicRebalancingEnum
@@ -84,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -ExtendedPowerCapacity
-Sets the Extended Power Capacity of the Chassis. If Enabled, this mode allows chassis available power to be increased by borrowing power from redundant power supplies.  This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+Sets the Extended Power Capacity of the Chassis. If Enabled, this mode allows chassis available power to be increased by borrowing power from redundant power supplies.  This option is only supported for Cisco UCS X series Chassis.\n* `Enabled` - The power group is administratively enabled.\n* `Disabled` - The power group is administratively disabled.
 
 ```yaml
 Type: PowerPolicy.ExtendedPowerCapacityEnum
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerProfiling
-Sets the Power Profiling of the Server. If Enabled, this field allows the power manager to run power profiling  utility to determine the power needs of the server.  This field is only supported for Cisco UCS X series servers.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+Sets the Power Profiling of the Server. If Enabled, this field allows the power manager to run power profiling  utility to determine the power needs of the server.  This field is only supported for Cisco UCS X series servers.\n* `Enabled` - The power group is administratively enabled.\n* `Disabled` - The power group is administratively disabled.
 
 ```yaml
 Type: PowerPolicy.PowerProfilingEnum
@@ -192,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -PowerSaveMode
-Sets the power save mode of the chassis. If the requested power budget is less than available power capacity,  the additional PSUs not required to comply with redundancy policy are placed in power save mode.\n* `Enabled` - Set the value to Enabled.\n* `Disabled` - Set the value to Disabled.
+Sets the power save mode of the chassis. If the requested power budget is less than available power capacity,  the additional PSUs not required to comply with redundancy policy are placed in power save mode.\n* `Enabled` - The power group is administratively enabled.\n* `Disabled` - The power group is administratively disabled.
 
 ```yaml
 Type: PowerPolicy.PowerSaveModeEnum

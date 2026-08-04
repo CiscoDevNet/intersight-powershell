@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamUserSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowUiSessionRecording< bool>][-ClassId< IamUserSetting.ClassIdEnum>][-Moid< string>][-ObjectType< IamUserSetting.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamUserSetting [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowUiSessionRecording< bool>][-ClassId< IamUserSetting.ClassIdEnum>][-DefaultPermission< System.Collections.Generic.List`1[Model.IamDefaultPermissionInfo]>][-Moid< string>][-ObjectType< IamUserSetting.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -59,6 +59,23 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: IamUserSetting.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DefaultPermission
+
+
+Note :- Use Initialize-IntersightIamDefaultPermissionInfo to create the object of complex type IamDefaultPermissionInfo
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.IamDefaultPermissionInfo]
 Parameter Sets: (All)
 Aliases:
 
@@ -172,5 +189,7 @@ PS C:\> Initialize-IntersightIamUserSetting
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightIamDefaultPermissionInfo](./Initialize-IntersightIamDefaultPermissionInfo.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
