@@ -932,6 +932,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Indicates whether the value of the 'userPassword' property has been set."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool IsUserPasswordSet
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -2685,6 +2696,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -3500,6 +3512,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
@@ -3568,7 +3581,7 @@ namespace Intersight.PowerShell
         // <summary>
         /// <para type="description">"The password provided by the user to decrypt a password encrypted backup file during import operation. \nThis password is used to decrypt the backup archive before validation when importing a password encrypted backup.\nThis field is optional and only required when importing a password encrypted backup file."</para>
         /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
         [ValidatePattern("^$|^[a-zA-Z0-9=!&#$%+^@_*-]{8,127}$")]
         public string UserPassword
         {

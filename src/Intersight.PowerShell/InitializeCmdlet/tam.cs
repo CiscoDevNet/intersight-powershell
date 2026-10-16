@@ -682,7 +682,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Current state of the advisory for the owner. Indicates if the user is interested in getting updates for the advisory.\n* `active` - Advisory is currently active and the user wants to receive updates for this advisory.\n* `acknowledged` - Advisory is seen and acknowledged by the user and she no longer wants to recieve updates."</para>
+        /// <para type="description">"Current state of the advisory for the owner. Indicates if the user is interested in getting updates for the advisory. Because a record is usually created only when an advisory is acknowledged, the absence of an AdvisoryInfo record for an advisory means it is unacknowledged; this value is most reliably used to collect the acknowledged advisories ('acknowledged'), which can then be excluded from the impacting advisories in tam.AdvisoryInstance. An 'acknowledged' record may also be stale - it can remain after the advisory no longer impacts the account - so to report acknowledged advisories that still apply, intersect this acknowledged set with tam.AdvisoryInstance.\n* `active` - Advisory is currently active and the user wants to receive updates for this advisory.\n* `acknowledged` - Advisory is seen and acknowledged by the user and she no longer wants to recieve updates."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -836,7 +836,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Current state of the advisory instance (Active/Cleared/Unknown etc.).\n* `unknown` - Intersight is unable to determine if the Advisory instance is applicable for the affected managed object.\n* `active` - Advisory instance is currently active and applicable for the affected managed object.\n* `cleared` - Advisory instance is no longer applicable for the affected managed object."</para>
+        /// <para type="description">"Deprecated and retained only for backward compatibility. This field is effectively always 'unknown' and does not reflect whether the advisory currently applies to the affected object. The existence of an AdvisoryInstance record is itself what denotes an applicable, current advisory impact, independent of this value.\n* `unknown` - Intersight is unable to determine if the Advisory instance is applicable for the affected managed object.\n* `active` - Advisory instance is currently active and applicable for the affected managed object.\n* `cleared` - Advisory instance is no longer applicable for the affected managed object."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

@@ -8,6 +8,105 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CatalystsdwanChassisIdentifier.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCatalystsdwanChassisIdentifier")]
+    public class InitializeIntersightCatalystsdwanChassisIdentifier : PSCmdlet
+    {
+        public InitializeIntersightCatalystsdwanChassisIdentifier()
+        {
+            ClassId = CatalystsdwanChassisIdentifier.ClassIdEnum.CatalystsdwanChassisIdentifier;
+            ObjectType = CatalystsdwanChassisIdentifier.ObjectTypeEnum.CatalystsdwanChassisIdentifier;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CatalystsdwanChassisIdentifier.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Hardware model of the Unified Edge chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Model
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Moid of the equipment.Chassis MO that represents the Unified Edge chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CatalystsdwanChassisIdentifier.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Serial number of the Unified Edge chassis enclosure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Serial
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CatalystsdwanChassisIdentifier initObject = new Intersight.Model.CatalystsdwanChassisIdentifier();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Model"))
+            {
+                initObject.Model = this.Model;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Serial"))
+            {
+                initObject.Serial = this.Serial;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CatalystsdwanConfigGroup.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCatalystsdwanConfigGroup")]
@@ -1018,6 +1117,262 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CatalystsdwanWanEdgeDeviceMaintenanceActivity.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCatalystsdwanWanEdgeDeviceMaintenanceActivity")]
+    public class InitializeIntersightCatalystsdwanWanEdgeDeviceMaintenanceActivity : PSCmdlet
+    {
+        public InitializeIntersightCatalystsdwanWanEdgeDeviceMaintenanceActivity()
+        {
+            ClassId = CatalystsdwanWanEdgeDeviceMaintenanceActivity.ClassIdEnum.CatalystsdwanWanEdgeDeviceMaintenanceActivity;
+            ObjectType = CatalystsdwanWanEdgeDeviceMaintenanceActivity.ObjectTypeEnum.CatalystsdwanWanEdgeDeviceMaintenanceActivity;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CatalystsdwanWanEdgeDeviceMaintenanceActivity.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CatalystsdwanWanEdgeDeviceMaintenanceActivity.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CatalystsdwanWanEdgeDeviceMaintenanceActivity initObject = new Intersight.Model.CatalystsdwanWanEdgeDeviceMaintenanceActivity();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CatalystsdwanWanEdgeDeviceMaintenanceActivityInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCatalystsdwanWanEdgeDeviceMaintenanceActivityInfo")]
+    public class InitializeIntersightCatalystsdwanWanEdgeDeviceMaintenanceActivityInfo : PSCmdlet
+    {
+        public InitializeIntersightCatalystsdwanWanEdgeDeviceMaintenanceActivityInfo()
+        {
+            ClassId = CatalystsdwanWanEdgeDeviceMaintenanceActivityInfo.ClassIdEnum.CatalystsdwanWanEdgeDeviceMaintenanceActivityInfo;
+            ObjectType = CatalystsdwanWanEdgeDeviceMaintenanceActivityInfo.ObjectTypeEnum.CatalystsdwanWanEdgeDeviceMaintenanceActivityInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CatalystsdwanWanEdgeDeviceMaintenanceActivityInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CatalystsdwanWanEdgeDeviceMaintenanceActivityInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CatalystsdwanWanEdgeDeviceMaintenanceActivityInfo initObject = new Intersight.Model.CatalystsdwanWanEdgeDeviceMaintenanceActivityInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CatalystsdwanWanEdgeDeviceMaintenanceCheck.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck")]
+    public class InitializeIntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck : PSCmdlet
+    {
+        public InitializeIntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck()
+        {
+            Action = CatalystsdwanWanEdgeDeviceMaintenanceCheck.ActionEnum.None;
+            ClassId = CatalystsdwanWanEdgeDeviceMaintenanceCheck.ClassIdEnum.CatalystsdwanWanEdgeDeviceMaintenanceCheck;
+            ObjectType = CatalystsdwanWanEdgeDeviceMaintenanceCheck.ObjectTypeEnum.CatalystsdwanWanEdgeDeviceMaintenanceCheck;
+
+        }
+        // <summary>
+        /// <para type="description">"Action requested for this maintenance check. CREATE auto-triggers a refresh, and the server resets it to None when the check reaches a terminal state.\n* `None` - No refresh is currently requested.\n* `Refresh` - Refresh the maintenance activity data for the maintenance check."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CatalystsdwanWanEdgeDeviceMaintenanceCheck.ActionEnum Action
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CatalystsdwanWanEdgeDeviceMaintenanceCheck.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CatalystsdwanWanEdgeDeviceMaintenanceCheck.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> TargetChassis
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CatalystsdwanWanEdgeDeviceMaintenanceCheck initObject = new Intersight.Model.CatalystsdwanWanEdgeDeviceMaintenanceCheck();
+            if (this.MyInvocation.BoundParameters.ContainsKey("Action"))
+            {
+                initObject.Action = this.Action;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("TargetChassis"))
+            {
+                initObject.TargetChassis = this.TargetChassis;
             }
             WriteObject(initObject);
         }

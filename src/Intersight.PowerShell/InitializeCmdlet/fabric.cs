@@ -4281,7 +4281,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Flag used to indicate whether LACP PDUs are to be sent 'fast', i.e., every 1 second.\n* `normal` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `fast` - The standard 4th generation UCS Fabric Interconnect with 54 ports."</para>
+        /// <para type="description">"Configures the LACP control-packet rate. Fast sends a packet every second and Normal sends one every 30 seconds.\n* `normal` - Sends LACP control packets once every 30 seconds.\n* `fast` - Sends LACP control packets once every second."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7302,6 +7302,175 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricRemoteSpanExporter.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricRemoteSpanExporter")]
+    public class InitializeIntersightFabricRemoteSpanExporter : PSCmdlet
+    {
+        public InitializeIntersightFabricRemoteSpanExporter()
+        {
+            ClassId = FabricRemoteSpanExporter.ClassIdEnum.FabricRemoteSpanExporter;
+            ObjectType = FabricRemoteSpanExporter.ObjectTypeEnum.FabricRemoteSpanExporter;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricRemoteSpanExporter.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source gateway that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Gateway
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.NetworkElementRelationship NetworkElement
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricRemoteSpanExporter.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source Interface IP Address that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SourceIp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source Interface Netmask that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string SourceNetmask
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Source Interface VLAN ID that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 4095)]
+        public long SourceVlanId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Switch ID (A or B) corresponding to network element."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SwitchId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricRemoteSpanExporter initObject = new Intersight.Model.FabricRemoteSpanExporter();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Gateway"))
+            {
+                initObject.Gateway = this.Gateway;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("NetworkElement"))
+            {
+                initObject.NetworkElement = this.NetworkElement;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceIp"))
+            {
+                initObject.SourceIp = this.SourceIp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceNetmask"))
+            {
+                initObject.SourceNetmask = this.SourceNetmask;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SourceVlanId"))
+            {
+                initObject.SourceVlanId = this.SourceVlanId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SwitchId"))
+            {
+                initObject.SwitchId = this.SwitchId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricSanPinGroup.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricSanPinGroup")]
@@ -8225,6 +8394,189 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricSpanDestRemote.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricSpanDestRemote")]
+    public class InitializeIntersightFabricSpanDestRemote : PSCmdlet
+    {
+        public InitializeIntersightFabricSpanDestRemote()
+        {
+            ClassId = FabricSpanDestRemote.ClassIdEnum.FabricSpanDestRemote;
+            ObjectType = FabricSpanDestRemote.ObjectTypeEnum.FabricSpanDestRemote;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSpanDestRemote.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"IP address of the remote ERSPAN destination."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DestinationIp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"ERSPAN ID identifies the ERSPAN session on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 1023)]
+        public long ErspanId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Differentiated Services Code Point (DSCP) value for the ERSPAN tunnel IP packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long IpDscp
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Time To Live (TTL) value for the ERSPAN tunnel IP packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 255)]
+        public long IpTtl
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables or disables packet truncation for the ERSPAN session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(64, 1518)]
+        public long Mtu
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSpanDestRemote.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enables or disables packet truncation for the ERSPAN session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool PacketTruncation
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a fabricSpanSession resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FabricSpanSessionRelationship SpanSession
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricSpanDestRemote initObject = new Intersight.Model.FabricSpanDestRemote();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DestinationIp"))
+            {
+                initObject.DestinationIp = this.DestinationIp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ErspanId"))
+            {
+                initObject.ErspanId = this.ErspanId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpDscp"))
+            {
+                initObject.IpDscp = this.IpDscp;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("IpTtl"))
+            {
+                initObject.IpTtl = this.IpTtl;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Mtu"))
+            {
+                initObject.Mtu = this.Mtu;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("PacketTruncation"))
+            {
+                initObject.PacketTruncation = this.PacketTruncation;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SpanSession"))
+            {
+                initObject.SpanSession = this.SpanSession;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricSpanSession.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricSpanSession")]
@@ -8235,6 +8587,7 @@ namespace Intersight.PowerShell
             AdminState = FabricSpanSession.AdminStateEnum.Disabled;
             ClassId = FabricSpanSession.ClassIdEnum.FabricSpanSession;
             ObjectType = FabricSpanSession.ObjectTypeEnum.FabricSpanSession;
+            SessionType = FabricSpanSession.SessionTypeEnum.SPAN;
             SpanControlPackets = FabricSpanSession.SpanControlPacketsEnum.Disabled;
 
         }
@@ -8279,6 +8632,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"An array of relationships to fabricAbstractSpanDestRemote resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.FabricAbstractSpanDestRemoteRelationship> DestRemotes
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -8314,6 +8677,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public FabricSpanSession.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Session Type identifies whether the traffic mirroring session is SPAN or ERSPAN.\n* `SPAN` - SPAN traffic mirroring session.\n* `ERSPAN` - Encapsulated Remote SPAN (ERSPAN) traffic mirroring session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSpanSession.SessionTypeEnum SessionType
         {
             get;
             set;
@@ -8396,6 +8769,10 @@ namespace Intersight.PowerShell
             {
                 initObject.DestPorts = this.DestPorts;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("DestRemotes"))
+            {
+                initObject.DestRemotes = this.DestRemotes;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
             {
                 initObject.Moid = this.Moid;
@@ -8409,6 +8786,10 @@ namespace Intersight.PowerShell
                 initObject.NetworkElement = this.NetworkElement;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("SessionType"))
+            {
+                initObject.SessionType = this.SessionType;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("SourcePortChannels"))
             {
                 initObject.SourcePortChannels = this.SourcePortChannels;
@@ -10821,7 +11202,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"UDLD recovery when enabled, attempts to bring an UDLD error-disabled port out of reset.\n* `none` - The standard 4th generation UCS Fabric Interconnect with 54 ports.\n* `reset` - The expanded 4th generation UCS Fabric Interconnect with 108 ports."</para>
+        /// <para type="description">"Specifies whether a port placed in the error-disabled state by UDLD is automatically reset.\n* `none` - Maintains the port in its current error-disabled state.\n* `reset` - Automatically resets a port placed in the error-disabled state by UDLD to retry link detection."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11714,7 +12095,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"Switch IP for the export interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
         public string SwitchBip
         {
             get;

@@ -8,6 +8,61 @@ using Intersight.Model;
 namespace Intersight.PowerShell
 {
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CondAbstractAlarmRule.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCondAbstractAlarmRule")]
+    public class InitializeIntersightCondAbstractAlarmRule : PSCmdlet
+    {
+        public InitializeIntersightCondAbstractAlarmRule()
+        {
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAbstractAlarmRule.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAbstractAlarmRule.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CondAbstractAlarmRule initObject = new Intersight.Model.CondAbstractAlarmRule();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CondAdapterBaselineStatus.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCondAdapterBaselineStatus")]
@@ -1256,6 +1311,77 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CondAlarmRuleCompoundExpression.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCondAlarmRuleCompoundExpression")]
+    public class InitializeIntersightCondAlarmRuleCompoundExpression : PSCmdlet
+    {
+        public InitializeIntersightCondAlarmRuleCompoundExpression()
+        {
+            ClassId = CondAlarmRuleCompoundExpression.ClassIdEnum.CondAlarmRuleCompoundExpression;
+            ObjectType = CondAlarmRuleCompoundExpression.ObjectTypeEnum.CondAlarmRuleCompoundExpression;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmRuleCompoundExpression.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A collection of clauses used to suppress alarms."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.FilterexprFilterExpression Filter
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CondAlarmRuleCompoundExpression.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CondAlarmRuleCompoundExpression initObject = new Intersight.Model.CondAlarmRuleCompoundExpression();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Filter"))
+            {
+                initObject.Filter = this.Filter;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CondAlarmRuleExpression.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCondAlarmRuleExpression")]
@@ -1511,7 +1637,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<Model.CondAlarmRuleExpression> AlarmRules
+        public List<Model.CondAbstractAlarmRule> AlarmRules
         {
             get;
             set;
@@ -1567,6 +1693,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a schedulerTaskSchedule resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.SchedulerTaskScheduleRelationship EndTask
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1607,6 +1743,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Operation that binds all the different rules together.\n* `All` - All is an AND condition applied against the individual conditions.\n* `Any` - Any is an OR condition applied against the individual conditions."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1622,6 +1768,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public DateTime StartDate
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a schedulerTaskSchedule resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.SchedulerTaskScheduleRelationship StartTask
         {
             get;
             set;
@@ -1666,6 +1822,10 @@ namespace Intersight.PowerShell
             {
                 initObject.EndDate = this.EndDate;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EndTask"))
+            {
+                initObject.EndTask = this.EndTask;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Entity"))
             {
                 initObject.Entity = this.Entity;
@@ -1679,6 +1839,10 @@ namespace Intersight.PowerShell
                 initObject.Name = this.Name;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("RulesOperator"))
             {
                 initObject.RulesOperator = this.RulesOperator;
@@ -1686,6 +1850,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("StartDate"))
             {
                 initObject.StartDate = this.StartDate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("StartTask"))
+            {
+                initObject.StartTask = this.StartTask;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -1723,7 +1891,7 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public List<Model.CondAlarmRuleExpression> AlarmRules
+        public List<Model.CondAbstractAlarmRule> AlarmRules
         {
             get;
             set;
@@ -1754,6 +1922,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public CondAlarmSuppressionDryRun.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.OrganizationOrganizationRelationship Organization
         {
             get;
             set;
@@ -1797,6 +1975,10 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Organization"))
+            {
+                initObject.Organization = this.Organization;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("RulesOperator"))
             {
                 initObject.RulesOperator = this.RulesOperator;

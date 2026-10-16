@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightServerProfilePendingChangeEval
+# Initialize-IntersightTopologyHierarchyNode
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightServerProfilePendingChangeEval [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ServerProfilePendingChangeEval.ClassIdEnum>][-Moid< string>][-ObjectType< ServerProfilePendingChangeEval.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightTopologyHierarchyNode [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< TopologyHierarchyNode.ClassIdEnum>][-ObjectType< TopologyHierarchyNode.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,25 +40,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: ServerProfilePendingChangeEval.ClassIdEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Moid
-The unique identifier of this Managed Object instance.
-
-```yaml
-Type: string
+Type: TopologyHierarchyNode.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -70,27 +55,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: ServerProfilePendingChangeEval.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Tags
-
-
-Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
-
-```yaml
-Type: System.Collections.Generic.List`1[Model.MoTag]
+Type: TopologyHierarchyNode.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -139,7 +107,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightServerProfilePendingChangeEval
+PS C:\> Initialize-IntersightTopologyHierarchyNode
 ```
 
 { Add example description here }
@@ -157,5 +125,3 @@ PS C:\> Initialize-IntersightServerProfilePendingChangeEval
 ## NOTES
 
 ## RELATED LINKS
-
-[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

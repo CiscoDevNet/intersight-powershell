@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamUserGroup [-AccessActivationTime< DateTime>][-AccessExpiryTime< DateTime>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-GroupType< IamUserGroup.GroupTypeEnum>][-Idp< IamIdpRelationship>][-Idpreference< IamIdpReferenceRelationship>][-Instruction< string>][[-Moid]< string>][-Name< string>][-Permissions< System.Collections.Generic.List`1[IamPermissionRelationship]>][-Qualifier< IamAbstractQualifierRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightIamUserGroup [-AccessActivationTime< DateTime>][-AccessExpiryTime< DateTime>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DynamicUserRetentionDays< long>][-GroupType< IamUserGroup.GroupTypeEnum>][-Idp< IamIdpRelationship>][-Idpreference< IamIdpReferenceRelationship>][-Instruction< string>][[-Moid]< string>][-Name< string>][-Permissions< System.Collections.Generic.List`1[IamPermissionRelationship]>][-Qualifier< IamAbstractQualifierRelationship>][-RoutingRules< System.Collections.Generic.List`1[IamRoutingRuleReference]>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -58,6 +58,21 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.Dictionary`2[string,object]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DynamicUserRetentionDays
+Number of days a CUI-authenticated dynamic user&apos;s membership remains valid after the most recent successful regular CUI login. Zero disables retained membership for this UserGroup.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -200,6 +215,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -RoutingRules
+
+
+Note :- Use Initialize-IntersightIamRoutingRuleReference to create the object of complex type IamRoutingRuleReference
+
+```yaml
+Type: System.Collections.Generic.List`1[IamRoutingRuleReference]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -290,6 +322,8 @@ PS C:\> Set-IntersightIamUserGroup
 ## RELATED LINKS
 
 [Get-IntersightIamUserGroup](./Get-IntersightIamUserGroup.md)
+
+[Initialize-IntersightIamRoutingRuleReference](./Initialize-IntersightIamRoutingRuleReference.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

@@ -5,27 +5,27 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-IntersightServerProfilePendingChangeEval
+# Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck
 
 ## SYNOPSIS
-Get the ServerProfilePendingChangeEval
+Get the CatalystsdwanWanEdgeDeviceMaintenanceCheck
 
 ## SYNTAX
 
 ### CmdletParam (Default)
 ```
-Get-IntersightServerProfilePendingChangeEval [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
+Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck [-Name <String>] [-Organization <OrganizationOrganizationRelationship>]
  [<CommonParameters>]
 ```
 
 ### QueryParam
 ```
-Get-IntersightServerProfilePendingChangeEval [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
+Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck [-Count <Boolean>] [-InlineCount <String>] [-Select <String>] [-Filter <String>]
  [-Expand <String>] [-Skip <Int32>] [-Top <Int32>] [-At <String>] [-Orderby <String>] [-Apply <String>]
  [-Tag <String>] [<CommonParameters>]
 ```
 ## DESCRIPTION
-Read a &apos;ServerProfilePendingChangeEval&apos; resource.
+Read a &apos;CatalystsdwanWanEdgeDeviceMaintenanceCheck&apos; resource.
 A maximum of 10,000 objects can be retrieved in a single invocation.
 
 Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to the New or Set cmdlet.
@@ -35,27 +35,27 @@ Note :- The output returns by the ParameterSet "QueryParam" cannot be piped to t
 
 ### Example 1
 ```powershell
-PS C:\> $result = Get-IntersightServerProfilePendingChangeEval
+PS C:\> $result = Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck
 ```
-Above example returns the list of ServerProfilePendingChangeEval.
+Above example returns the list of CatalystsdwanWanEdgeDeviceMaintenanceCheck.
 
 ### Example 2
 ```powershell
-PS C:\> $result = Get-IntersightServerProfilePendingChangeEval -Name "MoName"
+PS C:\> $result = Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck -Name "MoName"
 ```
-Above example returns the ServerProfilePendingChangeEval matched with name.
+Above example returns the CatalystsdwanWanEdgeDeviceMaintenanceCheck matched with name.
 
 ### Example 3
 ```powershell
-PS C:\> $result = Get-IntersightServerProfilePendingChangeEval -Organization $organization
+PS C:\> $result = Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck -Organization $organization
 ```
-Above example returns the list of ServerProfilePendingChangeEval available under the $organization .
+Above example returns the list of CatalystsdwanWanEdgeDeviceMaintenanceCheck available under the $organization .
 
 ### Example 4
 ```powershell
-PS C:\> $result = Get-IntersightServerProfilePendingChangeEval -InlineCount allpages
+PS C:\> $result = Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck -InlineCount allpages
 ```
-Above example returns the list of ServerProfilePendingChangeEval along with count.
+Above example returns the list of CatalystsdwanWanEdgeDeviceMaintenanceCheck along with count.
 
 ## PARAMETERS
 
@@ -165,7 +165,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-Specifies the name of the ServerProfilePendingChangeEval.
+Specifies the name of the CatalystsdwanWanEdgeDeviceMaintenanceCheck.
 
 ```yaml
 Type: String
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 ```
 
 ### -Organization
-Specifies the organization, to fetch the ServerProfilePendingChangeEval under it.
+Specifies the organization, to fetch the CatalystsdwanWanEdgeDeviceMaintenanceCheck under it.
 
 ```yaml
 Type: OrganizationOrganizationRelationship
@@ -284,4 +284,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[New-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck](./New-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck.md)
+
+[Remove-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck](./Remove-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck.md)
 

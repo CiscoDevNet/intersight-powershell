@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableEncryption
-If enabled, the endpoint encrypts all information sent to the LDAP server.
+If enabled, the endpoint encrypts all information it sends to the LDAP server. LDAP encryption uses StartTLS over port 389.
 
 ```yaml
 Type: bool

@@ -205,6 +205,148 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CertificatemanagementKmipClientConfigurationBundle.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCertificatemanagementKmipClientConfigurationBundle")]
+    public class InitializeIntersightCertificatemanagementKmipClientConfigurationBundle : PSCmdlet
+    {
+        public InitializeIntersightCertificatemanagementKmipClientConfigurationBundle()
+        {
+            BundleType = CertificatemanagementKmipClientConfigurationBundle.BundleTypeEnum.PKCS1;
+            ClassId = CertificatemanagementKmipClientConfigurationBundle.ClassIdEnum.CertificatemanagementKmipClientConfigurationBundle;
+            ObjectType = CertificatemanagementKmipClientConfigurationBundle.ObjectTypeEnum.CertificatemanagementKmipClientConfigurationBundle;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Password for the certificate bundle/Private Key. It's required when the bundle type is PKCS#8/PKCS#12."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string BundlePassword
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Type of the KMIP client certificate bundle.\n* `PKCS1` - The private key is in PKCS#1 format and does not contain certificate chain.\n* `PKCS8` - The private key here is in PKCS#8 format and may be password protected.\n* `PKCS12` - The bundle is in PKCS#12 format that contains client certificate, private key. This Bundle is password protected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CertificatemanagementKmipClientConfigurationBundle.BundleTypeEnum BundleType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Certificate that is used for verifying the authorization."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.X509Certificate Certificate
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Certificate Bundle that contains client certificate and Private Key. This Bundle is password protected."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CertificateBundle
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CertificatemanagementKmipClientConfigurationBundle.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable/Disable the certificate in Certificate Management policy."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool Enabled
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CertificatemanagementKmipClientConfigurationBundle.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Private Key which is used to validate the certificate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Privatekey
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CertificatemanagementKmipClientConfigurationBundle initObject = new Intersight.Model.CertificatemanagementKmipClientConfigurationBundle();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BundlePassword"))
+            {
+                initObject.BundlePassword = this.BundlePassword;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BundleType"))
+            {
+                initObject.BundleType = this.BundleType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Certificate"))
+            {
+                initObject.Certificate = this.Certificate;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CertificateBundle"))
+            {
+                initObject.CertificateBundle = this.CertificateBundle;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Enabled"))
+            {
+                initObject.Enabled = this.Enabled;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Privatekey"))
+            {
+                initObject.Privatekey = this.Privatekey;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize CertificatemanagementPolicy.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightCertificatemanagementPolicy")]

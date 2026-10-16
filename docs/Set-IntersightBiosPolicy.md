@@ -2441,7 +2441,7 @@ Accept wildcard characters: False
 ```
 
 ### -LatencyOptimizedMode
-BIOS Token for setting Latency Optimized Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `enabled` - Enables the BIOS setting.\n* `disabled` - Disables the BIOS setting.
+BIOS Token for setting Latency Optimized Mode configuration.\n* `platform-default` - Default value used by the platform for the BIOS setting.\n* `Auto` - Value - Auto for configuring LatencyOptimizedMode token.\n* `disabled` - Value - disabled for configuring LatencyOptimizedMode token.\n* `enabled` - Value - enabled for configuring LatencyOptimizedMode token.
 
 ```yaml
 Type: BiosPolicy.LatencyOptimizedModeEnum

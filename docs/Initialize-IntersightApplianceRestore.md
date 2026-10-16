@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightApplianceRestore [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceRestore.ClassIdEnum>][-Filename< string>][-Messages< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< ApplianceRestore.ObjectTypeEnum>][-Password< string>][-Protocol< ApplianceRestore.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceRestore [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< ApplianceRestore.ClassIdEnum>][-Filename< string>][-Messages< System.Collections.Generic.List`1[string]>][-Moid< string>][-ObjectType< ApplianceRestore.ObjectTypeEnum>][-Password< string>][-Protocol< ApplianceRestore.ProtocolEnum>][-RemoteHost< string>][-RemotePath< string>][-RemotePort< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TlsCertificate< string>][-Url< string>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 ```
 
 ### -Protocol
-Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.
+Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL.
 
 ```yaml
 Type: ApplianceRestore.ProtocolEnum
@@ -196,6 +196,36 @@ Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTa
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.MoTag]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -TlsCertificate
+PEM-encoded certificate used to verify the HTTPS server certificate during the Transport Layer Security (TLS) handshake. Required when the server certificate is not signed by a publicly trusted certificate authority (CA). Provide either the CA that signed the server certificate, a CA bundle containing the issuer, or the server&apos;s own certificate when it is self-signed. Verifying the server certificate prevents man-in-the-middle attacks during the download. Leaving this field empty disables TLS verification, and the download accepts any certificate the server presents.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Url
+HTTPS URL of the backup archive to restore. The URL must use the HTTPS scheme (https://), and any other scheme is rejected during validation. When the server requires authentication, the appliance uses the username and password properties on this object as HTTP basic authentication credentials.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

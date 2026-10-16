@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Intersight.PowerShellTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.11.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.11-20260727202255541+82ffdc9a6f0531b739fff81d346f36b9d042cd0d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.11-20261006170107829+05797e988b37eb9a83d8a4b8bce4b3640819550c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Intersight.PowerShellTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Intersight.PowerShellTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.11.0")]
