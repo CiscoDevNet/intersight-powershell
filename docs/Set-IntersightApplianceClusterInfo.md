@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightApplianceClusterInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BuildType< string>][-DeploymentSize< string>][-Gateway< string>][-Hostip< string>][-Hostname< string>][-HypervisorType< ApplianceClusterInfo.HypervisorTypeEnum>][-InstallerVersion< string>][[-Moid]< string>][-NodeType< ApplianceClusterInfo.NodeTypeEnum>][-PartitionDatabase< long>][-PartitionFileCisco< long>][-PartitionOptData< long>][-PartitionOptKafka< long>][-PartitionOptMongo< long>][-PartitionVarLibDocker< long>][-PartitionVarLog< long>][-Peerkey< string>][-Responsekey< string>][-Subnetmask< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uuid< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightApplianceClusterInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BuildType< string>][-DeploymentSize< string>][-Gateway< string>][-Hostip< string>][-Hostname< string>][-HypervisorType< ApplianceClusterInfo.HypervisorTypeEnum>][-InstallerVersion< string>][[-Moid]< string>][-NodeType< ApplianceClusterInfo.NodeTypeEnum>][-PartitionDatabase< long>][-PartitionFileCisco< long>][-PartitionOptData< long>][-PartitionOptKafka< long>][-PartitionOptMongo< long>][-PartitionVarLibDocker< long>][-PartitionVarLog< long>][-Peerkey< string>][-Responsekey< string>][-SignedManifest< byte>][-Subnetmask< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Uuid< string>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -298,6 +298,21 @@ Public key returned to the client.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SignedManifest
+The signed manifest content for verifying integrity of cluster artifacts.
+
+```yaml
+Type: byte
 Parameter Sets: (All)
 Aliases:
 

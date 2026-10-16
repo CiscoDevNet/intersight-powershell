@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2026072720
-- C# SDK version: 1.0.11.2026072720
+- Intersight.PowerShell version: 1.0.11.2026100617
+- C# SDK version: 1.0.11.2026100617
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -124,7 +124,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026072720"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026100617"}
 ```
 or
 
@@ -1055,6 +1055,10 @@ CatalystsdwanPortChannel | [**Get-IntersightCatalystsdwanPortChannel**](docs/Get
 CatalystsdwanVedgeDevice | [**Get-IntersightCatalystsdwanVedgeDevice**](docs/Get-IntersightCatalystsdwanVedgeDevice.md) | Read a 'CatalystsdwanVedgeDevice' resource.
 CatalystsdwanVlan | [**Get-IntersightCatalystsdwanVlan**](docs/Get-IntersightCatalystsdwanVlan.md) | Read a 'CatalystsdwanVlan' resource.
 CatalystsdwanWanEdgeDevice | [**Get-IntersightCatalystsdwanWanEdgeDevice**](docs/Get-IntersightCatalystsdwanWanEdgeDevice.md) | Read a 'CatalystsdwanWanEdgeDevice' resource.
+CatalystsdwanWanEdgeDeviceMaintenanceActivity | [**Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceActivity**](docs/Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceActivity.md) | Read a 'CatalystsdwanWanEdgeDeviceMaintenanceActivity' resource.
+CatalystsdwanWanEdgeDeviceMaintenanceCheck | [**Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck**](docs/Get-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck.md) | Read a 'CatalystsdwanWanEdgeDeviceMaintenanceCheck' resource.
+CatalystsdwanWanEdgeDeviceMaintenanceCheck | [**New-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck**](docs/New-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck.md) | Create a 'CatalystsdwanWanEdgeDeviceMaintenanceCheck' resource.
+CatalystsdwanWanEdgeDeviceMaintenanceCheck | [**Remove-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck**](docs/Remove-IntersightCatalystsdwanWanEdgeDeviceMaintenanceCheck.md) | Delete a 'CatalystsdwanWanEdgeDeviceMaintenanceCheck' resource.
 CertificatemanagementPolicy | [**Get-IntersightCertificatemanagementPolicy**](docs/Get-IntersightCertificatemanagementPolicy.md) | Read a 'CertificatemanagementPolicy' resource.
 CertificatemanagementPolicyInventory | [**Get-IntersightCertificatemanagementPolicyInventory**](docs/Get-IntersightCertificatemanagementPolicyInventory.md) | Read a 'CertificatemanagementPolicyInventory' resource.
 CertificatemanagementPolicy | [**New-IntersightCertificatemanagementPolicy**](docs/New-IntersightCertificatemanagementPolicy.md) | Create a 'CertificatemanagementPolicy' resource.
@@ -1304,10 +1308,12 @@ FabricPcOperation | [**Get-IntersightFabricPcOperation**](docs/Get-IntersightFab
 FabricPortMode | [**Get-IntersightFabricPortMode**](docs/Get-IntersightFabricPortMode.md) | Read a 'FabricPortMode' resource.
 FabricPortOperation | [**Get-IntersightFabricPortOperation**](docs/Get-IntersightFabricPortOperation.md) | Read a 'FabricPortOperation' resource.
 FabricPortPolicy | [**Get-IntersightFabricPortPolicy**](docs/Get-IntersightFabricPortPolicy.md) | Read a 'FabricPortPolicy' resource.
+FabricRemoteSpanExporter | [**Get-IntersightFabricRemoteSpanExporter**](docs/Get-IntersightFabricRemoteSpanExporter.md) | Read a 'FabricRemoteSpanExporter' resource.
 FabricSanPinGroup | [**Get-IntersightFabricSanPinGroup**](docs/Get-IntersightFabricSanPinGroup.md) | Read a 'FabricSanPinGroup' resource.
 FabricSecureRouterRole | [**Get-IntersightFabricSecureRouterRole**](docs/Get-IntersightFabricSecureRouterRole.md) | Read a 'FabricSecureRouterRole' resource.
 FabricServerRole | [**Get-IntersightFabricServerRole**](docs/Get-IntersightFabricServerRole.md) | Read a 'FabricServerRole' resource.
 FabricSpanDestEthPort | [**Get-IntersightFabricSpanDestEthPort**](docs/Get-IntersightFabricSpanDestEthPort.md) | Read a 'FabricSpanDestEthPort' resource.
+FabricSpanDestRemote | [**Get-IntersightFabricSpanDestRemote**](docs/Get-IntersightFabricSpanDestRemote.md) | Read a 'FabricSpanDestRemote' resource.
 FabricSpanSession | [**Get-IntersightFabricSpanSession**](docs/Get-IntersightFabricSpanSession.md) | Read a 'FabricSpanSession' resource.
 FabricSpanSourceEthPort | [**Get-IntersightFabricSpanSourceEthPort**](docs/Get-IntersightFabricSpanSourceEthPort.md) | Read a 'FabricSpanSourceEthPort' resource.
 FabricSpanSourceEthPortChannel | [**Get-IntersightFabricSpanSourceEthPortChannel**](docs/Get-IntersightFabricSpanSourceEthPortChannel.md) | Read a 'FabricSpanSourceEthPortChannel' resource.
@@ -1353,10 +1359,12 @@ FabricPcOperation | [**New-IntersightFabricPcOperation**](docs/New-IntersightFab
 FabricPortMode | [**New-IntersightFabricPortMode**](docs/New-IntersightFabricPortMode.md) | Create a 'FabricPortMode' resource.
 FabricPortOperation | [**New-IntersightFabricPortOperation**](docs/New-IntersightFabricPortOperation.md) | Create a 'FabricPortOperation' resource.
 FabricPortPolicy | [**New-IntersightFabricPortPolicy**](docs/New-IntersightFabricPortPolicy.md) | Create a 'FabricPortPolicy' resource.
+FabricRemoteSpanExporter | [**New-IntersightFabricRemoteSpanExporter**](docs/New-IntersightFabricRemoteSpanExporter.md) | Create a 'FabricRemoteSpanExporter' resource.
 FabricSanPinGroup | [**New-IntersightFabricSanPinGroup**](docs/New-IntersightFabricSanPinGroup.md) | Create a 'FabricSanPinGroup' resource.
 FabricSecureRouterRole | [**New-IntersightFabricSecureRouterRole**](docs/New-IntersightFabricSecureRouterRole.md) | Create a 'FabricSecureRouterRole' resource.
 FabricServerRole | [**New-IntersightFabricServerRole**](docs/New-IntersightFabricServerRole.md) | Create a 'FabricServerRole' resource.
 FabricSpanDestEthPort | [**New-IntersightFabricSpanDestEthPort**](docs/New-IntersightFabricSpanDestEthPort.md) | Create a 'FabricSpanDestEthPort' resource.
+FabricSpanDestRemote | [**New-IntersightFabricSpanDestRemote**](docs/New-IntersightFabricSpanDestRemote.md) | Create a 'FabricSpanDestRemote' resource.
 FabricSpanSession | [**New-IntersightFabricSpanSession**](docs/New-IntersightFabricSpanSession.md) | Create a 'FabricSpanSession' resource.
 FabricSpanSourceEthPort | [**New-IntersightFabricSpanSourceEthPort**](docs/New-IntersightFabricSpanSourceEthPort.md) | Create a 'FabricSpanSourceEthPort' resource.
 FabricSpanSourceEthPortChannel | [**New-IntersightFabricSpanSourceEthPortChannel**](docs/New-IntersightFabricSpanSourceEthPortChannel.md) | Create a 'FabricSpanSourceEthPortChannel' resource.
@@ -1398,10 +1406,12 @@ FabricPcOperation | [**Remove-IntersightFabricPcOperation**](docs/Remove-Intersi
 FabricPortMode | [**Remove-IntersightFabricPortMode**](docs/Remove-IntersightFabricPortMode.md) | Delete a 'FabricPortMode' resource.
 FabricPortOperation | [**Remove-IntersightFabricPortOperation**](docs/Remove-IntersightFabricPortOperation.md) | Delete a 'FabricPortOperation' resource.
 FabricPortPolicy | [**Remove-IntersightFabricPortPolicy**](docs/Remove-IntersightFabricPortPolicy.md) | Delete a 'FabricPortPolicy' resource.
+FabricRemoteSpanExporter | [**Remove-IntersightFabricRemoteSpanExporter**](docs/Remove-IntersightFabricRemoteSpanExporter.md) | Delete a 'FabricRemoteSpanExporter' resource.
 FabricSanPinGroup | [**Remove-IntersightFabricSanPinGroup**](docs/Remove-IntersightFabricSanPinGroup.md) | Delete a 'FabricSanPinGroup' resource.
 FabricSecureRouterRole | [**Remove-IntersightFabricSecureRouterRole**](docs/Remove-IntersightFabricSecureRouterRole.md) | Delete a 'FabricSecureRouterRole' resource.
 FabricServerRole | [**Remove-IntersightFabricServerRole**](docs/Remove-IntersightFabricServerRole.md) | Delete a 'FabricServerRole' resource.
 FabricSpanDestEthPort | [**Remove-IntersightFabricSpanDestEthPort**](docs/Remove-IntersightFabricSpanDestEthPort.md) | Delete a 'FabricSpanDestEthPort' resource.
+FabricSpanDestRemote | [**Remove-IntersightFabricSpanDestRemote**](docs/Remove-IntersightFabricSpanDestRemote.md) | Delete a 'FabricSpanDestRemote' resource.
 FabricSpanSession | [**Remove-IntersightFabricSpanSession**](docs/Remove-IntersightFabricSpanSession.md) | Delete a 'FabricSpanSession' resource.
 FabricSpanSourceEthPort | [**Remove-IntersightFabricSpanSourceEthPort**](docs/Remove-IntersightFabricSpanSourceEthPort.md) | Delete a 'FabricSpanSourceEthPort' resource.
 FabricSpanSourceEthPortChannel | [**Remove-IntersightFabricSpanSourceEthPortChannel**](docs/Remove-IntersightFabricSpanSourceEthPortChannel.md) | Delete a 'FabricSpanSourceEthPortChannel' resource.
@@ -1444,10 +1454,12 @@ FabricPcOperation | [**Set-IntersightFabricPcOperation**](docs/Set-IntersightFab
 FabricPortMode | [**Set-IntersightFabricPortMode**](docs/Set-IntersightFabricPortMode.md) | Update a 'FabricPortMode' resource.
 FabricPortOperation | [**Set-IntersightFabricPortOperation**](docs/Set-IntersightFabricPortOperation.md) | Update a 'FabricPortOperation' resource.
 FabricPortPolicy | [**Set-IntersightFabricPortPolicy**](docs/Set-IntersightFabricPortPolicy.md) | Update a 'FabricPortPolicy' resource.
+FabricRemoteSpanExporter | [**Set-IntersightFabricRemoteSpanExporter**](docs/Set-IntersightFabricRemoteSpanExporter.md) | Update a 'FabricRemoteSpanExporter' resource.
 FabricSanPinGroup | [**Set-IntersightFabricSanPinGroup**](docs/Set-IntersightFabricSanPinGroup.md) | Update a 'FabricSanPinGroup' resource.
 FabricSecureRouterRole | [**Set-IntersightFabricSecureRouterRole**](docs/Set-IntersightFabricSecureRouterRole.md) | Update a 'FabricSecureRouterRole' resource.
 FabricServerRole | [**Set-IntersightFabricServerRole**](docs/Set-IntersightFabricServerRole.md) | Update a 'FabricServerRole' resource.
 FabricSpanDestEthPort | [**Set-IntersightFabricSpanDestEthPort**](docs/Set-IntersightFabricSpanDestEthPort.md) | Update a 'FabricSpanDestEthPort' resource.
+FabricSpanDestRemote | [**Set-IntersightFabricSpanDestRemote**](docs/Set-IntersightFabricSpanDestRemote.md) | Update a 'FabricSpanDestRemote' resource.
 FabricSpanSession | [**Set-IntersightFabricSpanSession**](docs/Set-IntersightFabricSpanSession.md) | Update a 'FabricSpanSession' resource.
 FabricSwitchClusterProfile | [**Set-IntersightFabricSwitchClusterProfile**](docs/Set-IntersightFabricSwitchClusterProfile.md) | Update a 'FabricSwitchClusterProfile' resource.
 FabricSwitchClusterProfileTemplate | [**Set-IntersightFabricSwitchClusterProfileTemplate**](docs/Set-IntersightFabricSwitchClusterProfileTemplate.md) | Update a 'FabricSwitchClusterProfileTemplate' resource.
@@ -1811,6 +1823,7 @@ IamTestIdpConfiguration | [**Get-IntersightIamTestIdpConfiguration**](docs/Get-I
 IamTrustPoint | [**Get-IntersightIamTrustPoint**](docs/Get-IntersightIamTrustPoint.md) | Read a 'IamTrustPoint' resource.
 IamUser | [**Get-IntersightIamUser**](docs/Get-IntersightIamUser.md) | Read a 'IamUser' resource.
 IamUserGroup | [**Get-IntersightIamUserGroup**](docs/Get-IntersightIamUserGroup.md) | Read a 'IamUserGroup' resource.
+IamUserGroupMembership | [**Get-IntersightIamUserGroupMembership**](docs/Get-IntersightIamUserGroupMembership.md) | Read a 'IamUserGroupMembership' resource.
 IamUserPreference | [**Get-IntersightIamUserPreference**](docs/Get-IntersightIamUserPreference.md) | Read a 'IamUserPreference' resource.
 IamUserQualifier | [**Get-IntersightIamUserQualifier**](docs/Get-IntersightIamUserQualifier.md) | Read a 'IamUserQualifier' resource.
 IamUserSetting | [**Get-IntersightIamUserSetting**](docs/Get-IntersightIamUserSetting.md) | Read a 'IamUserSetting' resource.
@@ -2135,6 +2148,7 @@ NiaapiDcnmLatestMaintainedRelease | [**Get-IntersightNiaapiDcnmLatestMaintainedR
 NiaapiDcnmReleaseRecommend | [**Get-IntersightNiaapiDcnmReleaseRecommend**](docs/Get-IntersightNiaapiDcnmReleaseRecommend.md) | Read a 'NiaapiDcnmReleaseRecommend' resource.
 NiaapiDcnmSweol | [**Get-IntersightNiaapiDcnmSweol**](docs/Get-IntersightNiaapiDcnmSweol.md) | Read a 'NiaapiDcnmSweol' resource.
 NiaapiFileDownloader | [**Get-IntersightNiaapiFileDownloader**](docs/Get-IntersightNiaapiFileDownloader.md) | Read a 'NiaapiFileDownloader' resource.
+NiaapiLegacyMetadataFileDownload | [**Get-IntersightNiaapiLegacyMetadataFileDownload**](docs/Get-IntersightNiaapiLegacyMetadataFileDownload.md) | Read a 'NiaapiLegacyMetadataFileDownload' resource.
 NiaapiNdEncryptedFileDownload | [**Get-IntersightNiaapiNdEncryptedFileDownload**](docs/Get-IntersightNiaapiNdEncryptedFileDownload.md) | Read a 'NiaapiNdEncryptedFileDownload' resource.
 NiaapiNdMetadata | [**Get-IntersightNiaapiNdMetadata**](docs/Get-IntersightNiaapiNdMetadata.md) | Read a 'NiaapiNdMetadata' resource.
 NiaapiNdMetadataFileDownloader | [**Get-IntersightNiaapiNdMetadataFileDownloader**](docs/Get-IntersightNiaapiNdMetadataFileDownloader.md) | Read a 'NiaapiNdMetadataFileDownloader' resource.
@@ -2210,6 +2224,8 @@ NiatelemetryMsoEpgDetails | [**Get-IntersightNiatelemetryMsoEpgDetails**](docs/G
 NiatelemetryMsoSchemaDetails | [**Get-IntersightNiatelemetryMsoSchemaDetails**](docs/Get-IntersightNiatelemetryMsoSchemaDetails.md) | Read a 'NiatelemetryMsoSchemaDetails' resource.
 NiatelemetryMsoSiteDetails | [**Get-IntersightNiatelemetryMsoSiteDetails**](docs/Get-IntersightNiatelemetryMsoSiteDetails.md) | Read a 'NiatelemetryMsoSiteDetails' resource.
 NiatelemetryMsoTenantDetails | [**Get-IntersightNiatelemetryMsoTenantDetails**](docs/Get-IntersightNiatelemetryMsoTenantDetails.md) | Read a 'NiatelemetryMsoTenantDetails' resource.
+NiatelemetryNeighbor | [**Get-IntersightNiatelemetryNeighbor**](docs/Get-IntersightNiatelemetryNeighbor.md) | Read a 'NiatelemetryNeighbor' resource.
+NiatelemetryNetwork | [**Get-IntersightNiatelemetryNetwork**](docs/Get-IntersightNiatelemetryNetwork.md) | Read a 'NiatelemetryNetwork' resource.
 NiatelemetryNexusCloudAccount | [**Get-IntersightNiatelemetryNexusCloudAccount**](docs/Get-IntersightNiatelemetryNexusCloudAccount.md) | Read a 'NiatelemetryNexusCloudAccount' resource.
 NiatelemetryNexusCloudSite | [**Get-IntersightNiatelemetryNexusCloudSite**](docs/Get-IntersightNiatelemetryNexusCloudSite.md) | Read a 'NiatelemetryNexusCloudSite' resource.
 NiatelemetryNexusDashboardControllerDetails | [**Get-IntersightNiatelemetryNexusDashboardControllerDetails**](docs/Get-IntersightNiatelemetryNexusDashboardControllerDetails.md) | Read a 'NiatelemetryNexusDashboardControllerDetails' resource.
@@ -2226,6 +2242,7 @@ NiatelemetryPasswordStrengthCheck | [**Get-IntersightNiatelemetryPasswordStrengt
 NiatelemetryPodCommPolicies | [**Get-IntersightNiatelemetryPodCommPolicies**](docs/Get-IntersightNiatelemetryPodCommPolicies.md) | Read a 'NiatelemetryPodCommPolicies' resource.
 NiatelemetryPodSnmpPolicies | [**Get-IntersightNiatelemetryPodSnmpPolicies**](docs/Get-IntersightNiatelemetryPodSnmpPolicies.md) | Read a 'NiatelemetryPodSnmpPolicies' resource.
 NiatelemetryPodTimeServerPolicies | [**Get-IntersightNiatelemetryPodTimeServerPolicies**](docs/Get-IntersightNiatelemetryPodTimeServerPolicies.md) | Read a 'NiatelemetryPodTimeServerPolicies' resource.
+NiatelemetryRoute | [**Get-IntersightNiatelemetryRoute**](docs/Get-IntersightNiatelemetryRoute.md) | Read a 'NiatelemetryRoute' resource.
 NiatelemetrySiteInventory | [**Get-IntersightNiatelemetrySiteInventory**](docs/Get-IntersightNiatelemetrySiteInventory.md) | Read a 'NiatelemetrySiteInventory' resource.
 NiatelemetrySnmpSrc | [**Get-IntersightNiatelemetrySnmpSrc**](docs/Get-IntersightNiatelemetrySnmpSrc.md) | Read a 'NiatelemetrySnmpSrc' resource.
 NiatelemetrySpinePolGrpDetails | [**Get-IntersightNiatelemetrySpinePolGrpDetails**](docs/Get-IntersightNiatelemetrySpinePolGrpDetails.md) | Read a 'NiatelemetrySpinePolGrpDetails' resource.
@@ -2481,7 +2498,6 @@ ServerDiagnostics | [**Get-IntersightServerDiagnostics**](docs/Get-IntersightSer
 ServerDisruption | [**Get-IntersightServerDisruption**](docs/Get-IntersightServerDisruption.md) | Read a 'ServerDisruption' resource.
 ServerMigrationKeyDetails | [**Get-IntersightServerMigrationKeyDetails**](docs/Get-IntersightServerMigrationKeyDetails.md) | Read a 'ServerMigrationKeyDetails' resource.
 ServerProfile | [**Get-IntersightServerProfile**](docs/Get-IntersightServerProfile.md) | Read a 'ServerProfile' resource.
-ServerProfilePendingChangeEval | [**Get-IntersightServerProfilePendingChangeEval**](docs/Get-IntersightServerProfilePendingChangeEval.md) | Read a 'ServerProfilePendingChangeEval' resource.
 ServerProfileTemplate | [**Get-IntersightServerProfileTemplate**](docs/Get-IntersightServerProfileTemplate.md) | Read a 'ServerProfileTemplate' resource.
 ServerConfigImport | [**New-IntersightServerConfigImport**](docs/New-IntersightServerConfigImport.md) | Create a 'ServerConfigImport' resource.
 ServerDiagnosticStatus | [**New-IntersightServerDiagnosticStatus**](docs/New-IntersightServerDiagnosticStatus.md) | Create a 'ServerDiagnosticStatus' resource.
@@ -2802,6 +2818,9 @@ ThermalPolicy | [**Remove-IntersightThermalPolicy**](docs/Remove-IntersightTherm
 ThermalPolicy | [**Set-IntersightThermalPolicy**](docs/Set-IntersightThermalPolicy.md) | Update a 'ThermalPolicy' resource.
 TopSystem | [**Get-IntersightTopSystem**](docs/Get-IntersightTopSystem.md) | Read a 'TopSystem' resource.
 TopSystem | [**Set-IntersightTopSystem**](docs/Set-IntersightTopSystem.md) | Update a 'TopSystem' resource.
+TopologyEventDetails | [**New-IntersightTopologyEventDetails**](docs/New-IntersightTopologyEventDetails.md) | Create a 'TopologyEventDetails' resource.
+TopologyTimelineEvent | [**New-IntersightTopologyTimelineEvent**](docs/New-IntersightTopologyTimelineEvent.md) | Create a 'TopologyTimelineEvent' resource.
+TopologyView | [**New-IntersightTopologyView**](docs/New-IntersightTopologyView.md) | Create a 'TopologyView' resource.
 UcsdBackupInfo | [**Get-IntersightUcsdBackupInfo**](docs/Get-IntersightUcsdBackupInfo.md) | Read a 'UcsdBackupInfo' resource.
 UcsdBackupInfo | [**Remove-IntersightUcsdBackupInfo**](docs/Remove-IntersightUcsdBackupInfo.md) | Delete a 'UcsdBackupInfo' resource.
 UuidpoolBlock | [**Get-IntersightUuidpoolBlock**](docs/Get-IntersightUuidpoolBlock.md) | Read a 'UuidpoolBlock' resource.

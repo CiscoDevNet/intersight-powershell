@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightCondAlarmSuppressionDryRun [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmRules< System.Collections.Generic.List`1[CondAlarmRuleExpression]>][-Moid< string>][-RulesOperator< CondAlarmSuppressionDryRun.RulesOperatorEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightCondAlarmSuppressionDryRun [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmRules< System.Collections.Generic.List`1[CondAbstractAlarmRule]>][-Moid< string>][-Organization< OrganizationOrganizationRelationship>][-RulesOperator< CondAlarmSuppressionDryRun.RulesOperatorEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -41,10 +41,10 @@ Accept wildcard characters: False
 ### -AlarmRules
 
 
-Note :- Use Initialize-IntersightCondAlarmRuleExpression to create the object of complex type CondAlarmRuleExpression
+Note :- Use Initialize-IntersightCondAbstractAlarmRule to create the object of complex type CondAbstractAlarmRule
 
 ```yaml
-Type: System.Collections.Generic.List`1[CondAlarmRuleExpression]
+Type: System.Collections.Generic.List`1[CondAbstractAlarmRule]
 Parameter Sets: (All)
 Aliases:
 
@@ -60,6 +60,24 @@ The unique identifier of this Managed Object instance.
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Organization
+A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: OrganizationOrganizationRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -189,7 +207,7 @@ PS C:\> New-IntersightCondAlarmSuppressionDryRun
 
 ## RELATED LINKS
 
-[Initialize-IntersightCondAlarmRuleExpression](./Initialize-IntersightCondAlarmRuleExpression.md)
+[Initialize-IntersightCondAbstractAlarmRule](./Initialize-IntersightCondAbstractAlarmRule.md)
 
 [Initialize-IntersightCondAlarmSuppressionDryRunSummary](./Initialize-IntersightCondAlarmSuppressionDryRunSummary.md)
 

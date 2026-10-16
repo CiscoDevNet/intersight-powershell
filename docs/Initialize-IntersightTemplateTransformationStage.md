@@ -85,7 +85,7 @@ Accept wildcard characters: False
 ```
 
 ### -Name
-The unique name by which the output of this transformation stage can be accessed in further stages. Only alphanumeric characters are allowed.
+The unique name by which the output of this transformation stage can be accessed in further stages. Letters, numbers, and underscores are allowed.
 
 ```yaml
 Type: string

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightCondAlarmSuppression [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmRules< System.Collections.Generic.List`1[CondAlarmRuleExpression]>][-Classifications< System.Collections.Generic.List`1[CondAlarmClassificationRelationship]>][-Description< string>][-Enabled< bool>][-EndDate< DateTime>][-Entity< MoBaseMoRelationship>][-Moid< string>][[-Name]< string>][-RulesOperator< CondAlarmSuppression.RulesOperatorEnum>][-StartDate< DateTime>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightCondAlarmSuppression [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmRules< System.Collections.Generic.List`1[CondAbstractAlarmRule]>][-Classifications< System.Collections.Generic.List`1[CondAlarmClassificationRelationship]>][-Description< string>][-Enabled< bool>][-EndDate< DateTime>][-EndTask< SchedulerTaskScheduleRelationship>][-Entity< MoBaseMoRelationship>][-Moid< string>][[-Name]< string>][-Organization< OrganizationOrganizationRelationship>][-RulesOperator< CondAlarmSuppression.RulesOperatorEnum>][-StartDate< DateTime>][-StartTask< SchedulerTaskScheduleRelationship>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -41,10 +41,10 @@ Accept wildcard characters: False
 ### -AlarmRules
 
 
-Note :- Use Initialize-IntersightCondAlarmRuleExpression to create the object of complex type CondAlarmRuleExpression
+Note :- Use Initialize-IntersightCondAbstractAlarmRule to create the object of complex type CondAbstractAlarmRule
 
 ```yaml
-Type: System.Collections.Generic.List`1[CondAlarmRuleExpression]
+Type: System.Collections.Generic.List`1[CondAbstractAlarmRule]
 Parameter Sets: (All)
 Aliases:
 
@@ -118,6 +118,24 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -EndTask
+A reference to a schedulerTaskSchedule resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: SchedulerTaskScheduleRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Entity
 A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
 
@@ -166,6 +184,24 @@ Accept pipeline input: True False
 Accept wildcard characters: False
 ```
 
+### -Organization
+A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: OrganizationOrganizationRelationship
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -RulesOperator
 Operation that binds all the different rules together.\n* `All` - All is an AND condition applied against the individual conditions.\n* `Any` - Any is an OR condition applied against the individual conditions.
 
@@ -186,6 +222,24 @@ The start date for enabling this alarm suppression rule. The date must follow\nt
 
 ```yaml
 Type: DateTime
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -StartTask
+A reference to a schedulerTaskSchedule resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: SchedulerTaskScheduleRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -302,7 +356,7 @@ PS C:\> New-IntersightCondAlarmSuppression
 
 [Get-IntersightCondAlarmSuppression](./Get-IntersightCondAlarmSuppression.md)
 
-[Initialize-IntersightCondAlarmRuleExpression](./Initialize-IntersightCondAlarmRuleExpression.md)
+[Initialize-IntersightCondAbstractAlarmRule](./Initialize-IntersightCondAbstractAlarmRule.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 

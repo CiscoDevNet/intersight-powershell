@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightFabricSpanSession [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< FabricSpanSession.AdminStateEnum>][-ClassId< FabricSpanSession.ClassIdEnum>][-DestPorts< System.Collections.Generic.List`1[Model.FabricAbstractSpanDestPortRelationship]>][-Moid< string>][-Name< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< FabricSpanSession.ObjectTypeEnum>][-SourcePortChannels< System.Collections.Generic.List`1[Model.FabricAbstractSpanSourcePortChannelRelationship]>][-SourcePorts< System.Collections.Generic.List`1[Model.FabricAbstractSpanSourcePortRelationship]>][-SourceVirtualIfs< System.Collections.Generic.List`1[Model.FabricAbstractSpanSourceVirtualIfRelationship]>][-SourceVlans< System.Collections.Generic.List`1[Model.FabricSpanSourceVlanRelationship]>][-SpanControlPackets< FabricSpanSession.SpanControlPacketsEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightFabricSpanSession [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AdminState< FabricSpanSession.AdminStateEnum>][-ClassId< FabricSpanSession.ClassIdEnum>][-DestPorts< System.Collections.Generic.List`1[Model.FabricAbstractSpanDestPortRelationship]>][-DestRemotes< System.Collections.Generic.List`1[Model.FabricAbstractSpanDestRemoteRelationship]>][-Moid< string>][-Name< string>][-NetworkElement< Model.NetworkElementRelationship>][-ObjectType< FabricSpanSession.ObjectTypeEnum>][-SessionType< FabricSpanSession.SessionTypeEnum>][-SourcePortChannels< System.Collections.Generic.List`1[Model.FabricAbstractSpanSourcePortChannelRelationship]>][-SourcePorts< System.Collections.Generic.List`1[Model.FabricAbstractSpanSourcePortRelationship]>][-SourceVirtualIfs< System.Collections.Generic.List`1[Model.FabricAbstractSpanSourceVirtualIfRelationship]>][-SourceVlans< System.Collections.Generic.List`1[Model.FabricSpanSourceVlanRelationship]>][-SpanControlPackets< FabricSpanSession.SpanControlPacketsEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -87,6 +87,24 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DestRemotes
+An array of relationships to fabricAbstractSpanDestRemote resources.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.FabricAbstractSpanDestRemoteRelationship]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Moid
 The unique identifier of this Managed Object instance.
 
@@ -140,6 +158,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: FabricSpanSession.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SessionType
+Session Type identifies whether the traffic mirroring session is SPAN or ERSPAN.\n* `SPAN` - SPAN traffic mirroring session.\n* `ERSPAN` - Encapsulated Remote SPAN (ERSPAN) traffic mirroring session.
+
+```yaml
+Type: FabricSpanSession.SessionTypeEnum
 Parameter Sets: (All)
 Aliases:
 

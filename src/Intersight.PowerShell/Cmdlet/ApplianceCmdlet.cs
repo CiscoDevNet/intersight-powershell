@@ -814,7 +814,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance."</para>
+        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1380,7 +1380,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance."</para>
+        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1610,7 +1610,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance."</para>
+        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2139,6 +2139,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The signed manifest content for verifying integrity of cluster artifacts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public byte SignedManifest
         {
             get;
             set;
@@ -3734,6 +3745,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamTrustPointRelationship TlsCertificate
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Username to log in to the endpoint device."</para>
@@ -8897,7 +8919,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Specifies if this is an scp or sftp request.\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance."</para>
+        /// <para type="description">"Specifies if this is an scp or sftp request.\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -9105,7 +9127,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance."</para>
+        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -9181,6 +9203,28 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"PEM-encoded certificate used to verify the HTTPS server certificate during the Transport Layer Security (TLS) handshake. Required when the server certificate is not signed by a publicly trusted certificate authority (CA). Provide either the CA that signed the server certificate, a CA bundle containing the issuer, or the server's own certificate when it is self-signed. Verifying the server certificate prevents man-in-the-middle attacks during the download. Leaving this field empty disables TLS verification, and the download accepts any certificate the server presents."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string TlsCertificate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"HTTPS URL of the backup archive to restore. The URL must use the HTTPS scheme (https://), and any other scheme is rejected during validation. When the server requires authentication, the appliance uses the username and password properties on this object as HTTP basic authentication credentials."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Url
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Username to authenticate the fileserver. Not required when protocol is local."</para>
@@ -10864,7 +10908,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance."</para>
+        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11056,7 +11100,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance."</para>
+        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11410,6 +11454,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The signed manifest content for verifying integrity of cluster artifacts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public byte SignedManifest
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -12160,6 +12215,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamTrustPointRelationship TlsCertificate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Username to log in to the endpoint device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -12676,7 +12742,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Specifies if this is an scp or sftp request.\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance."</para>
+        /// <para type="description">"Specifies if this is an scp or sftp request.\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -12813,7 +12879,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance."</para>
+        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -12865,6 +12931,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"PEM-encoded certificate used to verify the HTTPS server certificate during the Transport Layer Security (TLS) handshake. Required when the server certificate is not signed by a publicly trusted certificate authority (CA). Provide either the CA that signed the server certificate, a CA bundle containing the issuer, or the server's own certificate when it is self-signed. Verifying the server certificate prevents man-in-the-middle attacks during the download. Leaving this field empty disables TLS verification, and the download accepts any certificate the server presents."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string TlsCertificate
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"HTTPS URL of the backup archive to restore. The URL must use the HTTPS scheme (https://), and any other scheme is rejected during validation. When the server requires authentication, the appliance uses the username and password properties on this object as HTTP basic authentication credentials."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Url
         {
             get;
             set;
@@ -13054,7 +13142,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance."</para>
+        /// <para type="description">"Communication protocol used by backup and restore workflow (e.g. scp, sftp, cifs, or local).\n* `scp` - Secure Copy Protocol (SCP) to access the file server.\n* `sftp` - SSH File Transfer Protocol (SFTP) to access file server.\n* `cifs` - Common Internet File System (CIFS) Protocol to access file server.\n* `local` - Backup file is stored in Intersight Appliance.\n* `https` - Hypertext Transfer Protocol Secure (HTTPS) to access a file from a remote URL."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -13476,6 +13564,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"The signed manifest content for verifying integrity of cluster artifacts."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public byte SignedManifest
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -14097,6 +14196,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamTrustPoint resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamTrustPointRelationship TlsCertificate
         {
             get;
             set;

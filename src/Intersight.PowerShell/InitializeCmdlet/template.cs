@@ -43,7 +43,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The function to be executed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
+        [ValidatePattern("^$|^[a-zA-Z][a-zA-Z0-9]{0,63}$")]
         public string Function
         {
             get;
@@ -60,10 +60,10 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The unique name by which the output of this transformation stage can be accessed in further stages. Only alphanumeric characters are allowed."</para>
+        /// <para type="description">"The unique name by which the output of this transformation stage can be accessed in further stages. Letters, numbers, and underscores are allowed."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-        [ValidatePattern("^$|^[a-zA-Z0-9]{1,64}$")]
+        [ValidatePattern("^$|^[a-zA-Z0-9_]{1,64}$")]
         public string Name
         {
             get;

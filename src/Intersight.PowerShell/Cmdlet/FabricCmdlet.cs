@@ -3918,7 +3918,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Flag used to indicate whether LACP PDUs are to be sent 'fast', i.e., every 1 second.\n* `normal` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `fast` - The standard 4th generation UCS Fabric Interconnect with 54 ports."</para>
+        /// <para type="description">"Configures the LACP control-packet rate. Fast sends a packet every second and Normal sends one every 30 seconds.\n* `normal` - Sends LACP control packets once every 30 seconds.\n* `fast` - Sends LACP control packets once every second."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6257,6 +6257,246 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get FabricRemoteSpanExporter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricRemoteSpanExporter", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightFabricRemoteSpanExporter : GetCmdletBase
+    {
+        public GetIntersightFabricRemoteSpanExporter()
+        {
+            ApiInstance = new FabricApi(Config);
+            MethodName = "GetFabricRemoteSpanExporterListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The configured state of Origin Interface configuration. If the configuration fails to deploy to the Fabric Interconnect, it can be redeployed by toggling the admin state.\n* `None` - Nil value when no action has been triggered by the user.\n* `Applied` - User configured settings are in applied state.\n* `Applying` - User settings are being applied on the target server.\n* `Failed` - User configured settings could not be applied.\n* `Scheduled` - User configured settings are scheduled to be applied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricRemoteSpanExporter.ConfigStateEnum ConfigState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source gateway that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Gateway
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates whether the effective ERSPAN exporter IP address is sourced from this configuration or shared from a NetFlow exporter on the same VLAN."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IpAddressSource
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public NetworkElementRelationship NetworkElement
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Operational state of the Origin Interface.\n* `Unknown` - SPAN session operational state is Unknown.\n* `Up` - SPAN session operational state is Up.\n* `Down` - SPAN session operational state is Down.\n* `Error` - SPAN session operational state is Error."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricRemoteSpanExporter.OperStateEnum OperState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Operational state reason of the SPAN session.\n* `Unknown` - Unknown operational state.\n* `Active` - Active and operational SPAN session.\n* `NoHardwareResource` - No hardware resources available.\n* `NoOperationalSrcDst` - No operational SPAN source or destination.\n* `GenericError` - Generic operational error.\n* `NoSourcesConfigured` - No source interfaces configured.\n* `NoDestinationConfigured` - No destination port configured.\n* `NoSourceDestinationConfigured` - No source or destination interface configured.\n* `SessionAdminShut` - Session is administratively disabled.\n* `WrongDestinationMode` - Wrong Destination mode configured.\n* `WrongSourceMode` - Wrong Source mode configured.\n* `TunnelMisconfDown` - Tunnel Misconfigured or Down.\n* `NoFlowIdSpecified` - No Flow ID specified for ERSPAN.\n* `NoErspanIdSpecified` - No ERSPAN ID is configured.\n* `MultiDestinationDenied` - Multiple destination is not allowed.\n* `VrfInvalid` - No valid VRF is configured.\n* `IpInvalid` - No valid destination IP address configured.\n* `GlobalIpInvalid` - No valid global origin IP address configured.\n* `NoRoute` - No route to destination IP address.\n* `ArpNotResolved` - ARP entry for destination is not resolved.\n* `NoEgressInterface` - Egress interface is not resolved.\n* `NoSviMember` - SVI member was not retrieved."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricRemoteSpanExporter.OperStateReasonEnum OperStateReason
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Effective IP address programmed on the Fabric Interconnect for the ERSPAN exporter origin interface. When the exporter VLAN is shared with NetFlow, this reflects the NetFlow-owned SVI address; otherwise it matches sourceIp."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string OperationalIpAddress
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source Interface IP Address that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SourceIp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source Interface Netmask that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string SourceNetmask
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source Interface VLAN ID that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidateRange(1, 4095)]
+        public long SourceVlanId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Switch ID (A or B) corresponding to network element."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SwitchId
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSanPinGroup.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightFabricSanPinGroup", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
@@ -6965,6 +7205,224 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get FabricSpanDestRemote.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanDestRemote", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightFabricSpanDestRemote : GetCmdletBase
+    {
+        public GetIntersightFabricSpanDestRemote()
+        {
+            ApiInstance = new FabricApi(Config);
+            MethodName = "GetFabricSpanDestRemoteListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"IP address of the remote ERSPAN destination."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DestinationIp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"ERSPAN ID identifies the ERSPAN session on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidateRange(1, 1023)]
+        public long ErspanId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Differentiated Services Code Point (DSCP) value for the ERSPAN tunnel IP packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long IpDscp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Time To Live (TTL) value for the ERSPAN tunnel IP packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidateRange(1, 255)]
+        public long IpTtl
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enables or disables packet truncation for the ERSPAN session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+        [ValidateRange(64, 1518)]
+        public long Mtu
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Enables or disables packet truncation for the ERSPAN session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool PacketTruncation
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Session ID identifies the SPAN session on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long SessionId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a fabricSpanSession resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public FabricSpanSessionRelationship SpanSession
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Switch ID (A or B) corresponding to network element."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SwitchId
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get FabricSpanSession.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightFabricSpanSession", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
@@ -7021,6 +7479,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -7090,7 +7549,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Operational state reason of the SPAN session.\n* `Unknown` - Unknown operational state.\n* `Active` - Active and operational SPAN session.\n* `NoHardwareResource` - No hardware resources available.\n* `NoOperationalSrcDst` - No operational SPAN source or destination.\n* `GenericError` - Generic operational error.\n* `NoSourcesConfigured` - No source interfaces configured.\n* `NoDestinationConfigured` - No destination port configured.\n* `NoSourceDestinationConfigured` - No source or destination interface configured.\n* `SessionAdminShut` - Session is administratively disabled.\n* `WrongDestinationMode` - Wrong Destination mode configured.\n* `WrongSourceMode` - Wrong Source mode configured.\n* `TunnelMisconfDown` - Tunnel Misconfigured or Down.\n* `NoFlowIdSpecified` - No Flow ID specified for ERSPAN."</para>
+        /// <para type="description">"Operational state reason of the SPAN session.\n* `Unknown` - Unknown operational state.\n* `Active` - Active and operational SPAN session.\n* `NoHardwareResource` - No hardware resources available.\n* `NoOperationalSrcDst` - No operational SPAN source or destination.\n* `GenericError` - Generic operational error.\n* `NoSourcesConfigured` - No source interfaces configured.\n* `NoDestinationConfigured` - No destination port configured.\n* `NoSourceDestinationConfigured` - No source or destination interface configured.\n* `SessionAdminShut` - Session is administratively disabled.\n* `WrongDestinationMode` - Wrong Destination mode configured.\n* `WrongSourceMode` - Wrong Source mode configured.\n* `TunnelMisconfDown` - Tunnel Misconfigured or Down.\n* `NoFlowIdSpecified` - No Flow ID specified for ERSPAN.\n* `NoErspanIdSpecified` - No ERSPAN ID is configured.\n* `MultiDestinationDenied` - Multiple destination is not allowed.\n* `VrfInvalid` - No valid VRF is configured.\n* `IpInvalid` - No valid destination IP address configured.\n* `GlobalIpInvalid` - No valid global origin IP address configured.\n* `NoRoute` - No route to destination IP address.\n* `ArpNotResolved` - ARP entry for destination is not resolved.\n* `NoEgressInterface` - Egress interface is not resolved.\n* `NoSviMember` - SVI member was not retrieved."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -7119,6 +7578,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public long SessionId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Session Type identifies whether the traffic mirroring session is SPAN or ERSPAN.\n* `SPAN` - SPAN traffic mirroring session.\n* `ERSPAN` - Encapsulated Remote SPAN (ERSPAN) traffic mirroring session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public FabricSpanSession.SessionTypeEnum SessionType
         {
             get;
             set;
@@ -13220,7 +13690,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Flag used to indicate whether LACP PDUs are to be sent 'fast', i.e., every 1 second.\n* `normal` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `fast` - The standard 4th generation UCS Fabric Interconnect with 54 ports."</para>
+        /// <para type="description">"Configures the LACP control-packet rate. Fast sends a packet every second and Normal sends one every 30 seconds.\n* `normal` - Sends LACP control packets once every 30 seconds.\n* `fast` - Sends LACP control packets once every second."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -15002,6 +15472,155 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New FabricRemoteSpanExporter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightFabricRemoteSpanExporter", SupportsShouldProcess = true)]
+    public class NewIntersightFabricRemoteSpanExporter : NewCmdletBase
+    {
+        public NewIntersightFabricRemoteSpanExporter()
+        {
+            ApiInstance = new FabricApi(Config);
+            ModelObject = new FabricRemoteSpanExporter();
+            MethodName = "CreateFabricRemoteSpanExporterWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Source gateway that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Gateway
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkElementRelationship NetworkElement
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Source Interface IP Address that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SourceIp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source Interface Netmask that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string SourceNetmask
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source Interface VLAN ID that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 4095)]
+        public long SourceVlanId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Switch ID (A or B) corresponding to network element."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SwitchId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfNoneMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSanPinGroup.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightFabricSanPinGroup", SupportsShouldProcess = true)]
@@ -15546,6 +16165,163 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to New FabricSpanDestRemote.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.New, "IntersightFabricSpanDestRemote", SupportsShouldProcess = true)]
+    public class NewIntersightFabricSpanDestRemote : NewCmdletBase
+    {
+        public NewIntersightFabricSpanDestRemote()
+        {
+            ApiInstance = new FabricApi(Config);
+            ModelObject = new FabricSpanDestRemote();
+            MethodName = "CreateFabricSpanDestRemoteWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"IP address of the remote ERSPAN destination."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DestinationIp
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"ERSPAN ID identifies the ERSPAN session on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 1023)]
+        public long ErspanId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Differentiated Services Code Point (DSCP) value for the ERSPAN tunnel IP packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long IpDscp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Time To Live (TTL) value for the ERSPAN tunnel IP packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 255)]
+        public long IpTtl
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enables or disables packet truncation for the ERSPAN session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(64, 1518)]
+        public long Mtu
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Enables or disables packet truncation for the ERSPAN session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool PacketTruncation
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a fabricSpanSession resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSpanSessionRelationship SpanSession
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, If-None-Match used with the * value can be used to create a resource not known to exist, guaranteeing that another resource creation didn't happen before, losing the data of the previous put. The request will be processed only if the eventually existing resource's ETag doesn't match any of the values listed. Otherwise, the status code 412 (Precondition Failed) is used. The asterisk is a special value representing any resource. It is only useful when creating a resource, usually with PUT, to check if another resource with the identity has already been created before. The comparison with the stored ETag uses the weak comparison algorithm, meaning two resources are considered identical if the content is equivalent - they don't have to be identical byte for byte.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfNoneMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to New FabricSpanSession.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.New, "IntersightFabricSpanSession", SupportsShouldProcess = true)]
@@ -15595,6 +16371,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricAbstractSpanDestRemote resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<FabricAbstractSpanDestRemoteRelationship> DestRemotes
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -15635,6 +16422,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Session Type identifies whether the traffic mirroring session is SPAN or ERSPAN.\n* `SPAN` - SPAN traffic mirroring session.\n* `ERSPAN` - Encapsulated Remote SPAN (ERSPAN) traffic mirroring session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSpanSession.SessionTypeEnum SessionType
+        {
+            get;
+            set;
+        }
 
 
 
@@ -18627,6 +19425,18 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove FabricRemoteSpanExporter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricRemoteSpanExporter", SupportsShouldProcess = true)]
+    public class RemoveIntersightFabricRemoteSpanExporter : RemoveCmdletBase
+    {
+        public RemoveIntersightFabricRemoteSpanExporter()
+        {
+            ApiInstance = new FabricApi(Config);
+            MethodName = "DeleteFabricRemoteSpanExporterWithHttpInfo";
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Remove FabricSanPinGroup.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Remove, "IntersightFabricSanPinGroup", SupportsShouldProcess = true)]
@@ -18672,6 +19482,18 @@ namespace Intersight.PowerShell
         {
             ApiInstance = new FabricApi(Config);
             MethodName = "DeleteFabricSpanDestEthPortWithHttpInfo";
+        }
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Remove FabricSpanDestRemote.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Remove, "IntersightFabricSpanDestRemote", SupportsShouldProcess = true)]
+    public class RemoveIntersightFabricSpanDestRemote : RemoveCmdletBase
+    {
+        public RemoveIntersightFabricSpanDestRemote()
+        {
+            ApiInstance = new FabricApi(Config);
+            MethodName = "DeleteFabricSpanDestRemoteWithHttpInfo";
         }
     }
     /// <summary>
@@ -21046,7 +21868,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Flag used to indicate whether LACP PDUs are to be sent 'fast', i.e., every 1 second.\n* `normal` - The expanded 4th generation UCS Fabric Interconnect with 108 ports.\n* `fast` - The standard 4th generation UCS Fabric Interconnect with 54 ports."</para>
+        /// <para type="description">"Configures the LACP control-packet rate. Fast sends a packet every second and Normal sends one every 30 seconds.\n* `normal` - Sends LACP control packets once every 30 seconds.\n* `fast` - Sends LACP control packets once every second."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -22696,6 +23518,144 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set FabricRemoteSpanExporter.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricRemoteSpanExporter", SupportsShouldProcess = true)]
+    public class SetIntersightFabricRemoteSpanExporter : SetCmdletBase
+    {
+        public SetIntersightFabricRemoteSpanExporter()
+        {
+            ApiInstance = new FabricApi(Config);
+            ModelObject = new FabricRemoteSpanExporter();
+            MethodName = "UpdateFabricRemoteSpanExporterWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Source gateway that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Gateway
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NetworkElementRelationship NetworkElement
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"Source Interface IP Address that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SourceIp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source Interface Netmask that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^([1-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$")]
+        public string SourceNetmask
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Source Interface VLAN ID that acts as the origin interface for ERSPAN tunnel frames on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 4095)]
+        public long SourceVlanId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Switch ID (A or B) corresponding to network element."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string SwitchId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSanPinGroup.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightFabricSanPinGroup", SupportsShouldProcess = true)]
@@ -23196,6 +24156,152 @@ namespace Intersight.PowerShell
         }
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Set FabricSpanDestRemote.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Set, "IntersightFabricSpanDestRemote", SupportsShouldProcess = true)]
+    public class SetIntersightFabricSpanDestRemote : SetCmdletBase
+    {
+        public SetIntersightFabricSpanDestRemote()
+        {
+            ApiInstance = new FabricApi(Config);
+            ModelObject = new FabricSpanDestRemote();
+            MethodName = "UpdateFabricSpanDestRemoteWithHttpInfo";
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"IP address of the remote ERSPAN destination."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string DestinationIp
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"ERSPAN ID identifies the ERSPAN session on the Fabric Interconnect."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 1023)]
+        public long ErspanId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Differentiated Services Code Point (DSCP) value for the ERSPAN tunnel IP packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long IpDscp
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Time To Live (TTL) value for the ERSPAN tunnel IP packets."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(1, 255)]
+        public long IpTtl
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enables or disables packet truncation for the ERSPAN session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidateRange(64, 1518)]
+        public long Mtu
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Enables or disables packet truncation for the ERSPAN session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool PacketTruncation
+        {
+            get;
+            set;
+        }
+
+
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a fabricSpanSession resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSpanSessionRelationship SpanSession
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">For methods that apply server-side changes, and in particular for PUT, If-Match can be used to prevent the lost update problem. It can check if the modification of a resource that the user wants to upload will not override another change that has been done since the original resource was fetched. If the request cannot be fulfilled, the 412 (Precondition Failed) response is returned. When modifying a resource using POST or PUT, the If-Match header must be set to the value of the resource ModTime property after which no lost update problem should occur. For example, a client send a GET request to obtain a resource, which includes the ModTime property. The ModTime indicates the last time the resource was created or modified. The client then sends a POST or PUT request with the If-Match header set to the ModTime property of the resource as obtained in the GET request.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false)]
+
+        public String IfMatch
+        {
+            get;
+            set;
+        }
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Set FabricSpanSession.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Set, "IntersightFabricSpanSession", SupportsShouldProcess = true)]
@@ -23245,6 +24351,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description">"An array of relationships to fabricAbstractSpanDestRemote resources."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<FabricAbstractSpanDestRemoteRelationship> DestRemotes
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -23285,6 +24402,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Session Type identifies whether the traffic mirroring session is SPAN or ERSPAN.\n* `SPAN` - SPAN traffic mirroring session.\n* `ERSPAN` - Encapsulated Remote SPAN (ERSPAN) traffic mirroring session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricSpanSession.SessionTypeEnum SessionType
+        {
+            get;
+            set;
+        }
 
 
 

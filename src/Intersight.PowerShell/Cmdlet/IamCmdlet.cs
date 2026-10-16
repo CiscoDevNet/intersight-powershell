@@ -8946,6 +8946,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"External identifier for the session, used for integration with external identity systems."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string ExternalIdentifier
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Failed logins since last login for admin user."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -10214,6 +10225,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"UserID or email of the user. For remote users, it is the value as configured in the IDP."</para>
         /// </summary>
@@ -10354,6 +10366,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Number of days a CUI-authenticated dynamic user's membership remains valid after the most recent successful regular CUI login. Zero disables retained membership for this UserGroup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DynamicUserRetentionDays
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Group type determines the type of groups that is being associated with users. By default, Default User group will be used for associating dynamic user login. If the value of the User Group is set to guest, then this type of user group will be used for guest user login.\n* `Default` - Default User Group Type used for dynamic users login.\n* `Guest` - Guest User Group type used for guest users login."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -10455,6 +10478,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
@@ -10478,6 +10502,170 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get IamUserGroupMembership.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightIamUserGroupMembership", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightIamUserGroupMembership : GetCmdletBase
+    {
+        public GetIntersightIamUserGroupMembership()
+        {
+            ApiInstance = new IamApi(Config);
+            MethodName = "GetIamUserGroupMembershipListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Time after which this retained membership cannot authorize a new C3 session."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ExpirationTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Time at which a regular CUI login most recently validated this UserGroup membership."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime LastValidatedTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a iamUser resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamUserRelationship User
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a iamUserGroup resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public IamUserGroupRelationship UserGroup
+        {
+            get;
+            set;
+        }
 
 
         // <summary>
@@ -14688,6 +14876,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"UserID or email of the user. For remote users, it is the value as configured in the IDP."</para>
         /// </summary>
@@ -14775,6 +14964,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Number of days a CUI-authenticated dynamic user's membership remains valid after the most recent successful regular CUI login. Zero disables retained membership for this UserGroup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DynamicUserRetentionDays
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Group type determines the type of groups that is being associated with users. By default, Default User group will be used for associating dynamic user login. If the value of the User Group is set to guest, then this type of user group will be used for guest user login.\n* `Default` - Default User Group Type used for dynamic users login.\n* `Guest` - Guest User Group type used for guest users login."</para>
@@ -14868,6 +15068,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<IamRoutingRuleReference> RoutingRules
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description"></para>
@@ -14879,6 +15090,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -19434,6 +19646,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"UserID or email of the user. For remote users, it is the value as configured in the IDP."</para>
         /// </summary>
@@ -19510,6 +19723,17 @@ namespace Intersight.PowerShell
 
 
 
+
+        // <summary>
+        /// <para type="description">"Number of days a CUI-authenticated dynamic user's membership remains valid after the most recent successful regular CUI login. Zero disables retained membership for this UserGroup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DynamicUserRetentionDays
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Group type determines the type of groups that is being associated with users. By default, Default User group will be used for associating dynamic user login. If the value of the User Group is set to guest, then this type of user group will be used for guest user login.\n* `Default` - Default User Group Type used for dynamic users login.\n* `Guest` - Guest User Group type used for guest users login."</para>
@@ -19603,6 +19827,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<IamRoutingRuleReference> RoutingRules
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description"></para>
@@ -19614,6 +19849,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

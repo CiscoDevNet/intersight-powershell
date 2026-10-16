@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightApplianceClusterInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BuildType< string>][-ClassId< ApplianceClusterInfo.ClassIdEnum>][-DeploymentSize< string>][-Gateway< string>][-Hostip< string>][-Hostname< string>][-HypervisorType< ApplianceClusterInfo.HypervisorTypeEnum>][-InstallerVersion< string>][-Moid< string>][-NodeType< ApplianceClusterInfo.NodeTypeEnum>][-ObjectType< ApplianceClusterInfo.ObjectTypeEnum>][-PartitionDatabase< long>][-PartitionFileCisco< long>][-PartitionOptData< long>][-PartitionOptKafka< long>][-PartitionOptMongo< long>][-PartitionVarLibDocker< long>][-PartitionVarLog< long>][-Peerkey< string>][-Responsekey< string>][-Subnetmask< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightApplianceClusterInfo [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BuildType< string>][-ClassId< ApplianceClusterInfo.ClassIdEnum>][-DeploymentSize< string>][-Gateway< string>][-Hostip< string>][-Hostname< string>][-HypervisorType< ApplianceClusterInfo.HypervisorTypeEnum>][-InstallerVersion< string>][-Moid< string>][-NodeType< ApplianceClusterInfo.NodeTypeEnum>][-ObjectType< ApplianceClusterInfo.ObjectTypeEnum>][-PartitionDatabase< long>][-PartitionFileCisco< long>][-PartitionOptData< long>][-PartitionOptKafka< long>][-PartitionOptMongo< long>][-PartitionVarLibDocker< long>][-PartitionVarLog< long>][-Peerkey< string>][-Responsekey< string>][-SignedManifest< byte[]>][-Subnetmask< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Uuid< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -339,6 +339,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SignedManifest
+The signed manifest content for verifying integrity of cluster artifacts.
+
+Note :- Use Initialize-Intersightbyte[] to create the object of complex type byte[]
+
+```yaml
+Type: byte[]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Subnetmask
 Subnet Mask of the peer node.
 
@@ -444,3 +461,5 @@ PS C:\> Initialize-IntersightApplianceClusterInfo
 ## RELATED LINKS
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
+
+[Initialize-Intersightbyte[]](./Initialize-Intersightbyte[].md)

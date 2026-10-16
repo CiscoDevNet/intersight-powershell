@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightCondAlarmSuppressionDryRun [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmRules< System.Collections.Generic.List`1[Model.CondAlarmRuleExpression]>][-ClassId< CondAlarmSuppressionDryRun.ClassIdEnum>][-Moid< string>][-ObjectType< CondAlarmSuppressionDryRun.ObjectTypeEnum>][-RulesOperator< CondAlarmSuppressionDryRun.RulesOperatorEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightCondAlarmSuppressionDryRun [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AlarmRules< System.Collections.Generic.List`1[Model.CondAbstractAlarmRule]>][-ClassId< CondAlarmSuppressionDryRun.ClassIdEnum>][-Moid< string>][-ObjectType< CondAlarmSuppressionDryRun.ObjectTypeEnum>][-Organization< Model.OrganizationOrganizationRelationship>][-RulesOperator< CondAlarmSuppressionDryRun.RulesOperatorEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -42,10 +42,10 @@ Accept wildcard characters: False
 ### -AlarmRules
 
 
-Note :- Use Initialize-IntersightCondAlarmRuleExpression to create the object of complex type CondAlarmRuleExpression
+Note :- Use Initialize-IntersightCondAbstractAlarmRule to create the object of complex type CondAbstractAlarmRule
 
 ```yaml
-Type: System.Collections.Generic.List`1[Model.CondAlarmRuleExpression]
+Type: System.Collections.Generic.List`1[Model.CondAbstractAlarmRule]
 Parameter Sets: (All)
 Aliases:
 
@@ -91,6 +91,24 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: CondAlarmSuppressionDryRun.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Organization
+A reference to a organizationOrganization resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
+
+ Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
+or use the cmdlet Initialize-IntersightMoMoRef.
+
+```yaml
+Type: Model.OrganizationOrganizationRelationship
 Parameter Sets: (All)
 Aliases:
 
@@ -190,6 +208,6 @@ PS C:\> Initialize-IntersightCondAlarmSuppressionDryRun
 
 ## RELATED LINKS
 
-[Initialize-IntersightCondAlarmRuleExpression](./Initialize-IntersightCondAlarmRuleExpression.md)
+[Initialize-IntersightCondAbstractAlarmRule](./Initialize-IntersightCondAbstractAlarmRule.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

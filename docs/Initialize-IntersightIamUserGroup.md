@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamUserGroup [-AccessActivationTime< DateTime>][-AccessExpiryTime< DateTime>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamUserGroup.ClassIdEnum>][-GroupType< IamUserGroup.GroupTypeEnum>][-Idp< Model.IamIdpRelationship>][-Idpreference< Model.IamIdpReferenceRelationship>][-Instruction< string>][-Moid< string>][-Name< string>][-ObjectType< IamUserGroup.ObjectTypeEnum>][-Permissions< System.Collections.Generic.List`1[Model.IamPermissionRelationship]>][-Qualifier< Model.IamAbstractQualifierRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamUserGroup [-AccessActivationTime< DateTime>][-AccessExpiryTime< DateTime>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamUserGroup.ClassIdEnum>][-DynamicUserRetentionDays< long>][-GroupType< IamUserGroup.GroupTypeEnum>][-Idp< Model.IamIdpRelationship>][-Idpreference< Model.IamIdpReferenceRelationship>][-Instruction< string>][-Moid< string>][-Name< string>][-ObjectType< IamUserGroup.ObjectTypeEnum>][-Permissions< System.Collections.Generic.List`1[Model.IamPermissionRelationship]>][-Qualifier< Model.IamAbstractQualifierRelationship>][-RoutingRules< System.Collections.Generic.List`1[Model.IamRoutingRuleReference]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,6 +74,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: IamUserGroup.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DynamicUserRetentionDays
+Number of days a CUI-authenticated dynamic user&apos;s membership remains valid after the most recent successful regular CUI login. Zero disables retained membership for this UserGroup.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -231,6 +246,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -RoutingRules
+
+
+Note :- Use Initialize-IntersightIamRoutingRuleReference to create the object of complex type IamRoutingRuleReference
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.IamRoutingRuleReference]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Tags
 
 
@@ -306,5 +338,7 @@ PS C:\> Initialize-IntersightIamUserGroup
 ## RELATED LINKS
 
 [Initialize-IntersightDateTime](./Initialize-IntersightDateTime.md)
+
+[Initialize-IntersightIamRoutingRuleReference](./Initialize-IntersightIamRoutingRuleReference.md)
 
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

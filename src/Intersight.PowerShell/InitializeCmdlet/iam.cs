@@ -3479,7 +3479,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The beta feature that will be enabled for specific account.\n* `IWO` - Intersight Workflow Optimizer.\n* `Hitachi` - Support to claim Hitachi Storage arrays using the Intersight Orchestrator framework.\n* `KubernetesExtension` - Extension to the IKS and Adopted Clusters.\n* `NetAppIO` - Support to claim NetApp Storage arrays as IO targets.\n* `IvsPublicCloud` - Enables virtualization service for public clouds.\n* `TerraformCloud` - Enables an ability to create Terraform Cloud.\n* `WashingtonEFT` - Support for EFT customers to use Washington firmware images for upgrades.\n* `Solutions` - Support for managing solutions.\n* `IksBm` - Enables Intersight Kubernetes Service on Baremetal server.\n* `NexusCloud` - Enables Nexus Cloud services functionality.\n* `NexusCloudTrial` - Enables Nexus Cloud trial period.\n* `NexusCloudUpgradeAssist` - Enables Nexus Cloud upgrade assist.\n* `NexusCloudSustainability` - Enables Nexus Cloud sustainability.\n* `PlatformUIRefresh` - Enables platform refreshed UI with new service launcher.\n* `IksGpu` - Enables GPU support for Intersight Kubernetes Service.\n* `IwoAppServiceVerticalScaling` - Enables vertical Scaling of App Service Plans.\n* `IwoDataExporter` - Enables IWO Data Exporter component.\n* `IwoMigrate` - Enables IWO data Migration.\n* `NexusCloudTechPreviewGold` - Enable Nexus Cloud Preview of stable features, available for public consumption.\n* `NexusCloudTechPreviewSilver` - Enable Nexus Cloud Preview of beta features. This feature set is intended for consumption by internal audiences.\n* `NexusCloudTechPreviewBronze` - Enable Nexus Cloud Preview of features still in development. This feature set is intended for consumption by internal audiences.\n* `DisconnectedTargetAlarm` - Raise an alarm when a Target is disconnected from Intersight. Intersight is unable to manage disconnected Targets.\n* `AsAService` - Enable AsAService Preview of beta features. This feature set is intended for consumption by selective audiences.\n* `EMEA` - Enable all avaialble features on Intersight EMEA region.\n* `CrossPlatformNavigation` - Enable Cross-Platform Navigation on UI.\n* `WorkflowsPreview` - Enable Workflows preview for this account.\n* `WorkflowsIntersightAssets` - Enable workflow Intersight assets for this account.\n* `ManualKEKSupport` - Enable support for Manual key to enhance storage controller security for this account.\n* `FirmwareConsolidationEFT` - Enable usage of firmware images transitioned from CCO to Intersight. This feature set is intended for consumption by internal audiences.\n* `FunctionAsAService` - Enable the usage of the function as a service (faas) for Workflows. This feature set is intended for consumption by selective audiences.\n* `FI6664EFT` - Support for EFT customers to use FI-6664 in Port Policy.\n* `GranularPrivilegeSets` - Enable granular privilege sets for this account.\n* `UnifiedEdge` - Enable Unified Edge related features for Avatar Platform.\n* `Goldeneye` - Enable Goldeneye related features.\n* `FI6652EFT` - Support for EFT customers to use FI-6652 in Port Policy.\n* `BackupAndRestore` - Enable Backup and Restore functionality for this account.\n* `CUIIntegration` - Enables Cisco Unified Identity (CUI) integration for Intersight accounts. With this flag, customers access their accounts using the intersight.com/cui URI and CUI IdP. Standard CCI or SSO login flows remain available during the transition period. Cisco Cloud Control customers must use /cui to create new accounts or contact Product Management to enable this feature to existing accounts, to use Cisco Cloud Control and Cisco Unified Identity.\n* `UnifiedEdgeSRN` - Enable Unified Edge Secure Router Node related features for Avatar Platform."</para>
+        /// <para type="description">"The beta feature that will be enabled for specific account.\n* `IWO` - Intersight Workflow Optimizer.\n* `Hitachi` - Support to claim Hitachi Storage arrays using the Intersight Orchestrator framework.\n* `KubernetesExtension` - Extension to the IKS and Adopted Clusters.\n* `NetAppIO` - Support to claim NetApp Storage arrays as IO targets.\n* `IvsPublicCloud` - Enables virtualization service for public clouds.\n* `TerraformCloud` - Enables an ability to create Terraform Cloud.\n* `WashingtonEFT` - Support for EFT customers to use Washington firmware images for upgrades.\n* `Solutions` - Support for managing solutions.\n* `IksBm` - Enables Intersight Kubernetes Service on Baremetal server.\n* `NexusCloud` - Enables Nexus Cloud services functionality.\n* `NexusCloudTrial` - Enables Nexus Cloud trial period.\n* `NexusCloudUpgradeAssist` - Enables Nexus Cloud upgrade assist.\n* `NexusCloudSustainability` - Enables Nexus Cloud sustainability.\n* `PlatformUIRefresh` - Enables platform refreshed UI with new service launcher.\n* `IksGpu` - Enables GPU support for Intersight Kubernetes Service.\n* `IwoAppServiceVerticalScaling` - Enables vertical Scaling of App Service Plans.\n* `IwoDataExporter` - Enables IWO Data Exporter component.\n* `IwoMigrate` - Enables IWO data Migration.\n* `NexusCloudTechPreviewGold` - Enable Nexus Cloud Preview of stable features, available for public consumption.\n* `NexusCloudTechPreviewSilver` - Enable Nexus Cloud Preview of beta features. This feature set is intended for consumption by internal audiences.\n* `NexusCloudTechPreviewBronze` - Enable Nexus Cloud Preview of features still in development. This feature set is intended for consumption by internal audiences.\n* `DisconnectedTargetAlarm` - Raise an alarm when a Target is disconnected from Intersight. Intersight is unable to manage disconnected Targets.\n* `AsAService` - Enable AsAService Preview of beta features. This feature set is intended for consumption by selective audiences.\n* `EMEA` - Enable all avaialble features on Intersight EMEA region.\n* `CrossPlatformNavigation` - Enable Cross-Platform Navigation on UI.\n* `WorkflowsPreview` - Enable Workflows preview for this account.\n* `WorkflowsIntersightAssets` - Enable workflow Intersight assets for this account.\n* `ManualKEKSupport` - Enable support for Manual key to enhance storage controller security for this account.\n* `FirmwareConsolidationEFT` - Enable usage of firmware images transitioned from CCO to Intersight. This feature set is intended for consumption by internal audiences.\n* `FunctionAsAService` - Enable the usage of the function as a service (faas) for Workflows. This feature set is intended for consumption by selective audiences.\n* `FI6664EFT` - Support for EFT customers to use FI-6664 in Port Policy.\n* `GranularPrivilegeSets` - Enable granular privilege sets for this account.\n* `UnifiedEdge` - Enable Unified Edge related features for Avatar Platform.\n* `Goldeneye` - Enable Goldeneye related features.\n* `FI6652EFT` - Support for EFT customers to use FI-6652 in Port Policy.\n* `BackupAndRestore` - Enable Backup and Restore functionality for this account.\n* `CUIIntegration` - Enables Cisco Unified Identity (CUI) integration for Intersight accounts. With this flag, customers access their accounts using the intersight.com/cui URI and CUI IdP. Standard CCI or SSO login flows remain available during the transition period. Cisco Cloud Control customers must use /cui to create new accounts or contact Product Management to enable this feature to existing accounts, to use Cisco Cloud Control and Cisco Unified Identity.\n* `UnifiedEdgeSRN` - Enable Unified Edge Secure Router Node related features for Avatar Platform.\n* `TargetClaimWithNFC` - Enable Target Claim with NFC for Mobile App."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -4350,7 +4350,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"If enabled, the endpoint encrypts all information sent to the LDAP server."</para>
+        /// <para type="description">"If enabled, the endpoint encrypts all information it sends to the LDAP server. LDAP encryption uses StartTLS over port 389."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -7744,6 +7744,91 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamRoutingRuleReference.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamRoutingRuleReference")]
+    public class InitializeIntersightIamRoutingRuleReference : PSCmdlet
+    {
+        public InitializeIntersightIamRoutingRuleReference()
+        {
+            ClassId = IamRoutingRuleReference.ClassIdEnum.IamRoutingRuleReference;
+            ObjectType = IamRoutingRuleReference.ObjectTypeEnum.IamRoutingRuleReference;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamRoutingRuleReference.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamRoutingRuleReference.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Stable external identity-provider routing-rule identifier."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RuleId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Display name of the external identity-provider routing rule."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string RuleName
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamRoutingRuleReference initObject = new Intersight.Model.IamRoutingRuleReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("RuleId"))
+            {
+                initObject.RuleId = this.RuleId;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RuleName"))
+            {
+                initObject.RuleName = this.RuleName;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize IamRule.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightIamRule")]
@@ -9524,6 +9609,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"Number of days a CUI-authenticated dynamic user's membership remains valid after the most recent successful regular CUI login. Zero disables retained membership for this UserGroup."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long DynamicUserRetentionDays
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Group type determines the type of groups that is being associated with users. By default, Default User group will be used for associating dynamic user login. If the value of the User Group is set to guest, then this type of user group will be used for guest user login.\n* `Default` - Default User Group Type used for dynamic users login.\n* `Guest` - Guest User Group type used for guest users login."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -9618,6 +9713,16 @@ namespace Intersight.PowerShell
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
+        public List<Model.IamRoutingRuleReference> RoutingRules
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
         public List<Model.MoTag> Tags
         {
             get;
@@ -9641,6 +9746,10 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DynamicUserRetentionDays"))
+            {
+                initObject.DynamicUserRetentionDays = this.DynamicUserRetentionDays;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("GroupType"))
             {
                 initObject.GroupType = this.GroupType;
@@ -9674,6 +9783,95 @@ namespace Intersight.PowerShell
             {
                 initObject.Qualifier = this.Qualifier;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("RoutingRules"))
+            {
+                initObject.RoutingRules = this.RoutingRules;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize IamUserGroupMembership.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightIamUserGroupMembership")]
+    public class InitializeIntersightIamUserGroupMembership : PSCmdlet
+    {
+        public InitializeIntersightIamUserGroupMembership()
+        {
+            ClassId = IamUserGroupMembership.ClassIdEnum.IamUserGroupMembership;
+            ObjectType = IamUserGroupMembership.ObjectTypeEnum.IamUserGroupMembership;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamUserGroupMembership.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamUserGroupMembership.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.IamUserGroupMembership initObject = new Intersight.Model.IamUserGroupMembership();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
