@@ -6407,6 +6407,120 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricPeerInterfaceCompatibilityIssue.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricPeerInterfaceCompatibilityIssue")]
+    public class InitializeIntersightFabricPeerInterfaceCompatibilityIssue : PSCmdlet
+    {
+        public InitializeIntersightFabricPeerInterfaceCompatibilityIssue()
+        {
+            ClassId = FabricPeerInterfaceCompatibilityIssue.ClassIdEnum.FabricPeerInterfaceCompatibilityIssue;
+            ObjectType = FabricPeerInterfaceCompatibilityIssue.ObjectTypeEnum.FabricPeerInterfaceCompatibilityIssue;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricPeerInterfaceCompatibilityIssue.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricPeerInterfaceCompatibilityIssue.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricPeerInterfaceCompatibilityIssue initObject = new Intersight.Model.FabricPeerInterfaceCompatibilityIssue();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FabricPeerInterfaceCompatibilityIssues.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFabricPeerInterfaceCompatibilityIssues")]
+    public class InitializeIntersightFabricPeerInterfaceCompatibilityIssues : PSCmdlet
+    {
+        public InitializeIntersightFabricPeerInterfaceCompatibilityIssues()
+        {
+            ClassId = FabricPeerInterfaceCompatibilityIssues.ClassIdEnum.FabricPeerInterfaceCompatibilityIssues;
+            ObjectType = FabricPeerInterfaceCompatibilityIssues.ObjectTypeEnum.FabricPeerInterfaceCompatibilityIssues;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricPeerInterfaceCompatibilityIssues.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FabricPeerInterfaceCompatibilityIssues.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FabricPeerInterfaceCompatibilityIssues initObject = new Intersight.Model.FabricPeerInterfaceCompatibilityIssues();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FabricPfcWatchDog.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFabricPfcWatchDog")]
@@ -11827,7 +11941,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Enable this option to automatically allow the VLAN on inter-cluster links. To configure disjoint Layer 2 VLANs, 'Disable' must be specified together with 'AutoAllowOnUplinks.' Note that 'AutoAllowOnClusterLinks' cannot be enabled for the default VLAN 1 or the native VLAN."</para>
+        /// <para type="description">"Enable this option to automatically allow the VLAN on intra-chassis links. The traffic is not carried outside the chassis."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11837,7 +11951,27 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified alongside AutoAllowOnClusterLinks for disjoint layer 2 VLAN configuration. Default VLAN 1 cannot be configured as disjoint layer 2 VLAN."</para>
+        /// <para type="description">"Restricts this VLAN to intra-chassis traffic only. It does not carry traffic outside the chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AutoAllowOnInterSwitchPorts
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Automatically applies VLANs to backplane ports connected to slots configured with secure router roles."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AutoAllowOnSecureRouterRoles
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified for Disjoint Layer 2 VLAN configuration. Default VLAN-1 cannot be configured as Disjoint Layer 2 VLAN."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11867,7 +12001,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this FI."</para>
+        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -11978,6 +12112,14 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AutoAllowOnClusterLinks"))
             {
                 initObject.AutoAllowOnClusterLinks = this.AutoAllowOnClusterLinks;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AutoAllowOnInterSwitchPorts"))
+            {
+                initObject.AutoAllowOnInterSwitchPorts = this.AutoAllowOnInterSwitchPorts;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("AutoAllowOnSecureRouterRoles"))
+            {
+                initObject.AutoAllowOnSecureRouterRoles = this.AutoAllowOnSecureRouterRoles;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("AutoAllowOnUplinks"))
             {
@@ -12264,16 +12406,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"This setting determines whether the VLAN is automatically allowed on inter-cluster links within this domain."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public bool AutoAllowOnClusterLinks
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -12321,10 +12453,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("AutoAllowOnClusterLinks"))
-            {
-                initObject.AutoAllowOnClusterLinks = this.AutoAllowOnClusterLinks;
             }
             initObject.ClassId = this.ClassId;
             if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))

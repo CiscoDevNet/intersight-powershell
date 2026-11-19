@@ -1864,6 +1864,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"When true, routes outbound webhook traffic through the appliance's configured\ndata center proxy (via Equinox). Only applicable for on-prem appliance deployments;\nignored on SaaS."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool EnableProxy
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -1914,6 +1924,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("CustomHeaders"))
             {
                 initObject.CustomHeaders = this.CustomHeaders;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("EnableProxy"))
+            {
+                initObject.EnableProxy = this.EnableProxy;
             }
             initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Secret"))

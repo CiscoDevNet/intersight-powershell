@@ -258,4 +258,6 @@ PS C:\> Set-IntersightEquipmentTransceiver
 
 [Get-IntersightEquipmentTransceiver](./Get-IntersightEquipmentTransceiver.md)
 
+[Initialize-IntersightFirmwareFirmwareInfo](./Initialize-IntersightFirmwareFirmwareInfo.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

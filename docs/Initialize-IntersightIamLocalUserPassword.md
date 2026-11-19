@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamLocalUserPassword.ClassIdEnum>][-CurrentPassword< string>][-InitialPassword< string>][-Moid< string>][-NewPassword< string>][-ObjectType< IamLocalUserPassword.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamLocalUserPassword.ClassIdEnum>][-CurrentPassword< string>][-InitialPassword< string>][-Moid< string>][-NewPassword< string>][-ObjectType< IamLocalUserPassword.ObjectTypeEnum>][-Password< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -119,6 +119,21 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: IamLocalUserPassword.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Password
+User&apos;s current valid password.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 

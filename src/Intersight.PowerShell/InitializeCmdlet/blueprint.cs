@@ -85,7 +85,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The qualified name of blueprint."</para>
+        /// <para type="description">"The qualified name of the required blueprint."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -95,7 +95,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Specify the catalog moid that this blueprint belongs too. When catalog moid is not specified then the catalog of the parent blueprint is used first and if no blueprint can be found in that catalog, then the system catalog is used."</para>
+        /// <para type="description">"The catalog MOID that this blueprint belongs to. When the catalog MOID is not specified, the catalog of the parent blueprint is used first. If no blueprint can be found in that catalog, the system catalog is used."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -115,7 +115,17 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The description of that describes the purpose of including this dependent blueprint."</para>
+        /// <para type="description">"The OData rules that identify the blueprint versions that can satisfy this dependency."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.BlueprintOdataDependencyQualifier DependencyQualifier
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specifies why the required blueprint is included."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -125,7 +135,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"If any input of the nested blueprint needs to be modified in some form to include data from the parent blueprint, then the input parameters can be specified here."</para>
+        /// <para type="description">"Specifies input mappings for the required blueprint, including values derived from the referencing blueprint."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -155,7 +165,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The blueprint version. If not specified, the default version is used."</para>
+        /// <para type="description">"The version number of the blueprint."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -182,6 +192,10 @@ namespace Intersight.PowerShell
                 initObject.CatalogMoid = this.CatalogMoid;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("DependencyQualifier"))
+            {
+                initObject.DependencyQualifier = this.DependencyQualifier;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Description"))
             {
                 initObject.Description = this.Description;
@@ -198,6 +212,191 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
                 initObject.VarVersion = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BlueprintBlueprintInheritanceReference.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBlueprintBlueprintInheritanceReference")]
+    public class InitializeIntersightBlueprintBlueprintInheritanceReference : PSCmdlet
+    {
+        public InitializeIntersightBlueprintBlueprintInheritanceReference()
+        {
+            ClassId = BlueprintBlueprintInheritanceReference.ClassIdEnum.BlueprintBlueprintInheritanceReference;
+            ObjectType = BlueprintBlueprintInheritanceReference.ObjectTypeEnum.BlueprintBlueprintInheritanceReference;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The catalog MOID that this blueprint belongs to. When the catalog MOID is not specified, the catalog of the parent blueprint is used first. If no blueprint can be found in that catalog, the system catalog is used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CatalogMoid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintBlueprintInheritanceReference.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the referenced abstract blueprint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintBlueprintInheritanceReference.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The version number of the blueprint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BlueprintBlueprintInheritanceReference initObject = new Intersight.Model.BlueprintBlueprintInheritanceReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CatalogMoid"))
+            {
+                initObject.CatalogMoid = this.CatalogMoid;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject.VarVersion = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BlueprintCleanupOperation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBlueprintCleanupOperation")]
+    public class InitializeIntersightBlueprintCleanupOperation : PSCmdlet
+    {
+        public InitializeIntersightBlueprintCleanupOperation()
+        {
+            ClassId = BlueprintCleanupOperation.ClassIdEnum.BlueprintCleanupOperation;
+            ObjectType = BlueprintCleanupOperation.ObjectTypeEnum.BlueprintCleanupOperation;
+            Operation = BlueprintCleanupOperation.OperationEnum.Update;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintCleanupOperation.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.BlueprintGeneratedObjectOperationTarget> GeneratedObjects
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintCleanupOperation.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The operation to be performed after the service item deployment completes. Currently, only the 'Delete' operation is supported.\n* `Update` - The operation is to update the object via an HTTP PATCH operation.\n* `Delete` - The operation is to immediately delete the object via an HTTP DELETE operation.\n* `MarkDeleted` - The object is marked as deleted. This adds a tag to the object indicating that it should be deleted as part of the object cleanup task during workload deployment."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintCleanupOperation.OperationEnum Operation
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BlueprintCleanupOperation initObject = new Intersight.Model.BlueprintCleanupOperation();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("GeneratedObjects"))
+            {
+                initObject.GeneratedObjects = this.GeneratedObjects;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Operation"))
+            {
+                initObject.Operation = this.Operation;
             }
             WriteObject(initObject);
         }
@@ -231,6 +430,16 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public BlueprintGeneratedObjectMetadata.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.BlueprintCleanupOperation> CleanupOperations
         {
             get;
             set;
@@ -335,6 +544,10 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CleanupOperations"))
+            {
+                initObject.CleanupOperations = this.CleanupOperations;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Conditions"))
             {
                 initObject.Conditions = this.Conditions;
@@ -1042,6 +1255,148 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BlueprintOdataDependencyQualifier.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBlueprintOdataDependencyQualifier")]
+    public class InitializeIntersightBlueprintOdataDependencyQualifier : PSCmdlet
+    {
+        public InitializeIntersightBlueprintOdataDependencyQualifier()
+        {
+            ClassId = BlueprintOdataDependencyQualifier.ClassIdEnum.BlueprintOdataDependencyQualifier;
+            ObjectType = BlueprintOdataDependencyQualifier.ObjectTypeEnum.BlueprintOdataDependencyQualifier;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintOdataDependencyQualifier.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintOdataDependencyQualifier.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> Rules
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BlueprintOdataDependencyQualifier initObject = new Intersight.Model.BlueprintOdataDependencyQualifier();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Rules"))
+            {
+                initObject.Rules = this.Rules;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BlueprintOdataResourceQualifier.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBlueprintOdataResourceQualifier")]
+    public class InitializeIntersightBlueprintOdataResourceQualifier : PSCmdlet
+    {
+        public InitializeIntersightBlueprintOdataResourceQualifier()
+        {
+            ClassId = BlueprintOdataResourceQualifier.ClassIdEnum.BlueprintOdataResourceQualifier;
+            ObjectType = BlueprintOdataResourceQualifier.ObjectTypeEnum.BlueprintOdataResourceQualifier;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintOdataResourceQualifier.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintOdataResourceQualifier.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<string> Rules
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BlueprintOdataResourceQualifier initObject = new Intersight.Model.BlueprintOdataResourceQualifier();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Rules"))
+            {
+                initObject.Rules = this.Rules;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize BlueprintPreGenerateOperation.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightBlueprintPreGenerateOperation")]
@@ -1264,6 +1619,16 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.BlueprintResourceTypeQualifier> ResourceTypeQualifiers
+        {
+            get;
+            set;
+        }
 
         protected override void ProcessRecord()
         {
@@ -1279,6 +1644,95 @@ namespace Intersight.PowerShell
                 initObject.InputDefinition = this.InputDefinition;
             }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceTypeQualifiers"))
+            {
+                initObject.ResourceTypeQualifiers = this.ResourceTypeQualifiers;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BlueprintResourceTypeQualifier.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBlueprintResourceTypeQualifier")]
+    public class InitializeIntersightBlueprintResourceTypeQualifier : PSCmdlet
+    {
+        public InitializeIntersightBlueprintResourceTypeQualifier()
+        {
+            ClassId = BlueprintResourceTypeQualifier.ClassIdEnum.BlueprintResourceTypeQualifier;
+            ObjectType = BlueprintResourceTypeQualifier.ObjectTypeEnum.BlueprintResourceTypeQualifier;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintResourceTypeQualifier.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintResourceTypeQualifier.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Optional OData filter rules that further constrain which instances of resourceType are eligible. Rule expressions may reference values from ResourceConstraints.InputDefinition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.BlueprintOdataResourceQualifier OdataResourceQualifier
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The Intersight managed object type (for example, compute.Blade or equipment.Chassis) that this blueprint may bind to."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ResourceType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BlueprintResourceTypeQualifier initObject = new Intersight.Model.BlueprintResourceTypeQualifier();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("OdataResourceQualifier"))
+            {
+                initObject.OdataResourceQualifier = this.OdataResourceQualifier;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceType"))
+            {
+                initObject.ResourceType = this.ResourceType;
+            }
             WriteObject(initObject);
         }
 
@@ -1416,6 +1870,262 @@ namespace Intersight.PowerShell
             {
                 initObject.ServiceItemDefinitionName = this.ServiceItemDefinitionName;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
+            {
+                initObject.VarVersion = this.Version;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BlueprintValidatedConfigReference.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBlueprintValidatedConfigReference")]
+    public class InitializeIntersightBlueprintValidatedConfigReference : PSCmdlet
+    {
+        public InitializeIntersightBlueprintValidatedConfigReference()
+        {
+            ClassId = BlueprintValidatedConfigReference.ClassIdEnum.BlueprintValidatedConfigReference;
+            ObjectType = BlueprintValidatedConfigReference.ObjectTypeEnum.BlueprintValidatedConfigReference;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintValidatedConfigReference.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name for the object in the blueprint definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Name
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintValidatedConfigReference.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The selector to identify the object in the shared catalog."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|/api/v1/.*")]
+        public string Selector
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BlueprintValidatedConfigReference initObject = new Intersight.Model.BlueprintValidatedConfigReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
+            {
+                initObject.Name = this.Name;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Selector"))
+            {
+                initObject.Selector = this.Selector;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BlueprintVersionCompatibilityInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBlueprintVersionCompatibilityInfo")]
+    public class InitializeIntersightBlueprintVersionCompatibilityInfo : PSCmdlet
+    {
+        public InitializeIntersightBlueprintVersionCompatibilityInfo()
+        {
+            ClassId = BlueprintVersionCompatibilityInfo.ClassIdEnum.BlueprintVersionCompatibilityInfo;
+            CompatibilityType = BlueprintVersionCompatibilityInfo.CompatibilityTypeEnum.NotCompatible;
+            ObjectType = BlueprintVersionCompatibilityInfo.ObjectTypeEnum.BlueprintVersionCompatibilityInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.BlueprintVersionReference> Blueprints
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintVersionCompatibilityInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The update compatibility type for the listed blueprint versions relative to the current blueprint version.\n* `NotCompatible` - The previously published blueprint version cannot be updated to the current blueprint version.\n* `AutoUpdate` - The previously published blueprint version can be updated to the current blueprint version automatically.\n* `NeedsNewVersion` - The previously published blueprint version can move to the current blueprint version only by creating a new version of the dependent definition."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintVersionCompatibilityInfo.CompatibilityTypeEnum CompatibilityType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintVersionCompatibilityInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BlueprintVersionCompatibilityInfo initObject = new Intersight.Model.BlueprintVersionCompatibilityInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Blueprints"))
+            {
+                initObject.Blueprints = this.Blueprints;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("CompatibilityType"))
+            {
+                initObject.CompatibilityType = this.CompatibilityType;
+            }
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize BlueprintVersionReference.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightBlueprintVersionReference")]
+    public class InitializeIntersightBlueprintVersionReference : PSCmdlet
+    {
+        public InitializeIntersightBlueprintVersionReference()
+        {
+            ClassId = BlueprintVersionReference.ClassIdEnum.BlueprintVersionReference;
+            ObjectType = BlueprintVersionReference.ObjectTypeEnum.BlueprintVersionReference;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The catalog MOID that this blueprint belongs to. When the catalog MOID is not specified, the catalog of the parent blueprint is used first. If no blueprint can be found in that catalog, the system catalog is used."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string CatalogMoid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintVersionReference.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public BlueprintVersionReference.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The version number of the blueprint."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Version
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.BlueprintVersionReference initObject = new Intersight.Model.BlueprintVersionReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("CatalogMoid"))
+            {
+                initObject.CatalogMoid = this.CatalogMoid;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
                 initObject.VarVersion = this.Version;

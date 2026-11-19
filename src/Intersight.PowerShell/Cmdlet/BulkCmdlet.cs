@@ -1646,7 +1646,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"The body of the sub-request in string format."</para>
+        /// <para type="description">"Deprecated - The request body of the sub requests are with client and the response can be read from this MO. The identity information \nis populated in this property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 

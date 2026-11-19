@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPolicyConfigContext [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyConfigContext.ClassIdEnum>][-ControlAction< string>][-ErrorState< string>][-ObjectType< PolicyConfigContext.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPolicyConfigContext [-ActionQualifier< Model.PolicyActionQualifier>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyConfigContext.ClassIdEnum>][-ControlAction< string>][-ObjectType< PolicyConfigContext.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -23,6 +23,23 @@ Initialize-IntersightPolicyConfigContext [-AdditionalProperties< System.Collecti
 Initialize cmdlet is used to instantiate the object of complex type in the Powershell session, it does not create the object on the server.
 
 ## PARAMETERS
+
+### -ActionQualifier
+Qualifiers to control the action being triggered. Action qualifiers are to be specified based on the type of disruptions that an action is to be restricted to. For example, trigger the &apos;Deploy&apos; action to only perform network and management plane configurations.
+
+Note :- Use Initialize-IntersightPolicyActionQualifier to create the object of complex type PolicyActionQualifier
+
+```yaml
+Type: Model.PolicyActionQualifier
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
 
 ### -AdditionalProperties
 
@@ -56,21 +73,6 @@ Accept wildcard characters: False
 
 ### -ControlAction
 System action to trigger the appropriate workflow. Values -- No_op, ConfigChange, Deploy, Unbind.
-
-```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -ErrorState
-Indicates a profile&apos;s error state. Values -- Validation-error (Static validation error), Pre-config-error (Runtime validation error), Config-error (Runtime configuration error).
 
 ```yaml
 Type: string
@@ -155,3 +157,5 @@ PS C:\> Initialize-IntersightPolicyConfigContext
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightPolicyActionQualifier](./Initialize-IntersightPolicyActionQualifier.md)

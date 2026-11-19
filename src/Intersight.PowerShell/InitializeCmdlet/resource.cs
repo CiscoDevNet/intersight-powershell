@@ -235,6 +235,105 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize ResourceBlueprintResourceQualifier.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightResourceBlueprintResourceQualifier")]
+    public class InitializeIntersightResourceBlueprintResourceQualifier : PSCmdlet
+    {
+        public InitializeIntersightResourceBlueprintResourceQualifier()
+        {
+            ClassId = ResourceBlueprintResourceQualifier.ClassIdEnum.ResourceBlueprintResourceQualifier;
+            ObjectType = ResourceBlueprintResourceQualifier.ObjectTypeEnum.ResourceBlueprintResourceQualifier;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The reference name of the blueprint this qualifier block applies to—the same identifier used as BlueprintRefName in composed workload definitions (dependent or nested blueprint instance)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string BlueprintRefName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourceBlueprintResourceQualifier.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public ResourceBlueprintResourceQualifier.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.ResourceResourceQualifier> Qualifiers
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identifies what infrastructure class the nested qualifiers apply to—for example `equipment.Chassis` for a chassis anchor, or `compute.Blade` / `compute.RackUnit` for servers under a chassis. The runtime defines allowed values and matching semantics."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string ResourceType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.ResourceBlueprintResourceQualifier initObject = new Intersight.Model.ResourceBlueprintResourceQualifier();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BlueprintRefName"))
+            {
+                initObject.BlueprintRefName = this.BlueprintRefName;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Qualifiers"))
+            {
+                initObject.Qualifiers = this.Qualifiers;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ResourceType"))
+            {
+                initObject.ResourceType = this.ResourceType;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize ResourceChassisAndSlotQualification.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightResourceChassisAndSlotQualification")]

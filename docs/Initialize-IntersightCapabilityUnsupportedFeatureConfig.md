@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Generation
-The adapter generations that support this feature.\n* `4` - Fourth generation adapters (14xx). The PIDs of these adapters end with the string 04.\n* `2` - Second generation VIC adapters (12xx). The PIDs of these adapters end with the string 02.\n* `3` - Third generation adapters (13xx). The PIDs of these adapters end with the string 03.\n* `5` - Fifth generation adapters (15xx). The PIDs of these adapters contain the V5 string.
+The adapter generations that support this feature.\n* `4` - Fourth generation adapters (14xx). The PIDs of these adapters end with the string 04.\n* `2` - Second generation VIC adapters (12xx). The PIDs of these adapters end with the string 02.\n* `3` - Third generation adapters (13xx). The PIDs of these adapters end with the string 03.\n* `5` - Fifth generation adapters (15xx). The PIDs of these adapters contain the V5 string.\n* `6` - Sixth generation adapters (16xx). The PIDs of these adapters contain the V6 string.
 
 ```yaml
 Type: CapabilityUnsupportedFeatureConfig.GenerationEnum

@@ -5050,7 +5050,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The image name this action operates on."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
+        [ValidatePattern("^[a-zA-Z0-9._-]*$")]
         public string ImageName
         {
             get;

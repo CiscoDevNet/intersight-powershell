@@ -587,6 +587,120 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize EtherPeerInterfaceCompatibilityIssues.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightEtherPeerInterfaceCompatibilityIssues")]
+    public class InitializeIntersightEtherPeerInterfaceCompatibilityIssues : PSCmdlet
+    {
+        public InitializeIntersightEtherPeerInterfaceCompatibilityIssues()
+        {
+            ClassId = EtherPeerInterfaceCompatibilityIssues.ClassIdEnum.EtherPeerInterfaceCompatibilityIssues;
+            ObjectType = EtherPeerInterfaceCompatibilityIssues.ObjectTypeEnum.EtherPeerInterfaceCompatibilityIssues;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EtherPeerInterfaceCompatibilityIssues.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EtherPeerInterfaceCompatibilityIssues.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.EtherPeerInterfaceCompatibilityIssues initObject = new Intersight.Model.EtherPeerInterfaceCompatibilityIssues();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize EtherPeerPortCompatibilityDetail.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightEtherPeerPortCompatibilityDetail")]
+    public class InitializeIntersightEtherPeerPortCompatibilityDetail : PSCmdlet
+    {
+        public InitializeIntersightEtherPeerPortCompatibilityDetail()
+        {
+            ClassId = EtherPeerPortCompatibilityDetail.ClassIdEnum.EtherPeerPortCompatibilityDetail;
+            ObjectType = EtherPeerPortCompatibilityDetail.ObjectTypeEnum.EtherPeerPortCompatibilityDetail;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EtherPeerPortCompatibilityDetail.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public EtherPeerPortCompatibilityDetail.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.EtherPeerPortCompatibilityDetail initObject = new Intersight.Model.EtherPeerPortCompatibilityDetail();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize EtherPhysicalPort.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightEtherPhysicalPort")]

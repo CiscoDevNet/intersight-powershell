@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamServiceProvider [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamServiceProvider.ClassIdEnum>][-Moid< string>][-ObjectType< IamServiceProvider.ObjectTypeEnum>][-System< Model.IamSystemRelationship>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightIamServiceProvider [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamServiceProvider.ClassIdEnum>][-Moid< string>][-ObjectType< IamServiceProvider.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -74,24 +74,6 @@ The fully-qualified name of the instantiated, concrete type.\nThe value should b
 
 ```yaml
 Type: IamServiceProvider.ObjectTypeEnum
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -System
-A reference to a iamSystem resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline.
-
- Note:- To get the relationship object pass the MO to the cmdlet Get-IntersightMoMoRef 
-or use the cmdlet Initialize-IntersightMoMoRef.
-
-```yaml
-Type: Model.IamSystemRelationship
 Parameter Sets: (All)
 Aliases:
 

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DomainName< string>][-DomainNames< System.Collections.Generic.List`1[string]>][-EnableSingleLogout< bool>][-LdapMeta< IamLdapMetaRelationship>][-Metadata< string>][[-Moid]< string>][-Name< string>][-SkipWarning< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< IamIdp.TypeEnum>][-Usergroups< System.Collections.Generic.List`1[IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[IamUserRelationship]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightIamIdp [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-DomainName< string>][-DomainNames< System.Collections.Generic.List`1[string]>][-EnableSingleLogout< bool>][-LdapMeta< IamLdapMetaRelationship>][-Metadata< string>][[-Moid]< string>][-Name< string>][-SkipWarning< bool>][-SpMetadataHashMethod< IamIdp.SpMetadataHashMethodEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< IamIdp.TypeEnum>][-Usergroups< System.Collections.Generic.List`1[IamUserGroupRelationship]>][-Users< System.Collections.Generic.List`1[IamUserRelationship]>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -151,6 +151,21 @@ When users attempt the Account URL login with an unverified Domain Name, they ge
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SpMetadataHashMethod
+Selects the legacy (SHA-1) or current (SHA-2) SP certificate used to sign AuthN and logout requests during certificate rotation.\n* `Sha2` - Use the current SHA-2 SP signing certificate.\n* `Sha1` - Use the legacy SHA-1 SP signing certificate.
+
+```yaml
+Type: IamIdp.SpMetadataHashMethodEnum
 Parameter Sets: (All)
 Aliases:
 

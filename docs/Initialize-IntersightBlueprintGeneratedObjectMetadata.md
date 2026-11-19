@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBlueprintGeneratedObjectMetadata [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BlueprintGeneratedObjectMetadata.ClassIdEnum>][-Conditions< System.Collections.Generic.List`1[string]>][-Name< string>][-ObjectIteration< string>][-ObjectSource< Model.BlueprintBaseGeneratedObjectSourceMetadata>][-ObjectType< BlueprintGeneratedObjectMetadata.ObjectTypeEnum>][-PreGenerateOperations< System.Collections.Generic.List`1[Model.BlueprintPreGenerateOperation]>][-PropertyIteration< System.Collections.Generic.List`1[Model.BlueprintPropertyIteration]>][-PropertyParameters< object>][-Required< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBlueprintGeneratedObjectMetadata [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BlueprintGeneratedObjectMetadata.ClassIdEnum>][-CleanupOperations< System.Collections.Generic.List`1[Model.BlueprintCleanupOperation]>][-Conditions< System.Collections.Generic.List`1[string]>][-Name< string>][-ObjectIteration< string>][-ObjectSource< Model.BlueprintBaseGeneratedObjectSourceMetadata>][-ObjectType< BlueprintGeneratedObjectMetadata.ObjectTypeEnum>][-PreGenerateOperations< System.Collections.Generic.List`1[Model.BlueprintPreGenerateOperation]>][-PropertyIteration< System.Collections.Generic.List`1[Model.BlueprintPropertyIteration]>][-PropertyParameters< object>][-Required< bool>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,23 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: BlueprintGeneratedObjectMetadata.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -CleanupOperations
+
+
+Note :- Use Initialize-IntersightBlueprintCleanupOperation to create the object of complex type BlueprintCleanupOperation
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.BlueprintCleanupOperation]
 Parameter Sets: (All)
 Aliases:
 
@@ -253,6 +270,8 @@ PS C:\> Initialize-IntersightBlueprintGeneratedObjectMetadata
 ## RELATED LINKS
 
 [Initialize-IntersightBlueprintBaseGeneratedObjectSourceMetadata](./Initialize-IntersightBlueprintBaseGeneratedObjectSourceMetadata.md)
+
+[Initialize-IntersightBlueprintCleanupOperation](./Initialize-IntersightBlueprintCleanupOperation.md)
 
 [Initialize-IntersightBlueprintPreGenerateOperation](./Initialize-IntersightBlueprintPreGenerateOperation.md)
 

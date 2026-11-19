@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightIamBasicAuthCredentials
+# Initialize-IntersightWorkloadDeferredCleanupInput
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamBasicAuthCredentials [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamBasicAuthCredentials.ClassIdEnum>][-ObjectType< IamBasicAuthCredentials.ObjectTypeEnum>][-Password< string>][-Username< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkloadDeferredCleanupInput [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkloadDeferredCleanupInput.ClassIdEnum>][-Moid< string>][-ObjectType< WorkloadDeferredCleanupInput.ObjectTypeEnum>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -43,7 +43,22 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: IamBasicAuthCredentials.ClassIdEnum
+Type: WorkloadDeferredCleanupInput.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Moid
+The unique identifier of this Managed Object instance.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -58,7 +73,7 @@ Accept wildcard characters: False
 The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: IamBasicAuthCredentials.ObjectTypeEnum
+Type: WorkloadDeferredCleanupInput.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -69,26 +84,13 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -Password
-Contains the password for the basic auth flow.
+### -Tags
+
+
+Note :- Use Initialize-IntersightMoTag to create the object of complex type MoTag
 
 ```yaml
-Type: string
-Parameter Sets: (All)
-Aliases:
-
-Required: false
-Position: Named
-Default value: None
-Accept pipeline input: True True (ByPropertyName)
-Accept wildcard characters: False
-```
-
-### -Username
-Contains the username for the basic auth flow.
-
-```yaml
-Type: string
+Type: System.Collections.Generic.List`1[Model.MoTag]
 Parameter Sets: (All)
 Aliases:
 
@@ -137,7 +139,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightIamBasicAuthCredentials
+PS C:\> Initialize-IntersightWorkloadDeferredCleanupInput
 ```
 
 { Add example description here }
@@ -155,3 +157,5 @@ PS C:\> Initialize-IntersightIamBasicAuthCredentials
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)

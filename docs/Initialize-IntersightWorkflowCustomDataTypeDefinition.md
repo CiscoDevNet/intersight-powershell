@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowCustomDataTypeDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkflowCustomDataTypeDefinition.ClassIdEnum>][-CompositeType< bool>][-Description< string>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowCustomDataTypeDefinition.ObjectTypeEnum>][-ParameterSet< System.Collections.Generic.List`1[Model.WorkflowParameterSet]>][-Properties< Model.WorkflowCustomDataTypeProperties>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TypeDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowCustomDataTypeDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkflowCustomDataTypeDefinition.ClassIdEnum>][-CompositeType< bool>][-Constraints< Model.WorkflowCdtConstraints>][-Description< string>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkflowCustomDataTypeDefinition.ObjectTypeEnum>][-ParameterSet< System.Collections.Generic.List`1[Model.WorkflowParameterSet]>][-Properties< Model.WorkflowCustomDataTypeProperties>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TypeDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -77,6 +77,23 @@ When true this data type definition is a collection of type definitions to repre
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Constraints
+Constraints that must be applied to values supplied for this custom data type definition.
+
+Note :- Use Initialize-IntersightWorkflowCdtConstraints to create the object of complex type WorkflowCdtConstraints
+
+```yaml
+Type: Model.WorkflowCdtConstraints
 Parameter Sets: (All)
 Aliases:
 
@@ -290,6 +307,8 @@ PS C:\> Initialize-IntersightWorkflowCustomDataTypeDefinition
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
+
+[Initialize-IntersightWorkflowCdtConstraints](./Initialize-IntersightWorkflowCdtConstraints.md)
 
 [Initialize-IntersightWorkflowCustomDataTypeProperties](./Initialize-IntersightWorkflowCustomDataTypeProperties.md)
 

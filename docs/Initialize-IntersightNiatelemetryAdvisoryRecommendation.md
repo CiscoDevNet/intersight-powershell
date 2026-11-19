@@ -5,7 +5,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Initialize-IntersightIamAppCredentials
+# Initialize-IntersightNiatelemetryAdvisoryRecommendation
 
 ## SYNOPSIS
 Fill in the Synopsis
@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightIamAppCredentials [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< IamAppCredentials.ClassIdEnum>][-ObjectType< IamAppCredentials.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryAdvisoryRecommendation [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryAdvisoryRecommendation.ClassIdEnum>][-ObjectType< NiatelemetryAdvisoryRecommendation.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,10 +40,10 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
-Type: IamAppCredentials.ClassIdEnum
+Type: NiatelemetryAdvisoryRecommendation.ClassIdEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -55,10 +55,10 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
-Type: IamAppCredentials.ObjectTypeEnum
+Type: NiatelemetryAdvisoryRecommendation.ObjectTypeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -107,7 +107,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Example 1
 ```powershell
-PS C:\> Initialize-IntersightIamAppCredentials
+PS C:\> Initialize-IntersightNiatelemetryAdvisoryRecommendation
 ```
 
 { Add example description here }

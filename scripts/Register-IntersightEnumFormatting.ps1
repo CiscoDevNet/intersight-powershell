@@ -2,10 +2,9 @@
 # Register-IntersightEnumFormatting.ps1
 #
 # Runs automatically as a NestedModule after Intersight.PowerShell.dll (and Intersight.dll)
-# are loaded.  For every public property whose type is an Intersight.Model enum, a
-# ScriptProperty of the same name is added to the declaring type so that the property
-# returns the EnumMember string value (e.g. "0", "1", "platform-default") instead of
-# the C# identifier name (e.g. "_0", "_1", "PlatformDefault").
+# are loaded. For every public property whose type is an Intersight.Model enum, a
+# ScriptProperty of the same name is added so the property returns its EnumMember value
+# instead of its C# identifier.
 #
 
 $modelAssembly = [System.AppDomain]::CurrentDomain.GetAssemblies() |
@@ -61,7 +60,14 @@ foreach ($type in $modelAssembly.GetExportedTypes()) {
             #   - Enums WITH EnumMemberAttribute : returns attr.Value, stripping NUMBER_ prefix if present
             #   - Enums WITHOUT EnumMemberAttribute (e.g. BaudRateEnum): uses C# identifier, strips NUMBER_
             $getter = [scriptblock]::Create(@"
-                `$pi  = `$this.GetType().GetProperty('$propName')
+                `$lookupType = `$this.GetType()
+                `$pi         = `$null
+                `$flags      = [System.Reflection.BindingFlags]'Public,Instance,DeclaredOnly'
+                while (`$null -ne `$lookupType -and `$null -eq `$pi) {
+                    `$pi         = `$lookupType.GetProperty('$propName', `$flags)
+                    `$lookupType = `$lookupType.BaseType
+                }
+                if (`$null -eq `$pi) { return `$null }
                 `$raw = `$pi.GetValue(`$this)
                 if (`$null -eq `$raw) { return `$null }
                 `$member = `$raw.GetType().GetMember(`$raw.ToString())
@@ -83,7 +89,14 @@ foreach ($type in $modelAssembly.GetExportedTypes()) {
             #   Pass 1: EnumMemberAttribute value match  (handles "0","1","platform-default", etc.)
             #   Pass 2: direct Enum.Parse by C# identifier (handles BaudRateEnum / no-attribute enums)
             $setter = [scriptblock]::Create(@"
-                `$pi       = `$this.GetType().GetProperty('$propName')
+                `$lookupType = `$this.GetType()
+                `$pi         = `$null
+                `$flags      = [System.Reflection.BindingFlags]'Public,Instance,DeclaredOnly'
+                while (`$null -ne `$lookupType -and `$null -eq `$pi) {
+                    `$pi         = `$lookupType.GetProperty('$propName', `$flags)
+                    `$lookupType = `$lookupType.BaseType
+                }
+                if (`$null -eq `$pi) { throw 'Unable to resolve enum property for formatting.' }
                 `$propType = `$pi.PropertyType
                 if (`$propType.IsGenericType) { `$propType = `$propType.GetGenericArguments()[0] }
                 `$inputVal = `$args[0]

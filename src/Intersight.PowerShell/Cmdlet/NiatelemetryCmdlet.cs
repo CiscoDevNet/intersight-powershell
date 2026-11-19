@@ -585,6 +585,251 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NiatelemetryAdvisory.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryAdvisory", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightNiatelemetryAdvisory : GetCmdletBase
+    {
+        public GetIntersightNiatelemetryAdvisory()
+        {
+            ApiInstance = new NiatelemetryApi(Config);
+            MethodName = "GetNiatelemetryAdvisoryListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Unique identifier assigned to the fabric advisory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AdvisoryId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Numeric score associated with the fabric advisory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long AdvisoryScore
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Human-readable description of the fabric advisory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AdvisoryString
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Compensating control status reported for the fabric advisory.\n* `available` - A compensating control is available for deployment.\n* `notAvailable` - No compensating control is available for the advisory.\n* `protected` - The advisory is protected by a deployed compensating control.\n* `monitoring` - The compensating control is monitoring relevant activity.\n* `partiallyApplied` - The compensating control is applied to only some affected nodes.\n* `deploymentFailed` - Deployment of the compensating control did not complete successfully.\n* `disabled` - The compensating control is currently disabled.\n* `queued` - The compensating control is queued for deployment.\n* `deploying` - The compensating control deployment is currently in progress.\n* `outOfSync` - The deployed compensating control is not synchronized with its intended configuration.\n* `redeployRequired` - The compensating control must be redeployed to restore the intended protection."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NiatelemetryAdvisory.CompensatingControlEnum CompensatingControl
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"CVSS base score associated with the fabric advisory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public float Cvss
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Entity name associated with the fabric advisory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string EntityName
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a niatelemetryFabric resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public NiatelemetryFabricRelationship Fabric
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Fabric name associated with the advisory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string FabricName
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+
+
+        // <summary>
+        /// <para type="description">"Security advisory identifier associated with the fabric advisory."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SecurityAdvisoryId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Security status reported for the fabric advisory.\n* `active` - The advisory is active and requires evaluation.\n* `protected` - The advisory is protected by a compensating control.\n* `partiallyProtected` - The advisory is partially protected by a compensating control.\n* `monitoring` - The advisory is being monitored for relevant activity.\n* `cleared` - The advisory has been cleared and no longer requires action."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NiatelemetryAdvisory.SecurityStatusEnum SecurityStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Severity level of the advisory.\n* `critical` - The advisory has a critical severity level.\n* `major` - The advisory has a major severity level.\n* `minor` - The advisory has a minor severity level.\n* `warning` - The advisory has a warning severity level."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NiatelemetryAdvisory.SeverityEnum Severity
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Get NiatelemetryAnomaly.</para>
     /// </summary>
     [Cmdlet(VerbsCommon.Get, "IntersightNiatelemetryAnomaly", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
@@ -619,6 +864,17 @@ namespace Intersight.PowerShell
             set;
         }
 
+
+        // <summary>
+        /// <para type="description">"Globally unique identifier for the anomaly notification."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AnomalyId
+        {
+            get;
+            set;
+        }
 
         // <summary>
         /// <para type="description">"Classification of the anomaly."</para>
@@ -720,7 +976,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Globally unique identifier for the anomaly notification."</para>
+        /// <para type="description">"Legacy placeholder identifier retained for compatibility."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -15366,6 +15622,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The number of Hypershield integrations on the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long HsIntegrationsCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Count of number of image operations of type stage."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -15686,6 +15953,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The number of smart switches configured with a valid Hypershield connectivity status, excluding those whose status is 'Not Applicable'."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long SmartSwitchCount
         {
             get;
             set;
@@ -20408,6 +20686,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The total number of DPUs within the fabric currently reporting an operational status of 'OK'."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long DpuCount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Count of total Endpoint Locators."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -21642,6 +21931,18 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Compensating control status reported for the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string CompensatingControlStatus
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
         /// <para type="description">"The compliance status of the managed switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -21684,6 +21985,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"The type of fabric the managed switch belongs to."</para>
@@ -21763,6 +22065,28 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Live Protect agent status reported for the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LiveProtectAgentStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Live Protect enablement status reported for the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string LiveProtectStatus
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was last modified."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -21783,6 +22107,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
         // <summary>
         /// <para type="description">"The unique identifier of this Managed Object instance."</para>
@@ -21836,6 +22161,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string Role
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Number of security advisories associated with the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long SecurityAdvisoriesCount
         {
             get;
             set;
@@ -21948,6 +22284,29 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool TelemetryEnabled
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Total Live Protect hit count reported for the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long TotalHitCount
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"Indicates whether virtual port channel is configured on the switch."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool VpcConfigured
         {
             get;
             set;

@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoAllowOnClusterLinks< bool>][-AutoAllowOnUplinks< bool>][-EthNetworkPolicy< FabricEthNetworkPolicyRelationship>][-IsNative< bool>][[-Moid]< string>][-MulticastPolicy< FabricMulticastPolicyRelationship>][-Name< string>][-PrimaryVlanId< long>][-SharingType< FabricVlan.SharingTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VlanId< long>][-VlanSet< FabricVlanSetRelationship>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightFabricVlan [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AutoAllowOnClusterLinks< bool>][-AutoAllowOnInterSwitchPorts< bool>][-AutoAllowOnSecureRouterRoles< bool>][-AutoAllowOnUplinks< bool>][-EthNetworkPolicy< FabricEthNetworkPolicyRelationship>][-IsNative< bool>][[-Moid]< string>][-MulticastPolicy< FabricMulticastPolicyRelationship>][-Name< string>][-PrimaryVlanId< long>][-SharingType< FabricVlan.SharingTypeEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-VlanId< long>][-VlanSet< FabricVlanSetRelationship>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -39,7 +39,37 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAllowOnClusterLinks
-Enable this option to automatically allow the VLAN on inter-cluster links. To configure disjoint Layer 2 VLANs, &apos;Disable&apos; must be specified together with &apos;AutoAllowOnUplinks.&apos; Note that &apos;AutoAllowOnClusterLinks&apos; cannot be enabled for the default VLAN 1 or the native VLAN.
+Enable this option to automatically allow the VLAN on intra-chassis links. The traffic is not carried outside the chassis.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AutoAllowOnInterSwitchPorts
+Restricts this VLAN to intra-chassis traffic only. It does not carry traffic outside the chassis.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AutoAllowOnSecureRouterRoles
+Automatically applies VLANs to backplane ports connected to slots configured with secure router roles.
 
 ```yaml
 Type: bool
@@ -54,7 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoAllowOnUplinks
-Enable to automatically allow this VLAN on all uplinks. Disable must be specified alongside AutoAllowOnClusterLinks for disjoint layer 2 VLAN configuration. Default VLAN 1 cannot be configured as disjoint layer 2 VLAN.
+Enable to automatically allow this VLAN on all uplinks. Disable must be specified for Disjoint Layer 2 VLAN configuration. Default VLAN-1 cannot be configured as Disjoint Layer 2 VLAN.
 
 ```yaml
 Type: bool
@@ -87,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -IsNative
-Used to define whether this VLAN is to be classified as &apos;native&apos; for traffic in this FI.
+Used to define whether this VLAN is to be classified as &apos;native&apos; for traffic in this switch.
 
 ```yaml
 Type: bool

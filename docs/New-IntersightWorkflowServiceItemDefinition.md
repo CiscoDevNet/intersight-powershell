@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightWorkflowServiceItemDefinition [-ActionDefinitions< System.Collections.Generic.List`1[WorkflowServiceItemActionDefinitionRelationship]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowMultipleServiceItemInstances< bool>][-AttributeDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Catalog< WorkflowCatalogRelationship>][-CvdId< string>][-DefaultVersion< bool>][-DeleteInstanceOnDecommission< bool>][-Description< string>][-Label< string>][-Moid< string>][[-Name]< string>][-PublishStatus< WorkflowServiceItemDefinition.PublishStatusEnum>][-SupportStatus< WorkflowServiceItemDefinition.SupportStatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< long>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightWorkflowServiceItemDefinition [-ActionDefinitions< System.Collections.Generic.List`1[WorkflowServiceItemActionDefinitionRelationship]>][-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowMultipleServiceItemInstances< bool>][-AttributeDefinition< System.Collections.Generic.List`1[WorkflowBaseDataType]>][-Catalog< WorkflowCatalogRelationship>][-CvdId< string>][-DefaultVersion< bool>][-DeleteInstanceOnDecommission< bool>][-Description< string>][-Label< string>][-Moid< string>][[-Name]< string>][-PublishStatus< WorkflowServiceItemDefinition.PublishStatusEnum>][-SupportInfo< WorkflowSupportInfo>][-SupportStatus< WorkflowServiceItemDefinition.SupportStatusEnum>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Version< long>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -226,6 +226,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -SupportInfo
+The support information for this service item version. When the service item version is deprecated, this field includes the support end date and can include a replacement target version.
+
+Note :- Use Initialize-IntersightWorkflowSupportInfo to create the object of complex type WorkflowSupportInfo
+
+```yaml
+Type: WorkflowSupportInfo
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -SupportStatus
 The service item can be marked as deprecated, supported or beta, the support status indicates that. When a new service item is introduced, it can be marked beta to indicate this is experimental and later moved to Supported status. When Service item is deprecated, it cannot be instantiated and used for a Catalog Item design.\n* `Supported` - The definition is a supported version and there will be no changes to the mandatory inputs or outputs.\n* `Beta` - The definition is a Beta version and this version can under go changes until the version is marked supported.\n* `Deprecated` - The version of definition is deprecated and typically there will be a higher version of the same definition that has been added.
 
@@ -365,6 +382,8 @@ PS C:\> New-IntersightWorkflowServiceItemDefinition
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
+
+[Initialize-IntersightWorkflowSupportInfo](./Initialize-IntersightWorkflowSupportInfo.md)
 
 [Initialize-IntersightWorkflowValidationInformation](./Initialize-IntersightWorkflowValidationInformation.md)
 

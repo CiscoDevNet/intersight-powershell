@@ -188,6 +188,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"MAC address of the neighbor device."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string NeighborMacAddress
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Model of the neighbor device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -943,6 +954,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"This field indicates the compute status of the catalog values for the associated component or hardware."</para>
         /// </summary>
@@ -1168,6 +1180,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"The IPv4 address configuration mode of the network Element out-of-band management interface.\n* `` - The IPv4 address mode is not available or not applicable.\n* `static` - IPv4 address is statically configured.\n* `dhcpv4` - IPv4 address is configured via DHCP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkElement.OutOfBandIpv4ModeEnum OutOfBandIpv4Mode
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The IPv6 address of the network Element out-of-band management interface."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -1201,7 +1224,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The IPv6 address configuration mode of the network Element out-of-band management interface.\n* `` - The IPv6 address mode is not available or not applicable.\n* `slaac` - IPv6 address is configured via Stateless Address Autoconfiguration (SLAAC).\n* `static` - IPv6 address is statically configured.\n* `disabled` - IPv6 is disabled on the out-of-band management interface."</para>
+        /// <para type="description">"The IPv6 address configuration mode of the network Element out-of-band management interface.\n* `` - The IPv6 address mode is not available or not applicable.\n* `slaac` - IPv6 address is configured via Stateless Address Autoconfiguration (SLAAC).\n* `static` - IPv6 address is statically configured.\n* `disabled` - IPv6 is disabled on the out-of-band management interface.\n* `dhcpv6` - IPv6 address is configured via DHCPv6.\n* `dhcpv6Slaac` - IPv6 address is configured via DHCPv6 and SLAAC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -1295,6 +1318,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool PeerFirmwareOutOfSync
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The count of port compatibility issues with the connected peer device port."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long PeerInterfaceCompatibilityIssueCount
         {
             get;
             set;
@@ -2302,7 +2336,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The IPv6 address configuration mode of the network Element out-of-band management interface.\n* `` - The IPv6 address mode is not available or not applicable.\n* `slaac` - IPv6 address is configured via Stateless Address Autoconfiguration (SLAAC).\n* `static` - IPv6 address is statically configured.\n* `disabled` - IPv6 is disabled on the out-of-band management interface."</para>
+        /// <para type="description">"The IPv6 address configuration mode of the network Element out-of-band management interface.\n* `` - The IPv6 address mode is not available or not applicable.\n* `slaac` - IPv6 address is configured via Stateless Address Autoconfiguration (SLAAC).\n* `static` - IPv6 address is statically configured.\n* `disabled` - IPv6 is disabled on the out-of-band management interface.\n* `dhcpv6` - IPv6 address is configured via DHCPv6.\n* `dhcpv6Slaac` - IPv6 address is configured via DHCPv6 and SLAAC."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -2385,6 +2419,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string PartNumber
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"TThe flag to indicate the firmware of peer Fabric Interconnect is out of sync."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool PeerFirmwareOutOfSync
         {
             get;
             set;
@@ -3454,6 +3499,268 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+        // <summary>
+        /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+        [ValidateSet("allpages", "none")]
+        public String Inlinecount
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">The 'tags' parameter is used to request a summary of the Tag utilization for this resource. When the 'tags' parameter is specified, the response provides a list of tag keys, the number of times the key has been used across all documents, and the tag values that have been assigned to the tag key.</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "QueryParam")]
+
+        public String Tags
+        {
+            get;
+            set;
+        }
+
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Get NetworkIpAddressInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsCommon.Get, "IntersightNetworkIpAddressInfo", DefaultParameterSetName = "CmdletParam", SupportsShouldProcess = true)]
+    public class GetIntersightNetworkIpAddressInfo : GetCmdletBase
+    {
+        public GetIntersightNetworkIpAddressInfo()
+        {
+            ApiInstance = new NetworkApi(Config);
+            MethodName = "GetNetworkIpAddressInfoListWithHttpInfo";
+        }
+
+        // <summary>
+        /// <para type="description">"The Account ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string AccountMoid
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The IPv4 or IPv6 address string. Empty placeholder addresses are not stored; a network.IpAddressInfo record is only created when a non-empty address is present."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Address
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The address family of this IP address (IPv4 or IPv6).\n* `` - The address family is not available or not applicable.\n* `IPv4` - The address is an IPv4 address.\n* `IPv6` - The address is an IPv6 address."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkIpAddressInfo.AddressFamilyEnum AddressFamily
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The origin of this IP address assignment. Normalized from platform-specific values to DHCP, SLAAC, Static, LinkLocal, or NotApplicable.\n* `` - The address origin is not available or not applicable.\n* `DHCP` - The IP address was assigned via DHCP or DHCPv6.\n* `SLAAC` - The IPv6 address was assigned via Stateless Address Autoconfiguration (SLAAC).\n* `Static` - The IP address is statically configured.\n* `LinkLocal` - The IPv6 address is a link-local address auto-derived from the interface MAC."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkIpAddressInfo.AddressOriginEnum AddressOrigin
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The operational state of this IP address (Preferred, Deprecated, Failed). Set to NotApplicable for IPv4 addresses where per-address state is not applicable.\n* `` - The address state is not available or not applicable (e.g., for IPv4 addresses).\n* `Preferred` - The IP address is preferred and fully operational.\n* `Deprecated` - The IP address is deprecated (preferred lifetime has expired).\n* `Failed` - The IP address has failed (e.g., Duplicate Address Detection failure for IPv6)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkIpAddressInfo.AddressStateEnum AddressState
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was created."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CreateTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The database identifier of the registered device of an object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DeviceMoId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Distinguished Name unambiguously identifies an object in the system."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Dn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The DomainGroup ID for this managed object."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string DomainGroupMoid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The management interface type this address is associated with. OutOfBand for the OOB management interface; InBand for the inband management interface.\n* `` - The interface type is not available or not applicable.\n* `OutOfBand` - The IP address is associated with the out-of-band management interface.\n* `InBand` - The IP address is associated with the in-band management interface."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public NetworkIpAddressInfo.InterfaceTypeEnum InterfaceType
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Any error or diagnostic message associated with this IP address. Empty when no error is reported."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string IpAddressError
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The time when this managed object was last modified."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime ModTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a networkElement resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public NetworkElementRelationship NetworkElement
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"A reference to a moBaseMo resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public MoBaseMoRelationship Parent
+        {
+            get;
+            set;
+        }
+
+
+        // <summary>
+        /// <para type="description">"The prefix length of this IP address in bits. Used for IPv6 addresses. Set to zero for IPv4 addresses where SubnetMask is used instead."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string PrefixLength
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"A reference to a assetDeviceRegistration resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
+
+        public AssetDeviceRegistrationRelationship RegisteredDevice
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The Relative Name uniquely identifies an object within a given context."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Rn
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The subnet mask of this IP address in dotted-decimal notation. Used for IPv4 addresses. Empty for IPv6 addresses where PrefixLength is used instead."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string SubnetMask
+        {
+            get;
+            set;
+        }
+
+
 
         // <summary>
         /// <para type="description">The $inlinecount query option allows clients to request an inline count of the matching resources included with the resources in the response.</para>
@@ -6892,6 +7199,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"The management mode of the fabric interconnect.\n* `IntersightStandalone` - Intersight Standalone mode of operation.\n* `UCSM` - Unified Computing System Manager mode of operation.\n* `Intersight` - Intersight managed mode of operation."</para>
         /// </summary>
@@ -6915,6 +7223,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -6978,6 +7287,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

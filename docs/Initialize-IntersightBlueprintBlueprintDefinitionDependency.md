@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBlueprintBlueprintDefinitionDependency [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BlueprintName< string>][-CatalogMoid< string>][-ClassId< BlueprintBlueprintDefinitionDependency.ClassIdEnum>][-Description< string>][-InputParameters< object>][-Label< string>][-ObjectType< BlueprintBlueprintDefinitionDependency.ObjectTypeEnum>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBlueprintBlueprintDefinitionDependency [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-BlueprintName< string>][-CatalogMoid< string>][-ClassId< BlueprintBlueprintDefinitionDependency.ClassIdEnum>][-DependencyQualifier< Model.BlueprintOdataDependencyQualifier>][-Description< string>][-InputParameters< object>][-Label< string>][-ObjectType< BlueprintBlueprintDefinitionDependency.ObjectTypeEnum>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -BlueprintName
-The qualified name of blueprint.
+The qualified name of the required blueprint.
 
 ```yaml
 Type: string
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -CatalogMoid
-Specify the catalog moid that this blueprint belongs too. When catalog moid is not specified then the catalog of the parent blueprint is used first and if no blueprint can be found in that catalog, then the system catalog is used.
+The catalog MOID that this blueprint belongs to. When the catalog MOID is not specified, the catalog of the parent blueprint is used first. If no blueprint can be found in that catalog, the system catalog is used.
 
 ```yaml
 Type: string
@@ -84,8 +84,25 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -DependencyQualifier
+The OData rules that identify the blueprint versions that can satisfy this dependency.
+
+Note :- Use Initialize-IntersightBlueprintOdataDependencyQualifier to create the object of complex type BlueprintOdataDependencyQualifier
+
+```yaml
+Type: Model.BlueprintOdataDependencyQualifier
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Description
-The description of that describes the purpose of including this dependent blueprint.
+Specifies why the required blueprint is included.
 
 ```yaml
 Type: string
@@ -100,7 +117,7 @@ Accept wildcard characters: False
 ```
 
 ### -InputParameters
-If any input of the nested blueprint needs to be modified in some form to include data from the parent blueprint, then the input parameters can be specified here.
+Specifies input mappings for the required blueprint, including values derived from the referencing blueprint.
 
 ```yaml
 Type: object
@@ -145,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -Version
-The blueprint version. If not specified, the default version is used.
+The version number of the blueprint.
 
 ```yaml
 Type: long
@@ -215,5 +232,7 @@ PS C:\> Initialize-IntersightBlueprintBlueprintDefinitionDependency
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightBlueprintOdataDependencyQualifier](./Initialize-IntersightBlueprintOdataDependencyQualifier.md)
 
 [Initialize-Intersightobject](./Initialize-Intersightobject.md)

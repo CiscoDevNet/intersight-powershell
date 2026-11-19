@@ -53,17 +53,6 @@ namespace Intersight.PowerShell
         }
 
 
-        // <summary>
-        /// <para type="description">"Agent trusted store data."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-
-        public string AgentData
-        {
-            get;
-            set;
-        }
-
 
         // <summary>
         /// <para type="description">"Authorization expiration time."</para>
@@ -3807,7 +3796,6 @@ namespace Intersight.PowerShell
             get;
             set;
         }
-
 
 
 

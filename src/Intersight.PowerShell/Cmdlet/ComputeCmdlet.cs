@@ -987,7 +987,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Describes whether the running CIMC version supports Intersight managed mode.\n* `Unknown` - The running firmware version is unknown.\n* `Supported` - The running firmware version is known and supports IMM mode.\n* `NotSupported` - The running firmware version is known and does not support IMM mode."</para>
+        /// <para type="description">"Describes whether the running CIMC version supports Intersight managed mode.\n* `Unknown` - The running firmware version is unknown.\n* `Supported` - The running firmware version is known and supports IMM mode.\n* `NotSupported` - The running firmware version is known and does not support IMM mode.\n* `ChassisFirmwareNotSupported` - The running chassis firmware version does not support this device."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
