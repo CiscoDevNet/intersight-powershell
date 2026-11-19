@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNiatelemetryNexusDashboards [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNexusDashboards.ClassIdEnum>][-ClusterName< string>][-ClusterUuid< string>][-Dn< string>][-FeatureOperStatus< bool>][-IsClusterHealthy< string>][-LiveProtectEnabledCount< long>][-Moid< string>][-NdClusterSize< long>][-NdSites< System.Collections.Generic.List`1[Model.NiatelemetrySites]>][-NdType< string>][-NdVersion< string>][-NumberOfApps< long>][-NumberOfInsightGroups< long>][-NumberOfNirDashboards< long>][-NumberOfSchemasInMso< long>][-NumberOfSitesInMso< long>][-NumberOfSitesServiced< long>][-NumberOfTenantsInMso< long>][-NumberOfVxlanFabricSitesInMso< long>][-ObjectType< NiatelemetryNexusDashboards.ObjectTypeEnum>][-RecordType< string>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TypeOfSiteInMso< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNiatelemetryNexusDashboards [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< NiatelemetryNexusDashboards.ClassIdEnum>][-ClusterName< string>][-ClusterUuid< string>][-Dn< string>][-FeatureOperStatus< bool>][-HsIntegrationsCount< long>][-IsClusterHealthy< string>][-LiveProtectEnabledCount< long>][-Moid< string>][-NdClusterSize< long>][-NdSites< System.Collections.Generic.List`1[Model.NiatelemetrySites]>][-NdType< string>][-NdVersion< string>][-NumberOfApps< long>][-NumberOfInsightGroups< long>][-NumberOfNirDashboards< long>][-NumberOfSchemasInMso< long>][-NumberOfSitesInMso< long>][-NumberOfSitesServiced< long>][-NumberOfTenantsInMso< long>][-NumberOfVxlanFabricSitesInMso< long>][-ObjectType< NiatelemetryNexusDashboards.ObjectTypeEnum>][-RecordType< string>][-SmartSwitchCount< long>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-TypeOfSiteInMso< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -104,6 +104,21 @@ Feature Operation status of change management.
 
 ```yaml
 Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -HsIntegrationsCount
+The number of Hypershield integrations on the fabric.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 
@@ -361,6 +376,21 @@ Type of record DCNM / APIC / SE. This determines the type of platform where inve
 
 ```yaml
 Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SmartSwitchCount
+The number of smart switches configured with a valid Hypershield connectivity status, excluding those whose status is &apos;Not Applicable&apos;.
+
+```yaml
+Type: long
 Parameter Sets: (All)
 Aliases:
 

@@ -129,6 +129,7 @@ namespace Intersight.PowerShell
     {
         public InitializeIntersightWorkloadBlueprint()
         {
+            BlueprintKind = WorkloadBlueprint.BlueprintKindEnum.Concrete;
             ClassId = WorkloadBlueprint.ClassIdEnum.WorkloadBlueprint;
             ObjectType = WorkloadBlueprint.ObjectTypeEnum.WorkloadBlueprint;
             PlatformType = WorkloadBlueprint.PlatformTypeEnum.None;
@@ -155,11 +156,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The abstract base blueprint inherited by this authoring blueprint. Is optional."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.BlueprintBlueprintInheritanceReference BaseBlueprint
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.BlueprintBlueprintDefinitionDependency> BlueprintDependencies
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Identifies whether the authoring blueprint is an abstract inheritance source or a concrete definition. Concrete definitions are deployed through separate resolved version of the blueprint..\n* `Concrete` - The blueprint can be materialized as a separate resolved blueprint for deployment.\n* `Abstract` - The blueprint is an abstract inheritance source and is not directly deployable."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadBlueprint.BlueprintKindEnum BlueprintKind
         {
             get;
             set;
@@ -245,6 +266,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The input for a blueprint referenced in a workload can be synced from another blueprint of the same type."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool InputSyncEnabled
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"A user friendly short name to identify the blueprint. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ) or an underscore (_)."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -305,11 +336,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The revision of the blueprint to support compatible updates within the same version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long Revision
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public List<Model.BlueprintServiceItemDefinition> ServiceItems
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The support information for this blueprint version. When the blueprint version is deprecated, this field includes the support end date and can include a replacement target version."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.WorkflowSupportInfo SupportInfo
         {
             get;
             set;
@@ -325,11 +376,41 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.BlueprintValidatedConfigReference> ValidatedObjects
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The version of the blueprint to support multiple versions."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public long Version
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.BlueprintVersionCompatibilityInfo> VersionCompatibilityInfo
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The detailed change description for this blueprint version. For new blueprint versions, this field captures a verbose description of the delta of changes in this version compared to earlier versions."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+        [ValidatePattern("^$|^[a-zA-Z0-9]+[\\x00-\\xFF]*$")]
+        public string VersionDescription
         {
             get;
             set;
@@ -347,9 +428,17 @@ namespace Intersight.PowerShell
             {
                 initObject.AssociatedRoles = this.AssociatedRoles;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BaseBlueprint"))
+            {
+                initObject.BaseBlueprint = this.BaseBlueprint;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("BlueprintDependencies"))
             {
                 initObject.BlueprintDependencies = this.BlueprintDependencies;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BlueprintKind"))
+            {
+                initObject.BlueprintKind = this.BlueprintKind;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Catalog"))
             {
@@ -380,6 +469,10 @@ namespace Intersight.PowerShell
             {
                 initObject.InputOperationMetadata = this.InputOperationMetadata;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InputSyncEnabled"))
+            {
+                initObject.InputSyncEnabled = this.InputSyncEnabled;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Label"))
             {
                 initObject.Label = this.Label;
@@ -401,17 +494,37 @@ namespace Intersight.PowerShell
             {
                 initObject.ResourceDefinition = this.ResourceDefinition;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Revision"))
+            {
+                initObject.Revision = this.Revision;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("ServiceItems"))
             {
                 initObject.ServiceItems = this.ServiceItems;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SupportInfo"))
+            {
+                initObject.SupportInfo = this.SupportInfo;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
                 initObject.Tags = this.Tags;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("ValidatedObjects"))
+            {
+                initObject.ValidatedObjects = this.ValidatedObjects;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Version"))
             {
                 initObject.VarVersion = this.Version;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VersionCompatibilityInfo"))
+            {
+                initObject.VersionCompatibilityInfo = this.VersionCompatibilityInfo;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("VersionDescription"))
+            {
+                initObject.VersionDescription = this.VersionDescription;
             }
             WriteObject(initObject);
         }
@@ -593,6 +706,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.WorkloadInputSourceReference> InputSourceReferences
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"The name for the referred blueprint. This name must be unique within the workload definition."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -644,6 +767,10 @@ namespace Intersight.PowerShell
             {
                 initObject.InputOverride = this.InputOverride;
             }
+            if (this.MyInvocation.BoundParameters.ContainsKey("InputSourceReferences"))
+            {
+                initObject.InputSourceReferences = this.InputSourceReferences;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("Name"))
             {
                 initObject.Name = this.Name;
@@ -653,6 +780,63 @@ namespace Intersight.PowerShell
             {
                 initObject.ResourceConstraint = this.ResourceConstraint;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize WorkloadBlueprintVersionUpdateState.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightWorkloadBlueprintVersionUpdateState")]
+    public class InitializeIntersightWorkloadBlueprintVersionUpdateState : PSCmdlet
+    {
+        public InitializeIntersightWorkloadBlueprintVersionUpdateState()
+        {
+            ClassId = WorkloadBlueprintVersionUpdateState.ClassIdEnum.WorkloadBlueprintVersionUpdateState;
+            ObjectType = WorkloadBlueprintVersionUpdateState.ObjectTypeEnum.WorkloadBlueprintVersionUpdateState;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadBlueprintVersionUpdateState.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadBlueprintVersionUpdateState.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.WorkloadBlueprintVersionUpdateState initObject = new Intersight.Model.WorkloadBlueprintVersionUpdateState();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -704,6 +888,63 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.WorkloadCanaryDeployment initObject = new Intersight.Model.WorkloadCanaryDeployment();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize WorkloadCleanupOperationInput.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightWorkloadCleanupOperationInput")]
+    public class InitializeIntersightWorkloadCleanupOperationInput : PSCmdlet
+    {
+        public InitializeIntersightWorkloadCleanupOperationInput()
+        {
+            ClassId = WorkloadCleanupOperationInput.ClassIdEnum.WorkloadCleanupOperationInput;
+            ObjectType = WorkloadCleanupOperationInput.ObjectTypeEnum.WorkloadCleanupOperationInput;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadCleanupOperationInput.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadCleanupOperationInput.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.WorkloadCleanupOperationInput initObject = new Intersight.Model.WorkloadCleanupOperationInput();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -923,6 +1164,91 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize WorkloadDeferredCleanupInput.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightWorkloadDeferredCleanupInput")]
+    public class InitializeIntersightWorkloadDeferredCleanupInput : PSCmdlet
+    {
+        public InitializeIntersightWorkloadDeferredCleanupInput()
+        {
+            ClassId = WorkloadDeferredCleanupInput.ClassIdEnum.WorkloadDeferredCleanupInput;
+            ObjectType = WorkloadDeferredCleanupInput.ObjectTypeEnum.WorkloadDeferredCleanupInput;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadDeferredCleanupInput.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadDeferredCleanupInput.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.WorkloadDeferredCleanupInput initObject = new Intersight.Model.WorkloadDeferredCleanupInput();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
             WriteObject(initObject);
         }
 
@@ -1347,6 +1673,263 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize WorkloadInputSourceReference.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightWorkloadInputSourceReference")]
+    public class InitializeIntersightWorkloadInputSourceReference : PSCmdlet
+    {
+        public InitializeIntersightWorkloadInputSourceReference()
+        {
+            ClassId = WorkloadInputSourceReference.ClassIdEnum.WorkloadInputSourceReference;
+            ObjectType = WorkloadInputSourceReference.ObjectTypeEnum.WorkloadInputSourceReference;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the source blueprint from which inputs are copied."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string BlueprintName
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadInputSourceReference.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadInputSourceReference.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.WorkloadInputSourceReference initObject = new Intersight.Model.WorkloadInputSourceReference();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("BlueprintName"))
+            {
+                initObject.BlueprintName = this.BlueprintName;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize WorkloadManifest.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightWorkloadManifest")]
+    public class InitializeIntersightWorkloadManifest : PSCmdlet
+    {
+        public InitializeIntersightWorkloadManifest()
+        {
+            ClassId = WorkloadManifest.ClassIdEnum.WorkloadManifest;
+            ImportStatus = WorkloadManifest.ImportStatusEnum.ImportPending;
+            ObjectType = WorkloadManifest.ObjectTypeEnum.WorkloadManifest;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"A reference to a workflowCatalog resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.WorkflowCatalogRelationship Catalog
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadManifest.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The import status for the current manifest. If all items in the manifest items list are imported, the current manifest will be marked as imported.\n* `ImportPending` - The item from the manifest file is pending an import into the shared catalog.\n* `Imported` - The item from the manifest file has been imported in the shared catalog."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadManifest.ImportStatusEnum ImportStatus
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadManifest.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.WorkloadManifest initObject = new Intersight.Model.WorkloadManifest();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Catalog"))
+            {
+                initObject.Catalog = this.Catalog;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportStatus"))
+            {
+                initObject.ImportStatus = this.ImportStatus;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize WorkloadManifestItem.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightWorkloadManifestItem")]
+    public class InitializeIntersightWorkloadManifestItem : PSCmdlet
+    {
+        public InitializeIntersightWorkloadManifestItem()
+        {
+            ClassId = WorkloadManifestItem.ClassIdEnum.WorkloadManifestItem;
+            ImportStatus = WorkloadManifestItem.ImportStatusEnum.ImportPending;
+            ObjectType = WorkloadManifestItem.ObjectTypeEnum.WorkloadManifestItem;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadManifestItem.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The import status for the item to indicate if the item is available in the shared catalog.\n* `ImportPending` - The item from the manifest file is pending an import into the shared catalog.\n* `Imported` - The item from the manifest file has been imported in the shared catalog."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadManifestItem.ImportStatusEnum ImportStatus
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public WorkloadManifestItem.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.WorkloadManifestItem initObject = new Intersight.Model.WorkloadManifestItem();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("ImportStatus"))
+            {
+                initObject.ImportStatus = this.ImportStatus;
+            }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }

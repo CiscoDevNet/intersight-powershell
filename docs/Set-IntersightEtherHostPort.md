@@ -216,4 +216,6 @@ PS C:\> Set-IntersightEtherHostPort
 
 [Get-IntersightEtherHostPort](./Get-IntersightEtherHostPort.md)
 
+[Initialize-IntersightEtherPeerInterfaceCompatibilityIssues](./Initialize-IntersightEtherPeerInterfaceCompatibilityIssues.md)
+
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

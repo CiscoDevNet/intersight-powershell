@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Set-IntersightCommTagDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedValues< System.Collections.Generic.List`1[string]>][-EnablePropagation< bool>][-Key< string>][[-Moid]< string>][-RestrictValues< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< CommTagDefinition.TypeEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Set-IntersightCommTagDefinition [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AllowedValues< System.Collections.Generic.List`1[string]>][-EnablePropagation< bool>][-Key< string>][[-Moid]< string>][-RestrictAllowedValues< bool>][-Tags< System.Collections.Generic.List`1[MoTag]>][-Type< CommTagDefinition.TypeEnum>][-IfMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 ```
 
 ### -Key
-The string representation of the tag key. If the tag is of path type, then \&quot;/\&quot; will be interpreted as path delimiters.\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty.
+The string representation of the tag key. For PathTag definitions, \&quot;/\&quot; is interpreted as a path delimiter.\nThe combination of key and tag type must be unique within an account. The key is case sensitive and cannot be empty.
 
 ```yaml
 Type: string
@@ -98,8 +98,8 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -RestrictValues
-If this flag is enabled, then values of the KeyValue tag is restricted to values present in the allowedValues list. RestrictValues is not applicable to path tags.
+### -RestrictAllowedValues
+If this flag is enabled, then values of the KeyValue tag can only be values present in the allowedValues list. RestrictAllowedValues is not applicable to path tags.
 
 ```yaml
 Type: bool
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -Type
-An enum type that defines the type of tag. Only path tags are supported for now, and the type is set to path by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the &apos;/&apos; character as a delimiter.For example, if the tag is \&quot;A/B/C\&quot;, then \&quot;A\&quot; is the parent tag, \&quot;B\&quot; is the child tag of \&quot;A\&quot; and \&quot;C\&quot; is the child tag of \&quot;B\&quot;.
+An enum that defines the type of tag definition. KeyValue tags use a key with an optional value.\nPathTag tags use a hierarchical key with &apos;/&apos; as the delimiter and no value. Defaults to KeyValue.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the &apos;/&apos; character as a delimiter.For example, if the tag is \&quot;A/B/C\&quot;, then \&quot;A\&quot; is the parent tag, \&quot;B\&quot; is the child tag of \&quot;A\&quot; and \&quot;C\&quot; is the child tag of \&quot;B\&quot;.
 
 ```yaml
 Type: CommTagDefinition.TypeEnum

@@ -825,7 +825,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The string representation of the tag key. If the tag is of path type, then \"/\" will be interpreted as path delimiters.\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// <para type="description">"The string representation of the tag key. For PathTag definitions, \"/\" is interpreted as a path delimiter.\nThe combination of key and tag type must be unique within an account. The key is case sensitive and cannot be empty."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -855,11 +855,11 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag is restricted to values present in the allowedValues list. RestrictValues is not applicable to path tags."</para>
+        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag can only be values present in the allowedValues list. RestrictAllowedValues is not applicable to path tags."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public bool RestrictValues
+        public bool RestrictAllowedValues
         {
             get;
             set;
@@ -875,7 +875,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"An enum type that defines the type of tag. Only path tags are supported for now, and the type is set to path by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
+        /// <para type="description">"An enum that defines the type of tag definition. KeyValue tags use a key with an optional value.\nPathTag tags use a hierarchical key with '/' as the delimiter and no value. Defaults to KeyValue.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -911,9 +911,9 @@ namespace Intersight.PowerShell
                 initObject.Moid = this.Moid;
             }
             initObject.ObjectType = this.ObjectType;
-            if (this.MyInvocation.BoundParameters.ContainsKey("RestrictValues"))
+            if (this.MyInvocation.BoundParameters.ContainsKey("RestrictAllowedValues"))
             {
-                initObject.RestrictValues = this.RestrictValues;
+                initObject.RestrictAllowedValues = this.RestrictAllowedValues;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -974,6 +974,63 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.CommTagUsage initObject = new Intersight.Model.CommTagUsage();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize CommTagValueUsage.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightCommTagValueUsage")]
+    public class InitializeIntersightCommTagValueUsage : PSCmdlet
+    {
+        public InitializeIntersightCommTagValueUsage()
+        {
+            ClassId = CommTagValueUsage.ClassIdEnum.CommTagValueUsage;
+            ObjectType = CommTagValueUsage.ObjectTypeEnum.CommTagValueUsage;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CommTagValueUsage.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public CommTagValueUsage.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.CommTagValueUsage initObject = new Intersight.Model.CommTagValueUsage();
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;

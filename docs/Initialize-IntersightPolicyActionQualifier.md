@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightPolicyActionQualifier [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyActionQualifier.ClassIdEnum>][-ObjectType< PolicyActionQualifier.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightPolicyActionQualifier [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< PolicyActionQualifier.ClassIdEnum>][-ObjectType< PolicyActionQualifier.ObjectTypeEnum>][-Qualifiers< System.Collections.Generic.List`1[Model.PolicyQualifier]>][-Scope< PolicyActionQualifier.ScopeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -40,7 +40,7 @@ Accept wildcard characters: False
 ```
 
 ### -ClassId
-The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.
 
 ```yaml
 Type: PolicyActionQualifier.ClassIdEnum
@@ -55,10 +55,42 @@ Accept wildcard characters: False
 ```
 
 ### -ObjectType
-The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type.
+The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the &apos;ClassId&apos; property.
 
 ```yaml
 Type: PolicyActionQualifier.ObjectTypeEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Qualifiers
+
+
+Note :- Use Initialize-IntersightPolicyQualifier to create the object of complex type PolicyQualifier
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.PolicyQualifier]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Scope
+Specify if profile action is targeted for a specific scope.\n* `selective` - Profile deploy action to be limited to modified policies or to the policy list passed.\n* `all` - Profile deploy action to perform deploy of all policies associated with profile.
+
+```yaml
+Type: PolicyActionQualifier.ScopeEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -125,3 +157,5 @@ PS C:\> Initialize-IntersightPolicyActionQualifier
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightPolicyQualifier](./Initialize-IntersightPolicyQualifier.md)

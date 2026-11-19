@@ -318,6 +318,17 @@ namespace Intersight.PowerShell
         }
 
 
+        // <summary>
+        /// <para type="description">"The count of incompatible peer ports connected to the switch card."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public long PeerInterfaceCompatibilityIssueCount
+        {
+            get;
+            set;
+        }
+
 
         // <summary>
         /// <para type="description">"This field identifies the Product ID for the chassis enclosure."</para>
@@ -11953,6 +11964,7 @@ namespace Intersight.PowerShell
             set;
         }
 
+
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
@@ -12126,6 +12138,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 
@@ -15221,6 +15234,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

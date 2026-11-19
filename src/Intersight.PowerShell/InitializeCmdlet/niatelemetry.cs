@@ -558,6 +558,148 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryAdvisory.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryAdvisory")]
+    public class InitializeIntersightNiatelemetryAdvisory : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryAdvisory()
+        {
+            ClassId = NiatelemetryAdvisory.ClassIdEnum.NiatelemetryAdvisory;
+            ObjectType = NiatelemetryAdvisory.ObjectTypeEnum.NiatelemetryAdvisory;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryAdvisory.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The unique identifier of this Managed Object instance."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Moid
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryAdvisory.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.MoTag> Tags
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryAdvisory initObject = new Intersight.Model.NiatelemetryAdvisory();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Moid"))
+            {
+                initObject.Moid = this.Moid;
+            }
+            initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
+            {
+                initObject.Tags = this.Tags;
+            }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryAdvisoryRecommendation.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryAdvisoryRecommendation")]
+    public class InitializeIntersightNiatelemetryAdvisoryRecommendation : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryAdvisoryRecommendation()
+        {
+            ClassId = NiatelemetryAdvisoryRecommendation.ClassIdEnum.NiatelemetryAdvisoryRecommendation;
+            ObjectType = NiatelemetryAdvisoryRecommendation.ObjectTypeEnum.NiatelemetryAdvisoryRecommendation;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryAdvisoryRecommendation.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryAdvisoryRecommendation.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryAdvisoryRecommendation initObject = new Intersight.Model.NiatelemetryAdvisoryRecommendation();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryAnomaly.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryAnomaly")]
@@ -5938,6 +6080,120 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryCompensatingControlCounts.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryCompensatingControlCounts")]
+    public class InitializeIntersightNiatelemetryCompensatingControlCounts : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryCompensatingControlCounts()
+        {
+            ClassId = NiatelemetryCompensatingControlCounts.ClassIdEnum.NiatelemetryCompensatingControlCounts;
+            ObjectType = NiatelemetryCompensatingControlCounts.ObjectTypeEnum.NiatelemetryCompensatingControlCounts;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryCompensatingControlCounts.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryCompensatingControlCounts.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryCompensatingControlCounts initObject = new Intersight.Model.NiatelemetryCompensatingControlCounts();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryCompensatingControlDetails.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryCompensatingControlDetails")]
+    public class InitializeIntersightNiatelemetryCompensatingControlDetails : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryCompensatingControlDetails()
+        {
+            ClassId = NiatelemetryCompensatingControlDetails.ClassIdEnum.NiatelemetryCompensatingControlDetails;
+            ObjectType = NiatelemetryCompensatingControlDetails.ObjectTypeEnum.NiatelemetryCompensatingControlDetails;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryCompensatingControlDetails.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryCompensatingControlDetails.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryCompensatingControlDetails initObject = new Intersight.Model.NiatelemetryCompensatingControlDetails();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryController.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryController")]
@@ -8673,6 +8929,63 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryFabricExtender.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryFabricExtender")]
+    public class InitializeIntersightNiatelemetryFabricExtender : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryFabricExtender()
+        {
+            ClassId = NiatelemetryFabricExtender.ClassIdEnum.NiatelemetryFabricExtender;
+            ObjectType = NiatelemetryFabricExtender.ObjectTypeEnum.NiatelemetryFabricExtender;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryFabricExtender.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryFabricExtender.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryFabricExtender initObject = new Intersight.Model.NiatelemetryFabricExtender();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryFabricModuleDetails.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryFabricModuleDetails")]
@@ -11193,6 +11506,63 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryImpactedNodes.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryImpactedNodes")]
+    public class InitializeIntersightNiatelemetryImpactedNodes : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryImpactedNodes()
+        {
+            ClassId = NiatelemetryImpactedNodes.ClassIdEnum.NiatelemetryImpactedNodes;
+            ObjectType = NiatelemetryImpactedNodes.ObjectTypeEnum.NiatelemetryImpactedNodes;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryImpactedNodes.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryImpactedNodes.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryImpactedNodes initObject = new Intersight.Model.NiatelemetryImpactedNodes();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryInsightGroupDetails.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryInsightGroupDetails")]
@@ -12696,6 +13066,63 @@ namespace Intersight.PowerShell
             {
                 initObject.Tags = this.Tags;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryModule.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryModule")]
+    public class InitializeIntersightNiatelemetryModule : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryModule()
+        {
+            ClassId = NiatelemetryModule.ClassIdEnum.NiatelemetryModule;
+            ObjectType = NiatelemetryModule.ObjectTypeEnum.NiatelemetryModule;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryModule.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryModule.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryModule initObject = new Intersight.Model.NiatelemetryModule();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 
@@ -14662,6 +15089,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The number of Hypershield integrations on the fabric."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long HsIntegrationsCount
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description">"Health of Nexus Dashboard cluster."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14832,6 +15269,16 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
+        /// <para type="description">"The number of smart switches configured with a valid Hypershield connectivity status, excluding those whose status is 'Not Applicable'."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public long SmartSwitchCount
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -14876,6 +15323,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("FeatureOperStatus"))
             {
                 initObject.FeatureOperStatus = this.FeatureOperStatus;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("HsIntegrationsCount"))
+            {
+                initObject.HsIntegrationsCount = this.HsIntegrationsCount;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("IsClusterHealthy"))
             {
@@ -14941,6 +15392,10 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("RecordType"))
             {
                 initObject.RecordType = this.RecordType;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("SmartSwitchCount"))
+            {
+                initObject.SmartSwitchCount = this.SmartSwitchCount;
             }
             if (this.MyInvocation.BoundParameters.ContainsKey("Tags"))
             {
@@ -24271,6 +24726,63 @@ namespace Intersight.PowerShell
             {
                 initObject.VniType = this.VniType;
             }
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize NiatelemetryVpcData.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightNiatelemetryVpcData")]
+    public class InitializeIntersightNiatelemetryVpcData : PSCmdlet
+    {
+        public InitializeIntersightNiatelemetryVpcData()
+        {
+            ClassId = NiatelemetryVpcData.ClassIdEnum.NiatelemetryVpcData;
+            ObjectType = NiatelemetryVpcData.ObjectTypeEnum.NiatelemetryVpcData;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryVpcData.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public NiatelemetryVpcData.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.NiatelemetryVpcData initObject = new Intersight.Model.NiatelemetryVpcData();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
         }
 

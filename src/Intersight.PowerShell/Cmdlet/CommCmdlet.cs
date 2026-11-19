@@ -286,7 +286,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The string representation of the tag key. If the tag is of path type, then \"/\" will be interpreted as path delimiters.\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// <para type="description">"The string representation of the tag key. For PathTag definitions, \"/\" is interpreted as a path delimiter.\nThe combination of key and tag type must be unique within an account. The key is case sensitive and cannot be empty."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -343,11 +343,11 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag is restricted to values present in the allowedValues list. RestrictValues is not applicable to path tags."</para>
+        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag can only be values present in the allowedValues list. RestrictAllowedValues is not applicable to path tags."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public bool RestrictValues
+        public bool RestrictAllowedValues
         {
             get;
             set;
@@ -377,7 +377,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"An enum type that defines the type of tag. Only path tags are supported for now, and the type is set to path by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
+        /// <para type="description">"An enum that defines the type of tag definition. KeyValue tags use a key with an optional value.\nPathTag tags use a hierarchical key with '/' as the delimiter and no value. Defaults to KeyValue.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -632,7 +632,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The string representation of the tag key. If the tag is of path type, then \"/\" will be interpreted as path delimiters.\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// <para type="description">"The string representation of the tag key. For PathTag definitions, \"/\" is interpreted as a path delimiter.\nThe combination of key and tag type must be unique within an account. The key is case sensitive and cannot be empty."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -659,11 +659,11 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag is restricted to values present in the allowedValues list. RestrictValues is not applicable to path tags."</para>
+        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag can only be values present in the allowedValues list. RestrictAllowedValues is not applicable to path tags."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public bool RestrictValues
+        public bool RestrictAllowedValues
         {
             get;
             set;
@@ -683,7 +683,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"An enum type that defines the type of tag. Only path tags are supported for now, and the type is set to path by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
+        /// <para type="description">"An enum that defines the type of tag definition. KeyValue tags use a key with an optional value.\nPathTag tags use a hierarchical key with '/' as the delimiter and no value. Defaults to KeyValue.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -949,7 +949,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"The string representation of the tag key. If the tag is of path type, then \"/\" will be interpreted as path delimiters.\nThe tag key must be unique within the account. The tag key is case sensitive and must not be empty."</para>
+        /// <para type="description">"The string representation of the tag key. For PathTag definitions, \"/\" is interpreted as a path delimiter.\nThe combination of key and tag type must be unique within an account. The key is case sensitive and cannot be empty."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -976,11 +976,11 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag is restricted to values present in the allowedValues list. RestrictValues is not applicable to path tags."</para>
+        /// <para type="description">"If this flag is enabled, then values of the KeyValue tag can only be values present in the allowedValues list. RestrictAllowedValues is not applicable to path tags."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
-        public bool RestrictValues
+        public bool RestrictAllowedValues
         {
             get;
             set;
@@ -1000,7 +1000,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"An enum type that defines the type of tag. Only path tags are supported for now, and the type is set to path by default.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
+        /// <para type="description">"An enum that defines the type of tag definition. KeyValue tags use a key with an optional value.\nPathTag tags use a hierarchical key with '/' as the delimiter and no value. Defaults to KeyValue.\n* `KeyValue` - KeyValue type of tag. Key is required for these tags. Value is optional.\n* `PathTag` - Key contain path information. Value is not present for these tags. The path is created by using the '/' character as a delimiter.For example, if the tag is \"A/B/C\", then \"A\" is the parent tag, \"B\" is the child tag of \"A\" and \"C\" is the child tag of \"B\"."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

@@ -577,7 +577,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Generation of the adapter.\n* `4` - Fourth generation adapters (14xx). The PIDs of these adapters end with the string 04.\n* `2` - Second generation VIC adapters (12xx). The PIDs of these adapters end with the string 02.\n* `3` - Third generation adapters (13xx). The PIDs of these adapters end with the string 03.\n* `5` - Fifth generation adapters (15xx). The PIDs of these adapters contain the V5 string."</para>
+        /// <para type="description">"Generation of the adapter.\n* `4` - Fourth generation adapters (14xx). The PIDs of these adapters end with the string 04.\n* `2` - Second generation VIC adapters (12xx). The PIDs of these adapters end with the string 02.\n* `3` - Third generation adapters (13xx). The PIDs of these adapters end with the string 03.\n* `5` - Fifth generation adapters (15xx). The PIDs of these adapters contain the V5 string.\n* `6` - Sixth generation adapters (16xx). The PIDs of these adapters contain the V6 string."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -6952,6 +6952,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"Indicates whether the server model is a full-width blade/sled."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool FullWidth
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"Indicates whether the CIMC to VIC side-band interface is enabled on the server."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -9034,11 +9045,11 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Inter cluster link vlan support on this switch."</para>
+        /// <para type="description">"Intra chassis VLAN support on this switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public bool InterClusterLinkVlanSupported
+        public bool IntraChassisVlanSupported
         {
             get;
             set;

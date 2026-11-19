@@ -320,6 +320,7 @@ namespace Intersight.PowerShell
         }
 
 
+
         // <summary>
         /// <para type="description">"Port channel id for port channel created on FI switch."</para>
         /// </summary>
@@ -2409,6 +2410,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
 

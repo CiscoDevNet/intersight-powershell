@@ -102,6 +102,7 @@ namespace Intersight.PowerShell
         {
             ClassId = PolicyActionQualifier.ClassIdEnum.PolicyActionQualifier;
             ObjectType = PolicyActionQualifier.ObjectTypeEnum.PolicyActionQualifier;
+            Scope = PolicyActionQualifier.ScopeEnum.Selective;
 
         }
         // <summary>
@@ -115,7 +116,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -125,11 +126,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public PolicyActionQualifier.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public List<Model.PolicyQualifier> Qualifiers
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"Specify if profile action is targeted for a specific scope.\n* `selective` - Profile deploy action to be limited to modified policies or to the policy list passed.\n* `all` - Profile deploy action to perform deploy of all policies associated with profile."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public PolicyActionQualifier.ScopeEnum Scope
         {
             get;
             set;
@@ -145,6 +166,14 @@ namespace Intersight.PowerShell
             }
             initObject.ClassId = this.ClassId;
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Qualifiers"))
+            {
+                initObject.Qualifiers = this.Qualifiers;
+            }
+            if (this.MyInvocation.BoundParameters.ContainsKey("Scope"))
+            {
+                initObject.Scope = this.Scope;
+            }
             WriteObject(initObject);
         }
 
@@ -588,6 +617,16 @@ namespace Intersight.PowerShell
 
         }
         // <summary>
+        /// <para type="description">"Qualifiers to control the action being triggered. Action qualifiers are to be specified based on the type of disruptions that an action is to be restricted to. For example, trigger the 'Deploy' action to only perform network and management plane configurations."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Model.PolicyActionQualifier ActionQualifier
+        {
+            get;
+            set;
+        }
+        // <summary>
         /// <para type="description"></para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -618,16 +657,6 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Indicates a profile's error state. Values -- Validation-error (Static validation error), Pre-config-error (Runtime validation error), Config-error (Runtime configuration error)."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
-        public string ErrorState
-        {
-            get;
-            set;
-        }
-        // <summary>
         /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
@@ -642,6 +671,10 @@ namespace Intersight.PowerShell
         {
             PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
             Intersight.Model.PolicyConfigContext initObject = new Intersight.Model.PolicyConfigContext();
+            if (this.MyInvocation.BoundParameters.ContainsKey("ActionQualifier"))
+            {
+                initObject.ActionQualifier = this.ActionQualifier;
+            }
             if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
             {
                 initObject.AdditionalProperties = this.AdditionalProperties;
@@ -650,10 +683,6 @@ namespace Intersight.PowerShell
             if (this.MyInvocation.BoundParameters.ContainsKey("ControlAction"))
             {
                 initObject.ControlAction = this.ControlAction;
-            }
-            if (this.MyInvocation.BoundParameters.ContainsKey("ErrorState"))
-            {
-                initObject.ErrorState = this.ErrorState;
             }
             initObject.ObjectType = this.ObjectType;
             WriteObject(initObject);
@@ -995,7 +1024,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -1005,11 +1034,31 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property.\nThe enum values provides the list of concrete types that can be instantiated from this abstract type."</para>
+        /// <para type="description">"Possible disruption the configuration change might cause."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Disruption
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
         public PolicyQualifier.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The name of the policy for which, the deployment is performed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Policy
         {
             get;
             set;
@@ -1024,7 +1073,15 @@ namespace Intersight.PowerShell
                 initObject.AdditionalProperties = this.AdditionalProperties;
             }
             initObject.ClassId = this.ClassId;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Disruption"))
+            {
+                initObject.Disruption = this.Disruption;
+            }
             initObject.ObjectType = this.ObjectType;
+            if (this.MyInvocation.BoundParameters.ContainsKey("Policy"))
+            {
+                initObject.Policy = this.Policy;
+            }
             WriteObject(initObject);
         }
 

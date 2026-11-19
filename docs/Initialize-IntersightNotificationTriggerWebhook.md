@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightNotificationTriggerWebhook [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Authentication< Model.AssetCredential>][-ClassId< NotificationTriggerWebhook.ClassIdEnum>][-ClearSecret< bool>][-CustomHeaders< System.Collections.Generic.List`1[Model.NotificationHttpHeader]>][-ObjectType< NotificationTriggerWebhook.ObjectTypeEnum>][-Secret< string>][-Url< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightNotificationTriggerWebhook [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Authentication< Model.AssetCredential>][-ClassId< NotificationTriggerWebhook.ClassIdEnum>][-ClearSecret< bool>][-CustomHeaders< System.Collections.Generic.List`1[Model.NotificationHttpHeader]>][-EnableProxy< bool>][-ObjectType< NotificationTriggerWebhook.ObjectTypeEnum>][-Secret< string>][-Url< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -93,6 +93,21 @@ Note :- Use Initialize-IntersightNotificationHttpHeader to create the object of 
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.NotificationHttpHeader]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -EnableProxy
+When true, routes outbound webhook traffic through the appliance&apos;s configured\ndata center proxy (via Equinox). Only applicable for on-prem appliance deployments;\nignored on SaaS.
+
+```yaml
+Type: bool
 Parameter Sets: (All)
 Aliases:
 

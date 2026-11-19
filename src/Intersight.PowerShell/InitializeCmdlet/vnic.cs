@@ -6180,7 +6180,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"The PCI Link used as transport for the virtual interface. PCI Link is only applicable for select Cisco UCS VIC 1300 models (UCSC-PCIE-C40Q-03, UCSB-MLOM-40G-03, UCSB-VIC-M83-8P) that support two PCI links. The value, if specified, for any other VIC model will be ignored."</para>
+        /// <para type="description">"The PCI Link used as transport for the virtual interface. Select Cisco UCS VIC 1300 models with two PCI links (UCSC-PCIE-C40Q-03, UCSB-MLOM-40G-03, UCSB-VIC-M83-8P) support choosing between link 0 and link 1. For other adapters, the applicable PCI Link is determined by the adapter model. VIC 1400 series uses link 0, VIC 1500 series uses link 1, and VIC 1600 series uses link 2."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

@@ -645,7 +645,7 @@ namespace Intersight.PowerShell
             set;
         }
         // <summary>
-        /// <para type="description">"Privacy protocol for the user.\n* `NA` - Privacy protocol is not applicable.\n* `DES` - DES privacy protocol is used for SNMP user.\n* `AES` - AES privacy protocol is used for SNMP user."</para>
+        /// <para type="description">"Privacy protocol for the user.\n* `NA` - Privacy protocol is not applicable.\n* `DES` - DES privacy protocol is used for SNMP user.\n* `AES` - AES privacy protocol is used for SNMP user.\n* `AES-192` - AES-192 privacy protocol is used for SNMP user.\n* `AES-256` - AES-256 privacy protocol is used for SNMP user."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

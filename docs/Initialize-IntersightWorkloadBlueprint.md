@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkloadBlueprint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedRoles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-BlueprintDependencies< System.Collections.Generic.List`1[Model.BlueprintBlueprintDefinitionDependency]>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkloadBlueprint.ClassIdEnum>][-DefaultVersion< bool>][-Description< string>][-ExternalMeta< bool>][-GeneratedObjectDefinition< System.Collections.Generic.List`1[Model.BlueprintGeneratedObjectMetadata]>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-InputOperationMetadata< System.Collections.Generic.List`1[Model.BlueprintInputOperationType]>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkloadBlueprint.ObjectTypeEnum>][-PlatformType< WorkloadBlueprint.PlatformTypeEnum>][-ResourceDefinition< Model.BlueprintResourceConstraints>][-ServiceItems< System.Collections.Generic.List`1[Model.BlueprintServiceItemDefinition]>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-Version< long>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkloadBlueprint [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-AssociatedRoles< System.Collections.Generic.List`1[Model.IamRoleRelationship]>][-BaseBlueprint< Model.BlueprintBlueprintInheritanceReference>][-BlueprintDependencies< System.Collections.Generic.List`1[Model.BlueprintBlueprintDefinitionDependency]>][-BlueprintKind< WorkloadBlueprint.BlueprintKindEnum>][-Catalog< Model.WorkflowCatalogRelationship>][-ClassId< WorkloadBlueprint.ClassIdEnum>][-DefaultVersion< bool>][-Description< string>][-ExternalMeta< bool>][-GeneratedObjectDefinition< System.Collections.Generic.List`1[Model.BlueprintGeneratedObjectMetadata]>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-InputOperationMetadata< System.Collections.Generic.List`1[Model.BlueprintInputOperationType]>][-InputSyncEnabled< bool>][-Label< string>][-Moid< string>][-Name< string>][-ObjectType< WorkloadBlueprint.ObjectTypeEnum>][-PlatformType< WorkloadBlueprint.PlatformTypeEnum>][-ResourceDefinition< Model.BlueprintResourceConstraints>][-Revision< long>][-ServiceItems< System.Collections.Generic.List`1[Model.BlueprintServiceItemDefinition]>][-SupportInfo< Model.WorkflowSupportInfo>][-Tags< System.Collections.Generic.List`1[Model.MoTag]>][-ValidatedObjects< System.Collections.Generic.List`1[Model.BlueprintValidatedConfigReference]>][-Version< long>][-VersionCompatibilityInfo< System.Collections.Generic.List`1[Model.BlueprintVersionCompatibilityInfo]>][-VersionDescription< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -57,6 +57,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -BaseBlueprint
+The abstract base blueprint inherited by this authoring blueprint. Is optional.
+
+Note :- Use Initialize-IntersightBlueprintBlueprintInheritanceReference to create the object of complex type BlueprintBlueprintInheritanceReference
+
+```yaml
+Type: Model.BlueprintBlueprintInheritanceReference
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -BlueprintDependencies
 
 
@@ -64,6 +81,21 @@ Note :- Use Initialize-IntersightBlueprintBlueprintDefinitionDependency to creat
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.BlueprintBlueprintDefinitionDependency]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -BlueprintKind
+Identifies whether the authoring blueprint is an abstract inheritance source or a concrete definition. Concrete definitions are deployed through separate resolved version of the blueprint..\n* `Concrete` - The blueprint can be materialized as a separate resolved blueprint for deployment.\n* `Abstract` - The blueprint is an abstract inheritance source and is not directly deployable.
+
+```yaml
+Type: WorkloadBlueprint.BlueprintKindEnum
 Parameter Sets: (All)
 Aliases:
 
@@ -203,6 +235,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -InputSyncEnabled
+The input for a blueprint referenced in a workload can be synced from another blueprint of the same type.
+
+```yaml
+Type: bool
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Label
 A user friendly short name to identify the blueprint. Name can only contain letters (a-z, A-Z), numbers (0-9), hyphen (-), period (.), colon (:), space ( ) or an underscore (_).
 
@@ -295,6 +342,21 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -Revision
+The revision of the blueprint to support compatible updates within the same version.
+
+```yaml
+Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -ServiceItems
 
 
@@ -302,6 +364,23 @@ Note :- Use Initialize-IntersightBlueprintServiceItemDefinition to create the ob
 
 ```yaml
 Type: System.Collections.Generic.List`1[Model.BlueprintServiceItemDefinition]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -SupportInfo
+The support information for this blueprint version. When the blueprint version is deprecated, this field includes the support end date and can include a replacement target version.
+
+Note :- Use Initialize-IntersightWorkflowSupportInfo to create the object of complex type WorkflowSupportInfo
+
+```yaml
+Type: Model.WorkflowSupportInfo
 Parameter Sets: (All)
 Aliases:
 
@@ -329,11 +408,60 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ValidatedObjects
+
+
+Note :- Use Initialize-IntersightBlueprintValidatedConfigReference to create the object of complex type BlueprintValidatedConfigReference
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.BlueprintValidatedConfigReference]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Version
 The version of the blueprint to support multiple versions.
 
 ```yaml
 Type: long
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VersionCompatibilityInfo
+
+
+Note :- Use Initialize-IntersightBlueprintVersionCompatibilityInfo to create the object of complex type BlueprintVersionCompatibilityInfo
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.BlueprintVersionCompatibilityInfo]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -VersionDescription
+The detailed change description for this blueprint version. For new blueprint versions, this field captures a verbose description of the delta of changes in this version compared to earlier versions.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -403,6 +531,8 @@ PS C:\> Initialize-IntersightWorkloadBlueprint
 
 [Initialize-IntersightBlueprintBlueprintDefinitionDependency](./Initialize-IntersightBlueprintBlueprintDefinitionDependency.md)
 
+[Initialize-IntersightBlueprintBlueprintInheritanceReference](./Initialize-IntersightBlueprintBlueprintInheritanceReference.md)
+
 [Initialize-IntersightBlueprintGeneratedObjectMetadata](./Initialize-IntersightBlueprintGeneratedObjectMetadata.md)
 
 [Initialize-IntersightBlueprintInputOperationType](./Initialize-IntersightBlueprintInputOperationType.md)
@@ -411,6 +541,12 @@ PS C:\> Initialize-IntersightWorkloadBlueprint
 
 [Initialize-IntersightBlueprintServiceItemDefinition](./Initialize-IntersightBlueprintServiceItemDefinition.md)
 
+[Initialize-IntersightBlueprintValidatedConfigReference](./Initialize-IntersightBlueprintValidatedConfigReference.md)
+
+[Initialize-IntersightBlueprintVersionCompatibilityInfo](./Initialize-IntersightBlueprintVersionCompatibilityInfo.md)
+
 [Initialize-IntersightMoTag](./Initialize-IntersightMoTag.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)
+
+[Initialize-IntersightWorkflowSupportInfo](./Initialize-IntersightWorkflowSupportInfo.md)

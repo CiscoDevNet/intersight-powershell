@@ -656,17 +656,6 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"A reference to a iamAbstractClientApplication resource.\nWhen the $expand query parameter is specified, the referenced resource is returned inline."</para>
-        /// </summary>
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = true, ParameterSetName = "CmdletParam")]
-
-        public IamAbstractClientApplicationRelationship ClientApplication
-        {
-            get;
-            set;
-        }
-
-        // <summary>
         /// <para type="description">"A unique identifier for the OAuth2 client application.\nThe client ID is auto-generated when the AppRegistration object is created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3880,6 +3869,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Expiration time of the certificate in the SP metadata for the IdP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CertificateExpiryTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -3930,6 +3930,17 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string IdpEntityId
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The expiration state of the certificates in the IdP metadata.\n* `expiration-beyond-warning-period` - The expiry date is not within the warning period.\n* `expiration-within-info-period` - The expiry date is within the info period.\n* `expiration-within-warning-period` - The expiry date is within the warning period.\n* `expiration-within-critical-period` - The expiry date is within the critical period.\n* `expired` - The expiry date has passed."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamIdp.IdpMetadataExpiryStateEnum IdpMetadataExpiryState
         {
             get;
             set;
@@ -4031,6 +4042,50 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public bool SkipWarning
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Status of the SP certificate rotation for the IdP."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool SpCertRotated
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The expiration state of the SP certificate used by this IdP. The state is not-applicable when SAML assertion encryption, AuthNRequest signing, and SLO signing are all disabled.\n* `expiration-within-info-period` - The expiry date is beyond 270 days.\n* `expiration-within-270-day-info-period` - The expiry date is within 270 days but beyond 180 days.\n* `expiration-within-180-day-info-period` - The expiry date is within 180 days but beyond 90 days.\n* `expiration-within-90-day-warning-period` - The expiry date is within 90 days but beyond 60 days.\n* `expiration-within-60-day-warning-period` - The expiry date is within 60 days but beyond 30 days.\n* `expiration-within-30-day-critical-period` - The expiry date is within 30 days but beyond 7 days.\n* `expiration-within-critical-period` - The expiry date is within 7 days.\n* `expired` - The expiry date has passed.\n* `not-applicable` - The SP certificate is not used because SAML assertion encryption and AuthNRequest signing are both disabled.\n* `not-evaluated` - The SP certificate expiry state has not yet been evaluated from a successful login."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamIdp.SpMetadataExpiryStateEnum SpMetadataExpiryState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Selects the legacy (SHA-1) or current (SHA-2) SP certificate used to sign AuthN and logout requests during certificate rotation.\n* `Sha2` - Use the current SHA-2 SP signing certificate.\n* `Sha1` - Use the legacy SHA-1 SP signing certificate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamIdp.SpMetadataHashMethodEnum SpMetadataHashMethod
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Indicates whether this IdP uses its stored SP signing certificate selection. Existing IdPs without this marker continue using the legacy SHA-1 certificate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool SpMetadataHashMethodConfigured
         {
             get;
             set;
@@ -6112,6 +6167,17 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
+        /// <para type="description">"User's current valid password."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public string Password
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The passwordExpiresInDays attribute indicates the number of days remaining until a user's password expires,\nwith negative values meaning the password has already expired and zero indicating expiration today.\nThis value is dynamically calculated based on the time since the last password change and the maximum\nallowed password age defined by the password policy. No migration code or default value is required\nduring system upgrades because the value is computed in real-time, and initially, the password age\nproperty defaults to zero, ensuring no passwords are mistakenly marked as expired."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -7590,7 +7656,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"UUID of the privilege set."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
-        [ValidatePattern("^[a-zA-Z0-9_ .:,-]{0,128}$")]
+        [ValidatePattern("^[a-zA-Z0-9_ .:,/-]{0,128}$")]
         public string Uuid
         {
             get;
@@ -8727,6 +8793,17 @@ namespace Intersight.PowerShell
 
 
         // <summary>
+        /// <para type="description">"Expiry time of the certificate used in SP metadata. Tracks SP certificate expiries and rotates the certificate before it expires to avoid any authentication failure."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public DateTime CertExpiryTime
+        {
+            get;
+            set;
+        }
+
+        // <summary>
         /// <para type="description">"The time when this managed object was created."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
@@ -8822,6 +8899,28 @@ namespace Intersight.PowerShell
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
         public string SharedScope
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"The expiration state of the certificates in the SP metadata rotation during the grace period of SP SAML metadata rotation.\n* `expiration-within-info-period` - The expiry date is beyond 270 days.\n* `expiration-within-270-day-info-period` - The expiry date is within 270 days but beyond 180 days.\n* `expiration-within-180-day-info-period` - The expiry date is within 180 days but beyond 90 days.\n* `expiration-within-90-day-warning-period` - The expiry date is within 90 days but beyond 60 days.\n* `expiration-within-60-day-warning-period` - The expiry date is within 60 days but beyond 30 days.\n* `expiration-within-30-day-critical-period` - The expiry date is within 30 days but beyond 7 days.\n* `expiration-within-critical-period` - The expiry date is within 7 days.\n* `expired` - The expiry date has passed.\n* `not-applicable` - The SP certificate is not used because SAML assertion encryption and AuthNRequest signing are both disabled.\n* `not-evaluated` - The SP certificate expiry state has not yet been evaluated from a successful login."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamServiceProvider.SpMetadataExpiryStateEnum SpMetadataExpiryState
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Defines which SP metadata is defined in Intersight. The SP metadata could be legacy metadata or new metadata.\n* `Sha2` - The new SAML SP metadata with SHA-2 hashed certificates.\n* `Legacy` - The legacy SAML SP metadata (expiring certificates)."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public IamServiceProvider.SpMetadataTypeEnum SpMetadataType
         {
             get;
             set;
@@ -11501,7 +11600,6 @@ namespace Intersight.PowerShell
 
 
 
-
         // <summary>
         /// <para type="description">"App Registration name specified by user."</para>
         /// </summary>
@@ -12737,6 +12835,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Email domain name of the user for this IdP. When a user enters an email during login in the Intersight home page, the IdP is picked by matching this domain name with the email domain name for authentication."</para>
         /// </summary>
@@ -12769,6 +12868,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -12831,6 +12931,20 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
+        // <summary>
+        /// <para type="description">"Selects the legacy (SHA-1) or current (SHA-2) SP certificate used to sign AuthN and logout requests during certificate rotation.\n* `Sha2` - Use the current SHA-2 SP signing certificate.\n* `Sha1` - Use the legacy SHA-1 SP signing certificate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamIdp.SpMetadataHashMethodEnum SpMetadataHashMethod
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -13639,6 +13753,17 @@ namespace Intersight.PowerShell
         }
 
 
+
+        // <summary>
+        /// <para type="description">"User's current valid password."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Password
+        {
+            get;
+            set;
+        }
 
 
 
@@ -15975,7 +16100,6 @@ namespace Intersight.PowerShell
 
 
 
-
         // <summary>
         /// <para type="description">"App Registration name specified by user."</para>
         /// </summary>
@@ -17313,6 +17437,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Email domain name of the user for this IdP. When a user enters an email during login in the Intersight home page, the IdP is picked by matching this domain name with the email domain name for authentication."</para>
         /// </summary>
@@ -17345,6 +17470,7 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
 
 
         // <summary>
@@ -17407,6 +17533,20 @@ namespace Intersight.PowerShell
             get;
             set;
         }
+
+
+
+        // <summary>
+        /// <para type="description">"Selects the legacy (SHA-1) or current (SHA-2) SP certificate used to sign AuthN and logout requests during certificate rotation.\n* `Sha2` - Use the current SHA-2 SP signing certificate.\n* `Sha1` - Use the legacy SHA-1 SP signing certificate."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public IamIdp.SpMetadataHashMethodEnum SpMetadataHashMethod
+        {
+            get;
+            set;
+        }
+
 
 
         // <summary>
@@ -18256,6 +18396,17 @@ namespace Intersight.PowerShell
         }
 
 
+
+        // <summary>
+        /// <para type="description">"User's current valid password."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public string Password
+        {
+            get;
+            set;
+        }
 
 
 

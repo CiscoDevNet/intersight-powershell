@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("No Copyright")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.11")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.11.2026100617+05797e988b37eb9a83d8a4b8bce4b3640819550c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.11.2026111504+52bf20dbba06830c925ddf0b6dd4f33ee71bde91")]
 [assembly: System.Reflection.AssemblyProductAttribute("Intersight.PowerShell")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Intersight.PowerShell")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.11")]

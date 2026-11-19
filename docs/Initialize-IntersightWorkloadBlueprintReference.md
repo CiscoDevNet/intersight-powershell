@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkloadBlueprintReference [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Blueprint< Model.MoMoRef>][-ClassId< WorkloadBlueprintReference.ClassIdEnum>][-Input< object>][-InputOverride< System.Collections.Generic.List`1[string]>][-Name< string>][-ObjectType< WorkloadBlueprintReference.ObjectTypeEnum>][-ResourceConstraint< Model.WorkloadResourceConstraint>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkloadBlueprintReference [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-Blueprint< Model.MoMoRef>][-ClassId< WorkloadBlueprintReference.ClassIdEnum>][-Input< object>][-InputOverride< System.Collections.Generic.List`1[string]>][-InputSourceReferences< System.Collections.Generic.List`1[Model.WorkloadInputSourceReference]>][-Name< string>][-ObjectType< WorkloadBlueprintReference.ObjectTypeEnum>][-ResourceConstraint< Model.WorkloadResourceConstraint>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -91,6 +91,23 @@ Accept wildcard characters: False
 
 ```yaml
 Type: System.Collections.Generic.List`1[string]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -InputSourceReferences
+
+
+Note :- Use Initialize-IntersightWorkloadInputSourceReference to create the object of complex type WorkloadInputSourceReference
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.WorkloadInputSourceReference]
 Parameter Sets: (All)
 Aliases:
 
@@ -206,6 +223,8 @@ PS C:\> Initialize-IntersightWorkloadBlueprintReference
 ## RELATED LINKS
 
 [Initialize-IntersightMoMoRef](./Initialize-IntersightMoMoRef.md)
+
+[Initialize-IntersightWorkloadInputSourceReference](./Initialize-IntersightWorkloadInputSourceReference.md)
 
 [Initialize-IntersightWorkloadResourceConstraint](./Initialize-IntersightWorkloadResourceConstraint.md)
 

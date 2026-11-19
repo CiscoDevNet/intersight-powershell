@@ -436,6 +436,8 @@ PS C:\> New-IntersightFabricSwitchProfile
 
 [Get-IntersightFabricSwitchProfile](./Get-IntersightFabricSwitchProfile.md)
 
+[Initialize-IntersightFabricPeerInterfaceCompatibilityIssues](./Initialize-IntersightFabricPeerInterfaceCompatibilityIssues.md)
+
 [Initialize-IntersightFabricSwitchAssignment](./Initialize-IntersightFabricSwitchAssignment.md)
 
 [Initialize-IntersightMoVersionContext](./Initialize-IntersightMoVersionContext.md)

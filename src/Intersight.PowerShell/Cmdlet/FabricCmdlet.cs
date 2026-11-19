@@ -9329,6 +9329,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"Intersight provides pre-built workflows, tasks and policies to end users through global catalogs.\nObjects that are made available through global catalogs are said to have a 'shared' ownership. Shared objects are either made globally available to all end users or restricted to end users based on their license entitlement. Users can use this property to differentiate the scope (global or a specific license tier) to which a shared MO belongs."</para>
         /// </summary>
@@ -10349,7 +10350,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Enable this option to automatically allow the VLAN on inter-cluster links. To configure disjoint Layer 2 VLANs, 'Disable' must be specified together with 'AutoAllowOnUplinks.' Note that 'AutoAllowOnClusterLinks' cannot be enabled for the default VLAN 1 or the native VLAN."</para>
+        /// <para type="description">"Enable this option to automatically allow the VLAN on intra-chassis links. The traffic is not carried outside the chassis."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -10360,7 +10361,29 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified alongside AutoAllowOnClusterLinks for disjoint layer 2 VLAN configuration. Default VLAN 1 cannot be configured as disjoint layer 2 VLAN."</para>
+        /// <para type="description">"Restricts this VLAN to intra-chassis traffic only. It does not carry traffic outside the chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool AutoAllowOnInterSwitchPorts
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Automatically applies VLANs to backplane ports connected to slots configured with secure router roles."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool AutoAllowOnSecureRouterRoles
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified for Disjoint Layer 2 VLAN configuration. Default VLAN-1 cannot be configured as Disjoint Layer 2 VLAN."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -10404,7 +10427,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this FI."</para>
+        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -10774,18 +10797,29 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"This setting determines whether the VLAN is automatically allowed on inter-cluster links within this domain."</para>
+        /// <para type="description">"Restricts this VLAN to intra-chassis traffic only. It does not carry traffic outside the chassis."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
-        public bool AutoAllowOnClusterLinks
+        public bool AutoAllowOnInterSwitchPorts
         {
             get;
             set;
         }
 
         // <summary>
-        /// <para type="description">"Used to determine whether this VLAN will be allowed on all uplink ports and PCs in this FI."</para>
+        /// <para type="description">"This setting determines whether the VLAN is automatically allowed on backplane ports connected to slots configured with Secure Router Role."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
+
+        public bool AutoAllowOnSecureRouterRoles
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Used to determine whether this VLAN will be allowed on all uplink ports and PCs in this switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -10829,7 +10863,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this FI."</para>
+        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false, ParameterSetName = "CmdletParam")]
 
@@ -17824,6 +17858,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -18796,7 +18831,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Enable this option to automatically allow the VLAN on inter-cluster links. To configure disjoint Layer 2 VLANs, 'Disable' must be specified together with 'AutoAllowOnUplinks.' Note that 'AutoAllowOnClusterLinks' cannot be enabled for the default VLAN 1 or the native VLAN."</para>
+        /// <para type="description">"Enable this option to automatically allow the VLAN on intra-chassis links. The traffic is not carried outside the chassis."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -18807,7 +18842,29 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified alongside AutoAllowOnClusterLinks for disjoint layer 2 VLAN configuration. Default VLAN 1 cannot be configured as disjoint layer 2 VLAN."</para>
+        /// <para type="description">"Restricts this VLAN to intra-chassis traffic only. It does not carry traffic outside the chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AutoAllowOnInterSwitchPorts
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Automatically applies VLANs to backplane ports connected to slots configured with secure router roles."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AutoAllowOnSecureRouterRoles
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified for Disjoint Layer 2 VLAN configuration. Default VLAN-1 cannot be configured as Disjoint Layer 2 VLAN."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -18831,7 +18888,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this FI."</para>
+        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -25288,6 +25345,7 @@ namespace Intersight.PowerShell
 
 
 
+
         // <summary>
         /// <para type="description">"An array of relationships to policyAbstractPolicy resources."</para>
         /// </summary>
@@ -26205,7 +26263,7 @@ namespace Intersight.PowerShell
 
 
         // <summary>
-        /// <para type="description">"Enable this option to automatically allow the VLAN on inter-cluster links. To configure disjoint Layer 2 VLANs, 'Disable' must be specified together with 'AutoAllowOnUplinks.' Note that 'AutoAllowOnClusterLinks' cannot be enabled for the default VLAN 1 or the native VLAN."</para>
+        /// <para type="description">"Enable this option to automatically allow the VLAN on intra-chassis links. The traffic is not carried outside the chassis."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -26216,7 +26274,29 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified alongside AutoAllowOnClusterLinks for disjoint layer 2 VLAN configuration. Default VLAN 1 cannot be configured as disjoint layer 2 VLAN."</para>
+        /// <para type="description">"Restricts this VLAN to intra-chassis traffic only. It does not carry traffic outside the chassis."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AutoAllowOnInterSwitchPorts
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Automatically applies VLANs to backplane ports connected to slots configured with secure router roles."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public bool AutoAllowOnSecureRouterRoles
+        {
+            get;
+            set;
+        }
+
+        // <summary>
+        /// <para type="description">"Enable to automatically allow this VLAN on all uplinks. Disable must be specified for Disjoint Layer 2 VLAN configuration. Default VLAN-1 cannot be configured as Disjoint Layer 2 VLAN."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 
@@ -26240,7 +26320,7 @@ namespace Intersight.PowerShell
         }
 
         // <summary>
-        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this FI."</para>
+        /// <para type="description">"Used to define whether this VLAN is to be classified as 'native' for traffic in this switch."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
 

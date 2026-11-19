@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-New-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CurrentPassword< string>][-InitialPassword< string>][-Moid< string>][-NewPassword< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+New-IntersightIamLocalUserPassword [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-CurrentPassword< string>][-InitialPassword< string>][-Moid< string>][-NewPassword< string>][-Password< string>][-Tags< System.Collections.Generic.List`1[MoTag]>][-IfMatch< String>][-IfNoneMatch< String>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -85,6 +85,21 @@ Accept wildcard characters: False
 
 ### -NewPassword
 New password that the user&apos;s password should be changed to.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Password
+User&apos;s current valid password.
 
 ```yaml
 Type: string

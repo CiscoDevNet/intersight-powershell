@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightBlueprintResourceConstraints [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BlueprintResourceConstraints.ClassIdEnum>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-ObjectType< BlueprintResourceConstraints.ObjectTypeEnum>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightBlueprintResourceConstraints [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< BlueprintResourceConstraints.ClassIdEnum>][-InputDefinition< System.Collections.Generic.List`1[Model.WorkflowBaseDataType]>][-ObjectType< BlueprintResourceConstraints.ObjectTypeEnum>][-ResourceTypeQualifiers< System.Collections.Generic.List`1[Model.BlueprintResourceTypeQualifier]>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -86,6 +86,23 @@ Accept pipeline input: True True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
+### -ResourceTypeQualifiers
+
+
+Note :- Use Initialize-IntersightBlueprintResourceTypeQualifier to create the object of complex type BlueprintResourceTypeQualifier
+
+```yaml
+Type: System.Collections.Generic.List`1[Model.BlueprintResourceTypeQualifier]
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
 ### -Json
 Returns the json payload received in response.
 
@@ -142,5 +159,7 @@ PS C:\> Initialize-IntersightBlueprintResourceConstraints
 ## NOTES
 
 ## RELATED LINKS
+
+[Initialize-IntersightBlueprintResourceTypeQualifier](./Initialize-IntersightBlueprintResourceTypeQualifier.md)
 
 [Initialize-IntersightWorkflowBaseDataType](./Initialize-IntersightWorkflowBaseDataType.md)

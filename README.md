@@ -9,8 +9,8 @@ The Cisco Intersight API is a programmatic interface that uses the REST architec
 The Intersight.PowerShell cmdlets are generated based on the Cisco Intersight OpenAPI 3.x specification. The latest specification can be downloaded from [here](https://intersight.com/apidocs/downloads/). 
 The Cisco Intersight.PowerShell module is updated frequently to be in sync with the OpenAPI version deployed at https://intersight.com
 
-- Intersight.PowerShell version: 1.0.11.2026100617
-- C# SDK version: 1.0.11.2026100617
+- Intersight.PowerShell version: 1.0.11.2026111504
+- C# SDK version: 1.0.11.2026111504
     For more information, please visit [https://intersight.com/help](https://intersight.com/help)
 
 
@@ -124,7 +124,7 @@ Import-Module -Name '.\Intersight.PowerShell' -Verbose
 <a name="uninstall-psmodule"></a>
 ### 1.2.3 Uninstall Intersight.PowerShell
 ```powershell
-Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026100617"}
+Remove-Module -FullyQualifiedName @{ModuleName = "Intersight.PowerShell"; ModuleVersion = "1.0.11.2026111504"}
 ```
 or
 
@@ -2111,6 +2111,7 @@ NetworkElementSummary | [**Get-IntersightNetworkElementSummary**](docs/Get-Inter
 NetworkFcZoneInfo | [**Get-IntersightNetworkFcZoneInfo**](docs/Get-IntersightNetworkFcZoneInfo.md) | Read a 'NetworkFcZoneInfo' resource.
 NetworkFeatureControl | [**Get-IntersightNetworkFeatureControl**](docs/Get-IntersightNetworkFeatureControl.md) | Read a 'NetworkFeatureControl' resource.
 NetworkInterfaceList | [**Get-IntersightNetworkInterfaceList**](docs/Get-IntersightNetworkInterfaceList.md) | Read a 'NetworkInterfaceList' resource.
+NetworkIpAddressInfo | [**Get-IntersightNetworkIpAddressInfo**](docs/Get-IntersightNetworkIpAddressInfo.md) | Read a 'NetworkIpAddressInfo' resource.
 NetworkLicenseFile | [**Get-IntersightNetworkLicenseFile**](docs/Get-IntersightNetworkLicenseFile.md) | Read a 'NetworkLicenseFile' resource.
 NetworkSecureRouter | [**Get-IntersightNetworkSecureRouter**](docs/Get-IntersightNetworkSecureRouter.md) | Read a 'NetworkSecureRouter' resource.
 NetworkSecureRouterSetting | [**Get-IntersightNetworkSecureRouterSetting**](docs/Get-IntersightNetworkSecureRouterSetting.md) | Read a 'NetworkSecureRouterSetting' resource.
@@ -2163,6 +2164,7 @@ NiaapiVersionRegex | [**Get-IntersightNiaapiVersionRegex**](docs/Get-IntersightN
 NiatelemetryAaaLdapProviderDetails | [**Get-IntersightNiatelemetryAaaLdapProviderDetails**](docs/Get-IntersightNiatelemetryAaaLdapProviderDetails.md) | Read a 'NiatelemetryAaaLdapProviderDetails' resource.
 NiatelemetryAaaRadiusProviderDetails | [**Get-IntersightNiatelemetryAaaRadiusProviderDetails**](docs/Get-IntersightNiatelemetryAaaRadiusProviderDetails.md) | Read a 'NiatelemetryAaaRadiusProviderDetails' resource.
 NiatelemetryAaaTacacsProviderDetails | [**Get-IntersightNiatelemetryAaaTacacsProviderDetails**](docs/Get-IntersightNiatelemetryAaaTacacsProviderDetails.md) | Read a 'NiatelemetryAaaTacacsProviderDetails' resource.
+NiatelemetryAdvisory | [**Get-IntersightNiatelemetryAdvisory**](docs/Get-IntersightNiatelemetryAdvisory.md) | Read a 'NiatelemetryAdvisory' resource.
 NiatelemetryAnomaly | [**Get-IntersightNiatelemetryAnomaly**](docs/Get-IntersightNiatelemetryAnomaly.md) | Read a 'NiatelemetryAnomaly' resource.
 NiatelemetryApicAppPluginDetails | [**Get-IntersightNiatelemetryApicAppPluginDetails**](docs/Get-IntersightNiatelemetryApicAppPluginDetails.md) | Read a 'NiatelemetryApicAppPluginDetails' resource.
 NiatelemetryApicCoreFileDetails | [**Get-IntersightNiatelemetryApicCoreFileDetails**](docs/Get-IntersightNiatelemetryApicCoreFileDetails.md) | Read a 'NiatelemetryApicCoreFileDetails' resource.
@@ -3078,7 +3080,9 @@ WorkflowWorkflowDefinition | [**Set-IntersightWorkflowWorkflowDefinition**](docs
 WorkflowWorkflowInfo | [**Set-IntersightWorkflowWorkflowInfo**](docs/Set-IntersightWorkflowWorkflowInfo.md) | Update a 'WorkflowWorkflowInfo' resource.
 WorkloadBlueprint | [**Get-IntersightWorkloadBlueprint**](docs/Get-IntersightWorkloadBlueprint.md) | Read a 'WorkloadBlueprint' resource.
 WorkloadClearWorkloadTag | [**Get-IntersightWorkloadClearWorkloadTag**](docs/Get-IntersightWorkloadClearWorkloadTag.md) | Read a 'WorkloadClearWorkloadTag' resource.
+WorkloadDeferredCleanupInput | [**Get-IntersightWorkloadDeferredCleanupInput**](docs/Get-IntersightWorkloadDeferredCleanupInput.md) | Read a 'WorkloadDeferredCleanupInput' resource.
 WorkloadDeploymentInput | [**Get-IntersightWorkloadDeploymentInput**](docs/Get-IntersightWorkloadDeploymentInput.md) | Read a 'WorkloadDeploymentInput' resource.
+WorkloadManifest | [**Get-IntersightWorkloadManifest**](docs/Get-IntersightWorkloadManifest.md) | Read a 'WorkloadManifest' resource.
 WorkloadWorkloadDefinition | [**Get-IntersightWorkloadWorkloadDefinition**](docs/Get-IntersightWorkloadWorkloadDefinition.md) | Read a 'WorkloadWorkloadDefinition' resource.
 WorkloadWorkloadDeployment | [**Get-IntersightWorkloadWorkloadDeployment**](docs/Get-IntersightWorkloadWorkloadDeployment.md) | Read a 'WorkloadWorkloadDeployment' resource.
 WorkloadWorkloadInstance | [**Get-IntersightWorkloadWorkloadInstance**](docs/Get-IntersightWorkloadWorkloadInstance.md) | Read a 'WorkloadWorkloadInstance' resource.

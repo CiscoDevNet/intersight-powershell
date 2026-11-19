@@ -3859,6 +3859,63 @@ namespace Intersight.PowerShell
 
     }
     /// <summary>
+    /// <para type="synopsis">This is the cmdlet to Initialize FirmwareFirmwareInfo.</para>
+    /// </summary>
+    [Cmdlet(VerbsData.Initialize, "IntersightFirmwareFirmwareInfo")]
+    public class InitializeIntersightFirmwareFirmwareInfo : PSCmdlet
+    {
+        public InitializeIntersightFirmwareFirmwareInfo()
+        {
+            ClassId = FirmwareFirmwareInfo.ClassIdEnum.FirmwareFirmwareInfo;
+            ObjectType = FirmwareFirmwareInfo.ObjectTypeEnum.FirmwareFirmwareInfo;
+
+        }
+        // <summary>
+        /// <para type="description"></para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public Dictionary<string, object> AdditionalProperties
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThis property is used as a discriminator to identify the type of the payload\nwhen marshaling and unmarshaling data."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareFirmwareInfo.ClassIdEnum ClassId
+        {
+            get;
+            set;
+        }
+        // <summary>
+        /// <para type="description">"The fully-qualified name of the instantiated, concrete type.\nThe value should be the same as the 'ClassId' property."</para>
+        /// </summary>
+        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
+
+        public FirmwareFirmwareInfo.ObjectTypeEnum ObjectType
+        {
+            get;
+            set;
+        }
+
+        protected override void ProcessRecord()
+        {
+            PSUtils.ProcessRelationshipParam(this.MyInvocation.BoundParameters);
+            Intersight.Model.FirmwareFirmwareInfo initObject = new Intersight.Model.FirmwareFirmwareInfo();
+            if (this.MyInvocation.BoundParameters.ContainsKey("AdditionalProperties"))
+            {
+                initObject.AdditionalProperties = this.AdditionalProperties;
+            }
+            initObject.ClassId = this.ClassId;
+            initObject.ObjectType = this.ObjectType;
+            WriteObject(initObject);
+        }
+
+    }
+    /// <summary>
     /// <para type="synopsis">This is the cmdlet to Initialize FirmwareFirmwareInventory.</para>
     /// </summary>
     [Cmdlet(VerbsData.Initialize, "IntersightFirmwareFirmwareInventory")]
@@ -4787,7 +4844,7 @@ namespace Intersight.PowerShell
         /// <para type="description">"The bundle version to which the server will be upgraded."</para>
         /// </summary>
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = true, ValueFromPipeline = false)]
-
+        [ValidatePattern("^$|^[A-Za-z0-9.()_-]+$")]
         public string BundleVersion
         {
             get;

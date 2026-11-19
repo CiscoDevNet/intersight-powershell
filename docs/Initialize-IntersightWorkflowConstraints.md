@@ -14,7 +14,7 @@ Fill in the Synopsis
 
 ```
 
-Initialize-IntersightWorkflowConstraints [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowConstraints.ClassIdEnum>][-EnumList< System.Collections.Generic.List`1[Model.WorkflowEnumEntry]>][-Max< double>][-Min< double>][-ObjectType< WorkflowConstraints.ObjectTypeEnum>][-Regex< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
+Initialize-IntersightWorkflowConstraints [-AdditionalProperties< System.Collections.Generic.Dictionary`2[string,object]>][-ClassId< WorkflowConstraints.ClassIdEnum>][-DataValidation< string>][-EnumList< System.Collections.Generic.List`1[Model.WorkflowEnumEntry]>][-Max< double>][-Min< double>][-ObjectType< WorkflowConstraints.ObjectTypeEnum>][-Regex< string>][-ValidationError< string>][-Json< SwitchParameter>][-WithHttpInfo< SwitchParameter>]
 
 ```
 
@@ -44,6 +44,21 @@ The fully-qualified name of the instantiated, concrete type.\nThis property is u
 
 ```yaml
 Type: WorkflowConstraints.ClassIdEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -DataValidation
+JavaScript expression used to ensure the supplied parameter value is valid.
+
+```yaml
+Type: string
 Parameter Sets: (All)
 Aliases:
 
@@ -118,6 +133,21 @@ Accept wildcard characters: False
 
 ### -Regex
 When the parameter is a string this regular expression is used to ensure the value is valid.
+
+```yaml
+Type: string
+Parameter Sets: (All)
+Aliases:
+
+Required: false
+Position: Named
+Default value: None
+Accept pipeline input: True True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -ValidationError
+Provide a custom error message to return when a validation for the constraint fails. When there are multiple constraints, any constraint failure will return this message.
 
 ```yaml
 Type: string
